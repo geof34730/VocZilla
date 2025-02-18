@@ -14,16 +14,26 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+
         title:TitleSite(),
         elevation: 5,
         shadowColor: Colors.grey,
         actions:[
-          TextButton( // Add this line
-            child:Text('fr'),
-            onPressed: () {
-              context.read<DrawerBloc>().add(OpenMenuDrawer());
-              scaffoldKey.currentState!.openEndDrawer();
-            },
+          InkWell( // Add
+              child:Padding(
+                  padding: EdgeInsets.only(right: 5),
+                  child:Text(
+                    'fr',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+              ),
+            onTap: () {
+                context.read<DrawerBloc>().add(OpenMenuDrawer());
+                scaffoldKey.currentState!.openEndDrawer();
+              },
           ),
           IconButton(
             icon: const Icon(Icons.menu),
@@ -32,7 +42,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               scaffoldKey.currentState!.openEndDrawer();
             },
           )
-
         ]
     );
   }
