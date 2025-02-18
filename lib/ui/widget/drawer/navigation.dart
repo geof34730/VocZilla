@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
 
-Drawer drawer({required BuildContext context}) {
+Drawer drawerNavigation() {
   return Drawer(
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.zero
+        borderRadius: BorderRadius.zero
 
     ),
     //width: MediaQuery.of(context).size.width,
@@ -22,16 +22,17 @@ Drawer drawer({required BuildContext context}) {
         ListTile(
           title: Text('Item 1'),
           onTap: () {
-            Navigator.pop(context);
+            print("Item 1");
           },
         ),
         ListTile(
           title: Text('Item 2'),
           onTap: () {
-            Navigator.pop(context);
+            print("Item 1");
           },
         ),
       ],
     ),
   );
 }
+
