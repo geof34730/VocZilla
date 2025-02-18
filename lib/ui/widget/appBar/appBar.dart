@@ -14,7 +14,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-
         title:TitleSite(),
         elevation: 5,
         shadowColor: Colors.grey,
@@ -23,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               child:Padding(
                   padding: EdgeInsets.only(right: 5),
                   child:Text(
-                    'fr',
+                    Localizations.localeOf(context).languageCode,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
