@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/ui/widget/appBar/appBar.dart';
 
-import '../blocs/drawer/bloc.dart';
+import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
 
 Scaffold Layout({required Widget child}) {
 

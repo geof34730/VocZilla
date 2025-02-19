@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../global.dart';
-
-import '../../theme/appColors.dart';
+import 'package:vobzilla/global.dart';
+import 'package:vobzilla/ui/theme/appColors.dart';
 
 Stack TitleSite() {
   double typoSize = 45;

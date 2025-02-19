@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'app.dart';
-import 'blocs/drawer/bloc.dart';
-import 'cubit/localization.dart';
+import 'package:vobzilla/app.dart';
+import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
+import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Pour SharedPreferences

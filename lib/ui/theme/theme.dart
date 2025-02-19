@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'appColors.dart';
+import 'package:vobzilla/ui/theme/appColors.dart';
 
 class VobdzillaTheme {
   static ThemeData get lightTheme {

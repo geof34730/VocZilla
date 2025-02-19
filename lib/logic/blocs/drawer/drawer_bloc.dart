@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../ui/widget/drawer/localisation.dart';
-import '../../ui/widget/drawer/navigation.dart';
-import 'event.dart';
+import 'package:vobzilla/ui/widget/drawer/localisation.dart';
+import 'package:vobzilla/ui/widget/drawer/navigation.dart';
+import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 
 class DrawerBloc extends Bloc<DrawerEvent, Widget?> {
   DrawerBloc() : super(null) {
