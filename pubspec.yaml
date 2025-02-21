@@ -49,6 +49,7 @@ dependencies:
   hydrated_bloc: ^10.0.0
   shared_preferences: ^2.5.2
   bloc: ^9.0.0
+  sign_in_button: ^3.2.0
 
 
 flutter_launcher_icons:

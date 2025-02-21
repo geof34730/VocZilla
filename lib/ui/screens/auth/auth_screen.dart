@@ -1,9 +1,13 @@
 // lib/ui/screens/auth_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sign_in_button/sign_in_button.dart';
+
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
+
+import '../../layout.dart';
 
 class AuthScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -14,9 +18,8 @@ class AuthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Authentication')),
-      body: BlocConsumer<AuthBloc, AuthState>(
+    return Layout(
+      child:BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is AuthAuthenticated) {
             // Navigate to home screen
@@ -76,17 +79,36 @@ class AuthScreen extends StatelessWidget {
                   },
                   child: Text('Sign In'),
                 ),
-                ElevatedButton(
+
+
+
+
+                SignInButton(
+                  text: "S'identifier avec Email",
+                  Buttons.email,
                   onPressed: () {
                     context.read<AuthBloc>().add(GoogleSignInRequested());
                   },
-                  child: Text('Sign In with Google'),
                 ),
-                ElevatedButton(
+
+                SignInButton(
+                  text: "S'identifier avec Google",
+                  Buttons.google,
+                  onPressed: () {
+                    context.read<AuthBloc>().add(GoogleSignInRequested());
+                  },
+                ),
+                SignInButton(
+                  Buttons.facebook,
                   onPressed: () {
                     context.read<AuthBloc>().add(FacebookSignInRequested());
                   },
-                  child: Text('Sign In with Facebook'),
+                ),
+                SignInButton(
+                  Buttons.apple,
+                  onPressed: () {
+                    //context.read<AuthBloc>().add(FacebookSignInRequested());
+                  },
                 ),
               ],
             ),
