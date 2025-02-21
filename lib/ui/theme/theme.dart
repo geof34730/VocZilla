@@ -19,6 +19,7 @@ class VobdzillaTheme {
         foregroundColor: AppColors.textSecondary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
+
       textTheme: TextTheme(
         bodyLarge: GoogleFonts.poppins(fontSize: 16, color: AppColors.textPrimary),
         headlineMedium: GoogleFonts.montserrat(fontSize: 24, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
@@ -30,7 +31,7 @@ class VobdzillaTheme {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.primary,
+          backgroundColor: AppColors.accent,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           textStyle: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.textSecondary),
         ),
