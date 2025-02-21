@@ -4,6 +4,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:vobzilla/global.dart';
+import 'package:vobzilla/ui/screens/auth/login_screen.dart';
+import 'package:vobzilla/ui/screens/auth/auth_screen.dart';
 import 'package:vobzilla/ui/screens/home_screen.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
           ],
           home: BlocProvider(
             create: (context) => DrawerBloc(),
-            child: HomeScreen(),
+            child:AuthScreen(),
           ),
         );
       },

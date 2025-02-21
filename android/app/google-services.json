@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275313479574",
+    "project_id": "voczilla-d2d79",
+    "storage_bucket": "voczilla-d2d79.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275313479574:android:0eba575c3cd76f81f097b7",
+        "android_client_info": {
+          "package_name": "com.geoffreypetain.voczilla.voczilla"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACEQiRIO3D6RhTcl5NGzn_ugpWSHbYPt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
