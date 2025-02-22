@@ -5,6 +5,10 @@ import 'package:vobzilla/ui/theme/appColors.dart';
 
 class VobdzillaTheme {
   static ThemeData get lightTheme {
+    final TextStyle defaultTextStyle = GoogleFonts.poppins(
+      fontSize: 15,
+      color: AppColors.textPrimary,
+    );
     return ThemeData(
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.background,
@@ -17,23 +21,24 @@ class VobdzillaTheme {
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: AppColors.accent,
         foregroundColor: AppColors.textSecondary,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
 
       textTheme: TextTheme(
-        bodyLarge: GoogleFonts.poppins(fontSize: 16, color: AppColors.textPrimary),
+        titleSmall: defaultTextStyle,
+        bodyLarge: defaultTextStyle,
         headlineMedium: GoogleFonts.montserrat(fontSize: 24, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
       ),
       buttonTheme: ButtonThemeData(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         buttonColor: AppColors.accent,
         textTheme: ButtonTextTheme.primary,
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.accent,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          textStyle: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.textSecondary),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          textStyle: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(

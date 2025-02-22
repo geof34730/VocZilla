@@ -4,40 +4,95 @@ import 'package:vobzilla/ui/theme/appColors.dart';
 
 import '../widget/appBar/siteTitle.dart';
 
-
 class HomeLogoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
-      backgroundColor: AppColors.cardBackground,
-      body:Center(
-        child:Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TitleSite(typoSize: 80),
-            Text(
-                "Booste ton anglais !",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: GoogleFonts.titanOne().fontFamily
-                )
-            ),
-            Text("Tu veux enrichir ton vocabulaire anglais facilement et efficacement ? 📚💡 Avec VocZilla, accède à 5 600 mots essentiels, triés par fréquence d'utilisation pour apprendre les mots qui comptent vraiment. 🚀"),
-            Text("📈 Méthode rapide et efficace"),
-            Text("🎯 Apprends les mots les plus utiles en priorité"),
-            Text("🧠 Mémorisation optimisée pour progresser vite"),
-            Text("Prêt à dominer la langue de Shakespeare ? Inscris-toi maintenant et commence ton aventure linguistique ! 🔥👇"),
-            ElevatedButton(
-                onPressed: (){
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment(1, 1),
+              colors: <Color>[
+                AppColors.backgroundLanding,
+                AppColors.cardBackground,
+                AppColors.cardBackground,
+                AppColors.cardBackground,
 
-                },
-                child: Text("Get Started")
-            )
-          ]
+                AppColors.backgroundLanding,
+              ],  tileMode: TileMode.mirror,
+            ),
+          ),
+          child: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.asset("assets/brand/logo_landing.png"),
+                   // TitleSite(typoSize: 80),
+                    Text("Booste ton anglais !",
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontFamily: GoogleFonts.titanOne().fontFamily)),
+                    SizedBox(height: 5),
+                    Text(
+                        "Tu veux enrichir ton vocabulaire anglais ?",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 8),
+                    RichText(
+                      textAlign: TextAlign.center,
+
+                      text: TextSpan(
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                          fontSize: 14,
+
+                        ),
+                        children: const <TextSpan>[
+                          TextSpan(text: 'Accède à '),
+                          TextSpan(text: '5 600 mots essentiels', style: TextStyle(fontWeight: FontWeight.bold)),
+                          TextSpan(text: ", triés par fréquence d'utilisation pour apprendre les mots qui comptent vraiment."),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 15),
+                    Text(
+                        "📈 Méthode rapide et efficace",
+                        textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                        "🎯 Apprends les mots les plus utiles en priorité",
+                        textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                        "🧠 Mémorisation optimisée pour progresser vite",
+                        textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                        "Prêt à dominer la langue de Shakespeare ? ",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 15),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/login');
+                        },
+                        child: Text("C'est parti !")
+                    )
+                  ]
+              )
+            ),
         )
-      ),
     );
   }
 }

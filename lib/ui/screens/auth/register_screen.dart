@@ -9,7 +9,7 @@ import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
 
 import '../../layout.dart';
 
-class AuthScreen extends StatelessWidget {
+class RegisterScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController firstNameController = TextEditingController();

@@ -7,6 +7,8 @@ import 'package:vobzilla/ui/screens/home_logout_screen.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
+import 'app_route.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -25,7 +27,8 @@ class MyApp extends StatelessWidget {
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          home: HomeLogoutScreen(),
+          initialRoute: AppRoute.home,
+          onGenerateRoute: AppRoute.generateRoute,
         );
       },
     );

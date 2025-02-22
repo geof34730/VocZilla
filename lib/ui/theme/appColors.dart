@@ -8,5 +8,6 @@ class AppColors {
   static const Color textSecondary = Color(0xFFFFFFFF);
   static const Color background = Color(0xFFFFFFFF);
   static const Color cardBackground = Color(0xFF7FEFF5);
-  static const Color colorTextTitle = Color(0xFF3AD7F4); // Correction ici
+  static const Color colorTextTitle = Color(0xFF3CCFF1);
+  static const Color backgroundLanding = Color( 0xFF3CCFF1);
 }

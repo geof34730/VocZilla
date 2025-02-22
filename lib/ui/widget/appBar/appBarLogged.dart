@@ -6,10 +6,10 @@ import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 import 'package:vobzilla/ui/widget/appBar/siteTitle.dart';
 
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
 
-  CustomAppBar({required this.scaffoldKey});
+  AppBarLogged({required this.scaffoldKey});
 
   @override
   Widget build(BuildContext context) {
