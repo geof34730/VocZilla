@@ -11,24 +11,13 @@ import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
-    MultiBlocProvider(
-      providers: [
-        BlocProvider(
-            create: (context) => DrawerBloc()
-        ),
-        BlocProvider(
-            create: (context) => LocalizationCubit()
-        ),
-        BlocProvider(
-          create: (context) => AuthBloc(
-            authRepository: AuthRepository(),
-          ),
-        ),
-      ],
-      child: MyApp(),
-    ),
+
+       MyApp(),
+
   );
 }
 

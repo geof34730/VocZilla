@@ -11,7 +11,7 @@ class DrawerBloc extends Bloc<DrawerEvent, Widget?> {
     });
 
     on<OpenSettingsDrawer>((event, emit) {
-      emit(drawerNavigation());
+      emit(drawerNavigation(context: event.context));
     });
 
     on<CloseDrawer>((event, emit) {

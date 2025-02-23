@@ -11,6 +11,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<SignUpRequested>((event, emit) async {
       emit(AuthLoading());
       try {
+        print("LoginRequested event received 1");
         final user = await authRepository.signUpWithEmail(
           email: event.email,
           password: event.password,
@@ -20,6 +21,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         );
         emit(AuthAuthenticated(user: user));
       } catch (e) {
+        print("*********************LoginRequested event received 2");
         emit(AuthError(message: e.toString()));
       }
     });
@@ -58,6 +60,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     });
 
     on<SignOutRequested>((event, emit) async {
+      print("**********************************LogoutRequested event received");
       await authRepository.signOut();
       emit(AuthUnauthenticated());
     });

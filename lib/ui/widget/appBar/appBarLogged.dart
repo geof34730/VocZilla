@@ -37,7 +37,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
           IconButton(
             icon: const Icon(Icons.menu),
             onPressed: () {
-              context.read<DrawerBloc>().add(OpenSettingsDrawer());
+              context.read<DrawerBloc>().add(OpenSettingsDrawer(context: context));
               scaffoldKey.currentState!.openEndDrawer();
             },
           )

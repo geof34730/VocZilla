@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 
 import 'package:vobzilla/ui/theme/appColors.dart';
 
-Drawer drawerNavigation() {
+import '../../../data/repositories/auth_repository.dart';
+import '../../../logic/blocs/auth/auth_event.dart';
+
+Drawer drawerNavigation({required BuildContext context}) {
   return Drawer(
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.zero
-
     ),
     //width: MediaQuery.of(context).size.width,
     elevation: 5,
@@ -21,19 +25,21 @@ Drawer drawerNavigation() {
           child: Text('Drawer Header'),
         ),
         ListTile(
-          title: Text('Item 1'),
-          onTap: () {
-            print("Item 1");
-          },
-        ),
-        ListTile(
-          title: Text('Item 2'),
-          onTap: () {
-            print("Item 1");
-          },
+          leading: Icon(Icons.logout),
+          title: InkWell(
+            onTap: () {
+              context.read<AuthBloc>().add(SignOutRequested());
+
+
+            },
+            child: Text("Déconnexion"),
+          ),
         ),
       ],
     ),
   );
+}
+
+class AuthLogoutRequested {
 }
 

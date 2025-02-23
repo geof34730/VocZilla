@@ -1,45 +1,68 @@
-// lib/navigation/app_route.dart
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
+import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
+import 'package:vobzilla/ui/layout.dart';
+import 'package:vobzilla/ui/screens/auth/login_screen.dart';
 import 'package:vobzilla/ui/screens/auth/register_screen.dart';
 import 'package:vobzilla/ui/screens/home_logout_screen.dart';
-import 'package:vobzilla/ui/screens/auth/login_screen.dart'; // Assurez-vous que le chemin est correct
+import 'package:vobzilla/ui/screens/home_screen.dart';
 
 class AppRoute {
   static const String home = '/';
   static const String login = '/login';
   static const String register = '/register';
+  static const String homeLogged = '/home';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
+    return MaterialPageRoute(
+      settings: settings,
+      builder: (context) {
+        final authState = context
+            .watch<AuthBloc>()
+            .state;
+        if (authState is AuthAuthenticated) {
+          if(settings.name == "/login"){
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                Navigator.pop(context, home);
+              });
+            return CircularProgressIndicator();
+          }
+          else{
+            return _getAuthenticatedPage(settings);
+          }
+        } else {
+          print("NOT REDIRECT NOT SECURE");
+          return _getUnauthenticatedPage(settings);
+        }
+      },
+    );
+  }
+
+  static Widget _getUnauthenticatedPage(RouteSettings settings) {
     switch (settings.name) {
       case home:
-        return _fadeRoute(HomeLogoutScreen(), settings);
+        return HomeLogoutScreen();
       case login:
-        return _fadeRoute(LoginScreen(), settings);
+        return Layout(child: LoginScreen());
       case register:
-        return _fadeRoute(RegisterScreen(), settings);
+        return Layout(child: RegisterScreen());
       default:
-        return MaterialPageRoute(
-          builder: (_) => Scaffold(
-            body: Center(
-              child: Text('No route defined for ${settings.name}'),
-            ),
+        return Scaffold(
+          body: Center(
+            child: Text('NOT SECURE No route defined for ${settings.name}'),
           ),
         );
     }
   }
 
-  static PageRouteBuilder _fadeRoute(Widget page, RouteSettings settings) {
-    return PageRouteBuilder(
-      settings: settings,
-      pageBuilder: (context, animation, secondaryAnimation) => page,
-      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        return FadeTransition(
-          opacity: animation,
-          child: child,
-        );
-      },
-        transitionDuration: Duration(milliseconds: 1000),
-    );
+  static Widget _getAuthenticatedPage(RouteSettings settings) {
+    switch (settings.name) {
+      case home:
+      case homeLogged:
+
+      default:
+        return Layout(child: HomeScreen());
+    }
   }
 }

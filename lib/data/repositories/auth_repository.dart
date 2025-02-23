@@ -73,6 +73,7 @@ class AuthRepository {
     await _firebaseAuth.signOut();
     await _googleSignIn.signOut();
     await FacebookAuth.instance.logOut();
+
   }
 }
 
