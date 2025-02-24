@@ -6,6 +6,7 @@ import 'package:vobzilla/ui/theme/appColors.dart';
 
 import '../../../data/repositories/auth_repository.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
+import '../../../logic/blocs/auth/auth_state.dart';
 
 Drawer drawerNavigation({required BuildContext context}) {
   return Drawer(
@@ -22,15 +23,21 @@ Drawer drawerNavigation({required BuildContext context}) {
           decoration: BoxDecoration(
             color: AppColors.primary,
           ),
-          child: Text('Drawer Header'),
+          child: BlocBuilder<AuthBloc, AuthState>(
+            builder: (context, state) {
+              if (state is AuthAuthenticated) {
+                print(state.user);
+                return Text(state.user?.displayName ?? '');
+              }
+              return const Text('');
+            },
+          ),
         ),
         ListTile(
           leading: Icon(Icons.logout),
           title: InkWell(
             onTap: () {
               context.read<AuthBloc>().add(SignOutRequested());
-
-
             },
             child: Text("Déconnexion"),
           ),

@@ -2,7 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDevelopmentRegion</key>
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <false/>
+    <key>GIDClientID</key>
+    <string>275313479574-kprstmafer4av3da9lsu3dh7insd2v7m.apps.googleusercontent.com</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.275313479574-kprstmafer4av3da9lsu3dh7insd2v7m</string>
+            </array>
+        </dict>
+    </array>
+    <key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Voczilla</string>
