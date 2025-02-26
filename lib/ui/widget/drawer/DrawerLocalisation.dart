@@ -7,7 +7,7 @@ import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 
 
-class drawerLocalisation extends StatelessWidget {
+class DrawerLocalisation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(

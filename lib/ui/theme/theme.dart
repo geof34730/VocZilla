@@ -12,6 +12,36 @@ class VobdzillaTheme {
     return ThemeData(
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.background,
+
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        contentPadding: EdgeInsets.all(16.0),
+        fillColor: Colors.grey[200],
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide.none,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide(
+            color: Colors.blue,
+            width: 1.0,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide(
+            color: Colors.blueAccent,
+            width: 2.0,
+          ),
+        ),
+        labelStyle: TextStyle(
+          color: Colors.black,
+        ),
+        hintStyle: TextStyle(
+          color: Colors.grey,
+        ),
+      ),
       appBarTheme: AppBarTheme(
         backgroundColor: AppColors.primary,
         foregroundColor: AppColors.textSecondary,

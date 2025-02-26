@@ -1,21 +1,11 @@
 // lib/data/repositories/auth_repository.dart
 import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_colored_print/flutter_colored_print.dart' as c_l;
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-
 import '../../core/utils/crypt.dart';
-
-
-import 'package:flutter_colored_print/flutter_colored_print.dart';
-
-import '../../core/utils/logger.dart';
-
-
 
 class AuthRepository {
   final FirebaseAuth _firebaseAuth;

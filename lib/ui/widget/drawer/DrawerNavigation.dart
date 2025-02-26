@@ -5,7 +5,7 @@ import 'package:vobzilla/ui/theme/appColors.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 
-Drawer drawerNavigation({required BuildContext context}) {
+Drawer DrawerNavigation({required BuildContext context}) {
   return Drawer(
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.zero

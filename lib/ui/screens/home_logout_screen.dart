@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vobzilla/ui/theme/appColors.dart';
 
 import '../theme/backgroundBlueLinear.dart';
-import '../widget/appBar/siteTitle.dart';
+
 
 class HomeLogoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: BackgroundBlueLinear(
+              context: context,
               child:Center(
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

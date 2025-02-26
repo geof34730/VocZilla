@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
 import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
-import 'package:vobzilla/ui/widget/appBar/siteTitle.dart';
+import 'package:vobzilla/ui/widget/appBar/TitleSite.dart';
 
 
 class AppBarNotLogged extends StatelessWidget implements PreferredSizeWidget {
