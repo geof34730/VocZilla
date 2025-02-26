@@ -75,7 +75,7 @@ class LoginScreen extends StatelessWidget {
                   SignInButton(
                     Buttons.apple,
                     onPressed: () {
-                      //context.read<AuthBloc>().add(FacebookSignInRequested());
+                      context.read<AuthBloc>().add(AppleSignInRequested());
                     },
                   ),
                   Text("Vous n'avez pas de compte ?"),

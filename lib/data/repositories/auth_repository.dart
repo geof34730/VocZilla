@@ -1,7 +1,21 @@
 // lib/data/repositories/auth_repository.dart
+import 'dart:io';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_colored_print/flutter_colored_print.dart' as c_l;
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+
+import '../../core/utils/crypt.dart';
+
+
+import 'package:flutter_colored_print/flutter_colored_print.dart';
+
+import '../../core/utils/logger.dart';
+
+
 
 class AuthRepository {
   final FirebaseAuth _firebaseAuth;
@@ -11,13 +25,7 @@ class AuthRepository {
       : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
         _googleSignIn = googleSignIn ?? GoogleSignIn();
 
-  Future<User?> signUpWithEmail({
-    required String email,
-    required String password,
-    required String firstName,
-    required String lastName,
-    required String language,
-  }) async {
+  Future<User?> signUpWithEmail({required String email,required String password,required String firstName,required String lastName,required String language,}) async {
     UserCredential userCredential = await _firebaseAuth.createUserWithEmailAndPassword(
       email: email,
       password: password,
@@ -28,10 +36,7 @@ class AuthRepository {
     return userCredential.user;
   }
 
-  Future<User?> signInWithEmail({
-    required String email,
-    required String password,
-  }) async {
+  Future<User?> signInWithEmail({required String email,required String password,}) async {
     UserCredential userCredential = await _firebaseAuth.signInWithEmailAndPassword(
       email: email,
       password: password,
@@ -50,53 +55,83 @@ class AuthRepository {
     return userCredential.user;
   }
 
-
-
-  Future<dynamic> signInWithFacebook() async {
-    // Trigger the sign-in flow
+  Future<User?> signInWithFacebook() async {
+    final rawNonce = localGenerateNonce();
+    final nonce = sha256ofString(rawNonce);
     final LoginResult loginResult = await FacebookAuth.instance.login(
-      permissions : ['email', 'public_profile'],
+      loginTracking: LoginTracking.limited,
+      nonce: nonce,
+      permissions: ['email', 'public_profile'],
+      ).catchError((onError) {
+        if (kDebugMode) {
+          //print(onError);
+        }
+        throw Exception(onError.message);
+      }
     );
-
-
-
-    FacebookAuth.instance.login(
-      permissions : ['email', 'public_profile'],
-    ).then((value)=> {
-
-          print(value.accessToken)
-
-        });
-
-
-
-    print("LoginResult : $loginResult");
-    print("loginResult.accessToken!.tokenString : ${loginResult.accessToken!.tokenString}");
-    // Create a credential from the access token
-    final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential("EAAqRPLV9FeYBOzn3tWZAxOLZB4dAVxsvwVwQlkMebZAsjWsTUtQ7mOkXZB3F6m2nNN9ErFJdodw9RQpZBIAJfeFiOmISIzU4yCrIyQ5kZBbrsZCds3NczU0McuM5VrPVq2uREAO0Sn8xHIovY0qZBEGzD4ba6LZAMudDi4jJWKuPSnyJ2VUULqnY8jMHgkDFhFdvqEEWjgbZAOj3STRkxqJYaZBBMeRcHjn4Ke7xUGtMSkz0Gm6zTr63ak91gSusXwZD");
-    print(facebookAuthCredential);
-    // Once signed in, return the UserCredential
-    return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+    if (loginResult.accessToken == null) {
+      throw Exception(loginResult.message);
+    }
+    OAuthCredential facebookAuthCredential;
+    //print("tokenType: ${loginResult.accessToken!.type}");
+    if (Platform.isIOS) {
+      switch (loginResult.accessToken!.type) {
+        case AccessTokenType.classic:
+          final token = loginResult.accessToken as ClassicToken;
+          facebookAuthCredential = FacebookAuthProvider.credential(
+            token.authenticationToken!,
+          );
+          break;
+        case AccessTokenType.limited:
+          final token = loginResult.accessToken as LimitedToken;
+          facebookAuthCredential = OAuthCredential(
+            providerId: 'facebook.com',
+            signInMethod: 'oauth',
+            idToken: token.tokenString,
+            rawNonce: rawNonce,
+          );
+          break;
+      }
+    } else {
+      facebookAuthCredential = FacebookAuthProvider.credential(
+        loginResult.accessToken!.tokenString,
+      );
+    }
+    UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+    return userCredential.user;
   }
 
-  /*
-  Future<UserCredential> signInWithFacebook() async {
-    // Trigger the sign-in flow
-    final LoginResult loginResult = await FacebookAuth.instance.login();
-print("loginResult.accessToken!.tokenString : ${loginResult.accessToken!.tokenString}");
-    // Create a credential from the access token
-    final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
-print(facebookAuthCredential);
-    // Once signed in, return the UserCredential
-    return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+  Future<User?> signInWithApple() async {
+    try {
+      // Demander l'autorisation de connexion avec Apple
+      final appleCredential = await SignInWithApple.getAppleIDCredential(
+        scopes: [
+          AppleIDAuthorizationScopes.email,
+          AppleIDAuthorizationScopes.fullName,
+        ],
+      );
+
+      // Créer un credential OAuth pour Firebase
+      final oauthCredential = OAuthProvider("apple.com").credential(
+        idToken: appleCredential.identityToken,
+        accessToken: appleCredential.authorizationCode,
+      );
+
+      // Se connecter avec Firebase
+      UserCredential userCredential =
+      await _firebaseAuth.signInWithCredential(oauthCredential);
+
+      return userCredential.user;
+    } catch (e) {
+      print("Error during Apple sign-in: $e");
+      return null;
+    }
   }
-*/
 
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
     await _googleSignIn.signOut();
     await FacebookAuth.instance.logOut();
-
   }
 }
 

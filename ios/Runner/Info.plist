@@ -38,6 +38,8 @@
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>Nous utilisons ces informations pour vous fournir une expérience personnalisée.</string>
     <key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

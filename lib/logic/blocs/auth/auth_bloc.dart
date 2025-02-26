@@ -50,16 +50,25 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     });
 
     on<FacebookSignInRequested>((event, emit) async {
-      print('d');
       emit(AuthLoading());
-      print('e');
       try {
         final user = await authRepository.signInWithFacebook();
+         emit(AuthAuthenticated(user: user));
+      } catch (e) {
+        emit(AuthError(message: e.toString()));
+      }
+    });
+
+    on<AppleSignInRequested>((event, emit) async {
+      emit(AuthLoading());
+      try {
+        final user = await authRepository.signInWithApple();
         emit(AuthAuthenticated(user: user));
       } catch (e) {
         emit(AuthError(message: e.toString()));
       }
     });
+
 
     on<SignOutRequested>((event, emit) async {
       print("**********************************LogoutRequested event received");

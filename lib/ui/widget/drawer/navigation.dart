@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
-
 import 'package:vobzilla/ui/theme/appColors.dart';
-
-import '../../../data/repositories/auth_repository.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 
@@ -19,26 +16,27 @@ Drawer drawerNavigation({required BuildContext context}) {
     child: ListView(
       padding: EdgeInsets.zero,
       children: <Widget>[
-        DrawerHeader(
-          decoration: BoxDecoration(
-            color: AppColors.primary,
+          SizedBox(
+            height : 250.0,
+           child  :DrawerHeader(
+              decoration: BoxDecoration(
+                color: AppColors.primary,
+              ),
+              child: BlocBuilder<AuthBloc, AuthState>(
+                builder: (context, state) {
+                  if (state is AuthAuthenticated) {
+                    return Column(children: [
+                        Text(state.user?.displayName ?? ''),
+                        Text(state.user?.email ?? ''),
+                        (state.user?.photoURL != null ? Image.network(state.user?.photoURL ?? '') : Text('')),
+                      ]
+                    );
+                  }
+                  return const Text('');
+                },
+              ),
+            ),
           ),
-          child: BlocBuilder<AuthBloc, AuthState>(
-            builder: (context, state) {
-              if (state is AuthAuthenticated) {
-                print(state);
-                print(state.user);
-                return Column(children: [
-                    Text(state.user?.displayName ?? ''),
-                    Text(state.user?.email ?? ''),
-                    //Image.network(state.user?.photoURL ?? ''),
-                  ]
-                );
-              }
-              return const Text('');
-            },
-          ),
-        ),
         ListTile(
           leading: Icon(Icons.logout),
           title: InkWell(
