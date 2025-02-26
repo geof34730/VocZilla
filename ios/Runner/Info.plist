@@ -8,19 +8,38 @@
     <string>275313479574-kprstmafer4av3da9lsu3dh7insd2v7m.apps.googleusercontent.com</string>
     <key>CFBundleURLTypes</key>
     <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>com.googleusercontent.apps.275313479574-kprstmafer4av3da9lsu3dh7insd2v7m</string>
-            </array>
-        </dict>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>com.googleusercontent.apps.275313479574-kprstmafer4av3da9lsu3dh7insd2v7m</string>
+        <string>fb2974439696045542</string>
+      </array>
+      </dict>
     </array>
+    <key>FacebookAppID</key>
+    <string>2974439696045542</string>
+    <key>FacebookDisplayName</key>
+    <string>VocZilla</string>
+    <key>FacebookClientToken</key>
+    <string>23e0c771752afad704b6f2c26498c23d</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbapi</string>
+      <string>fb-messenger-api</string>
+      <string>fbauth2</string>
+      <string>fbshareextension</string>
+    </array>
+    <key>FacebookAutoLogAppEventsEnabled</key>
+    <true/>
+    <key>FacebookAdvertiserIDCollectionEnabled</key>
+    <true/>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
     <key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleDisplayName</key>
-	<string>Voczilla</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

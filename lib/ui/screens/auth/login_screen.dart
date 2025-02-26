@@ -23,6 +23,7 @@ class LoginScreen extends StatelessWidget {
         child:BlocConsumer<AuthBloc, AuthState>(
           listener: (context, state) {
            if (state is AuthError) {
+             print(state.message);
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(content: Text(state.message)),
               );

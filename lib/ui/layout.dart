@@ -25,15 +25,7 @@ class Layout extends StatelessWidget {
           return drawer ?? SizedBox.shrink(); // Affiche le drawer sélectionné ou rien
         },
       ),
-      body: Column(
-        children: [
-          TextLogged(scaffoldKey: _scaffoldKey),
-          Expanded(
-
-            child: child,
-          ),
-        ],
-      ),
+      body:child,
     );
   }
 }
@@ -49,28 +41,6 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
           return AppBarLogged(scaffoldKey: scaffoldKey);
         } else {
           return AppBarNotLogged(scaffoldKey: scaffoldKey);
-        }
-      },
-    );
-  }
-  @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
-}
-
-class TextLogged extends StatelessWidget implements PreferredSizeWidget {
-  final GlobalKey<ScaffoldState> scaffoldKey;
-  TextLogged({required this.scaffoldKey});
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<AuthBloc, AuthState>(
-      builder: (context, state) {
-        if (state is AuthAuthenticated) {
-          return Padding(
-              padding:EdgeInsets.only(top: 200.00),
-              child:Text("logged")
-        );
-        } else {
-          return Text("not logged");
         }
       },
     );

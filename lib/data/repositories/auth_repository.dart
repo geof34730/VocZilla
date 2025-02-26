@@ -50,24 +50,47 @@ class AuthRepository {
     return userCredential.user;
   }
 
-  Future<User?> signInWithFacebook() async {
-    final LoginResult result = await FacebookAuth.instance.login();
-/*
-    if (result.status == LoginStatus.success) {
-      final AccessToken? accessToken = result.accessToken;
-      if (accessToken != null && accessToken.token != null) {
-        final OAuthCredential facebookAuthCredential = FacebookAuthProvider
-            .credential(accessToken.token!);
-        UserCredential userCredential = await _firebaseAuth.signInWithCredential(facebookAuthCredential);
-        return userCredential.user;
-      } else {
-        throw Exception('Failed to obtain access token from Facebook');
-      }
-    } else {
-      throw Exception('Failed to sign in with Facebook: ${result.message}');
-    }*/
+
+
+  Future<dynamic> signInWithFacebook() async {
+    // Trigger the sign-in flow
+    final LoginResult loginResult = await FacebookAuth.instance.login(
+      permissions : ['email', 'public_profile'],
+    );
+
+
+
+    FacebookAuth.instance.login(
+      permissions : ['email', 'public_profile'],
+    ).then((value)=> {
+
+          print(value.accessToken)
+
+        });
+
+
+
+    print("LoginResult : $loginResult");
+    print("loginResult.accessToken!.tokenString : ${loginResult.accessToken!.tokenString}");
+    // Create a credential from the access token
+    final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential("EAAqRPLV9FeYBOzn3tWZAxOLZB4dAVxsvwVwQlkMebZAsjWsTUtQ7mOkXZB3F6m2nNN9ErFJdodw9RQpZBIAJfeFiOmISIzU4yCrIyQ5kZBbrsZCds3NczU0McuM5VrPVq2uREAO0Sn8xHIovY0qZBEGzD4ba6LZAMudDi4jJWKuPSnyJ2VUULqnY8jMHgkDFhFdvqEEWjgbZAOj3STRkxqJYaZBBMeRcHjn4Ke7xUGtMSkz0Gm6zTr63ak91gSusXwZD");
+    print(facebookAuthCredential);
+    // Once signed in, return the UserCredential
+    return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
   }
 
+  /*
+  Future<UserCredential> signInWithFacebook() async {
+    // Trigger the sign-in flow
+    final LoginResult loginResult = await FacebookAuth.instance.login();
+print("loginResult.accessToken!.tokenString : ${loginResult.accessToken!.tokenString}");
+    // Create a credential from the access token
+    final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
+print(facebookAuthCredential);
+    // Once signed in, return the UserCredential
+    return FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+  }
+*/
 
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
@@ -76,4 +99,9 @@ class AuthRepository {
 
   }
 }
+
+
+
+
+
 

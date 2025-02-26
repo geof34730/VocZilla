@@ -26,8 +26,14 @@ Drawer drawerNavigation({required BuildContext context}) {
           child: BlocBuilder<AuthBloc, AuthState>(
             builder: (context, state) {
               if (state is AuthAuthenticated) {
+                print(state);
                 print(state.user);
-                return Text(state.user?.displayName ?? '');
+                return Column(children: [
+                    Text(state.user?.displayName ?? ''),
+                    Text(state.user?.email ?? ''),
+                    //Image.network(state.user?.photoURL ?? ''),
+                  ]
+                );
               }
               return const Text('');
             },
