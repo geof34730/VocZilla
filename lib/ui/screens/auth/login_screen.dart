@@ -1,4 +1,5 @@
 // lib/ui/screens/auth_screen.dart
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,13 +15,8 @@ import '../../widget/form/CustomPasswordField.dart';
 import '../../widget/form/CustomTextField.dart';
 
 class LoginScreen extends StatelessWidget {
-
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController firstNameController = TextEditingController();
-  final TextEditingController lastNameController = TextEditingController();
-  final TextEditingController languageController = TextEditingController();
-
+  final TextEditingController emailController = TextEditingController(text: 'sdsdfds@sdfds.fr');
+  final TextEditingController passwordController = TextEditingController(text:"sdfsdfsdf");
   @override
   Widget build(BuildContext context) {
     return BackgroundBlueLinear(
@@ -29,12 +25,23 @@ class LoginScreen extends StatelessWidget {
           listener: (context, state) {
            if (state is AuthError) {
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(state.message)),
+                SnackBar(
+                    backgroundColor: Colors.red,
+                    duration: Duration(seconds: 20),
+                    showCloseIcon: true,
+                    content: Text(
+                        state.message,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                    )
+                ),
               );
             }
           },
           builder: (context, state) {
             if (state is AuthLoading) {
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
               return Center(child: CircularProgressIndicator());
             }
             return Padding(
@@ -66,6 +73,7 @@ class LoginScreen extends StatelessWidget {
                       elevation: WidgetStateProperty.all(5),
                     ),
                           onPressed: () {
+                            //FirebaseAuth.instance.setLanguageCode('fr');
                             context.read<AuthBloc>().add(SignInRequested(
                               email: emailController.text,
                               password: passwordController.text,

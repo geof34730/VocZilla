@@ -50,10 +50,6 @@ class MyApp extends StatelessWidget {
                 builder: (context) {
                   return BlocListener<AuthBloc, AuthState>(
                     listener: (context, state) {
-                     print("yoyoyoyoy");
-                     print(state);
-
-                      // print(state);
                     },
                     child: child ?? Container(),
                   );

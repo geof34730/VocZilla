@@ -1,4 +1,6 @@
 // lib/logic/blocs/auth/auth_event.dart
+import 'package:flutter/cupertino.dart';
+
 abstract class AuthEvent {}
 
 class SignUpRequested extends AuthEvent {
@@ -6,14 +8,13 @@ class SignUpRequested extends AuthEvent {
   final String password;
   final String firstName;
   final String lastName;
-  final String language;
 
   SignUpRequested({
     required this.email,
     required this.password,
     required this.firstName,
     required this.lastName,
-    required this.language,
+
   });
 }
 

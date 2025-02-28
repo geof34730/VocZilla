@@ -1,11 +1,16 @@
 // lib/logic/blocs/auth/auth_bloc.dart
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/data/repositories/auth_repository.dart';
+import '../../../core/utils/errorMessage.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository authRepository;
+
+
 
   AuthBloc({required this.authRepository}) : super(AuthInitial()) {
     on<SignUpRequested>((event, emit) async {
@@ -16,25 +21,25 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           password: event.password,
           firstName: event.firstName,
           lastName: event.lastName,
-          language: event.language,
         );
         emit(AuthAuthenticated(user: user));
-      } catch (e) {
-        emit(AuthError(message: e.toString()));
+
+      } on FirebaseAuthException catch (e) {
+        emit(AuthError(message: errorFirebaseMessage(e)));
       }
     });
 
     on<SignInRequested>((event, emit) async {
-      emit(AuthLoading());
-      try {
+        emit(AuthLoading());
+        try {
         final user = await authRepository.signInWithEmail(
           email: event.email,
           password: event.password,
         );
         emit(AuthAuthenticated(user: user));
-      } catch (e) {
-        emit(AuthError(message: e.toString()));
-      }
+        } on FirebaseAuthException catch (e) {
+          emit(AuthError(message: errorFirebaseMessage(e)));
+        }
     });
 
     on<GoogleSignInRequested>((event, emit) async {
@@ -42,8 +47,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       try {
         final user = await authRepository.signInWithGoogle();
         emit(AuthAuthenticated(user: user));
-      } catch (e) {
-        emit(AuthError(message: e.toString()));
+      } on FirebaseAuthException catch (e) {
+        emit(AuthError(message: errorFirebaseMessage(e)));
       }
     });
 
@@ -52,8 +57,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       try {
         final user = await authRepository.signInWithFacebook();
          emit(AuthAuthenticated(user: user));
-      } catch (e) {
-        emit(AuthError(message: e.toString()));
+      } on FirebaseAuthException catch (e) {
+        emit(AuthError(message: errorFirebaseMessage(e)));
       }
     });
 
@@ -62,8 +67,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       try {
         final user = await authRepository.signInWithApple();
         emit(AuthAuthenticated(user: user));
-      } catch (e) {
-        emit(AuthError(message: e.toString()));
+      } on FirebaseAuthException catch (e) {
+        emit(AuthError(message: errorFirebaseMessage(e)));
       }
     });
 

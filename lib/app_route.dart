@@ -8,6 +8,8 @@ import 'package:vobzilla/ui/screens/auth/register_screen.dart';
 import 'package:vobzilla/ui/screens/home_logout_screen.dart';
 import 'package:vobzilla/ui/screens/home_screen.dart';
 
+import 'logic/blocs/auth/auth_event.dart';
+
 class AppRoute {
   static const String home = '/';
   static const String login = '/login';
@@ -22,10 +24,20 @@ class AppRoute {
             .watch<AuthBloc>()
             .state;
         if (authState is AuthAuthenticated) {
-          if(settings.name == "/login"){
+          if(settings.name == "/login" || settings.name == "/register"){
+
+            if(settings.name == "/login") {
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 Navigator.pop(context, home);
               });
+            }
+            if(settings.name == "/register") {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                print("POP REGISTER");
+                context.read<AuthBloc>().add(SignOutRequested());
+                //Navigator.pop(context, login);
+              });
+            }
             return CircularProgressIndicator();
           }
           else{
@@ -60,7 +72,6 @@ class AppRoute {
     switch (settings.name) {
       case home:
       case homeLogged:
-
       default:
         return Layout(child: HomeScreen());
     }

@@ -34,6 +34,7 @@ migrate_working_dir/
 /build/
 ios/Runner/GoogleService-Info.plist
 android/app/google-services.json
+android/app/.cxx/
 
 # Symbolication related
 app.*.symbols
