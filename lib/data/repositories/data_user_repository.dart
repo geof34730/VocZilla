@@ -17,7 +17,7 @@ class DataUserRepository {
     _userFirestore = getUserFirestore();
     _userExist = await getUserExist();
     if (_userFirestore != null){
-      if (!._userExist) {
+      if (_userExist) {
         await _firestore.collection('users').doc(_userFirestore?.uid).set(
             _userFirestore!.toJson()
         );
