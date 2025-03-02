@@ -2,7 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/data/repositories/auth_repository.dart';
+import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../../core/utils/errorMessage.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';

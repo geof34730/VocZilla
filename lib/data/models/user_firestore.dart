@@ -16,20 +16,37 @@ abstract class UserFirestore with _$UserFirestore {
     required String providerId,
     required bool isEmailVerified,
     required DateTime? createdAt,
+
   }) = _UserFirestore;
 
   factory UserFirestore.fromJson(Map<String, dynamic> json) => _$UserFirestoreFromJson(json);
 
   factory UserFirestore.fromUserCredential(UserCredential userCredential) {
     final user = userCredential.user!;
+    String? urlPhoto;
+
+    if (userCredential.credential?.providerId == 'facebook.com' &&
+        userCredential.additionalUserInfo?.profile != null &&
+        userCredential.additionalUserInfo!.profile!['picture'] is Map &&
+        (userCredential.additionalUserInfo!.profile!['picture'] as Map)['data'] is Map &&
+        ((userCredential.additionalUserInfo!.profile!['picture'] as Map)['data'] as Map)['url'] != null) {
+      urlPhoto = userCredential.additionalUserInfo!.profile!['picture']['data']['url'] as String?;
+    } else {
+      urlPhoto = user.photoURL;
+    }
+
+
+    print("urlPhoto: ******************************************** $urlPhoto");
+
     return UserFirestore(
       uid: user.uid,
       email: user.email ?? '',
       displayName: user.displayName ?? '',
-      photoURL: user.photoURL ?? '',
+      photoURL: urlPhoto ?? '',
       isEmailVerified: user.emailVerified,
       createdAt: user.metadata.creationTime ?? DateTime.now(),
       providerId: userCredential.credential?.providerId ?? '',
+
     );
   }
 }

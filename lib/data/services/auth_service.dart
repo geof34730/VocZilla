@@ -1,44 +1,37 @@
-// lib/data/repositories/auth_repository.dart
-import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:vobzilla/data/repositories/data_user_repository.dart';
+import 'dart:io';
+
 import '../../core/utils/crypt.dart';
-import '../models/user_firestore.dart';
+import '../repository/data_user_repository.dart';
+import 'data_user_service.dart';
 
+class AuthService {
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-
-class AuthRepository {
-  final FirebaseAuth _firebaseAuth;
-  final GoogleSignIn _googleSignIn;
-
-  AuthRepository({FirebaseAuth? firebaseAuth, GoogleSignIn? googleSignIn})
-      : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
-        _googleSignIn = googleSignIn ?? GoogleSignIn();
-
-  Future<User?> signUpWithEmail({required String email,required String password,required String firstName,required String lastName}) async {
+  Future<UserCredential?> signUpWithEmail({required String email,required String password,required String firstName,required String lastName}) async {
     UserCredential userCredential = await _firebaseAuth.createUserWithEmailAndPassword(
       email: email,
       password: password,
     );
     userCredential.user?.updateDisplayName('$firstName $lastName');
-    return userCredential.user;
+    return userCredential;
   }
 
-  Future<User?> signInWithEmail({required String email,required String password,}) async {
+  Future<UserCredential?> signInWithEmail({required String email,required String password,}) async {
     UserCredential userCredential = await _firebaseAuth.signInWithEmailAndPassword(
       email: email,
       password: password,
     );
-    dataUserRepository.createUser(userCredential: userCredential);
-    return userCredential.user;
+    return userCredential;
   }
 
-  Future<User?> signInWithGoogle() async {
+
+  Future<UserCredential?> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
     final GoogleSignInAuthentication googleAuth = await googleUser!.authentication;
     final credential = GoogleAuthProvider.credential(
@@ -46,23 +39,22 @@ class AuthRepository {
       idToken: googleAuth.idToken,
     );
     UserCredential userCredential = await _firebaseAuth.signInWithCredential(credential);
-    dataUserRepository.createUser(userCredential: userCredential);
-    return userCredential.user;
+    return userCredential;
   }
 
-  Future<User?> signInWithFacebook() async {
+  Future<UserCredential?> signInWithFacebook() async {
     final rawNonce = localGenerateNonce();
     final nonce = sha256ofString(rawNonce);
     final LoginResult loginResult = await FacebookAuth.instance.login(
       loginTracking: LoginTracking.limited,
       nonce: nonce,
       permissions: ['email', 'public_profile'],
-      ).catchError((onError) {
-        if (kDebugMode) {
-          //print(onError);
-        }
-        throw Exception(onError.message);
+    ).catchError((onError) {
+      if (kDebugMode) {
+        //print(onError);
       }
+      throw Exception(onError.message);
+    }
     );
     if (loginResult.accessToken == null) {
       throw Exception(loginResult.message);
@@ -93,11 +85,10 @@ class AuthRepository {
       );
     }
     UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
-    dataUserRepository.createUser(userCredential: userCredential);
-    return userCredential.user;
+    return userCredential;
   }
 
-  Future<User?> signInWithApple() async {
+  Future<UserCredential?> signInWithApple() async {
     try {
       // Demander l'autorisation de connexion avec Apple
       final appleCredential = await SignInWithApple.getAppleIDCredential(
@@ -106,7 +97,6 @@ class AuthRepository {
           AppleIDAuthorizationScopes.fullName,
         ],
       );
-
       // Créer un credential OAuth pour Firebase
       final oauthCredential = OAuthProvider("apple.com").credential(
         idToken: appleCredential.identityToken,
@@ -116,12 +106,13 @@ class AuthRepository {
       // Se connecter avec Firebase
       UserCredential userCredential =await _firebaseAuth.signInWithCredential(oauthCredential);
       dataUserRepository.createUser(userCredential: userCredential);
-      return userCredential.user;
+      return userCredential;
     } catch (e) {
       print("Error during Apple sign-in: $e");
       return null;
     }
   }
+
 
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
@@ -129,9 +120,3 @@ class AuthRepository {
     await FacebookAuth.instance.logOut();
   }
 }
-
-
-
-
-
-

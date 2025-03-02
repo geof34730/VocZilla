@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_profile_picture/flutter_profile_picture.dart';
+import 'package:vobzilla/data/repository/data_user_repository.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
+import '../../../data/services/data_user_service.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 
@@ -17,7 +20,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
       padding: EdgeInsets.zero,
       children: <Widget>[
           SizedBox(
-            height : 250.0,
+            height : 220.0,
            child  :DrawerHeader(
               decoration: BoxDecoration(
                 color: AppColors.primary,
@@ -26,9 +29,24 @@ Drawer DrawerNavigation({required BuildContext context}) {
                 builder: (context, state) {
                   if (state is AuthAuthenticated) {
                     return Column(children: [
+                      dataUserRepository.getPhotoURL()!=''
+                          ?
+                          ProfilePicture(
+                            name: state.user?.displayName ?? '',
+                            radius: 31,
+                            fontsize: 21,
+                            img: dataUserRepository.getPhotoURL().toString()
+                          )
+                        :
+                          ProfilePicture(
+                            name: state.user?.displayName ?? '',
+                            radius: 31,
+                            fontsize: 21,
+                          ),
+
                         Text(state.user?.displayName ?? ''),
                         Text(state.user?.email ?? ''),
-                        (state.user?.photoURL != null ? Image.network(state.user?.photoURL ?? '') : Text('')),
+
                       ]
                     );
                   }

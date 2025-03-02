@@ -7,7 +7,7 @@ import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
 import 'app_route.dart';
-import 'data/repositories/auth_repository.dart';
+import 'data/repository/auth_repository.dart';
 import 'logic/blocs/auth/auth_bloc.dart';
 import 'logic/blocs/auth/auth_state.dart';
 import 'logic/blocs/drawer/drawer_bloc.dart';
