@@ -1,4 +1,6 @@
 // lib/ui/screens/auth_screen.dart
+import 'dart:io';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -105,14 +107,15 @@ class LoginScreen extends StatelessWidget {
                       context.read<AuthBloc>().add(FacebookSignInRequested());
                     },
                   ),
-                  SignInButton(
-                    elevation: 5,
-                    text: "S'identifier avec Apple",
-                    Buttons.apple,
-                    onPressed: () {
-                      context.read<AuthBloc>().add(AppleSignInRequested());
-                    },
-                  ),
+                  if (Platform.isIOS)
+                          SignInButton(
+                            elevation: 5,
+                            text: "S'identifier avec Apple",
+                            Buttons.apple,
+                            onPressed: () {
+                              context.read<AuthBloc>().add(AppleSignInRequested());
+                            },
+                          ),
 
                   Padding(
                     padding: EdgeInsets.only(top: 20.0,bottom: 5),
