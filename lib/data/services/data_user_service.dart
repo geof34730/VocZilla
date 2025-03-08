@@ -8,6 +8,10 @@ class DataUserService {
     await _firestore.collection('users').doc(user.uid).set(user.toJson());
   }
 
+  Future<void> updateUserToFirestore(UserFirestore user) async {
+    await _firestore.collection('users').doc(user.uid).update(user.toJson());
+  }
+
   Future<bool> checkUserExists(String uid) async {
     try {
       final doc = await _firestore.collection('users').doc(uid).get();

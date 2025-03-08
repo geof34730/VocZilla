@@ -1,12 +1,19 @@
+import 'dart:async';
+
+import 'package:flutter/cupertino.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
+import '../../logic/blocs/auth/auth_bloc.dart';
+import '../../logic/blocs/auth/auth_event.dart';
 import '../services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../services/data_user_service.dart';
 import 'data_user_repository.dart';
-
+bool _emailVerified = false;
+bool _displayName = false;
 class AuthRepository {
+
   final AuthService _authService = AuthService();
   Future<User?> signUpWithEmail({
     required String email,
@@ -41,11 +48,9 @@ class AuthRepository {
     UserCredential? userCredential= await _authService.signInWithFacebook();
     dataUserRepository.createUser(userCredential: userCredential);
     return userCredential!.user!;
-
   }
 
   Future<User?> signInWithApple() async {
-
     print('signing in with apple');
     try {
       final appleCredential = await SignInWithApple.getAppleIDCredential(
@@ -73,4 +78,39 @@ class AuthRepository {
   Future<void> signOut() async {
     await _authService.signOut();
   }
+
+  Future<User> getUser() async {
+    return FirebaseAuth.instance.currentUser!;
+  }
+
+  Future<void> updateDisplayName({required String displayName,required AuthBloc authBloc}) async {
+    try {
+      User? user = await FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await user.updateDisplayName(displayName);
+        await dataUserRepository.updateDisplayName(displayName:displayName,uid: user.uid);
+        authBloc.add(UpdateDisplayNameEvent(displayName));
+      }
+    } catch (e) {
+      print("Erreur lors de la mise à jour du DisplayName: $e");
+    }
+  }
+
+  Future<void> checkEmailVerifiedPeriodically({required AuthBloc authBloc}) async {
+    Timer.periodic(Duration(seconds: 5), (timer) async {
+      User? user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await user.reload();
+        user = FirebaseAuth.instance.currentUser;
+        if (user!.emailVerified && !_emailVerified) {
+          _displayName=true;
+          timer.cancel();
+          authBloc.add(UpdateUserEvent(user));
+          authBloc.add(EmailVerifiedEvent());
+          timer.cancel();
+        }
+      }
+    });
+  }
+
 }

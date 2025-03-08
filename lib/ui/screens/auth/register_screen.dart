@@ -14,8 +14,9 @@ import '../../widget/form/CustomPasswordField.dart';
 import '../../widget/form/CustomTextField.dart';
 
 class RegisterScreen extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController(text: 'sdsdfds@sdfds.fr');
-  final TextEditingController passwordController = TextEditingController(text:"sdfsdfsdf");
+  RegisterScreen({super.key});
+  final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
+  final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
   final TextEditingController firstNameController = TextEditingController(text: 'John');
   final TextEditingController lastNameController = TextEditingController(text: 'Doe');
 
@@ -97,7 +98,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     SignInButton(
                       elevation: 5,
-                      text: "S'identifier avec Google",
+                      text: "Avec Google",
                       Buttons.google,
                       onPressed: () {
                         context.read<AuthBloc>().add(GoogleSignInRequested());
@@ -105,7 +106,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     SignInButton(
                       elevation: 5,
-                      text: "S'identifier avec Facebook",
+                      text: "Avec Facebook",
                       Buttons.facebook,
                       onPressed: () {
                         context.read<AuthBloc>().add(FacebookSignInRequested());
@@ -113,7 +114,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     SignInButton(
                       elevation: 5,
-                      text: "S'identifier avec Apple",
+                      text: "Avec Apple",
                       Buttons.apple,
                       onPressed: () {
                         context.read<AuthBloc>().add(AppleSignInRequested());

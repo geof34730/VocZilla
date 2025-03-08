@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -13,15 +14,17 @@ import 'logic/blocs/auth/auth_state.dart';
 import 'logic/blocs/drawer/drawer_bloc.dart';
 
 class MyApp extends StatelessWidget {
-   MyApp({super.key});
+  MyApp({super.key});
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+  final Route Function(RouteSettings settings) generateRoute=AppRoute.generateRoute;
+  final AuthRepository _AuthRepository = AuthRepository();
   @override
   Widget build(BuildContext context) {
     return Material(
         child:MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => AuthBloc(authRepository: AuthRepository()),
+          create: (context) => AuthBloc(authRepository: _AuthRepository),
         ),
         BlocProvider(
             create: (context) => DrawerBloc()
@@ -32,6 +35,9 @@ class MyApp extends StatelessWidget {
       ],
       child: BlocBuilder<LocalizationCubit, Locale>(
         builder: (context, locale) {
+
+          print("define language code for firebase ===================> ${locale.languageCode}");
+          FirebaseAuth.instance.setLanguageCode(locale.languageCode);
           return MaterialApp(
             theme: VobdzillaTheme.lightTheme,
             debugShowCheckedModeBanner: debugMode,
@@ -43,7 +49,7 @@ class MyApp extends StatelessWidget {
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            onGenerateRoute: AppRoute.generateRoute,
+            onGenerateRoute: generateRoute,
             navigatorKey: navigatorKey,
             builder: (context, child) {
               return Builder(

@@ -35,9 +35,6 @@ abstract class UserFirestore with _$UserFirestore {
       urlPhoto = user.photoURL;
     }
 
-
-    print("urlPhoto: ******************************************** $urlPhoto");
-
     return UserFirestore(
       uid: user.uid,
       email: user.email ?? '',
@@ -50,6 +47,5 @@ abstract class UserFirestore with _$UserFirestore {
     );
   }
 }
-
 
 

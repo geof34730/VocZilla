@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 
 import '../theme/backgroundBlueLinear.dart';
 
 
 class HomeLogoutScreen extends StatelessWidget {
+  const HomeLogoutScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +20,7 @@ class HomeLogoutScreen extends StatelessWidget {
                   children: [
                     Image.asset("assets/brand/logo_landing.png"),
                    // TitleSite(typoSize: 80),
-                    Text("Booste ton anglais !",
+                    Text("${context.loc.hello} Booste ton anglais !",
                         style: TextStyle(
                             fontSize: 25,
                             fontFamily: GoogleFonts.titanOne().fontFamily)),

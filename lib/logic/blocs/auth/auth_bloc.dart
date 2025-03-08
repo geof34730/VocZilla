@@ -10,8 +10,6 @@ import 'auth_state.dart';
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository authRepository;
 
-
-
   AuthBloc({required this.authRepository}) : super(AuthInitial()) {
     on<SignUpRequested>((event, emit) async {
       emit(AuthLoading());
@@ -30,16 +28,16 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     });
 
     on<SignInRequested>((event, emit) async {
-        emit(AuthLoading());
-        try {
+      emit(AuthLoading());
+      try {
         final user = await authRepository.signInWithEmail(
           email: event.email,
           password: event.password,
         );
         emit(AuthAuthenticated(user: user));
-        } on FirebaseAuthException catch (e) {
-          emit(AuthError(message: errorFirebaseMessage(e)));
-        }
+      } on FirebaseAuthException catch (e) {
+        emit(AuthError(message: errorFirebaseMessage(e)));
+      }
     });
 
     on<GoogleSignInRequested>((event, emit) async {
@@ -56,7 +54,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthLoading());
       try {
         final user = await authRepository.signInWithFacebook();
-         emit(AuthAuthenticated(user: user));
+        emit(AuthAuthenticated(user: user));
       } on FirebaseAuthException catch (e) {
         emit(AuthError(message: errorFirebaseMessage(e)));
       }
@@ -72,10 +70,30 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
     });
 
-
     on<SignOutRequested>((event, emit) async {
       await authRepository.signOut();
       emit(AuthUnauthenticated());
+    });
+
+    on<EmailVerifiedEvent>((event, emit) {
+      emit(AuthAuthenticated(user: FirebaseAuth.instance.currentUser));
+    });
+
+    on<UpdateUserEvent>((event, emit) {
+      emit(AuthAuthenticated(user: event.user));
+    });
+
+    on<UpdateDisplayNameEvent>((event, emit) async {
+      try {
+        User? user = FirebaseAuth.instance.currentUser;
+        if (user != null) {
+          await user.updateDisplayName(event.displayName);
+          emit(AuthAuthenticated(user: user));
+        }
+      } catch (e) {
+        //print("Erreur lors de la mise à jour du DisplayName: $e");
+        // Gérer l'erreur en émettant un état d'erreur si nécessaire
+      }
     });
   }
 }

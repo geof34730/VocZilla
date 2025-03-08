@@ -6,8 +6,11 @@ import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
+
     var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
     return Center(
           child:Column(

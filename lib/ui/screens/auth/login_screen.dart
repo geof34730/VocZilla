@@ -1,7 +1,4 @@
-// lib/ui/screens/auth_screen.dart
 import 'dart:io';
-
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,8 +14,10 @@ import '../../widget/form/CustomPasswordField.dart';
 import '../../widget/form/CustomTextField.dart';
 
 class LoginScreen extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController(text: 'sdsdfds@sdfds.fr');
-  final TextEditingController passwordController = TextEditingController(text:"sdfsdfsdf");
+  LoginScreen({super.key});
+  final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
+  final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
+
   @override
   Widget build(BuildContext context) {
     return BackgroundBlueLinear(
@@ -93,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   SignInButton(
                     elevation: 5,
-                    text: "S'identifier avec Google",
+                    text: "Avec Google",
                     Buttons.google,
                     onPressed: () {
                       context.read<AuthBloc>().add(GoogleSignInRequested());
@@ -101,7 +100,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   SignInButton(
                     elevation: 5,
-                    text: "S'identifier avec Facebook",
+                    text: "Avec Facebook",
                     Buttons.facebook,
                     onPressed: () {
                       context.read<AuthBloc>().add(FacebookSignInRequested());
@@ -110,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                   if (Platform.isIOS)
                           SignInButton(
                             elevation: 5,
-                            text: "S'identifier avec Apple",
+                            text: "Avec Apple",
                             Buttons.apple,
                             onPressed: () {
                               context.read<AuthBloc>().add(AppleSignInRequested());

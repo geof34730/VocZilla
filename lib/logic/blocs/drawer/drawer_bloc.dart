@@ -6,6 +6,12 @@ import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 
 class DrawerBloc extends Bloc<DrawerEvent, Widget?> {
   DrawerBloc() : super(null) {
+
+    on<DrawerEvent>((event, emit) {
+      print('Drawer BLOC EVENT**************************Event: $event');
+      // Logique de gestion des événements
+    });
+
     on<OpenMenuDrawer>((event, emit) {
       emit(DrawerLocalisation());
     });
