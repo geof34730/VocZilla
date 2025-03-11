@@ -8,34 +8,34 @@ import 'package:vobzilla/ui/widget/appBar/AppBarLogged.dart';
 import 'package:vobzilla/ui/widget/appBar/AppBarNotLogged.dart';
 
 class Layout extends StatelessWidget {
-
   const Layout({
     Key? key,
     required this.child,
     this.appBarNotLogged = false,
-  })
-
-  : super(key: key);
+    this.logged = true,
+  }) : super(key: key);
   final bool appBarNotLogged;
+  final bool logged;
 
   final dynamic child;
 
-
-
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
-      key: _scaffoldKey,
+      key: scaffoldKey,
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
-      appBar: AuthAppBar(scaffoldKey: _scaffoldKey, appBarNotLogged: appBarNotLogged),
+      appBar: AuthAppBar(scaffoldKey: scaffoldKey, appBarNotLogged: appBarNotLogged),
       endDrawer: BlocBuilder<DrawerBloc, Widget?>(
         builder: (context, drawer) {
-          return drawer ?? SizedBox.shrink(); // Affiche le drawer sélectionné ou rien
+          return drawer ?? SizedBox.shrink();
         },
       ),
-      body:child,
+      body:Padding(
+        padding: logged ? EdgeInsets.only(top: kToolbarHeight+35,left:15,right:15) : EdgeInsets.all(0) ,
+        child:child,
+      )
     );
   }
 }
@@ -48,11 +48,9 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AuthBloc, AuthState>(
       builder: (context, state) {
-
         if(appBarNotLogged){
           return AppBarNotLogged(scaffoldKey: scaffoldKey);
         }
-
         if (state is AuthAuthenticated) {
           return AppBarLogged(scaffoldKey: scaffoldKey);
         } else {

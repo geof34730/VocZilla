@@ -12,7 +12,11 @@ class VobdzillaTheme {
     return ThemeData(
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.background,
-
+      dividerTheme: DividerThemeData(
+        thickness: 1,
+        color: Colors.grey,
+        space: 0, // Pas d'espace autour du Divider
+      ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         contentPadding: EdgeInsets.all(16.0),
@@ -85,4 +89,15 @@ class VobdzillaTheme {
       ),
     );
   }
+
+  static ListTileThemeData get drawerNavigationListTileTheme {
+    return ListTileThemeData(
+      iconColor: AppColors.accent,
+      textColor: Colors.black87,
+      tileColor: Colors.grey[200],
+      selectedTileColor: Colors.blueGrey[100],
+      contentPadding: EdgeInsets.symmetric(horizontal: 15.0),
+    );
+  }
+
 }

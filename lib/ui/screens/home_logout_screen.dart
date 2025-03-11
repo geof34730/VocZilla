@@ -40,7 +40,6 @@ class HomeLogoutScreen extends StatelessWidget {
                       text: TextSpan(
                         style: Theme.of(context).textTheme.titleSmall?.copyWith(
                           fontSize: 14,
-
                         ),
                         children: const <TextSpan>[
                           TextSpan(text: 'Accède à '),

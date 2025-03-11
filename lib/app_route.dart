@@ -66,9 +66,9 @@ class AppRoute {
       case home:
         return HomeLogoutScreen();
       case login:
-        return Layout(child: LoginScreen());
+        return Layout(child: LoginScreen(),logged: false,);
       case register:
-        return Layout(child: RegisterScreen());
+        return Layout(child: RegisterScreen(),logged: false,);
       default:
         return Scaffold(
           body: Center(

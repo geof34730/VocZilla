@@ -58,6 +58,7 @@ dependencies:
   freezed_annotation: ^3.0.0
   json_annotation: ^4.9.0
   flutter_profile_picture: ^2.0.0
+  audioplayers: ^6.3.0
 
 
 flutter_launcher_icons:
