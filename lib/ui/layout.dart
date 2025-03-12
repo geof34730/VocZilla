@@ -32,12 +32,13 @@ class Layout extends StatelessWidget {
           return drawer ?? SizedBox.shrink();
         },
       ),
-      body:Padding(
-        padding: logged ? EdgeInsets.only(top: kToolbarHeight+35,left:15,right:15) : EdgeInsets.all(0) ,
-        child:child,
-      )
-    );
-  }
+      body:SingleChildScrollView(
+          child:Padding(
+              padding: logged ? EdgeInsets.only(top: kToolbarHeight+50,left:15,right:15) : EdgeInsets.all(0) ,
+              child:child,
+            ))
+          );
+    }
 }
 
 class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {

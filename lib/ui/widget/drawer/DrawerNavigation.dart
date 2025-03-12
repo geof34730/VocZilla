@@ -20,7 +20,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
         padding: EdgeInsets.zero,
         children: <Widget>[
           SizedBox(
-            height: 150.0,
+            height: 160.0,
             child: DrawerHeader(
               margin: EdgeInsets.zero,
               padding: EdgeInsets.zero,

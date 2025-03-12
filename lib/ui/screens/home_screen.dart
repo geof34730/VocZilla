@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
+import 'package:vobzilla/ui/widget/elements/home/CardHome.dart';
 
 import '../widget/elements/LevelChart.dart';
 import '../widget/form/CustomTextZillaField.dart';
@@ -18,56 +19,87 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          LevelChart(
-            level: 20,
-            levelMax: 20,
-          ),
           Text(
-              "Mes listes persos",
+              "Ma progression de titan",
               style: TextStyle(
                   fontSize: 25,
                   fontFamily: GoogleFonts.titanOne().fontFamily)
           ),
-
           Container(
-            child: Card(
-              child: Column(
-                children: [
+            width:double.infinity,
+            child: LevelChart(
+              level: 18,
+              levelMax: 100,
 
-                  Text(
-                    "TOP 20",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "lorem ipsum donor",
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
             ),
           ),
+
+          Row(
+            children: [
+              Text(
+                  "Mes listes persos",
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontFamily: GoogleFonts.titanOne().fontFamily
+                  )
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 0),
+                child: ElevatedButton(
+                  onPressed: () {
+                    print('Button Pressed');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: CircleBorder(),
+                    elevation: 2,
+                    backgroundColor: Colors.blue,
+                    padding: EdgeInsets.all(0),
+                  ),
+                  child: Icon(Icons.add, size: 25, color: Colors.white,), // Utiliser une icône ou un texte court
+                ),
+              )
+            ],
+          ),
+
+          CardHome(
+            title: "list 1",
+            backgroundColor: Colors.orange,
+            editMode: true,
+            paddingLevelBar: EdgeInsets.only(top:5),
+          ),
+
+
           Text(
             "De Petit Monstre à Titan",
             style: TextStyle(
               fontSize: 25,
               fontFamily: GoogleFonts.titanOne().fontFamily)
           ),
-          Container(
-            child: Card(
-              child: Column(
-                children: [
-                  Text(
-                    "TOP 20",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "lorem ipsum donor",
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
+          CardHome(
+            title: "TOP 50",
+            paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
           ),
+
+
+
+          Text(
+              "Par themes",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontFamily: GoogleFonts.titanOne().fontFamily)
+          ),
+          CardHome(
+            title: "Sport",
+            paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
+          ),
+          CardHome(
+            title: "Voyage",
+            paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
+          ),
+
+
+
+          /*
           CustomTextZillaField(
             ControlerField: custaomTextZillaController,
             labelText: 'Prénom',
@@ -77,53 +109,7 @@ class HomeScreen extends StatelessWidget {
               print('***************************ok retour')
             },
           ),
-
-          Text(
-              "À REVISER",
-              style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: GoogleFonts.titanOne().fontFamily)
-          ),
-          Container(
-            child: Card(
-              child: Column(
-                children: [
-
-                  Text(
-                    "TOP 20",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "lorem ipsum donor",
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Text(
-              "Par themes",
-              style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: GoogleFonts.titanOne().fontFamily)
-          ),
-          Container(
-            child: Card(
-              child: Column(
-                children: [
-
-                  Text(
-                    "TOP 20",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "lorem ipsum donor",
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
-          ),
+*/
         ]);
   }
 }
