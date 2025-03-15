@@ -71,28 +71,45 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     });
 
     on<SignOutRequested>((event, emit) async {
+      try {
       await authRepository.signOut();
       emit(AuthUnauthenticated());
+      } catch (e) {
+        emit(AuthError(message: errorFirebaseMessage(e)));
+      }
     });
 
     on<EmailVerifiedEvent>((event, emit) {
-      emit(AuthAuthenticated(user: FirebaseAuth.instance.currentUser));
+      try {
+        emit(AuthLoading());
+        emit(AuthAuthenticated(user: FirebaseAuth.instance.currentUser));
+      } catch (e) {
+        emit(AuthError(message: errorFirebaseMessage(e)));
+      }
     });
 
-    on<UpdateUserEvent>((event, emit) {
+    on<UpdateUserEvent>((event, emit) async {
+      emit(AuthLoading());
+      try {
+        final user = await authRepository.signInWithApple();
+        emit(AuthAuthenticated(user: user));
+      } on FirebaseAuthException catch (e) {
+        emit(AuthError(message: errorFirebaseMessage(e)));
+      }
       emit(AuthAuthenticated(user: event.user));
     });
 
     on<UpdateDisplayNameEvent>((event, emit) async {
+      emit(AuthLoading());
       try {
+        authRepository.updateDisplayName(displayName: event.displayName);
         User? user = FirebaseAuth.instance.currentUser;
         if (user != null) {
-          await user.updateDisplayName(event.displayName);
-          emit(AuthAuthenticated(user: user));
+          await FirebaseAuth.instance.currentUser?.updateDisplayName(event.displayName);
+          emit(AuthAuthenticated(user: FirebaseAuth.instance.currentUser));
         }
       } catch (e) {
-        //print("Erreur lors de la mise à jour du DisplayName: $e");
-        // Gérer l'erreur en émettant un état d'erreur si nécessaire
+        emit(AuthError(message: errorFirebaseMessage(e)));
       }
     });
   }

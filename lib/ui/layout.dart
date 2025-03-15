@@ -32,12 +32,14 @@ class Layout extends StatelessWidget {
           return drawer ?? SizedBox.shrink();
         },
       ),
-      body:SingleChildScrollView(
+      body:
+
+      SingleChildScrollView(
           child:Padding(
-              padding: logged ? EdgeInsets.only(top: kToolbarHeight+50,left:15,right:15) : EdgeInsets.all(0) ,
+              padding: logged ? EdgeInsets.only(top: kToolbarHeight+50,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
               child:child,
             ))
-          );
+      );
     }
 }
 

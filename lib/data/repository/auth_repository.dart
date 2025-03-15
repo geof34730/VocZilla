@@ -83,13 +83,13 @@ class AuthRepository {
     return FirebaseAuth.instance.currentUser!;
   }
 
-  Future<void> updateDisplayName({required String displayName,required AuthBloc authBloc}) async {
+  Future<void> updateDisplayName({required String displayName}) async {
     try {
       User? user = await FirebaseAuth.instance.currentUser;
       if (user != null) {
-        await user.updateDisplayName(displayName);
-        await dataUserRepository.updateDisplayName(displayName:displayName,uid: user.uid);
-        authBloc.add(UpdateDisplayNameEvent(displayName));
+        await FirebaseAuth.instance.currentUser?.updateDisplayName(displayName);
+        await FirebaseAuth.instance.currentUser?.reload();
+        await dataUserRepository.updateDisplayName(displayName:displayName,uid: FirebaseAuth.instance.currentUser?.uid);
       }
     } catch (e) {
       print("Erreur lors de la mise à jour du DisplayName: $e");

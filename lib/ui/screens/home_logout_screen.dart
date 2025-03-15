@@ -11,7 +11,8 @@ class HomeLogoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: BackgroundBlueLinear(
+        body:  SingleChildScrollView(
+        child:BackgroundBlueLinear(
               context: context,
               child:Center(
               child: Column(
@@ -81,6 +82,7 @@ class HomeLogoutScreen extends StatelessWidget {
                   ]
               )
             ),
+        )
         )
     );
   }

@@ -17,8 +17,11 @@ class DataUserRepository {
  }
 
   Future<void> updateDisplayName({required String displayName,required dynamic uid}) async {
+    print("updateDisplayName REPOSITITORY $uid. $displayName");
     _userFirestore = await getUser(uid);
     _userFirestore = _userFirestore?.copyWith(displayName: displayName);
+
+    print("_userFirestore: $_userFirestore");
     await _dataUserService.updateUserToFirestore(_userFirestore!);
   }
 
@@ -31,11 +34,14 @@ class DataUserRepository {
   }
 
   Future<void> synchroDisplayNameWithFirestore(User user) async {
+
+    print("synchroDisplayNameWithFirestore ${user.displayName}");
     _userFirestore = await getUser(user.uid);
     if (_userFirestore != null) {
       if (_userFirestore!.displayName.isEmpty ||
           _userFirestore!.displayName == "" ||
-          _userFirestore!.displayName != user.displayName) {
+          _userFirestore!.displayName != user.displayName
+      ) {
         try {
           if(user.displayName != null) {
             await updateDisplayName(displayName: user.displayName as String, uid: user.uid);

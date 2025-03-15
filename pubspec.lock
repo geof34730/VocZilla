@@ -661,6 +661,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.10.1"
+  horizontal_scroll_view:
+    dependency: "direct main"
+    description:
+      name: horizontal_scroll_view
+      sha256: "4063046ede7a0fef52ec1df13131e95025f2796975a3dbc52853353436b2f754"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   http:
     dependency: transitive
     description:

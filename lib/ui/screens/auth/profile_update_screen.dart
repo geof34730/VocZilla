@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
+import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 import '../../theme/backgroundBlueLinear.dart';
+import '../../widget/elements/Loading.dart';
 import '../../widget/form/CustomTextField.dart';
 
 class ProfileUpdateScreen extends StatelessWidget {
@@ -37,11 +39,7 @@ class ProfileUpdateScreen extends StatelessWidget {
           }
         },
         builder: (context, state) {
-          if (state is AuthLoading) {
-            ScaffoldMessenger.of(context).hideCurrentSnackBar();
-            return Center(child: CircularProgressIndicator());
-          }
-          return Padding(
+           return Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -70,10 +68,7 @@ class ProfileUpdateScreen extends StatelessWidget {
                       elevation: WidgetStateProperty.all(5),
                     ),
                     onPressed: () async {
-                      AuthRepository().updateDisplayName(
-                          authBloc: authBloc,
-                          displayName:
-                              '${firstNameController.text} ${lastNameController.text}');
+                     context.read<AuthBloc>().add(UpdateDisplayNameEvent('${firstNameController.text} ${lastNameController.text}'));
                     },
                     child: Text("S'inscrire"),
                   ),

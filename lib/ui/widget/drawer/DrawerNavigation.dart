@@ -11,7 +11,6 @@ import '../../theme/theme.dart';
 Drawer DrawerNavigation({required BuildContext context}) {
   return Drawer(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-    //width: MediaQuery.of(context).size.width,
     elevation: 5,
     shadowColor: Colors.grey,
     child: ListTileTheme(
@@ -29,7 +28,9 @@ Drawer DrawerNavigation({required BuildContext context}) {
               ),
               child: BlocBuilder<AuthBloc, AuthState>(
                 builder: (context, state) {
-                  if (state is AuthAuthenticated) {
+
+                  if (state is AuthAuthenticated ) {
+                    print("*************************rewrite drawer Navigation : ${state.user?.displayName}");
                     return Column(children: [
                       dataUserRepository.getPhotoURL() != ''
                           ? ProfilePicture(
@@ -82,12 +83,21 @@ Drawer DrawerNavigation({required BuildContext context}) {
             leading: Icon(Icons.logout),
             title: InkWell(
               onTap: () {
+                Navigator.pushNamed(context, '/updateprofile');
+              },
+              child: Text("update profile"),
+            ),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: InkWell(
+              onTap: () {
                 context.read<AuthBloc>().add(SignOutRequested());
               },
               child: Text("Déconnexion"),
             ),
           ),
-          Divider(),
         ],
       ),
     ),

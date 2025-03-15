@@ -10,6 +10,8 @@ import 'package:vobzilla/ui/screens/auth/profile_update_screen.dart';
 import 'package:vobzilla/ui/screens/auth/register_screen.dart';
 import 'package:vobzilla/ui/screens/home_logout_screen.dart';
 import 'package:vobzilla/ui/screens/home_screen.dart';
+import 'package:vobzilla/ui/theme/backgroundBlueLinear.dart';
+import 'package:vobzilla/ui/widget/elements/Loading.dart';
 import 'data/repository/data_user_repository.dart';
 
 class AppRoute {
@@ -25,6 +27,7 @@ class AppRoute {
       settings: settings,
       builder: (context)  {
         final authState = context.watch<AuthBloc>().state;
+
         if (authState is AuthAuthenticated) {
           final user = authState.user;
           if (!user!.emailVerified) {
@@ -35,10 +38,10 @@ class AppRoute {
               _redirectTo(context, settings, updateProfile);
             }
             else{
-             dataUserRepository.synchroDisplayNameWithFirestore(user);
-             if (settings.name == login || settings.name == register) {
-               _redirectTo(context, settings, home);
-            }
+              dataUserRepository.synchroDisplayNameWithFirestore(user);
+              if (settings.name == login || settings.name == register) {
+                _redirectTo(context, settings, home);
+              }
             }
           }
           return _getAuthenticatedPage(settings);
@@ -55,7 +58,7 @@ class AppRoute {
         Navigator.pushNamedAndRemoveUntil(
           context,
           targetRoute,
-          (Route<dynamic> route) => false,
+              (Route<dynamic> route) => false,
         );
       });
     }
@@ -81,9 +84,9 @@ class AppRoute {
   static Widget _getAuthenticatedPage(RouteSettings settings) {
     switch (settings.name) {
       case verifiedEmail:
-        return Layout(appBarNotLogged: true, child: ProfileEmailValidation());
+        return Layout(appBarNotLogged: true,logged: false, child: ProfileEmailValidation());
       case updateProfile:
-        return Layout(appBarNotLogged: true, child: ProfileUpdateScreen());
+        return Layout(appBarNotLogged: true,logged: false, child: ProfileUpdateScreen());
 
       case home:
       case homeLogged:

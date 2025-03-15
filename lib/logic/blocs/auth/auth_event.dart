@@ -54,7 +54,6 @@ class UpdateUserEvent extends AuthEvent {
 
 class UpdateDisplayNameEvent extends AuthEvent {
   final String displayName;
-
   const UpdateDisplayNameEvent(this.displayName);
 
   @override

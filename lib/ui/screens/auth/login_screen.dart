@@ -10,6 +10,8 @@ import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
 
 
 import '../../theme/backgroundBlueLinear.dart';
+import '../../widget/elements/Error.dart';
+import '../../widget/elements/Loading.dart';
 import '../../widget/form/CustomPasswordField.dart';
 import '../../widget/form/CustomTextField.dart';
 
@@ -24,27 +26,14 @@ class LoginScreen extends StatelessWidget {
         context: context,
         child:BlocConsumer<AuthBloc, AuthState>(
           listener: (context, state) {
-           if (state is AuthError) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                    backgroundColor: Colors.red,
-                    duration: Duration(seconds: 20),
-                    showCloseIcon: true,
-                    content: Text(
-                        state.message,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                    )
-                ),
-              );
+            if (state is AuthError) {
+              ErrorMessage(context:context, message:state.message);
+            }
+            if (state is AuthLoading) {
+               Loading();
             }
           },
           builder: (context, state) {
-            if (state is AuthLoading) {
-              ScaffoldMessenger.of(context).hideCurrentSnackBar();
-              return Center(child: CircularProgressIndicator());
-            }
             return Padding(
               padding: const EdgeInsets.only(left: 16.0, right: 16.0),
               child: Column(

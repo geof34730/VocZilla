@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-
-
-
-enum IconSize {
-  bigIcon,
-  smallIcon,
-}
+import '../../enum.dart';
 
 class ElevatedButtonCardHome extends StatelessWidget {
   final Color colorIcon;
