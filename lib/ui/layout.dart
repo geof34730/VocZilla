@@ -6,18 +6,25 @@ import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
 import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
 import 'package:vobzilla/ui/widget/appBar/AppBarLogged.dart';
 import 'package:vobzilla/ui/widget/appBar/AppBarNotLogged.dart';
+import 'package:vobzilla/ui/widget/bottomNavigationBar/BottomNavigationBarVocabulary.dart';
 
 class Layout extends StatelessWidget {
   const Layout({
     Key? key,
     required this.child,
     this.appBarNotLogged = false,
+    this.showBottomNavigationBar = false,
     this.logged = true,
+    this.itemSelected = 0,
+    this.id = "0",
   }) : super(key: key);
   final bool appBarNotLogged;
   final bool logged;
-
+  final bool showBottomNavigationBar;
   final dynamic child;
+  final int itemSelected;
+  final String id;
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +39,8 @@ class Layout extends StatelessWidget {
           return drawer ?? SizedBox.shrink();
         },
       ),
-      body:
-
-      SingleChildScrollView(
+      bottomNavigationBar: (showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: itemSelected,id:id) : null,
+      body:SingleChildScrollView(
           child:Padding(
               padding: logged ? EdgeInsets.only(top: kToolbarHeight+50,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
               child:child,

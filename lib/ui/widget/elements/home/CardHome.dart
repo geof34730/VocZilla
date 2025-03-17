@@ -50,35 +50,45 @@ class CardHome extends StatelessWidget {
                     children: [
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
-                        onClickButton: () {},
+                        onClickButton: () {
+                          Navigator.pushNamed(context, '/vocabulary/learn/65656565');
+                        },
                         iconContent: Icons.school_rounded,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
-                        onClickButton: () {},
+                        onClickButton: () {
+                          Navigator.pushNamed(context, '/vocabulary/quizz/65656565');
+                        },
                         iconContent: Icons.quiz_rounded,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
-                        onClickButton: () {},
+                        onClickButton: () {
+                          Navigator.pushNamed(context, '/vocabulary/list/65656565');
+                        },
                         iconContent: Icons.visibility,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
-                        onClickButton: () {},
+                        onClickButton: () {
+                          Navigator.pushNamed(context, '/vocabulary/voicedictation/65656565');
+                        },
                         iconContent: Icons.playlist_play_outlined,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
                       ElevatedButtonCardHome(
                         colorIcon: Colors.orange,
-                        onClickButton: () {},
+                        onClickButton: () {
+                          Navigator.pushNamed(context, '/vocabulary/statistical/65656565');
+                        },
                         iconContent: Icons.bar_chart,
                         context: context,
                         iconSize: IconSize.bigIcon,
@@ -105,7 +115,11 @@ class CardHome extends StatelessWidget {
                   children: [
                     ElevatedButtonCardHome(
                       colorIcon: Colors.green,
-                      onClickButton: () {},
+                      onClickButton: () {
+                        print("edit");
+
+
+                      },
                       iconContent: Icons.edit,
                       context: context,
                     ),

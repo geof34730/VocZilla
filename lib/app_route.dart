@@ -10,6 +10,11 @@ import 'package:vobzilla/ui/screens/auth/profile_update_screen.dart';
 import 'package:vobzilla/ui/screens/auth/register_screen.dart';
 import 'package:vobzilla/ui/screens/home_logout_screen.dart';
 import 'package:vobzilla/ui/screens/home_screen.dart';
+import 'package:vobzilla/ui/screens/vocabulary/learn_screen.dart';
+import 'package:vobzilla/ui/screens/vocabulary/list_screen.dart';
+import 'package:vobzilla/ui/screens/vocabulary/quizz_screen.dart';
+import 'package:vobzilla/ui/screens/vocabulary/statistical.screen.dart';
+import 'package:vobzilla/ui/screens/vocabulary/voice_dictation_screen.dart';
 import 'package:vobzilla/ui/theme/backgroundBlueLinear.dart';
 import 'package:vobzilla/ui/widget/elements/Loading.dart';
 import 'data/repository/data_user_repository.dart';
@@ -21,26 +26,30 @@ class AppRoute {
   static const String homeLogged = '/home';
   static const String verifiedEmail = '/verifiedemail';
   static const String updateProfile = '/updateprofile';
+  static const String learnVocabulary = '/vocabulary/learn/:id';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     return MaterialPageRoute(
       settings: settings,
-      builder: (context)  {
-        final authState = context.watch<AuthBloc>().state;
+      builder: (context) {
+        final authState = context
+            .watch<AuthBloc>()
+            .state;
 
         if (authState is AuthAuthenticated) {
           final user = authState.user;
           if (!user!.emailVerified) {
             user.sendEmailVerification();
             _redirectTo(context, settings, verifiedEmail);
-          }else{
+          } else {
             if (user.displayName == null || user.displayName!.isEmpty) {
               _redirectTo(context, settings, updateProfile);
             }
-            else{
+            else {
               dataUserRepository.synchroDisplayNameWithFirestore(user);
               if (settings.name == login || settings.name == register) {
                 _redirectTo(context, settings, home);
+                return Loading();
               }
             }
           }
@@ -52,7 +61,8 @@ class AppRoute {
     );
   }
 
-  static void _redirectTo(BuildContext context, RouteSettings settings, String targetRoute) {
+  static void _redirectTo(BuildContext context, RouteSettings settings,
+      String targetRoute) {
     if (settings.name != targetRoute) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         Navigator.pushNamedAndRemoveUntil(
@@ -69,10 +79,12 @@ class AppRoute {
       case home:
         return HomeLogoutScreen();
       case login:
-        return Layout(child: LoginScreen(),logged: false,);
+        return Layout(child: LoginScreen(), logged: false,);
       case register:
-        return Layout(child: RegisterScreen(),logged: false,);
+        return Layout(child: RegisterScreen(), logged: false,);
       default:
+        print(
+            '****************NOT SECURE No route defined for ${settings.name}');
         return Scaffold(
           body: Center(
             child: Text('NOT SECURE No route defined for ${settings.name}'),
@@ -81,22 +93,71 @@ class AppRoute {
     }
   }
 
-  static Widget _getAuthenticatedPage(RouteSettings settings) {
-    switch (settings.name) {
-      case verifiedEmail:
-        return Layout(appBarNotLogged: true,logged: false, child: ProfileEmailValidation());
-      case updateProfile:
-        return Layout(appBarNotLogged: true,logged: false, child: ProfileUpdateScreen());
 
-      case home:
-      case homeLogged:
-        return Layout(child: HomeScreen());
-      default:
-        return Scaffold(
-          body: Center(
-            child: Text('SECURE No route defined for ${settings.name}'),
-          ),
-        );
+  static Widget _getAuthenticatedPage(RouteSettings settings) {
+    final uri = Uri.parse(settings.name!);
+    print("settings.name ***********************: ${settings.name}");
+    if (uri.pathSegments.isNotEmpty) {
+      switch (uri.pathSegments[0]) {
+        case verifiedEmail:
+          return Layout(appBarNotLogged: true,
+              logged: false,
+              child: ProfileEmailValidation());
+        case updateProfile:
+          return Layout(appBarNotLogged: true,
+              logged: false,
+              child: ProfileUpdateScreen());
+        case home:
+        case homeLogged:
+          return Layout(child: HomeScreen());
+        case 'vocabulary':
+          if (uri.pathSegments.length == 3 ) {
+            final id = uri.pathSegments[2];
+            switch (uri.pathSegments[1]) {
+              case 'learn':
+                return Layout(showBottomNavigationBar: true, itemSelected:0, id:id,child: LearnScreen(id: id));
+              case 'quizz':
+                return Layout(showBottomNavigationBar: true,itemSelected:1 ,id:id, child: QuizzScreen(id: id));
+              case 'list':
+                return Layout(showBottomNavigationBar: true,itemSelected:2 ,id:id, child: ListScreen(id: id));
+              case 'voicedictation':
+                return Layout(showBottomNavigationBar: true,itemSelected:3 ,id:id, child: VoiceDictationScreen(id: id));
+              case 'statistical':
+                return Layout(showBottomNavigationBar: true,itemSelected:4 ,id:id, child: StatisticalScreen(id: id));
+              default:
+                return Scaffold(
+                  body: Center(
+                    child: Text('SECURE No route defined for ${settings.name}'),
+                  ),
+                );
+            }
+          }
+          else {
+            return Scaffold(
+              body: Center(
+                child: Text('SECURE No route defined for ${settings.name}'),
+              ),
+            );
+          }
+        default:
+          return Scaffold(
+            body: Center(
+              child: Text('SECURE No route defined for ${settings.name}'),
+            ),
+          );
+      }
     }
+    else {
+      return Layout(child: HomeScreen());
+    }
+  }
+
+
+  Widget Error404({required RouteSettings settings, bool secure = true}) {
+    return Scaffold(
+      body: Center(
+        child: Text('${(!secure ?? "NOT ")}SECURE No route defined for ${settings.name}'),
+      ),
+    );
   }
 }
