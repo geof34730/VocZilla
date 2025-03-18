@@ -36,6 +36,10 @@ void main() async {
     requestAlertPermission: true,
     requestBadgePermission: true,
     requestSoundPermission: true,
+    defaultPresentBanner: true,
+    defaultPresentAlert: true,
+    defaultPresentBadge: true,
+    defaultPresentSound: true
   );
 
   final InitializationSettings initializationSettings = InitializationSettings(
@@ -46,15 +50,6 @@ void main() async {
   await flutterLocalNotificationsPlugin.initialize(
     initializationSettings,
   );
-/*
-  await flutterLocalNotificationsPlugin.initialize(
-    initializationSettings,
-    onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) async {
-      // Gérer la sélection de la notification
-      print('onDidReceiveNotificationResponse: $notificationResponse');
-    },
-  );
-*/
   FirebaseMessaging.onMessage.listen((RemoteMessage message) {
     print('Got a message whilst in the foreground!');
     if (message.notification != null) {
@@ -64,16 +59,15 @@ void main() async {
       _showNotification(notification);
     }
   });
-
   runApp(MyApp());
 }
 
 Future<void> _showNotification(RemoteNotification notification) async {
   const AndroidNotificationDetails androidPlatformChannelSpecifics =
   AndroidNotificationDetails(
-    'your channel id',
-    'your channel name',
-    channelDescription: 'your channel description',
+    'message_channel_voczilla',
+    'Message Notification VocZilla',
+    channelDescription: 'Notifications for new messages VocZilla',
     importance: Importance.max,
     priority: Priority.high,
     showWhen: false,
@@ -85,6 +79,7 @@ Future<void> _showNotification(RemoteNotification notification) async {
     android: androidPlatformChannelSpecifics,
     iOS: darwinPlatformChannelSpecifics,
   );
+
   await flutterLocalNotificationsPlugin.show(
     0,
     notification.title,
