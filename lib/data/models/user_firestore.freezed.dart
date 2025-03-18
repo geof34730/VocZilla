@@ -22,6 +22,7 @@ mixin _$UserFirestore {
   String get providerId;
   bool get isEmailVerified;
   DateTime? get createdAt;
+  String get fcmToken;
 
   /// Create a copy of UserFirestore
   /// with the given fields replaced by the non-null parameter values.
@@ -50,17 +51,19 @@ mixin _$UserFirestore {
             (identical(other.isEmailVerified, isEmailVerified) ||
                 other.isEmailVerified == isEmailVerified) &&
             (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+                other.createdAt == createdAt) &&
+            (identical(other.fcmToken, fcmToken) ||
+                other.fcmToken == fcmToken));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, uid, email, displayName,
-      photoURL, providerId, isEmailVerified, createdAt);
+      photoURL, providerId, isEmailVerified, createdAt, fcmToken);
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt)';
+    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmToken: $fcmToken)';
   }
 }
 
@@ -77,7 +80,8 @@ abstract mixin class $UserFirestoreCopyWith<$Res> {
       String photoURL,
       String providerId,
       bool isEmailVerified,
-      DateTime? createdAt});
+      DateTime? createdAt,
+      String fcmToken});
 }
 
 /// @nodoc
@@ -100,6 +104,7 @@ class _$UserFirestoreCopyWithImpl<$Res>
     Object? providerId = null,
     Object? isEmailVerified = null,
     Object? createdAt = freezed,
+    Object? fcmToken = null,
   }) {
     return _then(_self.copyWith(
       uid: null == uid
@@ -130,6 +135,10 @@ class _$UserFirestoreCopyWithImpl<$Res>
           ? _self.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      fcmToken: null == fcmToken
+          ? _self.fcmToken
+          : fcmToken // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -144,7 +153,8 @@ class _UserFirestore implements UserFirestore {
       required this.photoURL,
       required this.providerId,
       required this.isEmailVerified,
-      required this.createdAt});
+      required this.createdAt,
+      required this.fcmToken});
   factory _UserFirestore.fromJson(Map<String, dynamic> json) =>
       _$UserFirestoreFromJson(json);
 
@@ -162,6 +172,8 @@ class _UserFirestore implements UserFirestore {
   final bool isEmailVerified;
   @override
   final DateTime? createdAt;
+  @override
+  final String fcmToken;
 
   /// Create a copy of UserFirestore
   /// with the given fields replaced by the non-null parameter values.
@@ -194,17 +206,19 @@ class _UserFirestore implements UserFirestore {
             (identical(other.isEmailVerified, isEmailVerified) ||
                 other.isEmailVerified == isEmailVerified) &&
             (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+                other.createdAt == createdAt) &&
+            (identical(other.fcmToken, fcmToken) ||
+                other.fcmToken == fcmToken));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, uid, email, displayName,
-      photoURL, providerId, isEmailVerified, createdAt);
+      photoURL, providerId, isEmailVerified, createdAt, fcmToken);
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt)';
+    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmToken: $fcmToken)';
   }
 }
 
@@ -223,7 +237,8 @@ abstract mixin class _$UserFirestoreCopyWith<$Res>
       String photoURL,
       String providerId,
       bool isEmailVerified,
-      DateTime? createdAt});
+      DateTime? createdAt,
+      String fcmToken});
 }
 
 /// @nodoc
@@ -246,6 +261,7 @@ class __$UserFirestoreCopyWithImpl<$Res>
     Object? providerId = null,
     Object? isEmailVerified = null,
     Object? createdAt = freezed,
+    Object? fcmToken = null,
   }) {
     return _then(_UserFirestore(
       uid: null == uid
@@ -276,6 +292,10 @@ class __$UserFirestoreCopyWithImpl<$Res>
           ? _self.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      fcmToken: null == fcmToken
+          ? _self.fcmToken
+          : fcmToken // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }

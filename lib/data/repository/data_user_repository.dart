@@ -10,7 +10,7 @@ class DataUserRepository {
     if(userCredential == null) return;
     final String uid = userCredential.user!.uid;
     bool userExists = await _dataUserService.checkUserExists(uid);
-    UserFirestore userFirestore = UserFirestore.fromUserCredential(userCredential);
+    UserFirestore userFirestore = await UserFirestore.fromUserCredential(userCredential);
     if (!userExists) {
       await _dataUserService.saveUserToFirestore(userFirestore);
     }

@@ -7,10 +7,9 @@ import '../theme/backgroundBlueLinear.dart';
 
 class HomeLogoutScreen extends StatelessWidget {
   const HomeLogoutScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+   return Scaffold(
         body:  SingleChildScrollView(
         child:BackgroundBlueLinear(
               context: context,

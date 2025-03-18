@@ -1151,6 +1151,8 @@ PODS:
   - AppAuth/Core (1.7.6)
   - AppAuth/ExternalUserAgent (1.7.6):
     - AppAuth/Core
+  - audioplayers_darwin (0.0.1):
+    - Flutter
   - BoringSSL-GRPC (0.0.36):
     - BoringSSL-GRPC/Implementation (= 0.0.36)
     - BoringSSL-GRPC/Interface (= 0.0.36)
@@ -1177,6 +1179,9 @@ PODS:
   - Firebase/Firestore (11.8.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 11.8.0)
+  - Firebase/InAppMessaging (11.8.0):
+    - Firebase/CoreOnly
+    - FirebaseInAppMessaging (~> 11.8.0-beta)
   - Firebase/Messaging (11.8.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 11.8.0)
@@ -1187,10 +1192,16 @@ PODS:
   - firebase_core (3.12.1):
     - Firebase/CoreOnly (= 11.8.0)
     - Flutter
+  - firebase_in_app_messaging (0.8.1-4):
+    - Firebase/InAppMessaging (= 11.8.0)
+    - firebase_core
+    - Flutter
   - firebase_messaging (15.2.4):
     - Firebase/Messaging (= 11.8.0)
     - firebase_core
     - Flutter
+  - FirebaseABTesting (11.8.0):
+    - FirebaseCore (~> 11.8.0)
   - FirebaseAppCheckInterop (11.8.0)
   - FirebaseAuth (11.8.1):
     - FirebaseAppCheckInterop (~> 11.0)
@@ -1230,6 +1241,13 @@ PODS:
     - gRPC-Core (~> 1.65.0)
     - leveldb-library (~> 1.22)
     - nanopb (~> 3.30910.0)
+  - FirebaseInAppMessaging (11.8.0-beta):
+    - FirebaseABTesting (~> 11.0)
+    - FirebaseCore (~> 11.8.0)
+    - FirebaseInstallations (~> 11.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - nanopb (~> 3.30910.0)
   - FirebaseInstallations (11.8.0):
     - FirebaseCore (~> 11.8.0)
     - GoogleUtilities/Environment (~> 8.0)
@@ -1248,6 +1266,8 @@ PODS:
   - Flutter (1.0.0)
   - flutter_facebook_auth (7.1.1):
     - FBSDKLoginKit (~> 17.1.0)
+    - Flutter
+  - flutter_local_notifications (0.0.1):
     - Flutter
   - flutter_secure_storage (6.0.0):
     - Flutter
@@ -1404,12 +1424,15 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - audioplayers_darwin (from `.symlinks/plugins/audioplayers_darwin/ios`)
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
+  - firebase_in_app_messaging (from `.symlinks/plugins/firebase_in_app_messaging/ios`)
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
   - Flutter (from `Flutter`)
   - flutter_facebook_auth (from `.symlinks/plugins/flutter_facebook_auth/ios`)
+  - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
   - google_sign_in_ios (from `.symlinks/plugins/google_sign_in_ios/darwin`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
@@ -1426,6 +1449,7 @@ SPEC REPOS:
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
     - Firebase
+    - FirebaseABTesting
     - FirebaseAppCheckInterop
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -1434,6 +1458,7 @@ SPEC REPOS:
     - FirebaseCoreInternal
     - FirebaseFirestore
     - FirebaseFirestoreInternal
+    - FirebaseInAppMessaging
     - FirebaseInstallations
     - FirebaseMessaging
     - FirebaseSharedSwift
@@ -1450,18 +1475,24 @@ SPEC REPOS:
     - RecaptchaInterop
 
 EXTERNAL SOURCES:
+  audioplayers_darwin:
+    :path: ".symlinks/plugins/audioplayers_darwin/ios"
   cloud_firestore:
     :path: ".symlinks/plugins/cloud_firestore/ios"
   firebase_auth:
     :path: ".symlinks/plugins/firebase_auth/ios"
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
+  firebase_in_app_messaging:
+    :path: ".symlinks/plugins/firebase_in_app_messaging/ios"
   firebase_messaging:
     :path: ".symlinks/plugins/firebase_messaging/ios"
   Flutter:
     :path: Flutter
   flutter_facebook_auth:
     :path: ".symlinks/plugins/flutter_facebook_auth/ios"
+  flutter_local_notifications:
+    :path: ".symlinks/plugins/flutter_local_notifications/ios"
   flutter_secure_storage:
     :path: ".symlinks/plugins/flutter_secure_storage/ios"
   google_sign_in_ios:
@@ -1476,6 +1507,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   abseil: d121da9ef7e2ff4cab7666e76c5a3e0915ae08c3
   AppAuth: d4f13a8fe0baf391b2108511793e4b479691fb73
+  audioplayers_darwin: 877d9a4d06331c5c374595e46e16453ac7eafa40
   BoringSSL-GRPC: ca6a8e5d04812fce8ffd6437810c2d46f925eaeb
   cloud_firestore: 56e7bb3888f09698dc061d38d02d87d4fd80e2cb
   FBAEMKit: cb719c53575a3be86ea873279f30d6a2c4e15881
@@ -1485,7 +1517,9 @@ SPEC CHECKSUMS:
   Firebase: d80354ed7f6df5f9aca55e9eb47cc4b634735eaf
   firebase_auth: 3d848b9b866b201e5c8e0c06d8b2cec272fd8825
   firebase_core: ac395f994af4e28f6a38b59e05a88ca57abeb874
+  firebase_in_app_messaging: 1ccb3cab43d1d339854437bc009a1dc1b287e6b5
   firebase_messaging: 7e223f4ee7ca053bf4ce43748e84a6d774ec9728
+  FirebaseABTesting: 7d6eee42b9137541eac2610e5fea3568d956707a
   FirebaseAppCheckInterop: 7bf86d55a2b7e9bd91464120eba3e52e4b63b2e2
   FirebaseAuth: ad59a1a7b161e75f74c39f70179d2482d40e2737
   FirebaseAuthInterop: 651756e70d9a0b9160db39ead71fd5507dbb6c84
@@ -1494,11 +1528,13 @@ SPEC CHECKSUMS:
   FirebaseCoreInternal: df24ce5af28864660ecbd13596fc8dd3a8c34629
   FirebaseFirestore: 563a4ab1a65e2858f05e150bb4c31b0f8f79248b
   FirebaseFirestoreInternal: 8c5921c360a70e447bfeefb245f450e8b50e750b
+  FirebaseInAppMessaging: e332d3534d11bc5e4f800953dd4e1fff9866f53b
   FirebaseInstallations: 6c963bd2a86aca0481eef4f48f5a4df783ae5917
   FirebaseMessaging: 487b634ccdf6f7b7ff180fdcb2a9935490f764e8
   FirebaseSharedSwift: 672954eac7b141d6954fab9a32d45d6b1d922df8
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_facebook_auth: 48be46091bd1a5cc5a66055f1228a9d99a28bfaa
+  flutter_local_notifications: ff50f8405aaa0ccdc7dcfb9022ca192e8ad9688f
   flutter_secure_storage: d33dac7ae2ea08509be337e775f6b59f1ff45f12
   google_sign_in_ios: 4111e87aa5e24a4404f00ea13479f35e571969cc
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7

@@ -17,6 +17,7 @@ _UserFirestore _$UserFirestoreFromJson(Map<String, dynamic> json) =>
       createdAt: json['createdAt'] == null
           ? null
           : DateTime.parse(json['createdAt'] as String),
+      fcmToken: json['fcmToken'] as String,
     );
 
 Map<String, dynamic> _$UserFirestoreToJson(_UserFirestore instance) =>
@@ -28,4 +29,5 @@ Map<String, dynamic> _$UserFirestoreToJson(_UserFirestore instance) =>
       'providerId': instance.providerId,
       'isEmailVerified': instance.isEmailVerified,
       'createdAt': instance.createdAt?.toIso8601String(),
+      'fcmToken': instance.fcmToken,
     };

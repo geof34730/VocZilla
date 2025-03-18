@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:vobzilla/data/repository/fcm_repository.dart';
 
 part 'user_firestore.freezed.dart';
 part 'user_firestore.g.dart';
@@ -16,20 +17,22 @@ abstract class UserFirestore with _$UserFirestore {
     required String providerId,
     required bool isEmailVerified,
     required DateTime? createdAt,
+    required String fcmToken,
 
   }) = _UserFirestore;
 
   factory UserFirestore.fromJson(Map<String, dynamic> json) => _$UserFirestoreFromJson(json);
 
-  factory UserFirestore.fromUserCredential(UserCredential userCredential) {
+  static Future<UserFirestore> fromUserCredential(
+      UserCredential userCredential) async {
     final user = userCredential.user!;
     String? urlPhoto;
 
     if (userCredential.credential?.providerId == 'facebook.com' &&
         userCredential.additionalUserInfo?.profile != null &&
         userCredential.additionalUserInfo!.profile!['picture'] is Map &&
-        (userCredential.additionalUserInfo!.profile!['picture'] as Map)['data'] is Map &&
-        ((userCredential.additionalUserInfo!.profile!['picture'] as Map)['data'] as Map)['url'] != null) {
+        (userCredential.additionalUserInfo!.profile!['picture'] as Map)['data'] is Map && ((userCredential.additionalUserInfo!.profile!['picture'] as Map)['data'] as Map)['url'] != null)
+    {
       urlPhoto = userCredential.additionalUserInfo!.profile!['picture']['data']['url'] as String?;
     } else {
       urlPhoto = user.photoURL;
@@ -43,6 +46,7 @@ abstract class UserFirestore with _$UserFirestore {
       isEmailVerified: user.emailVerified,
       createdAt: user.metadata.creationTime ?? DateTime.now(),
       providerId: userCredential.credential?.providerId ?? '',
+      fcmToken: await FcmRepository().geToken(),
 
     );
   }
