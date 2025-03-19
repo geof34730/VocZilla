@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vobzilla/data/repository/auth_repository.dart';
 
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
@@ -53,6 +54,7 @@ class AppRoute {
               }
             }
           }
+
           return _getAuthenticatedPage(settings);
         } else {
           return _getUnauthenticatedPage(settings);

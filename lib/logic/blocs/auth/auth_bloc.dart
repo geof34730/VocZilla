@@ -11,6 +11,17 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository authRepository;
 
   AuthBloc({required this.authRepository}) : super(AuthInitial()) {
+
+
+    on<AppStarted>((event, emit) async {
+      final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+        emit(AuthAuthenticated(user: user));
+      } else {
+        emit(AuthUnauthenticated());
+      }
+    });
+
     on<SignUpRequested>((event, emit) async {
       emit(AuthLoading());
       try {

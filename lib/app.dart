@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:vobzilla/global.dart';
+import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         child:MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => AuthBloc(authRepository: _AuthRepository),
+          create: (context) => AuthBloc(authRepository: _AuthRepository)..add(AppStarted()),
         ),
         BlocProvider(
             create: (context) => DrawerBloc()
@@ -35,8 +36,6 @@ class MyApp extends StatelessWidget {
       ],
       child: BlocBuilder<LocalizationCubit, Locale>(
         builder: (context, locale) {
-
-          print("define language code for firebase ===================> ${locale.languageCode}");
           FirebaseAuth.instance.setLanguageCode(locale.languageCode);
           return MaterialApp(
             theme: VobdzillaTheme.lightTheme,
@@ -68,5 +67,4 @@ class MyApp extends StatelessWidget {
         )
     );
   }
-
 }

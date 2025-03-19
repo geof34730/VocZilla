@@ -22,7 +22,7 @@ mixin _$UserFirestore {
   String get providerId;
   bool get isEmailVerified;
   DateTime? get createdAt;
-  String get fcmToken;
+  List<String> get fcmTokens;
 
   /// Create a copy of UserFirestore
   /// with the given fields replaced by the non-null parameter values.
@@ -52,18 +52,25 @@ mixin _$UserFirestore {
                 other.isEmailVerified == isEmailVerified) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            (identical(other.fcmToken, fcmToken) ||
-                other.fcmToken == fcmToken));
+            const DeepCollectionEquality().equals(other.fcmTokens, fcmTokens));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, uid, email, displayName,
-      photoURL, providerId, isEmailVerified, createdAt, fcmToken);
+  int get hashCode => Object.hash(
+      runtimeType,
+      uid,
+      email,
+      displayName,
+      photoURL,
+      providerId,
+      isEmailVerified,
+      createdAt,
+      const DeepCollectionEquality().hash(fcmTokens));
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmToken: $fcmToken)';
+    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmTokens: $fcmTokens)';
   }
 }
 
@@ -81,7 +88,7 @@ abstract mixin class $UserFirestoreCopyWith<$Res> {
       String providerId,
       bool isEmailVerified,
       DateTime? createdAt,
-      String fcmToken});
+      List<String> fcmTokens});
 }
 
 /// @nodoc
@@ -104,7 +111,7 @@ class _$UserFirestoreCopyWithImpl<$Res>
     Object? providerId = null,
     Object? isEmailVerified = null,
     Object? createdAt = freezed,
-    Object? fcmToken = null,
+    Object? fcmTokens = null,
   }) {
     return _then(_self.copyWith(
       uid: null == uid
@@ -135,10 +142,10 @@ class _$UserFirestoreCopyWithImpl<$Res>
           ? _self.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      fcmToken: null == fcmToken
-          ? _self.fcmToken
-          : fcmToken // ignore: cast_nullable_to_non_nullable
-              as String,
+      fcmTokens: null == fcmTokens
+          ? _self.fcmTokens
+          : fcmTokens // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -154,7 +161,8 @@ class _UserFirestore implements UserFirestore {
       required this.providerId,
       required this.isEmailVerified,
       required this.createdAt,
-      required this.fcmToken});
+      required final List<String> fcmTokens})
+      : _fcmTokens = fcmTokens;
   factory _UserFirestore.fromJson(Map<String, dynamic> json) =>
       _$UserFirestoreFromJson(json);
 
@@ -172,8 +180,13 @@ class _UserFirestore implements UserFirestore {
   final bool isEmailVerified;
   @override
   final DateTime? createdAt;
+  final List<String> _fcmTokens;
   @override
-  final String fcmToken;
+  List<String> get fcmTokens {
+    if (_fcmTokens is EqualUnmodifiableListView) return _fcmTokens;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_fcmTokens);
+  }
 
   /// Create a copy of UserFirestore
   /// with the given fields replaced by the non-null parameter values.
@@ -207,18 +220,26 @@ class _UserFirestore implements UserFirestore {
                 other.isEmailVerified == isEmailVerified) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            (identical(other.fcmToken, fcmToken) ||
-                other.fcmToken == fcmToken));
+            const DeepCollectionEquality()
+                .equals(other._fcmTokens, _fcmTokens));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, uid, email, displayName,
-      photoURL, providerId, isEmailVerified, createdAt, fcmToken);
+  int get hashCode => Object.hash(
+      runtimeType,
+      uid,
+      email,
+      displayName,
+      photoURL,
+      providerId,
+      isEmailVerified,
+      createdAt,
+      const DeepCollectionEquality().hash(_fcmTokens));
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmToken: $fcmToken)';
+    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmTokens: $fcmTokens)';
   }
 }
 
@@ -238,7 +259,7 @@ abstract mixin class _$UserFirestoreCopyWith<$Res>
       String providerId,
       bool isEmailVerified,
       DateTime? createdAt,
-      String fcmToken});
+      List<String> fcmTokens});
 }
 
 /// @nodoc
@@ -261,7 +282,7 @@ class __$UserFirestoreCopyWithImpl<$Res>
     Object? providerId = null,
     Object? isEmailVerified = null,
     Object? createdAt = freezed,
-    Object? fcmToken = null,
+    Object? fcmTokens = null,
   }) {
     return _then(_UserFirestore(
       uid: null == uid
@@ -292,10 +313,10 @@ class __$UserFirestoreCopyWithImpl<$Res>
           ? _self.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      fcmToken: null == fcmToken
-          ? _self.fcmToken
-          : fcmToken // ignore: cast_nullable_to_non_nullable
-              as String,
+      fcmTokens: null == fcmTokens
+          ? _self._fcmTokens
+          : fcmTokens // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }

@@ -23,6 +23,7 @@ class SignUpRequested extends AuthEvent {
 
   });
 }
+class AppStarted extends AuthEvent {}
 
 class SignInRequested extends AuthEvent {
   final String email;

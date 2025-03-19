@@ -13,9 +13,12 @@ import '../services/data_user_service.dart';
 import 'data_user_repository.dart';
 bool _emailVerified = false;
 bool _displayName = false;
+
+
 class AuthRepository {
 
   final AuthService _authService = AuthService();
+
   Future<User?> signUpWithEmail({
     required String email,
     required String password,
@@ -114,4 +117,7 @@ class AuthRepository {
     });
   }
 
+  Future<void> setPersistence() async {
+    await FirebaseAuth.instance.setPersistence(Persistence.LOCAL);
+  }
 }
