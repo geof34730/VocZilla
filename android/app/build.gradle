@@ -37,9 +37,9 @@ android {
     signingConfigs {
         release {
             keyAlias 'key'
-            keyPassword 'Hefpccy$08$08'
+            keyPassword ''
             storeFile file('key.jks')
-            storePassword 'Hefpccy$08$08'
+            storePassword ''
         }
     }
     buildTypes {
