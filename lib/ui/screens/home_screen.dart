@@ -8,8 +8,14 @@ import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'package:vobzilla/ui/widget/elements/home/CardHome.dart';
 
+import '../../core/utils/ui.dart';
+import '../../logic/blocs/purchase/purchase_bloc.dart';
+import '../../logic/blocs/purchase/purchase_event.dart';
+import '../../logic/blocs/purchase/purchase_state.dart';
 import '../theme/appColors.dart';
+import '../widget/elements/DialogHelper.dart';
 import '../widget/elements/LevelChart.dart';
+import '../widget/elements/home/CardClassementGamer.dart';
 import '../widget/form/CustomTextZillaField.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,6 +25,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      DialogHelper.showPurchaseDialog(context:context);
+    });
+
+
     return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,10 +150,6 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
          ],
-
-
-
-
           Text(
             "De Petit Monstre à Titan",
             style: TextStyle(
@@ -220,120 +227,12 @@ class HomeScreen extends StatelessWidget {
         ]);
   }
 
-  HorizontalScrollView HorizontalScrollViewCardHome({required List<Widget> children,  double itemWidth = 320}) {
-    return HorizontalScrollView(
-        itemWidth: itemWidth,
-        crossAxisSpacing: 8.0,
-        alignment: CrossAxisAlignment.center,
-        children: children
-    );
-  }
 
 
-  double itemWidthListPerso({required int nbList, required BuildContext context}) {
-     double largeurCard = 320;
-     double space = 8;
-    if(nbList == 1){
-      largeurCard = MediaQuery.sizeOf(context).width-(space*2);
-    }
-     if(nbList == 2){
-       largeurCard = (MediaQuery.sizeOf(context).width/2)-(space*2);
-     }
-     if(nbList > 2){
-       largeurCard = 320;
-     }
 
 
-     if(largeurCard < 320){
-       largeurCard = 320;
-     }
-    return largeurCard;
-  }
 
-  Card CardClassementGamer({required int position}) {
-    return Card(
-        color: Colors.green,
-        child: ListTile(
-          leading:SizedBox(
-            width: 20,
-            child:Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children:
-              [
-                Text(
-                    position.toString(),
-                    style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.white,
-                        fontFamily: GoogleFonts.titanOne().fontFamily
-                    )
-                ),
-              ]
-            ),
-          ),
-          title:Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Avatar(
-                        radius: 15,
-                        name: 'GeofMix',
-                        fontsize: 20,
-                      ),
-                      SizedBox(width: 8), // Ajoutez un espacement entre l'avatar et le texte
-                      Expanded(
-                        child: Text(
-                          "GeofMix",
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontFamily: GoogleFonts.titanOne().fontFamily,
-                          ),
-                        ),
-                      ),
-                      Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                                '25 jour(s)',
-                                style: TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.white,
 
-                                )
-                            ),
-                            Text(
-                                '5 liste(s) Perso',
-                                style: TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.white,
 
-                                )
-                            ),
-                          ]
-                      ),
-                    ],
-                 ),
-                  Container(
-                    width:double.infinity,
-                    child: LevelChart(
-                        level: 27,
-                        levelMax: 100,
-                        barColorProgress: Colors.white
-                    ),
-                  ),
-               ],
-              ),
-        )
-    );
-  }
 
 }

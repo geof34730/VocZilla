@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
@@ -17,6 +18,7 @@ class Layout extends StatelessWidget {
     this.logged = true,
     this.itemSelected = 0,
     this.id = "0",
+    this.titleScreen = null,
   }) : super(key: key);
   final bool appBarNotLogged;
   final bool logged;
@@ -24,6 +26,7 @@ class Layout extends StatelessWidget {
   final dynamic child;
   final int itemSelected;
   final String id;
+  final String? titleScreen;
 
 
   @override
@@ -43,9 +46,26 @@ class Layout extends StatelessWidget {
       body:SingleChildScrollView(
           child:Padding(
               padding: logged ? EdgeInsets.only(top: kToolbarHeight+50,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
-              child:child,
-            ))
-      );
+              child:Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if(titleScreen != null)...[
+                    Text(titleScreen!,
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: GoogleFonts.titanOne().fontFamily
+                      ),
+                    ),
+                  ],
+                  child
+                ],
+              )
+            )
+      )
+    );
     }
 }
 

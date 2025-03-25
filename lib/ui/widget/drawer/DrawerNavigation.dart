@@ -4,9 +4,11 @@ import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:vobzilla/data/repository/data_user_repository.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
+import '../../../app_route.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 import '../../theme/theme.dart';
+import '../elements/DialogHelper.dart';
 
 Drawer DrawerNavigation({required BuildContext context}) {
   return Drawer(
@@ -80,12 +82,37 @@ Drawer DrawerNavigation({required BuildContext context}) {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.logout),
+            leading: Icon(Icons.person),
             title: InkWell(
               onTap: () {
                 Navigator.pushNamed(context, '/updateprofile');
               },
-              child: Text("update profile"),
+              child: Text("Update profile"),
+            ),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.access_time_filled_outlined, color: Colors.red),
+            title: InkWell(
+              onTap: () {
+                DialogHelper.showPurchaseDialog(context: context);
+              },
+              child: Text("Ma période d'essai",
+                style: TextStyle(
+                  color: Colors.red,
+                ),
+              ),
+            ),
+          ),
+          Divider(),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.subscriptions_rounded),
+            title: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '${AppRoute.subscription}');
+              },
+              child: Text("Mon Abonnement"),
             ),
           ),
           Divider(),

@@ -13,19 +13,21 @@ import 'data/repository/auth_repository.dart';
 import 'logic/blocs/auth/auth_bloc.dart';
 import 'logic/blocs/auth/auth_state.dart';
 import 'logic/blocs/drawer/drawer_bloc.dart';
+import 'logic/blocs/purchase/purchase_bloc.dart';
+import 'logic/blocs/purchase/purchase_event.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   final Route Function(RouteSettings settings) generateRoute=AppRoute.generateRoute;
-  final AuthRepository _AuthRepository = AuthRepository();
+  final AuthRepository _authRepository = AuthRepository();
   @override
   Widget build(BuildContext context) {
     return Material(
         child:MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => AuthBloc(authRepository: _AuthRepository)..add(AppStarted()),
+          create: (context) => AuthBloc(authRepository: _authRepository)..add(AppStarted()),
         ),
         BlocProvider(
             create: (context) => DrawerBloc()
@@ -33,38 +35,41 @@ class MyApp extends StatelessWidget {
         BlocProvider(
             create: (context) => LocalizationCubit()
         ),
+        BlocProvider(
+          create: (context) => PurchaseBloc()..add(LoadProducts()),
+        ),
       ],
       child: BlocBuilder<LocalizationCubit, Locale>(
         builder: (context, locale) {
           FirebaseAuth.instance.setLanguageCode(locale.languageCode);
-          return MaterialApp(
-            theme: VobdzillaTheme.lightTheme,
-            debugShowCheckedModeBanner: debugMode,
-            locale: locale,
-            supportedLocales: AppLocalizations.supportedLocales,
-            localizationsDelegates: const [
-              AppLocalizations.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            onGenerateRoute: generateRoute,
-            navigatorKey: navigatorKey,
-            builder: (context, child) {
-              return Builder(
-                builder: (context) {
-                  return BlocListener<AuthBloc, AuthState>(
-                    listener: (context, state) {
-                    },
-                    child: child ?? Container(),
-                  );
-                },
-              );
-            },
-          );
-        },
-      ),
-        )
+            return MaterialApp(
+              theme: VobdzillaTheme.lightTheme,
+              debugShowCheckedModeBanner: debugMode,
+              locale: locale,
+              supportedLocales: AppLocalizations.supportedLocales,
+              localizationsDelegates: const [
+                AppLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              onGenerateRoute: generateRoute,
+              navigatorKey: navigatorKey,
+              builder: (context, child) {
+                return Builder(
+                  builder: (context) {
+                    return BlocListener<AuthBloc, AuthState>(
+                      listener: (context, state) {
+                      },
+                      child: child ?? Container(),
+                    );
+                  },
+                );
+              },
+            );
+          },
+        ),
+     )
     );
   }
 }

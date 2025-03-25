@@ -11,6 +11,7 @@ import 'package:vobzilla/ui/screens/auth/profile_update_screen.dart';
 import 'package:vobzilla/ui/screens/auth/register_screen.dart';
 import 'package:vobzilla/ui/screens/home_logout_screen.dart';
 import 'package:vobzilla/ui/screens/home_screen.dart';
+import 'package:vobzilla/ui/screens/subscription_screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/learn_screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/list_screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/quizz_screen.dart';
@@ -27,6 +28,8 @@ class AppRoute {
   static const String homeLogged = '/home';
   static const String verifiedEmail = '/verifiedemail';
   static const String updateProfile = '/updateprofile';
+  static const String subscription = '/subscription';
+
   static const String learnVocabulary = '/vocabulary/learn/:id';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -85,13 +88,8 @@ class AppRoute {
       case register:
         return Layout(child: RegisterScreen(), logged: false,);
       default:
-        print(
-            '****************NOT SECURE No route defined for ${settings.name}');
-        return Scaffold(
-          body: Center(
-            child: Text('NOT SECURE No route defined for ${settings.name}'),
-          ),
-        );
+        print('****************NOT SECURE No route defined for ${settings.name}');
+        return _errorPage(settings,secure: false);
     }
   }
 
@@ -101,65 +99,51 @@ class AppRoute {
     print("settings.name ***********************: ${settings.name}");
     if (uri.pathSegments.isNotEmpty) {
       switch (uri.pathSegments[0]) {
-        case verifiedEmail:
-          return Layout(appBarNotLogged: true,
-              logged: false,
-              child: ProfileEmailValidation());
-        case updateProfile:
-          return Layout(appBarNotLogged: true,
-              logged: false,
-              child: ProfileUpdateScreen());
-        case home:
-        case homeLogged:
+        case 'verifiedemail':
+          return Layout(appBarNotLogged: true, logged: false, child: ProfileEmailValidation());
+        case 'updateprofile':
+          return Layout(appBarNotLogged: true, logged: false, child: ProfileUpdateScreen());
+        case 'subscription': // Assurez-vous que ce cas est correctement défini
+          return Layout(child: SubscriptionScreen(),titleScreen: "Nos Abonnements",);
+        case 'home':
+        case 'homeLogged':
           return Layout(child: HomeScreen());
         case 'vocabulary':
-          if (uri.pathSegments.length == 3 ) {
+          if (uri.pathSegments.length == 3) {
             final id = uri.pathSegments[2];
             switch (uri.pathSegments[1]) {
               case 'learn':
-                return Layout(showBottomNavigationBar: true, itemSelected:0, id:id,child: LearnScreen(id: id));
+                return Layout(titleScreen: "Apprendre",showBottomNavigationBar: true, itemSelected: 0, id: id, child: LearnScreen(id: id));
               case 'quizz':
-                return Layout(showBottomNavigationBar: true,itemSelected:1 ,id:id, child: QuizzScreen(id: id));
+                return Layout(titleScreen: "Tester",showBottomNavigationBar: true, itemSelected: 1, id: id, child: QuizzScreen(id: id));
               case 'list':
-                return Layout(showBottomNavigationBar: true,itemSelected:2 ,id:id, child: ListScreen(id: id));
+                return Layout(titleScreen: "Liste",showBottomNavigationBar: true, itemSelected: 2, id: id, child: ListScreen(id: id));
               case 'voicedictation':
-                return Layout(showBottomNavigationBar: true,itemSelected:3 ,id:id, child: VoiceDictationScreen(id: id));
+                return Layout(titleScreen: "Dictée vocale",showBottomNavigationBar: true, itemSelected: 3, id: id, child: VoiceDictationScreen(id: id));
               case 'statistical':
-                return Layout(showBottomNavigationBar: true,itemSelected:4 ,id:id, child: StatisticalScreen(id: id));
+                return Layout(titleScreen: "Statistique",showBottomNavigationBar: true, itemSelected: 4, id: id, child: StatisticalScreen(id: id));
               default:
-                return Scaffold(
-                  body: Center(
-                    child: Text('SECURE No route defined for ${settings.name}'),
-                  ),
-                );
+                return _errorPage(settings);
             }
-          }
-          else {
-            return Scaffold(
-              body: Center(
-                child: Text('SECURE No route defined for ${settings.name}'),
-              ),
-            );
+          } else {
+            return _errorPage(settings);
           }
         default:
-          return Scaffold(
-            body: Center(
-              child: Text('SECURE No route defined for ${settings.name}'),
-            ),
-          );
+          return _errorPage(settings);
       }
-    }
-    else {
+    } else {
       return Layout(child: HomeScreen());
     }
   }
 
-
-  Widget Error404({required RouteSettings settings, bool secure = true}) {
+  static Widget _errorPage(RouteSettings settings, {bool secure = true}) {
     return Scaffold(
       body: Center(
-        child: Text('${(!secure ?? "NOT ")}SECURE No route defined for ${settings.name}'),
+        child: Text('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}'),
       ),
     );
   }
+
+
+
 }
