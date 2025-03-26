@@ -7,10 +7,13 @@ class UserOnFreeTrial extends UserState {
   UserOnFreeTrial(this.trialEndDate);
 }
 
-class UserSubscribed extends UserState {
-
+class UserOnLeftDaysFreeTrial extends UserState{
+  final int daysLeft;
+  UserOnLeftDaysFreeTrial(this.daysLeft);
 }
 
-class UserNotSubscribed extends UserState {
-  
-}
+class UserSubscribed extends UserState {}
+
+class UserNotSubscribed extends UserState {}
+
+class FreeTrialExpired extends UserState {}

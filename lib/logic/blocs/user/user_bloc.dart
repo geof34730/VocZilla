@@ -13,11 +13,13 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     // Par exemple, vous pouvez vérifier si l'utilisateur est abonné ou en période d'essai
     final isSubscribed = await checkSubscriptionStatus();
     final DateTime? trialEndDate = await getTrialEndDate();
-    print(DateTime.now().isBefore(trialEndDate!));
+    final int trialLeftDays = await getLeftDaysEndDate();
+
     if (isSubscribed) {
       emit(UserSubscribed());
-    } else if (DateTime.now().isBefore(trialEndDate)) {
+    } else if (DateTime.now().isBefore(trialEndDate!)) {
       emit(UserOnFreeTrial(trialEndDate));
+      emit(UserOnLeftDaysFreeTrial(trialLeftDays));
     } else {
       emit(UserNotSubscribed());
     }
@@ -33,5 +35,11 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     //retourne la date de fin de l'essai gratuit
     final endDate = await UserRepository().getDaysEndFreetrial();
     return endDate;
+  }
+
+  Future<int> getLeftDaysEndDate() async {
+    //retourne la date de fin de l'essai gratuit
+
+    return await UserRepository().getLeftDaysFreeTrial();
   }
 }
