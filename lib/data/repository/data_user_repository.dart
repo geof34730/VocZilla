@@ -6,19 +6,6 @@ import 'fcm_repository.dart';
 class DataUserRepository {
   final DataUserService _dataUserService = DataUserService();
   UserFirestore? _userFirestore;
-/*
-  Future<void> createUser({required UserCredential? userCredential}) async {
-    if(userCredential == null) return;
-    final String uid = userCredential.user!.uid;
-    bool userExists = await _dataUserService.checkUserExists(uid);
-    UserFirestore userFirestore = await UserFirestore.fromUserCredential(userCredential);
-    if (!userExists) {
-      await _dataUserService.saveUserToFirestore(userFirestore);
-    }
- }
-*/
-
-
 
   Future<void> createUser({required UserCredential? userCredential}) async {
     if (userCredential == null) return;
@@ -47,8 +34,6 @@ class DataUserRepository {
         else{
           print("Token already exists");
         }
-
-
       }
     }
   }

@@ -9,3 +9,4 @@ class BuyProduct extends PurchaseEvent {
 
   BuyProduct(this.productDetails);
 }
+

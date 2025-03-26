@@ -6,7 +6,6 @@ class PurchaseInitial extends PurchaseState {}
 
 class ProductsLoaded extends PurchaseState {
   final List<ProductDetails> products;
-
   ProductsLoaded(this.products);
 }
 
@@ -14,6 +13,5 @@ class PurchaseSuccess extends PurchaseState {}
 
 class PurchaseFailure extends PurchaseState {
   final String error;
-
   PurchaseFailure(this.error);
 }

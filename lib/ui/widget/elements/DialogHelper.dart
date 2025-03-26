@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vobzilla/data/repository/user_repository.dart';
 
 import '../../../app_route.dart';
+import '../../../global.dart';
 import '../../../logic/blocs/purchase/purchase_bloc.dart';
 import '../../../logic/blocs/purchase/purchase_event.dart';
 import '../../../logic/blocs/purchase/purchase_state.dart';
 
 
 class DialogHelper {
-  static  Future<void> showPurchaseDialog({required BuildContext context}) {
+  static  Future<void> showPurchaseDialog({required BuildContext context}) async {
+    int leftDaysFreeTrial = await UserRepository().getLeftDaysFreeTrial();
     return showDialog<void>(
       context: context,
       builder: (BuildContext context) {
@@ -46,10 +49,9 @@ class DialogHelper {
                                 fontFamily: GoogleFonts.roboto().fontFamily,
                                 color: Colors.black,
                                 height: 1.2,
-
                               ),
                               children:  <TextSpan>[
-                                TextSpan(text: '7 jours',
+                                TextSpan(text: '$daysFreeTrial jours',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
@@ -62,32 +64,49 @@ class DialogHelper {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 0,bottom: 0,left:20, right: 20),
-                          child:Text('Il vous reste',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                height: 1.0,
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontFamily: GoogleFonts.titanOne().fontFamily
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 0,bottom: 0,left:20, right: 20),
-                          child:Text('6 jours',
+                        if(leftDaysFreeTrial > 0)...[
+                          Padding(
+                            padding: EdgeInsets.only(top: 0,bottom: 0,left:20, right: 20),
+                            child:Text('Il vous reste',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  height: 1.2,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.red,
-                                  fontSize: 22,
+                                  height: 1.0,
+                                  color: Colors.black,
+                                  fontSize: 18,
                                   fontFamily: GoogleFonts.titanOne().fontFamily
-
-                              )
+                              ),
+                            ),
                           ),
-                        ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 0,bottom: 0,left:20, right: 20),
+                            child:Text('$leftDaysFreeTrial jours',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    height: 1.2,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red,
+                                    fontSize: 22,
+                                    fontFamily: GoogleFonts.titanOne().fontFamily
+
+                                )
+                            ),
+                          ),
+                        ],
+                        if(leftDaysFreeTrial == 0)...[
+                          Padding(
+                            padding: EdgeInsets.only(top: 0,bottom: 0,left:20, right: 20),
+                            child:Text("C'est votre dernier jour",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    height: 1.2,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red,
+                                    fontSize: 18,
+                                    fontFamily: GoogleFonts.titanOne().fontFamily
+                                )
+                            ),
+                          ),
+                        ],
                         Padding(
                           padding: EdgeInsets.only(top: 0,bottom: 0,left:20, right: 20),
                           child:Text('d’essai gratuits',
@@ -117,9 +136,9 @@ class DialogHelper {
                   ),
                 );
               } else if (state is PurchaseFailure) {
-                return Text('Erreur: ${state.error}');
+                  return Text('Erreur: ${state.error}');
               } else {
-                return Center(child: CircularProgressIndicator());
+                  return Center(child: CircularProgressIndicator());
               }
             },
           ),
@@ -128,11 +147,10 @@ class DialogHelper {
               onPressed: () {
                 Navigator.pushNamed(context, AppRoute.subscription);
               },
-              child: Text("S'abonner maintenant"),
+              child: Text("S'abonner"),
             ),
             TextButton(
               onPressed: () {
-                // Action pour plus tard
                 Navigator.of(context).pop();
               },
               child: Text("Plus tard"),

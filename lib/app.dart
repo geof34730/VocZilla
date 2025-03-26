@@ -15,6 +15,8 @@ import 'logic/blocs/auth/auth_state.dart';
 import 'logic/blocs/drawer/drawer_bloc.dart';
 import 'logic/blocs/purchase/purchase_bloc.dart';
 import 'logic/blocs/purchase/purchase_event.dart';
+import 'logic/blocs/user/user_bloc.dart';
+import 'logic/blocs/user/user_event.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
@@ -38,6 +40,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => PurchaseBloc()..add(LoadProducts()),
         ),
+        BlocProvider(
+          create: (context) => UserBloc()..add(CheckUserStatus())
+        )
       ],
       child: BlocBuilder<LocalizationCubit, Locale>(
         builder: (context, locale) {
