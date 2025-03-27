@@ -2,18 +2,12 @@ abstract class UserState {}
 
 class UserInitial extends UserState {}
 
-class UserOnFreeTrial extends UserState {
-  final DateTime trialEndDate;
-  UserOnFreeTrial(this.trialEndDate);
-}
-
-class UserOnLeftDaysFreeTrial extends UserState{
+class UserFreeTrialPeriodAndNotSubscribed  extends UserState{
   final int daysLeft;
-  UserOnLeftDaysFreeTrial(this.daysLeft);
+  UserFreeTrialPeriodAndNotSubscribed(this.daysLeft);
 }
 
-class UserSubscribed extends UserState {}
+class UserFreeTrialPeriodEndAndNotSubscribed extends UserState {}
 
-class UserNotSubscribed extends UserState {}
+class UserFreeTrialPeriodEndAndSubscribed extends UserState {}
 
-class FreeTrialExpired extends UserState {}

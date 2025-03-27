@@ -4,10 +4,9 @@ import '../../global.dart';
 
 class UserRepository {
   Future<DateTime?> getDaysEndFreetrial() async {
-    DateTime? EndDateFreeTrial;
-    await AuthRepository().getUser().then((value) => EndDateFreeTrial = value.metadata.creationTime?.add(Duration(days: daysFreeTrial)));
-    print("****** creationTime: $EndDateFreeTrial");
-    return EndDateFreeTrial;
+    DateTime? endDateFreeTrial;
+    await AuthRepository().getUser().then((value) => endDateFreeTrial = value.metadata.creationTime?.add(Duration(days: daysFreeTrial)));
+    return endDateFreeTrial;
   }
 
   Future<int> getLeftDaysFreeTrial() async {
@@ -21,5 +20,21 @@ class UserRepository {
     return difference;
   }
 
+
+  Future<bool> checkSubscriptionStatus() async {
+    // Implémentez la logique pour vérifier si l'utilisateur est abonné
+    return false; // Exemple : retourner false pour non abonné
+  }
+
+  Future<DateTime?> getTrialEndDate() async {
+    //retourne la date de fin de l'essai gratuit
+    final endDate = await UserRepository().getDaysEndFreetrial();
+    return endDate;
+  }
+
+  Future<int> getLeftDaysEndDate() async {
+    //retourne le nombre de jour de l'essai gratuit
+    return await UserRepository().getLeftDaysFreeTrial();
+  }
 
 }

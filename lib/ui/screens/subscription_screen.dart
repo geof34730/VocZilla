@@ -14,33 +14,30 @@ class SubscriptionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int? leftDaysFreeTrial = 0;
     context.read<PurchaseBloc>().add(LoadProducts());
-
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           BlocBuilder<UserBloc, UserState>(
               builder: (context, state) {
-              if (!(state is UserOnFreeTrial)) {
-                  return  Center(
-                        child:Padding(
-                        padding: const EdgeInsets.only(top: 15, bottom: 0),
-                        child: Text(
-                          "Votre période d'essai gratuite de $daysFreeTrial jours est terminée.",
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.red,
-                          ),
-                          textAlign: TextAlign.center,
+                if (state is UserFreeTrialPeriodEndAndNotSubscribed) {
+                  return Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 15, bottom: 0),
+                      child: Text(
+                        "Votre période d'essai gratuite de $daysFreeTrial jours est terminée.",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
                         ),
-                      )
-                    );
-              }
-              else{
-                return Center(child: CircularProgressIndicator());
-              }
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  );
+                }
+                // Retournez un SizedBox vide pour les autres états
+                return SizedBox();
             }
           ),
           Padding(
@@ -121,8 +118,6 @@ class SubscriptionScreen extends StatelessWidget {
                                     (product.id == idSubscriptionMensuel
                                         ? 'Libre comme l’air : résiliez quand vous voulez.'
                                         : 'Profitez pleinement de votre expérience tout en réalisant des économies.'),
-
-
                                   ),
                                 ),
                                 Row(
@@ -162,7 +157,6 @@ class SubscriptionScreen extends StatelessWidget {
           )
         ]
     );
-
   }
 }
 

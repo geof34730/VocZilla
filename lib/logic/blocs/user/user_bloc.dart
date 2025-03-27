@@ -9,37 +9,23 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   }
 
   Future<void> _onCheckUserStatus(CheckUserStatus event, Emitter<UserState> emit) async {
-    // Implémentez votre logique pour vérifier le statut d'abonnement de l'utilisateur
-    // Par exemple, vous pouvez vérifier si l'utilisateur est abonné ou en période d'essai
-    final isSubscribed = await checkSubscriptionStatus();
-    final DateTime? trialEndDate = await getTrialEndDate();
-    final int trialLeftDays = await getLeftDaysEndDate();
+    final isSubscribed = await UserRepository().checkSubscriptionStatus();
+    final DateTime? trialEndDate = await UserRepository().getTrialEndDate();
+    final int trialLeftDays = await UserRepository().getLeftDaysEndDate();
 
+    DateTime now = DateTime.now().toUtc();
+    bool isFreeTrialPeriod = trialEndDate != null && trialEndDate.isAfter(now);
     if (isSubscribed) {
-      emit(UserSubscribed());
-    } else if (DateTime.now().isBefore(trialEndDate!)) {
-      emit(UserOnFreeTrial(trialEndDate));
-      emit(UserOnLeftDaysFreeTrial(trialLeftDays));
+      emit(UserFreeTrialPeriodEndAndSubscribed());
     } else {
-      emit(UserNotSubscribed());
+      if (isFreeTrialPeriod) {
+        emit(UserFreeTrialPeriodAndNotSubscribed(trialLeftDays));
+      }
+      else{
+        emit(UserFreeTrialPeriodEndAndNotSubscribed());
+      }
     }
   }
-
-  Future<bool> checkSubscriptionStatus() async {
-    // Implémentez la logique pour vérifier si l'utilisateur est abonné
-
-    return false; // Exemple : retourner false pour non abonné
-  }
-
-  Future<DateTime?> getTrialEndDate() async {
-    //retourne la date de fin de l'essai gratuit
-    final endDate = await UserRepository().getDaysEndFreetrial();
-    return endDate;
-  }
-
-  Future<int> getLeftDaysEndDate() async {
-    //retourne la date de fin de l'essai gratuit
-
-    return await UserRepository().getLeftDaysFreeTrial();
-  }
 }
+
+

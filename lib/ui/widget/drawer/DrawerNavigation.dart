@@ -7,6 +7,8 @@ import 'package:vobzilla/ui/theme/appColors.dart';
 import '../../../app_route.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
+import '../../../logic/blocs/user/user_bloc.dart';
+import '../../../logic/blocs/user/user_state.dart';
 import '../../theme/theme.dart';
 import '../elements/DialogHelper.dart';
 
@@ -30,7 +32,6 @@ Drawer DrawerNavigation({required BuildContext context}) {
               ),
               child: BlocBuilder<AuthBloc, AuthState>(
                 builder: (context, state) {
-
                   if (state is AuthAuthenticated ) {
                     print("*************************rewrite drawer Navigation : ${state.user?.displayName}");
                     return Column(children: [
@@ -90,21 +91,32 @@ Drawer DrawerNavigation({required BuildContext context}) {
               child: Text("Update profile"),
             ),
           ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.access_time_filled_outlined, color: Colors.red),
-            title: InkWell(
-              onTap: () {
-                DialogHelper.showPurchaseDialog(context: context);
-              },
-              child: Text("Ma période d'essai",
-                style: TextStyle(
-                  color: Colors.red,
-                ),
-              ),
-            ),
+          BlocBuilder<UserBloc, UserState>(
+              builder: (context, state) {
+                if (state is UserFreeTrialPeriodAndNotSubscribed) {
+                  return Column(
+                    children: [
+                      Divider(),
+                      ListTile(
+                        leading: Icon(Icons.access_time_filled_outlined, color: Colors.red),
+                        title: InkWell(
+                          onTap: () {
+                            DialogHelper.showFreeTrialDialog(context: context);
+                          },
+                          child: Text("Ma période d'essai",
+                            style: TextStyle(
+                              color: Colors.red,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                }
+                // Retournez un SizedBox vide pour les autres états
+                return SizedBox();
+              }
           ),
-          Divider(),
           Divider(),
           ListTile(
             leading: Icon(Icons.subscriptions_rounded),

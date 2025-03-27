@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -95,6 +96,7 @@ class LoginScreen extends StatelessWidget {
                       context.read<AuthBloc>().add(FacebookSignInRequested());
                     },
                   ),
+                  if(!kIsWeb)
                   if (Platform.isIOS)
                           SignInButton(
                             elevation: 5,

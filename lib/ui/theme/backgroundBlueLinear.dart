@@ -5,7 +5,13 @@ import 'appColors.dart';
 
 Container BackgroundBlueLinear({required Widget child, required BuildContext context}) {
   double widthScreen=MediaQuery.of(context).size.width;
-  return Container(
+  return
+
+
+
+
+
+    Container(
     constraints: BoxConstraints(maxWidth: widthScreen,minWidth:widthScreen, minHeight: MediaQuery.of(context).size.height),
     decoration: BoxDecoration(
         gradient: LinearGradient(

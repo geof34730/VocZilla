@@ -5,6 +5,9 @@ import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
 import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 import 'package:vobzilla/ui/widget/appBar/TitleSite.dart';
 
+import '../../../logic/blocs/user/user_bloc.dart';
+import '../../../logic/blocs/user/user_state.dart';
+
 
 class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
@@ -34,13 +37,20 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
                 scaffoldKey.currentState!.openEndDrawer();
               },
           ),
-          IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () {
-              context.read<DrawerBloc>().add(OpenSettingsDrawer(context: context));
-              scaffoldKey.currentState!.openEndDrawer();
-            },
-          )
+          BlocBuilder<UserBloc, UserState>(
+            builder: (context, userState) {
+              if(!(userState is UserFreeTrialPeriodEndAndNotSubscribed)) {
+                  return IconButton(
+                    icon: const Icon(Icons.menu),
+                    onPressed: () {
+                      context.read<DrawerBloc>().add(OpenSettingsDrawer(context: context));
+                      scaffoldKey.currentState!.openEndDrawer();
+                    },
+                  );
+                }
+                return SizedBox(width: 10,);
+              },
+            ),
         ]
     );
   }

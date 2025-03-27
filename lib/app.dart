@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           create: (context) => PurchaseBloc()..add(LoadProducts()),
         ),
         BlocProvider(
-          create: (context) => UserBloc()..add(CheckUserStatus())
+          create: (context) => UserBloc()..add(CheckUserStatus()),
         )
       ],
       child: BlocBuilder<LocalizationCubit, Locale>(

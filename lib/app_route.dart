@@ -39,11 +39,12 @@ class AppRoute {
       settings: settings,
       builder: (context) {
         final authState = context.watch<AuthBloc>().state;
-        final userState = context.watch<UserBloc>().state;
+
         if (authState is AuthAuthenticated) {
           final user = authState.user;
           if (!user!.emailVerified && settings.name != verifiedEmail) {
             // Redirigez vers l'écran de vérification de l'email
+            user.sendEmailVerification();
             _redirectTo(context, settings, verifiedEmail);
             return Loading();
           } else if ((user.displayName == null || user.displayName!.isEmpty) && settings.name != updateProfile) {
@@ -51,16 +52,13 @@ class AppRoute {
             _redirectTo(context, settings, updateProfile);
             return Loading();
           } else {
-            if(userState is UserNotSubscribed ) {
-              // L'utilisateur n'as pas encore abonnement'
-              if (!(userState is UserOnFreeTrial) && settings.name != subscription) {
-               // l'essai gratuit est terminé
-                _redirectTo(context, settings, subscription);
-                return Loading();
-              }
+            final userState = context.watch<UserBloc>().state;
+            if(userState is UserFreeTrialPeriodEndAndNotSubscribed) {
+              //redirect subscription
+              _redirectTo(context, settings, subscription);
             }
-            return _getAuthenticatedPage(settings);
           }
+          return _getAuthenticatedPage(settings);
         } else {
           // Logique pour les utilisateurs non authentifiés
           return _getUnauthenticatedPage(settings);
@@ -70,6 +68,7 @@ class AppRoute {
   }
 
   static Widget _getUnauthenticatedPage(RouteSettings settings) {
+    print("_getUnauthenticatedPage settings.name ***********************: ${settings.name}");
     switch (settings.name) {
       case home:
         return HomeLogoutScreen();
@@ -84,19 +83,22 @@ class AppRoute {
 
   static Widget _getAuthenticatedPage(RouteSettings settings) {
     final uri = Uri.parse(settings.name!);
-    print("settings.name ***********************: ${settings.name}");
+    print("_getAuthenticatedPage settings.name ***********************: ${settings.name}");
     if (uri.pathSegments.isNotEmpty) {
-      switch (uri.pathSegments[0]) {
-        case 'verifiedemail':
+      print("uri.pathSegments[0] ***********************: ${uri.pathSegments[0]}");
+      switch ('/${uri.pathSegments[0]}') {
+        case verifiedEmail:
+          print("ok verified email");
           return Layout(appBarNotLogged: true, logged: false, child: ProfileEmailValidation());
-        case 'updateprofile':
+        case updateProfile:
           return Layout(appBarNotLogged: true, logged: false, child: ProfileUpdateScreen());
-        case 'subscription':
+        case subscription:
           return Layout(child: SubscriptionScreen(), titleScreen: "Nos Abonnements");
-        case 'home':
-        case 'homeLogged':
+        case home:
           return Layout(child: HomeScreen());
-        case 'vocabulary':
+        case homeLogged:
+          return Layout(child: HomeScreen());
+        case '/vocabulary':
           if (uri.pathSegments.length == 3) {
             final id = uri.pathSegments[2];
             switch (uri.pathSegments[1]) {
@@ -117,13 +119,14 @@ class AppRoute {
             return _errorPage(settings);
           }
         default:
-          return _errorPage(settings);
+          return Layout(child: HomeScreen());
       }
     } else {
       return Layout(child: HomeScreen());
     }
   }
   static void _redirectTo(BuildContext context, RouteSettings settings, String targetRoute) {
+    print('targetRoute $targetRoute');
     if (settings.name != targetRoute) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         Navigator.pushNamedAndRemoveUntil(
