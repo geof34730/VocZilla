@@ -11,7 +11,7 @@ import '../../../global.dart';
 
 class DialogHelper {
    Future<void> showFreeTrialDialog({required BuildContext context, int daysLeft = 0}) async {
-     Logger.Magenta.log("SHOWDIALOGUE");
+     Logger.Magenta.log("Show Trial Dialogue ");
       if (context.mounted ) {
         showDialog(
             context: context,
@@ -125,7 +125,8 @@ class DialogHelper {
                 actions: [
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, AppRoute.subscription);
+                      Navigator.of(dialogContext).pop();
+                      Navigator.pushNamed(dialogContext, AppRoute.subscription);
                     },
                     child: Text("S'abonner"),
                   ),
