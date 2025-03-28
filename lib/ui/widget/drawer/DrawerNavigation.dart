@@ -68,7 +68,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
             leading: Icon(Icons.show_chart),
             title: InkWell(
               onTap: () {
-                context.read<DrawerBloc>().add(CloseDrawer(context: context));
+                closeDrawer(context);
                 print("statistiques");
               },
               child: Text("Mes statistiques"),
@@ -79,7 +79,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
             leading: Icon(Icons.person),
             title: InkWell(
               onTap: () {
-                context.read<DrawerBloc>().add(CloseDrawer(context: context));
+                closeDrawer(context);
                 print("mon profil");
               },
               child: Text("Mon profil"),
@@ -90,7 +90,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
             leading: Icon(Icons.person),
             title: InkWell(
               onTap: () {
-                context.read<DrawerBloc>().add(CloseDrawer(context: context));
+                closeDrawer(context);
                 Navigator.pushNamed(context, '/updateprofile');
               },
               child: Text("Update profile"),
@@ -106,7 +106,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
                         leading: Icon(Icons.access_time_filled_outlined, color: Colors.red),
                         title: InkWell(
                           onTap: () {
-                            context.read<DrawerBloc>().add(CloseDrawer(context: context));
+                            closeDrawer(context);
                             DialogHelper().showFreeTrialDialog(context: context);
                           },
                           child: Text("Ma période d'essai",
@@ -128,7 +128,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
             leading: Icon(Icons.subscriptions_rounded),
             title: InkWell(
               onTap: () {
-                context.read<DrawerBloc>().add(CloseDrawer(context: context));
+                closeDrawer(context);
                 Navigator.pushNamed(context, '${AppRoute.subscription}');
               },
               child: Text("Mon Abonnement"),
@@ -139,7 +139,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
             leading: Icon(Icons.logout),
             title: InkWell(
               onTap: () {
-                context.read<DrawerBloc>().add(CloseDrawer(context: context));
+                closeDrawer(context);
                 context.read<AuthBloc>().add(SignOutRequested());
               },
               child: Text("Déconnexion"),
@@ -150,5 +150,8 @@ Drawer DrawerNavigation({required BuildContext context}) {
     ),
   );
 }
+void closeDrawer(BuildContext context) {
+  Navigator.of(context).pop();
+}
 
-class AuthLogoutRequested {}
+

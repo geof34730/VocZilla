@@ -30,7 +30,7 @@ class AppBarNotLogged extends StatelessWidget implements PreferredSizeWidget {
                 )
             ),
             onTap: () {
-              context.read<DrawerBloc>().add(OpenMenuDrawer());
+              context.read<DrawerBloc>().add(OpenLocalisationDrawer());
               scaffoldKey.currentState!.openEndDrawer();
             },
           ),

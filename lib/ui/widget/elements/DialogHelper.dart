@@ -9,10 +9,10 @@ import '../../../app_route.dart';
 import '../../../global.dart';
 
 class DialogHelper {
-   bool _isDialogShowing = false;
    Future<void> showFreeTrialDialog({required BuildContext context, int daysLeft = 0}) async {
-      if (context.mounted && !_isDialogShowing) {
-        _isDialogShowing = true;
+
+     print("SHOWDIALOGUE");
+      if (context.mounted ) {
         showDialog(
             context: context,
             builder: (BuildContext dialogContext) {
@@ -131,7 +131,7 @@ class DialogHelper {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.of(context).pop();
+                      Navigator.of(dialogContext).pop();
                     },
                     child: Text("Plus tard"),
                   ),

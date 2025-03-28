@@ -7,12 +7,8 @@ import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 class DrawerBloc extends Bloc<DrawerEvent, Widget?> {
   DrawerBloc() : super(null) {
 
-    on<DrawerEvent>((event, emit) {
 
-      // Logique de gestion des événements
-    });
-
-    on<OpenMenuDrawer>((event, emit) {
+    on<OpenLocalisationDrawer>((event, emit) {
       emit(DrawerLocalisation());
     });
 
@@ -20,9 +16,6 @@ class DrawerBloc extends Bloc<DrawerEvent, Widget?> {
       emit(DrawerNavigation(context: event.context));
     });
 
-    on<CloseDrawer>((event, emit) {
-     // Navigator.of(event.context).pop();
-     emit(null); // Ferme le drawer
-    });
+
   }
 }
