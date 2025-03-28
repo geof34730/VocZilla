@@ -6,12 +6,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/logic/blocs/user/user_bloc.dart';
 import 'package:vobzilla/logic/blocs/user/user_state.dart';
 import '../../../app_route.dart';
+import '../../../core/utils/logger.dart';
 import '../../../global.dart';
 
 class DialogHelper {
    Future<void> showFreeTrialDialog({required BuildContext context, int daysLeft = 0}) async {
-
-     print("SHOWDIALOGUE");
+     Logger.Magenta.log("SHOWDIALOGUE");
       if (context.mounted ) {
         showDialog(
             context: context,

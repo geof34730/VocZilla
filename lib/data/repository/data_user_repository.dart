@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import '../../core/utils/logger.dart';
 import '../models/user_firestore.dart';
 import '../services/data_user_service.dart';
 import 'fcm_repository.dart';
@@ -21,7 +22,7 @@ class DataUserRepository {
 
         // Check if the token is already in the list
         bool tokenExists = _userFirestore!.fcmTokens.contains(newToken);
-        print("*****_userFirestore!.fcmTokens.lenght ${_userFirestore!.fcmTokens.length}");
+        Logger.Cyan.log("*****_userFirestore!.fcmTokens.lenght ${_userFirestore!.fcmTokens.length}");
         if (!tokenExists) {
           // Add the new token to the list
           List<String> updatedTokens = List<String>.from(_userFirestore!.fcmTokens);
@@ -32,22 +33,17 @@ class DataUserRepository {
           await _dataUserService.updateUserToFirestore(_userFirestore!);
         }
         else{
-          print("Token already exists");
+          Logger.Cyan.log("Token already exists");
         }
       }
     }
   }
 
-
-
-
-
   Future<void> updateDisplayName({required String displayName,required dynamic uid}) async {
-    print("updateDisplayName REPOSITITORY $uid. $displayName");
+    Logger.Yellow.log("updateDisplayName REPOSITITORY $uid. $displayName");
     _userFirestore = await getUser(uid);
     _userFirestore = _userFirestore?.copyWith(displayName: displayName);
-
-    print("_userFirestore: $_userFirestore");
+    Logger.Yellow.log("_userFirestore: $_userFirestore");
     await _dataUserService.updateUserToFirestore(_userFirestore!);
   }
 
@@ -61,7 +57,7 @@ class DataUserRepository {
 
   Future<void> synchroDisplayNameWithFirestore(User user) async {
 
-    print("synchroDisplayNameWithFirestore ${user.displayName}");
+    Logger.Yellow.log("synchroDisplayNameWithFirestore ${user.displayName}");
     _userFirestore = await getUser(user.uid);
     if (_userFirestore != null) {
       if (_userFirestore!.displayName.isEmpty ||
@@ -72,9 +68,9 @@ class DataUserRepository {
           if(user.displayName != null) {
             await updateDisplayName(displayName: user.displayName as String, uid: user.uid);
           }
-          //print("DisplayName mis à jour avec succès.");
+          Logger.Yellow.log("DisplayName mis à jour avec succès.");
         } catch (e) {
-          //print("Erreur lors de la mise à jour du DisplayName: $e");
+          Logger.Red.log("Erreur lors de la mise à jour du DisplayName: $e");
         }
       }
     }

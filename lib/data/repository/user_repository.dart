@@ -1,7 +1,5 @@
 import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../global.dart';
-
-
 class UserRepository {
   Future<DateTime?> getDaysEndFreetrial() async {
     DateTime? endDateFreeTrial;
@@ -16,10 +14,8 @@ class UserRepository {
       return 0;
     }
     final difference = endDate.difference(now).inDays;
-    print("****** difference: $difference");
     return difference;
   }
-
 
   Future<bool> checkSubscriptionStatus() async {
     // Implémentez la logique pour vérifier si l'utilisateur est abonné

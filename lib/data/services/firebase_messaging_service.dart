@@ -1,5 +1,7 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 
+import '../../core/utils/logger.dart';
+
 class FirebaseMessagingService {
   final FirebaseMessaging _messaging = FirebaseMessaging.instance;
 
@@ -14,16 +16,16 @@ class FirebaseMessagingService {
       sound: true,
     );
 
-    print('User granted permission: ${settings.authorizationStatus}');
+    Logger.Green.log('User granted permission: ${settings.authorizationStatus}');
 
-    _messaging.getToken().then((value) => print("FirebaseMessaging.instance.getToken : $value"));
+    _messaging.getToken().then((value) => Logger.Yellow.log("FirebaseMessaging.instance.getToken : $value"));
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print('Got a message whilst in the foreground!');
+      Logger.Yellow.log('Got a message whilst in the foreground!');
       if (message.notification != null) {
         RemoteNotification notification = message.notification!;
-        print('Notification Title: ${notification.title}');
-        print('Notification Body: ${notification.body}');
+        Logger.Yellow.log('Notification Title: ${notification.title}');
+        Logger.Yellow.log('Notification Body: ${notification.body}');
         // Call your notification service to show the notification
       }
     });

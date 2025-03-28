@@ -1,5 +1,7 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 
+import '../../core/utils/logger.dart';
+
 
 class FcmRepository {
   Future<String> geToken() async {
@@ -9,7 +11,7 @@ class FcmRepository {
     if (fcmToken != null) {
       token = fcmToken;
     }
-    print("FCM Token: $token");
+    Logger.Cyan.log("FCM Token: $token");
     return token;
   }
 

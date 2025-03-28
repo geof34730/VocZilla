@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../core/utils/logger.dart';
 import '../../data/repository/user_repository.dart';
 import '../../global.dart';
 import '../../logic/blocs/purchase/purchase_bloc.dart';
@@ -147,10 +148,10 @@ class SubscriptionScreen extends StatelessWidget {
                   // Add other widgets here
                 );
               } else if (state is PurchaseFailure) {
-                print("*************** Error: ${state.error}");
+                Logger.Red.log("*************** Error: ${state.error}");
                 return Center(child: Text('Error: ${state.error}'));
               } else {
-                print('*************** Loading products...');
+                Logger.Cyan.log('*************** Loading products...');
                 return Center(child: CircularProgressIndicator());
               }
             },

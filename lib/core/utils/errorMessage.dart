@@ -1,3 +1,5 @@
+import 'logger.dart';
+
 String errorFirebaseMessage(e) {
   String messageErreur = "erreur inconnue";
   switch (e.code) {
@@ -29,6 +31,6 @@ String errorFirebaseMessage(e) {
       messageErreur="Email ou mot de passe invalide.";
       break;
   }
-  print("SignInRequested error=============> ${e.code} ${e.message}e" );
+  Logger.Red.log("SignInRequested error=============> ${e.code} ${e.message}e" );
   return messageErreur;
 }

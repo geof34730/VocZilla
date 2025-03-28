@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:vobzilla/core/utils/logger.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'package:vobzilla/ui/widget/elements/home/CardHome.dart';
 import '../../core/utils/ui.dart';
@@ -19,6 +20,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
     return BlocProvider(
         create: (context) => UserBloc()..add(CheckUserStatus()),

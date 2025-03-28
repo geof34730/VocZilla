@@ -6,6 +6,7 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'dart:io';
 
 import '../../core/utils/crypt.dart';
+import '../../core/utils/logger.dart';
 import '../repository/data_user_repository.dart';
 import 'data_user_service.dart';
 
@@ -30,7 +31,6 @@ class AuthService {
     return userCredential;
   }
 
-
   Future<UserCredential?> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
     final GoogleSignInAuthentication googleAuth = await googleUser!.authentication;
@@ -50,9 +50,8 @@ class AuthService {
       nonce: nonce,
       permissions: ['email', 'public_profile'],
     ).catchError((onError) {
-      if (kDebugMode) {
-        //print(onError);
-      }
+      Logger.Red.log(onError);
+
       throw Exception(onError.message);
     }
     );
@@ -108,7 +107,7 @@ class AuthService {
       dataUserRepository.createUser(userCredential: userCredential);
       return userCredential;
     } catch (e) {
-      print("Error during Apple sign-in: $e");
+      Logger.Red.log("Error during Apple sign-in: $e");
       return null;
     }
   }

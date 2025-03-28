@@ -1,5 +1,3 @@
-import 'dart:developer' as developer;
-
 import '../../global.dart';
 
 enum Logger {
@@ -15,5 +13,5 @@ enum Logger {
   final String code;
   const Logger(this.code);
 
-  void log(dynamic text) => (debugMode ?  developer.log('\x1B[' + code+ 'm' + text.toString() + '\x1B[0m') : null);
+  void log(dynamic text) => (debugMode ?  print('\x1B[' + code+ 'm' + text.toString() + '\x1B[0m') : null);
 }

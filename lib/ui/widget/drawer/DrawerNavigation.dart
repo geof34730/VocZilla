@@ -6,6 +6,7 @@ import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
 import '../../../app_route.dart';
+import '../../../core/utils/logger.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 import '../../../logic/blocs/drawer/drawer_bloc.dart';
@@ -35,7 +36,7 @@ Drawer DrawerNavigation({required BuildContext context}) {
               child: BlocBuilder<AuthBloc, AuthState>(
                 builder: (context, state) {
                   if (state is AuthAuthenticated ) {
-                    print("*************************rewrite drawer Navigation : ${state.user?.displayName}");
+                    Logger.Yellow.log("*************************rewrite drawer Navigation : ${state.user?.displayName}");
                     return Column(children: [
                       dataUserRepository.getPhotoURL() != ''
                           ? ProfilePicture(

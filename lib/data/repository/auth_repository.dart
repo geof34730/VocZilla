@@ -4,12 +4,11 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
+import '../../core/utils/logger.dart';
 import '../../logic/blocs/auth/auth_bloc.dart';
 import '../../logic/blocs/auth/auth_event.dart';
 import '../services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
-import '../services/data_user_service.dart';
 import 'data_user_repository.dart';
 bool _emailVerified = false;
 bool _displayName = false;
@@ -55,7 +54,7 @@ class AuthRepository {
   }
 
   Future<User?> signInWithApple() async {
-    print('signing in with apple');
+    Logger.Cyan.log('signing in with apple');
     try {
       final appleCredential = await SignInWithApple.getAppleIDCredential(
         scopes: [
@@ -71,10 +70,10 @@ class AuthRepository {
 
       UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(oauthCredential);
       dataUserRepository.createUser(userCredential: userCredential);
-      print('userCredential: ${userCredential.user}');
+      Logger.Cyan.log('userCredential: ${userCredential.user}');
       return userCredential.user;
     } catch (e) {
-      print("Error during Apple sign-in: $e");
+      Logger.Red.log("Error during Apple sign-in: $e");
       return null;
     }
   }
@@ -96,7 +95,7 @@ class AuthRepository {
         await dataUserRepository.updateDisplayName(displayName:displayName,uid: FirebaseAuth.instance.currentUser?.uid);
       }
     } catch (e) {
-      print("Erreur lors de la mise à jour du DisplayName: $e");
+      Logger.Red.log("Erreur lors de la mise à jour du DisplayName: $e");
     }
   }
 
