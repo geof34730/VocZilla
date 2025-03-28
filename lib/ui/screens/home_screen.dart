@@ -30,18 +30,18 @@ class HomeScreen extends StatelessWidget {
             final today = DateTime.now().toIso8601String().substring(0, 10);
             print("lastShownDate: $lastShownDate");
             print("today: $today");
-            //if (lastShownDate != today) {
+           // if (lastShownDate != today) {
               // Enregistrer la date d'aujourd'hui comme la dernière date d'affichage
-              await prefs.setString('lastFreeTrialDialogDate', today);
-              await prefs.setString('lastFreeTrialDialogDate', '2025-01-01');
-              print(prefs.get("lastFreeTrialDialogDate"));
               // Afficher la boîte de dialogue
-              WidgetsBinding.instance.addPostFrameCallback((_) {
+              WidgetsBinding.instance.addPostFrameCallback((_) async {
                 print("showFreeTrialDialog");
-                DialogHelper.showFreeTrialDialog(context: context, daysLeft: state.daysLeft);
+                await prefs.setString('lastFreeTrialDialogDate', today);
+                //await prefs.setString('lastFreeTrialDialogDate', '2025-01-01');
+                print(prefs.get("lastFreeTrialDialogDate"));
+                DialogHelper().showFreeTrialDialog(context: context, daysLeft: state.daysLeft);
               });
-           // }
-          }
+            }
+          //}
     },
     child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

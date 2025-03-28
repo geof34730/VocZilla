@@ -8,7 +8,7 @@ class DrawerBloc extends Bloc<DrawerEvent, Widget?> {
   DrawerBloc() : super(null) {
 
     on<DrawerEvent>((event, emit) {
-      print('Drawer BLOC EVENT**************************Event: $event');
+
       // Logique de gestion des événements
     });
 
@@ -21,7 +21,8 @@ class DrawerBloc extends Bloc<DrawerEvent, Widget?> {
     });
 
     on<CloseDrawer>((event, emit) {
-      emit(null); // Ferme le drawer
+     // Navigator.of(event.context).pop();
+     emit(null); // Ferme le drawer
     });
   }
 }

@@ -10,4 +10,7 @@ class OpenSettingsDrawer extends DrawerEvent {
   OpenSettingsDrawer({required this.context});
 }
 
-class CloseDrawer extends DrawerEvent {}
+class CloseDrawer extends DrawerEvent {
+  final BuildContext context;
+  CloseDrawer({required this.context});
+}

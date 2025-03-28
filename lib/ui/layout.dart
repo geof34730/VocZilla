@@ -39,7 +39,7 @@ class Layout extends StatelessWidget {
       appBar: AuthAppBar(scaffoldKey: scaffoldKey, appBarNotLogged: appBarNotLogged),
       endDrawer: BlocBuilder<DrawerBloc, Widget?>(
         builder: (context, drawer) {
-          return drawer ?? SizedBox.shrink();
+          return drawer ?? Container();
         },
       ),
       bottomNavigationBar: (showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: itemSelected,id:id) : null,

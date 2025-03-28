@@ -17,11 +17,11 @@ import 'logic/blocs/purchase/purchase_bloc.dart';
 import 'logic/blocs/purchase/purchase_event.dart';
 import 'logic/blocs/user/user_bloc.dart';
 import 'logic/blocs/user/user_event.dart';
-
+final Route Function(RouteSettings settings) generateRoute=AppRoute.generateRoute;
 class MyApp extends StatelessWidget {
   MyApp({super.key});
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-  final Route Function(RouteSettings settings) generateRoute=AppRoute.generateRoute;
+
   final AuthRepository _authRepository = AuthRepository();
   @override
   Widget build(BuildContext context) {

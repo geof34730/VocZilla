@@ -35,35 +35,67 @@ class AppRoute {
   static const String learnVocabulary = '/vocabulary/learn/:id';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
+    print("APP ROuTE 1 ${settings.name}");
+    bool notRedirectNow = true;
     return MaterialPageRoute(
       settings: settings,
-      builder: (context) {
-        final authState = context.watch<AuthBloc>().state;
+        builder: (context) {
+          return BlocListener<AuthBloc, AuthState>(
+            listener: (context, authState) {
+              if (authState is AuthAuthenticated) {
+                print("APP ROuTE 2");
+                final user = authState.user;
+                if (!user!.emailVerified && settings.name != verifiedEmail) {
+                  // Redirigez vers l'écran de vérification de l'email
+                  print("APP ROuTE 3");
+                  user.sendEmailVerification();
+                  notRedirectNow = false;
+                  _redirectTo(context, settings, verifiedEmail);
+                } else
+                if ((user.displayName == null || user.displayName!.isEmpty) && settings.name != updateProfile) {
+                  // Redirigez vers l'écran de mise à jour du profil
+                  print("APP ROuTE 4");
+                  notRedirectNow = false;
+                  _redirectTo(context, settings, updateProfile);
+                } else {
+                    print("APP ROuTE 5");
+                  final userState = context.read<UserBloc>().state;
+                    print("APP ROuTE 6");
+                  if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
+                    print("APP ROuTE 6");
+                    //redirect subscription
+                    notRedirectNow = false;
+                    _redirectTo(context, settings, subscription);
+                  }else{
+                    print("APP ROuTE 11");
+                    if(settings.name == login) {
+                      notRedirectNow = false;
+                      print("APP ROuTE 12");
+                      _redirectTo(context, settings, home);
+                    }
+                  }
+                  print("APP ROuTE 7");
+                }
+              }
+            },
+            child: BlocBuilder<AuthBloc, AuthState>(
+              builder: (context, authState) {
+                print("APP ROuTE 10 $notRedirectNow");
+                if (authState is AuthAuthenticated && notRedirectNow) {
+                  print("APP ROuTE 8 $notRedirectNow");
+                    return _getAuthenticatedPage(settings);
+                }
 
-        if (authState is AuthAuthenticated) {
-          final user = authState.user;
-          if (!user!.emailVerified && settings.name != verifiedEmail) {
-            // Redirigez vers l'écran de vérification de l'email
-            user.sendEmailVerification();
-            _redirectTo(context, settings, verifiedEmail);
-            return Loading();
-          } else if ((user.displayName == null || user.displayName!.isEmpty) && settings.name != updateProfile) {
-            // Redirigez vers l'écran de mise à jour du profil
-            _redirectTo(context, settings, updateProfile);
-            return Loading();
-          } else {
-            final userState = context.watch<UserBloc>().state;
-            if(userState is UserFreeTrialPeriodEndAndNotSubscribed) {
-              //redirect subscription
-              _redirectTo(context, settings, subscription);
-            }
-          }
-          return _getAuthenticatedPage(settings);
-        } else {
-          // Logique pour les utilisateurs non authentifiés
-          return _getUnauthenticatedPage(settings);
+                if (authState is AuthUnauthenticated && notRedirectNow) {
+                  print("APP ROuTE 9");
+                  // Logique pour les utilisateurs non authentifiés
+                  return _getUnauthenticatedPage(settings);
+                }
+                return Loading(); // Default loading state
+              },
+            ),
+          );
         }
-      },
     );
   }
 
@@ -72,6 +104,7 @@ class AppRoute {
     switch (settings.name) {
       case home:
         return HomeLogoutScreen();
+
       case login:
         return Layout(child: LoginScreen(), logged: false);
       case register:
@@ -129,10 +162,9 @@ class AppRoute {
     print('targetRoute $targetRoute');
     if (settings.name != targetRoute) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        Navigator.pushNamedAndRemoveUntil(
+        Navigator.pop(
           context,
-          targetRoute,
-          (Route<dynamic> route) => false,
+          targetRoute
         );
       });
     }
