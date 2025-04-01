@@ -15,3 +15,9 @@ class PurchaseFailure extends PurchaseState {
   final String error;
   PurchaseFailure(this.error);
 }
+
+
+class SubscriptionsLoaded extends PurchaseState {
+  final List<PurchaseDetails> subscriptions;
+  SubscriptionsLoaded(this.subscriptions);
+}

@@ -10,3 +10,7 @@ class BuyProduct extends PurchaseEvent {
   BuyProduct(this.productDetails);
 }
 
+class CheckActiveSubscriptions extends PurchaseEvent {
+
+
+}

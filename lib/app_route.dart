@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vobzilla/data/repository/auth_repository.dart';
+import 'package:vobzilla/data/repository/user_repository.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
 import 'package:vobzilla/logic/blocs/purchase/purchase_bloc.dart';
@@ -32,7 +34,6 @@ class AppRoute {
   static const String verifiedEmail = '/verifiedemail';
   static const String updateProfile = '/updateprofile';
   static const String subscription = '/subscription';
-
   static const String learnVocabulary = '/vocabulary/learn/:id';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -40,59 +41,81 @@ class AppRoute {
     bool notRedirectNow = true;
     return MaterialPageRoute(
       settings: settings,
-        builder: (context) {
-          return BlocListener<AuthBloc, AuthState>(
-            listener: (context, authState) {
-              if (authState is AuthAuthenticated) {
-                final user = authState.user;
-                if (!user!.emailVerified && settings.name != verifiedEmail) {
-                  // Redirigez vers l'écran de vérification de l'email
-                  user.sendEmailVerification();
-                  notRedirectNow = false;
-                  _redirectTo(context, settings, verifiedEmail);
-                } else
-                if ((user.displayName == null || user.displayName!.isEmpty) && settings.name != updateProfile) {
-                  // Redirigez vers l'écran de mise à jour du profil
-                  notRedirectNow = false;
-                  _redirectTo(context, settings, updateProfile);
-                } else {
-                  final userState = context.read<UserBloc>().state;
-                  if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
-                    //redirect subscription
+      builder: (context) {
+        return MultiBlocListener(
+          listeners: [
+            BlocListener<AuthBloc, AuthState>(
+              listener: (context, authState) {
+                Logger.Red.log('ROUTE listener AuthBloc');
+                if (authState is AuthAuthenticated) {
+                  final user = authState.user;
+                  if (!user!.emailVerified && settings.name != verifiedEmail) {
+                    Logger.Red.log('ROUTE !user!.emailVerified');
+                    user.sendEmailVerification();
                     notRedirectNow = false;
-                    _redirectTo(context, settings, subscription);
+                    _redirectTo(context, settings, verifiedEmail);
+                  } else if ((user.displayName == null || user.displayName!.isEmpty) && settings.name != updateProfile) {
+                    Logger.Red.log('ROUTE user.displayName == null');
+                    notRedirectNow = false;
+                    _redirectTo(context, settings, updateProfile);
                   }else{
-                    if(settings.name == login) {
+                    Logger.Red.log('ROUTE none');
+                    if (settings.name == login) {
                       notRedirectNow = false;
                       _redirectTo(context, settings, home);
                     }
                   }
                 }
-              }
-            },
-            child: BlocBuilder<AuthBloc, AuthState>(
-              builder: (context, authState) {
-                if (authState is AuthAuthenticated && notRedirectNow) {
-                    return _getAuthenticatedPage(settings);
-                }
-                if (authState is AuthUnauthenticated && notRedirectNow) {
-                  // Logique pour les utilisateurs non authentifiés
-                  return _getUnauthenticatedPage(settings);
-                }
-                return Loading(); // Default loading state
               },
             ),
-          );
-        }
+            BlocListener<UserBloc, UserState>(
+              listener: (context, userState) {
+                Logger.Red.log("BlocListener<UserBloc, UserState>");
+                if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
+                  Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
+                  //_redirectTo(context, settings, subscription);
+                  if(settings.name != subscription){
+                    notRedirectNow = false;
+                  //  WidgetsBinding.instance.addPostFrameCallback((_) {
+                      Navigator.pushReplacementNamed(context, subscription);
+                  //  });
+                  }
+
+
+
+                }
+
+              },
+            ),
+          ],
+          child: BlocBuilder<AuthBloc, AuthState>(
+            builder: (context, authState) {
+              if (authState is AuthAuthenticated && notRedirectNow) {
+                return _getAuthenticatedPage(settings, context);
+              }
+              if (authState is AuthUnauthenticated && notRedirectNow) {
+                return _getUnauthenticatedPage(settings, context);
+              }
+              return Loading(); // Default loading state
+            },
+          ),
+        );
+      },
     );
   }
 
-  static Widget _getUnauthenticatedPage(RouteSettings settings) {
-    Logger.Blue.log("_getUnauthenticatedPage settings.name ***********************: ${settings.name}");
+  static Widget _getUnauthenticatedPage(RouteSettings settings, BuildContext context) {
+    Logger.Blue.log("_getUnauthenticatedPage settings.name: ${settings.name}");
+
+    final userState = context.read<UserBloc>().state;
+    if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
+      Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
+      return Layout(child: SubscriptionScreen(), titleScreen: "Nos Abonnements");
+    }
+
     switch (settings.name) {
       case home:
         return HomeLogoutScreen();
-
       case login:
         return Layout(child: LoginScreen(), logged: false);
       case register:
@@ -102,11 +125,18 @@ class AppRoute {
     }
   }
 
-  static Widget _getAuthenticatedPage(RouteSettings settings) {
+  static Widget _getAuthenticatedPage(RouteSettings settings, BuildContext context) {
     final uri = Uri.parse(settings.name!);
-    Logger.Blue.log("_getAuthenticatedPage settings.name ***********************: ${settings.name}");
+    Logger.Blue.log("_getAuthenticatedPage settings.name: ${settings.name}");
+
+    final userState = context.read<UserBloc>().state;
+    if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
+      Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
+      return Layout(child: SubscriptionScreen(), titleScreen: "Nos Abonnements");
+    }
+
     if (uri.pathSegments.isNotEmpty) {
-      Logger.Blue.log("uri.pathSegments[0] ***********************: ${uri.pathSegments[0]}");
+      Logger.Blue.log("uri.pathSegments[0]: ${uri.pathSegments[0]}");
       switch ('/${uri.pathSegments[0]}') {
         case verifiedEmail:
           return Layout(appBarNotLogged: true, logged: false, child: ProfileEmailValidation());
@@ -115,7 +145,6 @@ class AppRoute {
         case subscription:
           return Layout(child: SubscriptionScreen(), titleScreen: "Nos Abonnements");
         case home:
-          return Layout(child: HomeScreen());
         case homeLogged:
           return Layout(child: HomeScreen());
         case '/vocabulary':
@@ -139,23 +168,36 @@ class AppRoute {
             return _errorPage(settings);
           }
         default:
-          return Layout(child: HomeScreen());
+          return _errorPage(settings);
       }
     } else {
       return Layout(child: HomeScreen());
     }
   }
   static void _redirectTo(BuildContext context, RouteSettings settings, String targetRoute) {
-    Logger.Blue.log('_redirectTo targetRoute: $targetRoute');
+    Logger.Blue.log('_redirectTo targetRoute: $targetRoute ${settings.name}');
     if (settings.name != targetRoute) {
+      Logger.Blue.log('REDIRECT GO TO $targetRoute');
       WidgetsBinding.instance.addPostFrameCallback((_) {
+        // Navigator.pushNamed(context, targetRoute);
         Navigator.pop(
-          context,
-          targetRoute
+            context,
+            targetRoute
         );
       });
     }
   }
+
+  /*
+  static void _redirectTo(BuildContext context, String targetRoute) {
+    Logger.Blue.log('REDIRECT GO TO $targetRoute');
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Navigator.pushReplacementNamed(context, targetRoute);
+      //Navigator.pushNamed(context, targetRoute);
+     // Navigator.pop(context,targetRoute);
+    });
+  }
+*/
   static Widget _errorPage(RouteSettings settings, {bool secure = true}) {
     Logger.Red.log('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}');
     return Scaffold(

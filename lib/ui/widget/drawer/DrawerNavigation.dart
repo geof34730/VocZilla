@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:vobzilla/data/repository/data_user_repository.dart';
+import 'package:vobzilla/data/services/subscription_service.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
 import '../../../app_route.dart';
 import '../../../core/utils/logger.dart';
+import '../../../data/repository/user_repository.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 import '../../../logic/blocs/drawer/drawer_bloc.dart';
+import '../../../logic/blocs/purchase/purchase_bloc.dart';
+import '../../../logic/blocs/purchase/purchase_event.dart';
 import '../../../logic/blocs/user/user_bloc.dart';
 import '../../../logic/blocs/user/user_state.dart';
 import '../../theme/theme.dart';
@@ -144,6 +148,17 @@ Drawer DrawerNavigation({required BuildContext context}) {
                 context.read<AuthBloc>().add(SignOutRequested());
               },
               child: Text("Déconnexion"),
+            ),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: InkWell(
+              onTap: () {
+                //SubscriptionService().checkAndroidSubscription();
+                //UserRepository().updateSubscriptionStatus(true);
+              },
+              child: Text("UPDATE SUBCRIPTION IN FIREBASE"),
             ),
           ),
         ],

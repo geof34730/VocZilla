@@ -10,4 +10,3 @@ class UserFreeTrialPeriodAndNotSubscribed  extends UserState{
 class UserFreeTrialPeriodEndAndNotSubscribed extends UserState {}
 
 class UserFreeTrialPeriodEndAndSubscribed extends UserState {}
-

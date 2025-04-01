@@ -40,7 +40,7 @@ class DataUserRepository {
   }
 
   Future<void> updateDisplayName({required String displayName,required dynamic uid}) async {
-    Logger.Yellow.log("updateDisplayName REPOSITITORY $uid. $displayName");
+    Logger.Yellow.log("updateDisplayName REPOSIIORY $uid. $displayName");
     _userFirestore = await getUser(uid);
     _userFirestore = _userFirestore?.copyWith(displayName: displayName);
     Logger.Yellow.log("_userFirestore: $_userFirestore");
@@ -75,6 +75,5 @@ class DataUserRepository {
       }
     }
   }
-
 }
 DataUserRepository dataUserRepository = DataUserRepository();
