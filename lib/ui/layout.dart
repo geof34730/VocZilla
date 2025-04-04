@@ -9,6 +9,8 @@ import 'package:vobzilla/ui/widget/appBar/AppBarLogged.dart';
 import 'package:vobzilla/ui/widget/appBar/AppBarNotLogged.dart';
 import 'package:vobzilla/ui/widget/bottomNavigationBar/BottomNavigationBarVocabulary.dart';
 
+import 'package:vobzilla/core/utils/ui.dart';
+
 class Layout extends StatelessWidget {
   const Layout({
     Key? key,
@@ -31,6 +33,7 @@ class Layout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
       key: scaffoldKey,
@@ -60,7 +63,31 @@ class Layout extends StatelessWidget {
                       ),
                     ),
                   ],
-                  child
+                  child,
+                  FutureBuilder<String>(
+                    future: getAppVersion(),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      } else if (snapshot.hasError) {
+                        return Center(child:Text('Erreur lors de la récupération du numéro de build',style: TextStyle(color: Colors.red)));
+                      } else {
+                        return Center(child:Text('Version : ${snapshot.data}',style: TextStyle(color:Colors.grey),));
+                      }
+                    },
+                  ),
+                  FutureBuilder<String>(
+                    future: getPackageName(),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      } else if (snapshot.hasError) {
+                        return Center(child:Text('Erreur lors de la récupération du numéro de build',style: TextStyle(color: Colors.red)));
+                      } else {
+                        return Center(child:Text('name : ${snapshot.data}',style: TextStyle(color:Colors.grey),));
+                      }
+                    },
+                  )
                 ],
               )
             )

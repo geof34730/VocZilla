@@ -7,6 +7,7 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../core/utils/logger.dart';
+import '../../core/utils/ui.dart';
 import '../../global.dart';
 class UserRepository {
   final InAppPurchase inAppPurchase = InAppPurchase.instance;
@@ -72,11 +73,13 @@ class UserRepository {
       Logger.Red.log("No valid purchase details available");
       return false;
     }
+
+    var suscriptionId = await getPackageName();
     print("continue checkSubscriptionStatus");
     Logger.Magenta.log("go checkSubscriptionStatus");
     Logger.Magenta.log('_purchaseToken: ${_purchaseToken}');
     Logger.Magenta.log('platform: ${_platform}');
-    Logger.Magenta.log('subscriptionId: ${_subscriptionId}');
+    Logger.Magenta.log('subscriptionId: ${suscriptionId}');
     Logger.Magenta.log("Checking subscription status");
     try {
         Logger.Red.log("GO SERVICE");
@@ -84,7 +87,7 @@ class UserRepository {
           'userId': FirebaseAuth.instance.currentUser?.uid,
           'purchaseToken': _purchaseToken,
           'platform': _platform,
-          'subscriptionId': _subscriptionId
+          'subscriptionId': suscriptionId
         });
         final response = await _dio.post(
           serverSubcriptionStaturUrl,

@@ -7,6 +7,7 @@ import 'package:vobzilla/ui/widget/appBar/TitleSite.dart';
 
 import '../../../logic/blocs/user/user_bloc.dart';
 import '../../../logic/blocs/user/user_state.dart';
+import '../../screens/home_screen.dart';
 
 
 class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
@@ -18,6 +19,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
         title:TitleSite(),
+
         elevation: 5,
         shadowColor: Colors.grey,
         actions:[

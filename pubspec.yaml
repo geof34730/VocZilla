@@ -67,6 +67,7 @@ dependencies:
   in_app_purchase_storekit: any
   in_app_purchase_android: any
   dio: ^5.8.0+1
+  package_info_plus: ^8.3.0
 
 
 flutter_launcher_icons:

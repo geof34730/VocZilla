@@ -23,8 +23,8 @@ if (localPropertiesFile.exists()) {
 
 // Accéder aux propriétés
 def LocalPropertiesMinSdkVersion  = localProperties.getProperty('flutter.minSdkVersion', '0').toInteger()
-def LocalPropertiesVersionCode = project.versionCode.toInteger()
-def LocalPropertiesVersionName = project.versionName
+def LocalPropertiesVersionCode = localProperties.getProperty('flutter.versionCode').toInteger()
+def LocalPropertiesVersionName = localProperties.getProperty('flutter.versionName')
 def LocalPropertiesKeysPassword = localProperties.getProperty('keys.password', '')
 def LocalPropertiesKeysStorePassword = localProperties.getProperty('keys.storePassword', '')
 if (LocalPropertiesVersionName == "" || LocalPropertiesKeysPassword == "" || LocalPropertiesKeysStorePassword == "") {

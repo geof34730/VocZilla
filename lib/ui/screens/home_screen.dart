@@ -18,26 +18,36 @@ class HomeScreen extends StatelessWidget {
   TextEditingController custaomTextZillaController  = TextEditingController();
   final bool listePerso = true;
 
+
   @override
   Widget build(BuildContext context) {
-
     var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
+    var prefsAsync=null;
+    var today = DateTime.now().toIso8601String().substring(0, 10);
+      SharedPreferences.getInstance().then((prefs)  {
+           prefsAsync=prefs;
+          final lastShownDate = prefs.getString('lastFreeTrialDialogDate');
+          Logger.Red.log("lastShownDate: $lastShownDate");
+            if (lastShownDate != today) {
+              // Enregistrer la date d'aujourd'hui comme la dernière date d'affichage
+              // Afficher la boîte de dialogue
+              context.read<UserBloc>().add(CheckUserStatus());
+            }
+
+        }
+      );
+
+
     return BlocProvider(
         create: (context) => UserBloc()..add(CheckUserStatus()),
         child: BlocListener<UserBloc, UserState>(
         listener: (context, state) async {
           if (state is UserFreeTrialPeriodAndNotSubscribed) {
-            final prefs = await SharedPreferences.getInstance();
-            final lastShownDate = prefs.getString('lastFreeTrialDialogDate');
-            final today = DateTime.now().toIso8601String().substring(0, 10);
-            if (lastShownDate != today) {
-              // Enregistrer la date d'aujourd'hui comme la dernière date d'affichage
-              // Afficher la boîte de dialogue
-              WidgetsBinding.instance.addPostFrameCallback((_) async {
-                await prefs.setString('lastFreeTrialDialogDate', today);
-                DialogHelper().showFreeTrialDialog(context: context, daysLeft: state.daysLeft);
-              });
-            }
+            Logger.Cyan.log("Check me status for UserFreeTrialPeriodAndNotSubscribed");
+            WidgetsBinding.instance.addPostFrameCallback((_) async {
+              await prefsAsync.setString('lastFreeTrialDialogDate', today);
+              DialogHelper().showFreeTrialDialog(context: context, daysLeft: state.daysLeft);
+            });
           }
     },
     child: Column(
@@ -234,6 +244,7 @@ class HomeScreen extends StatelessWidget {
           ]
     )
     )
+
     );
   }
 }

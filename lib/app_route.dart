@@ -80,11 +80,7 @@ class AppRoute {
                       Navigator.pushReplacementNamed(context, subscription);
                   //  });
                   }
-
-
-
                 }
-
               },
             ),
           ],

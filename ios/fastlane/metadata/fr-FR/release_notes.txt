@@ -1,0 +1,4 @@
+Version 1.0.0:
+- Initial release of FakeApp
+- Create and share fake content
+- Connect with friends and discover new fake ideas
