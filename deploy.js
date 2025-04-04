@@ -71,6 +71,14 @@ function getAppfileInfo(appfilePath) {
             versionParts[2] = 0;  // Reset patch version
         } else {
             versionParts[2] += 1; // Increment patch version
+            if (versionParts[2] > 9) {
+                versionParts[2] = 0;
+                versionParts[1] += 1; // Increment minor version
+                if (versionParts[1] > 9) {
+                    versionParts[1] = 0;
+                    versionParts[0] += 1; // Increment major version
+                }
+            }
         }
 
         versionName = versionParts.join('.');
