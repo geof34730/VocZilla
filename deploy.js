@@ -192,5 +192,20 @@ function getAppfileInfo(appfilePath) {
         { stdio: "inherit" }
     );
     console.log("\n✅ Déploiement iOS terminé avec succès !");
+
+    // Git operations
+    console.log("\n📦 Git operations : Gestion des versions avec Git...");
+    try {
+        console.log(`\n🔀 Création d'une nouvelle branche Git pour la version: ${versionName}...`);
+        execSync(`git checkout -b version/${versionName}`, { stdio: "inherit" });
+        execSync(`git add .`, { stdio: "inherit" });
+        execSync(`git commit -m "Release version ${versionName}"`, { stdio: "inherit" });
+        execSync(`git push origin version/${versionName}`, { stdio: "inherit" });
+
+        console.log(`\n🔄 Retour à la branche principale...`);
+        execSync(`git checkout main`, { stdio: "inherit" });
+    } catch (error) {
+        console.error("❌ Erreur lors des opérations Git :", error);
+    }
 })();
 
