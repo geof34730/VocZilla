@@ -133,7 +133,7 @@ function getAppfileInfo(appfilePath) {
 
         execSync(`git add .`, { stdio: "inherit" });
         execSync(`git commit -m "Release version ${versionName}"`, { stdio: "inherit" });
-        execSync(`git push origin main}`, { stdio: "inherit" });
+        execSync(`git push origin main`, { stdio: "inherit" });
 
         console.log(`\n🔀 Création d'une nouvelle branche Git pour la version: ${versionName}...`);
         execSync(`git checkout -b release-build-${versionName}`, { stdio: "inherit" });
