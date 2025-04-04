@@ -72,7 +72,7 @@ function getAppfileInfo(appfilePath) {
 
         versionName = versionParts.join('.');
         buildNumber = lastBuildNumber + 1;
-/*
+
     fs.writeFileSync(deployInfoPath, JSON.stringify({ lastVersionName: versionName, lastBuildNumber: buildNumber }, null, 2));
 
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
@@ -125,14 +125,11 @@ function getAppfileInfo(appfilePath) {
         { stdio: "inherit" }
     );
     console.log("\n✅ Déploiement iOS terminé avec succès !");
-*/
+
     // Git operations
     console.log("\n📦 Git operations : Gestion des versions avec Git...");
     try {
         console.log(`\n🔀 git add . et push GIT Main pour la version: ${versionName}...`);
-
-
-
 
         const statusOutputMain = execSync(`git status --porcelain`).toString().trim();
         if (statusOutputMain) {
@@ -141,14 +138,10 @@ function getAppfileInfo(appfilePath) {
         } else {
             console.log("Aucune modification à commettre.");
         }
-
-
-
         execSync(`git push origin main`, { stdio: "inherit" });
 
         console.log(`\n🔀 Création d'une nouvelle branche Git pour la version: ${versionName}...`);
         execSync(`git checkout -b release-build-${versionName}`, { stdio: "inherit" });
-
 
         const statusOutput = execSync(`git status --porcelain`).toString().trim();
         if (statusOutput) {
@@ -157,7 +150,6 @@ function getAppfileInfo(appfilePath) {
         } else {
             console.log("Aucune modification à commettre.");
         }
-
 
         execSync(`git push --set-upstream origin release-build-${versionName}`, { stdio: "inherit" });
 
