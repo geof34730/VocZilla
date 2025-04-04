@@ -137,8 +137,17 @@ function getAppfileInfo(appfilePath) {
 
         console.log(`\n🔀 Création d'une nouvelle branche Git pour la version: ${versionName}...`);
         execSync(`git checkout -b release-build-${versionName}`, { stdio: "inherit" });
-        execSync(`git add .`, { stdio: "inherit" });
-        execSync(`git commit -m "Release version ${versionName}"`, { stdio: "inherit" });
+
+
+        const statusOutput = execSync(`git status --porcelain`).toString().trim();
+        if (statusOutput) {
+            execSync(`git add .`, { stdio: "inherit" });
+            execSync(`git commit -m "Release version ${versionName}"`, { stdio: "inherit" });
+        } else {
+            console.log("Aucune modification à commettre.");
+        }
+
+
         execSync(`git push --set-upstream origin release-build-${versionName}`, { stdio: "inherit" });
 
         console.log(`\n🔄 Retour à la branche principale...`);
