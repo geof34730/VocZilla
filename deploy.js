@@ -43,18 +43,7 @@ function getAppfileInfo(appfilePath) {
     let { lastVersionName, lastBuildNumber } = deployInfo;
     lastBuildNumber = parseInt(lastBuildNumber, 10);
 
-   /* const { manageVersion } = await inquirer.prompt([
-        {
-            type: "confirm",
-            name: "manageVersion",
-            message: "Voulez-vous gérer les versions automatiquement ?",
-            default: false,
-        },
-    ]);*/
-
     let versionName, buildNumber;
-
-    //if (manageVersion) {
         const { majorUpdate } = await inquirer.prompt([
             {
                 type: "confirm",
@@ -83,29 +72,7 @@ function getAppfileInfo(appfilePath) {
 
         versionName = versionParts.join('.');
         buildNumber = lastBuildNumber + 1;
-
-
 /*
-    } else {
-        const responses = await inquirer.prompt([
-            {
-                type: "input",
-                name: "versionName",
-                message: "Quel est le version name ? (ex: 1.0.0)",
-            },
-            {
-                type: "input",
-                name: "buildNumber",
-                message: "Quel est le numéro de build ? (ex: 10)",
-            },
-        ]);
-
-        versionName = responses.versionName;
-        buildNumber = parseInt(responses.buildNumber, 10);
-    }
-*/
-    // Update deploy-info.json with new version and build number
-
     fs.writeFileSync(deployInfoPath, JSON.stringify({ lastVersionName: versionName, lastBuildNumber: buildNumber }, null, 2));
 
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
@@ -137,55 +104,13 @@ function getAppfileInfo(appfilePath) {
 
             console.log("\n✅ Déploiement Android terminé avec succès !");
 
-/*
 
-        console.log("\n📥 Téléchargement des métadonnées et des captures d'écran depuis l'App Store Connect...");
-
-        execSync(
-            `fastlane deliver download_metadata \
-                --app_identifier ${appIdentifier} \
-                --username ${appleId}`,
-            { stdio: "inherit" }
-        );
-
-    */
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
         { stdio: "inherit" }
     );
 
-/*
-    await (async () => {
-        try {
-            console.log("\n📸 Génération des captures d'écran pour iOS...");
-
-            execSync(
-                `bundle exec fastlane capture_screenshots`,
-
-                {stdio: "inherit"}
-            );
-
-            console.log("\n✅ Captures d'écran iOS générées avec succès !");
-        } catch (error) {
-            console.error("❌ Erreur lors de la génération des captures d'écran iOS :", error);
-        }
-
-        try {
-            console.log("\n📸 Génération des captures d'écran pour Android...");
-
-            execSync(
-                `fastlane screengrab`,
-                {stdio: "inherit"}
-            );
-
-            console.log("\n✅ Captures d'écran Android générées avec succès !");
-        } catch (error) {
-            console.error("❌ Erreur lors de la génération des captures d'écran Android :", error);
-        }
-    })();
-
-*/
 
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
     execSync(
@@ -200,15 +125,21 @@ function getAppfileInfo(appfilePath) {
         { stdio: "inherit" }
     );
     console.log("\n✅ Déploiement iOS terminé avec succès !");
-
+*/
     // Git operations
     console.log("\n📦 Git operations : Gestion des versions avec Git...");
     try {
-        console.log(`\n🔀 Création d'une nouvelle branche Git pour la version: ${versionName}...`);
-        execSync(`git checkout -b version/${versionName}`, { stdio: "inherit" });
+        console.log(`\n🔀 git add . et push GIT Main pour la version: ${versionName}...`);
+
         execSync(`git add .`, { stdio: "inherit" });
         execSync(`git commit -m "Release version ${versionName}"`, { stdio: "inherit" });
-        execSync(`git push origin version/${versionName}`, { stdio: "inherit" });
+        execSync(`git push origin main}`, { stdio: "inherit" });
+
+        console.log(`\n🔀 Création d'une nouvelle branche Git pour la version: ${versionName}...`);
+        execSync(`git checkout -b release-build-${versionName}`, { stdio: "inherit" });
+        execSync(`git add .`, { stdio: "inherit" });
+        execSync(`git commit -m "Release version ${versionName}"`, { stdio: "inherit" });
+        execSync(`git push --set-upstream origin release-build-${versionName}`, { stdio: "inherit" });
 
         console.log(`\n🔄 Retour à la branche principale...`);
         execSync(`git checkout main`, { stdio: "inherit" });
