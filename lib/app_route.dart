@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/data/repository/auth_repository.dart';
 import 'package:vobzilla/data/repository/user_repository.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
@@ -83,6 +84,15 @@ class AppRoute {
                 }
               },
             ),
+            BlocListener<PurchaseBloc, PurchaseState>(
+              listener: (context, purchaseState) {
+                Logger.Red.log("BlocListener<PurchaseBloc, PurchaseState>");
+                if (purchaseState is PurchaseCompleted) {
+                  Logger.Red.log('Purchase completed, redirecting to HomeScreen');
+                  Navigator.pushReplacementNamed(context, home);
+                }
+              },
+            ),
           ],
           child: BlocBuilder<AuthBloc, AuthState>(
             builder: (context, authState) {
@@ -148,15 +158,15 @@ class AppRoute {
             final id = uri.pathSegments[2];
             switch (uri.pathSegments[1]) {
               case 'learn':
-                return Layout(titleScreen: "Apprendre", showBottomNavigationBar: true, itemSelected: 0, id: id, child: LearnScreen(id: id));
+                return Layout(titleScreen: context.loc.apprendre_title, showBottomNavigationBar: true, itemSelected: 0, id: id, child: LearnScreen(id: id));
               case 'quizz':
-                return Layout(titleScreen: "Tester", showBottomNavigationBar: true, itemSelected: 1, id: id, child: QuizzScreen(id: id));
+                return Layout(titleScreen: context.loc.tester_title, showBottomNavigationBar: true, itemSelected: 1, id: id, child: QuizzScreen(id: id));
               case 'list':
-                return Layout(titleScreen: "Liste", showBottomNavigationBar: true, itemSelected: 2, id: id, child: ListScreen(id: id));
+                return Layout(titleScreen: context.loc.liste_title, showBottomNavigationBar: true, itemSelected: 2, id: id, child: ListScreen(id: id));
               case 'voicedictation':
-                return Layout(titleScreen: "Dictée vocale", showBottomNavigationBar: true, itemSelected: 3, id: id, child: VoiceDictationScreen(id: id));
+                return Layout(titleScreen: context.loc.dictation_title, showBottomNavigationBar: true, itemSelected: 3, id: id, child: VoiceDictationScreen(id: id));
               case 'statistical':
-                return Layout(titleScreen: "Statistique", showBottomNavigationBar: true, itemSelected: 4, id: id, child: StatisticalScreen(id: id));
+                return Layout(titleScreen: context.loc.statistiques_title, showBottomNavigationBar: true, itemSelected: 4, id: id, child: StatisticalScreen(id: id));
               default:
                 return _errorPage(settings);
             }

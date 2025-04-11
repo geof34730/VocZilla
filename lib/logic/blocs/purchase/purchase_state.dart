@@ -15,6 +15,15 @@ class PurchaseFailure extends PurchaseState {
   final String error;
   PurchaseFailure(this.error);
 }
+class PurchaseCompleted extends PurchaseState {
+  final String subscriptionId;
+
+   PurchaseCompleted(this.subscriptionId);
+/*
+  @override
+  List<Object> get props => [subscriptionId];
+*/
+}
 
 
 class SubscriptionsLoaded extends PurchaseState {

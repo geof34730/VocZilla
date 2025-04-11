@@ -20,7 +20,7 @@ class HomeLogoutScreen extends StatelessWidget {
                   children: [
                     Image.asset("assets/brand/logo_landing.png"),
                    // TitleSite(typoSize: 80),
-                    Text("${context.loc.hello} Booste ton anglais !",
+                    Text("Booste ton anglais !",
                         style: TextStyle(
                             fontSize: 25,
                             fontFamily: GoogleFonts.titanOne().fontFamily)),

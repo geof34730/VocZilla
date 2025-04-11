@@ -64,6 +64,7 @@ class Layout extends StatelessWidget {
                     ),
                   ],
                   child,
+                  /*
                   FutureBuilder<String>(
                     future: getAppVersion(),
                     builder: (context, snapshot) {
@@ -88,6 +89,7 @@ class Layout extends StatelessWidget {
                       }
                     },
                   )
+                  */
                 ],
               )
             )

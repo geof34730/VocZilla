@@ -1,4 +1,11 @@
 {
-  "hello": "Hello!",
-  "change_language": "Change Language"
+    "hello": "Good morning !",
+    "change_language": "Change language",
+    "my_purchase": "My subscription",
+    "dictation_title": "Voice dictation",
+    "dictation_label_text_field": "Listen and type the text",
+    "statistiques_title": "Statistics",
+    "liste_title": "List",
+    "tester_title": "Tester",
+    "apprendre_title": "Learn"
 }

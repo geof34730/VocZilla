@@ -5,10 +5,7 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../core/utils/logger.dart';
-
-//receipte toke purchass: ohkoljchghofieoihkpeemih.AO-J1OzvURHUF0JQyXPdaJrW63neWApmXPcX7Jo08E6DbUheOEYsWXnCRnxnT1WiEQ4Ve7iUwajIINuG4IM_cePntGb1gb10RkHMxtB3k5gEapGvOP2DAnM
-
-
+import '../../logic/blocs/purchase/purchase_bloc.dart';
 
 class SubscriptionService {
   final InAppPurchase _iap = InAppPurchase.instance;
@@ -48,37 +45,17 @@ class SubscriptionService {
         Logger.Green.log('Receipt Data: $receiptData');
 
         // Validate the receipt with your backend
-        validateSubscriptionWithBackend(receiptData);
+       
 
         // Update subscription status in your backend
-        updateSubscriptionStatus(true);
+        //updateSubscriptionStatus(true);
       }
     }
   }
 
-  Future<bool> validateSubscriptionWithBackend(String receiptData) async {
-    try {
-      final response = await _dio.post(
-        'https://your-backend-url.com/validate-subscription',
-        data: {'receiptData': receiptData},
-        options: Options(
-          headers: {'Content-Type': 'application/json'},
-        ),
-      );
-      if (response.statusCode == 200) {
-        Logger.Green.log('Validation de l\'abonnement réussie');
-        final result = response.data;
-        return result['isValid'];
-      } else {
-        Logger.Red.log('Erreur lors de la validation de l\'abonnement: ${response.statusCode}');
-        return false;
-      }
-    } catch (e) {
-      Logger.Red.log('Exception lors de la communication avec le backend: $e');
-      return false;
-    }
-  }
 
+
+  /*
   Future<void> updateSubscriptionStatus(bool isSubscribed) async {
     try {
       await _firestore.collection('subscriptions').doc(_fireAuth.currentUser?.uid).set({
@@ -91,5 +68,7 @@ class SubscriptionService {
       Logger.Red.log('Exception lors de la mise à jour de l\'abonnement: $e');
     }
   }
+
+   */
 }
 

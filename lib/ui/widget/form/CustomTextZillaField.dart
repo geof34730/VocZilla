@@ -9,15 +9,17 @@ class CustomTextZillaField extends StatefulWidget {
   final String hintText;
   final String resulteField;
   final dynamic Function() voidCallBack;
-  bool firstField;
+
+  bool resultSound = true;
 
   CustomTextZillaField({
-    this.firstField =false,
+
     required this.ControlerField,
     required this.labelText,
     required this.hintText,
     required this.resulteField,
     required this.voidCallBack,
+    this.resultSound = false,
   });
 
   @override
@@ -29,9 +31,9 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
   Widget build(BuildContext context) {
     final Map mapForPlayer={"titreVerbe":widget.resulteField};
     return Padding(
-        padding: EdgeInsets.only(left: 10.0, right: 10.0, top: (widget.firstField ? 25.00 : 10.00)),
+        padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.00),
         child: TextFormField(
-          //enabled: !getSuccesField(stockValue: widget.resulteField, controllerField: widget.ControlerField),
+          enabled: !(widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase()),
           controller: widget.ControlerField,
           maxLength: widget.resulteField.length,
           maxLengthEnforcement: MaxLengthEnforcement.enforced,
@@ -40,6 +42,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
               setState(() { });
             }
           },
+
           keyboardType: TextInputType.text,
           decoration: InputDecoration(
               icon: writeContentAndStyleIcon(controllerField: widget.ControlerField, stockValue: widget.resulteField),
@@ -54,7 +57,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
               ),
               suffixIcon: (widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase()
                   ? (
-                  !widget.firstField
+                  widget.resultSound
                       ?
                       PlaySoond(dataVerbe:mapForPlayer,typeAudio: "titreVerbe",sizeIcon: 30, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
                       :

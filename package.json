@@ -1,7 +1,7 @@
 {
   "scripts": {
     "deploy:test": "node deploy.js",
-    "rebuild": "flutter clean && flutter gen-l10n && flutter pub get && flutter run"
+    "rebuild": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get && flutter run"
   },
   "dependencies": {
     "inquirer": "^8.2.6"

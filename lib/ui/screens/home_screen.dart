@@ -14,24 +14,28 @@ import '../widget/elements/LevelChart.dart';
 import '../widget/elements/home/CardClassementGamer.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
-  TextEditingController custaomTextZillaController  = TextEditingController();
+  const HomeScreen({super.key});
   final bool listePerso = true;
 
 
   @override
   Widget build(BuildContext context) {
     var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
-    var prefsAsync=null;
+    var prefsAsync;
     var today = DateTime.now().toIso8601String().substring(0, 10);
-      SharedPreferences.getInstance().then((prefs)  {
-           prefsAsync=prefs;
-          final lastShownDate = prefs.getString('lastFreeTrialDialogDate');
-          Logger.Red.log("lastShownDate: $lastShownDate");
+      SharedPreferences.getInstance().then((prefs)  async {
+          var prefsAsync=prefs;
+          final lastShownDate = await prefs.getString('lastFreeTrialDialogDate');
+          Logger.Yellow.log("lastShownDate: $lastShownDate");
+          Logger.Yellow.log("today: $today");
             if (lastShownDate != today) {
               // Enregistrer la date d'aujourd'hui comme la dernière date d'affichage
               // Afficher la boîte de dialogue
+              Logger.Yellow.log("CheckUserStatus today");
               context.read<UserBloc>().add(CheckUserStatus());
+            }
+            else{
+              Logger.Yellow.log("Déja CheckUserStatus today");
             }
 
         }
@@ -230,17 +234,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ]
             ),
-            /*
-            CustomTextZillaField(
-              ControlerField: custaomTextZillaController,
-              labelText: 'Prénom',
-              hintText: 'Entrez votre prénom',
-              resulteField: 'coco',
-              voidCallBack: () => {
-                print('***************************ok retour')
-              },
-            ),
-  */
           ]
     )
     )

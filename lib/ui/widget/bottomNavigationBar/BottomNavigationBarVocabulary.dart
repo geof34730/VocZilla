@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
 
 class BottomNavigationBarVocabulary extends StatelessWidget implements PreferredSizeWidget {
@@ -34,11 +35,11 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
             fontSize: 12,
           ),
           items: <BottomNavigationBarItem>[
-            _buildBottomNavigationBarItem(Icons.school_rounded, 'Apprendre', 0),
-            _buildBottomNavigationBarItem(Icons.quiz_rounded, 'Tester', 1),
-            _buildBottomNavigationBarItem(Icons.visibility, 'Liste', 2),
-            _buildBottomNavigationBarItem(Icons.playlist_play_outlined, 'Dictée vocale', 3),
-            _buildBottomNavigationBarItem(Icons.bar_chart, 'Statistiques', 4),
+            _buildBottomNavigationBarItem(Icons.school_rounded, context.loc.apprendre_title, 0),
+            _buildBottomNavigationBarItem(Icons.quiz_rounded, context.loc.tester_title, 1),
+            _buildBottomNavigationBarItem(Icons.visibility, context.loc.liste_title, 2),
+            _buildBottomNavigationBarItem(Icons.playlist_play_outlined, context.loc.dictation_title, 3),
+            _buildBottomNavigationBarItem(Icons.bar_chart, context.loc.statistiques_title, 4),
           ],
           currentIndex: itemSelected, // Set the initial selected index
           onTap: (value) {
