@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../core/utils/logger.dart';
 import '../../core/utils/ui.dart';
@@ -66,6 +67,25 @@ class UserRepository {
   Future<bool> checkSubscriptionStatus() async {
     // Vérifier le statut de l'abonnement
     Logger.Magenta.log("begin checkSubscriptionStatus");
+    final prefAsync = await SharedPreferences.getInstance();
+    var today = DateTime.now().toIso8601String().substring(0, 10);
+    var lastShownDate = prefAsync.getString('lastFreeTrialDialogDate');
+
+    Logger.Red.log("lastShownDate: $lastShownDate");
+    Logger.Red.log("today: $today");
+    if (lastShownDate == today) {
+      Logger.Magenta.log("purchase already check today");
+      Logger.Magenta.log("Last purchase check");
+
+
+
+      print("lastCheckPurchase: ${prefAsync.getString('lastCheckPurchase')}");
+
+      return prefAsync.getString('lastCheckPurchase') == "true" ? true : false;
+      //return prefAsync.getString('lastCheckPurchase') as bool;
+    }
+
+
     restorePurchases();
     await _purchaseCompleter.future;
 
@@ -75,7 +95,6 @@ class UserRepository {
     }
 
     var suscriptionId = await getPackageName();
-    print("continue checkSubscriptionStatus");
     Logger.Magenta.log("go checkSubscriptionStatus");
     Logger.Magenta.log('_purchaseToken: ${_purchaseToken}');
     Logger.Magenta.log('platform: ${_platform}');
@@ -102,6 +121,7 @@ class UserRepository {
         if (response.statusCode == 200) {
           final data = response.data;
           Logger.Blue.log("isSubscribed: ${data}");
+          prefAsync.setString('lastCheckPurchase', data.toString());
           return data;
         } else {
           Logger.Red.log("Failed to verify subscription");
@@ -110,8 +130,13 @@ class UserRepository {
     } catch (e) {
       Logger.Red.log("Error verifying subscription: $e");
       Logger.Red.log('Error verifying subscription: $e');
+      prefAsync.setString('lastCheckPurchase', "false");
       return false;
    }
+
+
+
+
   }
 
   Future<DateTime?> getTrialEndDate() async {

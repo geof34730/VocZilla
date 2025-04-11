@@ -20,36 +20,31 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
-    var prefsAsync;
     var today = DateTime.now().toIso8601String().substring(0, 10);
       SharedPreferences.getInstance().then((prefs)  async {
           var prefsAsync=prefs;
-          final lastShownDate = await prefs.getString('lastFreeTrialDialogDate');
-          Logger.Yellow.log("lastShownDate: $lastShownDate");
-          Logger.Yellow.log("today: $today");
+          final lastShownDate = prefs.getString('lastFreeTrialDialogDate');
+          Logger.Cyan.log("lastShownDate: $lastShownDate");
+          Logger.Cyan.log("today: $today");
             if (lastShownDate != today) {
-              // Enregistrer la date d'aujourd'hui comme la dernière date d'affichage
-              // Afficher la boîte de dialogue
-              Logger.Yellow.log("CheckUserStatus today");
+              prefs.setString('lastFreeTrialDialogDate', today);
+              Logger.Red.log("CheckUserStatus today");
               context.read<UserBloc>().add(CheckUserStatus());
             }
             else{
-              Logger.Yellow.log("Déja CheckUserStatus today");
+              Logger.Cyan.log("Déja CheckUserStatus today");
             }
-
         }
       );
 
-
+    //context.read<UserBloc>().add(CheckUserStatus());
     return BlocProvider(
-        create: (context) => UserBloc()..add(CheckUserStatus()),
+        create: (context) => UserBloc(),
         child: BlocListener<UserBloc, UserState>(
         listener: (context, state) async {
           if (state is UserFreeTrialPeriodAndNotSubscribed) {
             Logger.Cyan.log("Check me status for UserFreeTrialPeriodAndNotSubscribed");
             WidgetsBinding.instance.addPostFrameCallback((_) async {
-              await prefsAsync.setString('lastFreeTrialDialogDate', today);
               DialogHelper().showFreeTrialDialog(context: context, daysLeft: state.daysLeft);
             });
           }
