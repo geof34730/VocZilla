@@ -12,14 +12,22 @@
 
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
-
-default_platform(:ios)
+# Fastfile
 
 platform :ios do
+  # Description de la lane beta
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    increment_build_number(xcodeproj: "Runner.xcodeproj")
-    build_app(workspace: "Runner.xcworkspace", scheme: "Runner")
+    increment_build_number(xcodeproj: "ios/Runner.xcodeproj")
+    build_app(workspace: "ios/Runner.xcworkspace", scheme: "Runner")
     upload_to_testflight
+  end
+
+  # Lane pour capturer les captures d'écran
+  lane :capture_screenshots do
+    snapshot(
+      workspace: "ios/Runner.xcworkspace", # Chemin vers votre fichier .xcworkspace
+      scheme: "Runner"                     # Nom du scheme que vous souhaitez utiliser
+    )
   end
 end

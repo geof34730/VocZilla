@@ -16,7 +16,6 @@ function getAppfileInfo(appfilePath) {
     if (!appleIdMatch || !appIdentifierMatch || !teamIdMatch) {
         throw new Error("Required information not found in Appfile");
     }
-
     return {
         appleId: appleIdMatch[1],
         appIdentifier: appIdentifierMatch[1],
@@ -25,6 +24,7 @@ function getAppfileInfo(appfilePath) {
 }
 
 (async () => {
+
     const deployInfoPath = "deploy-info.json";
     const appfilePath = path.join(__dirname, "ios/fastlane", "Appfile");
     if (!fs.existsSync(deployInfoPath)) {
@@ -42,7 +42,7 @@ function getAppfileInfo(appfilePath) {
     const deployInfo = JSON.parse(fs.readFileSync(deployInfoPath, "utf8"));
     let { lastVersionName, lastBuildNumber } = deployInfo;
     lastBuildNumber = parseInt(lastBuildNumber, 10);
-
+/*
     let versionName, buildNumber;
         const { majorUpdate } = await inquirer.prompt([
             {
@@ -74,10 +74,10 @@ function getAppfileInfo(appfilePath) {
         buildNumber = lastBuildNumber + 1;
 
     fs.writeFileSync(deployInfoPath, JSON.stringify({ lastVersionName: versionName, lastBuildNumber: buildNumber }, null, 2));
-
+*/
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
-    execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
-
+    //execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
+/*
             console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
             execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -104,25 +104,22 @@ function getAppfileInfo(appfilePath) {
 
             console.log("\n✅ Déploiement Android terminé avec succès !");
 
+ */
+    buildNumber = lastBuildNumber;
+    versionName = lastVersionName;
 
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
-    execSync(
+  /*  execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
         { stdio: "inherit" }
     );
-
+*/
 
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
+    console.log(`fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force`)
+
     execSync(
-        `fastlane deliver \
-        --ipa build/ios/ipa/voczilla.ipa \
-        --force \
-        --username ${appleId}  \
-        --app_identifier ${appIdentifier}  \
-        --team_id ${teamId}  \
-        --skip_metadata \
-        --force` ,
-        { stdio: "inherit" }
+        `fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force ` , { stdio: "inherit" }
     );
     console.log("\n✅ Déploiement iOS terminé avec succès !");
 
