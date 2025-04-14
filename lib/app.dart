@@ -5,18 +5,24 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:vobzilla/global.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
+import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
-
 import 'app_route.dart';
+import 'core/utils/logger.dart';
 import 'data/repository/auth_repository.dart';
+import 'logic/blocs/BlocStateTracker.dart';
 import 'logic/blocs/auth/auth_bloc.dart';
 import 'logic/blocs/auth/auth_state.dart';
 import 'logic/blocs/drawer/drawer_bloc.dart';
+import 'logic/blocs/drawer/drawer_state.dart';
 import 'logic/blocs/purchase/purchase_bloc.dart';
 import 'logic/blocs/purchase/purchase_event.dart';
+import 'logic/blocs/purchase/purchase_state.dart';
 import 'logic/blocs/user/user_bloc.dart';
 import 'logic/blocs/user/user_event.dart';
+import 'logic/blocs/user/user_state.dart';
+import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 final Route Function(RouteSettings settings) generateRoute=AppRoute.generateRoute;
 class MyApp extends StatelessWidget {
   MyApp({super.key});
@@ -42,6 +48,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => UserBloc()..add(CheckUserStatus()),
+        ),
+        BlocProvider(
+          create: (context) => VocabulairesBloc(),
         )
       ],
       child: BlocBuilder<LocalizationCubit, Locale>(
@@ -63,9 +72,35 @@ class MyApp extends StatelessWidget {
               builder: (context, child) {
                 return Builder(
                   builder: (context) {
-                    return BlocListener<AuthBloc, AuthState>(
-                      listener: (context, state) {
-                      },
+                    return  MultiBlocListener(
+                      listeners: [
+                        BlocListener<AuthBloc, AuthState>(
+                          listener: (context, state) {
+                            BlocStateTracker().updateState('AuthBloc', state);
+                          },
+                        ),
+                        BlocListener<DrawerBloc, DrawerState>(
+                          listener: (context, state) {
+                            BlocStateTracker().updateState('DrawerBloc', state);
+                          },
+                        ),
+                        BlocListener<PurchaseBloc, PurchaseState>(
+                          listener: (context, state) {
+                            BlocStateTracker().updateState('PurchaseBloc', state);
+                          },
+                        ),
+                        BlocListener<UserBloc, UserState>(
+                          listener: (context, state) {
+                            BlocStateTracker().updateState('UserBloc', state);
+                          },
+                        ),
+                        BlocListener<VocabulairesBloc, VocabulairesState>(
+                          listener: (context, state) {
+                            Logger.Yellow.log("VocabulairesBloc state: $state");
+                            BlocStateTracker().updateState('VocabulairesBloc', state);
+                          },
+                        ),
+                      ],
                       child: child ?? Container(),
                     );
                   },

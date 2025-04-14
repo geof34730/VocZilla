@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vobzilla/core/utils/logger.dart';
-import 'package:vobzilla/logic/cubit/localization_cubit.dart';
+import 'package:vobzilla/data/repository/vocabulaires_repository.dart';
 import 'package:vobzilla/ui/widget/elements/home/CardHome.dart';
 import '../../core/utils/ui.dart';
-import '../../logic/blocs/user/user_bloc.dart';
-import '../../logic/blocs/user/user_event.dart';
-import '../../logic/blocs/user/user_state.dart';
-import '../widget/elements/DialogHelper.dart';
+import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
+
 import '../widget/elements/LevelChart.dart';
 import '../widget/elements/home/CardClassementGamer.dart';
 
@@ -20,36 +16,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var today = DateTime.now().toIso8601String().substring(0, 10);
-      SharedPreferences.getInstance().then((prefs)  async {
-          var prefsAsync=prefs;
-          final lastShownDate = prefs.getString('lastFreeTrialDialogDate');
-          Logger.Cyan.log("lastShownDate: $lastShownDate");
-          Logger.Cyan.log("today: $today");
-            if (lastShownDate != today) {
-              prefs.setString('lastFreeTrialDialogDate', today);
-              Logger.Red.log("CheckUserStatus today");
-              context.read<UserBloc>().add(CheckUserStatus());
-            }
-            else{
-              Logger.Cyan.log("Déja CheckUserStatus today");
-            }
-        }
-      );
 
-    //context.read<UserBloc>().add(CheckUserStatus());
-    return BlocProvider(
-        create: (context) => UserBloc(),
-        child: BlocListener<UserBloc, UserState>(
-        listener: (context, state) async {
-          if (state is UserFreeTrialPeriodAndNotSubscribed) {
-            Logger.Cyan.log("Check me status for UserFreeTrialPeriodAndNotSubscribed");
-            WidgetsBinding.instance.addPostFrameCallback((_) async {
-              DialogHelper().showFreeTrialDialog(context: context, daysLeft: state.daysLeft);
-            });
-          }
-    },
-    child: Column(
+
+
+    return Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -230,8 +200,6 @@ class HomeScreen extends StatelessWidget {
                 ]
             ),
           ]
-    )
-    )
 
     );
   }

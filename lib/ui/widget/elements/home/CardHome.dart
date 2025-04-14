@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../data/repository/vocabulaires_repository.dart';
 import '../../../theme/appColors.dart';
 import '../../enum.dart';
 import 'ElevatedButtonCardHome.dart';
@@ -21,6 +22,7 @@ class CardHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _vocabulairesRepository=VocabulairesRepository(context:context);
     return LayoutBuilder(builder: (context, constraints) {
       double widthWidget = constraints.maxWidth;
       return Container(
@@ -69,6 +71,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 0, vocabulaireEnd: 20);
                           Navigator.pushNamed(context, '/vocabulary/list/65656565');
                         },
                         iconContent: Icons.visibility,

@@ -1,21 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/ui/widget/drawer/DrawerLocalisation.dart';
-import 'package:vobzilla/ui/widget/drawer/DrawerNavigation.dart';
-import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
+import 'drawer_event.dart';
+import 'drawer_state.dart';
 
-class DrawerBloc extends Bloc<DrawerEvent, Widget?> {
-  DrawerBloc() : super(null) {
-
-
+class DrawerBloc extends Bloc<DrawerEvent, DrawerState> {
+  DrawerBloc() : super(LocalisationDrawerState()) {
     on<OpenLocalisationDrawer>((event, emit) {
-      emit(DrawerLocalisation());
+      emit(LocalisationDrawerState());
     });
 
     on<OpenSettingsDrawer>((event, emit) {
-      emit(DrawerNavigation(context: event.context));
+      emit(SettingsDrawerState());
     });
-
-
   }
 }

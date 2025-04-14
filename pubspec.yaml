@@ -124,6 +124,7 @@ flutter:
     - assets/brand/logo.png
     - assets/brand/logo_landing.png
     - assets/audios/gcloud/
+    - assets/data/list-vocabulaire.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

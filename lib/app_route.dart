@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'core/utils/logger.dart';
+import 'logic/blocs/user/user_bloc.dart';
+import 'logic/blocs/user/user_state.dart';
 import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/data/repository/auth_repository.dart';
 import 'package:vobzilla/data/repository/user_repository.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
@@ -20,12 +22,7 @@ import 'package:vobzilla/ui/screens/vocabulary/list_screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/quizz_screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/statistical.screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/voice_dictation_screen.dart';
-import 'package:vobzilla/ui/theme/backgroundBlueLinear.dart';
 import 'package:vobzilla/ui/widget/elements/Loading.dart';
-import 'core/utils/logger.dart';
-import 'data/repository/data_user_repository.dart';
-import 'logic/blocs/user/user_bloc.dart';
-import 'logic/blocs/user/user_state.dart';
 
 class AppRoute {
   static const String home = '/';
@@ -43,6 +40,7 @@ class AppRoute {
     return MaterialPageRoute(
       settings: settings,
       builder: (context) {
+        UserRepository().checkUserStatusOncePerDay(context);
         return MultiBlocListener(
           listeners: [
             BlocListener<AuthBloc, AuthState>(
@@ -66,20 +64,27 @@ class AppRoute {
                       _redirectTo(context, settings, home);
                     }
                   }
+                }else{
+                  Logger.Blue.log('ROUTE AuthUnauthenticated');
+                  if (settings.name != login && settings.name != register && settings.name != home) {
+                    Logger.Blue.log('Redirect logout');
+                    notRedirectNow = false;
+                    _redirectTo(context, settings, login);
+                  }
                 }
               },
             ),
             BlocListener<UserBloc, UserState>(
               listener: (context, userState) {
                 Logger.Red.log("BlocListener<UserBloc, UserState>");
+                if (userState is UserFreeTrialPeriodAndNotSubscribed) {
+                  userRepository.showDialogueFreeTrialOnceByDay(context: context);
+                }
                 if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
                   Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
-                  //_redirectTo(context, settings, subscription);
                   if(settings.name != subscription){
                     notRedirectNow = false;
-                  //  WidgetsBinding.instance.addPostFrameCallback((_) {
-                      Navigator.pushReplacementNamed(context, subscription);
-                  //  });
+                    Navigator.pushReplacementNamed(context, subscription);
                   }
                 }
               },
@@ -89,6 +94,7 @@ class AppRoute {
                 Logger.Red.log("BlocListener<PurchaseBloc, PurchaseState>");
                 if (purchaseState is PurchaseCompleted) {
                   Logger.Red.log('Purchase completed, redirecting to HomeScreen');
+                  userRepository.checkUserStatusForce();
                   Navigator.pushReplacementNamed(context, home);
                 }
               },
@@ -112,13 +118,6 @@ class AppRoute {
 
   static Widget _getUnauthenticatedPage(RouteSettings settings, BuildContext context) {
     Logger.Blue.log("_getUnauthenticatedPage settings.name: ${settings.name}");
-
-    final userState = context.read<UserBloc>().state;
-    if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
-      Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
-      return Layout(child: SubscriptionScreen(), titleScreen: "Nos Abonnements");
-    }
-
     switch (settings.name) {
       case home:
         return HomeLogoutScreen();
@@ -162,7 +161,7 @@ class AppRoute {
               case 'quizz':
                 return Layout(titleScreen: context.loc.tester_title, showBottomNavigationBar: true, itemSelected: 1, id: id, child: QuizzScreen(id: id));
               case 'list':
-                return Layout(titleScreen: context.loc.liste_title, showBottomNavigationBar: true, itemSelected: 2, id: id, child: ListScreen(id: id));
+                return Layout(titleScreen: context.loc.liste_title, showBottomNavigationBar: true, itemSelected: 2, id: id, child: ListScreen());
               case 'voicedictation':
                 return Layout(titleScreen: context.loc.dictation_title, showBottomNavigationBar: true, itemSelected: 3, id: id, child: VoiceDictationScreen(id: id));
               case 'statistical':
@@ -194,22 +193,9 @@ class AppRoute {
     }
   }
 
-  /*
-  static void _redirectTo(BuildContext context, String targetRoute) {
-    Logger.Blue.log('REDIRECT GO TO $targetRoute');
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      Navigator.pushReplacementNamed(context, targetRoute);
-      //Navigator.pushNamed(context, targetRoute);
-     // Navigator.pop(context,targetRoute);
-    });
-  }
-*/
   static Widget _errorPage(RouteSettings settings, {bool secure = true}) {
     Logger.Red.log('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}');
-    return Scaffold(
-      body: Center(
-        child: Text('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}'),
-      ),
-    );
+    return Layout(child:Text('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}'));
+
   }
 }

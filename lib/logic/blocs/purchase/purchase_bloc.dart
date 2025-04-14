@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:vobzilla/data/repository/user_repository.dart';
@@ -40,6 +41,13 @@ class PurchaseBloc extends Bloc<PurchaseEvent, PurchaseState> {
       if (purchaseDetails.status == PurchaseStatus.purchased) {
         Logger.Green.log('Achat réussi pour le produit: ${purchaseDetails.productID}');
         add(BuyProduct(purchaseDetails.productID as ProductDetails));
+
+        emit(PurchaseCompleted());
+        // Navigate to home after successful purchase
+
+
+
+        // Vous pouvez également vérifier la validation du reçu ici
       } else if (purchaseDetails.status == PurchaseStatus.error) {
         Logger.Red.log('Erreur lors de l\'achat: ${purchaseDetails.error}');
         add(PurchaseFailled(purchaseDetails.error?.message ?? 'Erreur inconnue'));

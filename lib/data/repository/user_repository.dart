@@ -1,8 +1,9 @@
 import 'dart:async';
 import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,22 +11,70 @@ import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../core/utils/logger.dart';
 import '../../core/utils/ui.dart';
 import '../../global.dart';
+import '../../logic/blocs/user/user_bloc.dart';
+import '../../logic/blocs/user/user_event.dart';
+import '../../logic/blocs/user/user_state.dart';
+import '../../ui/widget/elements/DialogHelper.dart';
 class UserRepository {
   final InAppPurchase inAppPurchase = InAppPurchase.instance;
   final Dio _dio = Dio();
-
-
-
-
   String? _purchaseToken;
   String? _platform;
   String? _subscriptionId;
   Completer<void> _purchaseCompleter = Completer<void>();
 
+
+
+  Future<void> checkUserStatusOncePerDay(BuildContext context) async {
+
+    Logger.Yellow.log("*********checkUserStatusOncePerDay");
+
+    final prefs = await SharedPreferences.getInstance();
+    final today = DateTime.now().toIso8601String().substring(0, 10);
+    final lastCheckStatusDate = prefs.getString('lastCheckStatusDate');
+    if (lastCheckStatusDate != today) {
+      Logger.Green.log("checkUserStatusOncePerDay Checking user status");
+      prefs.setString('lastCheckStatusDate', today);
+      context.read<UserBloc>().add(CheckUserStatus());
+    }
+    else{
+      Logger.Green.log("checkUserStatusOncePerDay Already checked today");
+    }
+  }
+
+  Future<void> checkUserStatusForce() async {
+    Logger.Green.log("checkUserStatusOncePerDayForce");
+    final prefs = await SharedPreferences.getInstance();
+    final yesterday = DateTime
+        .now()
+        .subtract(Duration(days: 5))
+        .toIso8601String()
+        .substring(0, 10);
+    prefs.setString('lastCheckStatusDate', yesterday);
+  }
+
+  Future<void> showDialogueFreeTrialOnceByDay({required BuildContext context}) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String today = DateTime.now().toIso8601String().substring(0, 10);
+    String? lastShownDate = prefs.getString('lastFreeTrialDialogDate');
+    if (lastShownDate != today) {
+      // Mettre à jour la date dans SharedPreferences
+      await prefs.setString('lastFreeTrialDialogDate', today);
+      Logger.Green.log(
+          "Check me status for UserFreeTrialPeriodAndNotSubscribed for free trial dialogue");
+      final daysLeft = await getLeftDaysFreeTrial();
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        DialogHelper().showFreeTrialDialog(context: context, daysLeft: daysLeft);
+      });
+    } else {
+      Logger.Cyan.log("Le dialogue a déjà été affiché aujourd'hui");
+    }
+  }
+
+
+
   Future<void> restorePurchases() async {
     print("restorePurchases");
-
-
     final bool available = await inAppPurchase.isAvailable();
     if (!available) {
       print("In-app purchases not available");
@@ -67,25 +116,6 @@ class UserRepository {
   Future<bool> checkSubscriptionStatus() async {
     // Vérifier le statut de l'abonnement
     Logger.Magenta.log("begin checkSubscriptionStatus");
-    final prefAsync = await SharedPreferences.getInstance();
-    var today = DateTime.now().toIso8601String().substring(0, 10);
-    var lastShownDate = prefAsync.getString('lastFreeTrialDialogDate');
-
-    Logger.Red.log("lastShownDate: $lastShownDate");
-    Logger.Red.log("today: $today");
-    if (lastShownDate == today) {
-      Logger.Magenta.log("purchase already check today");
-      Logger.Magenta.log("Last purchase check");
-
-
-
-      print("lastCheckPurchase: ${prefAsync.getString('lastCheckPurchase')}");
-
-      return prefAsync.getString('lastCheckPurchase') == "true" ? true : false;
-      //return prefAsync.getString('lastCheckPurchase') as bool;
-    }
-
-
     restorePurchases();
     await _purchaseCompleter.future;
 
@@ -121,7 +151,6 @@ class UserRepository {
         if (response.statusCode == 200) {
           final data = response.data;
           Logger.Blue.log("isSubscribed: ${data}");
-          prefAsync.setString('lastCheckPurchase', data.toString());
           return data;
         } else {
           Logger.Red.log("Failed to verify subscription");
@@ -130,13 +159,8 @@ class UserRepository {
     } catch (e) {
       Logger.Red.log("Error verifying subscription: $e");
       Logger.Red.log('Error verifying subscription: $e');
-      prefAsync.setString('lastCheckPurchase', "false");
       return false;
-   }
-
-
-
-
+    }
   }
 
   Future<DateTime?> getTrialEndDate() async {

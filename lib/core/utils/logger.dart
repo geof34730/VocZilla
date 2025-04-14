@@ -10,7 +10,8 @@ enum Logger {
   Blue("34"),
   Magenta("35"),
   Cyan("36"),
-  White("37");
+  White("37"),
+  Pink("95");
 
   final String code;
   const Logger(this.code);

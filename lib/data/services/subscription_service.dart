@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:vobzilla/data/repository/user_repository.dart';
 import '../../core/utils/logger.dart';
 import '../../logic/blocs/purchase/purchase_bloc.dart';
 
@@ -43,32 +44,13 @@ class SubscriptionService {
         // Extract the receipt data
         String receiptData = purchaseDetails.verificationData.serverVerificationData;
         Logger.Green.log('Receipt Data: $receiptData');
-
-        // Validate the receipt with your backend
-       
-
-        // Update subscription status in your backend
-        //updateSubscriptionStatus(true);
+        //UserRepository().checkUserStatusForce();
       }
     }
   }
 
 
 
-  /*
-  Future<void> updateSubscriptionStatus(bool isSubscribed) async {
-    try {
-      await _firestore.collection('subscriptions').doc(_fireAuth.currentUser?.uid).set({
-        'isSubscribed': isSubscribed,
-        'subscriptionType': 'premium',
-        'expiryDate': DateTime.now().add(Duration(days: 30)).toIso8601String(),
-      });
-      Logger.Green.log("Mise à jour de l'abonnement dans Firebase réussie");
-    } catch (e) {
-      Logger.Red.log('Exception lors de la mise à jour de l\'abonnement: $e');
-    }
-  }
 
-   */
 }
 

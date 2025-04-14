@@ -10,6 +10,12 @@ import 'package:vobzilla/ui/widget/appBar/AppBarNotLogged.dart';
 import 'package:vobzilla/ui/widget/bottomNavigationBar/BottomNavigationBarVocabulary.dart';
 
 import 'package:vobzilla/core/utils/ui.dart';
+import 'package:vobzilla/ui/widget/drawer/DrawerLocalisation.dart';
+import 'package:vobzilla/ui/widget/drawer/DrawerNavigation.dart';
+import 'package:vobzilla/ui/widget/elements/debug.dart';
+
+import '../global.dart';
+import '../logic/blocs/drawer/drawer_state.dart';
 
 class Layout extends StatelessWidget {
   const Layout({
@@ -40,11 +46,36 @@ class Layout extends StatelessWidget {
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
       appBar: AuthAppBar(scaffoldKey: scaffoldKey, appBarNotLogged: appBarNotLogged),
-      endDrawer: BlocBuilder<DrawerBloc, Widget?>(
-        builder: (context, drawer) {
-          return drawer ?? Container();
+      endDrawer: BlocBuilder<DrawerBloc, DrawerState>(
+        builder: (context, state) {
+          if (state is LocalisationDrawerState) {
+            return DrawerLocalisation();
+          } else if (state is SettingsDrawerState) {
+            return DrawerNavigation(context: context);
+          }
+          return Container(); // État par défaut ou vide
         },
       ),
+      floatingActionButton: (debugMode ? FloatingActionButton(
+          elevation: 15,
+          backgroundColor: Colors.red,
+          onPressed: (){
+            showDialog(
+                context: context,
+                builder: (BuildContext context){
+                  return DebugWidget();
+                }
+            );
+          },
+          child:Text(
+            'DEBUG GEOF',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontSize: 10.0,
+                fontWeight: FontWeight.bold
+            ),
+          )
+      ) : null),
       bottomNavigationBar: (showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: itemSelected,id:id) : null,
       body:SingleChildScrollView(
           child:Padding(
@@ -90,6 +121,7 @@ class Layout extends StatelessWidget {
                     },
                   )
                   */
+
                 ],
               )
             )
