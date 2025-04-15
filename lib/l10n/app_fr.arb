@@ -7,5 +7,9 @@
     "statistiques_title": "Statistiques",
     "liste_title": "Liste",
     "tester_title": "Testeur",
-    "apprendre_title": "Apprendre"
+    "apprendre_title": "Apprendre",
+    "language_locale": "Français",
+    "language_anglais": "Anglais",
+    "search": "Rechercher",
+    "audios": "Audios"
 }

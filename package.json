@@ -1,7 +1,9 @@
 {
   "scripts": {
     "deploy:test": "node deploy.js",
-    "rebuild": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get && flutter run"
+    "rebuild": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get && flutter run",
+    "translate": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get && flutter run"
+
   },
   "dependencies": {
     "dotenv": "^16.5.0",

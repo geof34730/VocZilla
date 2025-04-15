@@ -17,6 +17,6 @@ samples, guidance on mobile development, and a full API reference.
 # VocZilla
 
 
-flutter gen-10n
+flutter gen-l10n
 
 flutter packages pub run build_runner watch --delete-conflicting-outputs

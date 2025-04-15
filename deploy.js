@@ -8,16 +8,6 @@ require('dotenv').config();
 
 // Fonction pour lire l'Appfile et extraire les informations nécessaires
 function getAppfileInfo(appfilePath) {
-    /*
-    const appfileContent = fs.readFileSync(appfilePath, "utf8");
-    const appleIdMatch = appfileContent.match(/apple_id\("([^"]+)"\)/);
-    const appIdentifierMatch = appfileContent.match(/app_identifier\("([^"]+)"\)/);
-    const teamIdMatch = appfileContent.match(/team_id\("([^"]+)"\)/);
-
-    if (!appleIdMatch || !appIdentifierMatch || !teamIdMatch) {
-        throw new Error("Required information not found in Appfile");
-    }
-    */
     return {
         appleId: process.env.FASTLANE_APPLE_ID,
         appIdentifier: process.env.FASTLANE_APP_IDENTIFIER,
@@ -132,11 +122,11 @@ function getAppfileInfo(appfilePath) {
 
     try {
         const command = `
-            
+            fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force 
             echo $FASTLANE_PASSWORD
           `;
         console.log(command);
-        execSync(command, { stdio: "inherit", shell: '/bin/zsh' });
+        execSync(command, { stdio: "inherit", shell: '/bin/bash' });
 
     } catch (error) {
         console.error("An error occurred:", error.message);
@@ -145,7 +135,7 @@ function getAppfileInfo(appfilePath) {
     console.log("\n✅ Déploiement iOS terminé avec succès !");
 
     // Git operations
-    console.log("\n📦 Git operations : Gestion des versions avec Git...");
+   /* console.log("\n📦 Git operations : Gestion des versions avec Git...");
     try {
         console.log(`\n🔀 git add . et push GIT Main pour la version: ${versionName}...`);
 
@@ -176,7 +166,7 @@ function getAppfileInfo(appfilePath) {
     } catch (error) {
         console.error("❌ Erreur lors des opérations Git :", error);
     }
-
+*/
 
 
 
