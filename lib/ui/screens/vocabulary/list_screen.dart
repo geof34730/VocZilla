@@ -18,14 +18,14 @@ class ListScreen extends StatelessWidget {
         if (state is VocabulairesLoading) {
           return Center(child: CircularProgressIndicator());
         } else if (state is VocabulairesLoaded) {
-          final data = state.data;
+          final data = state.data["vocabulaireList"];
           print("data: $data");
 
           return SingleChildScrollView(
             child: Column(
-              children: data.map<Widget>((Vocabulaire) {
-                return Text("${Vocabulaire['EN']} : ${Vocabulaire['FR']}");
-              }).toList(),
+              children: (data as List?)?.map<Widget>((vocabulaire) {
+                return Text("${vocabulaire['EN']} : ${vocabulaire['FR']}");
+              }).toList() ?? [Text("No vocabulary items found")],
             ),
           );
         } else if (state is VocabulairesError) {

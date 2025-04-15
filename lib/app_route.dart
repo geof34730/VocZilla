@@ -24,6 +24,9 @@ import 'package:vobzilla/ui/screens/vocabulary/statistical.screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/voice_dictation_screen.dart';
 import 'package:vobzilla/ui/widget/elements/Loading.dart';
 
+import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
+import 'logic/blocs/vocabulaires/vocabulaires_state.dart';
+
 class AppRoute {
   static const String home = '/';
   static const String login = '/login';
@@ -33,6 +36,8 @@ class AppRoute {
   static const String updateProfile = '/updateprofile';
   static const String subscription = '/subscription';
   static const String learnVocabulary = '/vocabulary/learn/:id';
+
+
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
@@ -153,22 +158,63 @@ class AppRoute {
         case homeLogged:
           return Layout(child: HomeScreen());
         case '/vocabulary':
-          if (uri.pathSegments.length == 3) {
-            final id = uri.pathSegments[2];
-            switch (uri.pathSegments[1]) {
-              case 'learn':
-                return Layout(titleScreen: context.loc.apprendre_title, showBottomNavigationBar: true, itemSelected: 0, id: id, child: LearnScreen(id: id));
-              case 'quizz':
-                return Layout(titleScreen: context.loc.tester_title, showBottomNavigationBar: true, itemSelected: 1, id: id, child: QuizzScreen(id: id));
-              case 'list':
-                return Layout(titleScreen: context.loc.liste_title, showBottomNavigationBar: true, itemSelected: 2, id: id, child: ListScreen());
-              case 'voicedictation':
-                return Layout(titleScreen: context.loc.dictation_title, showBottomNavigationBar: true, itemSelected: 3, id: id, child: VoiceDictationScreen(id: id));
-              case 'statistical':
-                return Layout(titleScreen: context.loc.statistiques_title, showBottomNavigationBar: true, itemSelected: 4, id: id, child: StatisticalScreen(id: id));
-              default:
-                return _errorPage(settings);
-            }
+          if (uri.pathSegments.length == 2) {
+            return BlocBuilder<VocabulairesBloc, VocabulairesState>(
+              builder: (context, vocabulairesState) {
+                if (vocabulairesState is VocabulairesLoaded) {
+                  String title = "Titre par défaut"; // Titre de secours
+
+                  // Supposons que vocabulairesState.data soit une Map et contienne une clé 'title'
+                  if (vocabulairesState.data['title'] != null) {
+                    final titleData = vocabulairesState.data['title'];
+                    title = titleData.toString();
+                  }
+
+                  switch (uri.pathSegments[1]) {
+                    case 'learn':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.apprendre_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 0,
+                        child: LearnScreen(),
+                      );
+                    case 'quizz':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.tester_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 1,
+                        child: QuizzScreen(),
+                      );
+                    case 'list':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.liste_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 2,
+                        child: ListScreen(),
+                      );
+                    case 'voicedictation':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.dictation_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 3,
+                        child: VoiceDictationScreen(),
+                      );
+                    case 'statistical':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.statistiques_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 4,
+                        child: StatisticalScreen(),
+                      );
+                    default:
+                      return _errorPage(settings);
+                  }
+                } else {
+                  // Afficher un écran de chargement tant que l'état n'est pas chargé
+                  return Loading();
+                }
+              },
+            );
           } else {
             return _errorPage(settings);
           }

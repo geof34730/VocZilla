@@ -4,9 +4,9 @@ import 'package:vobzilla/ui/theme/appColors.dart';
 
 class BottomNavigationBarVocabulary extends StatelessWidget implements PreferredSizeWidget {
   final int itemSelected;
-  final String id;
 
-  const BottomNavigationBarVocabulary({super.key,  required this.itemSelected,required this.id});
+
+  const BottomNavigationBarVocabulary({super.key,  required this.itemSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -45,19 +45,19 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
           onTap: (value) {
             switch (value) {
               case 0:
-                Navigator.pushReplacementNamed(context, '/vocabulary/learn/$id');
+                Navigator.pushReplacementNamed(context, '/vocabulary/learn');
                 break;
               case 1:
-                Navigator.pushReplacementNamed(context, '/vocabulary/quizz/$id');
+                Navigator.pushReplacementNamed(context, '/vocabulary/quizz');
                 break;
               case 2:
-                Navigator.pushReplacementNamed(context, '/vocabulary/list/$id');
+                Navigator.pushReplacementNamed(context, '/vocabulary/list');
                 break;
               case 3:
-                Navigator.pushReplacementNamed(context, '/vocabulary/voicedictation/$id');
+                Navigator.pushReplacementNamed(context, '/vocabulary/voicedictation');
                 break;
               case 4:
-                Navigator.pushReplacementNamed(context, '/vocabulary/statistical/$id');
+                Navigator.pushReplacementNamed(context, '/vocabulary/statistical');
                 break;
             }
           },

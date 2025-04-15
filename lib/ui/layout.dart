@@ -76,7 +76,7 @@ class Layout extends StatelessWidget {
             ),
           )
       ) : null),
-      bottomNavigationBar: (showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: itemSelected,id:id) : null,
+      bottomNavigationBar: (showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: itemSelected) : null,
       body:SingleChildScrollView(
           child:Padding(
               padding: logged ? EdgeInsets.only(top: kToolbarHeight+50,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,

@@ -1,7 +1,7 @@
 abstract class VocabulairesEvent {}
 
 class LoadVocabulairesData extends VocabulairesEvent {
-  final List<dynamic> data;
+  final Map<String, Object> data;
 
   LoadVocabulairesData(this.data);
 }

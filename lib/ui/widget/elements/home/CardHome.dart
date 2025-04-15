@@ -53,7 +53,8 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          Navigator.pushNamed(context, '/vocabulary/learn/65656565');
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 20, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          Navigator.pushNamed(context, '/vocabulary/learn');
                         },
                         iconContent: Icons.school_rounded,
                         context: context,
@@ -62,7 +63,8 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          Navigator.pushNamed(context, '/vocabulary/quizz/65656565');
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 20, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          Navigator.pushNamed(context, '/vocabulary/quizz');
                         },
                         iconContent: Icons.quiz_rounded,
                         context: context,
@@ -71,8 +73,8 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 0, vocabulaireEnd: 20);
-                          Navigator.pushNamed(context, '/vocabulary/list/65656565');
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 0, vocabulaireEnd: 19, titleList: title.toUpperCase());
+                          Navigator.pushNamed(context, '/vocabulary/list');
                         },
                         iconContent: Icons.visibility,
                         context: context,
@@ -81,7 +83,8 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          Navigator.pushNamed(context, '/vocabulary/voicedictation/65656565');
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 20, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          Navigator.pushNamed(context, '/vocabulary/voicedictation');
                         },
                         iconContent: Icons.playlist_play_outlined,
                         context: context,
@@ -90,7 +93,8 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.orange,
                         onClickButton: () {
-                          Navigator.pushNamed(context, '/vocabulary/statistical/65656565');
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 20, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          Navigator.pushNamed(context, '/vocabulary/statistical');
                         },
                         iconContent: Icons.bar_chart,
                         context: context,

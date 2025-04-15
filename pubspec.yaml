@@ -68,6 +68,7 @@ dependencies:
   in_app_purchase_android: any
   dio: ^5.8.0+1
   package_info_plus: ^8.3.0
+  data_table_2: ^2.6.0
 
 
 flutter_launcher_icons:

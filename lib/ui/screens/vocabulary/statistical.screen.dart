@@ -4,14 +4,13 @@ import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
 
 class StatisticalScreen extends StatelessWidget {
-  final String id;
 
-  StatisticalScreen({required this.id}) ;
+  StatisticalScreen() ;
 
   @override
   Widget build(BuildContext context) {
     var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
-    return Text("StatisticalScreen : $id");
+    return Text("StatisticalScreen : ");
   }
 
 

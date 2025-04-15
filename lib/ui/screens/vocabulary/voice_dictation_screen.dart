@@ -7,9 +7,9 @@ import '../../../core/utils/PlaySoond.dart';
 import '../../widget/form/CustomTextZillaField.dart';
 
 class VoiceDictationScreen extends StatefulWidget {
-  final String id;
 
-  VoiceDictationScreen({required this.id});
+
+  VoiceDictationScreen();
 
   @override
   _VoiceDictationScreenState createState() => _VoiceDictationScreenState();
