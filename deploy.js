@@ -4,10 +4,11 @@ const { execSync } = require("child_process");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-
+require('dotenv').config();
 
 // Fonction pour lire l'Appfile et extraire les informations nécessaires
 function getAppfileInfo(appfilePath) {
+    /*
     const appfileContent = fs.readFileSync(appfilePath, "utf8");
     const appleIdMatch = appfileContent.match(/apple_id\("([^"]+)"\)/);
     const appIdentifierMatch = appfileContent.match(/app_identifier\("([^"]+)"\)/);
@@ -16,10 +17,11 @@ function getAppfileInfo(appfilePath) {
     if (!appleIdMatch || !appIdentifierMatch || !teamIdMatch) {
         throw new Error("Required information not found in Appfile");
     }
+    */
     return {
-        appleId: appleIdMatch[1],
-        appIdentifier: appIdentifierMatch[1],
-        teamId: teamIdMatch[1],
+        appleId: process.env.FASTLANE_APPLE_ID,
+        appIdentifier: process.env.FASTLANE_APP_IDENTIFIER,
+        teamId: process.env.FASTLANE_TEAM_ID
     };
 }
 
@@ -36,6 +38,9 @@ function getAppfileInfo(appfilePath) {
         console.error(`❌ Erreur : Fichier Appfile introuvable.`);
         process.exit(1);
     }
+
+
+
 
 
     const { appleId, appIdentifier, teamId } = getAppfileInfo(appfilePath);
@@ -69,14 +74,15 @@ function getAppfileInfo(appfilePath) {
             }
         }
 
-        versionName = versionParts.join('.');
-        buildNumber = lastBuildNumber + 1;
-
+        //versionName = versionParts.join('.');
+        //buildNumber = lastBuildNumber + 1;
+    versionName = lastVersionName
+    buildNumber = lastBuildNumber
     fs.writeFileSync(deployInfoPath, JSON.stringify({ lastVersionName: versionName, lastBuildNumber: buildNumber }, null, 2));
 
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
-    execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
-
+ //   execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
+/*
             console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
             execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -103,22 +109,39 @@ function getAppfileInfo(appfilePath) {
 
             console.log("\n✅ Déploiement Android terminé avec succès !");
 
+*/
 
-
-
+/*
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
         { stdio: "inherit" }
     );
+*/
 
 
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
-    console.log(`fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force`)
+   // console.log(`fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force`)
 
-    execSync(
-        `fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force ` , { stdio: "inherit" }
-    );
+    const fastlanePassword = process.env.FASTLANE_PASSWORD_ENV;
+
+    if (!fastlanePassword) {
+        console.error("FASTLANE_PASSWORD_ENV is not set in the .env file");
+        process.exit(1);
+    }
+
+    try {
+        const command = `
+            
+            echo $FASTLANE_PASSWORD
+          `;
+        console.log(command);
+        execSync(command, { stdio: "inherit", shell: '/bin/zsh' });
+
+    } catch (error) {
+        console.error("An error occurred:", error.message);
+        process.exit(1);
+    }
     console.log("\n✅ Déploiement iOS terminé avec succès !");
 
     // Git operations
@@ -153,5 +176,9 @@ function getAppfileInfo(appfilePath) {
     } catch (error) {
         console.error("❌ Erreur lors des opérations Git :", error);
     }
+
+
+
+
 })();
 
