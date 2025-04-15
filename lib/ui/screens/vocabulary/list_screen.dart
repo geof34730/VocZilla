@@ -41,7 +41,6 @@ class _ListScreenState extends State<ListScreen> {
             }).toList();
           }
           final dataSource = VocabularyDataSource(data:data,context: context);
-
           return Column(
             children: [
               Padding(

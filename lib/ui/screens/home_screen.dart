@@ -111,24 +111,32 @@ class HomeScreen extends StatelessWidget {
                 children: [
                       CardHome(
                         title: "list 1",
+                        vocabulaireBegin: 0,
+                        vocabulaireEnd: 19,
                         backgroundColor: Colors.purple,
                         editMode: true,
                         paddingLevelBar: EdgeInsets.only(top:5),
                       ),
                       CardHome(
                         title: "list 2",
+                        vocabulaireBegin: 0,
+                        vocabulaireEnd: 19,
                         backgroundColor: Colors.blue,
                         editMode: true,
                         paddingLevelBar: EdgeInsets.only(top:5),
                       ),
                       CardHome(
                         title: "list 2",
+                        vocabulaireBegin: 0,
+                        vocabulaireEnd: 19,
                         backgroundColor: Colors.blue,
                         editMode: true,
                         paddingLevelBar: EdgeInsets.only(top:5),
                       ),
                       CardHome(
                         title: "list 2",
+                        vocabulaireBegin: 0,
+                        vocabulaireEnd: 19,
                         backgroundColor: Colors.blue,
                         editMode: true,
                         paddingLevelBar: EdgeInsets.only(top:5),
@@ -146,16 +154,29 @@ class HomeScreen extends StatelessWidget {
                 children: [
                 CardHome(
                   title: "TOP 20",
+                  vocabulaireBegin: 0,
+                  vocabulaireEnd: 19,
                   paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
+
                 ),
                 CardHome(
                   title: "TOP 20 / 50",
+                  vocabulaireBegin: 20,
+                  vocabulaireEnd: 49,
                   paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                 ),
                 CardHome(
-                    title: "TOP 50 / 100",
-                    paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
+                  title: "TOP 50 / 100",
+                  vocabulaireBegin: 50,
+                  vocabulaireEnd: 99,
+                  paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                   ),
+                CardHome(
+                  title: "TOP 100 / 200",
+                  vocabulaireBegin: 100,
+                  vocabulaireEnd: 199,
+                  paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
+                ),
               ]
             ),
 
@@ -179,22 +200,32 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   CardHome(
                     title: "Sport",
+                    vocabulaireBegin: 0,
+                    vocabulaireEnd: 19,
                     paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                   ),
                   CardHome(
                     title: "Voyage",
+                    vocabulaireBegin: 0,
+                    vocabulaireEnd: 19,
                     paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                   ),
                   CardHome(
                     title: "Business",
+                    vocabulaireBegin: 0,
+                    vocabulaireEnd: 19,
                     paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                   ),
                   CardHome(
                     title: "Cuisine",
+                    vocabulaireBegin: 0,
+                    vocabulaireEnd: 19,
                     paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                   ),
                   CardHome(
                     title: "Culture",
+                    vocabulaireBegin: 0,
+                    vocabulaireEnd: 19,
                     paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                   ),
                 ]

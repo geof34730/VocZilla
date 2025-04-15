@@ -12,9 +12,14 @@ class CardHome extends StatelessWidget {
   final bool editMode;
   final EdgeInsetsGeometry paddingLevelBar;
   final Color backgroundColor;
+  final int vocabulaireBegin;
+  final int vocabulaireEnd;
+
 
   CardHome({
     required this.title,
+    required this.vocabulaireBegin,
+    required this.vocabulaireEnd,
     this.editMode = false,
     this.backgroundColor = AppColors.colorTextTitle,
     this.paddingLevelBar = const EdgeInsets.all(0),
@@ -53,7 +58,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 20, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/learn');
                         },
                         iconContent: Icons.school_rounded,
@@ -63,7 +68,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 20, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/quizz');
                         },
                         iconContent: Icons.quiz_rounded,
@@ -73,7 +78,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 0, vocabulaireEnd: 19, titleList: title.toUpperCase());
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/list');
                         },
                         iconContent: Icons.visibility,
@@ -83,7 +88,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 20, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/voicedictation');
                         },
                         iconContent: Icons.playlist_play_outlined,
@@ -93,7 +98,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.orange,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: 20, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: 49, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/statistical');
                         },
                         iconContent: Icons.bar_chart,
