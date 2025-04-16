@@ -11,5 +11,6 @@
     "language_locale": "Italian",
     "language_anglais": "Inglese",
     "search": "Per ricercare",
-    "audios": "Audio"
+    "audios": "Audio",
+    "no_results": "Aucun résultat trouvé"
 }

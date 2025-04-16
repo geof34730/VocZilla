@@ -11,5 +11,6 @@
     "language_locale": "Estonian",
     "language_anglais": "inglise keel",
     "search": "Uurima",
-    "audios": "Helid"
+    "audios": "Helid",
+    "no_results": "Aucun résultat trouvé"
 }

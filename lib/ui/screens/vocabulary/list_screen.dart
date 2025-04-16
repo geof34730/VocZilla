@@ -19,6 +19,8 @@ class _ListScreenState extends State<ListScreen> {
   String searchQuery = '';
   bool sortAscending = true;
   late int sortColumnIndex;
+  GlobalKey<PaginatedDataTableState> tableKey = GlobalKey();
+  TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
@@ -40,69 +42,113 @@ class _ListScreenState extends State<ListScreen> {
                       .contains(searchQuery.toLowerCase());
             }).toList();
           }
-          final dataSource = VocabularyDataSource(data:data,context: context);
+
+
+          final dataSource = data.isEmpty
+              ? EmptyDataSource(context: context)
+              : VocabularyDataSource(data: data, context: context);
+          int rowsPerPage = data.isEmpty ? 1 : (data.length < 10 ? data.length : 10);
           return Column(
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: TextField(
+                child:TextField(
+                  controller: searchController,
                   decoration: InputDecoration(
                     labelText: context.loc.search,
                     border: OutlineInputBorder(),
+                    suffixIcon: searchQuery.isNotEmpty
+                        ? IconButton(
+                            icon: Icon(Icons.cancel,color: Colors.red,),
+                              onPressed: () {
+                                setState(() {
+                                  searchQuery = '';
+                                  searchController.clear();
+                                  tableKey = GlobalKey();
+                                });
+                              },
+                          )
+                        : null,
                   ),
                   onChanged: (value) {
                     setState(() {
                       searchQuery = value;
+                      // Change the key to force the table to rebuild
+                      tableKey = GlobalKey();
                     });
                   },
                 ),
               ),
               // Use a fixed height for the table or wrap it in a ListView
-              Container(
-                // Set a fixed height
-                width: MediaQuery.of(context).size.width,
-                child: PaginatedDataTable(
-                  columns: [
-                    DataColumn(
-                        onSort: (columnIndex, ascending) {},
-                        label: Flexible(child: Center(child:Text(context.loc.language_anglais,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Roboto',
-                          ),
-                          textAlign: TextAlign.center,
-                        )))
+              if(!data.isEmpty)...[
+                  Container(
+                    // Set a fixed height
+                    width: MediaQuery.of(context).size.width,
+                    child: PaginatedDataTable(
+                      key: tableKey,
+                      columns: [
+                        DataColumn(
+                            onSort: (columnIndex, ascending) {},
+                            label: Flexible(child: Center(child:Text(context.loc.language_anglais,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Roboto',
+                              ),
+                              textAlign: TextAlign.center,
+                            )))
+                        ),
+                        DataColumn(
+                            onSort: (columnIndex, ascending) {},
+                            label:  Flexible(child: Center(child:Text(context.loc.language_locale,
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Roboto',
+                              ),
+                              textAlign: TextAlign.center,
+                            )))
+                        ),
+                        DataColumn(
+                            label: Flexible(child: Center(child:Text(context.loc.audios,
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Roboto',
+                              ),
+                              textAlign: TextAlign.center,
+                            )))
+                        ),
+                      ],
+                      source: dataSource,
+                      rowsPerPage: rowsPerPage,  // Nombre de lignes par page
+                      columnSpacing: 20,
+                      horizontalMargin: 10,
+                      // headingRowColor: WidgetStateProperty.all(AppColors.cardBackground),
                     ),
-                    DataColumn(
-                        onSort: (columnIndex, ascending) {},
-                        label:  Flexible(child: Center(child:Text(context.loc.language_locale,
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Roboto',
-                          ),
-                          textAlign: TextAlign.center,
-                        )))
-                    ),
-                    DataColumn(
-                        label: Flexible(child: Center(child:Text(context.loc.audios,
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Roboto',
-                          ),
-                          textAlign: TextAlign.center,
-                        )))
-                    ),
-                  ],
-                  source: dataSource,
-                  rowsPerPage: 10, // Nombre de lignes par page
-                  columnSpacing: 20,
-                  horizontalMargin: 10,
-                  // headingRowColor: WidgetStateProperty.all(AppColors.cardBackground),
+                  ),
+              ],
+
+              if(data.isEmpty)...[
+                Container(
+                  // Set a fixed height
+                  width: MediaQuery.of(context).size.width,
+                  child: PaginatedDataTable(
+                    key: tableKey,
+                    columns: [
+                      DataColumn(
+                          onSort: (columnIndex, ascending) {},
+                          label: Text('')
+                      ),
+                    ],
+                    source: dataSource,
+                    rowsPerPage: rowsPerPage,  // Nombre de lignes par page
+                    columnSpacing: 0,
+                    horizontalMargin: 10,
+                    // headingRowColor: WidgetStateProperty.all(AppColors.cardBackground),
+                  ),
                 ),
-              ),
+              ]
             ],
           );
         } else if (state is VocabulairesError) {
@@ -178,3 +224,44 @@ class VocabularyDataSource extends DataTableSource {
   @override
   int get selectedRowCount => 0;
 }
+
+class EmptyDataSource extends DataTableSource {
+  final BuildContext context;
+  EmptyDataSource({required this.context});
+
+  @override
+  DataRow getRow(int index) {
+    return DataRow.byIndex(
+      color: WidgetStateProperty.all(Colors.white),
+      index: index,
+        cells: [
+          DataCell(
+            Container(
+                width: double.infinity , // Adjust width to span across columns
+                alignment: Alignment.center, // Center the text
+                child: Text(
+                  context.loc.no_results,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Roboto',
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+          )
+        ],
+    );
+  }
+
+  @override
+  bool get isRowCountApproximate => false;
+
+  @override
+  int get rowCount => 1;
+
+  @override
+  int get selectedRowCount => 0;
+}
+
+
+

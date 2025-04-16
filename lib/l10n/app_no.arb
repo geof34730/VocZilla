@@ -11,5 +11,6 @@
     "language_locale": "Norwegian",
     "language_anglais": "engelsk",
     "search": "Å forske",
-    "audios": "Lyd"
+    "audios": "Lyd",
+    "no_results": "Aucun résultat trouvé"
 }

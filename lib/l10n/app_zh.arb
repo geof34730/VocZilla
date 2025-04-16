@@ -11,5 +11,6 @@
     "language_locale": "Chinese (Simplified)",
     "language_anglais": "英语",
     "search": "研究",
-    "audios": "音频"
+    "audios": "音频",
+    "no_results": "Aucun résultat trouvé"
 }
