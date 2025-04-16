@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
+import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 
@@ -22,7 +23,7 @@ class QuizzScreen extends StatelessWidget {
           return SingleChildScrollView(
             child: Column(
               children: (data as List?)?.map<Widget>((vocabulaire) {
-                return Text("${vocabulaire['EN']} : ${vocabulaire['FR']}");
+                return Text("${vocabulaire['EN']} : ${vocabulaire[LanguageUtils().getSmallCodeLanguage(context: context) ]}");
               }).toList() ?? [Text("No vocabulary items found")],
             ),
           );

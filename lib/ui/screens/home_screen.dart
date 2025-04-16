@@ -16,9 +16,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
-
     return Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,26 +152,26 @@ class HomeScreen extends StatelessWidget {
                 CardHome(
                   title: "TOP 20",
                   vocabulaireBegin: 0,
-                  vocabulaireEnd: 19,
+                  vocabulaireEnd: 20,
                   paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
 
                 ),
                 CardHome(
                   title: "TOP 20 / 50",
                   vocabulaireBegin: 20,
-                  vocabulaireEnd: 49,
+                  vocabulaireEnd: 50,
                   paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                 ),
                 CardHome(
                   title: "TOP 50 / 100",
                   vocabulaireBegin: 50,
-                  vocabulaireEnd: 99,
+                  vocabulaireEnd: 100,
                   paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                   ),
                 CardHome(
                   title: "TOP 100 / 200",
                   vocabulaireBegin: 100,
-                  vocabulaireEnd: 199,
+                  vocabulaireEnd: 200,
                   paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                 ),
               ]
@@ -201,7 +198,7 @@ class HomeScreen extends StatelessWidget {
                   CardHome(
                     title: "Sport",
                     vocabulaireBegin: 0,
-                    vocabulaireEnd: 19,
+                    vocabulaireEnd: 20,
                     paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                   ),
                   CardHome(

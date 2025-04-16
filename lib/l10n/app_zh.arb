@@ -1,0 +1,15 @@
+{
+    "hello": "早上好 ！",
+    "change_language": "更改语言",
+    "my_purchase": "我的订阅",
+    "dictation_title": "语音听写",
+    "dictation_label_text_field": "听并输入文本",
+    "statistiques_title": "统计数据",
+    "liste_title": "列表",
+    "tester_title": "测试员",
+    "apprendre_title": "学习",
+    "language_locale": "Chinese (Simplified)",
+    "language_anglais": "英语",
+    "search": "研究",
+    "audios": "音频"
+}

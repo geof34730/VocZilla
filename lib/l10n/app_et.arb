@@ -1,0 +1,15 @@
+{
+    "hello": "Tere hommikust!",
+    "change_language": "Muuda keelt",
+    "my_purchase": "Minu tellimus",
+    "dictation_title": "Hääldikteerimine",
+    "dictation_label_text_field": "Kuulake ja tippige tekst",
+    "statistiques_title": "Statistika",
+    "liste_title": "Nimekiri",
+    "tester_title": "Tester",
+    "apprendre_title": "Õppige",
+    "language_locale": "Estonian",
+    "language_anglais": "inglise keel",
+    "search": "Uurima",
+    "audios": "Helid"
+}
