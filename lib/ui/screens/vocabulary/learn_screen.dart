@@ -269,8 +269,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
       WidgetsBinding.instance.addPostFrameCallback((_) {
         // print("je suis dans le callback : $durationAnimationFlipCardStock new duration : $newDuration");
         cardKey.currentState!.toggleCard();
-       // _controller.forward(from: 0).then((_) {
-       // });
+        _controller.forward(from: 0).then((_) {
+        });
       });
     });
   }
