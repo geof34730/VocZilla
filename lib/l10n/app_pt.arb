@@ -6,11 +6,12 @@
     "dictation_label_text_field": "Ouça e digite o texto",
     "statistiques_title": "Estatísticas",
     "liste_title": "Lista",
-    "tester_title": "Testador",
+    "tester_title": "Avaliação",
     "apprendre_title": "Aprender",
     "language_locale": "Portuguese (Brazil)",
     "language_anglais": "Inglês",
     "search": "Para pesquisar",
     "audios": "Áudios",
-    "no_results": "Aucun résultat trouvé"
+    "no_results": "Nenhum resultado encontrado",
+    "learn_view_carte": "Clique no mapa para ver a resposta"
 }

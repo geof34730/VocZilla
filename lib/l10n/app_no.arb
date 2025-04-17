@@ -6,11 +6,12 @@
     "dictation_label_text_field": "Lytt og skriv inn teksten",
     "statistiques_title": "Statistikk",
     "liste_title": "Liste",
-    "tester_title": "Tester",
+    "tester_title": "Evaluering",
     "apprendre_title": "Lære",
     "language_locale": "Norwegian",
     "language_anglais": "engelsk",
     "search": "Å forske",
     "audios": "Lyd",
-    "no_results": "Aucun résultat trouvé"
+    "no_results": "Ingen resultater funnet",
+    "learn_view_carte": "Klikk på kartet for å se svaret"
 }

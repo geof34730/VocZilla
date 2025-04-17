@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import '../../global.dart';
 
 final player = AudioPlayer();
-class PlaySoond{
+class PlaySoond {
   final String stringVocabulaire;
-  late double sizeIcon;
   late double sizeButton;
   late Color iconColor;
   late Color buttonColor;
@@ -14,39 +13,36 @@ class PlaySoond{
 
   PlaySoond({
     required this.stringVocabulaire,
-    this.sizeIcon =25,
-    this.sizeButton =25,
-    this.iconColor=Colors.white,
-    this.buttonColor=Colors.blueGrey,
-    this.iconData=Icons.volume_up,
+    this.sizeButton = 25,
+    this.iconColor = Colors.white,
+    this.buttonColor = Colors.blueGrey,
+    this.iconData = Icons.volume_up,
   });
 
-  buttonPlay({String typeAudio = 'all'}){
-    return CircleAvatar(
+  Widget buttonPlay() {
+    return Material(
+      shape: CircleBorder(),
+      color: buttonColor, // Background color of the CircleAvatar
+      child: InkWell(
+        customBorder: CircleBorder(),
+        onTap: () {
+          playAudio(stringVocabulaire: stringVocabulaire);
+        },
+        child: CircleAvatar(
           radius: sizeButton,
-          backgroundColor: buttonColor,
-          child: iconPlay()
-        );
-  }
-
-  iconPlay(){
-    return IconButton(
-      key: UniqueKey(),
-      icon:  Icon(
-        iconData,
-        color: iconColor,
-        size:sizeIcon
+          backgroundColor: Colors.transparent, // Make the CircleAvatar transparent
+          child: Icon(
+            iconData,
+            color: iconColor,
+            size: sizeButton, // Adjust the size relative to the button size
+          ),
+        ),
       ),
-      onPressed: () {
-        playAudio(stringVocabulaire: stringVocabulaire);
-      },
     );
   }
 
-
-  void playAudio({required String stringVocabulaire}) async{
+  void playAudio({required String stringVocabulaire}) async {
     await player.stop();
     await player.play(AssetSource('audios/gcloud/${stringVocabulaire}.mp3'));
   }
-
 }

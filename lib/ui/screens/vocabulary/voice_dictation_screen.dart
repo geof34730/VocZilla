@@ -42,7 +42,6 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
           padding: const EdgeInsets.only(top: 20, bottom: 20),
           child: PlaySoond(
               stringVocabulaire:"0a0ca447-3106-449f-aa9e-4489a3cf8135",
-              sizeIcon: 150,
               sizeButton:100,
               buttonColor: Colors.green,
               iconData: Icons.play_arrow

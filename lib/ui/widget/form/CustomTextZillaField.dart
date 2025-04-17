@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../elements/PlaySoond.dart';
+import '../../../core/utils/PlaySoond.dart';
+
 
 class CustomTextZillaField extends StatefulWidget {
   final TextEditingController ControlerField;
   final String labelText;
   final String hintText;
   final String resulteField;
+  final String GUID;
   final dynamic Function() voidCallBack;
 
   bool resultSound = true;
@@ -19,6 +21,7 @@ class CustomTextZillaField extends StatefulWidget {
     required this.hintText,
     required this.resulteField,
     required this.voidCallBack,
+    this.GUID='',
     this.resultSound = false,
   });
 
@@ -59,7 +62,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
                   ? (
                   widget.resultSound
                       ?
-                      PlaySoond(dataVerbe:mapForPlayer,typeAudio: "titreVerbe",sizeIcon: 30, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
+                      PlaySoond(stringVocabulaire: widget.GUID, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
                       :
                       null
               )

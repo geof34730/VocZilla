@@ -6,11 +6,12 @@
     "dictation_label_text_field": "听并输入文本",
     "statistiques_title": "统计数据",
     "liste_title": "列表",
-    "tester_title": "测试员",
+    "tester_title": "评估",
     "apprendre_title": "学习",
     "language_locale": "Chinese (Simplified)",
     "language_anglais": "英语",
     "search": "研究",
     "audios": "音频",
-    "no_results": "Aucun résultat trouvé"
+    "no_results": "未找到结果",
+    "learn_view_carte": "点击地图查看答案"
 }
