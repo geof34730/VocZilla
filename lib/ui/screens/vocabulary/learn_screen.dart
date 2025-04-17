@@ -1,17 +1,16 @@
 import 'dart:async';
-import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:intl/intl.dart';
 import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/logic/cubit/localization_cubit.dart';
-import 'package:flip_card/flip_card.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
 import '../../../core/utils/PlaySoond.dart';
 import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
+import 'package:flip_card/flip_card.dart';
+
 
 class LearnScreen extends StatefulWidget {
   @override
@@ -26,23 +25,22 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
   late int durationAnimationFlipCard = 500;
   late int durationAnimationFlipCardStock = durationAnimationFlipCard;
   late int durationChangeContentCard=250;
-
-
   late Animation<double> _scaleAnimation;
-
+  late bool visibilityBack = true;
+  late String directionAnimation = "next";
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: Duration(milliseconds: 500),
+      duration: Duration(milliseconds: durationAnimationFlipCardStock),
       vsync: this,
     );
-    // _animation = Tween<double>(begin: 0, end: 2 * pi).animate(_controller);
-
     _controller.forward(from: 0).then((_) {
 
     });
-    _scaleAnimation = Tween<double>(begin: 0.1, end: 1.0).animate(_controller);
+    _scaleAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeOut) // reverseCurve: Curves.easeInOut,
+    );
   }
 
   @override
@@ -50,6 +48,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
     _controller.dispose();
     super.dispose();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -86,67 +85,88 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                         transform: Matrix4.identity()
                         //..rotateY(_animation.value)
                           ..scale(_scaleAnimation.value),
-                        child: FlipCard(
-                          speed: durationAnimationFlipCardStock,
-                          key: cardKey,
-                          flipOnTouch: true,
-                          front: Material(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            color: AppColors.cardBackground,
-                            elevation: 8.0,
-                            child: Container(
-                              width: screenWidth * 0.8,
-                              height: screenWidth * 0.8,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "${data[numItemVocabulary][LanguageUtils()
-                                        .getSmallCodeLanguage(
-                                        context: context)]}",
-                                    style: TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
+                            child: GestureDetector(
+                              onHorizontalDragEnd: (details) {
+                                if (details.primaryVelocity != null) {
+                                  if (details.primaryVelocity! < 0) {
+                                    numItemVocabulary + 1 <= data.length - 1 ? learnNext():null;
+                                  } else if (details.primaryVelocity! > 0) {
+                                    numItemVocabulary != 0 ? learnBack() : null;
+                                  }
+                                }
+                              },
+                              child:FlipCard(
+                              directionAnimation:directionAnimation,
+                              speed: durationAnimationFlipCardStock,
+                              key: cardKey,
+                              flipOnTouch: true,
+                              front: Material(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                color: AppColors.cardBackground,
+                                elevation: 8.0,
+                                child: Container(
+                                      width: screenWidth * 0.8,
+                                      height: screenWidth * 0.8,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "${data[numItemVocabulary][LanguageUtils()
+                                                .getSmallCodeLanguage(
+                                                context: context)]}",
+                                            style: TextStyle(
+                                              fontSize: 40,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black87,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+
+                              ),
+                              back: Material(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                color: AppColors.cardBackground,
+                                elevation: 8.0,
+                                child: (visibilityBack ?
+                                Container(
+                                    width: screenWidth * 0.8,
+                                    height: screenWidth * 0.8,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "${data[numItemVocabulary]['EN']}",
+                                          style: TextStyle(
+                                            fontSize: 40,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black87,
+                                          ),
+                                        ),
+                                        SizedBox(height: 30),
+                                        PlaySoond(
+                                          stringVocabulaire: data[numItemVocabulary]['GUID'],
+                                          buttonColor: Colors.green,
+                                          sizeButton: 70,
+                                        ).buttonPlay(),
+                                      ],
                                     ),
-                                  ),
-                                ],
+                                  )
+                                  :
+                                  Container(
+                                      width: screenWidth * 0.8,
+                                      height: screenWidth * 0.8,
+                                      child:Text('')
+                                  )
+                                )
                               ),
                             ),
-                          ),
-                          back: Material(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
                             ),
-                            color: AppColors.cardBackground,
-                            elevation: 8.0,
-                            child: Container(
-                              width: screenWidth * 0.8,
-                              height: screenWidth * 0.8,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "${data[numItemVocabulary]['EN']}",
-                                    style: TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                  SizedBox(height: 30),
-                                  PlaySoond(
-                                    stringVocabulaire: data[numItemVocabulary]['GUID'],
-                                    buttonColor: Colors.green,
-                                    sizeButton: 70,
-                                  ).buttonPlay(),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
                       );
                     },
                   ),
@@ -154,49 +174,71 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10.0),
-                            child: Visibility(
-                              visible: numItemVocabulary != 0,
-                              child: FloatingActionButton(
-                                heroTag: UniqueKey(),
-                                onPressed: () async {
-                                  learnBack();
-                                },
-                                child: const Icon(Icons.navigate_before),
+                      Container(
+                        width: screenWidth * 0.8,
+                        height: screenWidth * 0.8,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.only(top: 10.0),
+                              child: Visibility(
+                                visible: numItemVocabulary != 0,
+                                child: FloatingActionButton(
+                                  heroTag: UniqueKey(),
+                                  onPressed: () async {
+                                    learnBack();
+                                  },
+                                  child: const Icon(
+                                      Icons.navigate_before,
+                                    size: 40,
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              top: 25.0,
-                              left: (numItemVocabulary + 1 == 1 ? 55 : 0),
-                              right: (numItemVocabulary + 1 == data.length
-                                  ? 55
-                                  : 0),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                top: 12.0,
+                                left: (numItemVocabulary + 1 == 1 ? 55 : 0),
+                                right: (numItemVocabulary + 1 == data.length ? 55 : 0),
+                              ),child:
+                            Column(
+                             children: [
+                               Icon(
+                                 Icons.swipe,
+                                 color: Colors.black87,
+                                 size: 35,
+                               ),
+                               Text(
+                                   '${numItemVocabulary + 1}/${data.length}',
+                                   style: TextStyle(
+                                       fontWeight: FontWeight.bold,
+                                       fontSize: 17.0
+                                   ),
+                                 ),
+                              ],
+                             ),
                             ),
-                            child: Text(
-                                '${numItemVocabulary + 1}/${data.length}'),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10.0),
-                            child: Visibility(
-                              visible: numItemVocabulary + 1 <= data.length - 1,
-                              child: FloatingActionButton(
-                                heroTag: UniqueKey(),
-                                onPressed: () {
-                                  learnNext();
-                                },
-                                child: const Icon(Icons.navigate_next),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 10.0),
+                              child: Visibility(
+                                visible: numItemVocabulary + 1 <= data.length - 1,
+                                child: FloatingActionButton(
+                                  heroTag: UniqueKey(),
+                                  onPressed: () {
+                                    learnNext();
+                                  },
+                                  child: const Icon(
+                                    Icons.navigate_next,
+                                    size: 40,
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ],
@@ -212,10 +254,6 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
     );
   }
 
-
-
-
-
   learnNext()  {
     animationNextBack(animationType: AnimationType.next);
   }
@@ -226,9 +264,9 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
 
   animationNextBack({required AnimationType animationType}) {
     if (cardKey.currentState!.isFront) {
-      updateDurationAnimation(newDuration: 0);
+      updateDurationAnimation(newDuration: 0,animationType: animationType);
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        updateDurationAnimation(newDuration: durationAnimationFlipCard);
+        updateDurationAnimation(newDuration: durationAnimationFlipCard,animationType: animationType);
       });
       Future.delayed(
         Duration(milliseconds: durationChangeContentCard), () {
@@ -239,12 +277,13 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
           if(animationType == AnimationType.back){
             numItemVocabulary--;
           }
+          Future.delayed(Duration(milliseconds: durationChangeContentCard), (){visibilityBack = true;});
         });
       },
       );
     }
     else{
-      updateDurationAnimation(newDuration: durationAnimationFlipCard);
+      updateDurationAnimation(newDuration: durationAnimationFlipCard,animationType: animationType);
       Future.delayed(
         Duration(milliseconds: durationChangeContentCard), () {
         setState(() {
@@ -254,17 +293,21 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
           if(animationType == AnimationType.back){
             numItemVocabulary--;
           }
+          Future.delayed(Duration(milliseconds: durationChangeContentCard), (){visibilityBack = true;});
         });
       },
       );
     }
   }
 
-  void updateDurationAnimation({required int newDuration})  {
+  void updateDurationAnimation({required int newDuration,required AnimationType animationType})  {
     //print("je suis dans le updateDurationAnimation : $newDuration");
     setState(() {
       // print("e suis dans le setstate : $newDuration");
+      visibilityBack=false;
+     // directionAnimation="back";
       durationAnimationFlipCardStock = newDuration;
+      directionAnimation=(animationType == AnimationType.next) ? "next" : "back";
       _controller.duration = Duration(milliseconds: durationAnimationFlipCardStock);
       WidgetsBinding.instance.addPostFrameCallback((_) {
         // print("je suis dans le callback : $durationAnimationFlipCardStock new duration : $newDuration");
@@ -274,5 +317,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
       });
     });
   }
+
+
 
 }

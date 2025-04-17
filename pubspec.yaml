@@ -70,7 +70,9 @@ dependencies:
   package_info_plus: ^8.3.0
   data_table_2: ^2.6.0
   flutter_data_table: ^2.0.0
-  flip_card: ^0.7.0
+  #flip_card: ^0.7.0
+  flip_card:
+    path: lib/packagesLocale/flip_card
 
 
 flutter_launcher_icons:
