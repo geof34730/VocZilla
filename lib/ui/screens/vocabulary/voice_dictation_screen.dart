@@ -123,6 +123,4 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
       customeTextZillaControllerDictation.clear();
     });
   }
-
-
 }

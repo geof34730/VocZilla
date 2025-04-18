@@ -35,9 +35,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
       duration: Duration(milliseconds: durationAnimationFlipCardStock),
       vsync: this,
     );
-    _controller.forward(from: 0).then((_) {
-
-    });
+    _controller.forward(from: 0).then((_) {});
     _scaleAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeOut) // reverseCurve: Curves.easeInOut,
     );
@@ -49,7 +47,6 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
@@ -60,7 +57,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
         } else if (state is VocabulairesLoaded) {
           final List<dynamic> data = state.data["vocabulaireList"] as List<dynamic>;
           if (data.isEmpty) {
-            return Center(child: Text("Aucun élément de vocabulaire trouvé"));
+            return Center(child: Text(context.loc.no_vocabulary_items_found));
           }
           return SingleChildScrollView(
             child: Center(
@@ -244,9 +241,9 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
             ),
           );
         } else if (state is VocabulairesError) {
-          return Center(child: Text("Erreur de chargement"));
+          return Center(child: Text(context.loc.error_loading));
         } else {
-          return Center(child: Text("État inconnu")); // fallback
+          return Center(child: Text(context.loc.unknown_error));// fallback
         }
       },
     );

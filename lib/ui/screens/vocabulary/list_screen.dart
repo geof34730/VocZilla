@@ -152,9 +152,9 @@ class _ListScreenState extends State<ListScreen> {
             ],
           );
         } else if (state is VocabulairesError) {
-          return Center(child: Text("Erreur de chargement"));
+          return Center(child: Text(context.loc.error_loading));
         } else {
-          return Center(child: Text("État inconnu")); // fallback
+          return Center(child: Text(context.loc.unknown_error)); // fallback
         }
       },
     );
