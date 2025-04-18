@@ -13,5 +13,9 @@
     "search": "Å forske",
     "audios": "Lyd",
     "no_results": "Ingen resultater funnet",
-    "learn_view_carte": "Klikk på kartet for å se svaret"
+    "learn_view_carte": "Klikk på kartet for å se svaret",
+    "button_next": "Følgende",
+    "error_loading": "Lastefeil",
+    "unknown_error": "Ukjent feil",
+    "no_vocabulary_items_found": "Finner ingen ordforråd"
 }

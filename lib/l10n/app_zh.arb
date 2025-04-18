@@ -13,5 +13,9 @@
     "search": "研究",
     "audios": "音频",
     "no_results": "未找到结果",
-    "learn_view_carte": "点击地图查看答案"
+    "learn_view_carte": "点击地图查看答案",
+    "button_next": "下列的",
+    "error_loading": "加载错误",
+    "unknown_error": "未知错误",
+    "no_vocabulary_items_found": "未找到任何词汇"
 }

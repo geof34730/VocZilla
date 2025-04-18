@@ -13,5 +13,9 @@
     "search": "Uurima",
     "audios": "Helid",
     "no_results": "Tulemusi ei leitud",
-    "learn_view_carte": "Vastuse nägemiseks klõpsake kaardil"
+    "learn_view_carte": "Vastuse nägemiseks klõpsake kaardil",
+    "button_next": "Jälgides",
+    "error_loading": "Laadimisviga",
+    "unknown_error": "Tundmatu viga",
+    "no_vocabulary_items_found": "Sõnavara üksusi ei leitud"
 }

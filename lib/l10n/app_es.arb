@@ -13,5 +13,9 @@
     "search": "Para investigar",
     "audios": "Audios",
     "no_results": "No se encontraron resultados",
-    "learn_view_carte": "Haga clic en el mapa para ver la respuesta."
+    "learn_view_carte": "Haga clic en el mapa para ver la respuesta.",
+    "button_next": "Siguiente",
+    "error_loading": "Error de carga",
+    "unknown_error": "Error desconocido",
+    "no_vocabulary_items_found": "No se encontraron elementos de vocabulario"
 }

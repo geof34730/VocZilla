@@ -13,5 +13,9 @@
     "search": "To research",
     "audios": "Audios",
     "no_results": "No results found",
-    "learn_view_carte": "Click on the map to see the answer"
+    "learn_view_carte": "Click on the map to see the answer",
+    "button_next": "Following",
+    "error_loading": "Loading error",
+    "unknown_error": "Unknown error",
+    "no_vocabulary_items_found": "No vocabulary items found"
 }
