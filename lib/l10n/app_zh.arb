@@ -17,5 +17,17 @@
     "button_next": "下列的",
     "error_loading": "加载错误",
     "unknown_error": "未知错误",
-    "no_vocabulary_items_found": "未找到任何词汇"
+    "no_vocabulary_items_found": "未找到任何词汇条目",
+    "pronunciation_title": "发音",
+    "pronunciation_success": "好极了！",
+    "pronunciation_error": "嗯，不太对。再试一次。",
+    "pronunciation_i_heard_you_say": "我听到你说",
+    "pronunciation_description_action": "按下麦克风说话并检查您的发音。",
+    "pronunciation_error1": "无法初始化语音识别",
+    "pronunciation_error2": "初始化过程中出错",
+    "pronunciation_error3": "开始监听时出错",
+    "pronunciation_error4": "语音识别尚未准备好。",
+    "pronunciation_error5": "麦克风权限被拒绝",
+    "offline_title": "离线",
+    "offline_description": "您没有互联网连接。请连接到互联网以继续。"
 }

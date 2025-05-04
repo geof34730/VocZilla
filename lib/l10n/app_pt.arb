@@ -17,5 +17,17 @@
     "button_next": "Seguindo",
     "error_loading": "Erro de carregamento",
     "unknown_error": "Erro desconhecido",
-    "no_vocabulary_items_found": "Nenhum item de vocabulário encontrado"
+    "no_vocabulary_items_found": "Nenhum item de vocabulário encontrado",
+    "pronunciation_title": "Pronúncia",
+    "pronunciation_success": "Bravo!",
+    "pronunciation_error": "Hmm, isso não está certo. Tente novamente.",
+    "pronunciation_i_heard_you_say": "Eu ouvi você dizer",
+    "pronunciation_description_action": "Pressione o microfone para falar e verificar sua pronúncia.",
+    "pronunciation_error1": "Falha ao inicializar o reconhecimento de fala",
+    "pronunciation_error2": "Erro durante a inicialização",
+    "pronunciation_error3": "Erro ao iniciar a escuta",
+    "pronunciation_error4": "O reconhecimento de voz não está pronto.",
+    "pronunciation_error5": "Permissão de microfone negada",
+    "offline_title": "Off-line",
+    "offline_description": "Você não tem conexão com a internet. Conecte-se à internet para continuar."
 }

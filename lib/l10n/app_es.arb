@@ -17,5 +17,17 @@
     "button_next": "Siguiente",
     "error_loading": "Error de carga",
     "unknown_error": "Error desconocido",
-    "no_vocabulary_items_found": "No se encontraron elementos de vocabulario"
+    "no_vocabulary_items_found": "No se encontraron elementos de vocabulario",
+    "pronunciation_title": "Pronunciación",
+    "pronunciation_success": "¡Bravo!",
+    "pronunciation_error": "Hmm, eso no es del todo correcto. Intentar otra vez.",
+    "pronunciation_i_heard_you_say": "Te escuché decir",
+    "pronunciation_description_action": "Presiona el micrófono para hablar y comprobar tu pronunciación.",
+    "pronunciation_error1": "No se pudo inicializar el reconocimiento de voz",
+    "pronunciation_error2": "Error durante la inicialización",
+    "pronunciation_error3": "Error al iniciar la escucha",
+    "pronunciation_error4": "El reconocimiento de voz no está listo.",
+    "pronunciation_error5": "Permiso de micrófono denegado",
+    "offline_title": "Desconectado",
+    "offline_description": "No tienes conexión a Internet. Conéctese a Internet para continuar."
 }

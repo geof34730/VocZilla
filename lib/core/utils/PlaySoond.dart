@@ -5,18 +5,20 @@ import '../../global.dart';
 
 final player = AudioPlayer();
 class PlaySoond {
-  final String stringVocabulaire;
+  final String guidVocabulaire;
   late double sizeButton;
   late Color iconColor;
   late Color buttonColor;
   late IconData iconData;
+  late Function? onpressedActionSup;
 
   PlaySoond({
-    required this.stringVocabulaire,
+    required this.guidVocabulaire,
     this.sizeButton = 25,
     this.iconColor = Colors.white,
     this.buttonColor = Colors.blueGrey,
     this.iconData = Icons.volume_up,
+    this.onpressedActionSup,
   });
 
   Widget buttonPlay() {
@@ -26,7 +28,10 @@ class PlaySoond {
       child: InkWell(
         customBorder: CircleBorder(),
         onTap: () {
-          playAudio(stringVocabulaire: stringVocabulaire);
+          playAudio(stringVocabulaire: guidVocabulaire);
+          if (onpressedActionSup != null) {
+            onpressedActionSup!();
+          }
         },
         child: CircleAvatar(
           radius: sizeButton,

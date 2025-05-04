@@ -17,5 +17,17 @@
     "button_next": "Following",
     "error_loading": "Loading error",
     "unknown_error": "Unknown error",
-    "no_vocabulary_items_found": "No vocabulary items found"
+    "no_vocabulary_items_found": "No vocabulary items found",
+    "pronunciation_title": "Pronunciation",
+    "pronunciation_success": "Bravo !",
+    "pronunciation_error": "Hmm, that's not quite right. Try again.",
+    "pronunciation_i_heard_you_say": "I heard you say",
+    "pronunciation_description_action": "Press the microphone to speak and check your pronunciation.",
+    "pronunciation_error1": "Failed to initialize speech recognition",
+    "pronunciation_error2": "Error during initialization",
+    "pronunciation_error3": "Error starting listening",
+    "pronunciation_error4": "Voice recognition is not ready.",
+    "pronunciation_error5": "Microphone permission denied",
+    "offline_title": "Offline",
+    "offline_description": "You do not have an internet connection. Please connect to the internet to continue."
 }

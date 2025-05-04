@@ -63,7 +63,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                 Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: PlaySoond(
-                          stringVocabulaire: data[randomItemData]['GUID'],
+                          guidVocabulaire: data[randomItemData]['GUID'],
                           sizeButton: 100,
                           buttonColor: Colors.green,
                           iconData: Icons.play_arrow)
@@ -83,7 +83,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                       });
                   },
                 ),
-                if (buttonNext)
+                if (buttonNext)...[
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: Text(
@@ -94,7 +94,6 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                       ),
                     ),
                   ),
-                if (buttonNext)
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: ElevatedButton(
@@ -104,6 +103,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                       child: Text(context.loc.button_next),
                     ),
                   ),
+                ]
               ],
             )),
           );

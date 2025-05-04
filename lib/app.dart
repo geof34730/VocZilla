@@ -1,6 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:vobzilla/global.dart';
@@ -19,43 +19,53 @@ import 'logic/blocs/drawer/drawer_state.dart';
 import 'logic/blocs/purchase/purchase_bloc.dart';
 import 'logic/blocs/purchase/purchase_event.dart';
 import 'logic/blocs/purchase/purchase_state.dart';
+import 'logic/blocs/update/update_event.dart';
+
+import 'logic/blocs/update/update_state.dart';
 import 'logic/blocs/user/user_bloc.dart';
 import 'logic/blocs/user/user_event.dart';
 import 'logic/blocs/user/user_state.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
-final Route Function(RouteSettings settings) generateRoute=AppRoute.generateRoute;
+import 'logic/blocs/update/update_bloc.dart'; // Assurez-vous d'importer UpdateBloc
+
+final Route Function(RouteSettings settings) generateRoute = AppRoute.generateRoute;
+
 class MyApp extends StatelessWidget {
   MyApp({super.key});
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   final AuthRepository _authRepository = AuthRepository();
+
   @override
   Widget build(BuildContext context) {
     return Material(
-        child:MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => AuthBloc(authRepository: _authRepository)..add(AppStarted()),
-        ),
-        BlocProvider(
-            create: (context) => DrawerBloc()
-        ),
-        BlocProvider(
-            create: (context) => LocalizationCubit()
-        ),
-        BlocProvider(
-          create: (context) => PurchaseBloc()..add(LoadProducts()),
-        ),
-        BlocProvider(
-          create: (context) => UserBloc()..add(CheckUserStatus()),
-        ),
-        BlocProvider(
-          create: (context) => VocabulairesBloc(),
-        )
-      ],
-      child: BlocBuilder<LocalizationCubit, Locale>(
-        builder: (context, locale) {
-          FirebaseAuth.instance.setLanguageCode(locale.languageCode);
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => AuthBloc(authRepository: _authRepository)..add(AppStarted()),
+          ),
+          BlocProvider(
+            create: (context) => DrawerBloc(),
+          ),
+          BlocProvider(
+            create: (context) => LocalizationCubit(),
+          ),
+          BlocProvider(
+            create: (context) => PurchaseBloc()..add(LoadProducts()),
+          ),
+          BlocProvider(
+            create: (context) => UserBloc()..add(CheckUserStatus()),
+          ),
+          BlocProvider(
+            create: (context) => VocabulairesBloc(),
+          ),
+          BlocProvider(
+            create: (context) => UpdateBloc()..add(CheckForUpdate()), // Ajoutez UpdateBloc ici
+          ),
+        ],
+        child: BlocBuilder<LocalizationCubit, Locale>(
+          builder: (context, locale) {
+            FirebaseAuth.instance.setLanguageCode(locale.languageCode);
             return MaterialApp(
               theme: VobdzillaTheme.lightTheme,
               debugShowCheckedModeBanner: debugMode,
@@ -72,7 +82,7 @@ class MyApp extends StatelessWidget {
               builder: (context, child) {
                 return Builder(
                   builder: (context) {
-                    return  MultiBlocListener(
+                    return MultiBlocListener(
                       listeners: [
                         BlocListener<AuthBloc, AuthState>(
                           listener: (context, state) {
@@ -87,6 +97,11 @@ class MyApp extends StatelessWidget {
                         BlocListener<PurchaseBloc, PurchaseState>(
                           listener: (context, state) {
                             BlocStateTracker().updateState('PurchaseBloc', state);
+                          },
+                        ),
+                        BlocListener<UpdateBloc, UpdateState>(
+                          listener: (context, state) {
+                            BlocStateTracker().updateState('UpdateBloc', state);
                           },
                         ),
                         BlocListener<UserBloc, UserState>(
@@ -109,7 +124,8 @@ class MyApp extends StatelessWidget {
             );
           },
         ),
-     )
+      ),
     );
   }
 }
+

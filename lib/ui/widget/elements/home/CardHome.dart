@@ -71,7 +71,7 @@ class CardHome extends StatelessWidget {
                           _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/quizz');
                         },
-                        iconContent: Icons.quiz_rounded,
+                        iconContent: Icons.assignment,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
@@ -81,7 +81,7 @@ class CardHome extends StatelessWidget {
                           _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/list');
                         },
-                        iconContent: Icons.visibility,
+                        iconContent: Icons.list,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
@@ -91,20 +91,21 @@ class CardHome extends StatelessWidget {
                           _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/voicedictation');
                         },
-                        iconContent: Icons.playlist_play_outlined,
+                        iconContent: Icons.play_circle,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
                       ElevatedButtonCardHome(
-                        colorIcon: Colors.orange,
+                        colorIcon: Colors.green,
                         onClickButton: () {
                           _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: 49, titleList: title.toUpperCase());
-                          Navigator.pushNamed(context, '/vocabulary/statistical');
+                          Navigator.pushNamed(context, '/vocabulary/pronunciation');
                         },
-                        iconContent: Icons.bar_chart,
+                        iconContent: Icons.mic,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
+
                     ],
                   ),
                 ],

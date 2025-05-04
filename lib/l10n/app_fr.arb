@@ -17,5 +17,18 @@
     "button_next": "Suivant",
     "error_loading" : "Erreur de chargement",
     "unknown_error" : "Erreur inconnue",
-    "no_vocabulary_items_found" : "Aucun élément de vocabulaire trouvé"
+    "no_vocabulary_items_found" : "Aucun élément de vocabulaire trouvé",
+    "pronunciation_title" : "Prononciation",
+    "pronunciation_success" :"Bravo !",
+    "pronunciation_error" : "Hmm, ce n’est pas tout à fait juste. Essaie encore.",
+    "pronunciation_i_heard_you_say" : "Je t'ai entendu dire",
+    "pronunciation_description_action" : "Appuyer sur le micro pour parler et vérifier votre prononciation.",
+    "pronunciation_error1" : "Echec de l'initialisation de la reconnaissance vocale",
+    "pronunciation_error2" : "Erreur lors de l'initialisation",
+    "pronunciation_error3" : "Erreur lors du démarrage de l'écoute",
+    "pronunciation_error4" : "La reconnaissance vocale n'est pas prête.",
+    "pronunciation_error5" : "Permission microphone refusée",
+    "offline_title" : "Hors ligne",
+    "offline_description" : "Vous n'avez pas de connexion Internet. Veuillez vous connecter à Internet pour continuer."
+
 }

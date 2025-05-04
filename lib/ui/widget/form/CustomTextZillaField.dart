@@ -62,7 +62,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
                   ? (
                   widget.resultSound
                       ?
-                      PlaySoond(stringVocabulaire: widget.GUID, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
+                      PlaySoond(guidVocabulaire: widget.GUID, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
                       :
                       null
               )

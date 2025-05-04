@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vobzilla/ui/screens/vocabulary/pronunciation_screen.dart';
+import 'logic/check_connectivity.dart';
 import 'core/utils/logger.dart';
+import 'logic/blocs/update/update_state.dart';
 import 'logic/blocs/user/user_bloc.dart';
 import 'logic/blocs/user/user_state.dart';
 import 'package:vobzilla/core/utils/localization.dart';
@@ -23,9 +26,9 @@ import 'package:vobzilla/ui/screens/vocabulary/quizz_screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/statistical.screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/voice_dictation_screen.dart';
 import 'package:vobzilla/ui/widget/elements/Loading.dart';
-
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_state.dart';
+import 'logic/blocs/update/update_bloc.dart'; // Assurez-vous d'importer UpdateBloc
 
 class AppRoute {
   static const String home = '/';
@@ -36,8 +39,7 @@ class AppRoute {
   static const String updateProfile = '/updateprofile';
   static const String subscription = '/subscription';
   static const String learnVocabulary = '/vocabulary/learn/:id';
-
-
+  static const String updateScreen = '/update'; // Ajoutez la route pour l'écran de mise à jour
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
@@ -62,14 +64,14 @@ class AppRoute {
                     Logger.Red.log('ROUTE user.displayName == null');
                     notRedirectNow = false;
                     _redirectTo(context, settings, updateProfile);
-                  }else{
+                  } else {
                     Logger.Red.log('ROUTE none');
                     if (settings.name == login) {
                       notRedirectNow = false;
                       _redirectTo(context, settings, home);
                     }
                   }
-                }else{
+                } else {
                   Logger.Blue.log('ROUTE AuthUnauthenticated');
                   if (settings.name != login && settings.name != register && settings.name != home) {
                     Logger.Blue.log('Redirect logout');
@@ -87,7 +89,7 @@ class AppRoute {
                 }
                 if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
                   Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
-                  if(settings.name != subscription){
+                  if (settings.name != subscription) {
                     notRedirectNow = false;
                     Navigator.pushReplacementNamed(context, subscription);
                   }
@@ -104,17 +106,27 @@ class AppRoute {
                 }
               },
             ),
+            BlocListener<UpdateBloc, UpdateState>(
+              listener: (context, updateState) {
+                if (updateState is UpdateAvailable) {
+                  Logger.Red.log('Update available, redirecting to UpdateScreen');
+                  Navigator.pushReplacementNamed(context, updateScreen);
+                }
+              },
+            ),
           ],
-          child: BlocBuilder<AuthBloc, AuthState>(
-            builder: (context, authState) {
-              if (authState is AuthAuthenticated && notRedirectNow) {
-                return _getAuthenticatedPage(settings, context);
-              }
-              if (authState is AuthUnauthenticated && notRedirectNow) {
-                return _getUnauthenticatedPage(settings, context);
-              }
-              return Loading(); // Default loading state
-            },
+          child: ConnectivityAwareWidget(
+            child: BlocBuilder<AuthBloc, AuthState>(
+              builder: (context, authState) {
+                if (authState is AuthAuthenticated && notRedirectNow) {
+                  return _getAuthenticatedPage(settings, context);
+                }
+                if (authState is AuthUnauthenticated && notRedirectNow) {
+                  return _getUnauthenticatedPage(settings, context);
+                }
+                return Loading(); // Default loading state
+              },
+            ),
           ),
         );
       },
@@ -151,12 +163,21 @@ class AppRoute {
         case verifiedEmail:
           return Layout(appBarNotLogged: true, logged: false, child: ProfileEmailValidation());
         case updateProfile:
-          return Layout(appBarNotLogged: true, logged: false, child: ProfileUpdateScreen());
+          return Layout(
+              appBarNotLogged: true,
+              logged: false,
+              child: ProfileUpdateScreen()
+          );
         case subscription:
-          return Layout(child: SubscriptionScreen(), titleScreen: "Nos Abonnements");
+          return Layout(
+              child: SubscriptionScreen(),
+              titleScreen: "Nos Abonnements"
+          );
         case home:
         case homeLogged:
-          return Layout(child: HomeScreen());
+          return Layout(
+              child: HomeScreen()
+          );
         case '/vocabulary':
           if (uri.pathSegments.length == 2) {
             return BlocBuilder<VocabulairesBloc, VocabulairesState>(
@@ -206,6 +227,13 @@ class AppRoute {
                         itemSelected: 4,
                         child: StatisticalScreen(),
                       );
+                    case 'pronunciation':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.pronunciation_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 4,
+                        child: PronunciationScreen(),
+                      );
                     default:
                       return _errorPage(settings);
                   }
@@ -225,23 +253,19 @@ class AppRoute {
       return Layout(child: HomeScreen());
     }
   }
+
   static void _redirectTo(BuildContext context, RouteSettings settings, String targetRoute) {
     Logger.Blue.log('_redirectTo targetRoute: $targetRoute ${settings.name}');
     if (settings.name != targetRoute) {
       Logger.Blue.log('REDIRECT GO TO $targetRoute');
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        // Navigator.pushNamed(context, targetRoute);
-        Navigator.pop(
-            context,
-            targetRoute
-        );
+        Navigator.pop(context, targetRoute);
       });
     }
   }
 
   static Widget _errorPage(RouteSettings settings, {bool secure = true}) {
     Logger.Red.log('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}');
-    return Layout(child:Text('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}'));
-
+    return Layout(child: Text('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}'));
   }
 }

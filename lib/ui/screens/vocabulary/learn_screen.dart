@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
 import '../../../core/utils/PlaySoond.dart';
@@ -10,6 +11,8 @@ import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:flip_card/flip_card.dart';
+
+import '../../widget/elements/LevelChart.dart';
 
 
 class LearnScreen extends StatefulWidget {
@@ -74,6 +77,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                       ),
                     ),
                   ),
+
                   AnimatedBuilder(
                     animation: _scaleAnimation,
                     builder: (context, child) {
@@ -145,7 +149,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                         ),
                                         SizedBox(height: 30),
                                         PlaySoond(
-                                          stringVocabulaire: data[numItemVocabulary]['GUID'],
+                                          guidVocabulaire: data[numItemVocabulary]['GUID'],
                                           buttonColor: Colors.green,
                                           sizeButton: 70,
                                         ).buttonPlay(),

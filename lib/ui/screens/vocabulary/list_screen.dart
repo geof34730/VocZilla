@@ -205,7 +205,7 @@ class VocabularyDataSource extends DataTableSource {
             child:Padding(
               padding: EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
               child: PlaySoond(
-                stringVocabulaire: vocabulaire['GUID'],
+                guidVocabulaire: vocabulaire['GUID'],
                 buttonColor: Colors.green,
               ).buttonPlay(),
             ),

@@ -73,6 +73,10 @@ dependencies:
   #flip_card: ^0.7.0
   flip_card:
     path: lib/packagesLocale/flip_card
+  speech_to_text: ^7.0.0
+  permission_handler: ^12.0.0+1
+  connectivity_plus: ^6.1.4
+  in_app_update: ^4.2.3
 
 
 flutter_launcher_icons:
