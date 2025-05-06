@@ -29,9 +29,6 @@ function getAppfileInfo(appfilePath) {
         process.exit(1);
     }
 
-  //  execSync(`export FASTLANE_PASSWORD="XXXXX"`, { stdio: "inherit" });
- //   execSync(`echo $FASTLANE_PASSWORD`, { stdio: "inherit" });
-
 
     const { appleId, appIdentifier, teamId } = getAppfileInfo(appfilePath);
     const deployInfo = JSON.parse(fs.readFileSync(deployInfoPath, "utf8"));
@@ -67,9 +64,7 @@ function getAppfileInfo(appfilePath) {
 
 
 
-    buildNumber = lastBuildNumber;
 
-        /*
         versionName = versionParts.join('.');
         buildNumber = lastBuildNumber + 1;
     fs.writeFileSync(deployInfoPath, JSON.stringify({ lastVersionName: versionName, lastBuildNumber: buildNumber }, null, 2));
@@ -110,30 +105,18 @@ function getAppfileInfo(appfilePath) {
         { stdio: "inherit" }
     );
 
-*/
+
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
-   // console.log(`fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force`)
 
-    /*
-    const fastlanePassword = process.env.FASTLANE_PASSWORD_ENV;
-
-    if (!fastlanePassword) {
-        console.error("FASTLANE_PASSWORD_ENV is not set in the .env file");
-        process.exit(1);
-    }
-*/
 
 
 
     try {
         const command = `
-            fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}   --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force
+            fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}   --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force --run_precheck_before_submit false
           `;
         console.log(command);
-        //execSync(command, { stdio: "inherit", shell: '/bin/bash' });
         execSync(`echo $FASTLANE_SESSION`, { stdio: "inherit" });
-       // execSync(command, { stdio: "inherit" });
-
         execSync(command, {
             stdio: "inherit",
             env: {
