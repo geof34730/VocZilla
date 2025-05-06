@@ -72,7 +72,6 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                 CustomTextZillaField(
                   ControlerField: customeTextZillaControllerDictation,
                   labelText: context.loc.dictation_label_text_field,
-                  hintText: context.loc.dictation_label_text_field,
                   resulteField: data[randomItemData]['EN'],
                   resultSound: false,
                   voidCallBack: () {

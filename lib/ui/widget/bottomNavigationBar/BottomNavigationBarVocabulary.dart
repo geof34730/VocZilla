@@ -35,30 +35,30 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
             fontSize: 12,
           ),
           items: <BottomNavigationBarItem>[
-            _buildBottomNavigationBarItem(Icons.school_rounded, context.loc.apprendre_title, 0),
-            _buildBottomNavigationBarItem(Icons.assignment, context.loc.tester_title, 1),
-            _buildBottomNavigationBarItem(Icons.list, context.loc.liste_title, 2),
-            _buildBottomNavigationBarItem(Icons.play_circle, context.loc.dictation_title, 3),
-            _buildBottomNavigationBarItem(Icons.mic, context.loc.pronunciation_title, 4),
-            _buildBottomNavigationBarItem(Icons.bar_chart, context.loc.statistiques_title, 5),
+            _buildBottomNavigationBarItem(Icons.list, context.loc.liste_title, 0),
+            _buildBottomNavigationBarItem(Icons.school_rounded, context.loc.apprendre_title, 1),
+            _buildBottomNavigationBarItem(Icons.play_circle, context.loc.dictation_title, 2),
+            _buildBottomNavigationBarItem(Icons.mic, context.loc.pronunciation_title, 3),
+            _buildBottomNavigationBarItem(Icons.assignment, context.loc.tester_title, 4),
+            //_buildBottomNavigationBarItem(Icons.bar_chart, context.loc.statistiques_title, 5),
           ],
           currentIndex: itemSelected, // Set the initial selected index
           onTap: (value) {
             switch (value) {
               case 0:
-                Navigator.pushReplacementNamed(context, '/vocabulary/learn');
-                break;
-              case 1:
-                Navigator.pushReplacementNamed(context, '/vocabulary/quizz');
-                break;
-              case 2:
                 Navigator.pushReplacementNamed(context, '/vocabulary/list');
                 break;
-              case 3:
+              case 1:
+                Navigator.pushReplacementNamed(context, '/vocabulary/learn');
+                break;
+              case 2:
                 Navigator.pushReplacementNamed(context, '/vocabulary/voicedictation');
                 break;
-              case 4:
+              case 3:
                 Navigator.pushReplacementNamed(context, '/vocabulary/pronunciation');
+                break;
+              case 4:
+                Navigator.pushReplacementNamed(context, '/vocabulary/quizz');
                 break;
               case 5:
                 Navigator.pushReplacementNamed(context, '/vocabulary/statistical');

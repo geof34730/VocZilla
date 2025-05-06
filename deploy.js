@@ -64,15 +64,13 @@ function getAppfileInfo(appfilePath) {
             }
         }
 
-        //versionName = versionParts.join('.');
-        //buildNumber = lastBuildNumber + 1;
-    versionName = lastVersionName
-    buildNumber = lastBuildNumber
+        versionName = versionParts.join('.');
+        buildNumber = lastBuildNumber + 1;
     fs.writeFileSync(deployInfoPath, JSON.stringify({ lastVersionName: versionName, lastBuildNumber: buildNumber }, null, 2));
 
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
- //   execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
-/*
+    execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
+
             console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
             execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -99,15 +97,12 @@ function getAppfileInfo(appfilePath) {
 
             console.log("\n✅ Déploiement Android terminé avec succès !");
 
-*/
 
-/*
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
         { stdio: "inherit" }
     );
-*/
 
 
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
@@ -135,7 +130,7 @@ function getAppfileInfo(appfilePath) {
     console.log("\n✅ Déploiement iOS terminé avec succès !");
 
     // Git operations
-   /* console.log("\n📦 Git operations : Gestion des versions avec Git...");
+    console.log("\n📦 Git operations : Gestion des versions avec Git...");
     try {
         console.log(`\n🔀 git add . et push GIT Main pour la version: ${versionName}...`);
 
@@ -166,7 +161,7 @@ function getAppfileInfo(appfilePath) {
     } catch (error) {
         console.error("❌ Erreur lors des opérations Git :", error);
     }
-*/
+    console.log("\n✅ Opérations Git terminées avec succès !");
 
 
 

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/core/utils/logger.dart';
-import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -32,7 +31,7 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
   bool isCorrect = false;
   late bool refrechRandom = true;
   int randomItemData =0;
-  String VocabularyEnSelected = "";
+  String vocabularyEnSelected = "";
   bool viewResulte = false;
 
   @override
@@ -56,7 +55,6 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
 
   @override
   Widget build(BuildContext context) {
-    var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
         builder: (context, state) {
       if (state is VocabulairesLoading) {
@@ -73,7 +71,7 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
           refrechRandom = false;
           Random random = new Random();
           randomItemData = random.nextInt(data.length);
-          VocabularyEnSelected= data[randomItemData]['EN'];
+          vocabularyEnSelected= data[randomItemData]['EN'];
         }
         return Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -130,7 +128,6 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
                       iconData: Icons.play_arrow,
                       onpressedActionSup: () {
                         setState(() {
-                          print("PlaySoond onpressedActionSup");
                           _stopListening();
                           _stopAnimation();
                           isRecording = false;
@@ -387,7 +384,7 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
     setState(() {
       _lastWords = replaceNumbersWithWords(result.recognizedWords);
       if (result.finalResult) {
-        isCorrect = _lastWords.toLowerCase() == VocabularyEnSelected.toLowerCase();
+        isCorrect = _lastWords.toLowerCase() == vocabularyEnSelected.toLowerCase();
         _stopListening();
         _stopAnimation();
         isRecording = false;

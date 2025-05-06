@@ -29,5 +29,8 @@
     "pronunciation_error4": "Talegjenkjenning er ikke klar.",
     "pronunciation_error5": "Mikrofontillatelse nektet",
     "offline_title": "Frakoblet",
-    "offline_description": "Du har ikke internettforbindelse. Koble til internett for å fortsette."
+    "offline_description": "Du har ikke internettforbindelse. Koble til internett for å fortsette.",
+    "quizz_progression_title": "Min fremgang på denne listen",
+    "quizz_en": "I",
+    "quizz_saisie_in": "Skriv inn oversettelsen i"
 }

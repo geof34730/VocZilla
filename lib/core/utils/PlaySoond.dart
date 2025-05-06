@@ -22,6 +22,7 @@ class PlaySoond {
   });
 
   Widget buttonPlay() {
+    print("PlaySoond buttonPlay ${guidVocabulaire}");
     return Material(
       shape: CircleBorder(),
       color: buttonColor, // Background color of the CircleAvatar

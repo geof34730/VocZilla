@@ -55,26 +55,8 @@ class CardHome extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ElevatedButtonCardHome(
-                        colorIcon: Colors.green,
-                        onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
-                          Navigator.pushNamed(context, '/vocabulary/learn');
-                        },
-                        iconContent: Icons.school_rounded,
-                        context: context,
-                        iconSize: IconSize.bigIcon,
-                      ),
-                      ElevatedButtonCardHome(
-                        colorIcon: Colors.green,
-                        onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
-                          Navigator.pushNamed(context, '/vocabulary/quizz');
-                        },
-                        iconContent: Icons.assignment,
-                        context: context,
-                        iconSize: IconSize.bigIcon,
-                      ),
+
+
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
@@ -82,6 +64,16 @@ class CardHome extends StatelessWidget {
                           Navigator.pushNamed(context, '/vocabulary/list');
                         },
                         iconContent: Icons.list,
+                        context: context,
+                        iconSize: IconSize.bigIcon,
+                      ),
+                      ElevatedButtonCardHome(
+                        colorIcon: Colors.green,
+                        onClickButton: () {
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                          Navigator.pushNamed(context, '/vocabulary/learn');
+                        },
+                        iconContent: Icons.school_rounded,
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
@@ -105,7 +97,16 @@ class CardHome extends StatelessWidget {
                         context: context,
                         iconSize: IconSize.bigIcon,
                       ),
-
+                      ElevatedButtonCardHome(
+                        colorIcon: Colors.green,
+                        onClickButton: () {
+                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                          Navigator.pushNamed(context, '/vocabulary/quizz');
+                        },
+                        iconContent: Icons.assignment,
+                        context: context,
+                        iconSize: IconSize.bigIcon,
+                      ),
                     ],
                   ),
                 ],

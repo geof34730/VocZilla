@@ -7,22 +7,20 @@ import '../../../core/utils/PlaySoond.dart';
 class CustomTextZillaField extends StatefulWidget {
   final TextEditingController ControlerField;
   final String labelText;
-  final String hintText;
   final String resulteField;
   final String GUID;
   final dynamic Function() voidCallBack;
-
-  bool resultSound = true;
+  bool resultSound;
 
   CustomTextZillaField({
 
     required this.ControlerField,
     required this.labelText,
-    required this.hintText,
     required this.resulteField,
     required this.voidCallBack,
-    this.GUID='',
+    this.GUID = "",
     this.resultSound = false,
+
   });
 
   @override
@@ -32,7 +30,7 @@ class CustomTextZillaField extends StatefulWidget {
 class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
   @override
   Widget build(BuildContext context) {
-    final Map mapForPlayer={"titreVerbe":widget.resulteField};
+    //final Map mapForPlayer={"titreVerbe":widget.resulteField};
     return Padding(
         padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.00),
         child: TextFormField(
@@ -45,18 +43,24 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
               setState(() { });
             }
           },
-
+          style: TextStyle(
+            color: Colors.black, // Changez la couleur ici
+          ),
           keyboardType: TextInputType.text,
           decoration: InputDecoration(
               icon: writeContentAndStyleIcon(controllerField: widget.ControlerField, stockValue: widget.resulteField),
               hintText: widget.labelText,
               labelText: widget.labelText,
+              labelStyle: TextStyle(
+                color: Colors.grey // Utilisez la couleur du label ici
+              ),
               contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
               enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 2, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField))),
               focusedBorder: OutlineInputBorder(borderSide: BorderSide(width: 2, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField))),
               disabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(width: 2, color: Colors.green),
                 borderRadius: BorderRadius.circular(5),
+
               ),
               suffixIcon: (widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase()
                   ? (

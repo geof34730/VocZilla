@@ -29,5 +29,8 @@
     "pronunciation_error4": "O reconhecimento de voz não está pronto.",
     "pronunciation_error5": "Permissão de microfone negada",
     "offline_title": "Off-line",
-    "offline_description": "Você não tem conexão com a internet. Conecte-se à internet para continuar."
+    "offline_description": "Você não tem conexão com a internet. Conecte-se à internet para continuar.",
+    "quizz_progression_title": "Meu progresso nesta lista",
+    "quizz_en": "Em",
+    "quizz_saisie_in": "Digite a tradução em"
 }

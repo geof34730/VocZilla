@@ -17,7 +17,7 @@
     "button_next": "下列的",
     "error_loading": "加载错误",
     "unknown_error": "未知错误",
-    "no_vocabulary_items_found": "未找到任何词汇条目",
+    "no_vocabulary_items_found": "未找到任何词汇",
     "pronunciation_title": "发音",
     "pronunciation_success": "好极了！",
     "pronunciation_error": "嗯，不太对。再试一次。",
@@ -29,5 +29,8 @@
     "pronunciation_error4": "语音识别尚未准备好。",
     "pronunciation_error5": "麦克风权限被拒绝",
     "offline_title": "离线",
-    "offline_description": "您没有互联网连接。请连接到互联网以继续。"
+    "offline_description": "您没有互联网连接。请连接到互联网以继续。",
+    "quizz_progression_title": "我在此列表上的进展",
+    "quizz_en": "在",
+    "quizz_saisie_in": "输入翻译"
 }

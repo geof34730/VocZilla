@@ -192,47 +192,49 @@ class AppRoute {
                   }
 
                   switch (uri.pathSegments[1]) {
-                    case 'learn':
-                      return Layout(
-                        titleScreen: "$title : ${context.loc.apprendre_title}",
-                        showBottomNavigationBar: true,
-                        itemSelected: 0,
-                        child: LearnScreen(),
-                      );
-                    case 'quizz':
-                      return Layout(
-                        titleScreen: "$title : ${context.loc.tester_title}",
-                        showBottomNavigationBar: true,
-                        itemSelected: 1,
-                        child: QuizzScreen(),
-                      );
+
+
                     case 'list':
                       return Layout(
                         titleScreen: "$title : ${context.loc.liste_title}",
                         showBottomNavigationBar: true,
-                        itemSelected: 2,
+                        itemSelected: 0,
                         child: ListScreen(),
+                      );
+                    case 'learn':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.apprendre_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 1,
+                        child: LearnScreen(),
                       );
                     case 'voicedictation':
                       return Layout(
                         titleScreen: "$title : ${context.loc.dictation_title}",
                         showBottomNavigationBar: true,
-                        itemSelected: 3,
+                        itemSelected: 2,
                         child: VoiceDictationScreen(),
-                      );
-                    case 'statistical':
-                      return Layout(
-                        titleScreen: "$title : ${context.loc.statistiques_title}",
-                        showBottomNavigationBar: true,
-                        itemSelected: 4,
-                        child: StatisticalScreen(),
                       );
                     case 'pronunciation':
                       return Layout(
                         titleScreen: "$title : ${context.loc.pronunciation_title}",
                         showBottomNavigationBar: true,
-                        itemSelected: 4,
+                        itemSelected: 3,
                         child: PronunciationScreen(),
+                      );
+                    case 'quizz':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.tester_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 4,
+                        child: QuizzScreen(),
+                      );
+                    case 'statistical':
+                      return Layout(
+                        titleScreen: "$title : ${context.loc.statistiques_title}",
+                        showBottomNavigationBar: true,
+                        itemSelected: 5,
+                        child: StatisticalScreen(),
                       );
                     default:
                       return _errorPage(settings);

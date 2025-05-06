@@ -29,5 +29,8 @@
     "pronunciation_error4": "Il riconoscimento vocale non è pronto.",
     "pronunciation_error5": "Autorizzazione microfono negata",
     "offline_title": "Fuori linea",
-    "offline_description": "Non hai una connessione Internet. Per continuare, connettiti a Internet."
+    "offline_description": "Non hai una connessione Internet. Per continuare, connettiti a Internet.",
+    "quizz_progression_title": "I miei progressi in questa lista",
+    "quizz_en": "In",
+    "quizz_saisie_in": "Inserisci la traduzione in"
 }

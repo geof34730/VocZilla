@@ -29,6 +29,9 @@
     "pronunciation_error4" : "La reconnaissance vocale n'est pas prête.",
     "pronunciation_error5" : "Permission microphone refusée",
     "offline_title" : "Hors ligne",
-    "offline_description" : "Vous n'avez pas de connexion Internet. Veuillez vous connecter à Internet pour continuer."
+    "offline_description" : "Vous n'avez pas de connexion Internet. Veuillez vous connecter à Internet pour continuer.",
+    "quizz_progression_title" : "Ma progression dans cette liste",
+    "quizz_en" : "En",
+    "quizz_saisie_in" : "Saisissez la traduction en"
 
 }

@@ -29,5 +29,8 @@
     "pronunciation_error4": "Voice recognition is not ready.",
     "pronunciation_error5": "Microphone permission denied",
     "offline_title": "Offline",
-    "offline_description": "You do not have an internet connection. Please connect to the internet to continue."
+    "offline_description": "You do not have an internet connection. Please connect to the internet to continue.",
+    "quizz_progression_title": "My progress on this list",
+    "quizz_en": "In",
+    "quizz_saisie_in": "Enter the translation in"
 }

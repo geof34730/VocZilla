@@ -29,5 +29,8 @@
     "pronunciation_error4": "El reconocimiento de voz no está listo.",
     "pronunciation_error5": "Permiso de micrófono denegado",
     "offline_title": "Desconectado",
-    "offline_description": "No tienes conexión a Internet. Conéctese a Internet para continuar."
+    "offline_description": "No tienes conexión a Internet. Conéctese a Internet para continuar.",
+    "quizz_progression_title": "Mi progreso en esta lista",
+    "quizz_en": "En",
+    "quizz_saisie_in": "Introduzca la traducción en"
 }

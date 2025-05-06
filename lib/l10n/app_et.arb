@@ -29,5 +29,8 @@
     "pronunciation_error4": "Häältuvastus pole valmis.",
     "pronunciation_error5": "Mikrofoni luba keelatud",
     "offline_title": "Võrguühenduseta",
-    "offline_description": "Sul pole internetiühendust. Jätkamiseks looge internetiühendus."
+    "offline_description": "Sul pole internetiühendust. Jätkamiseks looge internetiühendus.",
+    "quizz_progression_title": "Minu edusammud selles nimekirjas",
+    "quizz_en": "Sisse",
+    "quizz_saisie_in": "Sisestage tõlge"
 }
