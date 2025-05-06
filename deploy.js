@@ -29,8 +29,8 @@ function getAppfileInfo(appfilePath) {
         process.exit(1);
     }
 
-
-
+    execSync(`export FASTLANE_PASSWORD="XXXXX"`, { stdio: "inherit" });
+    execSync(`echo $FASTLANE_PASSWORD`, { stdio: "inherit" });
 
 
     const { appleId, appIdentifier, teamId } = getAppfileInfo(appfilePath);
@@ -117,7 +117,7 @@ function getAppfileInfo(appfilePath) {
 
     try {
         const command = `
-            fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force 
+            fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force
             echo $FASTLANE_PASSWORD
           `;
         console.log(command);
