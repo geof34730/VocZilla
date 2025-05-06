@@ -108,13 +108,14 @@ function getAppfileInfo(appfilePath) {
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
    // console.log(`fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force`)
 
+    /*
     const fastlanePassword = process.env.FASTLANE_PASSWORD_ENV;
 
     if (!fastlanePassword) {
         console.error("FASTLANE_PASSWORD_ENV is not set in the .env file");
         process.exit(1);
     }
-
+*/
     try {
         const command = `
             fastlane deliver --ipa build/ios/ipa/voczilla.ipa --force --username ${appleId}  --app_identifier ${appIdentifier}   --team_id ${teamId}  --skip_metadata --force
@@ -122,6 +123,7 @@ function getAppfileInfo(appfilePath) {
           `;
         console.log(command);
         //execSync(command, { stdio: "inherit", shell: '/bin/bash' });
+        execSync(`echo $FASTLANE_PASSWORD`, { stdio: "inherit" });
         execSync(command, { stdio: "inherit" });
 
     } catch (error) {
