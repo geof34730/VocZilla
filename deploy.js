@@ -121,7 +121,8 @@ function getAppfileInfo(appfilePath) {
             echo $FASTLANE_PASSWORD
           `;
         console.log(command);
-        execSync(command, { stdio: "inherit", shell: '/bin/bash' });
+        //execSync(command, { stdio: "inherit", shell: '/bin/bash' });
+        execSync(command, { stdio: "inherit" });
 
     } catch (error) {
         console.error("An error occurred:", error.message);
