@@ -2,13 +2,14 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-class VocabulaireServerService {
-  final String baseUrl;
+import '../../core/utils/logger.dart';
+import '../../global.dart';
 
-  VocabulaireServerService({required this.baseUrl});
+class VocabulaireServerService {
+  VocabulaireServerService();
 
   Future<Map<String, dynamic>?> fetchUserData() async {
-    final response = await http.get(Uri.parse('$baseUrl/userData'));
+    final response = await http.get(Uri.parse(serverVocabulaireUserUrl));
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
     }
@@ -16,8 +17,9 @@ class VocabulaireServerService {
   }
 
   Future<void> updateUserData(Map<String, dynamic> userData) async {
+    Logger.Pink.log(userData);
     await http.post(
-      Uri.parse('$baseUrl/userData'),
+      Uri.parse(serverVocabulaireUserUrl),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode(userData),
     );

@@ -10,40 +10,38 @@ import '../../../data/repository/vocabulaire_user_repository.dart'; // Assurez-v
 class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserState> {
   final VocabulaireUserRepository repository;
 
-  VocabulaireUserBloc(this.repository) : super(UserDataInitial()) {
-    on<LoadUserData>(_onLoadUserData);
-    on<UpdateUserData>(_onUpdateUserData);
+  VocabulaireUserBloc(this.repository) : super(VocabulaireUserInitial()) {
+    on<LoadVocabulaireUserData>(_onLoadUserData);
+    on<UpdateVocabulaireUserData>(_onUpdateUserData);
   }
 
-  Future<void> _onLoadUserData(LoadUserData event,
-      Emitter<VocabulaireUserState> emit) async {
-    emit(UserDataLoading());
+  Future<void> _onLoadUserData(
+      LoadVocabulaireUserData event, Emitter<VocabulaireUserState> emit) async {
+    emit(VocabulaireUserLoading());
     try {
-      final userDataJson = await repository.localStorageService.getUserData();
-      if (userDataJson != null) {
-        final userData = VocabulaireUser.fromJson(userDataJson);
-        emit(UserDataLoaded(userData));
+      final userData = await repository.getUserData();
+      if (userData != null) {
+        emit(VocabulaireUserLoaded(userData));
       } else {
-        // Create default user data if none exists
-        final defaultUserData = VocabulaireUser.fromJson({});
-        emit(UserDataLoaded(defaultUserData));
+        emit(VocabulaireUserError('Échec du chargement des données utilisateur'));
       }
     } catch (e) {
-      emit(UserDataError(e.toString()));
+      emit(VocabulaireUserError(e.toString()));
     }
   }
 
-  Future<void> _onUpdateUserData(UpdateUserData event,
-      Emitter<VocabulaireUserState> emit) async {
-        emit(UserDataLoading());
-        try {
-          Logger.Red.log('UpdateUserData in bloc');
-         // await repository.updateUserData(event.userData.toJson());
-         // emit(UserDataLoaded(event.userData));
-        } catch (e) {
-          emit(UserDataError(e.toString()));
-        }
+  Future<void> _onUpdateUserData(
+      UpdateVocabulaireUserData event, Emitter<VocabulaireUserState> emit) async {
+    emit(VocabulaireUserLoading());
+    try {
+      await repository.updateUserData(event.userData);
+      emit(VocabulaireUserLoaded(event.userData));
+    } catch (e) {
+      emit(VocabulaireUserError(e.toString()));
+    }
   }
 }
+
+
 
 

@@ -1,9 +1,11 @@
+import '../../../data/models/vocabulary_user.dart';
+
 abstract class VocabulaireUserEvent {}
 
-class LoadUserData extends VocabulaireUserEvent {}
+class LoadVocabulaireUserData extends VocabulaireUserEvent {}
 
-class UpdateUserData extends VocabulaireUserEvent {
-  final Map<String, dynamic> userData;
+class UpdateVocabulaireUserData extends VocabulaireUserEvent {
+  final VocabulaireUser userData;
 
-  UpdateUserData(this.userData);
+  UpdateVocabulaireUserData(this.userData);
 }

@@ -9,6 +9,7 @@ import '../../../core/utils/PlaySoond.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
+import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/form/CustomTextZillaField.dart';
 
 class VoiceDictationScreen extends StatefulWidget {
@@ -20,6 +21,7 @@ class VoiceDictationScreen extends StatefulWidget {
 
 class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
   late TextEditingController customeTextZillaControllerDictation = TextEditingController();
+  late ButtonNotifier buttonNotifier = ButtonNotifier();
 
   late double screenWidth;
   int numItemVocabulary = 0;
@@ -35,6 +37,8 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
   @override
   void dispose() {
     customeTextZillaControllerDictation.dispose();
+    buttonNotifier.dispose();
+    buttonNotifier.dispose();
     super.dispose();
   }
 
@@ -70,39 +74,44 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                       .buttonPlay(),
                 ),
                 CustomTextZillaField(
+                  ButtonNextNotifier: true,
+                  buttonNotifier:buttonNotifier,
                   ControlerField: customeTextZillaControllerDictation,
                   labelText: context.loc.dictation_label_text_field,
                   resulteField: data[randomItemData]['EN'],
                   resultSound: false,
-                  voidCallBack: () {
-                      WidgetsBinding.instance.addPostFrameCallback((_) {
-                        setState(() {
-                          buttonNext = true;
-                        });
-                      });
+                ),
+                AnimatedBuilder(
+                  animation: buttonNotifier,
+                  builder: (context, child) {
+                    return buttonNotifier.showButton
+                        ?
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: Text(
+                                "${data[randomItemData]['EN']} = ${data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)]}",
+                                style: TextStyle(
+                                  fontSize: 40.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  next();
+                                },
+                                child: Text(context.loc.button_next),
+                              ),
+                            ),
+                          ],
+                        )
+                        : Container();
                   },
                 ),
-                if (buttonNext)...[
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: Text(
-                      "${data[randomItemData]['EN']} = ${data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)]}",
-                      style: TextStyle(
-                        fontSize: 40.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: ElevatedButton(
-                      onPressed: () {
-                       next();
-                      },
-                      child: Text(context.loc.button_next),
-                    ),
-                  ),
-                ]
               ],
             )),
           );
@@ -116,6 +125,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
   }
 
   next() {
+    buttonNotifier.updateButtonState(false);
     setState(() {
       refrechRandom=true;
       buttonNext = false;

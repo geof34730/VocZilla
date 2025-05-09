@@ -4,15 +4,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/data/repository/vocabulaires_repository.dart';
 import 'package:vobzilla/ui/widget/elements/home/CardHome.dart';
 import '../../core/utils/ui.dart';
+import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
 import '../widget/elements/LevelChart.dart';
 import '../widget/elements/home/CardClassementGamer.dart';
+import '../widget/home/HomeListPerso.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   final bool listePerso = true;
-
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +103,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ],
-           if(listePerso)...[
+          if(listePerso)...[
               HorizontalScrollViewCardHome(
                 itemWidth: itemWidthListPerso(context: context, nbList: 3),
                 children: [
@@ -141,6 +142,14 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
            ],
+            ElevatedButton(
+              onPressed: () async {
+                await RepositoryProvider.of<VocabulaireUserRepository>(context).addVocabularyToLearnedList("0c959065-1232-4f96-9561-4e35df717606");
+                // Afficher un message de confirmation
+              },
+              child: Text('Ajouter à la liste des appris'),
+            ),
+            HomelistPerso(),
             Text(
               "De Petit Monstre à Titan",
               style: TextStyle(

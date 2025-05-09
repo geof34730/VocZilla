@@ -6,8 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import '../../../core/utils/languageUtils.dart';
+import '../../../core/utils/logger.dart';
+import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
+import '../../../logic/notifiers/answer_notifier.dart';
 import '../../widget/elements/LevelChart.dart';
 import '../../widget/form/CustomTextZillaField.dart';
 import '../../../logic/notifiers/button_notifier.dart'; // Importez ici
@@ -23,7 +26,6 @@ class _QuizzScreenState extends State<QuizzScreen> {
   late TextEditingController customeTextZillaControllerLearnLocalLanguage = TextEditingController();
   late TextEditingController customeTextZillaControllerLearnEnglishLanguage = TextEditingController();
   late ButtonNotifier buttonNotifier = ButtonNotifier();
-
   late bool refrechRandom = true;
   int randomItemData = 0;
 
@@ -84,20 +86,20 @@ class _QuizzScreenState extends State<QuizzScreen> {
                   child: Column(
                     children: [
                       CustomTextZillaField(
+                        AnswerNotifier: true,
+                        ButtonNextNotifier: true,
+                        buttonNotifier:buttonNotifier,
                         ControlerField: customeTextZillaControllerLearnLocalLanguage,
                         labelText: customeTextZillaControllerLearnLocalLanguage.text == data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)]
                             ? "${context.loc.quizz_en} ${context.loc.language_locale}"
                             : "${context.loc.quizz_saisie_in} ${context.loc.language_locale}",
                         resulteField: data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)],
                         resultSound: false,
-                        voidCallBack: () {
-                          viewButtonNext(
-                            vocabulaireEnglishLanguage: data[randomItemData]['EN'],
-                            vocabulaireLocalLanguage: data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)],
-                          );
-                        },
                       ),
                       CustomTextZillaField(
+                        AnswerNotifier: true,
+                        ButtonNextNotifier: true,
+                        buttonNotifier:buttonNotifier,
                         ControlerField: customeTextZillaControllerLearnEnglishLanguage,
                         labelText: customeTextZillaControllerLearnEnglishLanguage.text == data[randomItemData]["EN"]
                             ? "${context.loc.quizz_en} ${context.loc.language_anglais}"
@@ -105,12 +107,6 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         resulteField: data[randomItemData]['EN'],
                         resultSound: true,
                         GUID: data[randomItemData]['GUID'],
-                        voidCallBack: () {
-                          viewButtonNext(
-                            vocabulaireEnglishLanguage: data[randomItemData]['EN'],
-                            vocabulaireLocalLanguage: data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)],
-                          );
-                        },
                       ),
                     ],
                   ),
@@ -145,6 +141,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
 
   void next() {
+    buttonNotifier.updateButtonState(false);
     setState(() {
       refrechRandom = true;
       customeTextZillaControllerLearnLocalLanguage.clear();
@@ -152,11 +149,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
     });
   }
 
-  void viewButtonNext({required String vocabulaireLocalLanguage, required String vocabulaireEnglishLanguage}) {
-    Future.microtask(() {
-      bool shouldShowButton = customeTextZillaControllerLearnLocalLanguage.text == vocabulaireLocalLanguage && customeTextZillaControllerLearnEnglishLanguage.text == vocabulaireEnglishLanguage;
-      buttonNotifier.updateButtonState(shouldShowButton);
-    });
-  }
+
+
 }
 

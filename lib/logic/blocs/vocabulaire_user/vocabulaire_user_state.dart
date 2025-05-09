@@ -2,18 +2,18 @@ import '../../../data/models/vocabulary_user.dart';
 
 abstract class VocabulaireUserState {}
 
-class UserDataInitial extends VocabulaireUserState {}
+class VocabulaireUserInitial extends VocabulaireUserState {}
 
-class UserDataLoading extends VocabulaireUserState {}
+class VocabulaireUserLoading extends VocabulaireUserState {}
 
-class UserDataLoaded extends VocabulaireUserState {
+class VocabulaireUserLoaded extends VocabulaireUserState {
   final VocabulaireUser userData;
 
-  UserDataLoaded(this.userData);
+  VocabulaireUserLoaded(this.userData);
 }
 
-class UserDataError extends VocabulaireUserState {
+class VocabulaireUserError extends VocabulaireUserState {
   final String message;
 
-  UserDataError(this.message);
+  VocabulaireUserError(this.message);
 }

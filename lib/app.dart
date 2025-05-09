@@ -11,6 +11,9 @@ import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'app_route.dart';
 import 'core/utils/logger.dart';
 import 'data/repository/auth_repository.dart';
+import 'data/repository/vocabulaire_user_repository.dart';
+import 'data/services/localstorage_service.dart';
+import 'data/services/vocabulaires_server_service.dart';
 import 'logic/blocs/BlocStateTracker.dart';
 import 'logic/blocs/auth/auth_bloc.dart';
 import 'logic/blocs/auth/auth_state.dart';
@@ -25,6 +28,8 @@ import 'logic/blocs/update/update_state.dart';
 import 'logic/blocs/user/user_bloc.dart';
 import 'logic/blocs/user/user_event.dart';
 import 'logic/blocs/user/user_state.dart';
+import 'logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'logic/blocs/update/update_bloc.dart'; // Assurez-vous d'importer UpdateBloc
 
@@ -41,6 +46,19 @@ class MyApp extends StatelessWidget {
     return Material(
       child: MultiBlocProvider(
         providers: [
+          RepositoryProvider(
+            create: (context) => LocalStorageService(),
+          ),
+          RepositoryProvider(
+            create: (context) => VocabulaireServerService(),
+          ),
+          RepositoryProvider(
+            create: (context) => VocabulaireUserRepository(
+              localStorageService: RepositoryProvider.of<LocalStorageService>(context),
+              vocabulaireServerService: RepositoryProvider.of<VocabulaireServerService>(context),
+
+            ),
+          ),
           BlocProvider(
             create: (context) => AuthBloc(authRepository: _authRepository)..add(AppStarted()),
           ),
@@ -61,6 +79,11 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider(
             create: (context) => UpdateBloc()..add(CheckForUpdate()), // Ajoutez UpdateBloc ici
+          ),
+          BlocProvider(
+            create: (context) => VocabulaireUserBloc(
+              RepositoryProvider.of<VocabulaireUserRepository>(context),
+            )..add(LoadVocabulaireUserData()),
           ),
         ],
         child: BlocBuilder<LocalizationCubit, Locale>(

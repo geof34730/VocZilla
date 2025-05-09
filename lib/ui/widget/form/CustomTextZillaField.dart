@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../../core/utils/PlaySoond.dart';
+import '../../../logic/notifiers/answer_notifier.dart';
+import '../../../logic/notifiers/button_notifier.dart';
 
 
 class CustomTextZillaField extends StatefulWidget {
@@ -9,17 +11,23 @@ class CustomTextZillaField extends StatefulWidget {
   final String labelText;
   final String resulteField;
   final String GUID;
-  final dynamic Function() voidCallBack;
+  final dynamic Function()? voidCallBack;
   bool resultSound;
+  bool AnswerNotifier;
+  bool ButtonNextNotifier;
+
+  final ButtonNotifier? buttonNotifier;
 
   CustomTextZillaField({
-
     required this.ControlerField,
     required this.labelText,
     required this.resulteField,
-    required this.voidCallBack,
+    this.buttonNotifier,
+    this.voidCallBack,
     this.GUID = "",
     this.resultSound = false,
+    this.AnswerNotifier =false,
+    this.ButtonNextNotifier =false,
 
   });
 
@@ -28,6 +36,18 @@ class CustomTextZillaField extends StatefulWidget {
 }
 
 class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
+
+  @override
+  void initState() {
+    widget.buttonNotifier?.updateButtonState(false);
+    super.initState();
+  }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     //final Map mapForPlayer={"titreVerbe":widget.resulteField};
@@ -41,6 +61,19 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
           onChanged: (value) {
             if (widget.ControlerField.text.length <= widget.resulteField.length) {
               setState(() { });
+            }
+            if(widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase()){
+              if(widget.AnswerNotifier) {
+                AnswerNotifier().markAsAnsweredCorrectly(isAnswerUser: true,
+                    guidVocabulaire: widget.GUID,
+                    context: context);
+              }
+              if(widget.ButtonNextNotifier) {
+                widget.buttonNotifier?.updateButtonState(true);
+              }
+              if(widget.voidCallBack != null){
+                widget.voidCallBack!();
+              }
             }
           },
           style: TextStyle(
@@ -74,6 +107,19 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
                 icon: Icon(Icons.visibility, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField)),
                 onPressed: () {
                   widget.ControlerField.text = widget.resulteField;
+                  if(widget.AnswerNotifier) {
+                    AnswerNotifier().markAsAnsweredCorrectly(
+                        isAnswerUser: false,
+                        guidVocabulaire: widget.GUID,
+                        context: context);
+                  }
+                  if(widget.ButtonNextNotifier) {
+                    widget.buttonNotifier?.updateButtonState(true);
+                  }
+
+                  if(widget.voidCallBack != null){
+                    widget.voidCallBack!();
+                  }
                   setState(() {
                     //widget.updateStateParent();
                   });
@@ -124,7 +170,6 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
         text: stockValue,
         selection: TextSelection.collapsed(offset: stockValue.length),
       );
-      widget.voidCallBack();
       return const Icon(Icons.check, color: Colors.green);
     } else {
       return const Icon(Icons.question_answer, color: Colors.blue);
