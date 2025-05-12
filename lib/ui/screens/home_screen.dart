@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/data/repository/vocabulaires_repository.dart';
 import 'package:vobzilla/ui/widget/elements/home/CardHome.dart';
+import 'package:vobzilla/ui/widget/statistical/global_statisctical_widget.dart';
 import '../../core/utils/ui.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
@@ -13,7 +14,7 @@ import '../widget/home/HomeListPerso.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-  final bool listePerso = true;
+  final bool listePerso = false;
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +28,8 @@ class HomeScreen extends StatelessWidget {
                     fontSize: 25,
                     fontFamily: GoogleFonts.titanOne().fontFamily)
             ),
-            Container(
-              width:double.infinity,
-              child: LevelChart(
-                level: 27,
-                levelMax: 100,
-              ),
-            ),
-            Row(
+          GlobalStatisticalWidget(),
+          Row(
               children: [
                 Text(
                     "Mes listes persos",
@@ -142,14 +137,8 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
            ],
-            ElevatedButton(
-              onPressed: () async {
-                await RepositoryProvider.of<VocabulaireUserRepository>(context).addVocabularyToLearnedList("0c959065-1232-4f96-9561-4e35df717606");
-                // Afficher un message de confirmation
-              },
-              child: Text('Ajouter à la liste des appris'),
-            ),
-            HomelistPerso(),
+
+          //  HomelistPerso(),
             Text(
               "De Petit Monstre à Titan",
               style: TextStyle(

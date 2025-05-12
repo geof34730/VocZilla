@@ -30,6 +30,7 @@ import 'logic/blocs/user/user_event.dart';
 import 'logic/blocs/user/user_state.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
+import 'logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'logic/blocs/update/update_bloc.dart'; // Assurez-vous d'importer UpdateBloc
 
@@ -53,11 +54,7 @@ class MyApp extends StatelessWidget {
             create: (context) => VocabulaireServerService(),
           ),
           RepositoryProvider(
-            create: (context) => VocabulaireUserRepository(
-              localStorageService: RepositoryProvider.of<LocalStorageService>(context),
-              vocabulaireServerService: RepositoryProvider.of<VocabulaireServerService>(context),
-
-            ),
+            create: (context) => VocabulaireUserRepository(context: context),
           ),
           BlocProvider(
             create: (context) => AuthBloc(authRepository: _authRepository)..add(AppStarted()),
@@ -81,9 +78,7 @@ class MyApp extends StatelessWidget {
             create: (context) => UpdateBloc()..add(CheckForUpdate()), // Ajoutez UpdateBloc ici
           ),
           BlocProvider(
-            create: (context) => VocabulaireUserBloc(
-              RepositoryProvider.of<VocabulaireUserRepository>(context),
-            )..add(LoadVocabulaireUserData()),
+            create: (context) => VocabulaireUserBloc()..add(CheckVocabulaireUserStatus()),
           ),
         ],
         child: BlocBuilder<LocalizationCubit, Locale>(
@@ -138,6 +133,13 @@ class MyApp extends StatelessWidget {
                             BlocStateTracker().updateState('VocabulairesBloc', state);
                           },
                         ),
+                        BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
+                          listener: (context, state) {
+                            Logger.Yellow.log("VocabulairesUserBloc state: $state");
+                            BlocStateTracker().updateState('VocabulaireUserBloc', state);
+                          },
+                        ),
+
                       ],
                       child: child ?? Container(),
                     );

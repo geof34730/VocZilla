@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/utils/PlaySoond.dart';
+import '../../../data/repository/vocabulaire_user_repository.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/notifiers/answer_notifier.dart';
 import '../../../logic/notifiers/button_notifier.dart';
 
@@ -24,7 +27,7 @@ class CustomTextZillaField extends StatefulWidget {
     required this.resulteField,
     this.buttonNotifier,
     this.voidCallBack,
-    this.GUID = "",
+    required this.GUID ,
     this.resultSound = false,
     this.AnswerNotifier =false,
     this.ButtonNextNotifier =false,
@@ -64,9 +67,14 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
             }
             if(widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase()){
               if(widget.AnswerNotifier) {
-                AnswerNotifier().markAsAnsweredCorrectly(isAnswerUser: true,
-                    guidVocabulaire: widget.GUID,
-                    context: context);
+                AnswerNotifier(
+                    context
+                ).markAsAnsweredCorrectly(
+                  isAnswerUser: true,
+                  guidVocabulaire: widget.GUID,
+                );
+
+
               }
               if(widget.ButtonNextNotifier) {
                 widget.buttonNotifier?.updateButtonState(true);
@@ -108,10 +116,12 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
                 onPressed: () {
                   widget.ControlerField.text = widget.resulteField;
                   if(widget.AnswerNotifier) {
-                    AnswerNotifier().markAsAnsweredCorrectly(
+                    AnswerNotifier(
+                        context
+                      ).markAsAnsweredCorrectly(
                         isAnswerUser: false,
                         guidVocabulaire: widget.GUID,
-                        context: context);
+                      );
                   }
                   if(widget.ButtonNextNotifier) {
                     widget.buttonNotifier?.updateButtonState(true);

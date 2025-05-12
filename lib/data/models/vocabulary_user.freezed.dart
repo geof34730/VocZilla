@@ -21,6 +21,8 @@ mixin _$VocabulaireUser {
   List<ListTheme> get listTheme;
   @JsonKey(name: "ListGuidVocabularyLearned")
   List<String> get listGuidVocabularyLearned;
+  @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+  int get countVocabulaireAll;
 
   /// Create a copy of VocabulaireUser
   /// with the given fields replaced by the non-null parameter values.
@@ -41,7 +43,9 @@ mixin _$VocabulaireUser {
             const DeepCollectionEquality().equals(other.listPerso, listPerso) &&
             const DeepCollectionEquality().equals(other.listTheme, listTheme) &&
             const DeepCollectionEquality().equals(
-                other.listGuidVocabularyLearned, listGuidVocabularyLearned));
+                other.listGuidVocabularyLearned, listGuidVocabularyLearned) &&
+            (identical(other.countVocabulaireAll, countVocabulaireAll) ||
+                other.countVocabulaireAll == countVocabulaireAll));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -50,11 +54,12 @@ mixin _$VocabulaireUser {
       runtimeType,
       const DeepCollectionEquality().hash(listPerso),
       const DeepCollectionEquality().hash(listTheme),
-      const DeepCollectionEquality().hash(listGuidVocabularyLearned));
+      const DeepCollectionEquality().hash(listGuidVocabularyLearned),
+      countVocabulaireAll);
 
   @override
   String toString() {
-    return 'VocabulaireUser(listPerso: $listPerso, listTheme: $listTheme, listGuidVocabularyLearned: $listGuidVocabularyLearned)';
+    return 'VocabulaireUser(listPerso: $listPerso, listTheme: $listTheme, listGuidVocabularyLearned: $listGuidVocabularyLearned, countVocabulaireAll: $countVocabulaireAll)';
   }
 }
 
@@ -68,7 +73,9 @@ abstract mixin class $VocabulaireUserCopyWith<$Res> {
       {@JsonKey(name: "ListPerso") List<ListPerso> listPerso,
       @JsonKey(name: "ListTheme") List<ListTheme> listTheme,
       @JsonKey(name: "ListGuidVocabularyLearned")
-      List<String> listGuidVocabularyLearned});
+      List<String> listGuidVocabularyLearned,
+      @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+      int countVocabulaireAll});
 }
 
 /// @nodoc
@@ -87,6 +94,7 @@ class _$VocabulaireUserCopyWithImpl<$Res>
     Object? listPerso = null,
     Object? listTheme = null,
     Object? listGuidVocabularyLearned = null,
+    Object? countVocabulaireAll = null,
   }) {
     return _then(_self.copyWith(
       listPerso: null == listPerso
@@ -101,6 +109,10 @@ class _$VocabulaireUserCopyWithImpl<$Res>
           ? _self.listGuidVocabularyLearned
           : listGuidVocabularyLearned // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      countVocabulaireAll: null == countVocabulaireAll
+          ? _self.countVocabulaireAll
+          : countVocabulaireAll // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -112,7 +124,9 @@ class _VocabulaireUser implements VocabulaireUser {
       {@JsonKey(name: "ListPerso") required final List<ListPerso> listPerso,
       @JsonKey(name: "ListTheme") required final List<ListTheme> listTheme,
       @JsonKey(name: "ListGuidVocabularyLearned")
-      required final List<String> listGuidVocabularyLearned})
+      required final List<String> listGuidVocabularyLearned,
+      @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+      required this.countVocabulaireAll})
       : _listPerso = listPerso,
         _listTheme = listTheme,
         _listGuidVocabularyLearned = listGuidVocabularyLearned;
@@ -147,6 +161,10 @@ class _VocabulaireUser implements VocabulaireUser {
     return EqualUnmodifiableListView(_listGuidVocabularyLearned);
   }
 
+  @override
+  @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+  final int countVocabulaireAll;
+
   /// Create a copy of VocabulaireUser
   /// with the given fields replaced by the non-null parameter values.
   @override
@@ -172,7 +190,9 @@ class _VocabulaireUser implements VocabulaireUser {
             const DeepCollectionEquality()
                 .equals(other._listTheme, _listTheme) &&
             const DeepCollectionEquality().equals(
-                other._listGuidVocabularyLearned, _listGuidVocabularyLearned));
+                other._listGuidVocabularyLearned, _listGuidVocabularyLearned) &&
+            (identical(other.countVocabulaireAll, countVocabulaireAll) ||
+                other.countVocabulaireAll == countVocabulaireAll));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -181,11 +201,12 @@ class _VocabulaireUser implements VocabulaireUser {
       runtimeType,
       const DeepCollectionEquality().hash(_listPerso),
       const DeepCollectionEquality().hash(_listTheme),
-      const DeepCollectionEquality().hash(_listGuidVocabularyLearned));
+      const DeepCollectionEquality().hash(_listGuidVocabularyLearned),
+      countVocabulaireAll);
 
   @override
   String toString() {
-    return 'VocabulaireUser(listPerso: $listPerso, listTheme: $listTheme, listGuidVocabularyLearned: $listGuidVocabularyLearned)';
+    return 'VocabulaireUser(listPerso: $listPerso, listTheme: $listTheme, listGuidVocabularyLearned: $listGuidVocabularyLearned, countVocabulaireAll: $countVocabulaireAll)';
   }
 }
 
@@ -201,7 +222,9 @@ abstract mixin class _$VocabulaireUserCopyWith<$Res>
       {@JsonKey(name: "ListPerso") List<ListPerso> listPerso,
       @JsonKey(name: "ListTheme") List<ListTheme> listTheme,
       @JsonKey(name: "ListGuidVocabularyLearned")
-      List<String> listGuidVocabularyLearned});
+      List<String> listGuidVocabularyLearned,
+      @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+      int countVocabulaireAll});
 }
 
 /// @nodoc
@@ -220,6 +243,7 @@ class __$VocabulaireUserCopyWithImpl<$Res>
     Object? listPerso = null,
     Object? listTheme = null,
     Object? listGuidVocabularyLearned = null,
+    Object? countVocabulaireAll = null,
   }) {
     return _then(_VocabulaireUser(
       listPerso: null == listPerso
@@ -234,6 +258,10 @@ class __$VocabulaireUserCopyWithImpl<$Res>
           ? _self._listGuidVocabularyLearned
           : listGuidVocabularyLearned // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      countVocabulaireAll: null == countVocabulaireAll
+          ? _self.countVocabulaireAll
+          : countVocabulaireAll // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }

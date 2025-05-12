@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../../theme/appColors.dart';
-import '../../enum.dart';
-import 'ElevatedButtonCardHome.dart';
 import '../LevelChart.dart';
 
 class CardClassementGamer extends StatelessWidget {
@@ -94,7 +90,7 @@ class CardClassementGamer extends StatelessWidget {
                 Container(
                   width:double.infinity,
                   child: LevelChart(
-                      level: 27,
+                      level: 20,
                       levelMax: 100,
                       barColorProgress: Colors.white
                   ),

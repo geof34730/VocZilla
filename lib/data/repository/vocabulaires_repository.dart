@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vobzilla/data/models/vocabulary_user.dart';
 
 import '../../core/utils/logger.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
@@ -26,6 +27,8 @@ class VocabulairesRepository {
     Logger.Pink.log(dataSliceWithTitle);
     context.read<VocabulairesBloc>().add(LoadVocabulairesData(dataSliceWithTitle));
   }
+
+
 
 
   goVocabulairesThemes() {}

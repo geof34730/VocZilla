@@ -10,6 +10,8 @@ import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 class HomelistPerso extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return Text('Home List Perso');
+    /*
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
       builder: (context, state) {
         if (state is VocabulaireUserLoading) {
@@ -35,7 +37,7 @@ class HomelistPerso extends StatelessWidget {
         }
         return Center(child: Text('Aucune donnée disponible'));
       },
-    );
+    );*/
   }
 }
 

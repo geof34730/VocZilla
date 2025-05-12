@@ -1,11 +1,8 @@
-import '../../../data/models/vocabulary_user.dart';
+import 'package:vobzilla/core/utils/logger.dart';
 
 abstract class VocabulaireUserEvent {}
 
-class LoadVocabulaireUserData extends VocabulaireUserEvent {}
+class CheckVocabulaireUserStatus extends VocabulaireUserEvent {
 
-class UpdateVocabulaireUserData extends VocabulaireUserEvent {
-  final VocabulaireUser userData;
 
-  UpdateVocabulaireUserData(this.userData);
 }

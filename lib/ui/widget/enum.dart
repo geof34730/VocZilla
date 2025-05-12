@@ -1,4 +1,0 @@
-enum IconSize {
-  bigIcon,
-  smallIcon,
-}

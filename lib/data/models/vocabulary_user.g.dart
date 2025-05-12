@@ -18,6 +18,7 @@ _VocabulaireUser _$VocabulaireUserFromJson(Map<String, dynamic> json) =>
           (json['ListGuidVocabularyLearned'] as List<dynamic>)
               .map((e) => e as String)
               .toList(),
+      countVocabulaireAll: (json['CountVocabulaireAll'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$VocabulaireUserToJson(_VocabulaireUser instance) =>
@@ -25,6 +26,7 @@ Map<String, dynamic> _$VocabulaireUserToJson(_VocabulaireUser instance) =>
       'ListPerso': instance.listPerso,
       'ListTheme': instance.listTheme,
       'ListGuidVocabularyLearned': instance.listGuidVocabularyLearned,
+      'CountVocabulaireAll': instance.countVocabulaireAll,
     };
 
 _ListPerso _$ListPersoFromJson(Map<String, dynamic> json) => _ListPerso(

@@ -73,6 +73,12 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                           iconData: Icons.play_arrow)
                       .buttonPlay(),
                 ),
+
+
+
+
+
+
                 CustomTextZillaField(
                   ButtonNextNotifier: true,
                   buttonNotifier:buttonNotifier,
@@ -80,6 +86,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                   labelText: context.loc.dictation_label_text_field,
                   resulteField: data[randomItemData]['EN'],
                   resultSound: false,
+                  GUID: data[randomItemData]['GUID'],
                 ),
                 AnimatedBuilder(
                   animation: buttonNotifier,

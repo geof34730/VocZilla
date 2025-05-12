@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../core/utils/enum.dart';
 import '../../../../data/repository/vocabulaires_repository.dart';
 import '../../../theme/appColors.dart';
-import '../../enum.dart';
+
+import '../../statistical/card_home_statisctical_widget.dart';
 import 'ElevatedButtonCardHome.dart';
 import '../LevelChart.dart';
 
@@ -55,8 +57,6 @@ class CardHome extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-
-
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
@@ -111,16 +111,14 @@ class CardHome extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                width: widthWidget * 0.80,
-                child: LevelChart(
-                  level: 65,
-                  levelMax: 100,
-                  imageCursor: false,
-                  padding: paddingLevelBar,
-                  barColorProgress: backgroundColor == Colors.green ? Colors.white : Colors.green,
-                  barColorLeft: backgroundColor == Colors.white ? Colors.orange : Colors.white,
-                ),
+
+              CardHomeStatisticalWidget(
+                widthWidget: widthWidget,
+                vocabulaireBegin: vocabulaireBegin,
+                vocabulaireEnd: vocabulaireEnd,
+                barColorProgress: backgroundColor == Colors.green ? Colors.white : Colors.green,
+                barColorLeft: backgroundColor == Colors.white ? Colors.orange : Colors.white,
+                paddingLevelBar: paddingLevelBar,
               ),
               if (editMode) ...[
                 Row(

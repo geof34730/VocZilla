@@ -5,3 +5,4 @@ class LoadVocabulairesData extends VocabulairesEvent {
 
   LoadVocabulairesData(this.data);
 }
+
