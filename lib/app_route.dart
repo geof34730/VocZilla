@@ -186,14 +186,11 @@ class AppRoute {
                   String title = "Titre par défaut"; // Titre de secours
 
                   // Supposons que vocabulairesState.data soit une Map et contienne une clé 'title'
-                  if (vocabulairesState.data['title'] != null) {
-                    final titleData = vocabulairesState.data['title'];
+                  if (vocabulairesState.data['titleList'] != null) {
+                    final titleData = vocabulairesState.data['titleList'];
                     title = titleData.toString();
                   }
-
                   switch (uri.pathSegments[1]) {
-
-
                     case 'list':
                       return Layout(
                         titleScreen: "$title : ${context.loc.liste_title}",

@@ -70,7 +70,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                          _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/learn');
                         },
                         iconContent: Icons.school_rounded,
@@ -100,7 +100,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                          _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/quizz');
                         },
                         iconContent: Icons.assignment,

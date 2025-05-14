@@ -5,9 +5,11 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
+import 'package:vobzilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
+import '../../../data/repository/vocabulaires_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/notifiers/answer_notifier.dart';
@@ -29,7 +31,6 @@ class _QuizzScreenState extends State<QuizzScreen> {
   late ButtonNotifier buttonNotifier = ButtonNotifier();
   late bool refrechRandom = true;
   int randomItemData = 0;
-  int? _vocabulaireConnu=0;
   @override
   void dispose() {
     customeTextZillaControllerLearnLocalLanguage.dispose();
@@ -41,6 +42,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final _vocabulairesRepository=VocabulairesRepository(context:context);
     return Column(
       children: [
         BlocBuilder<VocabulairesBloc, VocabulairesState>(
@@ -51,125 +53,75 @@ class _QuizzScreenState extends State<QuizzScreen> {
             if (state.data.isEmpty) {
               return Center(child: Text(context.loc.no_vocabulary_items_found));
             }
-            final List<dynamic> dataStatetisctical = state.data["vocabulaireList"] as List<dynamic>;
+            final List<dynamic> data = state.data["vocabulaireList"] as List<dynamic>;
+            bool isNotLearned = state.data["isVocabularyNotLearned"] as bool? ?? true;
+            int _vocabulaireConnu = isNotLearned ? 0 : 1;
+            if (refrechRandom) {
+              refrechRandom = false;
+              if (data.isNotEmpty) {
+                Random random = new Random();
+                randomItemData = random.nextInt(data.length);
+                switch (Random().nextInt(2)) {
+                  case 0:
+                    {
+                      customeTextZillaControllerLearnLocalLanguage.text =
+                      data[randomItemData][LanguageUtils().getSmallCodeLanguage(
+                          context: context)];
+                    }
+                    break;
+                  case 1:
+                    {
+                      customeTextZillaControllerLearnEnglishLanguage.text =
+                      data[randomItemData]['EN'];
+                    }
+                    break;
+                }
+              }
+            }
             return Column(
               children: [
-                GlobalStatisticalWidget(userDataSpecificList: dataStatetisctical),
+                GlobalStatisticalWidget(userDataSpecificList: data),
                 Text(context.loc.quizz_progression_title,
                     style: TextStyle(
                         fontSize: 12,
                         fontFamily: 'roboto'
                     )
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        _vocabulaireConnu = 0;
-                        reset();
-                      },
-                      child: Row(
-                        children: [
-                          Radio<int>(
-                            value: 0,
-                            groupValue: _vocabulaireConnu,
-                            onChanged: (int? value) {
-                              setState(() {
-                                _vocabulaireConnu = value;
-                              });
-                            },
-                          ),
-                          Text("vocabulaire encore à apprendre"),
-                        ],
-                      ),
-                    ),
-                    SizedBox(width: 16),
-                    InkWell(
-                      onTap: () {
-                        _vocabulaireConnu = 1;
-                        reset();
-                      },
-                      child: Row(
-                        children: [
-                          Radio<int>(
-                            value: 1,
-                            groupValue: _vocabulaireConnu,
-                            onChanged: (int? value) {
-                              print(value);
-                              setState(() {
-                                _vocabulaireConnu = value;
-                              });
-                            },
-                          ),
-                          Text("tous les vocabulaires"),
-                        ],
-                      ),
-                    ),
-                  ],
+                RadioChoiceVocabularyLearnedOrNot(
+                  state: state,
+                  vocabulaireConnu: _vocabulaireConnu,
+                  vocabulairesRepository: _vocabulairesRepository,
+
                 ),
-                FutureBuilder(
-                    future: (_vocabulaireConnu == 0
-                        ? VocabulaireUserRepository(context: context).getDataNotLearned(
-                        vocabulaireSpecificList: state.data["vocabulaireList"] as List<dynamic>)
-                        : getFutureData(state.data["vocabulaireList"] as List<dynamic>)
-                    ),
-                  builder: (context, userDataSnapshot) {
-                    if (userDataSnapshot.connectionState == ConnectionState.waiting) {
-                      return CircularProgressIndicator(); // Show a loading indicator while waiting
-                    } else if (userDataSnapshot.hasError) {
-                      return Text('Erreur affichage Statistique'); // Handle error
-                    } else if (userDataSnapshot.hasData) {
-                      final data = userDataSnapshot.data;
-                      if (data!.isEmpty) {
-                        return _vocabulaireConnu==0 ?
-                          Column(
-                             children: [
-                               Padding(
-                                  padding:EdgeInsets.only(top: 40),
-                                  child:Text("✅ Bravo !!!",
-                                    style: TextStyle(
-                                    color:Colors.green,
-                                    fontSize: 35,
-                                    fontWeight: FontWeight.bold
-                                    ),
-                                  )
-                               ),
-                                Text("vous avez terminé d'apprendre cette Liste",
-                                  style: TextStyle(
-                                      color:Colors.green,
-                                      fontSize: 20,
+                if (data.isEmpty)...[
+                  _vocabulaireConnu==0 ?
+                  Column(
+                      children: [
+                        Padding(
+                            padding:EdgeInsets.only(top: 40),
+                            child:Text("✅ Bravo !!!",
+                              style: TextStyle(
+                                  color:Colors.green,
+                                  fontSize: 35,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            )
+                        ),
+                        Text("vous avez terminé d'apprendre cette Liste",
+                          style: TextStyle(
+                            color:Colors.green,
+                            fontSize: 20,
 
-                                  ),
+                          ),
 
-                                )
-                             ]
-                          )
-                          : Center(
-                              child: Text(context.loc.no_vocabulary_items_found)
-                          );
-                      }
-                      if (refrechRandom) {
-                        refrechRandom = false;
-                        Random random = new Random();
-                        randomItemData = random.nextInt(data.length);
-                        switch (Random().nextInt(2)) {
-                          case 0:
-                            {
-                              customeTextZillaControllerLearnLocalLanguage.text =
-                              data[randomItemData][LanguageUtils()
-                                  .getSmallCodeLanguage(context: context)];
-                            }
-                            break;
-                          case 1:
-                            {
-                              customeTextZillaControllerLearnEnglishLanguage.text =
-                              data[randomItemData]['EN'];
-                            }
-                            break;
-                        }
-                      }
-                      return SingleChildScrollView(
+                        )
+                      ]
+                  )
+                      : Center(child: Text(context.loc.no_vocabulary_items_found)
+                  )
+                ],
+                  if (data.isNotEmpty)...[
+                       SingleChildScrollView(
                         child: Column(
                           children: [
                             Padding(
@@ -219,6 +171,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                   padding: const EdgeInsets.only(top: 20),
                                   child: ElevatedButton(
                                     onPressed: () {
+                                      _vocabulairesRepository.goVocabulairesTop(
+                                          vocabulaireBegin:  state.data["vocabulaireBegin"] as int,
+                                          vocabulaireEnd: state.data["vocabulaireEnd"] as int,
+                                          titleList: state.data["titleList"] as String,
+                                          isVocabularyNotLearned:_vocabulaireConnu==0 ? true : false,
+                                      );
                                       next();
                                     },
                                     child: Text(context.loc.button_next),
@@ -229,15 +187,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                             ),
                           ],
                         ),
-                      );
-                    } else if (state is VocabulairesError) {
-                      return Center(child: Text(context.loc.error_loading));
-                    } else {
-                      return Center(child: Text(context.loc.unknown_error)); // fallback
-                    }
-                  }
-               )
-           ],
+                      )
+                ]
+             ],
            );
           } else if (state is VocabulairesError) {
             return Center(child: Text(context.loc.error_loading));
@@ -252,6 +204,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
 
   void next() {
+
+
     buttonNotifier.updateButtonState(false);
     reset();
   }
@@ -264,9 +218,6 @@ class _QuizzScreenState extends State<QuizzScreen> {
     });
   }
 
-  Future<dynamic> getFutureData(dynamic data) async {
-    return data;
-  }
 
 
 

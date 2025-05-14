@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/data/models/vocabulary_user.dart';
+import 'package:vobzilla/data/repository/vocabulaire_user_repository.dart';
 
 import '../../core/utils/logger.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
@@ -13,23 +14,27 @@ class VocabulairesRepository {
   VocabulairesRepository({required this.context});
 
   final VocabulaireService _vocabulaireService = VocabulaireService();
-   goVocabulairesTop({required int vocabulaireBegin, required int vocabulaireEnd, required String titleList}) async {
-    Logger.Pink.log("goVocabulaires DATA");
+   goVocabulairesTop({required int vocabulaireBegin, required int vocabulaireEnd, required String titleList,isVocabularyNotLearned=false}) async {
     var data =  await getDataTop();
     // Tu crées le bloc
     final List<dynamic> dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
-    var dataSliceWithTitle = {
-        "title": titleList,
-        "vocabulaireList": dataSlice,
-      };
-    final bloc = VocabulairesBloc();
+    final Map<String, Object> dataSliceWithTitle = {
+      "titleList": titleList,
+      "vocabulaireList": dataSlice,
+      "dataAllLength": dataSlice.length,
+      "vocabulaireBegin" : vocabulaireBegin,
+      "vocabulaireEnd" :vocabulaireEnd,
+      "isVocabularyNotLearned":isVocabularyNotLearned
+    };
+    if(isVocabularyNotLearned) {
+      final dataSliceNotLearned = await VocabulaireUserRepository(context: context).getDataNotLearned(vocabulaireSpecificList: dataSliceWithTitle["vocabulaireList"] as List<dynamic>,);
+      dataSliceWithTitle["vocabulaireList"] = dataSliceNotLearned;
+      Logger.Pink.log("dataSliceNotLearned: $dataSliceWithTitle");
+    }
+
     // Tu lui passes les data déjà chargées
-    Logger.Pink.log(dataSliceWithTitle);
     context.read<VocabulairesBloc>().add(LoadVocabulairesData(dataSliceWithTitle));
   }
-
-
-
 
   goVocabulairesThemes() {}
 
