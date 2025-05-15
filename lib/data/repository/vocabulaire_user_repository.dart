@@ -157,20 +157,21 @@ class VocabulaireUserRepository {
         .toList();
   }
 
-  Future<StatisticalLength> getVocabulairesStatisticalLengthData({ int? vocabulaireBegin,  int? vocabulaireEnd, List<dynamic>? userDataSpecificList}) async {
+  Future<StatisticalLength> getVocabulairesStatisticalLengthData({ int? vocabulaireBegin,  int? vocabulaireEnd}) async {
     var data =[];
-    if(userDataSpecificList != null){
-       data=userDataSpecificList;
-    }
-    else {
-       data = await VocabulairesRepository(context: context).getDataTop(); // Ensure this is awaited
-    }
+    data = await VocabulairesRepository(context: context).getDataTop(); // Ensure this is awaited
+
     vocabulaireBegin ??= 0;
     vocabulaireEnd ??= data.length;
+
     final List<dynamic> dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
     var vocabDataLearned = await getDataLearned( vocabulaireSpecificList: dataSlice);
     var vocabLearnedCount = vocabDataLearned.length;
     var countVocabulaireAll = dataSlice.length;
+      if(vocabulaireBegin==0) {
+        Logger.Red.log(
+            "vocabulaireBegin : $vocabulaireBegin vocabLearnedCount : $vocabLearnedCount countVocabulaireAll: $countVocabulaireAll");
+      }
     return StatisticalLength(
         vocabLearnedCount: vocabLearnedCount,
         countVocabulaireAll: countVocabulaireAll

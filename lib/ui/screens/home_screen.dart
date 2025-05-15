@@ -181,10 +181,12 @@ class HomeScreen extends StatelessWidget {
                     fontSize: 25,
                     fontFamily: GoogleFonts.titanOne().fontFamily)
             ),
-
+/*
             CardClassementGamer(position: 1),
             CardClassementGamer(position: 2),
             CardClassementGamer(position: 3),
+            */
+            /*
             Text(
                 "Par themes",
                 style: TextStyle(
@@ -225,6 +227,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ]
             ),
+
+
+            */
+
           ]
 
     );

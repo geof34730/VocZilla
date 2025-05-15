@@ -90,7 +90,7 @@ class CardClassementGamer extends StatelessWidget {
                 Container(
                   width:double.infinity,
                   child: LevelChart(
-                      level: 20,
+                      level: 5,
                       levelMax: 100,
                       barColorProgress: Colors.white
                   ),

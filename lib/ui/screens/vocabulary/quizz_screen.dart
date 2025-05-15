@@ -80,7 +80,10 @@ class _QuizzScreenState extends State<QuizzScreen> {
             }
             return Column(
               children: [
-                GlobalStatisticalWidget(userDataSpecificList: data),
+                GlobalStatisticalWidget(
+                  vocabulaireBegin: state.data["vocabulaireBegin"] as int,
+                  vocabulaireEnd: state.data["vocabulaireEnd"] as int,
+                ),
                 Text(context.loc.quizz_progression_title,
                     style: TextStyle(
                         fontSize: 12,
@@ -204,8 +207,6 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
 
   void next() {
-
-
     buttonNotifier.updateButtonState(false);
     reset();
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/utils/logger.dart';
+
 class LevelChart extends StatefulWidget {
   final int levelMax;
   final int level;
@@ -31,7 +33,7 @@ class _LevelChartState extends State<LevelChart> {
         child:LayoutBuilder(builder: (context, constraints) {
           double widthWidget = constraints.maxWidth; // Obtenez la largeur disponible
           final ratioSize = widthWidget / MediaQuery.of(context).size.width;
-          double positionZilla= ((widget.level>94) ? (94/ widget.levelMax) : (widget.level / widget.levelMax)) * widthWidget -((40 * ratioSize) * ratioSize).round();
+          double positionZilla= ((percentageProgression>94) ? (94/ 100) : (percentageProgression / 100)) * widthWidget -((40 * ratioSize) * ratioSize).round();
           return Container(
               width: widthWidget,
               height: heightContainer * ratioSize,
@@ -51,7 +53,7 @@ class _LevelChartState extends State<LevelChart> {
                             top:widget.imageCursor ? 0 : 1*ratioSize
                         ),
                         child:Text(
-                          (widget.level>25 ? '' : percentageProgression.toStringAsFixed(2) + "% "),
+                          (percentageProgression>25 ? '' : percentageProgression.toStringAsFixed(2) + "% "),
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: (widget.barColorLeft == Colors.white) ? Colors.black : Colors.white,
@@ -67,8 +69,8 @@ class _LevelChartState extends State<LevelChart> {
                   top: positionTop * ratioSize,
                   child: Container(
                     height: 20 * ratioSize,
-                    width: ((widget.level / widget.levelMax) * widthWidget <20 && !widget.imageCursor) ? 0 :(widget.level / widget.levelMax) * widthWidget<0 && widget.imageCursor ? 40 *ratioSize : (widget.level / widget.levelMax) * widthWidget ,
-                    //(widget.level / widget.levelMax) * widthWidget,
+                    width: ((percentageProgression / 100) * widthWidget <20 && widget.imageCursor) ? 0 :(percentageProgression / 100) * widthWidget<0 && widget.imageCursor ? 40 *ratioSize : (percentageProgression / 100) * widthWidget ,
+                    //(level / levelMax) * widthWidget,
                     decoration: BoxDecoration(
                       color: widget.barColorProgress,
                       borderRadius: BorderRadius.circular(15 * ratioSize),
@@ -76,7 +78,7 @@ class _LevelChartState extends State<LevelChart> {
                     child:Padding(
                         padding: EdgeInsets.only(right:18*ratioSize),
                         child:Text(
-                          (widget.level<25 ? '' : percentageProgression.toStringAsFixed(2) + "%"),
+                          (percentageProgression<25 ? '' : percentageProgression.toStringAsFixed(2) + "%"),
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: (widget.barColorProgress == Colors.white) ? Colors.black : Colors.white,
