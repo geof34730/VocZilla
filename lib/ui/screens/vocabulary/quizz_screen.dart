@@ -50,11 +50,11 @@ class _QuizzScreenState extends State<QuizzScreen> {
           if (state is VocabulairesLoading) {
             return Center(child: CircularProgressIndicator());
           } else if (state is VocabulairesLoaded) {
-            if (state.data.isEmpty) {
+            if (state.data.vocabulaireList.isEmpty) {
               return Center(child: Text(context.loc.no_vocabulary_items_found));
             }
-            final List<dynamic> data = state.data["vocabulaireList"] as List<dynamic>;
-            bool isNotLearned = state.data["isVocabularyNotLearned"] as bool? ?? true;
+            final List<dynamic> data = state.data.vocabulaireList;
+            bool isNotLearned = state.data.isVocabularyNotLearned ?? true;
             int _vocabulaireConnu = isNotLearned ? 0 : 1;
             if (refrechRandom) {
               refrechRandom = false;
@@ -81,8 +81,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
             return Column(
               children: [
                 GlobalStatisticalWidget(
-                  vocabulaireBegin: state.data["vocabulaireBegin"] as int,
-                  vocabulaireEnd: state.data["vocabulaireEnd"] as int,
+                  vocabulaireBegin: state.data.vocabulaireBegin,
+                  vocabulaireEnd: state.data.vocabulaireEnd,
                 ),
                 Text(context.loc.quizz_progression_title,
                     style: TextStyle(
@@ -175,9 +175,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                   child: ElevatedButton(
                                     onPressed: () {
                                       _vocabulairesRepository.goVocabulairesTop(
-                                          vocabulaireBegin:  state.data["vocabulaireBegin"] as int,
-                                          vocabulaireEnd: state.data["vocabulaireEnd"] as int,
-                                          titleList: state.data["titleList"] as String,
+                                          vocabulaireBegin:  state.data.vocabulaireBegin,
+                                          vocabulaireEnd: state.data.vocabulaireEnd,
+                                          titleList: state.data.titleList,
                                           isVocabularyNotLearned:_vocabulaireConnu==0 ? true : false,
                                       );
                                       next();

@@ -183,12 +183,10 @@ class AppRoute {
             return BlocBuilder<VocabulairesBloc, VocabulairesState>(
               builder: (context, vocabulairesState) {
                 if (vocabulairesState is VocabulairesLoaded) {
-                  String title = "Titre par défaut"; // Titre de secours
-
+                  String title = "Default title"; // Titre de secours
                   // Supposons que vocabulairesState.data soit une Map et contienne une clé 'title'
-                  if (vocabulairesState.data['titleList'] != null) {
-                    final titleData = vocabulairesState.data['titleList'];
-                    title = titleData.toString();
+                  if (vocabulairesState.data.titleList.isNotEmpty) {
+                    title = vocabulairesState.data.titleList;
                   }
                   switch (uri.pathSegments[1]) {
                     case 'list':

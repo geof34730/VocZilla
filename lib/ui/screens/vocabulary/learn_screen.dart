@@ -66,8 +66,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
         if (state is VocabulairesLoading) {
           return Center(child: CircularProgressIndicator());
         } else if (state is VocabulairesLoaded) {
-          final List<dynamic> data = state.data["vocabulaireList"] as List<dynamic>;
-          bool isNotLearned = state.data["isVocabularyNotLearned"] as bool? ?? true;
+          final List<dynamic> data = state.data.vocabulaireList;
+          bool isNotLearned = state.data.isVocabularyNotLearned;
           int _vocabulaireConnu = isNotLearned ? 0 : 1;
           return SingleChildScrollView(
             child: Center(

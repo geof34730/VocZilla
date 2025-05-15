@@ -50,7 +50,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
         if (state is VocabulairesLoading) {
           return Center(child: CircularProgressIndicator());
         } else if (state is VocabulairesLoaded) {
-          final List<dynamic> data = state.data["vocabulaireList"] as List<dynamic>;
+          final List<dynamic> data = state.data.vocabulaireList;
           if (data.isEmpty) {
             return Center(child: Text(context.loc.no_vocabulary_items_found));
           }

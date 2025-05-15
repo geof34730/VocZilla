@@ -29,7 +29,7 @@ class _ListScreenState extends State<ListScreen> {
         if (state is VocabulairesLoading) {
           return Center(child: CircularProgressIndicator());
         } else if (state is VocabulairesLoaded) {
-          var data = (state.data["vocabulaireList"] as List)
+          var data = (state.data.vocabulaireList)
               .map((item) => item as Map<String, dynamic>)
               .toList();
           if (searchQuery.isNotEmpty) {

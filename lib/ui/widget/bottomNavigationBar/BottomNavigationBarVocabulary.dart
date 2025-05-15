@@ -32,8 +32,6 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
             return Center(child: CircularProgressIndicator());
           } else if (state is VocabulairesLoaded) {
 
-            Logger.Blue.log(state.data["vocabulaireBegin"]);
-            Logger.Blue.log(state.data["vocabulaireEnd"]);
 
 
             return BottomNavigationBar(
@@ -69,25 +67,25 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
                 onTap: (value) {
                   switch (value) {
                     case 0:
-                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data["vocabulaireBegin"] as int, vocabulaireEnd: state.data["vocabulaireEnd"] as int, titleList: state.data["titleList"].toString().toUpperCase());
+                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(context, '/vocabulary/list');
                       break;
                     case 1:
-                      _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: state.data["vocabulaireBegin"] as int, vocabulaireEnd: state.data["vocabulaireEnd"] as int, titleList: state.data["titleList"].toString().toUpperCase());
+                      _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(context, '/vocabulary/learn');
                       break;
                     case 2:
-                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data["vocabulaireBegin"] as int, vocabulaireEnd: state.data["vocabulaireEnd"] as int, titleList: state.data["titleList"].toString().toUpperCase());
+                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(
                           context, '/vocabulary/voicedictation');
                       break;
                     case 3:
-                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data["vocabulaireBegin"] as int, vocabulaireEnd: state.data["vocabulaireEnd"] as int, titleList: state.data["titleList"].toString().toUpperCase());
+                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(
                           context, '/vocabulary/pronunciation');
                       break;
                     case 4:
-                      _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned: true, vocabulaireBegin: state.data["vocabulaireBegin"] as int, vocabulaireEnd: state.data["vocabulaireEnd"] as int, titleList: state.data["titleList"].toString().toUpperCase());
+                      _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(context, '/vocabulary/quizz');
                       break;
                     case 5:
