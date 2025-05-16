@@ -8,7 +8,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'dart:math';
 import 'dart:async';
 
-import '../../../core/utils/PlaySoond.dart';
+import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
@@ -126,14 +126,14 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
                       buttonColor: Colors.green,
                       sizeButton: 20,
                       iconData: Icons.play_arrow,
-                      onpressedActionSup: () {
+                      /*onpressedActionSup: () {
                         setState(() {
                           _stopListening();
                           _stopAnimation();
                           isRecording = false;
                           viewResulte = false;
                         });
-                      },
+                      },*/
                     ).buttonPlay(),
                   )
                 ]

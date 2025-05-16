@@ -1,7 +1,8 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-import '../../global.dart';
+import '../../../core/utils/logger.dart';
+import '../../../global.dart';
 
 final player = AudioPlayer();
 class PlaySoond {
@@ -29,9 +30,11 @@ class PlaySoond {
       child: InkWell(
         customBorder: CircleBorder(),
         onTap: () {
-          playAudio(stringVocabulaire: guidVocabulaire);
+          Logger.Yellow.log('onTap');
+          Logger.Yellow.log(guidVocabulaire);
+          playAudio(guidVocabulaire: guidVocabulaire);
           if (onpressedActionSup != null) {
-            onpressedActionSup!();
+            onpressedActionSup;
           }
         },
         child: CircleAvatar(
@@ -47,8 +50,10 @@ class PlaySoond {
     );
   }
 
-  void playAudio({required String stringVocabulaire}) async {
+  void playAudio({required String guidVocabulaire}) async {
+    Logger.Yellow.log('onTap');
+    Logger.Yellow.log(guidVocabulaire);
     await player.stop();
-    await player.play(AssetSource('audios/gcloud/${stringVocabulaire}.mp3'));
+    await player.play(AssetSource('audios/gcloud/${guidVocabulaire}.mp3'));
   }
 }

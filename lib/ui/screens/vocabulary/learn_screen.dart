@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
-import '../../../core/utils/PlaySoond.dart';
+import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';

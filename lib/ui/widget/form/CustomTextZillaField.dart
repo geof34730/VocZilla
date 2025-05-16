@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/utils/PlaySoond.dart';
+import '../elements/PlaySoond.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/notifiers/answer_notifier.dart';
@@ -31,7 +31,6 @@ class CustomTextZillaField extends StatefulWidget {
     this.resultSound = false,
     this.AnswerNotifier =false,
     this.ButtonNextNotifier =false,
-
   });
 
   @override
@@ -53,11 +52,11 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
 
   @override
   Widget build(BuildContext context) {
-    //final Map mapForPlayer={"titreVerbe":widget.resulteField};
     return Padding(
         padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.00),
         child: TextFormField(
-          enabled: !(widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase()),
+          readOnly: widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase(),
+          enabled:true,
           controller: widget.ControlerField,
           maxLength: widget.resulteField.length,
           maxLengthEnforcement: MaxLengthEnforcement.enforced,
@@ -73,8 +72,6 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
                   isAnswerUser: true,
                   guidVocabulaire: widget.GUID,
                 );
-
-
               }
               if(widget.ButtonNextNotifier) {
                 widget.buttonNotifier?.updateButtonState(true);
@@ -109,6 +106,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
                       ?
                       PlaySoond(guidVocabulaire: widget.GUID, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
                       :
+
                       null
               )
                   : IconButton(

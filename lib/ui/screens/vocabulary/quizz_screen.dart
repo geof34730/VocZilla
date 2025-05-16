@@ -64,15 +64,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
                 switch (Random().nextInt(2)) {
                   case 0:
                     {
-                      customeTextZillaControllerLearnLocalLanguage.text =
-                      data[randomItemData][LanguageUtils().getSmallCodeLanguage(
-                          context: context)];
+                      customeTextZillaControllerLearnLocalLanguage.text =data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)];
                     }
                     break;
                   case 1:
                     {
-                      customeTextZillaControllerLearnEnglishLanguage.text =
-                      data[randomItemData]['EN'];
+                      customeTextZillaControllerLearnEnglishLanguage.text = data[randomItemData]['EN'];
                     }
                     break;
                 }
@@ -143,8 +140,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                         .language_locale}"
                                         : "${context.loc.quizz_saisie_in} ${context
                                         .loc.language_locale}",
-                                    resulteField: data[randomItemData][LanguageUtils()
-                                        .getSmallCodeLanguage(context: context)],
+                                    resulteField: data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)],
                                     resultSound: false,
                                     GUID: data[randomItemData]['GUID'],
                                   ),
