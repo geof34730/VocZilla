@@ -1,5 +1,14 @@
 // deploy.js
 
+/*
+export FASTLANE_USER="ton.email@icloud.com"
+export FASTLANE_PASSWORD="mot_de_passe_d_application"
+export FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD="mot_de_passe_d_application"
+
+fastlane spaceauth -u ton.email@icloud.com
+*/
+
+
 const { execSync } = require("child_process");
 const inquirer = require("inquirer");
 const fs = require("fs");
@@ -16,6 +25,22 @@ function getAppfileInfo(appfilePath) {
 }
 
 (async () => {
+
+
+
+    try {
+        execSync('fastlane deliver ...', { stdio: 'inherit' });
+    } catch (e) {
+        if (e.message.includes('Invalid username and password combination') ||
+            e.message.includes('session is not valid')) {
+            console.error('⚠️  FASTLANE_SESSION expiré. Veuillez le régénérer avec: fastlane spaceauth');
+            process.exit(1);
+        }
+        throw e;
+    }
+
+
+
 
     const deployInfoPath = "deploy-info.json";
     const appfilePath = path.join(__dirname, "ios/fastlane", "Appfile");
