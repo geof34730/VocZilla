@@ -29,7 +29,7 @@ class VocabulairesRepository {
     );
 
     if(isVocabularyNotLearned) {
-      final dataSliceNotLearned = await VocabulaireUserRepository(context: context).getDataNotLearned(vocabulaireSpecificList: dataSliceWithTitle.vocabulaireList,);
+      final dataSliceNotLearned = await VocabulaireUserRepository(context: context).getVocabulaireUserDataNotLearned(vocabulaireSpecificList: dataSliceWithTitle.vocabulaireList,);
       final VocabularyBlocLocal updatedBlocLocal = dataSliceWithTitle.copyWith(
         vocabulaireList: dataSliceNotLearned,
       );
