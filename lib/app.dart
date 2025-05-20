@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
             create: (context) => VocabulaireServerService(),
           ),
           RepositoryProvider(
-            create: (context) => VocabulaireUserRepository(context: context),
+            create: (context) => VocabulaireUserRepository(),
           ),
           BlocProvider(
             create: (context) => AuthBloc(authRepository: _authRepository)..add(AppStarted()),

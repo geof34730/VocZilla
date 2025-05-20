@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../../data/repository/vocabulaires_repository.dart';
+import '../../../core/utils/logger.dart';
+import '../../../data/repository/vocabulaire_repository.dart';
 
 class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
-  final VocabulairesRepository vocabulairesRepository;
+  final VocabulaireRepository vocabulaireRepository;
   final dynamic state;
   final int vocabulaireConnu;
 
   RadioChoiceVocabularyLearnedOrNot({
     Key? key,
-    required this.vocabulairesRepository,
+    required this.vocabulaireRepository,
     required this.state,
     required this.vocabulaireConnu
   }) : super(key: key);
@@ -22,11 +23,12 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
       children: [
         InkWell(
           onTap: () {
-            vocabulairesRepository.goVocabulairesTop(
+            vocabulaireRepository.goVocabulairesTop(
+                context:context,
                 isVocabularyNotLearned:true,
-                vocabulaireBegin: state.data["vocabulaireBegin"] as int,
-                vocabulaireEnd: state.data["vocabulaireEnd"] as int ,
-                titleList: state.data["titleList"] as String
+                vocabulaireBegin: state.data.vocabulaireBegin,
+                vocabulaireEnd: state.data.vocabulaireEnd,
+                titleList: state.data.titleList
             );
           },
           child: Row(
@@ -45,11 +47,12 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
         SizedBox(width: 16),
         InkWell(
           onTap: () {
-            vocabulairesRepository.goVocabulairesTop(
+            vocabulaireRepository.goVocabulairesTop(
+                context:context,
                 isVocabularyNotLearned:false,
-                vocabulaireBegin: state.data["vocabulaireBegin"] as int,
-                vocabulaireEnd: state.data["vocabulaireEnd"] as int ,
-                titleList: state.data["titleList"] as String
+                vocabulaireBegin: state.data.vocabulaireBegin,
+                vocabulaireEnd: state.data.vocabulaireEnd ,
+                titleList: state.data.titleList
             );
             // reset();
           },

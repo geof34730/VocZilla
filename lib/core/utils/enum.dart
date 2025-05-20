@@ -8,3 +8,7 @@ enum IconSize {
   smallIcon,
 }
 
+enum statutListPerso {
+  edit,
+  create
+}

@@ -6,7 +6,7 @@ import '../../../core/utils/logger.dart';
 import '../../../data/models/statistical_length.dart';
 import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
-import '../../../data/repository/vocabulaires_repository.dart';
+import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../data/services/localstorage_service.dart';
 import '../../../data/services/vocabulaires_server_service.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
@@ -41,10 +41,10 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
   Widget build(BuildContext context) {
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
       builder: (context, state) {
-        if (state is VocabulaireUserUpdate || state is VocabulaireUserInitial) {
-          Logger.Magenta.log("Update State");
+        if (state is VocabulaireUserLoaded ) {
+          Logger.Magenta.log("Update State 1111");
           return FutureBuilder(
-            future: VocabulaireUserRepository(context: context).getVocabulairesStatisticalLengthData(
+            future: VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
               vocabulaireBegin: widget.vocabulaireBegin,
               vocabulaireEnd: widget.vocabulaireEnd,
             ),
@@ -52,7 +52,7 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
               if (userDataSnapshot.connectionState == ConnectionState.waiting) {
                 return CircularProgressIndicator(); // Show a loading indicator while waiting
               } else if (userDataSnapshot.hasError) {
-                return Text('Erreur affichage Statistique'); // Handle error
+                return Text('Erreur affichage Statistique 11'); // Handle error
               } else if (userDataSnapshot.hasData) {
                 StatisticalLength? statisticalData = userDataSnapshot.data;
                 return Container(
@@ -82,9 +82,14 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
             },
           );
         } else {
-          Logger.Magenta.log("Unknown State");
+          Logger.Magenta.log("Unknown State 555");
           return Text('Erreur affichage Statistique 3');
         }
+
+
+
+
+
       },
     );
   }

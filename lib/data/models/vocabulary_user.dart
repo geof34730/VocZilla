@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'vocabulary_user.freezed.dart';
@@ -27,19 +29,20 @@ abstract class ListPerso with _$ListPerso {
     @JsonKey(name: "title")
     required String title,
     @JsonKey(name: "color")
-    required String color,
+    required int color,
     @JsonKey(name: "listGuidVocabulary")
-    required List<String> listGuidVocabulary,
+    @Default(<String>[]) List<String> listGuidVocabulary,
     @JsonKey(name: "isListShare")
-    required bool isListShare,
+    @Default(true) bool isListShare,
     @JsonKey(name: "ownListShare")
-    required bool ownListShare,
+    @Default(true) bool ownListShare,
     @JsonKey(name: "urlShare")
-    required String urlShare,
+    @Default('ss') String urlShare,
   }) = _ListPerso;
 
   factory ListPerso.fromJson(Map<String, dynamic> json) => _$ListPersoFromJson(json);
 }
+
 
 @freezed
 abstract class ListTheme with _$ListTheme {

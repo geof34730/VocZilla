@@ -19,10 +19,10 @@ class GlobalStatisticalWidget extends StatelessWidget {
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
       builder: (context, state) {
         Logger.Yellow.log("BlocBuilder VocabulaireUserBloc $state");
-        if (state is VocabulaireUserUpdate || state is VocabulaireUserInitial) {
-          Logger.Magenta.log("Update State");
+        if (state is VocabulaireUserLoaded ) {
+          Logger.Magenta.log("Update State: vocabulaireBegin: $vocabulaireBegin vocabulaireEnd : $vocabulaireEnd");
           return FutureBuilder<StatisticalLength>(
-            future: VocabulaireUserRepository(context: context).getVocabulairesStatisticalLengthData(
+            future: VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
               vocabulaireBegin: vocabulaireBegin,
               vocabulaireEnd: vocabulaireEnd,
             ),
@@ -44,7 +44,7 @@ class GlobalStatisticalWidget extends StatelessWidget {
                 return Container(
                   width: double.infinity,
                   child: LevelChart(
-                    level: 10,
+                    level: 0,
                     levelMax: 100,
                   ),
                 );

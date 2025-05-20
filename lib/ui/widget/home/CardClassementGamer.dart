@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../LevelChart.dart';
+import '../elements/LevelChart.dart';
 
 class CardClassementGamer extends StatelessWidget {
   final int position;

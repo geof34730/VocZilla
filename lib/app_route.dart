@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/ui/screens/vocabulary/pronunciation_screen.dart';
+import 'package:vobzilla/ui/screens/personalisation/step2.dart';
+
 import 'logic/check_connectivity.dart';
 import 'core/utils/logger.dart';
 import 'logic/blocs/update/update_state.dart';
 import 'logic/blocs/user/user_bloc.dart';
 import 'logic/blocs/user/user_state.dart';
+import 'package:vobzilla/ui/screens/vocabulary/pronunciation_screen.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/data/repository/user_repository.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
@@ -25,6 +27,7 @@ import 'package:vobzilla/ui/screens/vocabulary/list_screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/quizz_screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/statistical.screen.dart';
 import 'package:vobzilla/ui/screens/vocabulary/voice_dictation_screen.dart';
+import 'package:vobzilla/ui/screens/personalisation/step1.dart';
 import 'package:vobzilla/ui/widget/elements/Loading.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_state.dart';
@@ -184,7 +187,6 @@ class AppRoute {
               builder: (context, vocabulairesState) {
                 if (vocabulairesState is VocabulairesLoaded) {
                   String title = "Default title"; // Titre de secours
-                  // Supposons que vocabulairesState.data soit une Map et contienne une clé 'title'
                   if (vocabulairesState.data.titleList.isNotEmpty) {
                     title = vocabulairesState.data.titleList;
                   }
@@ -240,6 +242,35 @@ class AppRoute {
                 }
               },
             );
+          } else {
+            return _errorPage(settings);
+          }
+        case '/personnalisation':
+          if (uri.pathSegments.length > 1) {
+                  switch (uri.pathSegments[1]) {
+                    case 'step1':
+                      return Layout(
+                        titleScreen: "Créer une liste personnalisée",
+                        showBottomNavigationBar: false,
+                        child:  uri.pathSegments.length==3 ?
+                          PersonnalisationStep1Screen(
+                            guidListPerso: uri.pathSegments[2],
+                          )
+                          :
+                          PersonnalisationStep1Screen()
+                        ,
+                      );
+                    case 'step2':
+                      return Layout(
+                        titleScreen: "Créer une liste personnalisée",
+                        showBottomNavigationBar: false,
+                        child:  PersonnalisationStep2Screen(
+                          guidListPerso: uri.pathSegments[2],
+                        ),
+                      );
+                    default:
+                      return _errorPage(settings);
+                  }
           } else {
             return _errorPage(settings);
           }

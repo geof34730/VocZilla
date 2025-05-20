@@ -9,11 +9,12 @@ import 'package:vobzilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
-import '../../../data/repository/vocabulaires_repository.dart';
+import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/notifiers/answer_notifier.dart';
 import '../../widget/elements/LevelChart.dart';
+import '../../widget/form/CongratulationOrErrorData.dart';
 import '../../widget/form/CustomTextZillaField.dart';
 import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/statistical/global_statisctical_widget.dart'; // Importez ici
@@ -31,6 +32,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
   late ButtonNotifier buttonNotifier = ButtonNotifier();
   late bool refrechRandom = true;
   int randomItemData = 0;
+  final _vocabulaireRepository=VocabulaireRepository();
   @override
   void dispose() {
     customeTextZillaControllerLearnLocalLanguage.dispose();
@@ -42,7 +44,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final _vocabulairesRepository=VocabulairesRepository(context:context);
+
     return Column(
       children: [
         BlocBuilder<VocabulairesBloc, VocabulairesState>(
@@ -50,9 +52,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
           if (state is VocabulairesLoading) {
             return Center(child: CircularProgressIndicator());
           } else if (state is VocabulairesLoaded) {
-            if (state.data.vocabulaireList.isEmpty) {
-              return Center(child: Text(context.loc.no_vocabulary_items_found));
-            }
+
+            Logger.Red.log("STATE VocabulairesLoaded: ${state.data}");
+
             final List<dynamic> data = state.data.vocabulaireList;
             bool isNotLearned = state.data.isVocabularyNotLearned ?? true;
             int _vocabulaireConnu = isNotLearned ? 0 : 1;
@@ -90,36 +92,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
                 RadioChoiceVocabularyLearnedOrNot(
                   state: state,
                   vocabulaireConnu: _vocabulaireConnu,
-                  vocabulairesRepository: _vocabulairesRepository,
+                  vocabulaireRepository: _vocabulaireRepository,
 
                 ),
-                if (data.isEmpty)...[
-                  _vocabulaireConnu==0 ?
-                  Column(
-                      children: [
-                        Padding(
-                            padding:EdgeInsets.only(top: 40),
-                            child:Text("✅ Bravo !!!",
-                              style: TextStyle(
-                                  color:Colors.green,
-                                  fontSize: 35,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            )
-                        ),
-                        Text("vous avez terminé d'apprendre cette Liste",
-                          style: TextStyle(
-                            color:Colors.green,
-                            fontSize: 20,
-
-                          ),
-
-                        )
-                      ]
-                  )
-                      : Center(child: Text(context.loc.no_vocabulary_items_found)
-                  )
-                ],
+                  if (data.isEmpty)...[
+                    CongratulationOrErrorData(vocabulaireConnu:_vocabulaireConnu,context: context)
+                  ],
                   if (data.isNotEmpty)...[
                        SingleChildScrollView(
                         child: Column(
@@ -170,11 +148,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                   padding: const EdgeInsets.only(top: 20),
                                   child: ElevatedButton(
                                     onPressed: () {
-                                      _vocabulairesRepository.goVocabulairesTop(
+                                      _vocabulaireRepository.goVocabulairesTop(
                                           vocabulaireBegin:  state.data.vocabulaireBegin,
                                           vocabulaireEnd: state.data.vocabulaireEnd,
                                           titleList: state.data.titleList,
                                           isVocabularyNotLearned:_vocabulaireConnu==0 ? true : false,
+                                          context:context
                                       );
                                       next();
                                     },

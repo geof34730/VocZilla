@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../core/utils/enum.dart';
-import '../../../../data/repository/vocabulaires_repository.dart';
-import '../../../theme/appColors.dart';
+import '../../../core/utils/enum.dart';
+import '../../../data/repository/vocabulaire_repository.dart';
+import '../../../data/repository/vocabulaire_user_repository.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
+import '../../theme/appColors.dart';
 
-import '../../statistical/card_home_statisctical_widget.dart';
+import '../statistical/card_home_statisctical_widget.dart';
 import 'ElevatedButtonCardHome.dart';
-import '../LevelChart.dart';
+import '../elements/LevelChart.dart';
 
 class CardHome extends StatelessWidget {
   final String title;
@@ -16,20 +20,24 @@ class CardHome extends StatelessWidget {
   final Color backgroundColor;
   final int vocabulaireBegin;
   final int vocabulaireEnd;
-
+  final bool ownListShare;
+  final String guid;
+  VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
   CardHome({
     required this.title,
     required this.vocabulaireBegin,
     required this.vocabulaireEnd,
     this.editMode = false,
+    this.ownListShare = false,
+    this.guid ="",
     this.backgroundColor = AppColors.colorTextTitle,
     this.paddingLevelBar = const EdgeInsets.all(0),
   });
 
   @override
   Widget build(BuildContext context) {
-    final _vocabulairesRepository=VocabulairesRepository(context:context);
+    final _vocabulaireRepository=VocabulaireRepository();
     return LayoutBuilder(builder: (context, constraints) {
       double widthWidget = constraints.maxWidth;
       return Container(
@@ -60,7 +68,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                          _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/list');
                         },
                         iconContent: Icons.list,
@@ -70,7 +78,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                          _vocabulaireRepository.goVocabulairesTop(context:context,isVocabularyNotLearned:true,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/learn');
                         },
                         iconContent: Icons.school_rounded,
@@ -80,7 +88,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                          _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/voicedictation');
                         },
                         iconContent: Icons.play_circle,
@@ -90,7 +98,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                          _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: 49, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/pronunciation');
                         },
                         iconContent: Icons.mic,
@@ -100,7 +108,7 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                          _vocabulaireRepository.goVocabulairesTop(context:context,isVocabularyNotLearned:true,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
                           Navigator.pushNamed(context, '/vocabulary/quizz');
                         },
                         iconContent: Icons.assignment,
@@ -125,21 +133,30 @@ class CardHome extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    ElevatedButtonCardHome(
-                      colorIcon: Colors.green,
-                      onClickButton: () {},
-                      iconContent: Icons.edit,
-                      context: context,
-                    ),
+                    if (ownListShare) ...[
+                      ElevatedButtonCardHome(
+                        colorIcon: Colors.green,
+                        onClickButton: () {
+                          _vocabulaireUserRepository.editListPerso(guid: guid);
+                        },
+                        iconContent: Icons.edit,
+                        context: context,
+                      ),
+                    ],
                     ElevatedButtonCardHome(
                       colorIcon: Colors.red,
-                      onClickButton: () {},
+                      onClickButton: () {
+                        BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(guid));
+                       // _vocabulaireUserRepository.deleteListPerso(guid: guid);
+                      },
                       iconContent: Icons.delete,
                       context: context,
                     ),
                     ElevatedButtonCardHome(
                       colorIcon: Colors.blue,
-                      onClickButton: () {},
+                      onClickButton: () {
+                        _vocabulaireUserRepository.shareListPerso(guid: guid);
+                      },
                       iconContent: Icons.share,
                       context: context,
                     ),

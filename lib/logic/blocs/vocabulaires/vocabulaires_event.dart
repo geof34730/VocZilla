@@ -8,3 +8,9 @@ class LoadVocabulairesData extends VocabulairesEvent {
   LoadVocabulairesData(this.data);
 }
 
+class getAllVocabulaire extends VocabulairesEvent {
+  late bool isVocabularyNotLearned;
+  late String guidListPerso;
+  getAllVocabulaire(this.isVocabularyNotLearned, this.guidListPerso);
+}
+

@@ -9,12 +9,13 @@ import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';
-import '../../../data/repository/vocabulaires_repository.dart';
+import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:flip_card/flip_card.dart';
 
 import '../../widget/elements/LevelChart.dart';
+import '../../widget/form/CongratulationOrErrorData.dart';
 import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 
 
@@ -35,8 +36,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
   late bool visibilityBack = true;
   late String directionAnimation = "next";
 
-
-
+  final _vocabulaireRepository=VocabulaireRepository();
 
   @override
   void initState() {
@@ -59,7 +59,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
 
   @override
   Widget build(BuildContext context) {
-    final _vocabulairesRepository=VocabulairesRepository(context:context);
+
     screenWidth = MediaQuery.of(context).size.width;
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
       builder: (context, state) {
@@ -76,34 +76,10 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                       RadioChoiceVocabularyLearnedOrNot(
                           state: state,
                           vocabulaireConnu: _vocabulaireConnu,
-                          vocabulairesRepository: _vocabulairesRepository
+                          vocabulaireRepository: _vocabulaireRepository
                       ),
                       if (data.isEmpty)...[
-                        _vocabulaireConnu==0 ?
-                            Column(
-                                children: [
-                                  Padding(
-                                      padding:EdgeInsets.only(top: 40),
-                                      child:Text("✅ Bravo !!!",
-                                        style: TextStyle(
-                                            color:Colors.green,
-                                            fontSize: 35,
-                                            fontWeight: FontWeight.bold
-                                        ),
-                                      )
-                                  ),
-                                  Text("vous avez terminé d'apprendre cette Liste",
-                                    style: TextStyle(
-                                      color:Colors.green,
-                                      fontSize: 20,
-
-                                    ),
-
-                                  )
-                                ]
-                            )
-                            : Center(child: Text(context.loc.no_vocabulary_items_found)
-                        )
+                        CongratulationOrErrorData(vocabulaireConnu:_vocabulaireConnu,context: context)
                       ],
                       if (data.isNotEmpty)...[
                           Padding(

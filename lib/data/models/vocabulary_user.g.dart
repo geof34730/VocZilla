@@ -32,13 +32,14 @@ Map<String, dynamic> _$VocabulaireUserToJson(_VocabulaireUser instance) =>
 _ListPerso _$ListPersoFromJson(Map<String, dynamic> json) => _ListPerso(
       guid: json['guid'] as String,
       title: json['title'] as String,
-      color: json['color'] as String,
-      listGuidVocabulary: (json['listGuidVocabulary'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      isListShare: json['isListShare'] as bool,
-      ownListShare: json['ownListShare'] as bool,
-      urlShare: json['urlShare'] as String,
+      color: (json['color'] as num).toInt(),
+      listGuidVocabulary: (json['listGuidVocabulary'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const <String>[],
+      isListShare: json['isListShare'] as bool? ?? true,
+      ownListShare: json['ownListShare'] as bool? ?? true,
+      urlShare: json['urlShare'] as String? ?? 'ss',
     );
 
 Map<String, dynamic> _$ListPersoToJson(_ListPerso instance) =>

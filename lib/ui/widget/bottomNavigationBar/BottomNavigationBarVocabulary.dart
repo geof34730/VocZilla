@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/data/repository/vocabulaires_repository.dart';
+import 'package:vobzilla/data/repository/vocabulaire_repository.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
 
 import '../../../core/utils/logger.dart';
@@ -15,7 +15,7 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
 
   @override
   Widget build(BuildContext context) {
-    VocabulairesRepository _vocabulairesRepository=VocabulairesRepository(context: context);
+    VocabulaireRepository _vocabulaireRepository=VocabulaireRepository();
     return Container(
         decoration: BoxDecoration(
         boxShadow: <BoxShadow>[
@@ -31,8 +31,6 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
           if (state is VocabulairesLoading) {
             return Center(child: CircularProgressIndicator());
           } else if (state is VocabulairesLoaded) {
-
-
 
             return BottomNavigationBar(
                 backgroundColor: AppColors.cardBackground,
@@ -67,25 +65,25 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
                 onTap: (value) {
                   switch (value) {
                     case 0:
-                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
+                      _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(context, '/vocabulary/list');
                       break;
                     case 1:
-                      _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
+                      _vocabulaireRepository.goVocabulairesTop(context:context,isVocabularyNotLearned:true,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(context, '/vocabulary/learn');
                       break;
                     case 2:
-                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
+                      _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(
                           context, '/vocabulary/voicedictation');
                       break;
                     case 3:
-                      _vocabulairesRepository.goVocabulairesTop(vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
+                      _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(
                           context, '/vocabulary/pronunciation');
                       break;
                     case 4:
-                      _vocabulairesRepository.goVocabulairesTop(isVocabularyNotLearned:true,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
+                      _vocabulaireRepository.goVocabulairesTop(context:context,isVocabularyNotLearned:true,vocabulaireBegin: state.data.vocabulaireBegin, vocabulaireEnd: state.data.vocabulaireEnd, titleList: state.data.titleList.toUpperCase());
                       Navigator.pushReplacementNamed(context, '/vocabulary/quizz');
                       break;
                     case 5:

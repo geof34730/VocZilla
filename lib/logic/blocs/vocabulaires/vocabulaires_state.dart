@@ -10,4 +10,8 @@ class VocabulairesLoaded extends VocabulairesState {
   VocabulairesLoaded(this.data);
 }
 
-class VocabulairesError extends VocabulairesState {}
+class VocabulairesError extends VocabulairesState {
+  final String error;
+  VocabulairesError(this.error);
+
+}

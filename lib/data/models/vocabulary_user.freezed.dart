@@ -273,7 +273,7 @@ mixin _$ListPerso {
   @JsonKey(name: "title")
   String get title;
   @JsonKey(name: "color")
-  String get color;
+  int get color;
   @JsonKey(name: "listGuidVocabulary")
   List<String> get listGuidVocabulary;
   @JsonKey(name: "isListShare")
@@ -337,7 +337,7 @@ abstract mixin class $ListPersoCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: "guid") String guid,
       @JsonKey(name: "title") String title,
-      @JsonKey(name: "color") String color,
+      @JsonKey(name: "color") int color,
       @JsonKey(name: "listGuidVocabulary") List<String> listGuidVocabulary,
       @JsonKey(name: "isListShare") bool isListShare,
       @JsonKey(name: "ownListShare") bool ownListShare,
@@ -376,7 +376,7 @@ class _$ListPersoCopyWithImpl<$Res> implements $ListPersoCopyWith<$Res> {
       color: null == color
           ? _self.color
           : color // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       listGuidVocabulary: null == listGuidVocabulary
           ? _self.listGuidVocabulary
           : listGuidVocabulary // ignore: cast_nullable_to_non_nullable
@@ -405,10 +405,10 @@ class _ListPerso implements ListPerso {
       @JsonKey(name: "title") required this.title,
       @JsonKey(name: "color") required this.color,
       @JsonKey(name: "listGuidVocabulary")
-      required final List<String> listGuidVocabulary,
-      @JsonKey(name: "isListShare") required this.isListShare,
-      @JsonKey(name: "ownListShare") required this.ownListShare,
-      @JsonKey(name: "urlShare") required this.urlShare})
+      final List<String> listGuidVocabulary = const <String>[],
+      @JsonKey(name: "isListShare") this.isListShare = true,
+      @JsonKey(name: "ownListShare") this.ownListShare = true,
+      @JsonKey(name: "urlShare") this.urlShare = 'ss'})
       : _listGuidVocabulary = listGuidVocabulary;
   factory _ListPerso.fromJson(Map<String, dynamic> json) =>
       _$ListPersoFromJson(json);
@@ -421,7 +421,7 @@ class _ListPerso implements ListPerso {
   final String title;
   @override
   @JsonKey(name: "color")
-  final String color;
+  final int color;
   final List<String> _listGuidVocabulary;
   @override
   @JsonKey(name: "listGuidVocabulary")
@@ -504,7 +504,7 @@ abstract mixin class _$ListPersoCopyWith<$Res>
   $Res call(
       {@JsonKey(name: "guid") String guid,
       @JsonKey(name: "title") String title,
-      @JsonKey(name: "color") String color,
+      @JsonKey(name: "color") int color,
       @JsonKey(name: "listGuidVocabulary") List<String> listGuidVocabulary,
       @JsonKey(name: "isListShare") bool isListShare,
       @JsonKey(name: "ownListShare") bool ownListShare,
@@ -543,7 +543,7 @@ class __$ListPersoCopyWithImpl<$Res> implements _$ListPersoCopyWith<$Res> {
       color: null == color
           ? _self.color
           : color // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       listGuidVocabulary: null == listGuidVocabulary
           ? _self._listGuidVocabulary
           : listGuidVocabulary // ignore: cast_nullable_to_non_nullable

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/enum.dart';
+import '../../../core/utils/enum.dart';
 
 
 class ElevatedButtonCardHome extends StatelessWidget {
