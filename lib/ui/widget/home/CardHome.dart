@@ -147,7 +147,6 @@ class CardHome extends StatelessWidget {
                       colorIcon: Colors.red,
                       onClickButton: () {
                         BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(guid));
-                       // _vocabulaireUserRepository.deleteListPerso(guid: guid);
                       },
                       iconContent: Icons.delete,
                       context: context,

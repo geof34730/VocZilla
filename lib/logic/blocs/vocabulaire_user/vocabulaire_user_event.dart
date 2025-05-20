@@ -26,3 +26,15 @@ class UpdateListPerso extends VocabulaireUserEvent {
   final ListPerso listPerso;
   UpdateListPerso(this.listPerso);
 }
+
+class AddVocabulaireListPerso extends VocabulaireUserEvent {
+  final String  guidListPerso;
+  final String guidVocabulaire;
+  AddVocabulaireListPerso({required this.guidListPerso, required  this.guidVocabulaire});
+}
+
+class DeleteVocabulaireListPerso extends VocabulaireUserEvent {
+  final String  guidListPerso;
+  final String guidVocabulaire;
+  DeleteVocabulaireListPerso({required this.guidListPerso, required  this.guidVocabulaire});
+}

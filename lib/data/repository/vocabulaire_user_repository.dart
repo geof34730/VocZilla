@@ -229,12 +229,67 @@ class VocabulaireUserRepository {
   shareListPerso({required String guid}){
     print(guid);
   }
-  /*
-  Future<List<ListPerso>> getListPerso(){
 
-      return [];
+  Future<void> addVocabulaireListPerso({required String guidListPerso, required String guidVocabulaire }) async {
+    try {
+      // Récupérer les données utilisateur actuelles
+      VocabulaireUser? userData = await getVocabulaireUserData();
+      if (userData != null) {
+        // Trouver la liste perso avec le guid spécifié
+        List<ListPerso> updatedListPerso = userData.listPerso.map((listPerso) {
+          if (listPerso.guid == guidListPerso) {
+            // Ajouter le guidVocabulaire à la liste des vocabulaires de cette liste perso
+            List<String> updatedVocabulaireList = List.from(listPerso.listGuidVocabulary)..add(guidVocabulaire);
+            return listPerso.copyWith(listGuidVocabulary: updatedVocabulaireList);
+          }
+          return listPerso;
+        }).toList();
+        // Mettre à jour les données utilisateur avec la liste perso modifiée
+        VocabulaireUser updatedUserData = userData.copyWith(listPerso: updatedListPerso);
+        // Mettre à jour le stockage local
+        await updateVocabulaireUserData(userData: updatedUserData);
+        Logger.Green.log(updatedUserData);
+        Logger.Green.log('Vocabulaire ajouté à la liste perso.');
+      } else {
+        Logger.Red.log('Erreur: Les données utilisateur sont null.');
+      }
+    } catch (e) {
+      Logger.Red.log('Erreur lors de l\'ajout du vocabulaire à la liste perso : $e');
+    }
   }
-  */
+  Future<void> deleteVocabulaireListPerso({required String guidListPerso, required String guidVocabulaire}) async {
+    try {
+      // Récupérer les données utilisateur actuelles
+      VocabulaireUser? userData = await getVocabulaireUserData();
+
+      if (userData != null) {
+        // Trouver la liste perso avec le guid spécifié
+        List<ListPerso> updatedListPerso = userData.listPerso.map((listPerso) {
+          if (listPerso.guid == guidListPerso) {
+            // Supprimer le guidVocabulaire de la liste des vocabulaires de cette liste perso
+            List<String> updatedVocabulaireList = List.from(listPerso.listGuidVocabulary)..remove(guidVocabulaire);
+            return listPerso.copyWith(listGuidVocabulary: updatedVocabulaireList);
+          }
+          return listPerso;
+        }).toList();
+
+        // Mettre à jour les données utilisateur avec la liste perso modifiée
+        VocabulaireUser updatedUserData = userData.copyWith(listPerso: updatedListPerso);
+
+        // Mettre à jour le stockage local
+        await updateVocabulaireUserData(userData: updatedUserData);
+        Logger.Green.log('Vocabulaire supprimé de la liste perso.');
+      } else {
+        Logger.Red.log('Erreur: Les données utilisateur sont null.');
+      }
+    } catch (e) {
+      Logger.Red.log('Erreur lors de la suppression du vocabulaire de la liste perso : $e');
+    }
+  }
+
+
+
+
 
 }
 

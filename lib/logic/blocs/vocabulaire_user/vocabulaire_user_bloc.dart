@@ -21,10 +21,11 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     });
     on<DeleteListPerso>(_onDeleteListPerso);
     on<AddListPerso>(_onAddListPerso);
+    on<AddVocabulaireListPerso>(_onAddVocabulaireListPerso);
+    on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
   }
 
-  Future<void> _onCheckVocabulaireUserStatus(
-      CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
+  Future<void> _onCheckVocabulaireUserStatus(CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
     try {
       VocabulaireUser? userData =  await VocabulaireUserRepository().getVocabulaireUserData();
       if (userData != null) {
@@ -37,8 +38,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       emit(VocabulaireUserError("Error loading user data: $e"));
     }
   }
-  Future<void> _onDeleteListPerso(
-      DeleteListPerso event, Emitter<VocabulaireUserState> emit) async {
+
+  Future<void> _onDeleteListPerso(DeleteListPerso event, Emitter<VocabulaireUserState> emit) async {
     try {
       await _vocabulaireUserRepository.deleteListPerso(guid: event.listPersoGuid);
       VocabulaireUser? updatedUserData =  await VocabulaireUserRepository().getVocabulaireUserData();
@@ -68,5 +69,33 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     }
   }
 
+  Future<void> _onAddVocabulaireListPerso(AddVocabulaireListPerso event,Emitter<VocabulaireUserState> emit) async {
+    try {
+      await _vocabulaireUserRepository.addVocabulaireListPerso(guidListPerso: event.guidListPerso,guidVocabulaire: event.guidVocabulaire);
+      VocabulaireUser? updatedUserData = await VocabulaireUserRepository().getVocabulaireUserData();
+      if (updatedUserData != null) {
+        Logger.Red.log("VocabulaireUserLoaded : $updatedUserData ");
+        emit(VocabulaireUserLoaded(updatedUserData));
+      } else {
+        emit(VocabulaireUserError("Failed to update user data after addition."));
+      }
+    } catch (e) {
+      emit(VocabulaireUserError("Error adding list: $e"));
+    }
+  }
 
+  Future<void> _onDeleteVocabulaireListPerso(DeleteVocabulaireListPerso event,Emitter<VocabulaireUserState> emit) async {
+    try {
+      await _vocabulaireUserRepository.deleteVocabulaireListPerso(guidListPerso: event.guidListPerso,guidVocabulaire: event.guidVocabulaire);
+      VocabulaireUser? updatedUserData = await VocabulaireUserRepository().getVocabulaireUserData();
+      if (updatedUserData != null) {
+        Logger.Red.log("VocabulaireUserLoaded : $updatedUserData ");
+        emit(VocabulaireUserLoaded(updatedUserData));
+      } else {
+        emit(VocabulaireUserError("Failed to update user data after addition."));
+      }
+    } catch (e) {
+      emit(VocabulaireUserError("Error adding list: $e"));
+    }
+  }
 }

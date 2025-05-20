@@ -14,6 +14,7 @@ import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
+import '../../../logic/blocs/vocabulaires/vocabulaires_event.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/elements/PlaySoond.dart';
@@ -36,6 +37,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
 
   @override
   Widget build(BuildContext context) {
+    String guidListPerso=widget.guidListPerso;
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
       builder: (context, state) {
         if (state is VocabulairesLoading) {
@@ -57,7 +59,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
 
           final dataSource = data.isEmpty
               ? EmptyDataSource(context: context)
-              : VocabularyDataSource(data: data, context: context);
+              : VocabularyDataSource(data: data, context: context,guidListPerso: guidListPerso);
           int rowsPerPage = data.isEmpty ? 1 : (data.length < 10 ? data.length : 10);
           return Column(
             children: [
@@ -175,7 +177,8 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
 class VocabularyDataSource extends DataTableSource {
   final List<Map<String, dynamic>> data;
   final BuildContext context;
-  VocabularyDataSource({required this.data, required this.context});
+  final String guidListPerso;
+  VocabularyDataSource({required this.data, required this.context, required this.guidListPerso});
 
   @override
   DataRow getRow(int index) {
@@ -192,12 +195,21 @@ class VocabularyDataSource extends DataTableSource {
       cells: [
         DataCell(
             Center(
-                child: Text(vocabulaire['EN'] ?? '',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Roboto',
+                child: Row(
+                  children: [
+                    Icon(
+                      vocabulaire['isLearned'] ? Icons.check: Icons.close,
+                      color: vocabulaire['isLearned'] ? Colors.green : Colors.red,
+                      size: 16.0,
+                    ),
+                  Text(vocabulaire['EN']   ?? '',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
+                  ]
                 )
             )
         ),
@@ -217,15 +229,23 @@ class VocabularyDataSource extends DataTableSource {
                  child:Center(
                     child:CircleAvatar(
                       radius: 30,
-                      backgroundColor:  Colors.green,
+                      backgroundColor:  vocabulaire['isSelectedInListPerso'] ? Colors.red : Colors.green,
                       child: IconButton(
                         key: UniqueKey(),
                         icon: Icon(
-                           Icons.add,
+                          vocabulaire['isSelectedInListPerso'] ? Icons.delete: Icons.add,
                           color: Colors.white,
                         ),
                         onPressed: () {
-                         Logger.Green.log(vocabulaire['GUID']);
+                          if(vocabulaire['isSelectedInListPerso']){
+                            Logger.Green.log("DELETE: ${vocabulaire['GUID']}");
+                            BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteVocabulaireListPerso(guidListPerso: guidListPerso, guidVocabulaire: vocabulaire['GUID']));
+                          }
+                          else{
+                            Logger.Green.log("ADD: ${vocabulaire['GUID']}");
+                            BlocProvider.of<VocabulaireUserBloc>(context).add(AddVocabulaireListPerso(guidListPerso: guidListPerso, guidVocabulaire: vocabulaire['GUID']));
+                          }
+                          BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(false,guidListPerso));
                         },
                       ),
                     ),

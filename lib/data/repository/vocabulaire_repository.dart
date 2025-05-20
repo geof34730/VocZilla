@@ -16,7 +16,6 @@ class VocabulaireRepository {
 
   final VocabulaireService _vocabulaireService = VocabulaireService();
 
-
     Future<VocabularyBlocLocal> goVocabulaireAllForListPersoList({required bool isVocabularyNotLearned, required String guidListPerso}) async {
       VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
       var data = await getDataTop();
@@ -89,14 +88,14 @@ class VocabulaireRepository {
     context.read<VocabulairesBloc>().add(LoadVocabulairesData(dataSliceWithTitle));
   }
 
-  goVocabulairesThemes() {}
+    goVocabulairesThemes() {}
 
-  goVocabulairesPerso() {}
+    goVocabulairesPerso() {}
 
-  Future<List<dynamic>> getDataTop(){
-    var dataAll=_vocabulaireService.getAllData();
-    return dataAll;
-  }
+    Future<List<dynamic>> getDataTop(){
+      var dataAll=_vocabulaireService.getAllData();
+      return dataAll;
+    }
 
 
 
