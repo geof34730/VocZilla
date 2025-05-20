@@ -20,6 +20,8 @@ fastlane/Appfile
 voczilla-d2d79-c1a7826cd5fd.json
 .env
 firebase.json
+/firebase.json
+
 node_modules
 
 # The .vscode folder contains launch configuration and tasks you configure in
