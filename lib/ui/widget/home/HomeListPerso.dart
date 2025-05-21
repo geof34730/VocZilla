@@ -62,8 +62,7 @@ class HomelistPerso extends StatelessWidget {
                       color: Colors.blueGrey,
                       child: ListTile(
                           title: Padding(
-                            padding: EdgeInsets.only(
-                                top: 10, left: 5, right: 5),
+                            padding: EdgeInsets.only(top: 10, left: 5, right: 5),
                             child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,9 +91,7 @@ class HomelistPerso extends StatelessWidget {
                                         backgroundColor: Colors.blue,
                                         padding: EdgeInsets.all(0),
                                       ),
-                                      child: Icon(Icons.add, size: 30,
-                                          color: Colors
-                                              .white), // Utiliser une icône ou un texte court
+                                      child: Icon(Icons.add, size: 30,color: Colors.white), // Utiliser une icône ou un texte court
                                     ),
                                   ),
                                 ]
@@ -109,13 +106,16 @@ class HomelistPerso extends StatelessWidget {
                           context: context, nbList: 3),
                           children: data.listPerso.reversed.map((listPerso) {
                             return CardHome(
+                              nbVocabulaire:listPerso.listGuidVocabulary.length,
                               guid: listPerso.guid,
                               title: listPerso.title,
                               vocabulaireBegin: 0,
                               vocabulaireEnd: 19, // Remplacez par la valeur appropriée
                               backgroundColor: Color(listPerso.color), // Remplacez par la couleur appropriée
-                              editMode: true,
+                              editMode: listPerso.ownListShare,
+                              isListShare:listPerso.isListShare,
                               ownListShare: listPerso.ownListShare,
+                              isListPero:true,
                               paddingLevelBar: EdgeInsets.only(top: 5),
                             );
                           }).toList()

@@ -56,7 +56,7 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
               } else if (userDataSnapshot.hasData) {
                 StatisticalLength? statisticalData = userDataSnapshot.data;
                 return Container(
-                  width: widget.widthWidget * 0.80,
+                  width: widget.widthWidget * 0.90,
                   child:LevelChart(
                     level: statisticalData!.vocabLearnedCount,
                     levelMax: statisticalData.countVocabulaireAll,

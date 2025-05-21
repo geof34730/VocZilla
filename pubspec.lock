@@ -1204,6 +1204,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.0"
+  ribbon_widget:
+    dependency: "direct main"
+    description:
+      name: ribbon_widget
+      sha256: "02d57a021280fcd02f6326233de6b16ba503e9bd7d513eb37a38238f1be2f084"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.5"
   rxdart:
     dependency: "direct main"
     description:

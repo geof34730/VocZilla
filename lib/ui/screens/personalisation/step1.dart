@@ -123,7 +123,8 @@ class PersonnalisationStep1Screen extends StatelessWidget {
       );
       BlocProvider.of<VocabulaireUserBloc>(context).add(AddListPerso(newListPerso));
       BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(false,guidListPerso));
-      Navigator.pushNamed(context, "/personnalisation/step2/$guidListGenerate");
+
+      Navigator.pushReplacementNamed(context, "/personnalisation/step2/$guidListGenerate");
     }
     if (statutForm == statutListPerso.edit) {
       //MISE A JOUR DE LA LISTE PERSO

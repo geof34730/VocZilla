@@ -78,6 +78,7 @@ dependencies:
   in_app_update: ^4.2.3
   flutter_material_color_picker: ^1.2.0
   uuid: ^4.5.1
+  ribbon_widget: ^1.0.5
 
 
 flutter_launcher_icons:
