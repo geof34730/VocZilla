@@ -16,22 +16,26 @@ import '../elements/LevelChart.dart';
 // Assuming you have a VocabulaireUserBloc and VocabulaireUserState defined
 
 class CardHomeStatisticalWidget extends StatefulWidget {
-  final int? vocabulaireBegin;
-  final int? vocabulaireEnd;
+
   final dynamic barColorProgress;
   final dynamic barColorLeft;
   final dynamic paddingLevelBar;
   final double widthWidget;
   final ListPerso? listPerso;
+  final int? vocabulaireBegin;
+  final int? vocabulaireEnd;
+
+
 
   const CardHomeStatisticalWidget({super.key,
-    this.vocabulaireBegin,
-    this.vocabulaireEnd,
+
     required this.barColorProgress,
     required this.barColorLeft,
     required this.paddingLevelBar,
     required this.widthWidget,
     this.listPerso,
+    this.vocabulaireBegin,
+    this.vocabulaireEnd
 
   });
 
@@ -56,6 +60,7 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
                 vocabulaireBegin: widget.vocabulaireBegin,
                 vocabulaireEnd: widget.vocabulaireEnd,
               )
+
             ,
             builder: (context, userDataSnapshot) {
               if (userDataSnapshot.connectionState == ConnectionState.waiting) {

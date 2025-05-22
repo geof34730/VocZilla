@@ -29,9 +29,11 @@ class CardHome extends StatelessWidget {
   final ListPerso? listPerso;
   final String guid;
   final int nbVocabulaire;
+
   VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
   CardHome({
+
     this.nbVocabulaire=0,
     required this.title,
     this.vocabulaireBegin,

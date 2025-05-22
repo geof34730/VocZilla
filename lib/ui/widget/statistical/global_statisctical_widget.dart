@@ -11,20 +11,26 @@ import '../elements/LevelChart.dart';
 class GlobalStatisticalWidget extends StatelessWidget {
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
+  final String? guidListPerso;
 
-  const GlobalStatisticalWidget({super.key, this.vocabulaireBegin, this.vocabulaireEnd});
+  const GlobalStatisticalWidget({super.key, this.vocabulaireBegin, this.vocabulaireEnd, this.guidListPerso});
 
   @override
   Widget build(BuildContext context) {
+
+    Logger.Pink.log(guidListPerso);
+
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
       builder: (context, state) {
         Logger.Yellow.log("BlocBuilder VocabulaireUserBloc $state");
         if (state is VocabulaireUserLoaded ) {
-          Logger.Magenta.log("Update State: vocabulaireBegin: $vocabulaireBegin vocabulaireEnd : $vocabulaireEnd");
+
+
           return FutureBuilder<StatisticalLength>(
             future: VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
               vocabulaireBegin: vocabulaireBegin,
               vocabulaireEnd: vocabulaireEnd,
+              guidListPerso:guidListPerso
             ),
             builder: (context, userDataSnapshot) {
               if (userDataSnapshot.connectionState == ConnectionState.waiting) {

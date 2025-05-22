@@ -106,6 +106,7 @@ class HomelistPerso extends StatelessWidget {
                           context: context, nbList: 3),
                           children: data.listPerso.reversed.map((listPerso) {
                             return CardHome(
+
                               nbVocabulaire:listPerso.listGuidVocabulary.length,
                               guid: listPerso.guid,
                               title: listPerso.title,

@@ -15,7 +15,6 @@ class VocabulaireUserRepository {
   final LocalStorageService localStorageService = LocalStorageService();
   final VocabulaireServerService vocabulaireServerService = VocabulaireServerService();
 
-
   VocabulaireUserRepository();
 
   Future<void> initializeVocabulaireUserData() async {
@@ -137,7 +136,6 @@ class VocabulaireUserRepository {
   }
 
   Future<List<dynamic>> getVocabulaireUserDataNotLearned({required dynamic vocabulaireSpecificList}) async {
-
     final userDataJson = await localStorageService.getUserData();
     final vocabulaireLearned = userDataJson != null
         ? VocabulaireUser
@@ -155,8 +153,6 @@ class VocabulaireUserRepository {
     }
   }
 
-
-
   Future<List> getVocabulaireUserDataLearned({required dynamic  vocabulaireSpecificList}) async {
     final userDataJson = await localStorageService.getUserData();
     final vocabulaireLearned = userDataJson != null
@@ -173,12 +169,18 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({ int? vocabulaireBegin,  int? vocabulaireEnd}) async {
-    var data =[];
-    data = await VocabulaireRepository().getDataTop(); // Ensure this is awaited
-    vocabulaireBegin ??= 0;
-    vocabulaireEnd ??= data.length;
-    final List<dynamic> dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
+  Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({String? guidListPerso, int? vocabulaireBegin, int? vocabulaireEnd, ListPerso? listPerso,}) async {
+    var data = [];
+    late List<dynamic> dataSlice;
+    if(guidListPerso!=null){
+      dataSlice = await getVocabulaireListPersoByGuidListPerso(guidListPerso: guidListPerso);
+    }
+    else {
+      data = await VocabulaireRepository().getDataTop(); // Ensure this is awaited
+      vocabulaireBegin ??= 0;
+      vocabulaireEnd ??= data.length;
+      dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
+    }
     var vocabDataLearned = await getVocabulaireUserDataLearned( vocabulaireSpecificList: dataSlice);
     var vocabLearnedCount = vocabDataLearned.length;
     var countVocabulaireAll = dataSlice.length;
@@ -189,6 +191,30 @@ class VocabulaireUserRepository {
   }
 
   ////BEGIN LIST PERSO
+  Future<List<dynamic>> getVocabulaireListPersoByGuidListPerso({required String guidListPerso}) async {
+    VocabulaireUser? userData = await getVocabulaireUserData();
+
+    if (userData != null) {
+      ListPerso? listVocabulairePerso = userData.listPerso.firstWhere(
+            (list) => list.guid == guidListPerso,
+        orElse: () => ListPerso(guid: "guid", title: "title", color: 52),
+      );
+
+      if (listVocabulairePerso != null) {
+        List<String> vocabGuids = listVocabulairePerso.listGuidVocabulary;
+        List<dynamic> allVocabularies = await VocabulaireRepository().getDataTop();
+        List<dynamic> vocabularies = allVocabularies.where((vocab) {
+          return vocabGuids.contains(vocab['GUID']);
+        }).toList();
+
+        return vocabularies;
+      }
+    }
+
+    // Return an empty list if no data is found
+    return [];
+  }
+
   Future<void> addListPerso({required ListPerso listPerso}) async {
     VocabulaireUser? userData = await getVocabulaireUserData();
     if (userData != null) {

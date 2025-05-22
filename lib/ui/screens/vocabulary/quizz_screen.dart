@@ -53,7 +53,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
             return Center(child: CircularProgressIndicator());
           } else if (state is VocabulairesLoaded) {
 
-            Logger.Red.log("STATE VocabulairesLoaded: ${state.data}");
+            Logger.Blue.log("STATE VocabulairesLoaded: ${state.data}");
 
             final List<dynamic> data = state.data.vocabulaireList;
             bool isNotLearned = state.data.isVocabularyNotLearned ?? true;
@@ -79,10 +79,17 @@ class _QuizzScreenState extends State<QuizzScreen> {
             }
             return Column(
               children: [
-                GlobalStatisticalWidget(
-                  vocabulaireBegin: state.data.vocabulaireBegin,
-                  vocabulaireEnd: state.data.vocabulaireEnd,
-                ),
+                state.data.isListPerso
+                ?
+                  GlobalStatisticalWidget(
+                    guidListPerso: state.data.guidListPerso,
+                  )
+                :
+                  GlobalStatisticalWidget(
+                    vocabulaireBegin: state.data.vocabulaireBegin,
+                    vocabulaireEnd: state.data.vocabulaireEnd,
+                  ),
+
                 Text(context.loc.quizz_progression_title,
                     style: TextStyle(
                         fontSize: 12,
