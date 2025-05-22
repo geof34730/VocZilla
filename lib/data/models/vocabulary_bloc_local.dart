@@ -9,8 +9,10 @@ abstract class VocabularyBlocLocal with _$VocabularyBlocLocal {
     required String titleList,
     required List<dynamic> vocabulaireList,
     required int dataAllLength,
-    required int vocabulaireBegin,
-    required int vocabulaireEnd,
+    int? vocabulaireBegin,
+    int? vocabulaireEnd,
+    required bool isListPerso,
+    String? guidListPerso,
     required bool isVocabularyNotLearned,
   }) = _VocabularyBlocLocal;
 

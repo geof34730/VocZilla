@@ -2,8 +2,11 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/utils/logger.dart';
 import '../../../data/models/vocabulary_bloc_local.dart';
+import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
+import '../../../data/repository/vocabulaire_user_repository.dart';
 import 'vocabulaires_event.dart';
 import 'vocabulaires_state.dart';
 
@@ -19,6 +22,7 @@ class VocabulairesBloc extends Bloc<VocabulairesEvent, VocabulairesState> {
       }
     });
     on<getAllVocabulaire>(_onAllVocabulaire);
+    on<GetVocabulaireList>(_onGetVocabulaireList);
   }
 
   Future<void> _onAllVocabulaire(getAllVocabulaire event, Emitter<VocabulairesState> emit) async {
@@ -30,4 +34,22 @@ class VocabulairesBloc extends Bloc<VocabulairesEvent, VocabulairesState> {
       emit(VocabulairesError("Error all list: $e"));
     }
   }
+
+  Future<void> _onGetVocabulaireList(GetVocabulaireList event,Emitter<VocabulairesState> emit) async {
+    try {
+      VocabularyBlocLocal updatedUserData =  await VocabulaireRepository().getVocabulairesList(
+          isVocabularyNotLearned:event.isVocabularyNotLearned,
+          vocabulaireBegin: event.vocabulaireBegin,
+          vocabulaireEnd: event.vocabulaireEnd,
+          guidListPerso:event.guidListPerso,
+          titleList: event.titleList.toUpperCase()
+      );
+      Logger.Red.log("VocabulaireUserLoaded : $updatedUserData ");
+      emit(VocabulairesLoaded(updatedUserData));
+      } catch (e) {
+      emit(VocabulairesError("Error adding list: $e"));
+    }
+  }
+
+
 }

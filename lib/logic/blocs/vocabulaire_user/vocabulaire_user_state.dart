@@ -15,11 +15,8 @@ class VocabulaireUserLoaded extends VocabulaireUserState {
 
 class VocabulaireUserError extends VocabulaireUserState {
   final String error;
-
   VocabulaireUserError(this.error);
 }
-
-
 
 
 class VocabulaireUserUpdate extends VocabulaireUserState {}

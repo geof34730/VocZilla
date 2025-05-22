@@ -11,13 +11,25 @@ import '../models/vocabulary_bloc_local.dart';
 import '../services/vocabulaires_service.dart';
 
 class VocabulaireRepository {
-
   VocabulaireRepository();
-
   final VocabulaireService _vocabulaireService = VocabulaireService();
+  final VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
-    Future<VocabularyBlocLocal> goVocabulaireAllForListPersoList({required bool isVocabularyNotLearned, required String guidListPerso}) async {
-      VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
+  goVocabulaires({isVocabularyNotLearned = false, required BuildContext context, int? vocabulaireBegin, int? vocabulaireEnd, String? guidListPerso, required String titleList }){
+    BlocProvider.of<VocabulairesBloc>(context).add(GetVocabulaireList(
+        isVocabularyNotLearned:isVocabularyNotLearned,
+        vocabulaireBegin: vocabulaireBegin,
+        vocabulaireEnd: vocabulaireEnd,
+        guidListPerso:guidListPerso,
+        titleList: titleList.toUpperCase()
+    ));
+  }
+
+  goVocabulairesWithStata({required BuildContext context, required dynamic state, bool isVocabularyNotLearned = false}){
+    goVocabulaires(isVocabularyNotLearned: isVocabularyNotLearned,vocabulaireEnd: state.data.vocabulaireEnd,vocabulaireBegin:  state.data.vocabulaireBegin,guidListPerso:  state.data.guidListPerso,context: context,titleList:  state.data.titleList );
+  }
+
+   Future<VocabularyBlocLocal> goVocabulaireAllForListPersoList({required bool isVocabularyNotLearned, required String guidListPerso}) async {
       var data = await getDataTop();
       late List<dynamic> listPersoGuidVocabulary=[];
       Logger.Yellow.log("guidListPerso: $guidListPerso");
@@ -49,9 +61,11 @@ class VocabulaireRepository {
         vocabulaireBegin: 0,
         vocabulaireEnd: valuesList.length,
         isVocabularyNotLearned: isVocabularyNotLearned,
+        isListPerso: true,
+        guidListPerso:guidListPerso
       );
       if(isVocabularyNotLearned) {
-        final dataSliceNotLearned = await VocabulaireUserRepository().getVocabulaireUserDataNotLearned(vocabulaireSpecificList: dataSliceWithTitle.vocabulaireList,);
+        final dataSliceNotLearned = await _vocabulaireUserRepository.getVocabulaireUserDataNotLearned(vocabulaireSpecificList: dataSliceWithTitle.vocabulaireList,);
         final VocabularyBlocLocal updatedBlocLocal = dataSliceWithTitle.copyWith(
           vocabulaireList: dataSliceNotLearned,
         );
@@ -61,43 +75,52 @@ class VocabulaireRepository {
       return dataSliceWithTitle;
     }
 
-    goVocabulairesTop({required int vocabulaireBegin, required int vocabulaireEnd, required String titleList,isVocabularyNotLearned=false, required BuildContext context}) async {
+   Future<VocabularyBlocLocal> getVocabulairesList({String? guidListPerso, int? vocabulaireBegin, int? vocabulaireEnd, required String titleList,isVocabularyNotLearned=false}) async {
+      Logger.Pink.log("getVocabulairesList: $guidListPerso");
+      late VocabularyBlocLocal dataSliceWithTitle;
       var data =  await getDataTop();
-      Logger.Yellow.log("getDataTop() : $data");
-      final List<dynamic> dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
-      VocabularyBlocLocal dataSliceWithTitle=VocabularyBlocLocal(
-          titleList: titleList,
-          vocabulaireList: dataSlice,
-          dataAllLength: dataSlice.length,
-          vocabulaireBegin : vocabulaireBegin,
-          vocabulaireEnd :vocabulaireEnd,
-          isVocabularyNotLearned:isVocabularyNotLearned
-      );
+      if(guidListPerso!=null){
+        VocabulaireUser? userData = await _vocabulaireUserRepository.getVocabulaireUserData();
+        ListPerso? listPerso = userData?.listPerso.firstWhere((listPerso) => listPerso.guid == guidListPerso,
+          orElse: () => ListPerso(guid: "", title:"",listGuidVocabulary: [], color: 545454),
+        );
 
-    if(isVocabularyNotLearned) {
-      final dataSliceNotLearned = await VocabulaireUserRepository().getVocabulaireUserDataNotLearned(vocabulaireSpecificList: dataSliceWithTitle.vocabulaireList,);
-      final VocabularyBlocLocal updatedBlocLocal = dataSliceWithTitle.copyWith(
-        vocabulaireList: dataSliceNotLearned,
-      );
-      dataSliceWithTitle=updatedBlocLocal;
-
-      Logger.Pink.log("dataSliceNotLearned: $dataSliceWithTitle");
-    }
-    Logger.Yellow.log("getDataTop() final : $dataSliceWithTitle");
-    // Tu lui passes les data déjà chargées
-    context.read<VocabulairesBloc>().add(LoadVocabulairesData(dataSliceWithTitle));
+        final List<dynamic> dataSlice = data.where((vocab) => listPerso != null && listPerso.listGuidVocabulary.contains(vocab['GUID'])).toList();
+            dataSliceWithTitle = VocabularyBlocLocal(
+                titleList: titleList,
+                vocabulaireList: dataSlice,
+                dataAllLength: dataSlice.length,
+                isVocabularyNotLearned: isVocabularyNotLearned,
+                isListPerso: true,
+                guidListPerso: listPerso?.guid
+            );
+      }
+      else{
+            final List<dynamic> dataSlice = data.sublist(vocabulaireBegin!, vocabulaireEnd);
+            dataSliceWithTitle = VocabularyBlocLocal(
+                titleList: titleList,
+                vocabulaireList: dataSlice,
+                dataAllLength: dataSlice.length,
+                vocabulaireBegin: vocabulaireBegin,
+                vocabulaireEnd: vocabulaireEnd,
+                isVocabularyNotLearned: isVocabularyNotLearned,
+                isListPerso: false
+            );
+      }
+      if(isVocabularyNotLearned) {
+        final dataSliceNotLearned = await _vocabulaireUserRepository.getVocabulaireUserDataNotLearned(vocabulaireSpecificList: dataSliceWithTitle.vocabulaireList,);
+        final VocabularyBlocLocal updatedBlocLocal = dataSliceWithTitle.copyWith(
+          vocabulaireList: dataSliceNotLearned,
+        );
+        dataSliceWithTitle=updatedBlocLocal;
+      }
+      return dataSliceWithTitle;
   }
 
-    goVocabulairesThemes() {}
-
-    goVocabulairesPerso() {}
-
-    Future<List<dynamic>> getDataTop(){
+   Future<List<dynamic>> getDataTop(){
       var dataAll=_vocabulaireService.getAllData();
       return dataAll;
     }
-
-
 
 }
 

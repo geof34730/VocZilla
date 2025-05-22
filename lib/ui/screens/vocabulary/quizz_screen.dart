@@ -148,12 +148,10 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                   padding: const EdgeInsets.only(top: 20),
                                   child: ElevatedButton(
                                     onPressed: () {
-                                      _vocabulaireRepository.goVocabulairesTop(
-                                          vocabulaireBegin:  state.data.vocabulaireBegin,
-                                          vocabulaireEnd: state.data.vocabulaireEnd,
-                                          titleList: state.data.titleList,
-                                          isVocabularyNotLearned:_vocabulaireConnu==0 ? true : false,
-                                          context:context
+                                      _vocabulaireRepository.goVocabulairesWithStata(
+                                          context: context,
+                                          isVocabularyNotLearned: _vocabulaireConnu==0 ? true : false,
+                                          state:state
                                       );
                                       next();
                                     },

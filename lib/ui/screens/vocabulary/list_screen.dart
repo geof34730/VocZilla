@@ -23,7 +23,6 @@ class _ListScreenState extends State<ListScreen> {
   TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    var currentLocale = BlocProvider.of<LocalizationCubit>(context).state;
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
       builder: (context, state) {
         if (state is VocabulairesLoading) {
@@ -42,8 +41,6 @@ class _ListScreenState extends State<ListScreen> {
                       .contains(searchQuery.toLowerCase());
             }).toList();
           }
-
-
           final dataSource = data.isEmpty
               ? EmptyDataSource(context: context)
               : VocabularyDataSource(data: data, context: context);

@@ -4,6 +4,7 @@ import 'package:vobzilla/data/repository/vocabulaire_user_repository.dart';
 import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../../../core/utils/logger.dart';
+import '../../../data/repository/vocabulaire_repository.dart';
 import '../user/user_state.dart';
 
 
@@ -23,6 +24,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<AddListPerso>(_onAddListPerso);
     on<AddVocabulaireListPerso>(_onAddVocabulaireListPerso);
     on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
+
   }
 
   Future<void> _onCheckVocabulaireUserStatus(CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
@@ -31,7 +33,6 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       if (userData != null) {
         emit(VocabulaireUserLoaded(userData));
       } else {
-
         emit(VocabulaireUserError("No user data found."));
       }
     } catch (e) {
@@ -98,4 +99,6 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       emit(VocabulaireUserError("Error adding list: $e"));
     }
   }
+
+
 }

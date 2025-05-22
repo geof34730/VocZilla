@@ -23,13 +23,13 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
       children: [
         InkWell(
           onTap: () {
-            vocabulaireRepository.goVocabulairesTop(
-                context:context,
-                isVocabularyNotLearned:true,
-                vocabulaireBegin: state.data.vocabulaireBegin,
-                vocabulaireEnd: state.data.vocabulaireEnd,
-                titleList: state.data.titleList
+
+            vocabulaireRepository.goVocabulairesWithStata(
+                context: context,
+                isVocabularyNotLearned: true,
+                state:state
             );
+
           },
           child: Row(
             children: [
@@ -47,14 +47,11 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
         SizedBox(width: 16),
         InkWell(
           onTap: () {
-            vocabulaireRepository.goVocabulairesTop(
-                context:context,
-                isVocabularyNotLearned:false,
-                vocabulaireBegin: state.data.vocabulaireBegin,
-                vocabulaireEnd: state.data.vocabulaireEnd ,
-                titleList: state.data.titleList
+            vocabulaireRepository.goVocabulairesWithStata(
+                context: context,
+                isVocabularyNotLearned: false,
+                state:state
             );
-            // reset();
           },
           child: Row(
             children: [

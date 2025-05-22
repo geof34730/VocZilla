@@ -16,20 +16,23 @@ import '../elements/LevelChart.dart';
 // Assuming you have a VocabulaireUserBloc and VocabulaireUserState defined
 
 class CardHomeStatisticalWidget extends StatefulWidget {
-  final dynamic vocabulaireBegin;
-  final dynamic vocabulaireEnd;
+  final int? vocabulaireBegin;
+  final int? vocabulaireEnd;
   final dynamic barColorProgress;
   final dynamic barColorLeft;
   final dynamic paddingLevelBar;
   final double widthWidget;
+  final ListPerso? listPerso;
 
   const CardHomeStatisticalWidget({super.key,
-    required this.vocabulaireBegin,
-    required this.vocabulaireEnd,
+    this.vocabulaireBegin,
+    this.vocabulaireEnd,
     required this.barColorProgress,
     required this.barColorLeft,
     required this.paddingLevelBar,
     required this.widthWidget,
+    this.listPerso,
+
   });
 
   @override
@@ -42,17 +45,23 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
       builder: (context, state) {
         if (state is VocabulaireUserLoaded ) {
-          Logger.Magenta.log("Update State 1111");
           return FutureBuilder(
-            future: VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
-              vocabulaireBegin: widget.vocabulaireBegin,
-              vocabulaireEnd: widget.vocabulaireEnd,
-            ),
+            future: widget.listPerso != null
+              ?
+              VocabulaireUserRepository().getVocabulaireListPersoDataStatisticalLengthData(
+                  listPerso: widget.listPerso
+              )
+              :
+              VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
+                vocabulaireBegin: widget.vocabulaireBegin,
+                vocabulaireEnd: widget.vocabulaireEnd,
+              )
+            ,
             builder: (context, userDataSnapshot) {
               if (userDataSnapshot.connectionState == ConnectionState.waiting) {
                 return CircularProgressIndicator(); // Show a loading indicator while waiting
               } else if (userDataSnapshot.hasError) {
-                return Text('Erreur affichage Statistique 11'); // Handle error
+                return Text('Erreur affichage Statistique'); // Handle error
               } else if (userDataSnapshot.hasData) {
                 StatisticalLength? statisticalData = userDataSnapshot.data;
                 return Container(
@@ -82,14 +91,8 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
             },
           );
         } else {
-          Logger.Magenta.log("Unknown State 555");
-          return Text('Erreur affichage Statistique 3');
+          return Text('Erreur affichage Statistique');
         }
-
-
-
-
-
       },
     );
   }

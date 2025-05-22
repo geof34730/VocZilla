@@ -37,7 +37,7 @@ abstract class ListPerso with _$ListPerso {
     @JsonKey(name: "ownListShare")
     @Default(true) bool ownListShare,
     @JsonKey(name: "urlShare")
-    @Default('ss') String urlShare,
+    @Default('') String urlShare,
   }) = _ListPerso;
 
   factory ListPerso.fromJson(Map<String, dynamic> json) => _$ListPersoFromJson(json);

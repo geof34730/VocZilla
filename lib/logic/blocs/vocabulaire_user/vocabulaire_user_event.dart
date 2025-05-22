@@ -38,3 +38,6 @@ class DeleteVocabulaireListPerso extends VocabulaireUserEvent {
   final String guidVocabulaire;
   DeleteVocabulaireListPerso({required this.guidListPerso, required  this.guidVocabulaire});
 }
+
+
+

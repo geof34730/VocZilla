@@ -3,10 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/utils/enum.dart';
+import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
+import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
+import '../../../logic/blocs/vocabulaires/vocabulaires_event.dart';
 import '../../theme/appColors.dart';
 
 import '../statistical/card_home_statisctical_widget.dart';
@@ -18,12 +21,12 @@ class CardHome extends StatelessWidget {
   final bool editMode;
   final EdgeInsetsGeometry paddingLevelBar;
   final Color backgroundColor;
-  final int vocabulaireBegin;
-  final int vocabulaireEnd;
+  final int? vocabulaireBegin;
+  final int? vocabulaireEnd;
   final bool ownListShare;
   final bool isListShare;
   final bool isListPero;
-
+  final ListPerso? listPerso;
   final String guid;
   final int nbVocabulaire;
   VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
@@ -31,19 +34,26 @@ class CardHome extends StatelessWidget {
   CardHome({
     this.nbVocabulaire=0,
     required this.title,
-    required this.vocabulaireBegin,
-    required this.vocabulaireEnd,
+    this.vocabulaireBegin,
+    this.vocabulaireEnd,
     this.editMode = false,
     this.isListPero = false,
     this.ownListShare = false,
     this.isListShare = false,
     this.guid ="",
+    this.listPerso,
     this.backgroundColor = AppColors.colorTextTitle,
     this.paddingLevelBar = const EdgeInsets.all(0),
   });
   final _vocabulaireRepository=VocabulaireRepository();
+
+  String? guidListPerso = null;
+
   @override
   Widget build(BuildContext context) {
+    if (listPerso != null) {
+      guidListPerso = listPerso?.guid;
+    }
     return LayoutBuilder(builder: (context, constraints) {
       double widthWidget = constraints.maxWidth;
       return  (isListShare  && !ownListShare
@@ -87,17 +97,22 @@ class CardHome extends StatelessWidget {
             ),
           ),
 
-
          if(nbVocabulaire==0 && isListPero)...[
-           Padding(
-               padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
-               child: Text(
-                 "Vous n'avez aucun vocabulaire dans cette liste. Ajoutez-en en modifiant la liste",
-                 style: TextStyle(
-                   color: Colors.white,
+           Container(
+             height: 72,
+             padding: EdgeInsets.only(left:5, right:5),
+             child: Column(
+               mainAxisAlignment: MainAxisAlignment.center,
+               children: [
+                 Text(
+                   "Vous n'avez aucun vocabulaire dans cette liste. Ajoutez-en en modifiant la liste",
+                   style: TextStyle(
+                     color: Colors.white,
+                   ),
+                   textAlign: TextAlign.center,
                  ),
-                 textAlign: TextAlign.center,
-               )
+               ],
+             ),
            )
          ],
 
@@ -115,7 +130,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
                       Navigator.pushNamed(context, '/vocabulary/list');
                     },
                     iconContent: Icons.list,
@@ -125,7 +140,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulairesTop(context:context,isVocabularyNotLearned:true,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                      _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
                       Navigator.pushNamed(context, '/vocabulary/learn');
                     },
                     iconContent: Icons.school_rounded,
@@ -135,7 +150,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
                       Navigator.pushNamed(context, '/vocabulary/voicedictation');
                     },
                     iconContent: Icons.play_circle,
@@ -145,7 +160,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulairesTop(context:context,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: 49, titleList: title.toUpperCase());
+                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
                       Navigator.pushNamed(context, '/vocabulary/pronunciation');
                     },
                     iconContent: Icons.mic,
@@ -155,7 +170,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulairesTop(context:context,isVocabularyNotLearned:true,vocabulaireBegin: vocabulaireBegin, vocabulaireEnd: vocabulaireEnd, titleList: title.toUpperCase());
+                      _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
                       Navigator.pushNamed(context, '/vocabulary/quizz');
                     },
                     iconContent: Icons.assignment,
@@ -166,14 +181,25 @@ class CardHome extends StatelessWidget {
               ),
             ],
           ),
-            CardHomeStatisticalWidget(
-              widthWidget: widthWidget,
-              vocabulaireBegin: vocabulaireBegin,
-              vocabulaireEnd: vocabulaireEnd,
-              barColorProgress: backgroundColor == Colors.green ? Colors.white : Colors.green,
-              barColorLeft: backgroundColor == Colors.white ? Colors.orange : Colors.white,
-              paddingLevelBar: paddingLevelBar,
-            ),
+            if(isListPero)...[
+              CardHomeStatisticalWidget(
+                widthWidget: widthWidget,
+                listPerso: listPerso,
+                barColorProgress: backgroundColor == Colors.green ? Colors.white : Colors.green,
+                barColorLeft: backgroundColor == Colors.white ? Colors.orange : Colors.white,
+                paddingLevelBar: paddingLevelBar,
+              ),
+            ],
+            if(!isListPero)...[
+              CardHomeStatisticalWidget(
+                widthWidget: widthWidget,
+                vocabulaireBegin: vocabulaireBegin,
+                vocabulaireEnd: vocabulaireEnd,
+                barColorProgress: backgroundColor == Colors.green ? Colors.white : Colors.green,
+                barColorLeft: backgroundColor == Colors.white ? Colors.orange : Colors.white,
+                paddingLevelBar: paddingLevelBar,
+              ),
+            ]
           ],
 
           if (editMode) ...[
@@ -222,15 +248,12 @@ class CardHome extends StatelessWidget {
                   ],
                 ),
               ],
-
             )
           ],
-
         ],
       ),
     );
-
-
   }
+
 
 }

@@ -136,43 +136,52 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<List<dynamic>> getVocabulaireUserDataNotLearned({required List<dynamic> vocabulaireSpecificList}) async {
-    final userDataJson = await localStorageService.getUserData();
-    final vocabulaireLearned = userDataJson != null
-        ? VocabulaireUser.fromJson(userDataJson).listGuidVocabularyLearned
-        : <String>[];
-    return vocabulaireSpecificList
-        .where((vocab) => !vocabulaireLearned.contains(vocab['GUID']))
-        .toList();
-  }
+  Future<List<dynamic>> getVocabulaireUserDataNotLearned({required dynamic vocabulaireSpecificList}) async {
 
-  Future<List> getVocabulaireUserDataLearned({required List<dynamic> vocabulaireSpecificList}) async {
     final userDataJson = await localStorageService.getUserData();
     final vocabulaireLearned = userDataJson != null
         ? VocabulaireUser
         .fromJson(userDataJson)
         .listGuidVocabularyLearned
         : <String>[];
-    return vocabulaireSpecificList
-        .where((vocab) => vocabulaireLearned.contains(vocab['GUID']))
-        .toList();
+    Logger.Red.log("userDataJson: $userDataJson");
+    Logger.Red.log("vocabulaireLearned: $vocabulaireLearned");
+    if (vocabulaireSpecificList is ListPerso) {
+      return vocabulaireSpecificList.listGuidVocabulary.where((vocabListPerso) => !vocabulaireLearned.contains(vocabListPerso)).toList();
+    } else if (vocabulaireSpecificList is List<dynamic>) {
+      return vocabulaireSpecificList.where((vocab) => !vocabulaireLearned.contains(vocab['GUID'])).toList();
+    } else {
+      throw ArgumentError('vocabulaireSpecificList doit être de type ListPerso ou List<dynamic>');
+    }
+  }
+
+
+
+  Future<List> getVocabulaireUserDataLearned({required dynamic  vocabulaireSpecificList}) async {
+    final userDataJson = await localStorageService.getUserData();
+    final vocabulaireLearned = userDataJson != null
+        ? VocabulaireUser
+        .fromJson(userDataJson)
+        .listGuidVocabularyLearned
+        : <String>[];
+    if (vocabulaireSpecificList is ListPerso) {
+        return vocabulaireSpecificList.listGuidVocabulary.where((vocabListPerso) => vocabulaireLearned.contains(vocabListPerso)).toList();
+    } else if (vocabulaireSpecificList is List<dynamic>) {
+        return vocabulaireSpecificList.where((vocab) => vocabulaireLearned.contains(vocab['GUID'])).toList();
+    } else {
+      throw ArgumentError('vocabulaireSpecificList doit être de type ListPerso ou List<dynamic>');
+    }
   }
 
   Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({ int? vocabulaireBegin,  int? vocabulaireEnd}) async {
     var data =[];
     data = await VocabulaireRepository().getDataTop(); // Ensure this is awaited
-
     vocabulaireBegin ??= 0;
     vocabulaireEnd ??= data.length;
-
     final List<dynamic> dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
     var vocabDataLearned = await getVocabulaireUserDataLearned( vocabulaireSpecificList: dataSlice);
     var vocabLearnedCount = vocabDataLearned.length;
     var countVocabulaireAll = dataSlice.length;
-      if(vocabulaireBegin==0) {
-        Logger.Red.log(
-            "vocabulaireBegin : $vocabulaireBegin vocabLearnedCount : $vocabLearnedCount countVocabulaireAll: $countVocabulaireAll");
-      }
     return StatisticalLength(
         vocabLearnedCount: vocabLearnedCount,
         countVocabulaireAll: countVocabulaireAll
@@ -257,6 +266,7 @@ class VocabulaireUserRepository {
       Logger.Red.log('Erreur lors de l\'ajout du vocabulaire à la liste perso : $e');
     }
   }
+
   Future<void> deleteVocabulaireListPerso({required String guidListPerso, required String guidVocabulaire}) async {
     try {
       // Récupérer les données utilisateur actuelles
@@ -287,10 +297,13 @@ class VocabulaireUserRepository {
     }
   }
 
-
-
-
-
+  Future<StatisticalLength> getVocabulaireListPersoDataStatisticalLengthData({required ListPerso? listPerso}) async {
+    var vocabDataLearned = await getVocabulaireUserDataLearned( vocabulaireSpecificList: listPerso);
+    return StatisticalLength(
+        vocabLearnedCount: vocabDataLearned.length,
+        countVocabulaireAll: listPerso!.listGuidVocabulary.length
+    );
+  }
 }
 
 

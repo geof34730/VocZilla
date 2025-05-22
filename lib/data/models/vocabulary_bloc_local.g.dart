@@ -11,8 +11,10 @@ _VocabularyBlocLocal _$VocabularyBlocLocalFromJson(Map<String, dynamic> json) =>
       titleList: json['titleList'] as String,
       vocabulaireList: json['vocabulaireList'] as List<dynamic>,
       dataAllLength: (json['dataAllLength'] as num).toInt(),
-      vocabulaireBegin: (json['vocabulaireBegin'] as num).toInt(),
-      vocabulaireEnd: (json['vocabulaireEnd'] as num).toInt(),
+      vocabulaireBegin: (json['vocabulaireBegin'] as num?)?.toInt(),
+      vocabulaireEnd: (json['vocabulaireEnd'] as num?)?.toInt(),
+      isListPerso: json['isListPerso'] as bool,
+      guidListPerso: json['guidListPerso'] as String?,
       isVocabularyNotLearned: json['isVocabularyNotLearned'] as bool,
     );
 
@@ -24,5 +26,7 @@ Map<String, dynamic> _$VocabularyBlocLocalToJson(
       'dataAllLength': instance.dataAllLength,
       'vocabulaireBegin': instance.vocabulaireBegin,
       'vocabulaireEnd': instance.vocabulaireEnd,
+      'isListPerso': instance.isListPerso,
+      'guidListPerso': instance.guidListPerso,
       'isVocabularyNotLearned': instance.isVocabularyNotLearned,
     };

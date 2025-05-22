@@ -109,12 +109,11 @@ class HomelistPerso extends StatelessWidget {
                               nbVocabulaire:listPerso.listGuidVocabulary.length,
                               guid: listPerso.guid,
                               title: listPerso.title,
-                              vocabulaireBegin: 0,
-                              vocabulaireEnd: 19, // Remplacez par la valeur appropriée
                               backgroundColor: Color(listPerso.color), // Remplacez par la couleur appropriée
                               editMode: listPerso.ownListShare,
                               isListShare:listPerso.isListShare,
                               ownListShare: listPerso.ownListShare,
+                              listPerso: listPerso,
                               isListPero:true,
                               paddingLevelBar: EdgeInsets.only(top: 5),
                             );
