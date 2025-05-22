@@ -65,27 +65,27 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
                 onTap: (value) {
                   switch (value) {
                     case 0:
-                      _vocabulaireRepository.goVocabulairesWithStata(state:state, context:context);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context);
                       Navigator.pushReplacementNamed(context, '/vocabulary/list');
                       break;
                     case 1:
-                      _vocabulaireRepository.goVocabulairesWithStata(state:state, context:context, isVocabularyNotLearned: true);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, isVocabularyNotLearned: true);
                       Navigator.pushReplacementNamed(context, '/vocabulary/learn');
                       break;
                     case 2:
-                      _vocabulaireRepository.goVocabulairesWithStata(state:state, context:context);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context);
                       Navigator.pushReplacementNamed(context, '/vocabulary/voicedictation');
                       break;
                     case 3:
-                      _vocabulaireRepository.goVocabulairesWithStata(state:state, context:context);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context);
                       Navigator.pushReplacementNamed( context, '/vocabulary/pronunciation');
                       break;
                     case 4:
-                      _vocabulaireRepository.goVocabulairesWithStata(state:state, context:context, isVocabularyNotLearned: true);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, isVocabularyNotLearned: true);
                       Navigator.pushReplacementNamed(context, '/vocabulary/quizz');
                       break;
                     case 5:
-                      _vocabulaireRepository.goVocabulairesWithStata(state:state, context:context);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context);
                       Navigator.pushReplacementNamed(context, '/vocabulary/statistical');
                       break;
                   }

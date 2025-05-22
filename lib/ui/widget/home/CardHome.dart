@@ -225,7 +225,8 @@ class CardHome extends StatelessWidget {
                       ElevatedButtonCardHome(
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          _vocabulaireUserRepository.editListPerso(guid: guid);
+                          print(guid);
+                          Navigator.pushNamed(context, '/personnalisation/step1/$guid');
                         },
                         iconContent: Icons.edit,
                         context: context,

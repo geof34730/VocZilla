@@ -155,7 +155,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                   padding: const EdgeInsets.only(top: 20),
                                   child: ElevatedButton(
                                     onPressed: () {
-                                      _vocabulaireRepository.goVocabulairesWithStata(
+                                      _vocabulaireRepository.goVocabulairesWithState(
                                           context: context,
                                           isVocabularyNotLearned: _vocabulaireConnu==0 ? true : false,
                                           state:state

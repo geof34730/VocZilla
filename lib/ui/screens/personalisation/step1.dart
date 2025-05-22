@@ -22,12 +22,20 @@ class PersonnalisationStep1Screen extends StatelessWidget {
   PersonnalisationStep1Screen({super.key,this.guidListPerso});
   final titleList = TextEditingController();
   String  guidListGenerate = uuid.v4();
-  Color colorList = Colors.purple;
+  final ValueNotifier<Color> colorListNotifier = ValueNotifier<Color>(Colors.purple);
   late ButtonNotifier buttonNotifier = ButtonNotifier();
   @override
   Widget build(BuildContext context) {
     final  finalGuidList = guidListPerso ?? guidListGenerate;
     final statutListPerso statutForm = guidListPerso != null ? statutListPerso.edit : statutListPerso.create;
+
+    if (statutForm == statutListPerso.edit) {
+      VocabulaireUserRepository().getListPerso(guidListPerso: guidListPerso ?? "").then((value){
+        titleList.text = value!.title;
+        colorListNotifier.value = Color(value.color);
+        buttonNotifier.updateButtonState(true);
+      });
+    }
 
     return Column(
         mainAxisSize: MainAxisSize.max,
@@ -65,15 +73,21 @@ class PersonnalisationStep1Screen extends StatelessWidget {
                 ),
               )),
           Padding(
-              padding: EdgeInsets.only(left: 20,right: 20,top:10.00,bottom:10.0),
-              child:MaterialColorPicker(
-                allowShades: true,
-                onlyShadeSelection: false,
-                onColorChange: (Color color) {
-                  colorList = color;
-                },
-                selectedColor: colorList,
-              )),
+            padding: EdgeInsets.only(left: 20, right: 20, top: 10.00, bottom: 10.0),
+            child: ValueListenableBuilder<Color>(
+              valueListenable: colorListNotifier,
+              builder: (context, color, child) {
+                return MaterialColorPicker(
+                  allowShades: true,
+                  onlyShadeSelection: false,
+                  onColorChange: (Color color) {
+                    colorListNotifier.value = color;
+                  },
+                  selectedColor: color,
+                );
+              },
+            ),
+          ),
 
             Center(
               child:AnimatedBuilder(
@@ -119,17 +133,22 @@ class PersonnalisationStep1Screen extends StatelessWidget {
       final ListPerso newListPerso = ListPerso(
         guid: guidListGenerate,
         title: titleList.text,
-        color: colorList.value,
+        color: colorListNotifier.value.value,
       );
       BlocProvider.of<VocabulaireUserBloc>(context).add(AddListPerso(newListPerso));
-      BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(false,guidListPerso));
-
-      Navigator.pushReplacementNamed(context, "/personnalisation/step2/$guidListGenerate");
     }
     if (statutForm == statutListPerso.edit) {
       //MISE A JOUR DE LA LISTE PERSO
       Logger.Green.log("MISE A JOUR DE LA LISTE PERSO");
+      final ListPerso updateListPerso = ListPerso(
+        guid: guidListPerso,
+        title: titleList.text,
+        color: colorListNotifier.value.value,
+      );
+      BlocProvider.of<VocabulaireUserBloc>(context).add(UpdateListPerso(updateListPerso));
     }
+    BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(false,guidListPerso));
+    Navigator.pushReplacementNamed(context, "/personnalisation/step2/$guidListPerso");
   }
 
 

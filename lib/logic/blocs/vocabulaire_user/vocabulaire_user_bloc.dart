@@ -23,6 +23,9 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<DeleteListPerso>(_onDeleteListPerso);
     on<AddListPerso>(_onAddListPerso);
     on<AddVocabulaireListPerso>(_onAddVocabulaireListPerso);
+
+    on<UpdateListPerso>(_onUpdateListPerso);
+
     on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
 
   }
@@ -62,8 +65,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       if (updatedUserData != null) {
         emit(VocabulaireUserLoaded(updatedUserData));
       } else {
-        emit(
-            VocabulaireUserError("Failed to update user data after addition."));
+        emit(VocabulaireUserError("Failed to update user data after addition."));
       }
     } catch (e) {
       emit(VocabulaireUserError("Error adding list: $e"));
@@ -97,6 +99,21 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       }
     } catch (e) {
       emit(VocabulaireUserError("Error adding list: $e"));
+    }
+  }
+
+  Future<void> _onUpdateListPerso(UpdateListPerso event, Emitter<VocabulaireUserState> emit) async {
+    try {
+      await _vocabulaireUserRepository.updateListPerso(listPerso: event.listPerso);
+      await  VocabulaireUserRepository().updateListPerso(listPerso: event.listPerso);
+      VocabulaireUser? updatedUserData = await VocabulaireUserRepository().getVocabulaireUserData();
+      if (updatedUserData != null) {
+          emit(VocabulaireUserLoaded(updatedUserData));
+      } else {
+          emit(VocabulaireUserError("Failed to update user data after addition."));
+      }
+    } catch (e) {
+        emit(VocabulaireUserError("Error adding list: $e"));
     }
   }
 

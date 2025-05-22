@@ -24,7 +24,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
         InkWell(
           onTap: () {
 
-            vocabulaireRepository.goVocabulairesWithStata(
+            vocabulaireRepository.goVocabulairesWithState(
                 context: context,
                 isVocabularyNotLearned: true,
                 state:state
@@ -47,7 +47,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
         SizedBox(width: 16),
         InkWell(
           onTap: () {
-            vocabulaireRepository.goVocabulairesWithStata(
+            vocabulaireRepository.goVocabulairesWithState(
                 context: context,
                 isVocabularyNotLearned: false,
                 state:state

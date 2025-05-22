@@ -178,12 +178,21 @@ class VocabularyDataSource extends DataTableSource {
       cells: [
         DataCell(
             Center(
-              child:Text(vocabulaire['EN'] ?? '',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Roboto',
-                  ),
-                textAlign: TextAlign.center,
+              child: Row(
+                  children: [
+                    Icon(
+                      vocabulaire['isLearned']! ? Icons.check: Icons.close,
+                      color: vocabulaire['isLearned'] ? Colors.green : Colors.red,
+                      size: 16.0,
+                    ),
+                    Text(vocabulaire['EN']   ?? '',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto',
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ]
               )
             )
         ),
