@@ -27,7 +27,7 @@ function getAppfileInfo(appfilePath) {
 (async () => {
 
 
-
+/*
     try {
         execSync('fastlane deliver ...', { stdio: 'inherit' });
     } catch (e) {
@@ -38,7 +38,7 @@ function getAppfileInfo(appfilePath) {
         }
         throw e;
     }
-
+*/
 
 
 

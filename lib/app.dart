@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:vobzilla/global.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
@@ -14,6 +14,7 @@ import 'data/repository/auth_repository.dart';
 import 'data/repository/vocabulaire_user_repository.dart';
 import 'data/services/localstorage_service.dart';
 import 'data/services/vocabulaires_server_service.dart';
+import 'l10n/app_localizations.dart';
 import 'logic/blocs/BlocStateTracker.dart';
 import 'logic/blocs/auth/auth_bloc.dart';
 import 'logic/blocs/auth/auth_state.dart';

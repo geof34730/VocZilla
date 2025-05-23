@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 import 'package:vobzilla/ui/theme/appColors.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'package:vobzilla/core/utils/localization.dart';
+
+import '../../../l10n/app_localizations.dart';
 
 
 class DrawerLocalisation extends StatelessWidget {

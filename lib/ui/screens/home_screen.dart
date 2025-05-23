@@ -28,9 +28,7 @@ class HomeScreen extends StatelessWidget {
                     fontSize: 25,
                     fontFamily: GoogleFonts.titanOne().fontFamily)
             ),
-          GlobalStatisticalWidget(),
-
-
+            GlobalStatisticalWidget(),
             HomelistPerso(),
             Text(
               "De Petit Monstre à Titan",
@@ -67,14 +65,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ]
             ),
-
             Text(
                 "Classement TeamZilla",
                 style: TextStyle(
                     fontSize: 25,
                     fontFamily: GoogleFonts.titanOne().fontFamily)
             ),
-
             CardClassementGamer(position: 1),
             CardClassementGamer(position: 2),
             CardClassementGamer(position: 3),

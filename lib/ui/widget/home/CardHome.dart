@@ -183,25 +183,15 @@ class CardHome extends StatelessWidget {
               ),
             ],
           ),
-            if(isListPero)...[
               CardHomeStatisticalWidget(
                 widthWidget: widthWidget,
                 listPerso: listPerso,
-                barColorProgress: backgroundColor == Colors.green ? Colors.white : Colors.green,
-                barColorLeft: backgroundColor == Colors.white ? Colors.orange : Colors.white,
-                paddingLevelBar: paddingLevelBar,
-              ),
-            ],
-            if(!isListPero)...[
-              CardHomeStatisticalWidget(
-                widthWidget: widthWidget,
                 vocabulaireBegin: vocabulaireBegin,
                 vocabulaireEnd: vocabulaireEnd,
                 barColorProgress: backgroundColor == Colors.green ? Colors.white : Colors.green,
                 barColorLeft: backgroundColor == Colors.white ? Colors.orange : Colors.white,
                 paddingLevelBar: paddingLevelBar,
               ),
-            ]
           ],
 
           if (editMode) ...[

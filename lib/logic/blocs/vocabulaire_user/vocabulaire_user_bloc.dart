@@ -23,11 +23,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<DeleteListPerso>(_onDeleteListPerso);
     on<AddListPerso>(_onAddListPerso);
     on<AddVocabulaireListPerso>(_onAddVocabulaireListPerso);
-
     on<UpdateListPerso>(_onUpdateListPerso);
-
     on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
-
   }
 
   Future<void> _onCheckVocabulaireUserStatus(CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {

@@ -408,7 +408,7 @@ class _ListPerso implements ListPerso {
       final List<String> listGuidVocabulary = const <String>[],
       @JsonKey(name: "isListShare") this.isListShare = true,
       @JsonKey(name: "ownListShare") this.ownListShare = true,
-      @JsonKey(name: "urlShare") this.urlShare = 'ss'})
+      @JsonKey(name: "urlShare") this.urlShare = ''})
       : _listGuidVocabulary = listGuidVocabulary;
   factory _ListPerso.fromJson(Map<String, dynamic> json) =>
       _$ListPersoFromJson(json);

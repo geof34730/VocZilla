@@ -39,7 +39,7 @@ _ListPerso _$ListPersoFromJson(Map<String, dynamic> json) => _ListPerso(
           const <String>[],
       isListShare: json['isListShare'] as bool? ?? true,
       ownListShare: json['ownListShare'] as bool? ?? true,
-      urlShare: json['urlShare'] as String? ?? 'ss',
+      urlShare: json['urlShare'] as String? ?? '',
     );
 
 Map<String, dynamic> _$ListPersoToJson(_ListPerso instance) =>

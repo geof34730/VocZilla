@@ -83,33 +83,48 @@ class VocabulaireRepository {
       Logger.Pink.log("getVocabulairesList: $guidListPerso");
       late VocabularyBlocLocal dataSliceWithTitle;
       var data =  await getDataTop();
+
+      final List<dynamic> learnedVocabularies = await _vocabulaireUserRepository.getVocabulaireUserDataLearned(vocabulaireSpecificList: data);
+      final Set<String> learnedVocabulariesGuids = learnedVocabularies.map((vocabulaire) => vocabulaire['GUID'] as String).toSet();
       if(guidListPerso!=null){
         VocabulaireUser? userData = await _vocabulaireUserRepository.getVocabulaireUserData();
         ListPerso? listPerso = userData?.listPerso.firstWhere((listPerso) => listPerso.guid == guidListPerso,
           orElse: () => ListPerso(guid: "", title:"",listGuidVocabulary: [], color: 545454),
         );
-
         final List<dynamic> dataSlice = data.where((vocab) => listPerso != null && listPerso.listGuidVocabulary.contains(vocab['GUID'])).toList();
-            dataSliceWithTitle = VocabularyBlocLocal(
-                titleList: titleList,
-                vocabulaireList: dataSlice,
-                dataAllLength: dataSlice.length,
-                isVocabularyNotLearned: isVocabularyNotLearned,
-                isListPerso: true,
-                guidListPerso: listPerso?.guid
-            );
+        final List<dynamic> updatedDataSlice = dataSlice.map((vocabulaire) {
+          return {
+            ...vocabulaire as Map<String, dynamic>,
+            'isLearned': learnedVocabulariesGuids.contains(vocabulaire['GUID']),
+          };
+        }).toList();
+        dataSliceWithTitle = VocabularyBlocLocal(
+          titleList: titleList,
+          vocabulaireList: updatedDataSlice,
+          dataAllLength: updatedDataSlice.length,
+          isVocabularyNotLearned: isVocabularyNotLearned,
+          isListPerso: true,
+          guidListPerso: listPerso?.guid,
+        );
       }
       else{
-            final List<dynamic> dataSlice = data.sublist(vocabulaireBegin!, vocabulaireEnd);
-            dataSliceWithTitle = VocabularyBlocLocal(
-                titleList: titleList,
-                vocabulaireList: dataSlice,
-                dataAllLength: dataSlice.length,
-                vocabulaireBegin: vocabulaireBegin,
-                vocabulaireEnd: vocabulaireEnd,
-                isVocabularyNotLearned: isVocabularyNotLearned,
-                isListPerso: false,
-            );
+          final List<dynamic> dataSlice = data.sublist(vocabulaireBegin!, vocabulaireEnd);
+          final List<dynamic> updatedDataSlice = dataSlice.map((vocabulaire) {
+            return {
+              ...vocabulaire as Map<String, dynamic>,
+              'isLearned': learnedVocabulariesGuids.contains(vocabulaire['GUID']),
+            };
+          }).toList();
+
+          dataSliceWithTitle = VocabularyBlocLocal(
+            titleList: titleList,
+            vocabulaireList: updatedDataSlice,
+            dataAllLength: updatedDataSlice.length,
+            vocabulaireBegin: vocabulaireBegin,
+            vocabulaireEnd: vocabulaireEnd,
+            isVocabularyNotLearned: isVocabularyNotLearned,
+            isListPerso: false,
+          );
       }
 
       if(isVocabularyNotLearned) {
@@ -119,6 +134,7 @@ class VocabulaireRepository {
         );
         dataSliceWithTitle=updatedBlocLocal;
       }
+      Logger.Yellow.log(dataSliceWithTitle);
       return dataSliceWithTitle;
   }
 

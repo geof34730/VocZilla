@@ -196,6 +196,8 @@ class VocabularyDataSource extends DataTableSource {
         DataCell(
             Center(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(
                       vocabulaire['isLearned'] ? Icons.check: Icons.close,

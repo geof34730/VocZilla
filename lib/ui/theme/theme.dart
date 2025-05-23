@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:vobzilla/ui/theme/appColors.dart';
 
 class VobdzillaTheme {
@@ -57,11 +56,14 @@ class VobdzillaTheme {
         foregroundColor: AppColors.textSecondary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
-
       textTheme: TextTheme(
         titleSmall: defaultTextStyle,
         bodyLarge: defaultTextStyle,
-        headlineMedium: GoogleFonts.montserrat(fontSize: 24, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
+        headlineMedium: GoogleFonts.montserrat(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimary,
+        ),
       ),
       buttonTheme: ButtonThemeData(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -72,17 +74,25 @@ class VobdzillaTheme {
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.accent,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          textStyle: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),
+          textStyle: GoogleFonts.poppins(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           side: BorderSide(color: AppColors.secondary),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          textStyle: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.primary),
+          textStyle: GoogleFonts.poppins(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: AppColors.primary,
+          ),
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme : CardThemeData(
         color: AppColors.cardBackground,
         elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -99,5 +109,4 @@ class VobdzillaTheme {
       contentPadding: EdgeInsets.symmetric(horizontal: 15.0),
     );
   }
-
 }
