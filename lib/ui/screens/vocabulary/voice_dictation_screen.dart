@@ -73,12 +73,6 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                           iconData: Icons.play_arrow)
                       .buttonPlay(),
                 ),
-
-
-
-
-
-
                 CustomTextZillaField(
                   ButtonNextNotifier: true,
                   buttonNotifier:buttonNotifier,

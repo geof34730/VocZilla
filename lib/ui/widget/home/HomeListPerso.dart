@@ -31,7 +31,7 @@ class HomelistPerso extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                          "Mes listes persos",
+                          context.loc.home_title_my_list_perso,
                           style: TextStyle(
                               fontSize: 25,
                               fontFamily: GoogleFonts
@@ -68,7 +68,7 @@ class HomelistPerso extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Créez et personnalisez vos propres listes de vocabulaire pour apprendre et réviser efficacement les mots de votre choix.",
+                                    context.loc.home_description_list_perso,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         height: 1.2,

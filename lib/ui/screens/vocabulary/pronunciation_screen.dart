@@ -38,7 +38,6 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
   void initState() {
     super.initState();
     _checkPermissions();
-    Logger.Magenta.log('initState');
     _barHeights = List.generate(10, (index) => 10);
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 600),
@@ -380,7 +379,7 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
 
 
   void _onSpeechResult(SpeechRecognitionResult result) {
-    Logger.Yellow.log('Résultat de la reconnaissance vocale : ${result.recognizedWords} $isRecording ${result.finalResult}');
+    //Logger.Yellow.log('Résultat de la reconnaissance vocale : ${result.recognizedWords} $isRecording ${result.finalResult}');
     setState(() {
       _lastWords = replaceNumbersWithWords(result.recognizedWords);
       if (result.finalResult) {

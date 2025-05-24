@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import '../../core/utils/logger.dart';
 import '../../data/repository/user_repository.dart';
 import '../../global.dart';
@@ -26,7 +27,7 @@ class SubscriptionScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 15, bottom: 0),
                       child: Text(
-                        "Votre période d'essai gratuite de $daysFreeTrial jours est terminée.",
+                        context.loc.freetrial_info1.replaceAll("\$daysFreeTrial", "$daysFreeTrial"),
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
@@ -41,10 +42,10 @@ class SubscriptionScreen extends StatelessWidget {
                 return SizedBox();
             }
           ),
-          Padding(
+          Center(child:Padding(
             padding: const EdgeInsets.only(top: 15, bottom: 0),
             child: Text(
-              'Rejoignez-nous et débloquez un monde de possibilités avec nos abonnements exclusifs!',
+              context.loc.freetrial_info2,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -52,7 +53,7 @@ class SubscriptionScreen extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-          ),
+          )),
           BlocBuilder<PurchaseBloc, PurchaseState>(
             builder: (context, state) {
               if (state is ProductsLoaded) {
@@ -96,8 +97,8 @@ class SubscriptionScreen extends StatelessWidget {
                                             Text(
                                                 (product.id ==
                                                     idSubscriptionMensuel
-                                                    ? '/mois'
-                                                    : '/année'),
+                                                    ? '/${context.loc.mois}'
+                                                    : '/${context.loc.annee}'),
                                                 style: TextStyle(
                                                   fontFamily: GoogleFonts
                                                       .titanOne()
@@ -108,8 +109,8 @@ class SubscriptionScreen extends StatelessWidget {
                                           ])),
                                   title: Text(
                                     (product.id == idSubscriptionMensuel
-                                        ? 'Abonnement Mensuel'
-                                        : 'Abonnement Annuel'),
+                                        ? context.loc.abonnement_mensuel
+                                        : context.loc.abonnement_annuel),
                                     style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
@@ -117,13 +118,12 @@ class SubscriptionScreen extends StatelessWidget {
                                   ),
                                   subtitle: Text(
                                     (product.id == idSubscriptionMensuel
-                                        ? 'Libre comme l’air : résiliez quand vous voulez.'
-                                        : 'Profitez pleinement de votre expérience tout en réalisant des économies.'),
+                                        ? context.loc.abonnement_descriptif_mensuel
+                                        : context.loc.abonnement_descriptif_annuel),
                                   ),
                                 ),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment
-                                      .center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(padding: EdgeInsets.only(
                                         bottom: 10),
@@ -133,7 +133,7 @@ class SubscriptionScreen extends StatelessWidget {
                                                 .read<PurchaseBloc>()
                                                 .add(BuyProduct(product));
                                           },
-                                          child: Text("S'abonner"),
+                                          child: Text(context.loc.button_sabonner),
                                         )
                                     ),
                                     const SizedBox(width: 8),
@@ -148,10 +148,8 @@ class SubscriptionScreen extends StatelessWidget {
                   // Add other widgets here
                 );
               } else if (state is PurchaseFailure) {
-                Logger.Red.log("*************** Error: ${state.error}");
                 return Center(child: Text('Error: ${state.error}'));
               } else {
-                Logger.Cyan.log('*************** Loading products...');
                 return Center(child: CircularProgressIndicator());
               }
             },

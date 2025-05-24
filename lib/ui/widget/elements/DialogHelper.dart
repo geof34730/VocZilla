@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/blocs/user/user_bloc.dart';
 import 'package:vobzilla/logic/blocs/user/user_state.dart';
 import '../../../app_route.dart';
@@ -24,7 +25,7 @@ class DialogHelper {
                     borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 contentPadding: EdgeInsets.only(top: 10.0),
                 title: Text(
-                  "Profitez de votre période d’essai gratuite !",
+                  context.loc.widget_dialogHelper_showfreetrialdialog_description1,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,
@@ -42,7 +43,7 @@ class DialogHelper {
                         child: RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
-                            text: 'Bienvenue ! Vous bénéficiez actuellement d’une période d’essai gratuite de ',
+                            text: '${context.loc.widget_dialogHelper_showfreetrialdialog_description2} ',
                             style: TextStyle(
                               fontSize: 15,
                               fontFamily: GoogleFonts
@@ -53,7 +54,7 @@ class DialogHelper {
                             ),
                             children: <TextSpan>[
                               TextSpan(
-                                text: '$daysFreeTrial jours',
+                                text: '$daysFreeTrial ${context.loc.widget_dialogHelper_showfreetrialdialog_days}',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
@@ -64,7 +65,7 @@ class DialogHelper {
                                 ),
                               ),
                               TextSpan(
-                                text: " pour découvrir toutes les fonctionnalités de notre application.",
+                                text: " ${context.loc.widget_dialogHelper_showfreetrialdialog_description3}",
                               ),
                             ],
                           ),
@@ -74,7 +75,7 @@ class DialogHelper {
                         padding: EdgeInsets.only(
                             top: 0, bottom: 0, left: 20, right: 20),
                         child: Text(
-                          'Il vous reste ${daysLeft} jours',
+                          '${context.loc.widget_dialogHelper_showfreetrialdialog_description4} ${daysLeft} ${context.loc.widget_dialogHelper_showfreetrialdialog_days}',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             height: 1.2,
@@ -91,7 +92,7 @@ class DialogHelper {
                         padding: EdgeInsets.only(
                             top: 0, bottom: 0, left: 20, right: 20),
                         child: Text(
-                          'd’essai gratuits',
+                          context.loc.widget_dialogHelper_showfreetrialdialog_description5,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             height: 1.0,
@@ -108,7 +109,7 @@ class DialogHelper {
                             top: 20, bottom: 20, left: 20, right: 20),
                         child: Text(
                           textAlign: TextAlign.center,
-                          "Ne laissez pas votre expérience s’interrompre ! Choisissez l’abonnement qui vous convient et continuez à profiter sans interruption :",
+                          "${context.loc.widget_dialogHelper_showfreetrialdialog_description6} :",
                           style: TextStyle(
                             height: 1.2,
                             fontSize: 15,
@@ -128,13 +129,13 @@ class DialogHelper {
                       Navigator.of(dialogContext).pop();
                       Navigator.pushNamed(dialogContext, AppRoute.subscription);
                     },
-                    child: Text("S'abonner"),
+                    child: Text(context.loc.button_sabonner),
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.of(dialogContext).pop();
                     },
-                    child: Text("Plus tard"),
+                    child: Text(context.loc.widget_dialogHelper_showfreetrialdialog_later),
                   ),
                 ],
               );

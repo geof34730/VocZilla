@@ -20,13 +20,13 @@ class HomeLogoutScreen extends StatelessWidget {
                   children: [
                     Image.asset("assets/brand/logo_landing.png"),
                    // TitleSite(typoSize: 80),
-                    Text("Booste ton anglais !",
+                    Text(context.loc.home_notlogged_accroche1,
                         style: TextStyle(
                             fontSize: 25,
                             fontFamily: GoogleFonts.titanOne().fontFamily)),
                     SizedBox(height: 5),
                     Text(
-                        "Tu veux enrichir ton vocabulaire anglais ?",
+                        context.loc.home_notlogged_accroche2,
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -41,31 +41,31 @@ class HomeLogoutScreen extends StatelessWidget {
                         style: Theme.of(context).textTheme.titleSmall?.copyWith(
                           fontSize: 14,
                         ),
-                        children: const <TextSpan>[
-                          TextSpan(text: 'Accède à '),
-                          TextSpan(text: '5 600 mots essentiels', style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(text: ", triés par fréquence d'utilisation pour apprendre les mots qui comptent vraiment."),
+                        children:  <TextSpan>[
+                          TextSpan(text: context.loc.home_notlogged_accroche3),
+                          TextSpan(text: context.loc.home_notlogged_accroche4, style: TextStyle(fontWeight: FontWeight.bold)),
+                          TextSpan(text: ", ${context.loc.home_notlogged_accroche5}"),
                         ],
                       ),
                     ),
                     SizedBox(height: 15),
                     Text(
-                        "📈 Méthode rapide et efficace",
+                        "📈 ${context.loc.home_notlogged_accroche6}",
                         textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 8),
                     Text(
-                        "🎯 Apprends les mots les plus utiles en priorité",
+                        "🎯 ${context.loc.home_notlogged_accroche7}",
                         textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 8),
                     Text(
-                        "🧠 Mémorisation optimisée pour progresser vite",
+                        "🧠 ${context.loc.home_notlogged_accroche8}",
                         textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 20),
                     Text(
-                        "Prêt à dominer la langue de Shakespeare ? ",
+                        context.loc.home_notlogged_accroche9,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -76,7 +76,7 @@ class HomeLogoutScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.pushNamed(context, '/login');
                         },
-                        child: Text("C'est parti !")
+                        child: Text(context.loc.home_notlogged_button_go)
                     )
                   ]
               )

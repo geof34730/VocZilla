@@ -35,7 +35,6 @@ Drawer DrawerNavigation({required BuildContext context}) {
               child: BlocBuilder<AuthBloc, AuthState>(
                 builder: (context, state) {
                   if (state is AuthAuthenticated ) {
-                    Logger.Yellow.log("*************************rewrite drawer Navigation : ${state.user?.displayName}");
                     return Column(children: [
                       dataUserRepository.getPhotoURL() != ''
                           ? ProfilePicture(
@@ -69,7 +68,6 @@ Drawer DrawerNavigation({required BuildContext context}) {
             title: InkWell(
               onTap: () {
                 closeDrawer(context);
-                print("statistiques");
               },
               child: Text("Mes statistiques"),
             ),
@@ -80,7 +78,6 @@ Drawer DrawerNavigation({required BuildContext context}) {
             title: InkWell(
               onTap: () {
                 closeDrawer(context);
-                print("mon profil");
               },
               child: Text("Mon profil"),
             ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
@@ -11,10 +12,8 @@ import '../../widget/form/CustomTextField.dart';
 
 class ProfileUpdateScreen extends StatelessWidget {
   ProfileUpdateScreen({super.key});
-  final TextEditingController firstNameController =
-      TextEditingController(text: 'geogeo');
-  final TextEditingController lastNameController =
-      TextEditingController(text: 'la molossa');
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController =  TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,20 +45,20 @@ class ProfileUpdateScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(bottom: 10),
-                  child: Text("Finaliser votre inscription",
+                  child: Text(context.loc.profil_update_title,
                       style: TextStyle(
                           fontSize: 25,
                           fontFamily: GoogleFonts.titanOne().fontFamily)),
                 ),
                 CustomTextField(
                   controller: firstNameController,
-                  labelText: 'Prénom',
-                  hintText: 'Entrez votre prénom',
+                  labelText: context.loc.login_prenom,
+                  hintText: context.loc.login_entrer_prenom,
                 ),
                 CustomTextField(
                   controller: lastNameController,
-                  labelText: 'Nom',
-                  hintText: 'Entrez votre nom',
+                  labelText: context.loc.login_nom,
+                  hintText: context.loc.login_entrer_nom,
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 5.0),
@@ -70,7 +69,7 @@ class ProfileUpdateScreen extends StatelessWidget {
                     onPressed: () async {
                      context.read<AuthBloc>().add(UpdateDisplayNameEvent('${firstNameController.text} ${lastNameController.text}'));
                     },
-                    child: Text("S'inscrire"),
+                    child: Text(context.loc.login_sinscrire),
                   ),
                 ),
               ],

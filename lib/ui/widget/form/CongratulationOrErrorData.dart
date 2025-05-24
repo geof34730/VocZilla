@@ -11,7 +11,7 @@ Widget CongratulationOrErrorData({required int vocabulaireConnu,required BuildCo
          children: [
            Padding(
                padding: EdgeInsets.only(top: 40),
-               child: Text("✅ Bravo !!!",
+               child: Text("✅ ${context.loc.widget_congratulation_bravo} !!!",
                  style: TextStyle(
                      color: Colors.green,
                      fontSize: 35,
@@ -19,7 +19,7 @@ Widget CongratulationOrErrorData({required int vocabulaireConnu,required BuildCo
                  ),
                )
            ),
-           Text("vous avez terminé d'apprendre cette Liste",
+           Text(context.loc.widget_congratulation_message,
              style: TextStyle(
                color: Colors.green,
                fontSize: 20,

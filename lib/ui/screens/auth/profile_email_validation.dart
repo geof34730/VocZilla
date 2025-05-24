@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import '../../../data/repository/auth_repository.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
@@ -23,11 +24,7 @@ class ProfileEmailValidation extends StatelessWidget {
       listener: (context, state) {
         if (state is AuthAuthenticated && state.user!.emailVerified) {
           if (context.mounted) {
-            Navigator.pushNamedAndRemoveUntil(
-              context,
-              "/",
-                  (Route<dynamic> route) => false,
-            );
+            Navigator.pushNamedAndRemoveUntil( context,"/",(Route<dynamic> route) => false);
           }
         }
       },
@@ -48,7 +45,7 @@ class ProfileEmailValidation extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "Merci de vous être inscrit ! ",
+                      context.loc.email_validation_merci_register,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 30,
@@ -57,7 +54,7 @@ class ProfileEmailValidation extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      "Un email de vérification a été envoyé à votre adresse email. ${user.email}",
+                      "${context.loc.email_validation_msg_email_send} ${user.email}",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 18,
@@ -66,29 +63,28 @@ class ProfileEmailValidation extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      "Veuillez vérifier votre boîte de réception et suivre les instructions pour valider votre adresse email. Cela nous permettra de confirmer votre inscription et de vous donner accès à toutes les fonctionnalités de notre service.",
+                      context.loc.email_validation_instruction,
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 18),
                     ),
                     SizedBox(height: 10),
                     Text(
-                      "Si vous ne voyez pas l'email dans votre boîte de réception, pensez à vérifier votre dossier de spam ou de courriers indésirables.",
+                      context.loc.email_validation_help,
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 18),
                     ),
                     SizedBox(height: 10),
                     Text(
-                      "Merci de votre confiance !",
+                      context.loc.email_validation_merci_register2,
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 18),
                     ),
                     SizedBox(height: 15),
                     ElevatedButton(
                       onPressed: () {
-                        print("send email");
                         user.sendEmailVerification();
                       },
-                      child: Text("Recevoir un nouvel email de vérification"),
+                      child: Text(context.loc.send_mail),
                     ),
                     SizedBox(height: 15),
                   ],

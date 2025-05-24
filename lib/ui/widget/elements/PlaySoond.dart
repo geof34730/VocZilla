@@ -23,16 +23,13 @@ class PlaySoond {
   });
 
   Widget buttonPlay() {
-    print("PlaySoond buttonPlay ${guidVocabulaire}");
     return Material(
       shape: CircleBorder(),
       color: buttonColor, // Background color of the CircleAvatar
       child: InkWell(
         customBorder: CircleBorder(),
         onTap: () {
-          Logger.Yellow.log('onTap');
-          Logger.Yellow.log(guidVocabulaire);
-          playAudio(guidVocabulaire: guidVocabulaire);
+            playAudio(guidVocabulaire: guidVocabulaire);
           if (onpressedActionSup != null) {
             onpressedActionSup;
           }
@@ -51,8 +48,6 @@ class PlaySoond {
   }
 
   void playAudio({required String guidVocabulaire}) async {
-    Logger.Yellow.log('onTap');
-    Logger.Yellow.log(guidVocabulaire);
     await player.stop();
     await player.play(AssetSource('audios/gcloud/${guidVocabulaire}.mp3'));
   }

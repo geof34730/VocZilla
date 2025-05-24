@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 
 import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
@@ -40,7 +41,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
 
                 },
               ),
-              Text("vocabulaire encore à apprendre"),
+              Text(context.loc.widget_radiochoicevocabularylearnedornot_choice1),
             ],
           ),
         ),
@@ -61,7 +62,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
                 onChanged: (int? value) {
                 },
               ),
-              Text("tous les vocabulaires"),
+              Text(context.loc.widget_radiochoicevocabularylearnedornot_choice2),
             ],
           ),
         ),

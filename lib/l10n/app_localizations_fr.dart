@@ -54,7 +54,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get learn_view_carte => 'Cliquez sur la carte pour voir la réponse';
 
   @override
-  String get button_next => 'Suivant';
+  String get button_next => 'Suite';
 
   @override
   String get error_loading => 'Erreur de chargement';
@@ -109,4 +109,190 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get quizz_saisie_in => 'Saisissez la traduction en';
+
+  @override
+  String get home_title_progresse => 'Ma progression de titan';
+
+  @override
+  String get home_title_my_list_perso => 'Mes listes persos';
+
+  @override
+  String get home_title_list_defined => 'De petit monstre à Titan';
+
+  @override
+  String get home_description_list_perso => 'Créez et personnalisez vos propres listes de vocabulaire pour apprendre et réviser efficacement les mots de votre choix.';
+
+  @override
+  String get home_title_classement => 'Classement TeamZilla';
+
+  @override
+  String get home_notlogged_accroche1 => 'Booste ton anglais !';
+
+  @override
+  String get home_notlogged_accroche2 => 'Tu veux enrichir ton vocabulaire anglais ?';
+
+  @override
+  String get home_notlogged_accroche3 => 'Accède à ';
+
+  @override
+  String get home_notlogged_accroche4 => '5 600 mots essentiels';
+
+  @override
+  String get home_notlogged_accroche5 => 'triés par fréquence d\'utilisation pour apprendre les mots qui comptent vraiment.';
+
+  @override
+  String get home_notlogged_accroche6 => 'Méthode rapide et efficace';
+
+  @override
+  String get home_notlogged_accroche7 => 'Apprends les mots les plus utiles en priorité';
+
+  @override
+  String get home_notlogged_accroche8 => 'Mémorisation optimisée pour progresser vite';
+
+  @override
+  String get home_notlogged_accroche9 => 'Prêt à dominer la langue de Shakespeare ?';
+
+  @override
+  String get home_notlogged_button_go => 'C\'est parti !';
+
+  @override
+  String get freetrial_info1 => 'Votre période d\'essai gratuite de \$daysFreeTrial jours est terminée';
+
+  @override
+  String get freetrial_info2 => 'Rejoignez-nous et débloquez un monde de possibilités avec nos abonnements exclusifs!';
+
+  @override
+  String get mois => 'mois';
+
+  @override
+  String get annee => 'année';
+
+  @override
+  String get abonnement_mensuel => 'Abonnement Mensuel';
+
+  @override
+  String get abonnement_annuel => 'Abonnement Annuel';
+
+  @override
+  String get abonnement_descriptif_mensuel => 'Libre comme l’air : résiliez quand vous voulez.';
+
+  @override
+  String get abonnement_descriptif_annuel => 'Profitez pleinement de votre expérience tout en réalisant des économies.';
+
+  @override
+  String get button_sabonner => 'S\'abonner';
+
+  @override
+  String get login_se_connecter => 'Se connecter';
+
+  @override
+  String get login_email => 'Email';
+
+  @override
+  String get login_entrer_email => 'Entrez votre email';
+
+  @override
+  String get login_prenom => 'Prénom';
+
+  @override
+  String get login_entrer_prenom => 'Entrez votre prénom';
+
+  @override
+  String get login_nom => 'Nom';
+
+  @override
+  String get login_entrer_nom => 'Entrez votre nom';
+
+  @override
+  String get login_mot_de_passe => 'Mot de passe';
+
+  @override
+  String get login_entrer_mot_de_passe => 'Entrez votre mot de passe';
+
+  @override
+  String get login_ou_connecter_vous_avec => 'Ou connectez-vous avec';
+
+  @override
+  String get login_avec_google => 'Avec Google';
+
+  @override
+  String get login_avec_facebook => 'Avec Facebook';
+
+  @override
+  String get login_avec_apple => 'Avec Apple';
+
+  @override
+  String get login_no_compte => 'Vous n\'avez pas de compte ?';
+
+  @override
+  String get login_inscrivez_vous => 'Inscrivez-vous';
+
+  @override
+  String get login_sinscrire => 'S\'inscrire';
+
+  @override
+  String get login_ou_inscrivez_vous_avec => 'Ou inscrivez-vous avec';
+
+  @override
+  String get email_validation_merci_register => 'Merci de vous être inscrit !';
+
+  @override
+  String get email_validation_msg_email_send => 'Un email de vérification a été envoyé à votre adresse email';
+
+  @override
+  String get email_validation_instruction => 'Veuillez vérifier votre boîte de réception et suivre les instructions pour valider votre adresse email. Cela nous permettra de confirmer votre inscription et de vous donner accès à toutes les fonctionnalités de notre service.';
+
+  @override
+  String get email_validation_help => 'Si vous ne voyez pas l\'email dans votre boîte de réception, pensez à vérifier votre dossier de spam ou de courriers indésirables.';
+
+  @override
+  String get email_validation_merci_register2 => 'Merci de votre confiance !';
+
+  @override
+  String get send_mail => 'Recevoir un nouvel email de vérification';
+
+  @override
+  String get personnalisation_step1_title_list => 'Titre de votre liste';
+
+  @override
+  String get personnalisation_step1_color_choice => 'Choisissez la couleur de votre liste';
+
+  @override
+  String get profil_update_title => 'Finaliser votre inscription';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description1 => 'Profitez de votre période d’essai gratuite !';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Bienvenue ! Vous bénéficiez actuellement d’une période d’essai gratuite de';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_days => 'jour(s)';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'pour découvrir toutes les fonctionnalités de notre application.';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Il vous reste';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description5 => 'd’essai gratuits';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Ne laissez pas votre expérience s’interrompre ! Choisissez l’abonnement qui vous convient et continuez à profiter sans interruption';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_later => 'Plus tard';
+
+  @override
+  String get widget_congratulation_bravo => 'Bravo';
+
+  @override
+  String get widget_congratulation_message => 'vous avez terminé d\'apprendre cette Liste';
+
+  @override
+  String get widget_radiochoicevocabularylearnedornot_choice1 => 'vocabulaire encore à apprendre';
+
+  @override
+  String get widget_radiochoicevocabularylearnedornot_choice2 => 'tous les vocabulaires';
 }

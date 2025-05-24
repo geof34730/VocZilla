@@ -49,8 +49,8 @@ class PersonnalisationStep1Screen extends StatelessWidget {
                   maxLength: 50,
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
-                    hintText: "Titre de votre liste",
-                    labelText: "Titre de votre liste",
+                    hintText: context.loc.personnalisation_step1_title_list,
+                    labelText: context.loc.personnalisation_step1_title_list,
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 0, horizontal: 10),
                   ),
@@ -63,7 +63,7 @@ class PersonnalisationStep1Screen extends StatelessWidget {
           Padding(
              padding: EdgeInsets.only(left: 20, right: 20, top: 10),
               child: Text(
-               "Choisissez la couleur de votre liste",
+               context.loc.personnalisation_step1_color_choice,
                 style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                       color: Colors.black,
@@ -94,7 +94,7 @@ class PersonnalisationStep1Screen extends StatelessWidget {
                 animation: buttonNotifier,
                 builder: (context, child) {
                   return buttonNotifier.showButton
-                      ? Padding(
+                    ? Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: ElevatedButton(
                       onPressed: () {

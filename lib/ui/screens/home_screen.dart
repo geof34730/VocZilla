@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/data/repository/vocabulaire_repository.dart';
 import 'package:vobzilla/ui/widget/home/CardHome.dart';
 import 'package:vobzilla/ui/widget/statistical/global_statisctical_widget.dart';
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-                "Ma progression de titan",
+                context.loc.home_title_progresse,
                 style: TextStyle(
                     fontSize: 25,
                     fontFamily: GoogleFonts.titanOne().fontFamily)
@@ -31,7 +32,7 @@ class HomeScreen extends StatelessWidget {
             GlobalStatisticalWidget(),
             HomelistPerso(),
             Text(
-              "De Petit Monstre à Titan",
+              context.loc.home_title_list_defined,
               style: TextStyle(
                 fontSize: 25,
                 fontFamily: GoogleFonts.titanOne().fontFamily)
@@ -66,7 +67,7 @@ class HomeScreen extends StatelessWidget {
               ]
             ),
             Text(
-                "Classement TeamZilla",
+                context.loc.home_title_classement,
                 style: TextStyle(
                     fontSize: 25,
                     fontFamily: GoogleFonts.titanOne().fontFamily)

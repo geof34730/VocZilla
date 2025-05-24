@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sign_in_button/sign_in_button.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
@@ -43,30 +44,31 @@ class RegisterScreen extends StatelessWidget {
                   children: [
                     Padding(
                       padding: EdgeInsets.only(bottom: 10),
-                      child: Text("S'inscrire",
+                      child: Text(context.loc.login_sinscrire,
                           style: TextStyle(
                               fontSize: 25,
-                              fontFamily: GoogleFonts.titanOne().fontFamily)),
+                              fontFamily: GoogleFonts.titanOne().fontFamily)
+                      ),
                     ),
                     CustomTextField(
                       controller: emailController,
-                      labelText: 'Email',
-                      hintText: 'Entrez votre email',
+                      labelText: context.loc.login_email,
+                      hintText: context.loc.login_entrer_email,
                     ),
                     CustomPasswordField(
                       controller: passwordController,
-                      labelText: 'Mot de passe',
-                      hintText: 'Entrez votre mot de passe',
+                      labelText: context.loc.login_mot_de_passe,
+                      hintText: context.loc.login_entrer_mot_de_passe,
                     ),
                     CustomTextField(
                       controller: firstNameController,
-                      labelText: 'Prénom',
-                      hintText: 'Entrez votre prénom',
+                      labelText: context.loc.login_prenom,
+                      hintText: context.loc.login_entrer_prenom,
                     ),
                     CustomTextField(
                       controller: lastNameController,
-                      labelText: 'Nom',
-                      hintText: 'Entrez votre nom',
+                      labelText: context.loc.login_nom,
+                      hintText: context.loc.login_entrer_nom,
                     ),
                     Padding(
                       padding: EdgeInsets.only(top:5.0),
@@ -82,19 +84,21 @@ class RegisterScreen extends StatelessWidget {
                             lastName: lastNameController.text,
                           ));
                         },
-                        child: Text("S'inscrire"),
+                        child: Text(context.loc.login_sinscrire),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 20.0, bottom: 5),
-                      child: Text("Ou inscrivez-vous avec",
+                      child: Text(context.loc.login_ou_inscrivez_vous_avec,
                           style: TextStyle(
                               fontSize: 20,
-                              fontFamily: GoogleFonts.titanOne().fontFamily)),
+                              fontFamily: GoogleFonts.titanOne().fontFamily
+                          )
+                      ),
                     ),
                     SignInButton(
                       elevation: 5,
-                      text: "Avec Google",
+                      text: context.loc.login_avec_google,
                       Buttons.google,
                       onPressed: () {
                         context.read<AuthBloc>().add(GoogleSignInRequested());
@@ -102,7 +106,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     SignInButton(
                       elevation: 5,
-                      text: "Avec Facebook",
+                      text: context.loc.login_avec_facebook,
                       Buttons.facebook,
                       onPressed: () {
                         context.read<AuthBloc>().add(FacebookSignInRequested());
@@ -110,7 +114,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     SignInButton(
                       elevation: 5,
-                      text: "Avec Apple",
+                      text: context.loc.login_avec_apple,
                       Buttons.apple,
                       onPressed: () {
                         context.read<AuthBloc>().add(AppleSignInRequested());

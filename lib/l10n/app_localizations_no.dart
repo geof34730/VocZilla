@@ -54,7 +54,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get learn_view_carte => 'Klikk på kartet for å se svaret';
 
   @override
-  String get button_next => 'Følgende';
+  String get button_next => 'Suite';
 
   @override
   String get error_loading => 'Lastefeil';
@@ -109,4 +109,190 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get quizz_saisie_in => 'Skriv inn oversettelsen i';
+
+  @override
+  String get home_title_progresse => 'Min Titan-fremgang';
+
+  @override
+  String get home_title_my_list_perso => 'Mine personlige lister';
+
+  @override
+  String get home_title_list_defined => 'Fra lite monster til titan';
+
+  @override
+  String get home_description_list_perso => 'Lag og tilpass dine egne vokabularlister for å effektivt lære og repetere ordene du ønsker.';
+
+  @override
+  String get home_title_classement => 'TeamZilla-rangering';
+
+  @override
+  String get home_notlogged_accroche1 => 'Styrk engelskkunnskapene dine!';
+
+  @override
+  String get home_notlogged_accroche2 => 'Ønsker du å berike ditt engelske ordforråd?';
+
+  @override
+  String get home_notlogged_accroche3 => 'Tilgang til ';
+
+  @override
+  String get home_notlogged_accroche4 => '5600 essensielle ord';
+
+  @override
+  String get home_notlogged_accroche5 => 'sortert etter bruksfrekvens for å lære ordene som virkelig betyr noe.';
+
+  @override
+  String get home_notlogged_accroche6 => 'Rask og effektiv metode';
+
+  @override
+  String get home_notlogged_accroche7 => 'Lær de mest nyttige ordene først';
+
+  @override
+  String get home_notlogged_accroche8 => 'Optimalisert memorering for rask fremgang';
+
+  @override
+  String get home_notlogged_accroche9 => 'Klar til å mestre Shakespeares språk?';
+
+  @override
+  String get home_notlogged_button_go => 'Da kjører vi!';
+
+  @override
+  String get freetrial_info1 => 'Din gratis prøveperiode på \$daysFreeTrial er over';
+
+  @override
+  String get freetrial_info2 => 'Bli med oss og oppdag en verden av muligheter med våre eksklusive medlemskap!';
+
+  @override
+  String get mois => 'måned';
+
+  @override
+  String get annee => 'år';
+
+  @override
+  String get abonnement_mensuel => 'Månedlig abonnement';
+
+  @override
+  String get abonnement_annuel => 'Årsabonnement';
+
+  @override
+  String get abonnement_descriptif_mensuel => 'Fri som en fugl: avbryt når du vil.';
+
+  @override
+  String get abonnement_descriptif_annuel => 'Nyt opplevelsen din til det fulle samtidig som du sparer penger.';
+
+  @override
+  String get button_sabonner => 'Abonner';
+
+  @override
+  String get login_se_connecter => 'Logg inn';
+
+  @override
+  String get login_email => 'E-post';
+
+  @override
+  String get login_entrer_email => 'Skriv inn e-postadressen din';
+
+  @override
+  String get login_prenom => 'Fornavn';
+
+  @override
+  String get login_entrer_prenom => 'Skriv inn fornavnet ditt';
+
+  @override
+  String get login_nom => 'Navn';
+
+  @override
+  String get login_entrer_nom => 'Skriv inn navnet ditt';
+
+  @override
+  String get login_mot_de_passe => 'Passord';
+
+  @override
+  String get login_entrer_mot_de_passe => 'Skriv inn passordet ditt';
+
+  @override
+  String get login_ou_connecter_vous_avec => 'Eller koble til';
+
+  @override
+  String get login_avec_google => 'Med Google';
+
+  @override
+  String get login_avec_facebook => 'Med Facebook';
+
+  @override
+  String get login_avec_apple => 'Med Apple';
+
+  @override
+  String get login_no_compte => 'Har du ikke en konto?';
+
+  @override
+  String get login_inscrivez_vous => 'Registrer deg';
+
+  @override
+  String get login_sinscrire => 'Register';
+
+  @override
+  String get login_ou_inscrivez_vous_avec => 'Eller registrer deg hos';
+
+  @override
+  String get email_validation_merci_register => 'Takk for at du registrerte deg!';
+
+  @override
+  String get email_validation_msg_email_send => 'En bekreftelses-e-post er sendt til e-postadressen din';
+
+  @override
+  String get email_validation_instruction => 'Sjekk innboksen din og følg instruksjonene for å bekrefte e-postadressen din. Dette vil gjøre det mulig for oss å bekrefte registreringen din og gi deg tilgang til alle funksjonene i tjenesten vår.';
+
+  @override
+  String get email_validation_help => 'Hvis du ikke ser e-posten i innboksen din, bør du vurdere å sjekke spam- eller søppelpostmappen din.';
+
+  @override
+  String get email_validation_merci_register2 => 'Takk for tilliten!';
+
+  @override
+  String get send_mail => 'Motta en ny bekreftelses-e-post';
+
+  @override
+  String get personnalisation_step1_title_list => 'Tittel på listen din';
+
+  @override
+  String get personnalisation_step1_color_choice => 'Velg fargen fra listen din';
+
+  @override
+  String get profil_update_title => 'Fullfør registreringen din';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description1 => 'Benytt deg av din gratis prøveperiode!';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Velkommen! Du har for øyeblikket en gratis prøveperiode på';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_days => 'dager)';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'for å oppdage alle funksjonene i applikasjonen vår.';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Du har dratt';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description5 => 'gratis prøveperioder';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Ikke la opplevelsen din bli avbrutt! Velg abonnementet som passer deg, og fortsett å nyte det uten avbrudd';
+
+  @override
+  String get widget_dialogHelper_showfreetrialdialog_later => 'Seinere';
+
+  @override
+  String get widget_congratulation_bravo => 'Bravo';
+
+  @override
+  String get widget_congratulation_message => 'du er ferdig med å lære deg denne listen';
+
+  @override
+  String get widget_radiochoicevocabularylearnedornot_choice1 => 'ordforråd som fortsatt må læres';
+
+  @override
+  String get widget_radiochoicevocabularylearnedornot_choice2 => 'alle vokabularer';
 }
