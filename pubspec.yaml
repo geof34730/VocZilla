@@ -136,6 +136,7 @@ flutter:
   assets:
     - assets/brand/logo.png
     - assets/brand/logo_landing.png
+    - assets/brand/voczillatitle.png
     - assets/audios/gcloud/
     - assets/data/list-vocabulaire.json
   #   - images/a_dot_ham.jpeg

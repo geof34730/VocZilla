@@ -6,7 +6,20 @@ import '../../../global.dart';
 import '../../theme/appColors.dart';
 
 Stack TitleSite() {
-  double typoSize = 45;
+  return Stack(
+      children: [
+          Image.asset("assets/brand/voczillatitle.png",
+          height:50
+        ),
+    ]);
+}
+
+
+/*
+Stack TitleSite() {
+
+  String titleApp= "VocZilla";
+  double typoSize = 40;
   double strokeWidth = typoSize/4;
   dynamic typoGoogle = GoogleFonts.titanOne().fontFamily;
   return Stack(
@@ -43,3 +56,4 @@ Stack TitleSite() {
     ],
   );
 }
+*/

@@ -9,6 +9,7 @@ import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'app_route.dart';
+import 'core/utils/device.dart';
 import 'core/utils/logger.dart';
 import 'data/repository/auth_repository.dart';
 import 'data/repository/vocabulaire_user_repository.dart';
@@ -77,11 +78,10 @@ class MyApp extends StatelessWidget {
               builder: (context, child) {
                 return LayoutBuilder(
                   builder: (context, constraints) {
-                    const double targetWidth = 600;
                     final double screenWidth = constraints.maxWidth;
-                    final double screenHeight = constraints.maxHeight;
+                    final double targetWidth = isTablet(context:context) ? 750 : 450;
                     final double scale = screenWidth / targetWidth;
-
+                    final double screenHeight = constraints.maxHeight;
                     return Stack(
                       children: [
                         Positioned.fill(
