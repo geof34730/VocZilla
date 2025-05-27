@@ -18,6 +18,7 @@ class VocabulairesBloc extends Bloc<VocabulairesEvent, VocabulairesState> {
       try {
         emit(VocabulairesLoaded(event.data));
       } catch (e) {
+        Logger.Red.log("VocabulaireError: $e");
         emit(VocabulairesError("Error adding list: $e"));
       }
     });

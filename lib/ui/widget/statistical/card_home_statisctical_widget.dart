@@ -96,7 +96,22 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
             },
           );
         } else {
-          return Text('Erreur affichage Statistique');
+          if (state is VocabulaireUserEmpty) {
+            return Container(
+              width: widget.widthWidget * 0.80,
+              child: LevelChart(
+                level: 0,
+                levelMax: 100,
+                imageCursor: false,
+                padding: widget.paddingLevelBar,
+                barColorProgress: widget.barColorProgress,
+                barColorLeft: widget.barColorLeft,
+              ),
+            );
+          }
+          else {
+            return const Text('Erreur affichage Statistique');
+          }
         }
       },
     );

@@ -24,7 +24,6 @@ import 'logic/blocs/purchase/purchase_bloc.dart';
 import 'logic/blocs/purchase/purchase_event.dart';
 import 'logic/blocs/purchase/purchase_state.dart';
 import 'logic/blocs/update/update_event.dart';
-
 import 'logic/blocs/update/update_state.dart';
 import 'logic/blocs/user/user_bloc.dart';
 import 'logic/blocs/user/user_event.dart';
@@ -33,14 +32,13 @@ import 'logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
-import 'logic/blocs/update/update_bloc.dart'; // Assurez-vous d'importer UpdateBloc
+import 'logic/blocs/update/update_bloc.dart';
 
 final Route Function(RouteSettings settings) generateRoute = AppRoute.generateRoute;
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-
   final AuthRepository _authRepository = AuthRepository();
 
   @override
@@ -48,39 +46,17 @@ class MyApp extends StatelessWidget {
     return Material(
       child: MultiBlocProvider(
         providers: [
-          RepositoryProvider(
-            create: (context) => LocalStorageService(),
-          ),
-          RepositoryProvider(
-            create: (context) => VocabulaireServerService(),
-          ),
-          RepositoryProvider(
-            create: (context) => VocabulaireUserRepository(),
-          ),
-          BlocProvider(
-            create: (context) => AuthBloc(authRepository: _authRepository)..add(AppStarted()),
-          ),
-          BlocProvider(
-            create: (context) => DrawerBloc(),
-          ),
-          BlocProvider(
-            create: (context) => LocalizationCubit(),
-          ),
-          BlocProvider(
-            create: (context) => PurchaseBloc()..add(LoadProducts()),
-          ),
-          BlocProvider(
-            create: (context) => UserBloc()..add(CheckUserStatus()),
-          ),
-          BlocProvider(
-            create: (context) => VocabulairesBloc(),
-          ),
-          BlocProvider(
-            create: (context) => UpdateBloc()..add(CheckForUpdate()), // Ajoutez UpdateBloc ici
-          ),
-          BlocProvider(
-            create: (context) => VocabulaireUserBloc()..add(CheckVocabulaireUserStatus()),
-          ),
+          RepositoryProvider(create: (context) => LocalStorageService()),
+          RepositoryProvider(create: (context) => VocabulaireServerService()),
+          RepositoryProvider(create: (context) => VocabulaireUserRepository()),
+          BlocProvider(create: (context) => AuthBloc(authRepository: _authRepository)..add(AppStarted())),
+          BlocProvider(create: (context) => DrawerBloc()),
+          BlocProvider(create: (context) => LocalizationCubit()),
+          BlocProvider(create: (context) => PurchaseBloc()..add(LoadProducts())),
+          BlocProvider(create: (context) => UserBloc()..add(CheckUserStatus())),
+          BlocProvider(create: (context) => VocabulairesBloc()),
+          BlocProvider(create: (context) => UpdateBloc()..add(CheckForUpdate())),
+          BlocProvider(create: (context) => VocabulaireUserBloc()..add(CheckVocabulaireUserStatus())),
         ],
         child: BlocBuilder<LocalizationCubit, Locale>(
           builder: (context, locale) {
@@ -99,50 +75,62 @@ class MyApp extends StatelessWidget {
               onGenerateRoute: generateRoute,
               navigatorKey: navigatorKey,
               builder: (context, child) {
-                return Builder(
-                  builder: (context) {
-                    return MultiBlocListener(
-                      listeners: [
-                        BlocListener<AuthBloc, AuthState>(
-                          listener: (context, state) {
-                            BlocStateTracker().updateState('AuthBloc', state);
-                          },
-                        ),
-                        BlocListener<DrawerBloc, DrawerState>(
-                          listener: (context, state) {
-                            BlocStateTracker().updateState('DrawerBloc', state);
-                          },
-                        ),
-                        BlocListener<PurchaseBloc, PurchaseState>(
-                          listener: (context, state) {
-                            BlocStateTracker().updateState('PurchaseBloc', state);
-                          },
-                        ),
-                        BlocListener<UpdateBloc, UpdateState>(
-                          listener: (context, state) {
-                            BlocStateTracker().updateState('UpdateBloc', state);
-                          },
-                        ),
-                        BlocListener<UserBloc, UserState>(
-                          listener: (context, state) {
-                            BlocStateTracker().updateState('UserBloc', state);
-                          },
-                        ),
-                        BlocListener<VocabulairesBloc, VocabulairesState>(
-                          listener: (context, state) {
-                            Logger.Yellow.log("VocabulairesBloc state: $state");
-                            BlocStateTracker().updateState('VocabulairesBloc', state);
-                          },
-                        ),
-                        BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
-                          listener: (context, state) {
-                            Logger.Yellow.log("VocabulairesUserBloc state: $state");
-                            BlocStateTracker().updateState('VocabulaireUserBloc', state);
-                          },
-                        ),
+                return LayoutBuilder(
+                  builder: (context, constraints) {
+                    const double targetWidth = 600;
+                    final double screenWidth = constraints.maxWidth;
+                    final double screenHeight = constraints.maxHeight;
+                    final double scale = screenWidth / targetWidth;
 
+                    return Stack(
+                      children: [
+                        Positioned.fill(
+                          child: FittedBox(
+                            alignment: Alignment.topLeft,
+                            fit: BoxFit.fill,
+                            child: SizedBox(
+                              width: screenWidth / scale,
+                              height: screenHeight / scale,
+                              child: Builder(
+                                builder: (context) {
+                                  return MultiBlocListener(
+                                    listeners: [
+                                      BlocListener<AuthBloc, AuthState>(
+                                        listener: (context, state) => BlocStateTracker().updateState('AuthBloc', state),
+                                      ),
+                                      BlocListener<DrawerBloc, DrawerState>(
+                                        listener: (context, state) => BlocStateTracker().updateState('DrawerBloc', state),
+                                      ),
+                                      BlocListener<PurchaseBloc, PurchaseState>(
+                                        listener: (context, state) => BlocStateTracker().updateState('PurchaseBloc', state),
+                                      ),
+                                      BlocListener<UpdateBloc, UpdateState>(
+                                        listener: (context, state) => BlocStateTracker().updateState('UpdateBloc', state),
+                                      ),
+                                      BlocListener<UserBloc, UserState>(
+                                        listener: (context, state) => BlocStateTracker().updateState('UserBloc', state),
+                                      ),
+                                      BlocListener<VocabulairesBloc, VocabulairesState>(
+                                        listener: (context, state) {
+                                          Logger.Yellow.log("VocabulairesBloc state: $state");
+                                          BlocStateTracker().updateState('VocabulairesBloc', state);
+                                        },
+                                      ),
+                                      BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
+                                        listener: (context, state) {
+                                          Logger.Yellow.log("VocabulairesUserBloc state: $state");
+                                          BlocStateTracker().updateState('VocabulaireUserBloc', state);
+                                        },
+                                      ),
+                                    ],
+                                    child: child ?? const SizedBox.shrink(),
+                                  );
+                                },
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
-                      child: child ?? Container(),
                     );
                   },
                 );
@@ -154,4 +142,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

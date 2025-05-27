@@ -8,6 +8,12 @@ class VocabulaireUserInitial extends VocabulaireUserState {}
 
 class VocabulaireUserLoading extends VocabulaireUserState {}
 
+
+class VocabulaireUserEmpty extends VocabulaireUserState {
+
+
+}
+
 class VocabulaireUserLoaded extends VocabulaireUserState {
   final VocabulaireUser data;
   VocabulaireUserLoaded(this.data);

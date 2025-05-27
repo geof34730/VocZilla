@@ -170,24 +170,29 @@ class VocabulaireUserRepository {
   }
 
   Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({String? guidListPerso, int? vocabulaireBegin, int? vocabulaireEnd, ListPerso? listPerso,}) async {
-    var data = [];
-    late List<dynamic> dataSlice;
-    if(guidListPerso!=null){
-      dataSlice = await getVocabulaireListPersoByGuidListPerso(guidListPerso: guidListPerso);
+    try {
+      var data = [];
+      late List<dynamic> dataSlice;
+      if(guidListPerso!=null){
+        dataSlice = await getVocabulaireListPersoByGuidListPerso(guidListPerso: guidListPerso);
+      }
+      else {
+        data = await VocabulaireRepository().getDataTop(); // Ensure this is awaited
+        vocabulaireBegin ??= 0;
+        vocabulaireEnd ??= data.length;
+        dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
+      }
+      var vocabDataLearned = await getVocabulaireUserDataLearned( vocabulaireSpecificList: dataSlice);
+      var vocabLearnedCount = vocabDataLearned.length;
+      var countVocabulaireAll = dataSlice.length;
+      return StatisticalLength(
+          vocabLearnedCount: vocabLearnedCount,
+          countVocabulaireAll: countVocabulaireAll
+      );
+    } catch (e) {
+      Logger.Red.log("Erreur lors de la récupération des données: $e");
+      rethrow;
     }
-    else {
-      data = await VocabulaireRepository().getDataTop(); // Ensure this is awaited
-      vocabulaireBegin ??= 0;
-      vocabulaireEnd ??= data.length;
-      dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
-    }
-    var vocabDataLearned = await getVocabulaireUserDataLearned( vocabulaireSpecificList: dataSlice);
-    var vocabLearnedCount = vocabDataLearned.length;
-    var countVocabulaireAll = dataSlice.length;
-    return StatisticalLength(
-        vocabLearnedCount: vocabLearnedCount,
-        countVocabulaireAll: countVocabulaireAll
-    );
   }
 
   ////BEGIN LIST PERSO

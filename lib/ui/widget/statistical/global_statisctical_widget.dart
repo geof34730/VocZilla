@@ -23,7 +23,7 @@ class GlobalStatisticalWidget extends StatelessWidget {
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
       builder: (context, state) {
         Logger.Yellow.log("BlocBuilder VocabulaireUserBloc $state");
-        if (state is VocabulaireUserLoaded ) {
+        if (state is VocabulaireUserLoaded) {
 
 
           return FutureBuilder<StatisticalLength>(
@@ -58,7 +58,18 @@ class GlobalStatisticalWidget extends StatelessWidget {
             },
           );
         } else {
-          return const Text('Erreur affichage Statistique');
+          if (state is VocabulaireUserEmpty) {
+            return Container(
+              width: double.infinity,
+              child: LevelChart(
+                level: 0,
+                levelMax: 100,
+              ),
+            );
+          }
+          else {
+            return const Text('Erreur affichage Statistique');
+          }
         }
       },
     );

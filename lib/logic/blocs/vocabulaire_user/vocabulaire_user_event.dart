@@ -7,6 +7,8 @@ abstract class VocabulaireUserEvent {}
 
 class CheckVocabulaireUserStatus extends VocabulaireUserEvent {}
 
+
+
 class LoadVocabulaireUserData extends VocabulaireUserEvent {
   final VocabulaireUser data;
   LoadVocabulaireUserData(this.data);

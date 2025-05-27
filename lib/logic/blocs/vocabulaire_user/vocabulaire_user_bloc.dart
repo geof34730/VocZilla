@@ -17,8 +17,14 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       try {
         emit(VocabulaireUserLoaded(event.data));
       } catch (e) {
+        Logger.Red.log("VocabulaireUserError: $e");
         emit(VocabulaireUserError("erreur : $e"));
       }
+    });
+    on<VocabulaireUserEvent>((event, emit) {
+      // Ajoutez des logs ici pour suivre les transitions d'état
+      Logger.Blue.log("Current State: $state, Event: $event");
+      // Logique pour charger les données et émettre VocabulaireUserLoaded
     });
     on<DeleteListPerso>(_onDeleteListPerso);
     on<AddListPerso>(_onAddListPerso);
@@ -33,7 +39,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       if (userData != null) {
         emit(VocabulaireUserLoaded(userData));
       } else {
-        emit(VocabulaireUserError("No user data found."));
+        emit(VocabulaireUserEmpty());
       }
     } catch (e) {
       emit(VocabulaireUserError("Error loading user data: $e"));
@@ -113,6 +119,4 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
         emit(VocabulaireUserError("Error adding list: $e"));
     }
   }
-
-
 }

@@ -23,22 +23,14 @@ class HomelistPerso extends StatelessWidget {
             return Center(child: CircularProgressIndicator());
           } else if( state is VocabulaireUserUpdate){
             return Center(child: CircularProgressIndicator());
-          } else if (state is VocabulaireUserLoaded ) {
+          } else if (state is VocabulaireUserLoaded  ) {
              final VocabulaireUser data = state.data;
              final bool listePerso = data.listPerso.length>0;
               return Column(
                 children: [
                   Row(
                     children: [
-                      Text(
-                          context.loc.home_title_my_list_perso,
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontFamily: GoogleFonts
-                                  .titanOne()
-                                  .fontFamily
-                          )
-                      ),
+                      titleWidget(context: context),
                       if(listePerso)
                         Padding(
                           padding: EdgeInsets.only(left: 0),
@@ -58,47 +50,7 @@ class HomelistPerso extends StatelessWidget {
                     ],
                   ),
                   if(!listePerso)
-                    Card(
-                      color: Colors.blueGrey,
-                      child: ListTile(
-                          title: Padding(
-                            padding: EdgeInsets.only(top: 10, left: 5, right: 5),
-                            child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    context.loc.home_description_list_perso,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        height: 1.2,
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
-                                        fontFamily: GoogleFonts
-                                            .roboto()
-                                            .fontFamily
-                                    ),
-                                  ),
-                                  Center(
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        addNewListPerso(context: context);
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        shape: CircleBorder(),
-                                        elevation: 2,
-                                        backgroundColor: Colors.blue,
-                                        padding: EdgeInsets.all(0),
-                                      ),
-                                      child: Icon(Icons.add, size: 30,color: Colors.white), // Utiliser une icône ou un texte court
-                                    ),
-                                  ),
-                                ]
-                            ),
-                          )
-                      ),
-                    ),
+                    descriptionListPersoEmpty(context: context),
 
                   if(listePerso)
                     HorizontalScrollViewCardHome(
@@ -106,7 +58,6 @@ class HomelistPerso extends StatelessWidget {
                           context: context, nbList: 3),
                           children: data.listPerso.reversed.map((listPerso) {
                             return CardHome(
-
                               nbVocabulaire:listPerso.listGuidVocabulary.length,
                               guid: listPerso.guid,
                               title: listPerso.title,
@@ -123,10 +74,20 @@ class HomelistPerso extends StatelessWidget {
                     ),
                 ],
               );
-            } else if (state is VocabulairesError) {
+            } else if (state is VocabulaireUserError) {
               return Center(child: Text(context.loc.error_loading));
             } else {
-              return Center(child: Text(context.loc.unknown_error)); // fallback
+              if(state is VocabulaireUserEmpty) {
+                return Column(
+                  children: [
+                    titleWidget(context: context),
+                    descriptionListPersoEmpty(context: context),
+                  ],
+                );
+              }
+              else{
+                return Center(child: Text(context.loc.unknown_error)); // fallback
+              }
             }
         }
     );
@@ -134,6 +95,62 @@ class HomelistPerso extends StatelessWidget {
 
   addNewListPerso({required BuildContext context}) {
     Navigator.pushNamed(context, "/personnalisation/step1");
+  }
+
+  Text titleWidget({required BuildContext context}){
+    return Text(
+        context.loc.home_title_my_list_perso,
+        style: TextStyle(
+            fontSize: 25,
+            fontFamily: GoogleFonts
+                .titanOne()
+                .fontFamily
+        )
+    );
+  }
+
+  Card descriptionListPersoEmpty({required BuildContext context}){
+    return Card(
+      color: Colors.blueGrey,
+      child: ListTile(
+          title: Padding(
+            padding: EdgeInsets.only(top: 10, left: 5, right: 5),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    context.loc.home_description_list_perso,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        height: 1.2,
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: GoogleFonts
+                            .roboto()
+                            .fontFamily
+                    ),
+                  ),
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        addNewListPerso(context: context);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        elevation: 2,
+                        backgroundColor: Colors.blue,
+                        padding: EdgeInsets.all(0),
+                      ),
+                      child: Icon(Icons.add, size: 30,color: Colors.white), // Utiliser une icône ou un texte court
+                    ),
+                  ),
+                ]
+            ),
+          )
+      ),
+    );
   }
 
 }

@@ -267,7 +267,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description2 => 'Bienvenue ! Vous bénéficiez actuellement d’une période d’essai gratuite de';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_days => 'jour(s)';
+  String get widget_dialogHelper_showfreetrialdialog_days => 'jours';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'pour découvrir toutes les fonctionnalités de notre application.';
