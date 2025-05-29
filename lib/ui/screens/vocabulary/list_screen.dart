@@ -3,11 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
+import '../../../data/repository/vocabulaire_repository.dart';
 import '../../widget/elements/PlaySoond.dart';
 
 import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
+import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 
 class ListScreen extends StatefulWidget {
   @override
@@ -21,6 +23,7 @@ class _ListScreenState extends State<ListScreen> {
   late int sortColumnIndex;
   GlobalKey<PaginatedDataTableState> tableKey = GlobalKey();
   TextEditingController searchController = TextEditingController();
+  final _vocabulaireRepository=VocabulaireRepository();
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
@@ -45,8 +48,15 @@ class _ListScreenState extends State<ListScreen> {
               ? EmptyDataSource(context: context)
               : VocabularyDataSource(data: data, context: context);
           int rowsPerPage = data.isEmpty ? 1 : (data.length < 10 ? data.length : 10);
+          bool isNotLearned = state.data.isVocabularyNotLearned;
+          int _vocabulaireConnu = isNotLearned ? 0 : 1;
           return Column(
             children: [
+              RadioChoiceVocabularyLearnedOrNot(
+                  state: state,
+                  vocabulaireConnu: _vocabulaireConnu,
+                  vocabulaireRepository: _vocabulaireRepository
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child:TextField(
@@ -76,6 +86,7 @@ class _ListScreenState extends State<ListScreen> {
                   },
                 ),
               ),
+
               // Use a fixed height for the table or wrap it in a ListView
               if(!data.isEmpty)...[
                   Container(

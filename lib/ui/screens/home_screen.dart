@@ -9,7 +9,7 @@ import '../../core/utils/ui.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
-import '../widget/elements/LevelChart.dart';
+import '../widget/statistical/LevelChart.dart';
 import '../widget/home/CardClassementGamer.dart';
 import '../widget/home/HomeListPerso.dart';
 

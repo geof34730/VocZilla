@@ -79,7 +79,8 @@ class MyApp extends StatelessWidget {
                 return LayoutBuilder(
                   builder: (context, constraints) {
                     final double screenWidth = constraints.maxWidth;
-                    final double targetWidth = isTablet(context:context) ? 750 : 450;
+                    //final double targetWidth = isTablet(context:context) ? 750 : 450;
+                    final double targetWidth = isTablet(context:context) ? 450 : 450;
                     final double scale = screenWidth / targetWidth;
                     final double screenHeight = constraints.maxHeight;
                     return Stack(

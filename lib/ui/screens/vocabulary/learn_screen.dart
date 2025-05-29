@@ -14,7 +14,7 @@ import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:flip_card/flip_card.dart';
 
-import '../../widget/elements/LevelChart.dart';
+import '../../widget/statistical/LevelChart.dart';
 import '../../widget/form/CongratulationOrErrorData.dart';
 import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 

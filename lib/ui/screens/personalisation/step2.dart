@@ -10,6 +10,7 @@ import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';
+import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
@@ -18,6 +19,7 @@ import '../../../logic/blocs/vocabulaires/vocabulaires_event.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/elements/PlaySoond.dart';
+import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 
 class PersonnalisationStep2Screen extends StatefulWidget {
   final String guidListPerso;
@@ -34,7 +36,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
   late int sortColumnIndex;
   GlobalKey<PaginatedDataTableState> tableKey = GlobalKey();
   TextEditingController searchController = TextEditingController();
-
+  final _vocabulaireRepository=VocabulaireRepository();
   @override
   Widget build(BuildContext context) {
     String guidListPerso=widget.guidListPerso;
@@ -61,8 +63,16 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
               ? EmptyDataSource(context: context)
               : VocabularyDataSource(data: data, context: context,guidListPerso: guidListPerso);
           int rowsPerPage = data.isEmpty ? 1 : (data.length < 10 ? data.length : 10);
+          bool isNotLearned = state.data.isVocabularyNotLearned;
+          int _vocabulaireConnu = isNotLearned ? 0 : 1;
           return Column(
             children: [
+              RadioChoiceVocabularyLearnedOrNot(
+                  state: state,
+                  vocabulaireConnu: _vocabulaireConnu,
+                  vocabulaireRepository: _vocabulaireRepository,
+                  guidListPerso: guidListPerso,
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(

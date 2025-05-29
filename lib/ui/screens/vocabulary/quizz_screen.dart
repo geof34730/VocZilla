@@ -13,7 +13,7 @@ import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/notifiers/answer_notifier.dart';
-import '../../widget/elements/LevelChart.dart';
+import '../../widget/statistical/LevelChart.dart';
 import '../../widget/form/CongratulationOrErrorData.dart';
 import '../../widget/form/CustomTextZillaField.dart';
 import '../../../logic/notifiers/button_notifier.dart';
