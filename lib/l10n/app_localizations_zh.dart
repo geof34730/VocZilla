@@ -63,7 +63,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unknown_error => '未知错误';
 
   @override
-  String get no_vocabulary_items_found => '未找到任何词汇条目';
+  String get no_vocabulary_items_found => '未找到任何词汇';
 
   @override
   String get pronunciation_title => '发音';
@@ -123,7 +123,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get home_description_list_perso => '创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。';
 
   @override
-  String get home_title_classement => 'TeamZilla 排名';
+  String get home_title_classement => 'TeamZilla排名';
 
   @override
   String get home_notlogged_accroche1 => '提高你的英语水平！';
@@ -264,10 +264,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => '充分利用您的免费试用期！';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => '欢迎 ！您目前有免费试用期';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => '欢迎 ！您目前有';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_days => '天）';
+  String get widget_dialogHelper_showfreetrialdialog_days => '天';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description3 => '发现我们应用程序的所有功能。';
@@ -291,8 +291,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get widget_congratulation_message => '您已学习完此列表';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice1 => '尚需学习的词汇';
+  String get widget_radiochoicevocabularylearnedornot_choice1 => '学习';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice2 => '所有词汇';
+  String get widget_radiochoicevocabularylearnedornot_choice2 => '全部';
 }

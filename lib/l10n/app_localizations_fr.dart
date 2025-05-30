@@ -291,8 +291,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get widget_congratulation_message => 'vous avez terminé d\'apprendre cette Liste';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice1 => 'vocabulaire encore à apprendre';
+  String get widget_radiochoicevocabularylearnedornot_choice1 => 'À apprendre';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice2 => 'tous les vocabulaires';
+  String get widget_radiochoicevocabularylearnedornot_choice2 => 'Tous';
 }

@@ -7,13 +7,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 import '../../../core/utils/languageUtils.dart';
-import '../../../core/utils/logger.dart';
-import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
-import '../../../logic/notifiers/answer_notifier.dart';
-import '../../widget/statistical/LevelChart.dart';
+
 import '../../widget/form/CongratulationOrErrorData.dart';
 import '../../widget/form/CustomTextZillaField.dart';
 import '../../../logic/notifiers/button_notifier.dart';

@@ -85,14 +85,14 @@
     "profil_update_title": "Fullfør registreringen din",
     "widget_dialogHelper_showfreetrialdialog_description1": "Benytt deg av din gratis prøveperiode!",
     "widget_dialogHelper_showfreetrialdialog_description2": "Velkommen! Du har for øyeblikket en gratis prøveperiode på",
-    "widget_dialogHelper_showfreetrialdialog_days": "dager)",
+    "widget_dialogHelper_showfreetrialdialog_days": "dager",
     "widget_dialogHelper_showfreetrialdialog_description3": "for å oppdage alle funksjonene i applikasjonen vår.",
     "widget_dialogHelper_showfreetrialdialog_description4": "Du har dratt",
     "widget_dialogHelper_showfreetrialdialog_description5": "gratis prøveperioder",
     "widget_dialogHelper_showfreetrialdialog_description6": "Ikke la opplevelsen din bli avbrutt! Velg abonnementet som passer deg, og fortsett å nyte det uten avbrudd",
     "widget_dialogHelper_showfreetrialdialog_later": "Seinere",
     "widget_congratulation_bravo": "Bravo",
-    "widget_congratulation_message": "du er ferdig med å lære deg denne listen",
-    "widget_radiochoicevocabularylearnedornot_choice1": "ordforråd som fortsatt må læres",
-    "widget_radiochoicevocabularylearnedornot_choice2": "alle vokabularer"
+    "widget_congratulation_message": "du er ferdig med å lære denne listen",
+    "widget_radiochoicevocabularylearnedornot_choice1": "Å lære",
+    "widget_radiochoicevocabularylearnedornot_choice2": "Alle"
 }

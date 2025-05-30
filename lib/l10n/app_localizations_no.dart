@@ -267,7 +267,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description2 => 'Velkommen! Du har for øyeblikket en gratis prøveperiode på';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_days => 'dager)';
+  String get widget_dialogHelper_showfreetrialdialog_days => 'dager';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'for å oppdage alle funksjonene i applikasjonen vår.';
@@ -288,11 +288,11 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_congratulation_bravo => 'Bravo';
 
   @override
-  String get widget_congratulation_message => 'du er ferdig med å lære deg denne listen';
+  String get widget_congratulation_message => 'du er ferdig med å lære denne listen';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice1 => 'ordforråd som fortsatt må læres';
+  String get widget_radiochoicevocabularylearnedornot_choice1 => 'Å lære';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice2 => 'alle vokabularer';
+  String get widget_radiochoicevocabularylearnedornot_choice2 => 'Alle';
 }

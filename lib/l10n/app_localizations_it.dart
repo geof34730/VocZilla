@@ -267,7 +267,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description2 => 'Benvenuto ! Attualmente hai un periodo di prova gratuito di';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_days => 'giorni)';
+  String get widget_dialogHelper_showfreetrialdialog_days => 'giorni';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'per scoprire tutte le funzionalità della nostra applicazione.';
@@ -291,8 +291,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get widget_congratulation_message => 'hai finito di imparare questa lista';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice1 => 'vocabolario ancora da imparare';
+  String get widget_radiochoicevocabularylearnedornot_choice1 => 'Per imparare';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice2 => 'tutti i vocabolari';
+  String get widget_radiochoicevocabularylearnedornot_choice2 => 'Tutto';
 }

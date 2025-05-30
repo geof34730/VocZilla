@@ -93,6 +93,6 @@
     "widget_dialogHelper_showfreetrialdialog_later" : "Plus tard",
     "widget_congratulation_bravo" : "Bravo",
     "widget_congratulation_message" : "vous avez terminé d'apprendre cette Liste",
-    "widget_radiochoicevocabularylearnedornot_choice1" : "vocabulaire encore à apprendre",
-    "widget_radiochoicevocabularylearnedornot_choice2" : "tous les vocabulaires"
+    "widget_radiochoicevocabularylearnedornot_choice1" : "À apprendre",
+    "widget_radiochoicevocabularylearnedornot_choice2" : "Tous"
 }

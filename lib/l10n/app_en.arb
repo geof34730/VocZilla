@@ -85,7 +85,7 @@
     "profil_update_title": "Complete your registration",
     "widget_dialogHelper_showfreetrialdialog_description1": "Take advantage of your free trial period!",
     "widget_dialogHelper_showfreetrialdialog_description2": "Welcome! You are currently enjoying a free trial period of",
-    "widget_dialogHelper_showfreetrialdialog_days": "days)",
+    "widget_dialogHelper_showfreetrialdialog_days": "days",
     "widget_dialogHelper_showfreetrialdialog_description3": "to discover all the features of our application.",
     "widget_dialogHelper_showfreetrialdialog_description4": "You have left",
     "widget_dialogHelper_showfreetrialdialog_description5": "free trials",
@@ -93,6 +93,6 @@
     "widget_dialogHelper_showfreetrialdialog_later": "Later",
     "widget_congratulation_bravo": "Bravo",
     "widget_congratulation_message": "you have finished learning this List",
-    "widget_radiochoicevocabularylearnedornot_choice1": "vocabulary still to be learned",
-    "widget_radiochoicevocabularylearnedornot_choice2": "all vocabularies"
+    "widget_radiochoicevocabularylearnedornot_choice1": "To learn",
+    "widget_radiochoicevocabularylearnedornot_choice2": "All"
 }

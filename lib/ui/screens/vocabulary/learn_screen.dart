@@ -2,19 +2,16 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';
-import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:flip_card/flip_card.dart';
-
-import '../../widget/statistical/LevelChart.dart';
 import '../../widget/form/CongratulationOrErrorData.dart';
 import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 

@@ -267,7 +267,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description2 => 'Tere tulemast! Teil on praegu tasuta prooviperiood';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_days => 'päeva)';
+  String get widget_dialogHelper_showfreetrialdialog_days => 'päevad';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'et avastada kõiki meie rakenduse funktsioone.';
@@ -291,8 +291,8 @@ class AppLocalizationsEt extends AppLocalizations {
   String get widget_congratulation_message => 'oled selle nimekirja õppimise lõpetanud';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice1 => 'sõnavara, mida veel õppida';
+  String get widget_radiochoicevocabularylearnedornot_choice1 => 'Õppima';
 
   @override
-  String get widget_radiochoicevocabularylearnedornot_choice2 => 'kõik sõnavarad';
+  String get widget_radiochoicevocabularylearnedornot_choice2 => 'Kõik';
 }

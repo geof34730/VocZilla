@@ -17,7 +17,7 @@
     "button_next": "套房",
     "error_loading": "加载错误",
     "unknown_error": "未知错误",
-    "no_vocabulary_items_found": "未找到任何词汇条目",
+    "no_vocabulary_items_found": "未找到任何词汇",
     "pronunciation_title": "发音",
     "pronunciation_success": "好极了！",
     "pronunciation_error": "嗯，不太对。再试一次。",
@@ -37,7 +37,7 @@
     "home_title_my_list_perso": "我的个人清单",
     "home_title_list_defined": "从小怪兽到泰坦",
     "home_description_list_perso": "创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。",
-    "home_title_classement": "TeamZilla 排名",
+    "home_title_classement": "TeamZilla排名",
     "home_notlogged_accroche1": "提高你的英语水平！",
     "home_notlogged_accroche2": "你想丰富你的英语词汇量吗？",
     "home_notlogged_accroche3": "访问 ",
@@ -84,8 +84,8 @@
     "personnalisation_step1_color_choice": "从列表中选择颜色",
     "profil_update_title": "完成注册",
     "widget_dialogHelper_showfreetrialdialog_description1": "充分利用您的免费试用期！",
-    "widget_dialogHelper_showfreetrialdialog_description2": "欢迎 ！您目前有免费试用期",
-    "widget_dialogHelper_showfreetrialdialog_days": "天）",
+    "widget_dialogHelper_showfreetrialdialog_description2": "欢迎 ！您目前有",
+    "widget_dialogHelper_showfreetrialdialog_days": "天",
     "widget_dialogHelper_showfreetrialdialog_description3": "发现我们应用程序的所有功能。",
     "widget_dialogHelper_showfreetrialdialog_description4": "您已离开",
     "widget_dialogHelper_showfreetrialdialog_description5": "免费试用",
@@ -93,6 +93,6 @@
     "widget_dialogHelper_showfreetrialdialog_later": "之后",
     "widget_congratulation_bravo": "太棒了",
     "widget_congratulation_message": "您已学习完此列表",
-    "widget_radiochoicevocabularylearnedornot_choice1": "尚需学习的词汇",
-    "widget_radiochoicevocabularylearnedornot_choice2": "所有词汇"
+    "widget_radiochoicevocabularylearnedornot_choice1": "学习",
+    "widget_radiochoicevocabularylearnedornot_choice2": "全部"
 }

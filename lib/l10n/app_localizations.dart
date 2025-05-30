@@ -626,7 +626,7 @@ abstract class AppLocalizations {
   /// No description provided for @widget_dialogHelper_showfreetrialdialog_days.
   ///
   /// In en, this message translates to:
-  /// **'days)'**
+  /// **'days'**
   String get widget_dialogHelper_showfreetrialdialog_days;
 
   /// No description provided for @widget_dialogHelper_showfreetrialdialog_description3.
@@ -674,13 +674,13 @@ abstract class AppLocalizations {
   /// No description provided for @widget_radiochoicevocabularylearnedornot_choice1.
   ///
   /// In en, this message translates to:
-  /// **'vocabulary still to be learned'**
+  /// **'To learn'**
   String get widget_radiochoicevocabularylearnedornot_choice1;
 
   /// No description provided for @widget_radiochoicevocabularylearnedornot_choice2.
   ///
   /// In en, this message translates to:
-  /// **'all vocabularies'**
+  /// **'All'**
   String get widget_radiochoicevocabularylearnedornot_choice2;
 }
 

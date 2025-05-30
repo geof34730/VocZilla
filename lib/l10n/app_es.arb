@@ -85,7 +85,7 @@
     "profil_update_title": "Completa tu registro",
     "widget_dialogHelper_showfreetrialdialog_description1": "¡Aprovecha tu periodo de prueba gratuito!",
     "widget_dialogHelper_showfreetrialdialog_description2": "Bienvenido ! Actualmente tienes un periodo de prueba gratuito de",
-    "widget_dialogHelper_showfreetrialdialog_days": "días)",
+    "widget_dialogHelper_showfreetrialdialog_days": "días",
     "widget_dialogHelper_showfreetrialdialog_description3": "para descubrir todas las funcionalidades de nuestra aplicación.",
     "widget_dialogHelper_showfreetrialdialog_description4": "Te has ido",
     "widget_dialogHelper_showfreetrialdialog_description5": "pruebas gratuitas",
@@ -93,6 +93,6 @@
     "widget_dialogHelper_showfreetrialdialog_later": "Más tarde",
     "widget_congratulation_bravo": "Bravo",
     "widget_congratulation_message": "Has terminado de aprender esta lista",
-    "widget_radiochoicevocabularylearnedornot_choice1": "vocabulario aún por aprender",
-    "widget_radiochoicevocabularylearnedornot_choice2": "todos los vocabularios"
+    "widget_radiochoicevocabularylearnedornot_choice1": "Para aprender",
+    "widget_radiochoicevocabularylearnedornot_choice2": "Todo"
 }
