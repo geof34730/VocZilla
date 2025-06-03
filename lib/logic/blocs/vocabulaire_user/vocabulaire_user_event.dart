@@ -43,3 +43,4 @@ class DeleteVocabulaireListPerso extends VocabulaireUserEvent {
 
 
 
+

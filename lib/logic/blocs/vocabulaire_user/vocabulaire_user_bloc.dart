@@ -33,14 +33,27 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
   }
 
+
+
+
+
   Future<void> _onCheckVocabulaireUserStatus(CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
     try {
+      //await _vocabulaireUserRepository.initializeVocabulaireUserData();
       VocabulaireUser? userData =  await VocabulaireUserRepository().getVocabulaireUserData();
+
+
+      Logger.Yellow.log(userData);
+      emit(VocabulaireUserLoaded(userData!));
+
+      /*
       if (userData != null) {
         emit(VocabulaireUserLoaded(userData));
       } else {
-        emit(VocabulaireUserEmpty());
+        emit(VocabulaireUserLoaded(userData));
+       // emit(VocabulaireUserEmpty());
       }
+      */
     } catch (e) {
       emit(VocabulaireUserError("Error loading user data: $e"));
     }

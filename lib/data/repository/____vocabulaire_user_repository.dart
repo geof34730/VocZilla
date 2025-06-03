@@ -1,48 +1,50 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/data/repository/vocabulaire_repository.dart';
+import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../core/utils/logger.dart';
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../models/statistical_length.dart';
 import '../models/vocabulary_user.dart';
 import '../services/localstorage_service.dart';
 import '../services/vocabulaires_server_service.dart';
 import '../services/vocabulaires_service.dart';
-
+/*
 class VocabulaireUserRepository {
   final LocalStorageService localStorageService = LocalStorageService();
   final VocabulaireServerService vocabulaireServerService = VocabulaireServerService();
 
   VocabulaireUserRepository();
-/*
+
   Future<void> initializeVocabulaireUserData() async {
-    Logger.Pink.log('********VocabulaireUserRepository: initializeUserData');
+    Logger.Pink.log('VocabulaireUserRepository: initializeUserData');
     try {
-      /*final serverData = await vocabulaireServerService.fetchUserData();
+      final serverData = await vocabulaireServerService.fetchUserData();
       if (serverData != null) {
         final userData = VocabulaireUser.fromJson(serverData);
         await localStorageService.saveUserData(userData.toJson());
-      }*/
-
+      }
     } catch (e) {
       // Gérer les erreurs de récupération de données
       print('Erreur lors de la récupération des données utilisateur : $e');
-
     }
   }
-*/
+
   Future<VocabulaireUser?> getVocabulaireUserData() async {
-    Logger.Pink.log(
-        'VocabulaireUserRepository:  getVocabulaireUserData getUserData');
+    Logger.Pink.log('VocabulaireUserRepository: getUserData');
     try {
       final userDataJson = await localStorageService.getUserData();
       if (userDataJson != null) {
-        Logger.Pink.log(
-            'VocabulaireUserRepository: getUserData return ${VocabulaireUser
-                .fromJson(userDataJson)}');
+        Logger.Pink.log('VocabulaireUserRepository: getUserData return ${VocabulaireUser.fromJson(userDataJson)}');
         return VocabulaireUser.fromJson(userDataJson);
       }
-      else {
-        final userData = await getEmptyVocabulaireUserData();
-        return userData;
+      else{
+       final userData = await getEmptyVocabulaireUserData();
+       return userData;
       }
+      Logger.Pink.log('VocabulaireUserRepository: getUserData return null');
+      return null;
     } catch (e) {
       Logger.Red.log(
           'Erreur lors de la récupération des données utilisateur locales : $e');
@@ -62,9 +64,20 @@ class VocabulaireUserRepository {
           'Erreur lors de la mise à jour des données utilisateur : $e');
     }
   }
+/*
+  Future<VocabulaireUser> getEmptyVocabulaireUserData() async {
+    final vocabulairesAll = await VocabulaireService().getAllData();
+    return VocabulaireUser(
+      countVocabulaireAll: vocabulairesAll.length,
+      listPerso: [],
+      listTheme: [],
+      listGuidVocabularyLearned: [],
+    );
+  }
+*/
+
 
   Future<VocabulaireUser> getEmptyVocabulaireUserData() async {
-    Logger.Pink.log('VocabulaireUserRepository:  getEmptyVocabulaireUserData');
     final vocabulairesAll = await VocabulaireService().getAllData();
     final List<ListTheme> userTheme = await VocabulaireService().getThemesData();
     VocabulaireUser dataEmpty = VocabulaireUser(
@@ -73,9 +86,13 @@ class VocabulaireUserRepository {
       listTheme: userTheme,
       listGuidVocabularyLearned: [],
     );
-    await localStorageService.saveUserData(dataEmpty.toJson());
     return dataEmpty;
   }
+
+
+
+
+
 
   Future<void> addVocabulaireUserDataLearned({required String vocabularyGuid}) async {
     Logger.Red.log("addVocabulaireUserDataLearned: vocabularyGuid: $vocabularyGuid ");
@@ -167,9 +184,9 @@ class VocabulaireUserRepository {
         .listGuidVocabularyLearned
         : <String>[];
     if (vocabulaireSpecificList is ListPerso) {
-      return vocabulaireSpecificList.listGuidVocabulary.where((vocabListPerso) => vocabulaireLearned.contains(vocabListPerso)).toList();
+        return vocabulaireSpecificList.listGuidVocabulary.where((vocabListPerso) => vocabulaireLearned.contains(vocabListPerso)).toList();
     } else if (vocabulaireSpecificList is List<dynamic>) {
-      return vocabulaireSpecificList.where((vocab) => vocabulaireLearned.contains(vocab['GUID'])).toList();
+        return vocabulaireSpecificList.where((vocab) => vocabulaireLearned.contains(vocab['GUID'])).toList();
     } else {
       throw ArgumentError('vocabulaireSpecificList doit être de type ListPerso ou List<dynamic>');
     }
@@ -393,5 +410,5 @@ class VocabulaireUserRepository {
     );
   }
 }
-
+*/
 

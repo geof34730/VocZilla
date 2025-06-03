@@ -569,9 +569,7 @@ mixin _$ListTheme {
   @JsonKey(name: "guid")
   String get guid;
   @JsonKey(name: "title")
-  String get title;
-  @JsonKey(name: "color")
-  String get color;
+  Map<String, String> get title; // Change to Map<String, String>
   @JsonKey(name: "listGuidVocabulary")
   List<String> get listGuidVocabulary;
 
@@ -591,20 +589,22 @@ mixin _$ListTheme {
         (other.runtimeType == runtimeType &&
             other is ListTheme &&
             (identical(other.guid, guid) || other.guid == guid) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.color, color) || other.color == color) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality()
                 .equals(other.listGuidVocabulary, listGuidVocabulary));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, guid, title, color,
+  int get hashCode => Object.hash(
+      runtimeType,
+      guid,
+      const DeepCollectionEquality().hash(title),
       const DeepCollectionEquality().hash(listGuidVocabulary));
 
   @override
   String toString() {
-    return 'ListTheme(guid: $guid, title: $title, color: $color, listGuidVocabulary: $listGuidVocabulary)';
+    return 'ListTheme(guid: $guid, title: $title, listGuidVocabulary: $listGuidVocabulary)';
   }
 }
 
@@ -615,8 +615,7 @@ abstract mixin class $ListThemeCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: "guid") String guid,
-      @JsonKey(name: "title") String title,
-      @JsonKey(name: "color") String color,
+      @JsonKey(name: "title") Map<String, String> title,
       @JsonKey(name: "listGuidVocabulary") List<String> listGuidVocabulary});
 }
 
@@ -634,7 +633,6 @@ class _$ListThemeCopyWithImpl<$Res> implements $ListThemeCopyWith<$Res> {
   $Res call({
     Object? guid = null,
     Object? title = null,
-    Object? color = null,
     Object? listGuidVocabulary = null,
   }) {
     return _then(_self.copyWith(
@@ -645,11 +643,7 @@ class _$ListThemeCopyWithImpl<$Res> implements $ListThemeCopyWith<$Res> {
       title: null == title
           ? _self.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      color: null == color
-          ? _self.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, String>,
       listGuidVocabulary: null == listGuidVocabulary
           ? _self.listGuidVocabulary
           : listGuidVocabulary // ignore: cast_nullable_to_non_nullable
@@ -663,24 +657,29 @@ class _$ListThemeCopyWithImpl<$Res> implements $ListThemeCopyWith<$Res> {
 class _ListTheme implements ListTheme {
   const _ListTheme(
       {@JsonKey(name: "guid") required this.guid,
-      @JsonKey(name: "title") required this.title,
-      @JsonKey(name: "color") required this.color,
+      @JsonKey(name: "title") required final Map<String, String> title,
       @JsonKey(name: "listGuidVocabulary")
       required final List<String> listGuidVocabulary})
-      : _listGuidVocabulary = listGuidVocabulary;
+      : _title = title,
+        _listGuidVocabulary = listGuidVocabulary;
   factory _ListTheme.fromJson(Map<String, dynamic> json) =>
       _$ListThemeFromJson(json);
 
   @override
   @JsonKey(name: "guid")
   final String guid;
+  final Map<String, String> _title;
   @override
   @JsonKey(name: "title")
-  final String title;
-  @override
-  @JsonKey(name: "color")
-  final String color;
+  Map<String, String> get title {
+    if (_title is EqualUnmodifiableMapView) return _title;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_title);
+  }
+
+// Change to Map<String, String>
   final List<String> _listGuidVocabulary;
+// Change to Map<String, String>
   @override
   @JsonKey(name: "listGuidVocabulary")
   List<String> get listGuidVocabulary {
@@ -711,20 +710,22 @@ class _ListTheme implements ListTheme {
         (other.runtimeType == runtimeType &&
             other is _ListTheme &&
             (identical(other.guid, guid) || other.guid == guid) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.color, color) || other.color == color) &&
+            const DeepCollectionEquality().equals(other._title, _title) &&
             const DeepCollectionEquality()
                 .equals(other._listGuidVocabulary, _listGuidVocabulary));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, guid, title, color,
+  int get hashCode => Object.hash(
+      runtimeType,
+      guid,
+      const DeepCollectionEquality().hash(_title),
       const DeepCollectionEquality().hash(_listGuidVocabulary));
 
   @override
   String toString() {
-    return 'ListTheme(guid: $guid, title: $title, color: $color, listGuidVocabulary: $listGuidVocabulary)';
+    return 'ListTheme(guid: $guid, title: $title, listGuidVocabulary: $listGuidVocabulary)';
   }
 }
 
@@ -738,8 +739,7 @@ abstract mixin class _$ListThemeCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: "guid") String guid,
-      @JsonKey(name: "title") String title,
-      @JsonKey(name: "color") String color,
+      @JsonKey(name: "title") Map<String, String> title,
       @JsonKey(name: "listGuidVocabulary") List<String> listGuidVocabulary});
 }
 
@@ -757,7 +757,6 @@ class __$ListThemeCopyWithImpl<$Res> implements _$ListThemeCopyWith<$Res> {
   $Res call({
     Object? guid = null,
     Object? title = null,
-    Object? color = null,
     Object? listGuidVocabulary = null,
   }) {
     return _then(_ListTheme(
@@ -766,13 +765,9 @@ class __$ListThemeCopyWithImpl<$Res> implements _$ListThemeCopyWith<$Res> {
           : guid // ignore: cast_nullable_to_non_nullable
               as String,
       title: null == title
-          ? _self.title
+          ? _self._title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      color: null == color
-          ? _self.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Map<String, String>,
       listGuidVocabulary: null == listGuidVocabulary
           ? _self._listGuidVocabulary
           : listGuidVocabulary // ignore: cast_nullable_to_non_nullable

@@ -41,7 +41,6 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   final AuthRepository _authRepository = AuthRepository();
-
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -79,8 +78,8 @@ class MyApp extends StatelessWidget {
                 return LayoutBuilder(
                   builder: (context, constraints) {
                     final double screenWidth = constraints.maxWidth;
-                    //final double targetWidth = isTablet(context:context) ? 750 : 450;
-                    final double targetWidth = isTablet(context:context) ? 450 : 450;
+                    final double targetWidth = isTablet(context:context) ? 750 : 450;
+                    //final double targetWidth = 450;
                     final double scale = screenWidth / targetWidth;
                     final double screenHeight = constraints.maxHeight;
                     return Stack(

@@ -50,9 +50,7 @@ abstract class ListTheme with _$ListTheme {
     @JsonKey(name: "guid")
     required String guid,
     @JsonKey(name: "title")
-    required String title,
-    @JsonKey(name: "color")
-    required String color,
+    required Map<String, String> title, // Change to Map<String, String>
     @JsonKey(name: "listGuidVocabulary")
     required List<String> listGuidVocabulary,
   }) = _ListTheme;

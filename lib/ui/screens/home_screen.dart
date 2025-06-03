@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/data/repository/vocabulaire_repository.dart';
 import 'package:vobzilla/ui/widget/home/CardHome.dart';
+import 'package:vobzilla/ui/widget/home/HomeListTheme.dart';
 import 'package:vobzilla/ui/widget/statistical/global_statisctical_widget.dart';
 import '../../core/utils/ui.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
@@ -67,6 +68,13 @@ class HomeScreen extends StatelessWidget {
               ]
             ),
             Text(
+                "Par themes",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: GoogleFonts.titanOne().fontFamily)
+            ),
+            HomelistThemes(),
+            Text(
                 context.loc.home_title_classement,
                 style: TextStyle(
                     fontSize: 25,
@@ -75,51 +83,6 @@ class HomeScreen extends StatelessWidget {
             CardClassementGamer(position: 1),
             CardClassementGamer(position: 2),
             CardClassementGamer(position: 3),
-            /*
-            Text(
-                "Par themes",
-                style: TextStyle(
-                    fontSize: 25,
-                    fontFamily: GoogleFonts.titanOne().fontFamily)
-            ),
-            HorizontalScrollViewCardHome(
-                children: [
-                  CardHome(
-                    title: "Sport",
-                    vocabulaireBegin: 0,
-                    vocabulaireEnd: 20,
-                    paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                  ),
-                  CardHome(
-                    title: "Voyage",
-                    vocabulaireBegin: 0,
-                    vocabulaireEnd: 19,
-                    paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                  ),
-                  CardHome(
-                    title: "Business",
-                    vocabulaireBegin: 0,
-                    vocabulaireEnd: 19,
-                    paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                  ),
-                  CardHome(
-                    title: "Cuisine",
-                    vocabulaireBegin: 0,
-                    vocabulaireEnd: 19,
-                    paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                  ),
-                  CardHome(
-                    title: "Culture",
-                    vocabulaireBegin: 0,
-                    vocabulaireEnd: 19,
-                    paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                  ),
-                ]
-            ),
-
-
-            */
-
           ]
 
     );

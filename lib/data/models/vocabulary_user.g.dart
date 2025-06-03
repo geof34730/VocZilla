@@ -55,8 +55,7 @@ Map<String, dynamic> _$ListPersoToJson(_ListPerso instance) =>
 
 _ListTheme _$ListThemeFromJson(Map<String, dynamic> json) => _ListTheme(
       guid: json['guid'] as String,
-      title: json['title'] as String,
-      color: json['color'] as String,
+      title: Map<String, String>.from(json['title'] as Map),
       listGuidVocabulary: (json['listGuidVocabulary'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
@@ -66,6 +65,5 @@ Map<String, dynamic> _$ListThemeToJson(_ListTheme instance) =>
     <String, dynamic>{
       'guid': instance.guid,
       'title': instance.title,
-      'color': instance.color,
       'listGuidVocabulary': instance.listGuidVocabulary,
     };

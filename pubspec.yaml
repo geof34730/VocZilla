@@ -140,6 +140,7 @@ flutter:
     - assets/brand/voczillatitle.png
     - assets/audios/gcloud/
     - assets/data/list-vocabulaire.json
+    - assets/data/list-themes.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
