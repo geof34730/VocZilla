@@ -29,7 +29,13 @@ class VocabulairesBloc extends Bloc<VocabulairesEvent, VocabulairesState> {
   Future<void> _onAllVocabulaire(getAllVocabulaire event, Emitter<VocabulairesState> emit) async {
     emit(VocabulairesLoading());
     try {
-        VocabularyBlocLocal userData = await  _vocabulaireRepository.goVocabulaireAllForListPersoList(isVocabularyNotLearned:event.isVocabularyNotLearned,guidListPerso: event.guidListPerso);
+        VocabularyBlocLocal userData = await  _vocabulaireRepository.goVocabulaireAllForListPersoList(
+            isVocabularyNotLearned:event.isVocabularyNotLearned,
+            guid: event.guid,
+
+
+
+        );
         emit(VocabulairesLoaded(userData));
     } catch (e) {
       emit(VocabulairesError("Error all list: $e"));
@@ -42,7 +48,9 @@ class VocabulairesBloc extends Bloc<VocabulairesEvent, VocabulairesState> {
           isVocabularyNotLearned:event.isVocabularyNotLearned,
           vocabulaireBegin: event.vocabulaireBegin,
           vocabulaireEnd: event.vocabulaireEnd,
-          guidListPerso:event.guidListPerso,
+          guid:event.guid,
+          isListPerso:event.isListPerso,
+          isListTheme:event.isListTheme,
           titleList: event.titleList.toUpperCase()
       );
       Logger.Red.log("VocabulaireUserLoaded : $updatedUserData ");

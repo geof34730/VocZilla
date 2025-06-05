@@ -33,10 +33,13 @@ class HomelistThemes extends StatelessWidget {
                           context: context, nbList: 3),
                       children: data.listTheme.map((listTheme) {
                         return CardHome(
+                          isListTheme: true,
                           nbVocabulaire:listTheme.listGuidVocabulary.length,
                           guid: listTheme.guid,
                           title: listTheme.title["fr"] ?? "Default Title",
                           backgroundColor: Colors.greenAccent, // Remplacez par la couleur appropriée
+                          list: listTheme,
+
                           //isListTheme:true,
                           paddingLevelBar: EdgeInsets.only(top: 5),
                         );

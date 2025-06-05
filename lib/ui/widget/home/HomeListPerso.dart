@@ -65,8 +65,8 @@ class HomelistPerso extends StatelessWidget {
                               editMode: listPerso.ownListShare,
                               isListShare:listPerso.isListShare,
                               ownListShare: listPerso.ownListShare,
-                              listPerso: listPerso,
-                              isListPero:true,
+                              list: listPerso,
+                              isListPerso:true,
                               paddingLevelBar: EdgeInsets.only(top: 5),
                             );
                           }).toList()

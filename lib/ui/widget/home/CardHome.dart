@@ -25,37 +25,36 @@ class CardHome extends StatelessWidget {
   final int? vocabulaireEnd;
   final bool ownListShare;
   final bool isListShare;
-  final bool isListPero;
-  final ListPerso? listPerso;
+  final bool isListPerso;
+  final bool isListTheme;
+  final dynamic list;
   final String guid;
   final int nbVocabulaire;
 
   VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
   CardHome({
-
     this.nbVocabulaire=0,
     required this.title,
     this.vocabulaireBegin,
     this.vocabulaireEnd,
     this.editMode = false,
-    this.isListPero = false,
+    this.isListPerso = false,
+    this.isListTheme = false,
     this.ownListShare = false,
     this.isListShare = false,
     this.guid ="",
-    this.listPerso,
+    this.list,
     this.backgroundColor = AppColors.colorTextTitle,
     this.paddingLevelBar = const EdgeInsets.all(0),
   });
   final _vocabulaireRepository=VocabulaireRepository();
 
-  String? guidListPerso = null;
+
 
   @override
   Widget build(BuildContext context) {
-    if (listPerso != null) {
-      guidListPerso = listPerso?.guid;
-    }
+
     return LayoutBuilder(builder: (context, constraints) {
       double widthWidget = constraints.maxWidth;
       return  (isListShare  && !ownListShare
@@ -99,7 +98,7 @@ class CardHome extends StatelessWidget {
             ),
           ),
 
-         if(nbVocabulaire==0 && isListPero)...[
+         if(nbVocabulaire==0 && isListPerso)...[
            Container(
              height: 72,
              padding: EdgeInsets.only(left:5, right:5),
@@ -118,7 +117,7 @@ class CardHome extends StatelessWidget {
            )
          ],
 
-          if((isListPero ? nbVocabulaire>0 : true))...[
+          if((isListPerso ? nbVocabulaire>0 : true))...[
             Wrap(
             alignment: WrapAlignment.center,
             verticalDirection: VerticalDirection.down,
@@ -132,7 +131,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
+                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme  );
                       Navigator.pushNamed(context, '/vocabulary/list');
                     },
                     iconContent: Icons.list,
@@ -142,7 +141,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
+                      _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
                       Navigator.pushNamed(context, '/vocabulary/learn');
                     },
                     iconContent: Icons.school_rounded,
@@ -152,7 +151,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
+                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
                       Navigator.pushNamed(context, '/vocabulary/voicedictation');
                     },
                     iconContent: Icons.play_circle,
@@ -162,7 +161,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
+                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
                       Navigator.pushNamed(context, '/vocabulary/pronunciation');
                     },
                     iconContent: Icons.mic,
@@ -172,7 +171,7 @@ class CardHome extends StatelessWidget {
                   ElevatedButtonCardHome(
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guidListPerso: guidListPerso,context: context,titleList: title );
+                      _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
                       Navigator.pushNamed(context, '/vocabulary/quizz');
                     },
                     iconContent: Icons.assignment,
@@ -189,7 +188,9 @@ class CardHome extends StatelessWidget {
                 padding:EdgeInsets.only(top:5,bottom:editMode ? 0 : 8,left:10,right:10),
                 child:CardHomeStatisticalWidget(
                     widthWidget: widthWidget,
-                    listPerso: listPerso,
+                    list: list,
+                    isListTheme: isListPerso,
+                    isListPerso: isListTheme,
                     vocabulaireBegin: vocabulaireBegin,
                     vocabulaireEnd: vocabulaireEnd,
                     barColorProgress: Colors.green,

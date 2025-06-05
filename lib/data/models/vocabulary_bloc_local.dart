@@ -12,7 +12,8 @@ abstract class VocabularyBlocLocal with _$VocabularyBlocLocal {
     int? vocabulaireBegin,
     int? vocabulaireEnd,
     required bool isListPerso,
-    String? guidListPerso,
+    required bool isListTheme,
+    String? guid,
     required bool isVocabularyNotLearned,
   }) = _VocabularyBlocLocal;
 

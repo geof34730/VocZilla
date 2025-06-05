@@ -30,7 +30,10 @@ class HomeScreen extends StatelessWidget {
                     fontSize: 25,
                     fontFamily: GoogleFonts.titanOne().fontFamily)
             ),
-            GlobalStatisticalWidget(),
+            GlobalStatisticalWidget(
+              isListPerso : false,
+              isListTheme : false,
+            ),
             HomelistPerso(),
             Text(
               context.loc.home_title_list_defined,

@@ -166,23 +166,44 @@ class VocabulaireUserRepository {
         .fromJson(userDataJson)
         .listGuidVocabularyLearned
         : <String>[];
-    if (vocabulaireSpecificList is ListPerso) {
-      return vocabulaireSpecificList.listGuidVocabulary.where((vocabListPerso) => vocabulaireLearned.contains(vocabListPerso)).toList();
-    } else if (vocabulaireSpecificList is List<dynamic>) {
+    if (vocabulaireSpecificList is ListPerso || vocabulaireSpecificList is ListTheme) {
+      return vocabulaireSpecificList.listGuidVocabulary.where((vocabList) => vocabulaireLearned.contains(vocabList)).toList();
+    } else
+      if (vocabulaireSpecificList is List<dynamic>) {
       return vocabulaireSpecificList.where((vocab) => vocabulaireLearned.contains(vocab['GUID'])).toList();
     } else {
       throw ArgumentError('vocabulaireSpecificList doit être de type ListPerso ou List<dynamic>');
     }
   }
 
-  Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({String? guidListPerso, int? vocabulaireBegin, int? vocabulaireEnd, ListPerso? listPerso,}) async {
+  Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({
+    String? guidList,
+    int? vocabulaireBegin,
+    int? vocabulaireEnd,
+    ListPerso? listPerso,
+    required bool isListPerso,
+    required bool isListTheme
+
+  }) async {
+    Logger.Yellow.log("*********************guidList: $guidList");
+    Logger.Yellow.log("*********************getVocabulaireUserDataStatisticalLengthData $isListPerso $isListTheme");
+    Logger.Yellow.log("*********************isListTheme ${guidList is ListTheme}");
+    Logger.Yellow.log("*********************isListPerso ${guidList is ListPerso}");
     try {
       var data = [];
       late List<dynamic> dataSlice;
-      if(guidListPerso!=null){
-        dataSlice = await getVocabulaireListPersoByGuidListPerso(guidListPerso: guidListPerso);
+
+
+
+      if(isListPerso){
+        dataSlice = await getVocabulaireListPersoByGuidListPerso(guidListPerso: guidList ?? "");
       }
-      else {
+      else if(isListTheme){
+      //////////////////ADD FOR THEME
+        Logger.Blue.log("//////////////////ADD FOR THEME sssss");
+        dataSlice = await getVocabulaireListThemeByGuidList(guidList: guidList ?? "");
+
+      }else{
         data = await VocabulaireRepository().getDataTop(); // Ensure this is awaited
         vocabulaireBegin ??= 0;
         vocabulaireEnd ??= data.length;
@@ -204,15 +225,37 @@ class VocabulaireUserRepository {
   ////BEGIN LIST PERSO
   Future<List<dynamic>> getVocabulaireListPersoByGuidListPerso({required String guidListPerso}) async {
     VocabulaireUser? userData = await getVocabulaireUserData();
-
     if (userData != null) {
       ListPerso? listVocabulairePerso = userData.listPerso.firstWhere(
             (list) => list.guid == guidListPerso,
         orElse: () => ListPerso(guid: "guid", title: "title", color: 52),
       );
-
       if (listVocabulairePerso != null) {
         List<String> vocabGuids = listVocabulairePerso.listGuidVocabulary;
+        List<dynamic> allVocabularies = await VocabulaireRepository().getDataTop();
+        List<dynamic> vocabularies = allVocabularies.where((vocab) {
+          return vocabGuids.contains(vocab['GUID']);
+        }).toList();
+        return vocabularies;
+      }
+    }
+    // Return an empty list if no data is found
+    return [];
+  }
+
+
+  Future<List<dynamic>> getVocabulaireListThemeByGuidList({required String guidList}) async {
+    VocabulaireUser? userData = await getVocabulaireUserData();
+
+    if (userData != null) {
+      ListTheme? listVocabulaire = userData.listTheme.firstWhere(
+            (list) => list.guid == guidList,
+        orElse: () =>
+            ListTheme(guid: "guid", title: {"fr": "Default Title"}, listGuidVocabulary: []),
+      );
+
+      if (listVocabulaire != null) {
+        List<String> vocabGuids = listVocabulaire.listGuidVocabulary;
         List<dynamic> allVocabularies = await VocabulaireRepository().getDataTop();
         List<dynamic> vocabularies = allVocabularies.where((vocab) {
           return vocabGuids.contains(vocab['GUID']);
@@ -385,13 +428,17 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<StatisticalLength> getVocabulaireListPersoDataStatisticalLengthData({required ListPerso? listPerso}) async {
-    var vocabDataLearned = await getVocabulaireUserDataLearned( vocabulaireSpecificList: listPerso);
+  Future<StatisticalLength> getVocabulaireListDataStatisticalLengthData({required dynamic list, required bool isListPerso, required bool isListTheme}) async {
+    var vocabDataLearned = await getVocabulaireUserDataLearned( vocabulaireSpecificList: list);
     return StatisticalLength(
         vocabLearnedCount: vocabDataLearned.length,
-        countVocabulaireAll: listPerso!.listGuidVocabulary.length
+        countVocabulaireAll: list!.listGuidVocabulary.length
     );
   }
+
+
+
+
 }
 
 

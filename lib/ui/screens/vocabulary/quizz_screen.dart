@@ -18,7 +18,6 @@ import '../../widget/statistical/global_statisctical_widget.dart'; // Importez i
 
 class QuizzScreen extends StatefulWidget {
   QuizzScreen();
-
   @override
   _QuizzScreenState createState() => _QuizzScreenState();
 }
@@ -41,7 +40,6 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: [
         BlocBuilder<VocabulairesBloc, VocabulairesState>(
@@ -73,15 +71,19 @@ class _QuizzScreenState extends State<QuizzScreen> {
             }
             return Column(
               children: [
-                state.data.isListPerso
+                state.data.isListPerso || state.data.isListTheme
                 ?
                   GlobalStatisticalWidget(
-                    guidListPerso: state.data.guidListPerso,
+                    guidList: state.data.guid,
+                    isListPerso : state.data.isListPerso,
+                    isListTheme : state.data.isListTheme,
                   )
                 :
                   GlobalStatisticalWidget(
                     vocabulaireBegin: state.data.vocabulaireBegin,
                     vocabulaireEnd: state.data.vocabulaireEnd,
+                    isListPerso : false,
+                    isListTheme : false,
                   ),
 
                 Text(context.loc.quizz_progression_title,

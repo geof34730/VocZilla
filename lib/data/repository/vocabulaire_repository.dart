@@ -15,33 +15,51 @@ class VocabulaireRepository {
   final VocabulaireService _vocabulaireService = VocabulaireService();
   final VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
-   goVocabulaires({isVocabularyNotLearned = false, required BuildContext context, int? vocabulaireBegin, int? vocabulaireEnd, String? guidListPerso, required String titleList }){
-    BlocProvider.of<VocabulairesBloc>(context).add(GetVocabulaireList(
-        isVocabularyNotLearned:isVocabularyNotLearned,
-        vocabulaireBegin: vocabulaireBegin,
-        vocabulaireEnd: vocabulaireEnd,
-        guidListPerso:guidListPerso,
-        titleList: titleList.toUpperCase()
-    ));
+   goVocabulaires({isVocabularyNotLearned = false,required bool isListPerso, required bool isListTheme, required String? guid, required BuildContext context, int? vocabulaireBegin, int? vocabulaireEnd,  required String titleList }){
+      Logger.Yellow.log("goVocabulaires ");
+      BlocProvider.of<VocabulairesBloc>(context).add(GetVocabulaireList(
+          isVocabularyNotLearned:isVocabularyNotLearned,
+          vocabulaireBegin: vocabulaireBegin,
+          vocabulaireEnd: vocabulaireEnd,
+          guid:guid,
+          isListPerso:isListPerso,
+          isListTheme:isListTheme,
+          titleList: titleList.toUpperCase()
+      ));
   }
 
    goVocabulairesWithState({required BuildContext context, required dynamic state, bool isVocabularyNotLearned = false}){
-    goVocabulaires(isVocabularyNotLearned: isVocabularyNotLearned,vocabulaireEnd: state.data.vocabulaireEnd,vocabulaireBegin:  state.data.vocabulaireBegin,guidListPerso:  state.data.guidListPerso,context: context,titleList:  state.data.titleList );
+      Logger.Yellow.log("goVocabulairesWithState state ${state.data}");
+      Logger.Yellow.log("goVocabulairesWithState isListTheme ${state.data.isListTheme}");
+      Logger.Yellow.log("goVocabulairesWithState isListPerso ${state.data.isListPerso}");
+      goVocabulaires(
+          isVocabularyNotLearned: isVocabularyNotLearned,
+          vocabulaireEnd: state.data.vocabulaireEnd,
+          vocabulaireBegin:  state.data.vocabulaireBegin,
+          guid:  state.data.guid,
+          context: context,
+          titleList:  state.data.titleList,
+          isListTheme: state.data.isListTheme,
+          isListPerso: state.data.isListPerso
+      );
   }
 
-   Future<VocabularyBlocLocal> goVocabulaireAllForListPersoList({required bool isVocabularyNotLearned, required String guidListPerso}) async {
+   Future<VocabularyBlocLocal> goVocabulaireAllForListPersoList({required bool isVocabularyNotLearned, required String guid}) async {
+
+     Logger.Yellow.log("goVocabulaireAllForListPersoList with theme: $guid");
+
       var data = await getDataTop();
       late List<dynamic> listPersoGuidVocabulary=[];
-      Logger.Yellow.log("guidListPerso: $guidListPerso");
+      Logger.Yellow.log("guidListPerso: $guid");
       final List<dynamic> dataSlice = data;
       final List<dynamic> learnedVocabularies = await _vocabulaireUserRepository.getVocabulaireUserDataLearned(vocabulaireSpecificList: dataSlice);
       final Set<String> learnedVocabulariesGuids = learnedVocabularies.map((vocabulaire) => vocabulaire['GUID'] as String).toSet();
       VocabulaireUser? userData =  await _vocabulaireUserRepository.getVocabulaireUserData();
 
       if (userData != null) {
-         listPersoGuidVocabulary = userData.listPerso.firstWhere((listPerso) => listPerso.guid == guidListPerso).listGuidVocabulary;
+         listPersoGuidVocabulary = userData.listPerso.firstWhere((listPerso) => listPerso.guid == guid).listGuidVocabulary;
         //selectedVocabularies = listPerso.vocabulaireGuid ?? [];
-        Logger.Yellow.log("listPerso.listGuidVocabulary: ${listPersoGuidVocabulary}");
+      //  Logger.Yellow.log("listPerso.listGuidVocabulary: ${listPersoGuidVocabulary}");
       }
 
       final List<dynamic> updatedDataSlice = dataSlice.map((vocabulaire) {
@@ -62,7 +80,8 @@ class VocabulaireRepository {
         vocabulaireEnd: valuesList.length,
         isVocabularyNotLearned: isVocabularyNotLearned,
         isListPerso: true,
-        guidListPerso:guidListPerso
+        isListTheme: true,
+        guid:guid
       );
       if(isVocabularyNotLearned) {
         final dataSliceNotLearned = await _vocabulaireUserRepository.getVocabulaireUserDataNotLearned(vocabulaireSpecificList: dataSliceWithTitle.vocabulaireList,);
@@ -76,17 +95,26 @@ class VocabulaireRepository {
 
     }
 
-   Future<VocabularyBlocLocal> getVocabulairesList({String? guidListPerso,String? guidListTheme, int? vocabulaireBegin, int? vocabulaireEnd, required String titleList,isVocabularyNotLearned=false}) async {
+   Future<VocabularyBlocLocal> getVocabulairesList({
+     String? guid,
+     required bool isListPerso,
+     required bool isListTheme,
+
+     int? vocabulaireBegin,
+     int? vocabulaireEnd,
+     required String titleList,
+     isVocabularyNotLearned=false
+   }) async {
      //ICI ADD FIELD IsLearnerd
-      Logger.Pink.log("getVocabulairesList with theme: $guidListTheme");
+      Logger.Yellow.log("getVocabulairesList with theme: $guid");
       late VocabularyBlocLocal dataSliceWithTitle;
       var data =  await getDataTop();
 
       final List<dynamic> learnedVocabularies = await _vocabulaireUserRepository.getVocabulaireUserDataLearned(vocabulaireSpecificList: data);
       final Set<String> learnedVocabulariesGuids = learnedVocabularies.map((vocabulaire) => vocabulaire['GUID'] as String).toSet();
-      if(guidListPerso!=null){
+      if(isListPerso){
         VocabulaireUser? userData = await _vocabulaireUserRepository.getVocabulaireUserData();
-        ListPerso? listPerso = userData?.listPerso.firstWhere((listPerso) => listPerso.guid == guidListPerso,
+        ListPerso? listPerso = userData?.listPerso.firstWhere((listPerso) => listPerso.guid == guid,
           orElse: () => ListPerso(guid: "", title:"",listGuidVocabulary: [], color: 545454),
         );
         final List<dynamic> dataSlice = data.where((vocab) => listPerso != null && listPerso.listGuidVocabulary.contains(vocab['GUID'])).toList();
@@ -101,23 +129,19 @@ class VocabulaireRepository {
           vocabulaireList: updatedDataSlice,
           dataAllLength: updatedDataSlice.length,
           isVocabularyNotLearned: isVocabularyNotLearned,
-          isListPerso: true,
-          guidListPerso: listPerso?.guid,
+          isListPerso: isListPerso,
+          isListTheme: isListTheme,
+          guid: guid,
         );
-      } else if(guidListTheme!=null) {
-          Logger.Yellow.log("go guidListTheme: $guidListTheme");
+      } else if(isListTheme) {
+          Logger.Yellow.log("go guidListTheme: $guid");
           VocabulaireUser? userData = await _vocabulaireUserRepository.getVocabulaireUserData();
-          ListTheme? listTheme = userData?.listTheme.firstWhere((listTheme) => listTheme.guid == guidListTheme,
+          ListTheme? listTheme = userData?.listTheme.firstWhere((listTheme) => listTheme.guid == guid,
             orElse: () => ListTheme(guid: "", title: {"fr" : ""}, listGuidVocabulary: []),
           );
-
-
-          Logger.Blue.log(listTheme);
-
-          final List<dynamic> dataSlice = data.where((vocab) => listTheme != null && listTheme.listGuidVocabulary.contains(vocab['GUID'])).toList();
-
-          Logger.Blue.log(dataSlice);
-
+        Logger.Yellow.log("listTheme: $listTheme");
+        final List<dynamic> dataSlice = data.where((vocab) => listTheme != null && listTheme.listGuidVocabulary.contains(vocab['GUID'])).toList();
+        Logger.Yellow.log("dataSlice: $dataSlice");
 
           final List<dynamic> updatedDataSlice = dataSlice.map((vocabulaire) {
             return {
@@ -130,11 +154,13 @@ class VocabulaireRepository {
             vocabulaireList: updatedDataSlice,
             dataAllLength: updatedDataSlice.length,
             isVocabularyNotLearned: isVocabularyNotLearned,
-            isListPerso: false,
+            isListPerso: isListPerso,
+            isListTheme: isListTheme,
+            guid: guid,
             //guidListTheme: listTheme?.guid,
           );
 
-          Logger.Blue.log(dataSliceWithTitle);
+         // Logger.Blue.log(dataSliceWithTitle);
       }
       else
       {
@@ -153,7 +179,8 @@ class VocabulaireRepository {
             vocabulaireBegin: vocabulaireBegin,
             vocabulaireEnd: vocabulaireEnd,
             isVocabularyNotLearned: isVocabularyNotLearned,
-            isListPerso: false,
+            isListPerso: isListPerso,
+            isListTheme: isListTheme
           );
       }
 
@@ -164,7 +191,7 @@ class VocabulaireRepository {
         );
         dataSliceWithTitle=updatedBlocLocal;
       }
-      Logger.Yellow.log(dataSliceWithTitle);
+     // Logger.Yellow.log(dataSliceWithTitle);
       return dataSliceWithTitle;
   }
 

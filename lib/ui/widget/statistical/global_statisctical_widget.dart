@@ -14,9 +14,19 @@ import 'LevelChart.dart';
 class GlobalStatisticalWidget extends StatelessWidget {
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
-  final String? guidListPerso;
+  final String? guidList;
+  final bool isListPerso;
+  final bool isListTheme;
 
-  const GlobalStatisticalWidget({super.key, this.vocabulaireBegin, this.vocabulaireEnd, this.guidListPerso});
+  const GlobalStatisticalWidget({
+    super.key,
+    this.vocabulaireBegin,
+    this.vocabulaireEnd,
+    this.guidList,
+    required this.isListPerso,
+    required this.isListTheme
+
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +37,9 @@ class GlobalStatisticalWidget extends StatelessWidget {
             future: VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
               vocabulaireBegin: vocabulaireBegin,
               vocabulaireEnd: vocabulaireEnd,
-              guidListPerso:guidListPerso
+              guidList:guidList,
+              isListPerso:isListPerso,
+              isListTheme:isListTheme,
             ),
             builder: (context, userDataSnapshot) {
               if (userDataSnapshot.connectionState == ConnectionState.waiting) {

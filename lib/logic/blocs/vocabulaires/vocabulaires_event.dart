@@ -10,8 +10,8 @@ class LoadVocabulairesData extends VocabulairesEvent {
 
 class getAllVocabulaire extends VocabulairesEvent {
   late bool isVocabularyNotLearned;
-  late String guidListPerso;
-  getAllVocabulaire(this.isVocabularyNotLearned, this.guidListPerso);
+  late String guid;
+  getAllVocabulaire(this.isVocabularyNotLearned, this.guid);
 }
 
 class GetVocabulaireList extends VocabulairesEvent {
@@ -19,15 +19,20 @@ class GetVocabulaireList extends VocabulairesEvent {
   final String? guidVocabulaire;
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
-  final String? guidListPerso;
+  final String? guid;
   final String titleList;
+  final bool isListPerso;
+  final bool isListTheme;
+
 
   GetVocabulaireList({
     this.isVocabularyNotLearned = false,
     this.guidVocabulaire,
     this.vocabulaireBegin,
     this.vocabulaireEnd,
-    this.guidListPerso,
-    required this.titleList
+    this.guid,
+    required this.titleList,
+    required this.isListPerso,
+    required this.isListTheme
   });
 }

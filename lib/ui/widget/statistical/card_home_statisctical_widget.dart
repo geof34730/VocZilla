@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
+import '../../../core/utils/logger.dart';
 import '../../../data/models/statistical_length.dart';
 import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
@@ -17,7 +18,9 @@ class CardHomeStatisticalWidget extends StatefulWidget {
   final dynamic barColorLeft;
   final dynamic paddingLevelBar;
   final double widthWidget;
-  final ListPerso? listPerso;
+  final dynamic list;
+  final bool isListPerso;
+  final bool isListTheme;
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
 
@@ -29,7 +32,9 @@ class CardHomeStatisticalWidget extends StatefulWidget {
     required this.barColorLeft,
     required this.paddingLevelBar,
     required this.widthWidget,
-    this.listPerso,
+    this.list,
+    required this.isListPerso,
+    required this.isListTheme,
     this.vocabulaireBegin,
     this.vocabulaireEnd
 
@@ -46,22 +51,28 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
       builder: (context, state) {
         if (state is VocabulaireUserLoaded ) {
           return FutureBuilder(
-            future: widget.listPerso != null
+            future: widget.isListPerso || widget.isListTheme
               ?
-              VocabulaireUserRepository().getVocabulaireListPersoDataStatisticalLengthData(
-                  listPerso: widget.listPerso
-              )
+                VocabulaireUserRepository().getVocabulaireListDataStatisticalLengthData(
+                    list: widget.list,
+                    isListPerso : widget.isListPerso,
+                    isListTheme : widget.isListTheme,
+                  )
               :
-              VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
-                vocabulaireBegin: widget.vocabulaireBegin,
-                vocabulaireEnd: widget.vocabulaireEnd,
-              )
+                VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
+                  vocabulaireBegin: widget.vocabulaireBegin,
+                  vocabulaireEnd: widget.vocabulaireEnd,
+                  isListPerso : widget.isListPerso,
+                  isListTheme : widget.isListTheme,
+                )
             ,
             builder: (context, userDataSnapshot) {
               if (userDataSnapshot.connectionState == ConnectionState.waiting) {
                 return CircularProgressIndicator(); // Show a loading indicator while waiting
               } else if (userDataSnapshot.hasError) {
-                return Text('Erreur affichage Statistique'); // Handle error
+
+                Logger.Red.log(userDataSnapshot);
+                return Text('Erreur affichage Statistique 1'); // Handle error
               } else if (userDataSnapshot.hasData) {
                 StatisticalLength? statisticalData = userDataSnapshot.data;
                 double percentageProgression = ((statisticalData!.vocabLearnedCount / statisticalData.countVocabulaireAll));
@@ -76,7 +87,7 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
             return getLinearPercentIndicator(percentage: 0);
           }
           else {
-            return const Text('Erreur affichage Statistique');
+            return const Text('Erreur affichage Statistique 2');
           }
         }
       },

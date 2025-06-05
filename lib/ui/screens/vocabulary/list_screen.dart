@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
+import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
 import '../../widget/elements/PlaySoond.dart';
 

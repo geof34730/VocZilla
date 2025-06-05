@@ -21,7 +21,8 @@ mixin _$VocabularyBlocLocal {
   int? get vocabulaireBegin;
   int? get vocabulaireEnd;
   bool get isListPerso;
-  String? get guidListPerso;
+  bool get isListTheme;
+  String? get guid;
   bool get isVocabularyNotLearned;
 
   /// Create a copy of VocabularyBlocLocal
@@ -52,8 +53,9 @@ mixin _$VocabularyBlocLocal {
                 other.vocabulaireEnd == vocabulaireEnd) &&
             (identical(other.isListPerso, isListPerso) ||
                 other.isListPerso == isListPerso) &&
-            (identical(other.guidListPerso, guidListPerso) ||
-                other.guidListPerso == guidListPerso) &&
+            (identical(other.isListTheme, isListTheme) ||
+                other.isListTheme == isListTheme) &&
+            (identical(other.guid, guid) || other.guid == guid) &&
             (identical(other.isVocabularyNotLearned, isVocabularyNotLearned) ||
                 other.isVocabularyNotLearned == isVocabularyNotLearned));
   }
@@ -68,12 +70,13 @@ mixin _$VocabularyBlocLocal {
       vocabulaireBegin,
       vocabulaireEnd,
       isListPerso,
-      guidListPerso,
+      isListTheme,
+      guid,
       isVocabularyNotLearned);
 
   @override
   String toString() {
-    return 'VocabularyBlocLocal(titleList: $titleList, vocabulaireList: $vocabulaireList, dataAllLength: $dataAllLength, vocabulaireBegin: $vocabulaireBegin, vocabulaireEnd: $vocabulaireEnd, isListPerso: $isListPerso, guidListPerso: $guidListPerso, isVocabularyNotLearned: $isVocabularyNotLearned)';
+    return 'VocabularyBlocLocal(titleList: $titleList, vocabulaireList: $vocabulaireList, dataAllLength: $dataAllLength, vocabulaireBegin: $vocabulaireBegin, vocabulaireEnd: $vocabulaireEnd, isListPerso: $isListPerso, isListTheme: $isListTheme, guid: $guid, isVocabularyNotLearned: $isVocabularyNotLearned)';
   }
 }
 
@@ -90,7 +93,8 @@ abstract mixin class $VocabularyBlocLocalCopyWith<$Res> {
       int? vocabulaireBegin,
       int? vocabulaireEnd,
       bool isListPerso,
-      String? guidListPerso,
+      bool isListTheme,
+      String? guid,
       bool isVocabularyNotLearned});
 }
 
@@ -113,7 +117,8 @@ class _$VocabularyBlocLocalCopyWithImpl<$Res>
     Object? vocabulaireBegin = freezed,
     Object? vocabulaireEnd = freezed,
     Object? isListPerso = null,
-    Object? guidListPerso = freezed,
+    Object? isListTheme = null,
+    Object? guid = freezed,
     Object? isVocabularyNotLearned = null,
   }) {
     return _then(_self.copyWith(
@@ -141,9 +146,13 @@ class _$VocabularyBlocLocalCopyWithImpl<$Res>
           ? _self.isListPerso
           : isListPerso // ignore: cast_nullable_to_non_nullable
               as bool,
-      guidListPerso: freezed == guidListPerso
-          ? _self.guidListPerso
-          : guidListPerso // ignore: cast_nullable_to_non_nullable
+      isListTheme: null == isListTheme
+          ? _self.isListTheme
+          : isListTheme // ignore: cast_nullable_to_non_nullable
+              as bool,
+      guid: freezed == guid
+          ? _self.guid
+          : guid // ignore: cast_nullable_to_non_nullable
               as String?,
       isVocabularyNotLearned: null == isVocabularyNotLearned
           ? _self.isVocabularyNotLearned
@@ -163,7 +172,8 @@ class _VocabularyBlocLocal implements VocabularyBlocLocal {
       this.vocabulaireBegin,
       this.vocabulaireEnd,
       required this.isListPerso,
-      this.guidListPerso,
+      required this.isListTheme,
+      this.guid,
       required this.isVocabularyNotLearned})
       : _vocabulaireList = vocabulaireList;
   factory _VocabularyBlocLocal.fromJson(Map<String, dynamic> json) =>
@@ -188,7 +198,9 @@ class _VocabularyBlocLocal implements VocabularyBlocLocal {
   @override
   final bool isListPerso;
   @override
-  final String? guidListPerso;
+  final bool isListTheme;
+  @override
+  final String? guid;
   @override
   final bool isVocabularyNotLearned;
 
@@ -225,8 +237,9 @@ class _VocabularyBlocLocal implements VocabularyBlocLocal {
                 other.vocabulaireEnd == vocabulaireEnd) &&
             (identical(other.isListPerso, isListPerso) ||
                 other.isListPerso == isListPerso) &&
-            (identical(other.guidListPerso, guidListPerso) ||
-                other.guidListPerso == guidListPerso) &&
+            (identical(other.isListTheme, isListTheme) ||
+                other.isListTheme == isListTheme) &&
+            (identical(other.guid, guid) || other.guid == guid) &&
             (identical(other.isVocabularyNotLearned, isVocabularyNotLearned) ||
                 other.isVocabularyNotLearned == isVocabularyNotLearned));
   }
@@ -241,12 +254,13 @@ class _VocabularyBlocLocal implements VocabularyBlocLocal {
       vocabulaireBegin,
       vocabulaireEnd,
       isListPerso,
-      guidListPerso,
+      isListTheme,
+      guid,
       isVocabularyNotLearned);
 
   @override
   String toString() {
-    return 'VocabularyBlocLocal(titleList: $titleList, vocabulaireList: $vocabulaireList, dataAllLength: $dataAllLength, vocabulaireBegin: $vocabulaireBegin, vocabulaireEnd: $vocabulaireEnd, isListPerso: $isListPerso, guidListPerso: $guidListPerso, isVocabularyNotLearned: $isVocabularyNotLearned)';
+    return 'VocabularyBlocLocal(titleList: $titleList, vocabulaireList: $vocabulaireList, dataAllLength: $dataAllLength, vocabulaireBegin: $vocabulaireBegin, vocabulaireEnd: $vocabulaireEnd, isListPerso: $isListPerso, isListTheme: $isListTheme, guid: $guid, isVocabularyNotLearned: $isVocabularyNotLearned)';
   }
 }
 
@@ -265,7 +279,8 @@ abstract mixin class _$VocabularyBlocLocalCopyWith<$Res>
       int? vocabulaireBegin,
       int? vocabulaireEnd,
       bool isListPerso,
-      String? guidListPerso,
+      bool isListTheme,
+      String? guid,
       bool isVocabularyNotLearned});
 }
 
@@ -288,7 +303,8 @@ class __$VocabularyBlocLocalCopyWithImpl<$Res>
     Object? vocabulaireBegin = freezed,
     Object? vocabulaireEnd = freezed,
     Object? isListPerso = null,
-    Object? guidListPerso = freezed,
+    Object? isListTheme = null,
+    Object? guid = freezed,
     Object? isVocabularyNotLearned = null,
   }) {
     return _then(_VocabularyBlocLocal(
@@ -316,9 +332,13 @@ class __$VocabularyBlocLocalCopyWithImpl<$Res>
           ? _self.isListPerso
           : isListPerso // ignore: cast_nullable_to_non_nullable
               as bool,
-      guidListPerso: freezed == guidListPerso
-          ? _self.guidListPerso
-          : guidListPerso // ignore: cast_nullable_to_non_nullable
+      isListTheme: null == isListTheme
+          ? _self.isListTheme
+          : isListTheme // ignore: cast_nullable_to_non_nullable
+              as bool,
+      guid: freezed == guid
+          ? _self.guid
+          : guid // ignore: cast_nullable_to_non_nullable
               as String?,
       isVocabularyNotLearned: null == isVocabularyNotLearned
           ? _self.isVocabularyNotLearned
