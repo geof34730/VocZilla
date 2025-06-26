@@ -1,5 +1,6 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'data/repository/vocabulaire_user_repository.dart';
 import 'data/services/firebase_messaging_service.dart';
 import 'data/services/notification_service.dart';
 import 'firebase_initialiser.dart';
@@ -22,6 +23,9 @@ void main() async {
 
   final messagingService = FirebaseMessagingService();
   await messagingService.configure();
+
+  final vocabulaireUserRepository = VocabulaireUserRepository();
+  await vocabulaireUserRepository.updateListTheme();
 
 
   runApp(MyApp());

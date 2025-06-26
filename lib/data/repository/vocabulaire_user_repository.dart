@@ -28,15 +28,27 @@ class VocabulaireUserRepository {
     }
   }
 */
-  Future<VocabulaireUser?> getVocabulaireUserData() async {
-    Logger.Pink.log(
-        'VocabulaireUserRepository:  getVocabulaireUserData getUserData');
+
+  Future<void> updateListTheme() async {
     try {
       final userDataJson = await localStorageService.getUserData();
+      Logger.Blue.log("userData: $userDataJson");
       if (userDataJson != null) {
-        Logger.Pink.log(
-            'VocabulaireUserRepository: getUserData return ${VocabulaireUser
-                .fromJson(userDataJson)}');
+        final List<ListTheme> userTheme = await VocabulaireService().getThemesData();
+        userDataJson['listTheme'] = userTheme;
+        await localStorageService.saveUserData(userDataJson);
+        final userDataJsonUpdate = await localStorageService.getUserData();
+            Logger.Green.log("userData: $userDataJsonUpdate");
+      }
+    } catch (e) {
+      Logger.Red.log('Erreur lors de la récupération des données utilisateur locales : $e');
+    }
+  }
+
+  Future<VocabulaireUser?> getVocabulaireUserData() async {
+    try {
+      var userDataJson = await localStorageService.getUserData();
+      if (userDataJson != null) {
         return VocabulaireUser.fromJson(userDataJson);
       }
       else {
@@ -44,8 +56,7 @@ class VocabulaireUserRepository {
         return userData;
       }
     } catch (e) {
-      Logger.Red.log(
-          'Erreur lors de la récupération des données utilisateur locales : $e');
+      Logger.Red.log('Erreur lors de la récupération des données utilisateur locales : $e');
       return null;
     }
   }
@@ -185,16 +196,9 @@ class VocabulaireUserRepository {
     required bool isListTheme
 
   }) async {
-    Logger.Yellow.log("*********************guidList: $guidList");
-    Logger.Yellow.log("*********************getVocabulaireUserDataStatisticalLengthData $isListPerso $isListTheme");
-    Logger.Yellow.log("*********************isListTheme ${guidList is ListTheme}");
-    Logger.Yellow.log("*********************isListPerso ${guidList is ListPerso}");
     try {
       var data = [];
       late List<dynamic> dataSlice;
-
-
-
       if(isListPerso){
         dataSlice = await getVocabulaireListPersoByGuidListPerso(guidListPerso: guidList ?? "");
       }

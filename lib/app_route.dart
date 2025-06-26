@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/ui/screens/personalisation/step2.dart';
+import 'package:vobzilla/ui/screens/update_screen.dart';
 
 import 'logic/check_connectivity.dart';
 import 'core/utils/logger.dart';
@@ -180,6 +181,12 @@ class AppRoute {
         case homeLogged:
           return Layout(
               child: HomeScreen()
+          );
+
+        case updateScreen:
+          return Layout(
+              titleScreen: "Mise à jour disponible !",
+              child: UpdateScreen()
           );
         case '/vocabulary':
           if (uri.pathSegments.length == 2) {

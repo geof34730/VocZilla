@@ -81,6 +81,7 @@ dependencies:
   ribbon_widget: ^1.0.5
   flutter_gen: ^5.10.0
   percent_indicator: ^4.2.5
+  url_launcher: ^6.3.1
 
 
 flutter_launcher_icons:
