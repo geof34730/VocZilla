@@ -14,6 +14,9 @@ import 'app_localizations_it.dart';
 import 'app_localizations_no.dart';
 import 'app_localizations_pl.dart';
 import 'app_localizations_pt.dart';
+import 'app_localizations_ru.dart';
+import 'app_localizations_sv.dart';
+import 'app_localizations_uk.dart';
 import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
@@ -108,6 +111,9 @@ abstract class AppLocalizations {
     Locale('no'),
     Locale('pl'),
     Locale('pt'),
+    Locale('ru'),
+    Locale('sv'),
+    Locale('uk'),
     Locale('zh')
   ];
 
@@ -697,7 +703,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'et', 'fr', 'it', 'no', 'pl', 'pt', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'et', 'fr', 'it', 'no', 'pl', 'pt', 'ru', 'sv', 'uk', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -717,6 +723,9 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'no': return AppLocalizationsNo();
     case 'pl': return AppLocalizationsPl();
     case 'pt': return AppLocalizationsPt();
+    case 'ru': return AppLocalizationsRu();
+    case 'sv': return AppLocalizationsSv();
+    case 'uk': return AppLocalizationsUk();
     case 'zh': return AppLocalizationsZh();
   }
 
