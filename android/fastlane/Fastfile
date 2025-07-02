@@ -1,0 +1,95 @@
+require 'fileutils'
+
+default_platform(:android)
+
+platform :android do
+
+  ####################################################
+  # 🟢 Helper methods
+  ####################################################
+
+  def extract_locales
+    project_root = File.expand_path("../..", __dir__)
+    arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
+    locales = arb_files.map { |file| file.match(/app_(.+)\.arb/)[1] }
+    locales.uniq
+  end
+
+  def to_play_locale(locale)
+    {
+      "en" => "en-US",
+      "fr" => "fr-FR",
+      "pt" => "pt-PT",
+      "es" => "es-ES",
+      "de" => "de-DE"
+    }[locale] || locale
+  end
+
+  ####################################################
+  # 📸 Screenshots multilingues
+  ####################################################
+
+  desc "📸 Générer les screenshots Android multilingues"
+  lane :screenshots do
+    project_root = File.expand_path("../..", __dir__)
+    dart_script = File.join(project_root, "/fastlane/generate_metadata.dart")
+
+    unless File.exist?(dart_script)
+      UI.user_error!("❌ Script Dart introuvable: #{dart_script}")
+    end
+
+    Dir.chdir(project_root) do
+      sh("dart '#{dart_script}'")
+    end
+
+    locales = extract_locales
+    if locales.empty?
+      UI.user_error!("❌ Aucune locale trouvée dans lib/l10n")
+    end
+
+    locales.each do |locale|
+      UI.message("🌐 Locale : #{locale}")
+
+      # Build l'app avec la locale
+      sh("flutter build apk --dart-define=LOCALE=#{locale}")
+
+      # Lancer les tests d'intégration
+      sh("flutter drive --driver=../test_driver/integration_test.dart --target=../integration_test/app_test.dart --dart-define=LOCALE=#{locale}")
+
+      play_locale = to_play_locale(locale)
+      dest_dir = File.join(project_root, "fastlane/metadata/android/#{play_locale}/images/phoneScreenshots")
+      FileUtils.mkdir_p(dest_dir)
+
+      # Copier les captures d'écran
+      sh("cp ../../integration_test/screenshots/*.png '#{dest_dir}/'")
+    end
+  end
+
+  ####################################################
+  # 🚀 Release Google Play
+  ####################################################
+
+  desc "🚀 Publier Android (metadata + screenshots)"
+  lane :release do
+    screenshots
+    supply(
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_changelogs: true,
+      skip_upload_metadata: false,
+      skip_upload_screenshots: false
+    )
+  end
+
+  ####################################################
+  # ✅ Tests unitaires
+  ####################################################
+
+  desc "✅ Lancer les tests unitaires Android"
+  lane :test do
+    gradle(
+      task: "testReleaseUnitTest"
+    )
+  end
+
+end

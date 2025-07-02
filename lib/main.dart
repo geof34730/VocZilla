@@ -7,8 +7,6 @@ import 'firebase_initialiser.dart';
 import 'package:vobzilla/app.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-import 'logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
-import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 

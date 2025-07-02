@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.geoffreypetain.voczilla.voczilla.test">
+
+    <application>
+        <instrumentation
+                android:name="androidx.test.runner.AndroidJUnitRunner"
+                android:targetPackage="com.geoffreypetain.voczilla.voczilla"
+                android:handleProfiling="true"
+                android:label="Tests for Voczilla" />
+    </application>
+</manifest>
+

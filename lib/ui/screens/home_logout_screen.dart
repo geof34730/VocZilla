@@ -18,8 +18,10 @@ class HomeLogoutScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+
                     Image.asset("assets/brand/logo_landing.png"),
                    // TitleSite(typoSize: 80),
+                    Text('Welcome to MyApp', key: ValueKey('welcome_text')),
                     Text(context.loc.home_notlogged_accroche1,
                         style: TextStyle(
                             fontSize: 25,

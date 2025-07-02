@@ -18,6 +18,7 @@ fastlane/Appfile
 *.iws
 .idea/
 voczilla-d2d79-c1a7826cd5fd.json
+voczilla-play.json
 .env
 firebase.json
 /firebase.json
