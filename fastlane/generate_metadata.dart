@@ -49,8 +49,8 @@ void main() async {
     final androidLocale = toPlayLocale(locale);
     final iosLocale = toAppleLocale(locale);
 
-    writeMetadata(outputDir.path, 'android/$androidLocale', title, description, keywords, shortdescripotion);
-    writeMetadata(outputDir.path, 'ios/$iosLocale', title, description, keywords, shortdescripotion);
+    writeMetadata(outputDir.path, '$androidLocale', title, description, keywords, shortdescripotion);
+   // writeMetadata(outputDir.path, 'ios/$iosLocale', title, description, keywords, shortdescripotion);
 
     print('✅ Métadonnées générées pour $locale → $androidLocale / $iosLocale');
   }

@@ -118,21 +118,68 @@ end
   # 📸 Screenshots multilingues
   ####################################################
 
+
+
   desc "📸 Générer les screenshots Android multilingues"
   lane :screenshots do
+    devices = sh("adb devices", log: false)
+    emulator_running = devices.lines.any? { |line| line.start_with?("emulator") && line.include?("device") }
+
+    unless emulator_running
+      UI.message("Aucun émulateur détecté, lancement de l'émulateur...")
+
+      emulator_cmd = [
+        ENV['ANDROID_HOME'] + "/emulator/emulator",
+        "-avd", "emulator_phone_screenshots_voczilla",
+        "-no-snapshot-load",
+        "-no-audio"
+      ]
+      # Lance l'émulateur en arrière-plan, totalement détaché
+      Process.spawn(*emulator_cmd, [:out, :err] => "/dev/null")
+      UI.message("Attente du démarrage de l'émulateur...")
+
+      # Attendre que l'émulateur apparaisse dans adb devices
+      ready = false
+      24.times do
+        sleep(5)
+        devices = sh("adb devices", log: false)
+        if devices.lines.any? { |line| line.start_with?("emulator") && line.include?("device") }
+          ready = true
+          break
+        end
+      end
+      unless ready
+        UI.user_error!("L'émulateur n'a pas démarré après 2 minutes.")
+      end
+    else
+      UI.message("Un émulateur est déjà lancé.")
+    end
+
+    UI.message("Attente de la fin du boot Android...")
+    booted = false
+    24.times do
+      sleep(5)
+      boot_status = sh("adb shell getprop sys.boot_completed", log: false).strip
+      if boot_status == "1"
+        booted = true
+        break
+      end
+    end
+    unless booted
+      UI.user_error!("L'émulateur n'a pas fini de booter après 2 minutes.")
+    end
+
+    UI.success("L'émulateur est prêt, lancement des screenshots.")
+
+    # Détecter l'ID de l'émulateur lancé
+    emulator_id = sh("adb devices", log: false).lines.find { |line| line.start_with?("emulator") && line.include?("device") }.to_s.split("\t").first || "emulator-5554"
+
     project_root = File.expand_path("..", __dir__)
     dart_script = File.join(project_root, "/fastlane/generate_metadata.dart")
 
     unless File.exist?(dart_script)
       UI.user_error!("❌ Script Dart introuvable: #{dart_script}")
     end
-
-
-      # Démarrer l'émulateur si besoin
-    # UI.message("🚀 Lancement de l'émulateur Android...")
-    # sh("emulator -avd  Pixel_7_Pro_API_34 -no-snapshot-load -no-window &")
-    # sleep(60) # Temps de démarrage de l'émulateur
-
 
     Dir.chdir(project_root) do
       sh("dart '#{dart_script}'")
@@ -143,44 +190,30 @@ end
       UI.user_error!("❌ Aucune locale trouvée dans lib/l10n")
     end
 
-
     # Nettoyer les captures d'écran avant de générer
     screenshots_dir = File.join(project_root, "test_driver/screenshots")
     FileUtils.rm_rf(screenshots_dir)
     FileUtils.mkdir_p(screenshots_dir)
     UI.message("🧹 Dossier screenshots nettoyé.")
     sh("flutter build apk ")
+
     locales.each do |locale|
       UI.message("🌐 Locale : #{locale}")
 
-
-      # sh("flutter build apk --dart-define=LOCALE=#{locale}")
-
       # Lancer les tests d'intégration
-      sh("flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d emulator-5554 --dart-define=LOCALE=#{locale} --screenshot=test_driver/screenshots")
+      sh("flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d #{emulator_id} --dart-define=LOCALE=#{locale} --screenshot=test_driver/screenshots")
 
       play_locale = to_play_locale(locale)
-      dest_dir = File.join(project_root, "fastlane/metadata/android/#{play_locale}/images/phoneScreenshots")
+      dest_dir = File.join(project_root, "fastlane/metadata/#{play_locale}/images/phoneScreenshots")
       FileUtils.mkdir_p(dest_dir)
 
-      # Vérifier la présence de captures d'écran avant de copier
-      # On part du principe que ce script est lancé depuis n'importe où
-      # project_root = File.expand_path(File.dirname(__FILE__)) # ou adapte selon ton contexte
-       screenshots_dir = File.join(project_root, "test_driver/screenshots")
-       screenshots = Dir[File.join(screenshots_dir, "*.png")]
-
-       puts "Répertoire courant: #{Dir.pwd}"
-       puts "On cherche les screenshots dans: #{screenshots_dir}"
-       puts "Fichiers trouvés: #{screenshots.inspect}"
+      screenshots = Dir[File.join(screenshots_dir, "*.png")]
       UI.message(screenshots)
-       if screenshots.empty?
-         UI.important("Aucune capture d'écran trouvée pour la locale #{locale} dans test_driver/screenshots/")
-       else
-         sh("cp ../test_driver/screenshots/*.png '#{dest_dir}/'")
-       end
-
-       # sh(" $ANDROID_HOME/emulator/emulator  -wipe-data -no-window &")
-       # sh("sleep 30")
+      if screenshots.empty?
+        UI.important("Aucune capture d'écran trouvée pour la locale #{locale} dans test_driver/screenshots/")
+      else
+        FileUtils.cp(screenshots, dest_dir)
+      end
     end
   end
 
