@@ -9,6 +9,18 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String get app_title => 'VocZilla';
+
+  @override
+  String get app_description => 'VocZilla 是一款完美的法语词汇扩展应用，无论您的水平如何。探索按主题分类的数千个单词，参与趣味测验，追踪您的学习进度，并挑战您的好友！';
+
+  @override
+  String get app_short_description => '学习并复习英语词汇！';
+
+  @override
+  String get app_keywords => '词汇, 学习, 英语, 单词, 测验, 游戏, 语言, 复习, 教育, 记忆, 听写, 发音';
+
+  @override
   String get hello => '早上好 ！';
 
   @override
@@ -99,7 +111,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get offline_title => '离线';
 
   @override
-  String get offline_description => '您没有互联网连接。请连接到互联网以继续。';
+  String get offline_description => '您没有互联网连接。请连接互联网后继续。';
 
   @override
   String get quizz_progression_title => '我在此列表上的进展';
@@ -123,7 +135,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get home_description_list_perso => '创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。';
 
   @override
-  String get home_title_classement => 'TeamZilla排名';
+  String get home_title_classement => 'TeamZilla 排名';
 
   @override
   String get home_notlogged_accroche1 => '提高你的英语水平！';
@@ -240,13 +252,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get email_validation_msg_email_send => '验证邮件已发送至您的邮箱地址';
 
   @override
-  String get email_validation_instruction => '请检查您的收件箱并按照说明验证您的电子邮件地址。这将使我们能够确认您的注册并允许您访问我们服务的所有功能。';
+  String get email_validation_instruction => '请查看您的收件箱，并按照说明验证您的电子邮件地址。这将使我们能够确认您的注册，并允许您访问我们服务的所有功能。';
 
   @override
   String get email_validation_help => '如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。';
 
   @override
-  String get email_validation_merci_register2 => '感谢您的信任！';
+  String get email_validation_merci_register2 => '谢谢您的信任！';
 
   @override
   String get send_mail => '收到新的验证邮件';
@@ -264,7 +276,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => '充分利用您的免费试用期！';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => '欢迎 ！您目前有';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => '欢迎！您目前正在享受免费试用';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => '天';
@@ -279,7 +291,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description5 => '免费试用';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description6 => '不要让您的体验被打断！选择适合您的订阅并继续享受而不中断';
+  String get widget_dialogHelper_showfreetrialdialog_description6 => '别让你的体验戛然而止！选择适合你的订阅，继续畅享无阻的精彩。';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_later => '之后';

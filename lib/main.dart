@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'data/repository/vocabulaire_user_repository.dart';
@@ -12,21 +14,22 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterL
 
 FirebaseMessaging messaging = FirebaseMessaging.instance;
 
-void main() async {
+void main({bool shootScreenShot = false,String? localForce=null}) async {
   WidgetsFlutterBinding.ensureInitialized();
   await FirebaseInitializer.initialize();
+  if (!shootScreenShot) {
+    final notificationService = NotificationService();
+    await notificationService.initialize();
 
-  final notificationService = NotificationService();
-  await notificationService.initialize();
-
-  final messagingService = FirebaseMessagingService();
-  await messagingService.configure();
+    final messagingService = FirebaseMessagingService();
+    await messagingService.configure();
+  }
 
   final vocabulaireUserRepository = VocabulaireUserRepository();
   await vocabulaireUserRepository.updateListTheme();
 
 
-  runApp(MyApp());
+  runApp(MyApp(localForce:localForce));
 }
 
 

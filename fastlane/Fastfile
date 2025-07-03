@@ -7,7 +7,7 @@ platform :android do
   ####################################################
   # 🟢 Helper methods
   ####################################################
-
+ #emulator -avd Pixel_8_API_34 -no-window
   def extract_locales
     project_root = File.expand_path("..", __dir__)
     arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
@@ -15,15 +15,104 @@ platform :android do
     locales.uniq
   end
 
-  def to_play_locale(locale)
-    {
-      "en" => "en-US",
-      "fr" => "fr-FR",
-      "pt" => "pt-PT",
-      "es" => "es-ES",
-      "de" => "de-DE"
-    }[locale] || locale
+def play_supported_locales
+  @play_supported_locales ||= %w[
+    af-ZA am-ET ar-EG bg-BG ca-ES cs-CZ da-DK de-DE el-GR en-US en-GB es-ES es-419 et fi-FI fr-FR fr-CA
+    iw-IL hi-IN hr-HR hu-HU id-ID is-IS it-IT ja-JP ko-KR lt-LT lv-LV ms-MY nl-NL no-NO pl-PL pt-PT pt-BR
+    ro-RO ru-RU sk-SK sl-SI sr sv-SE sw fil-PH th-TH tr-TR uk vi-VN zh-CN zh-HK zh-TW zu
+  ]
+end
+
+def to_play_locale(locale)
+  mapping = {
+    "af" => "af-ZA",
+    "am" => "am-ET",
+    "ar" => "ar-EG",
+    "bg" => "bg-BG",
+    "ca" => "ca-ES",
+    "cs" => "cs-CZ",
+    "da" => "da-DK",
+    "de" => "de-DE",
+    "el" => "el-GR",
+    "en" => "en-US",
+    "en-US" => "en-US",
+    "en-GB" => "en-GB",
+    "es" => "es-ES",
+    "es-ES" => "es-ES",
+    "es-419" => "es-419",
+    "et" => "et",
+    "fi" => "fi-FI",
+    "fr" => "fr-FR",
+    "fr-FR" => "fr-FR",
+    "fr-CA" => "fr-CA",
+    "he" => "iw-IL", # Google Play utilise "iw" pour hébreu
+    "hi" => "hi-IN",
+    "hr" => "hr-HR",
+    "hu" => "hu-HU",
+    "id" => "id-ID",
+    "in" => "id-ID", # "in" est l'ancien code pour indonésien
+    "is" => "is-IS",
+    "it" => "it-IT",
+    "ja" => "ja-JP",
+    "ko" => "ko-KR",
+    "lt" => "lt-LT",
+    "lv" => "lv-LV",
+    "ms" => "ms-MY",
+    "nl" => "nl-NL",
+    "no" => "no-NO",
+    "pl" => "pl-PL",
+    "pt" => "pt-PT",
+    "pt-PT" => "pt-PT",
+    "pt-BR" => "pt-BR",
+    "ro" => "ro-RO",
+    "ru" => "ru-RU",
+    "sk" => "sk-SK",
+    "sl" => "sl-SI",
+    "sr" => "sr",
+    "sv" => "sv-SE",
+    "sw" => "sw",
+    "fil" => "fil-PH",
+    "th" => "th-TH",
+    "tr" => "tr-TR",
+    "uk" => "uk",
+    "vi" => "vi-VN",
+    "zh" => "zh-CN",
+    "zh-CN" => "zh-CN",
+    "zh-HK" => "zh-HK",
+    "zh-TW" => "zh-TW",
+    "zu" => "zu"
+  }
+
+  # 1. Mapping explicite
+  if mapping.key?(locale)
+    play_locale = mapping[locale]
+    return play_locale if play_supported_locales.include?(play_locale)
+    return nil
   end
+
+  # 2. xx_XX ou xx-XX → xx-XX
+  if locale =~ /^([a-z]{2,3})[_-]([A-Z]{2,3})$/
+    play_locale = "#{$1}-#{$2}"
+    return play_locale if play_supported_locales.include?(play_locale)
+    return nil
+  end
+
+  # 3. xx → mapping ou xx-XX
+  if locale =~ /^[a-z]{2}$/
+    play_locale = "#{locale}-#{locale.upcase}"
+    return play_locale if play_supported_locales.include?(play_locale)
+    return nil
+  end
+
+  # 4. Si déjà au bon format et supporté
+  return locale if play_supported_locales.include?(locale)
+
+  # 5. Sinon, non supporté
+  nil
+end
+
+
+
 
   ####################################################
   # 📸 Screenshots multilingues
@@ -40,9 +129,9 @@ platform :android do
 
 
       # Démarrer l'émulateur si besoin
-     # UI.message("🚀 Lancement de l'émulateur Android...")
-     # sh("emulator -avd  Pixel_7_Pro_API_34 -no-snapshot-load -no-window &")
-     # sleep(60) # Temps de démarrage de l'émulateur
+    # UI.message("🚀 Lancement de l'émulateur Android...")
+    # sh("emulator -avd  Pixel_7_Pro_API_34 -no-snapshot-load -no-window &")
+    # sleep(60) # Temps de démarrage de l'émulateur
 
 
     Dir.chdir(project_root) do
@@ -60,12 +149,12 @@ platform :android do
     FileUtils.rm_rf(screenshots_dir)
     FileUtils.mkdir_p(screenshots_dir)
     UI.message("🧹 Dossier screenshots nettoyé.")
-
+    sh("flutter build apk ")
     locales.each do |locale|
       UI.message("🌐 Locale : #{locale}")
 
-      # Build l'app avec la locale
-      sh("flutter build apk --dart-define=LOCALE=#{locale}")
+
+      # sh("flutter build apk --dart-define=LOCALE=#{locale}")
 
       # Lancer les tests d'intégration
       sh("flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d emulator-5554 --dart-define=LOCALE=#{locale} --screenshot=test_driver/screenshots")
@@ -74,15 +163,33 @@ platform :android do
       dest_dir = File.join(project_root, "fastlane/metadata/android/#{play_locale}/images/phoneScreenshots")
       FileUtils.mkdir_p(dest_dir)
 
-       # Vérifier la présence de captures d'écran avant de copier
-       screenshots = Dir["test_driver/screenshots/*.png"]
+      # Vérifier la présence de captures d'écran avant de copier
+      # On part du principe que ce script est lancé depuis n'importe où
+      # project_root = File.expand_path(File.dirname(__FILE__)) # ou adapte selon ton contexte
+       screenshots_dir = File.join(project_root, "test_driver/screenshots")
+       screenshots = Dir[File.join(screenshots_dir, "*.png")]
+
+       puts "Répertoire courant: #{Dir.pwd}"
+       puts "On cherche les screenshots dans: #{screenshots_dir}"
+       puts "Fichiers trouvés: #{screenshots.inspect}"
+      UI.message(screenshots)
        if screenshots.empty?
          UI.important("Aucune capture d'écran trouvée pour la locale #{locale} dans test_driver/screenshots/")
        else
-         sh("cp test_driver/screenshots/*.png '#{dest_dir}/'")
+         sh("cp ../test_driver/screenshots/*.png '#{dest_dir}/'")
        end
+
+       # sh(" $ANDROID_HOME/emulator/emulator  -wipe-data -no-window &")
+       # sh("sleep 30")
     end
   end
+
+
+
+
+
+
+
 
   ####################################################
   # 🚀 Release Google Play

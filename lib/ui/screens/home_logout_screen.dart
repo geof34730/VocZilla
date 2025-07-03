@@ -75,6 +75,7 @@ class HomeLogoutScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 15),
                     ElevatedButton(
+                        key: ValueKey('link_home_login'),
                         onPressed: () {
                           Navigator.pushNamed(context, '/login');
                         },

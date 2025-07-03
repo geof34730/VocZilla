@@ -20,8 +20,10 @@ import '../../widget/form/CustomTextField.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
-  final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
-  final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
+  //final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
+  //final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +40,12 @@ class LoginScreen extends StatelessWidget {
           },
           builder: (context, state) {
             return Padding(
+              key: ValueKey('login_screen'),
               padding: const EdgeInsets.only(left: 16.0, right: 16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Text('DEBUG', key: ValueKey('debug_marker')),
                   Padding(
                     padding: EdgeInsets.only(bottom: 10),
                     child: Text(context.loc.login_se_connecter,
@@ -50,11 +54,13 @@ class LoginScreen extends StatelessWidget {
                             fontFamily: GoogleFonts.titanOne().fontFamily)),
                   ),
                   CustomTextField(
+                    keyForShoot: 'login_field',
                     controller: emailController,
                     labelText: context.loc.login_email,
                     hintText: context.loc.login_entrer_email,
                   ),
                   CustomPasswordField(
+                    keyForShoot: "password_field",
                     controller: passwordController,
                     labelText: context.loc.login_mot_de_passe,
                     hintText: context.loc.login_entrer_mot_de_passe,
@@ -62,6 +68,7 @@ class LoginScreen extends StatelessWidget {
                   Padding(
                   padding: EdgeInsets.only(top:5.0),
                   child: ElevatedButton(
+                    key: ValueKey('validate_login_button'),
                     style: ButtonStyle(
                       elevation: WidgetStateProperty.all(5),
                     ),

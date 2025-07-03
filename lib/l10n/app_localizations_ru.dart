@@ -9,6 +9,18 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
+  String get app_title => 'VocZilla';
+
+  @override
+  String get app_description => 'VocZilla — идеальное приложение для расширения вашего французского словарного запаса, независимо от вашего уровня. Откройте для себя тысячи слов, отсортированных по темам, играйте в забавные викторины, отслеживайте свой прогресс и бросайте вызов друзьям!';
+
+  @override
+  String get app_short_description => 'Изучайте и повторяйте английскую лексику!';
+
+  @override
+  String get app_keywords => 'словарный запас, обучение, английский, слова, тест, игра, язык, повторение, образование, память, диктант, произношение';
+
+  @override
   String get hello => 'Доброе утро !';
 
   @override
@@ -36,7 +48,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get apprendre_title => 'Учиться';
 
   @override
-  String get language_locale => 'Russe';
+  String get language_locale => 'Russian';
 
   @override
   String get language_anglais => 'Английский';

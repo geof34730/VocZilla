@@ -9,6 +9,18 @@ class AppLocalizationsPl extends AppLocalizations {
   AppLocalizationsPl([String locale = 'pl']) : super(locale);
 
   @override
+  String get app_title => 'VocZilla';
+
+  @override
+  String get app_description => 'VocZilla to idealna aplikacja do poszerzania słownictwa francuskiego, niezależnie od poziomu. Odkryj tysiące słów podzielonych tematycznie, graj w zabawne quizy, śledź swoje postępy i rzucaj wyzwania znajomym!';
+
+  @override
+  String get app_short_description => 'Poznaj i powtórz angielskie słownictwo!';
+
+  @override
+  String get app_keywords => 'słownictwo, nauka, angielski, słowa, quiz, gra, język, przegląd, edukacja, pamięć, dyktando, wymowa';
+
+  @override
   String get hello => 'Dzień dobry !';
 
   @override
@@ -36,7 +48,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get apprendre_title => 'Uczyć się';
 
   @override
-  String get language_locale => 'Polonais';
+  String get language_locale => 'Polish';
 
   @override
   String get language_anglais => 'angielski';
@@ -168,7 +180,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get annee => 'rok';
 
   @override
-  String get abonnement_mensuel => 'Miesięczna subskrypcja';
+  String get abonnement_mensuel => 'Subskrypcja miesięczna';
 
   @override
   String get abonnement_annuel => 'Roczna subskrypcja';

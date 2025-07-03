@@ -9,6 +9,18 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get app_title => 'VocZilla';
+
+  @override
+  String get app_description => 'VocZilla is the perfect app to expand your French vocabulary, no matter your level. Discover thousands of words categorized by theme, play fun quizzes, track your progress, and challenge your friends!';
+
+  @override
+  String get app_short_description => 'Learn and review English vocabulary!';
+
+  @override
+  String get app_keywords => 'vocabulary, learning, English, words, quiz, game, language, review, education, memory, dictation, pronunciation';
+
+  @override
   String get hello => 'Good morning !';
 
   @override

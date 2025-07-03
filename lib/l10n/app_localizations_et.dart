@@ -9,6 +9,18 @@ class AppLocalizationsEt extends AppLocalizations {
   AppLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
+  String get app_title => 'VocZilla';
+
+  @override
+  String get app_description => 'VocZilla on ideaalne rakendus oma prantsuse keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!';
+
+  @override
+  String get app_short_description => 'Õpi ja korda inglise keele sõnavara!';
+
+  @override
+  String get app_keywords => 'sõnavara, õppimine, inglise keel, sõnad, viktoriin, mäng, keel, arvustus, haridus, mälu, dikteerimine, hääldus';
+
+  @override
   String get hello => 'Tere hommikust!';
 
   @override
@@ -99,7 +111,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get offline_title => 'Võrguühenduseta';
 
   @override
-  String get offline_description => 'Sul pole internetiühendust. Jätkamiseks looge internetiühendus.';
+  String get offline_description => 'Teil puudub internetiühendus. Jätkamiseks looge internetiühendus.';
 
   @override
   String get quizz_progression_title => 'Minu edusammud selles nimekirjas';
@@ -240,7 +252,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get email_validation_msg_email_send => 'Kinnitusmeil on saadetud teie e-posti aadressile';
 
   @override
-  String get email_validation_instruction => 'Palun kontrollige oma postkasti ja järgige juhiseid oma e-posti aadressi kinnitamiseks. See võimaldab meil teie registreerimise kinnitada ja anda teile juurdepääsu kõigile meie teenuse funktsioonidele.';
+  String get email_validation_instruction => 'Palun kontrollige oma postkasti ja järgige juhiseid oma e-posti aadressi kinnitamiseks. See võimaldab meil teie registreerimise kinnitada ja annab teile juurdepääsu kõigile meie teenuse funktsioonidele.';
 
   @override
   String get email_validation_help => 'Kui te ei näe e-kirja oma postkastis, kaaluge rämpsposti kausta kontrollimist.';
@@ -264,7 +276,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Kasuta oma tasuta prooviperioodi ära!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Tere tulemast! Teil on praegu tasuta prooviperiood';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Tere tulemast! Teil on praegu tasuta prooviperiood saidil';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'päevad';
@@ -279,7 +291,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'tasuta prooviperioodid';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Ära lase oma kogemust katkestada! Vali endale sobiv tellimus ja naudi seda katkestusteta';
+  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Ära lase oma kogemusel peatuda! Vali endale sobiv tellimus ja jätka nautimist katkestusteta.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_later => 'Hiljem';

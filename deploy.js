@@ -103,7 +103,7 @@ function getAppfileInfo(appfilePath) {
                 { stdio: "inherit" }
             );
 
-            const serviceAccountPath = "voczilla-d2d79-c1a7826cd5fd.json";
+            const serviceAccountPath = "voczilla-play.json";
 
             console.log("\n📤 Déploiement vers Google Play Store (track interne)...");
 
@@ -114,16 +114,22 @@ function getAppfileInfo(appfilePath) {
 
             execSync(
                 `fastlane supply \
-             --aab build/app/outputs/bundle/release/app-release.aab\
-             --track internal \
-             --json_key ${serviceAccountPath} \
-             --package_name ${appIdentifier}`,
+            --aab build/app/outputs/bundle/release/app-release.aab \
+            --track internal \
+            --json_key ${serviceAccountPath} \
+            --package_name ${appIdentifier} \
+            --metadata_path fastlane/metadata/android \
+            --skip_upload_changelogs false \
+            --skip_upload_images false \
+            --skip_upload_screenshots false \
+            --skip_upload_metadata false`,
                 { stdio: "inherit" }
             );
 
-            console.log("\n✅ Déploiement Android terminé avec succès !");
 
+    console.log("\n✅ Déploiement Android terminé avec succès !");
 
+/*
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -154,7 +160,7 @@ function getAppfileInfo(appfilePath) {
         process.exit(1);
     }
     console.log("\n✅ Déploiement iOS terminé avec succès !");
-
+*/
     // Git operations
     console.log("\n📦 Git operations : Gestion des versions avec Git...");
     try {

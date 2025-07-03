@@ -9,6 +9,18 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
+  String get app_title => 'VocZilla';
+
+  @override
+  String get app_description => 'VocZilla er den perfekte appen for å utvide ditt franske vokabular, uansett nivå. Oppdag tusenvis av ord kategorisert etter tema, spill morsomme quizer, følg med på fremgangen din og utfordre vennene dine!';
+
+  @override
+  String get app_short_description => 'Lær og repeter engelsk vokabular!';
+
+  @override
+  String get app_keywords => 'vokabular, læring, engelsk, ord, quiz, spill, språk, gjennomgang, utdanning, hukommelse, diktering, uttale';
+
+  @override
   String get hello => 'God morgen!';
 
   @override
@@ -240,7 +252,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get email_validation_msg_email_send => 'En bekreftelses-e-post er sendt til e-postadressen din';
 
   @override
-  String get email_validation_instruction => 'Sjekk innboksen din og følg instruksjonene for å bekrefte e-postadressen din. Dette vil gjøre det mulig for oss å bekrefte registreringen din og gi deg tilgang til alle funksjonene i tjenesten vår.';
+  String get email_validation_instruction => 'Sjekk innboksen din og følg instruksjonene for å bekrefte e-postadressen din. Dette vil la oss bekrefte registreringen din og gi deg tilgang til alle funksjonene i tjenesten vår.';
 
   @override
   String get email_validation_help => 'Hvis du ikke ser e-posten i innboksen din, bør du vurdere å sjekke spam- eller søppelpostmappen din.';
@@ -279,7 +291,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'gratis prøveperioder';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Ikke la opplevelsen din bli avbrutt! Velg abonnementet som passer deg, og fortsett å nyte det uten avbrudd';
+  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Ikke la opplevelsen din stoppe! Velg abonnementet som passer deg, og fortsett å nyte det uten avbrudd.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_later => 'Seinere';

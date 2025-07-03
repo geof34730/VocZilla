@@ -38,7 +38,8 @@ import 'logic/blocs/update/update_bloc.dart';
 final Route Function(RouteSettings settings) generateRoute = AppRoute.generateRoute;
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  final String? localForce;
+  MyApp({super.key,  this.localForce});
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   final AuthRepository _authRepository = AuthRepository();
   @override
@@ -60,11 +61,15 @@ class MyApp extends StatelessWidget {
         ],
         child: BlocBuilder<LocalizationCubit, Locale>(
           builder: (context, locale) {
+            final Locale effectiveLocale = localForce != null
+                ? Locale(localForce!)
+                : locale;
+
             FirebaseAuth.instance.setLanguageCode(locale.languageCode);
             return MaterialApp(
               theme: VobdzillaTheme.lightTheme,
               debugShowCheckedModeBanner: debugMode,
-              locale: locale,
+              locale: effectiveLocale,
               supportedLocales: AppLocalizations.supportedLocales,
               localizationsDelegates: const [
                 AppLocalizations.delegate,

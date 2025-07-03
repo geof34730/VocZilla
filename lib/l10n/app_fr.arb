@@ -1,4 +1,9 @@
 {
+
+    "app_title": "VocZilla",
+    "app_description": "VocZilla est l’application idéale pour enrichir ton vocabulaire en français, quel que soit ton niveau. Découvre des milliers de mots classés par thèmes, joue à des quiz ludiques, suis ta progression et défie tes amis !",
+    "app_short_description": "Apprends et révise du vocabulaire anglais !",
+    "app_keywords": "vocabulaire, apprentissage, anglais, mots, quiz, jeu, langue, révision, éducation, mémoire, dictée, prononciation",
     "hello": "Bonjour !",
     "change_language": "Changer la langue",
     "my_purchase": "Mon abonnement",

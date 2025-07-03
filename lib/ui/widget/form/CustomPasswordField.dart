@@ -5,12 +5,14 @@ class CustomPasswordField extends StatefulWidget {
   final TextEditingController controller;
   final String labelText;
   final String hintText;
+  final String? keyForShoot;
 
   const CustomPasswordField({
     Key? key,
     required this.controller,
     required this.labelText,
     required this.hintText,
+    this.keyForShoot
   }) : super(key: key);
 
   @override
@@ -23,9 +25,10 @@ class _CustomPasswordFieldState extends State<CustomPasswordField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(5.0),
+      margin:  EdgeInsets.all(5.0),
       constraints: BoxConstraints(maxWidth: 400),// Apply margin of 5
       child: TextField(
+        key: widget.keyForShoot != null ? ValueKey<String>(widget.keyForShoot!) : widget.key,
         controller: widget.controller,
         obscureText: _obscureText,
         decoration: InputDecoration(

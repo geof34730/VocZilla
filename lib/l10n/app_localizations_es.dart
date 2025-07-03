@@ -9,6 +9,18 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
+  String get app_title => 'VocZilla';
+
+  @override
+  String get app_description => 'VocZilla es la app perfecta para ampliar tu vocabulario de francés, sin importar tu nivel. Descubre miles de palabras clasificadas por tema, participa en divertidos cuestionarios, sigue tu progreso y reta a tus amigos.';
+
+  @override
+  String get app_short_description => '¡Aprende y repasa vocabulario en inglés!';
+
+  @override
+  String get app_keywords => 'Vocabulario, aprendizaje, inglés, palabras, cuestionario, juego, idioma, repaso, educación, memoria, dictado, pronunciación';
+
+  @override
   String get hello => 'Buen día !';
 
   @override
@@ -72,7 +84,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get pronunciation_success => '¡Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, eso no es del todo correcto. Intentar otra vez.';
+  String get pronunciation_error => 'Mmm, eso no está del todo bien. Inténtalo de nuevo.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Te escuché decir';
@@ -99,7 +111,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get offline_title => 'Desconectado';
 
   @override
-  String get offline_description => 'No tienes conexión a Internet. Conéctese a Internet para continuar.';
+  String get offline_description => 'No tienes conexión a internet. Conéctate para continuar.';
 
   @override
   String get quizz_progression_title => 'Mi progreso en esta lista';
@@ -240,7 +252,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get email_validation_msg_email_send => 'Se ha enviado un correo electrónico de verificación a su dirección de correo electrónico.';
 
   @override
-  String get email_validation_instruction => 'Por favor revise su bandeja de entrada y siga las instrucciones para validar su dirección de correo electrónico. Esto nos permitirá confirmar su registro y darle acceso a todas las funciones de nuestro servicio.';
+  String get email_validation_instruction => 'Por favor, revise su bandeja de entrada y siga las instrucciones para validar su dirección de correo electrónico. Esto nos permitirá confirmar su registro y darle acceso a todas las funciones de nuestro servicio.';
 
   @override
   String get email_validation_help => 'Si no ve el correo electrónico en su bandeja de entrada, considere revisar su carpeta de correo no deseado o spam.';
@@ -264,7 +276,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => '¡Aprovecha tu periodo de prueba gratuito!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Bienvenido ! Actualmente tienes un periodo de prueba gratuito de';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => '¡Bienvenido! Actualmente estás disfrutando de un periodo de prueba gratuito.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'días';
@@ -279,7 +291,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'pruebas gratuitas';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description6 => '¡No dejes que tu experiencia se interrumpa! Elige la suscripción que más te convenga y sigue disfrutando sin interrupciones';
+  String get widget_dialogHelper_showfreetrialdialog_description6 => '¡No dejes que tu experiencia se acabe! Elige la suscripción que mejor se adapte a ti y sigue disfrutando sin interrupciones.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_later => 'Más tarde';

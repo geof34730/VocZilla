@@ -5,52 +5,12 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata.dart&apos;" time="0.186382">
+      <testcase classname="fastlane.lanes" name="0: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata.dart&apos;" time="0.224544">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: flutter build apk --dart-define=LOCALE=de" time="12.918179">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="2: flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d emulator-5554 --dart-define=LOCALE=de --screenshot=test_driver/screenshots" time="36.353526">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="3: flutter build apk --dart-define=LOCALE=en" time="12.703142">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="4: flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d emulator-5554 --dart-define=LOCALE=en --screenshot=test_driver/screenshots" time="36.370608">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="5: flutter build apk --dart-define=LOCALE=es" time="14.405163">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="6: flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d emulator-5554 --dart-define=LOCALE=es --screenshot=test_driver/screenshots" time="36.329781">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="7: flutter build apk --dart-define=LOCALE=et" time="13.866026">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="8: flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d emulator-5554 --dart-define=LOCALE=et --screenshot=test_driver/screenshots" time="35.926271">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="9: flutter build apk --dart-define=LOCALE=fr" time="12.136479">
+      <testcase classname="fastlane.lanes" name="1: flutter build apk " time="7.025512">
         
       </testcase>
     

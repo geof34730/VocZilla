@@ -9,6 +9,18 @@ class AppLocalizationsUk extends AppLocalizations {
   AppLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
+  String get app_title => 'VocZilla';
+
+  @override
+  String get app_description => 'VocZilla – ідеальний додаток для розширення вашого французького словникового запасу, незалежно від вашого рівня. Відкрийте для себе тисячі слів, розподілених за темами, грайте у цікаві вікторини, відстежуйте свій прогрес і кидайте виклик друзям!';
+
+  @override
+  String get app_short_description => 'Вивчайте та повторюйте англійську лексику!';
+
+  @override
+  String get app_keywords => 'словниковий запас, навчання, англійська, слова, вікторина, гра, мова, огляд, освіта, пам\'ять, диктант, вимова';
+
+  @override
   String get hello => 'Доброго ранку!';
 
   @override
@@ -36,7 +48,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get apprendre_title => 'Дізнатися';
 
   @override
-  String get language_locale => 'Ukrainien';
+  String get language_locale => 'Ukrainian';
 
   @override
   String get language_anglais => 'Англійська';
@@ -210,7 +222,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get login_entrer_mot_de_passe => 'Введіть свій пароль';
 
   @override
-  String get login_ou_connecter_vous_avec => 'Або зв’яжіться з';
+  String get login_ou_connecter_vous_avec => 'Або зв\'яжіться з';
 
   @override
   String get login_avec_google => 'З Google';

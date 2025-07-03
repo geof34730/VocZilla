@@ -117,6 +117,30 @@ abstract class AppLocalizations {
     Locale('zh')
   ];
 
+  /// No description provided for @app_title.
+  ///
+  /// In en, this message translates to:
+  /// **'VocZilla'**
+  String get app_title;
+
+  /// No description provided for @app_description.
+  ///
+  /// In en, this message translates to:
+  /// **'VocZilla is the perfect app to expand your French vocabulary, no matter your level. Discover thousands of words categorized by theme, play fun quizzes, track your progress, and challenge your friends!'**
+  String get app_description;
+
+  /// No description provided for @app_short_description.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn and review English vocabulary!'**
+  String get app_short_description;
+
+  /// No description provided for @app_keywords.
+  ///
+  /// In en, this message translates to:
+  /// **'vocabulary, learning, English, words, quiz, game, language, review, education, memory, dictation, pronunciation'**
+  String get app_keywords;
+
   /// No description provided for @hello.
   ///
   /// In en, this message translates to:
