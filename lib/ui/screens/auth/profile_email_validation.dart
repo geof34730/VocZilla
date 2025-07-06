@@ -5,7 +5,7 @@ import 'package:vobzilla/core/utils/localization.dart';
 import '../../../data/repository/auth_repository.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
-import '../../theme/backgroundBlueLinear.dart';
+import '../../backgroundBlueLinear.dart';
 
 class ProfileEmailValidation extends StatelessWidget {
   ProfileEmailValidation({super.key});
@@ -93,6 +93,6 @@ class ProfileEmailValidation extends StatelessWidget {
           ),
         ),
       );
-    
+
   }
 }

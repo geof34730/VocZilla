@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'appColors.dart';
+import 'theme/appColors.dart';
 
 Container backgroundBlueLinear(
     {required Widget child, required BuildContext context}) {

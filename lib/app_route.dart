@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vobzilla/ui/featureGraphic.dart';
 import 'package:vobzilla/ui/screens/personalisation/step2.dart';
 import 'package:vobzilla/ui/screens/update_screen.dart';
 
@@ -43,7 +44,10 @@ class AppRoute {
   static const String updateProfile = '/updateprofile';
   static const String subscription = '/subscription';
   static const String learnVocabulary = '/vocabulary/learn/:id';
-  static const String updateScreen = '/update'; // Ajoutez la route pour l'écran de mise à jour
+  static const String updateScreen = '/update';
+  static const String featureGraphic = '/featureGraphic';
+
+  // Ajoutez la route pour l'écran de mise à jour
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
@@ -142,6 +146,8 @@ class AppRoute {
     switch (settings.name) {
       case home:
         return HomeLogoutScreen();
+      case featureGraphic:
+        return FeatureGraphic();
       case login:
         return Layout(child: LoginScreen(), logged: false);
       case register:

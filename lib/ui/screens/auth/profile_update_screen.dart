@@ -6,7 +6,7 @@ import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
-import '../../theme/backgroundBlueLinear.dart';
+import '../../backgroundBlueLinear.dart';
 import '../../widget/elements/Loading.dart';
 import '../../widget/form/CustomTextField.dart';
 

@@ -12,7 +12,7 @@ import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
 
 
 import '../../../core/utils/ui.dart';
-import '../../theme/backgroundBlueLinear.dart';
+import '../../backgroundBlueLinear.dart';
 import '../../widget/elements/Error.dart';
 import '../../widget/elements/Loading.dart';
 import '../../widget/form/CustomPasswordField.dart';

@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 
 import '../theme/appColors.dart';
-import '../theme/backgroundBlueLinear.dart';
+import '../backgroundBlueLinear.dart';
 
 
 class HomeLogoutScreen extends StatelessWidget {
@@ -77,6 +77,12 @@ class HomeLogoutScreen extends StatelessWidget {
                           Navigator.pushNamed(context, '/login');
                         },
                         child: Text(context.loc.home_notlogged_button_go)
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/featureGraphic');
+                        },
+                        child: Text("featureGraphic")
                     )
                   ]
               )
