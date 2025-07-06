@@ -28,10 +28,9 @@ class ProfileEmailValidation extends StatelessWidget {
           }
         }
       },
-      child: BackgroundBlueLinear(
+      child: backgroundBlueLinear(
         context: context,
         child: Center(
-          child: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.all(20),
               child: Container(
@@ -93,7 +92,7 @@ class ProfileEmailValidation extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }

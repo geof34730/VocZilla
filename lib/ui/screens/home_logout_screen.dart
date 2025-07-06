@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 
+import '../theme/appColors.dart';
 import '../theme/backgroundBlueLinear.dart';
 
 
@@ -10,18 +11,15 @@ class HomeLogoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    return Scaffold(
-        body:  SingleChildScrollView(
-        child:BackgroundBlueLinear(
-              context: context,
-              child:Center(
+       body: backgroundBlueLinear(
+         context: context,
+         child: Center(
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-
                     Image.asset("assets/brand/logo_landing.png"),
                    // TitleSite(typoSize: 80),
-                    Text('Welcome to MyApp', key: ValueKey('welcome_text')),
                     Text(context.loc.home_notlogged_accroche1,
                         style: TextStyle(
                             fontSize: 25,
@@ -38,7 +36,6 @@ class HomeLogoutScreen extends StatelessWidget {
                     SizedBox(height: 8),
                     RichText(
                       textAlign: TextAlign.center,
-
                       text: TextSpan(
                         style: Theme.of(context).textTheme.titleSmall?.copyWith(
                           fontSize: 14,
@@ -85,7 +82,7 @@ class HomeLogoutScreen extends StatelessWidget {
               )
             ),
         )
-        )
+
     );
   }
 }

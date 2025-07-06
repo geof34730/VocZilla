@@ -83,20 +83,28 @@ class MyApp extends StatelessWidget {
                 return LayoutBuilder(
                   builder: (context, constraints) {
                     final double screenWidth = constraints.maxWidth;
-                    final double targetWidth = isTablet(context:context) ? 750 : 450;
-                    //final double targetWidth = 450;
-                    final double scale = screenWidth / targetWidth;
                     final double screenHeight = constraints.maxHeight;
-                    return Stack(
-                      children: [
-                        Positioned.fill(
-                          child: FittedBox(
-                            alignment: Alignment.topLeft,
-                            fit: BoxFit.fill,
-                            child: SizedBox(
-                              width: screenWidth / scale,
-                              height: screenHeight / scale,
-                              child: Builder(
+
+                    // Taille de référence souhaitée : 750 en largeur sur tablette, 400 sur mobile
+                    final double referenceWidth = isTablet(context: context) ? screenWidth : screenWidth;
+                    final double referenceHeight = isTablet(context: context) ? screenHeight : screenHeight;
+                    // tu peux adapter la hauteur de référence si tu veux
+
+                    // Calcul du facteur d’échelle
+                    final double scaleX = screenWidth / referenceWidth;
+                    final double scaleY = screenHeight * referenceWidth;
+
+                    // Pour conserver les proportions et tout faire tenir, on prend le plus petit des deux
+                    final double scale = scaleX < scaleY ? scaleX : scaleY;
+
+
+                     return  Transform.scale(
+                        scale: scale,
+                        alignment: Alignment.topLeft,
+                        child: SizedBox(
+                          width: referenceWidth,
+                          height: referenceHeight,
+                          child: Builder(
                                 builder: (context) {
                                   return MultiBlocListener(
                                     listeners: [
@@ -133,10 +141,10 @@ class MyApp extends StatelessWidget {
                                 },
                               ),
                             ),
-                          ),
-                        ),
-                      ],
-                    );
+
+                        );
+
+
                   },
                 );
               },

@@ -94,33 +94,6 @@ class Layout extends StatelessWidget {
                     ),
                   ],
                   child,
-                  /*
-                  FutureBuilder<String>(
-                    future: getAppVersion(),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return CircularProgressIndicator();
-                      } else if (snapshot.hasError) {
-                        return Center(child:Text('Erreur lors de la récupération du numéro de build',style: TextStyle(color: Colors.red)));
-                      } else {
-                        return Center(child:Text('Version : ${snapshot.data}',style: TextStyle(color:Colors.grey),));
-                      }
-                    },
-                  ),
-                  FutureBuilder<String>(
-                    future: getPackageName(),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return CircularProgressIndicator();
-                      } else if (snapshot.hasError) {
-                        return Center(child:Text('Erreur lors de la récupération du numéro de build',style: TextStyle(color: Colors.red)));
-                      } else {
-                        return Center(child:Text('name : ${snapshot.data}',style: TextStyle(color:Colors.grey),));
-                      }
-                    },
-                  )
-                  */
-
                 ],
               )
             )

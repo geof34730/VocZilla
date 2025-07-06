@@ -25,10 +25,11 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            /*
             ElevatedButton(onPressed: (){
               Navigator.pushReplacementNamed(context, "/update");
             }, child: Text("Update app")
-            ),
+            ),*/
             Text(
                 context.loc.home_title_progresse,
                 style: TextStyle(

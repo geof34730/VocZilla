@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'mini_magick'
 
 platform :android do
 
@@ -58,46 +59,36 @@ platform :android do
     nil
   end
 
+  # --- Ajout des helpers manquants pour la résolution ---
   def set_emulator_resolution(emulator_id, dest_folder)
+    # Tu peux adapter la résolution selon le dossier cible
     case dest_folder
     when "phoneScreenshots"
-      size = "1080x2340"
-      density = 420
+      sh("adb -s #{emulator_id} shell wm size 1080x1920")
+      sh("adb -s #{emulator_id} shell wm density 420")
     when "sevenInchScreenshots"
-      size = "1200x1920"
-      density = 320
+      sh("adb -s #{emulator_id} shell wm size 800x1280")
+      sh("adb -s #{emulator_id} shell wm density 213")
     when "tenInchScreenshots"
-      size = "1600x2560"
-      density = 320
+      sh("adb -s #{emulator_id} shell wm size 1600x2560")
+      sh("adb -s #{emulator_id} shell wm density 320")
     else
-      UI.important("Type de screenshots inconnu, résolution non modifiée.")
-      return
+      # Valeur par défaut
+      sh("adb -s #{emulator_id} shell wm size 1080x1920")
+      sh("adb -s #{emulator_id} shell wm density 420")
     end
-    UI.message("🖥️  Changement de résolution de l'émulateur (#{emulator_id}) : #{size} @ #{density}dpi")
-    sh("adb -s #{emulator_id} shell wm size #{size}")
-    sh("adb -s #{emulator_id} shell wm density #{density}")
-    sleep(2)
   end
 
   def reset_emulator_resolution(emulator_id)
-    UI.message("🔄 Réinitialisation de la résolution de l'émulateur (#{emulator_id})")
+    # Remet la résolution et la densité par défaut de l'émulateur
     sh("adb -s #{emulator_id} shell wm size reset")
     sh("adb -s #{emulator_id} shell wm density reset")
   end
 
-  ####################################################
-  # 📸 Screenshots multilingues
-  ####################################################
-
   desc "📸 Générer les screenshots Android multilingues (téléphone + tablettes)"
   lane :screenshots do
-    # === 1. Screenshots téléphone ===
-     take_screenshots_for_emulator("emulator_phone_screenshots_voczilla", "phoneScreenshots")
-
-    # === 2. Screenshots tablette 7 pouces ===
-     take_screenshots_for_emulator("emulator_tablet_7pouces_screenshots_voczilla", "sevenInchScreenshots")
-
-    # === 3. Screenshots tablette 10 pouces ===
+    take_screenshots_for_emulator("emulator_phone_screenshots_voczilla", "phoneScreenshots")
+    take_screenshots_for_emulator("emulator_tablet_7pouces_screenshots_voczilla", "sevenInchScreenshots")
     take_screenshots_for_emulator("emulator_tablet_10pouces_screenshots_voczilla", "tenInchScreenshots")
   end
 
@@ -117,7 +108,6 @@ platform :android do
       Process.spawn(*emulator_cmd, [:out, :err] => "/dev/null")
       UI.message("Attente du démarrage de l'émulateur...")
 
-      # Attendre que l'émulateur apparaisse dans adb devices
       ready = false
       24.times do
         sleep(5)
@@ -150,10 +140,8 @@ platform :android do
 
     UI.success("L'émulateur #{avd_name} est prêt, lancement des screenshots.")
 
-    # Détecter l'ID de l'émulateur lancé
     emulator_id = sh("adb devices", log: false).lines.find { |line| line.start_with?("emulator") && line.include?("device") }.to_s.split("\t").first || "emulator-5554"
 
-    # Changer la résolution selon le type de screenshots
     set_emulator_resolution(emulator_id, dest_folder)
 
     project_root = File.expand_path("..", __dir__)
@@ -172,7 +160,6 @@ platform :android do
       UI.user_error!("❌ Aucune locale trouvée dans lib/l10n")
     end
 
-    # Nettoyer les captures d'écran avant de générer
     screenshots_dir = File.join(project_root, "test_driver/screenshots")
     FileUtils.rm_rf(screenshots_dir)
     FileUtils.mkdir_p(screenshots_dir)
@@ -183,17 +170,16 @@ platform :android do
     locales.each do |locale|
       UI.message("🌐 Locale : #{locale}")
 
-      # Lancer les tests d'intégration
       sh("flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d #{emulator_id} --dart-define=LOCALE=#{locale} --screenshot=test_driver/screenshots")
 
       play_locale = to_play_locale(locale)
-      next unless play_locale # Ignore les locales non supportées par Google Play
-
-      dest_dir = File.join(project_root, "fastlane/metadata/#{play_locale}/images/#{dest_folder}")
-      FileUtils.mkdir_p(dest_dir)
+      next unless play_locale
 
       screenshots = Dir[File.join(screenshots_dir, "*.png")]
       UI.message(screenshots)
+
+      dest_dir = File.join(project_root, "fastlane/metadata/#{play_locale}/images/#{dest_folder}")
+      FileUtils.mkdir_p(dest_dir)
       if screenshots.empty?
         UI.important("Aucune capture d'écran trouvée pour la locale #{locale} dans test_driver/screenshots/")
       else
@@ -201,10 +187,8 @@ platform :android do
       end
     end
 
-    # Réinitialiser la résolution de l'émulateur (optionnel mais recommandé)
     reset_emulator_resolution(emulator_id)
 
-    # Arrêter l'émulateur
     UI.message("Arrêt de l'émulateur #{avd_name}...")
     sh("adb -s #{emulator_id} emu avd wipe-data")
     sh("adb -s #{emulator_id} emu kill")
@@ -213,30 +197,30 @@ platform :android do
   end
 
   ####################################################
-  # 🚀 Release Google Play
-  ####################################################
+   # 🚀 Release Google Play
+   ####################################################
 
-  desc "🚀 Publier Android (metadata + screenshots)"
-  lane :release do
-    screenshots
-    supply(
-      skip_upload_apk: true,
-      skip_upload_aab: true,
-      skip_upload_changelogs: true,
-      skip_upload_metadata: false,
-      skip_upload_screenshots: false
-    )
-  end
+   desc "🚀 Publier Android (metadata + screenshots)"
+   lane :release do
+     screenshots
+     supply(
+       skip_upload_apk: true,
+       skip_upload_aab: true,
+       skip_upload_changelogs: true,
+       skip_upload_metadata: false,
+       skip_upload_screenshots: false
+     )
+   end
 
-  ####################################################
-  # ✅ Tests unitaires
-  ####################################################
+   ####################################################
+   # ✅ Tests unitaires
+   ####################################################
 
-  desc "✅ Lancer les tests unitaires Android"
-  lane :test do
-    gradle(
-      task: "testReleaseUnitTest"
-    )
-  end
+   desc "✅ Lancer les tests unitaires Android"
+   lane :test do
+     gradle(
+       task: "testReleaseUnitTest"
+     )
+   end
 
 end
