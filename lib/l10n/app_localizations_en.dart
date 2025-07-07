@@ -21,6 +21,21 @@ class AppLocalizationsEn extends AppLocalizations {
   String get app_keywords => 'vocabulary, learning, English, words, quiz, game, language, review, education, memory, dictation, pronunciation';
 
   @override
+  String get app_feature_graphic_title => 'Improve your English vocabulary';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5,600 words';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Interactive audio quizzes and tests';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Track your progress in real time';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Personalized and shareable lists';
+
+  @override
   String get hello => 'Good morning !';
 
   @override

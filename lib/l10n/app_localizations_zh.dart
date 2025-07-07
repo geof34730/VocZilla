@@ -12,13 +12,28 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla 是一款完美的法语词汇扩展应用，无论您的水平如何。探索按主题分类的数千个单词，参与趣味测验，追踪您的学习进度，并挑战您的好友！';
+  String get app_description => 'VocZilla 是一款完美的法语词汇扩展应用，无论您的水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪您的学习进度，并挑战您的好友！';
 
   @override
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
   String get app_keywords => '词汇, 学习, 英语, 单词, 测验, 游戏, 语言, 复习, 教育, 记忆, 听写, 发音';
+
+  @override
+  String get app_feature_graphic_title => '提高你的英语词汇量';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5,600 字';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => '交互式音频测验和测试';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => '实时追踪您的进度';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => '个性化和可共享的列表';
 
   @override
   String get hello => '早上好 ！';
@@ -75,7 +90,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unknown_error => '未知错误';
 
   @override
-  String get no_vocabulary_items_found => '未找到任何词汇';
+  String get no_vocabulary_items_found => '未找到任何词汇条目';
 
   @override
   String get pronunciation_title => '发音';
@@ -135,7 +150,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get home_description_list_perso => '创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。';
 
   @override
-  String get home_title_classement => 'TeamZilla 排名';
+  String get home_title_classement => 'TeamZilla排名';
 
   @override
   String get home_notlogged_accroche1 => '提高你的英语水平！';

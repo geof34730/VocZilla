@@ -21,6 +21,21 @@ class AppLocalizationsEt extends AppLocalizations {
   String get app_keywords => 'sõnavara, õppimine, inglise keel, sõnad, viktoriin, mäng, keel, arvustus, haridus, mälu, dikteerimine, hääldus';
 
   @override
+  String get app_feature_graphic_title => 'Täienda oma inglise keele sõnavara';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5600 sõna';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Interaktiivsed audioviktoriinid ja testid';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Jälgige oma edusamme reaalajas';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Isikupärastatud ja jagatavad nimekirjad';
+
+  @override
   String get hello => 'Tere hommikust!';
 
   @override

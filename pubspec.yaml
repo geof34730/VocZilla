@@ -82,6 +82,7 @@ dependencies:
   flutter_gen: ^5.10.0
   percent_indicator: ^4.2.5
   url_launcher: ^6.3.1
+  auto_size_text: ^3.0.0
 
 
 flutter_launcher_icons:
@@ -140,6 +141,8 @@ flutter:
     - assets/brand/logo.png
     - assets/brand/logo_landing.png
     - assets/brand/voczillatitle.png
+    - assets/brand/logo_featureGraphic.png
+    - assets/brand/featureGraphic_mobile.png
     - assets/audios/gcloud/
     - assets/data/list-vocabulaire.json
     - assets/data/list-themes.json

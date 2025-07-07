@@ -21,6 +21,21 @@ class AppLocalizationsRu extends AppLocalizations {
   String get app_keywords => 'словарный запас, обучение, английский, слова, тест, игра, язык, повторение, образование, память, диктант, произношение';
 
   @override
+  String get app_feature_graphic_title => 'Расширьте свой словарный запас английского языка';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5600 слов';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Интерактивные аудиовикторины и тесты';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Отслеживайте свой прогресс в режиме реального времени';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Персонализированные и общие списки';
+
+  @override
   String get hello => 'Доброе утро !';
 
   @override

@@ -21,6 +21,21 @@ class AppLocalizationsIt extends AppLocalizations {
   String get app_keywords => 'vocabolario, apprendimento, inglese, parole, quiz, gioco, lingua, revisione, istruzione, memoria, dettato, pronuncia';
 
   @override
+  String get app_feature_graphic_title => 'Migliora il tuo vocabolario inglese';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5.600 parole';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Quiz e test audio interattivi';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Tieni traccia dei tuoi progressi in tempo reale';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Liste personalizzate e condivisibili';
+
+  @override
   String get hello => 'Buongiorno !';
 
   @override
@@ -249,7 +264,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get email_validation_merci_register => 'Grazie per esserti iscritto!';
 
   @override
-  String get email_validation_msg_email_send => 'Un\'email di verifica è stata inviata al tuo indirizzo email';
+  String get email_validation_msg_email_send => 'Un\'e-mail di verifica è stata inviata al tuo indirizzo e-mail';
 
   @override
   String get email_validation_instruction => 'Controlla la tua casella di posta e segui le istruzioni per convalidare il tuo indirizzo email. Questo ci permetterà di confermare la tua registrazione e di darti accesso a tutte le funzionalità del nostro servizio.';

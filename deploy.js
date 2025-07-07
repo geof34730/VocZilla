@@ -85,8 +85,18 @@ function getAppfileInfo(appfilePath) {
                 }
             }
         }
+    const { generateMetadata } = await inquirer.prompt([
+        {
+            type: "confirm",
+            name: "generateMetadata",
+            message: "veux-tu générer les metadata et les screenshots ?",
+            default: false,
+        },
+    ]);
+    if (generateMetadata) {
+        execSync(`fastlane android screenshots`, { stdio: "inherit" });
 
-
+    }
 
 
 

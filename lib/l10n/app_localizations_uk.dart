@@ -21,6 +21,21 @@ class AppLocalizationsUk extends AppLocalizations {
   String get app_keywords => 'словниковий запас, навчання, англійська, слова, вікторина, гра, мова, огляд, освіта, пам\'ять, диктант, вимова';
 
   @override
+  String get app_feature_graphic_title => 'Покращте свій словниковий запас англійської мови';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5600 слів';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Інтерактивні аудіовікторини та тести';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Відстежуйте свій прогрес у режимі реального часу';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Персоналізовані списки, якими можна ділитися';
+
+  @override
   String get hello => 'Доброго ранку!';
 
   @override

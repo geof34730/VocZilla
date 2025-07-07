@@ -72,6 +72,9 @@ platform :android do
     when "tenInchScreenshots"
       sh("adb -s #{emulator_id} shell wm size 1600x2560")
       sh("adb -s #{emulator_id} shell wm density 320")
+   when "FeatureGraphic"
+        sh("adb -s #{emulator_id} shell wm size 1024x500")
+        sh("adb -s #{emulator_id} shell wm density 160")
     else
       # Valeur par défaut
       sh("adb -s #{emulator_id} shell wm size 1080x1920")
@@ -87,9 +90,10 @@ platform :android do
 
   desc "📸 Générer les screenshots Android multilingues (téléphone + tablettes)"
   lane :screenshots do
-    take_screenshots_for_emulator("emulator_phone_screenshots_voczilla", "phoneScreenshots")
+   # take_screenshots_for_emulator("emulator_phone_screenshots_voczilla", "phoneScreenshots")
     take_screenshots_for_emulator("emulator_tablet_7pouces_screenshots_voczilla", "sevenInchScreenshots")
     take_screenshots_for_emulator("emulator_tablet_10pouces_screenshots_voczilla", "tenInchScreenshots")
+    take_screenshots_for_emulator("Emulator_FeatureGraphic_voczilla", "FeatureGraphic")
   end
 
   def take_screenshots_for_emulator(avd_name, dest_folder)
@@ -145,6 +149,9 @@ platform :android do
     set_emulator_resolution(emulator_id, dest_folder)
 
     project_root = File.expand_path("..", __dir__)
+
+
+
     dart_script = File.join(project_root, "fastlane/generate_metadata.dart")
 
     unless File.exist?(dart_script)
@@ -154,6 +161,10 @@ platform :android do
     Dir.chdir(project_root) do
       sh("dart '#{dart_script}'")
     end
+
+
+
+
 
     locales = extract_locales
     if locales.empty?
@@ -169,8 +180,7 @@ platform :android do
 
     locales.each do |locale|
       UI.message("🌐 Locale : #{locale}")
-
-      sh("flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d #{emulator_id} --dart-define=LOCALE=#{locale} --screenshot=test_driver/screenshots")
+      sh("flutter drive --driver=test_driver/integration_test.dart --target=test_driver/app.dart -d #{emulator_id} --dart-define=LOCALE=#{locale} --dart-define=FOR_FEATURE_GRAPHIC=#{dest_folder=="FeatureGraphic"}  --screenshot=test_driver/screenshots")
 
       play_locale = to_play_locale(locale)
       next unless play_locale
@@ -178,7 +188,15 @@ platform :android do
       screenshots = Dir[File.join(screenshots_dir, "*.png")]
       UI.message(screenshots)
 
-      dest_dir = File.join(project_root, "fastlane/metadata/#{play_locale}/images/#{dest_folder}")
+      if dest_folder == "FeatureGraphic"
+        dest_dir = File.join(project_root, "fastlane/metadata/#{play_locale}/images/")
+      else
+        dest_dir = File.join(project_root, "fastlane/metadata/#{play_locale}/images/#{dest_folder}")
+      end
+
+
+
+
       FileUtils.mkdir_p(dest_dir)
       if screenshots.empty?
         UI.important("Aucune capture d'écran trouvée pour la locale #{locale} dans test_driver/screenshots/")

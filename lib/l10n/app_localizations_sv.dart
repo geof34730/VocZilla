@@ -21,6 +21,21 @@ class AppLocalizationsSv extends AppLocalizations {
   String get app_keywords => 'ordförråd, lärande, engelska, ord, frågesport, spel, språk, repetition, utbildning, minne, diktering, uttal';
 
   @override
+  String get app_feature_graphic_title => 'Förbättra ditt engelska ordförråd';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5 600 ord';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Interaktiva ljudquiz och tester';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Följ dina framsteg i realtid';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Anpassade och delbara listor';
+
+  @override
   String get hello => 'God morgon!';
 
   @override
@@ -276,7 +291,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Dra nytta av din kostnadsfria provperiod!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har för närvarande en gratis provperiod på';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har just nu en gratis provperiod på';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'dagar';

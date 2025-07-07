@@ -4,6 +4,7 @@ import 'package:vobzilla/ui/featureGraphic.dart';
 import 'package:vobzilla/ui/screens/personalisation/step2.dart';
 import 'package:vobzilla/ui/screens/update_screen.dart';
 
+import 'core/utils/feature_graphic_flag.dart';
 import 'logic/check_connectivity.dart';
 import 'core/utils/logger.dart';
 import 'logic/blocs/update/update_state.dart';
@@ -51,6 +52,16 @@ class AppRoute {
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
+    if (forFeatureGraphic && settings.name == AppRoute.home) {
+      // Redirige vers la page FeatureGraphic
+      return MaterialPageRoute(
+        settings: settings,
+        builder: (context) => FeatureGraphic(),
+      );
+    }
+
+
+
     bool notRedirectNow = true;
     return MaterialPageRoute(
       settings: settings,

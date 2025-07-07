@@ -12,9 +12,7 @@ void main() {
     });
 
     tearDownAll(() async {
-      if (driver != null) {
-        await driver.close();
-      }
+      await driver.close();
     });
 
     Future<void> takeScreenshot(FlutterDriver driver, String name) async {
@@ -57,41 +55,53 @@ void main() {
     }
 
     test('check if the app starts', () async {
-      await Future.delayed(Duration(seconds: 3));
-      print('Taking screenshot Home...');
-      await takeScreenshot(driver, 'home');
+      await Future.delayed(Duration(seconds: 5));
+      // Récupère la valeur de FOR_FEATURE_GRAPHIC depuis l'app
+      final forFeatureGraphicStr = await driver.requestData('getForFeatureGraphic');
+      print("forFeatureGraphicStr: $forFeatureGraphicStr");
+      final forFeatureGraphic = forFeatureGraphicStr == 'true';
+      print('FOR_FEATURE_GRAPHIC from app: $forFeatureGraphic');
 
-      // Attendre que le bouton de login soit présent dans l'arbre
-      await driver.waitFor(find.byValueKey('link_home_login'));
-      await driver.waitFor(find.byValueKey('scrollBackgroundBlueLinear'));
-      print('clique link_home_login..');
+      if (forFeatureGraphic) {
+        print('Taking screenshot featureGraphic...');
+        await takeScreenshot(driver, 'featureGraphic');
+      } else {
+        print('Taking screenshot Home...');
+        await takeScreenshot(driver, 'home');
 
-      // SCROLL jusqu'à ce que le bouton soit visible, puis tap
-      // Remplace 'scrollable' par la ValueKey ou le type de ton widget scrollable parent si besoin
-      final scrollableFinder = find.byValueKey('scrollBackgroundBlueLinear'); // ou find.byValueKey('my_scrollable')
-      final loginButtonFinder = find.byValueKey('link_home_login');
-      await scrollUntilVisibleAndTap(driver, scrollableFinder, loginButtonFinder);
+        // Attendre que le bouton de login soit présent dans l'arbre
 
-      await driver.waitFor(find.byValueKey('login_screen'));
+        await driver.waitFor(find.byValueKey('link_home_login'));
+        await driver.waitFor(find.byValueKey('scrollBackgroundBlueLinear'));
+        print('clique link_home_login..');
 
-      print('Taking screenshot login_screen...');
-      await takeScreenshot(driver, 'login_screen');
+        // SCROLL jusqu'à ce que le bouton soit visible, puis tap
+        final scrollableFinder = find.byValueKey('scrollBackgroundBlueLinear');
+        final loginButtonFinder = find.byValueKey('link_home_login');
+        await scrollUntilVisibleAndTap(
+            driver, scrollableFinder, loginButtonFinder);
 
-      await driver.waitFor(find.byValueKey('login_field'));
-      await driver.tap(find.byValueKey('login_field'));
-      await driver.enterText('geoffrey.petain@gmail.com');
+        await driver.waitFor(find.byValueKey('login_screen'));
 
-      await driver.waitFor(find.byValueKey('password_field'));
-      await driver.tap(find.byValueKey('password_field'));
-      await driver.enterText('sdfsdfs@ddd-df');
+        print('Taking screenshot login_screen...');
+        await takeScreenshot(driver, 'login_screen');
 
-      await driver.waitFor(find.byValueKey('validate_login_button'));
-      await driver.tap(find.byValueKey('validate_login_button'));
+        await driver.waitFor(find.byValueKey('login_field'));
+        await driver.tap(find.byValueKey('login_field'));
+        await driver.enterText('geoffrey.petain@gmail.com');
 
-      await driver.waitFor(find.byValueKey('home_logged'));
+        await driver.waitFor(find.byValueKey('password_field'));
+        await driver.tap(find.byValueKey('password_field'));
+        await driver.enterText('sdfsdfs@ddd-df');
 
-      await takeScreenshot(driver, 'home_logged');
-      print('Taking screenshot end...');
+        await driver.waitFor(find.byValueKey('validate_login_button'));
+        await driver.tap(find.byValueKey('validate_login_button'));
+
+        await driver.waitFor(find.byValueKey('home_logged'));
+
+        await takeScreenshot(driver, 'home_logged');
+        print('Taking screenshot end...');
+      }
     });
   });
 }

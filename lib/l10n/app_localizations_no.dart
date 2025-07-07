@@ -21,6 +21,21 @@ class AppLocalizationsNo extends AppLocalizations {
   String get app_keywords => 'vokabular, læring, engelsk, ord, quiz, spill, språk, gjennomgang, utdanning, hukommelse, diktering, uttale';
 
   @override
+  String get app_feature_graphic_title => 'Forbedre ditt engelske ordforråd';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5600 ord';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Interaktive lydquizer og tester';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Spor fremgangen din i sanntid';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Personlige og delbare lister';
+
+  @override
   String get hello => 'God morgen!';
 
   @override

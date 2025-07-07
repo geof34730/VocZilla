@@ -21,6 +21,21 @@ class AppLocalizationsPl extends AppLocalizations {
   String get app_keywords => 'słownictwo, nauka, angielski, słowa, quiz, gra, język, przegląd, edukacja, pamięć, dyktando, wymowa';
 
   @override
+  String get app_feature_graphic_title => 'Popraw swoje słownictwo angielskie';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5600 słów';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Interaktywne quizy i testy audio';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Śledź swoje postępy w czasie rzeczywistym';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Spersonalizowane i udostępniane listy';
+
+  @override
   String get hello => 'Dzień dobry !';
 
   @override
@@ -180,7 +195,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get annee => 'rok';
 
   @override
-  String get abonnement_mensuel => 'Subskrypcja miesięczna';
+  String get abonnement_mensuel => 'Miesięczna subskrypcja';
 
   @override
   String get abonnement_annuel => 'Roczna subskrypcja';

@@ -21,6 +21,21 @@ class AppLocalizationsPt extends AppLocalizations {
   String get app_keywords => 'vocabulário, aprendizagem, inglês, palavras, teste, jogo, idioma, revisão, educação, memória, ditado, pronúncia';
 
   @override
+  String get app_feature_graphic_title => 'Melhore seu vocabulário em inglês';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5.600 palavras';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Questionários e testes de áudio interativos';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Acompanhe seu progresso em tempo real';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Listas personalizadas e compartilháveis';
+
+  @override
   String get hello => 'Bom dia !';
 
   @override

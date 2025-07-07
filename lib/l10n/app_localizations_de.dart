@@ -21,6 +21,21 @@ class AppLocalizationsDe extends AppLocalizations {
   String get app_keywords => 'Vokabeln, Lernen, Englisch, Wörter, Quiz, Spiel, Sprache, Wiederholung, Bildung, Gedächtnis, Diktat, Aussprache';
 
   @override
+  String get app_feature_graphic_title => 'Verbessern Sie Ihren englischen Wortschatz';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '5.600 Wörter';
+
+  @override
+  String get app_feature_graphic_FeatureItem2 => 'Interaktive Audio-Quizze und Tests';
+
+  @override
+  String get app_feature_graphic_FeatureItem3 => 'Verfolgen Sie Ihren Fortschritt in Echtzeit';
+
+  @override
+  String get app_feature_graphic_FeatureItem4 => 'Personalisierte und gemeinsam nutzbare Listen';
+
+  @override
   String get hello => 'Guten Morgen !';
 
   @override

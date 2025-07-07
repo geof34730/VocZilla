@@ -9,7 +9,6 @@ import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'app_route.dart';
-import 'core/utils/device.dart';
 import 'core/utils/logger.dart';
 import 'data/repository/auth_repository.dart';
 import 'data/repository/vocabulaire_user_repository.dart';
@@ -39,9 +38,11 @@ final Route Function(RouteSettings settings) generateRoute = AppRoute.generateRo
 
 class MyApp extends StatelessWidget {
   final String? localForce;
-  MyApp({super.key,  this.localForce});
+
+  MyApp({super.key, this.localForce});
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   final AuthRepository _authRepository = AuthRepository();
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -66,6 +67,7 @@ class MyApp extends StatelessWidget {
                 : locale;
 
             FirebaseAuth.instance.setLanguageCode(locale.languageCode);
+
             return MaterialApp(
               theme: VobdzillaTheme.lightTheme,
               debugShowCheckedModeBanner: debugMode,
@@ -80,72 +82,37 @@ class MyApp extends StatelessWidget {
               onGenerateRoute: generateRoute,
               navigatorKey: navigatorKey,
               builder: (context, child) {
-                return LayoutBuilder(
-                  builder: (context, constraints) {
-                    final double screenWidth = constraints.maxWidth;
-                    final double screenHeight = constraints.maxHeight;
-
-                    // Taille de référence souhaitée : 750 en largeur sur tablette, 400 sur mobile
-                    final double referenceWidth = isTablet(context: context) ? screenWidth : screenWidth;
-                    final double referenceHeight = isTablet(context: context) ? screenHeight : screenHeight;
-                    // tu peux adapter la hauteur de référence si tu veux
-
-                    // Calcul du facteur d’échelle
-                    final double scaleX = screenWidth / referenceWidth;
-                    final double scaleY = screenHeight * referenceWidth;
-
-                    // Pour conserver les proportions et tout faire tenir, on prend le plus petit des deux
-                    final double scale = scaleX < scaleY ? scaleX : scaleY;
-
-
-                     return  Transform.scale(
-                        scale: scale,
-                        alignment: Alignment.topLeft,
-                        child: SizedBox(
-                          width: referenceWidth,
-                          height: referenceHeight,
-                          child: Builder(
-                                builder: (context) {
-                                  return MultiBlocListener(
-                                    listeners: [
-                                      BlocListener<AuthBloc, AuthState>(
-                                        listener: (context, state) => BlocStateTracker().updateState('AuthBloc', state),
-                                      ),
-                                      BlocListener<DrawerBloc, DrawerState>(
-                                        listener: (context, state) => BlocStateTracker().updateState('DrawerBloc', state),
-                                      ),
-                                      BlocListener<PurchaseBloc, PurchaseState>(
-                                        listener: (context, state) => BlocStateTracker().updateState('PurchaseBloc', state),
-                                      ),
-                                      BlocListener<UpdateBloc, UpdateState>(
-                                        listener: (context, state) => BlocStateTracker().updateState('UpdateBloc', state),
-                                      ),
-                                      BlocListener<UserBloc, UserState>(
-                                        listener: (context, state) => BlocStateTracker().updateState('UserBloc', state),
-                                      ),
-                                      BlocListener<VocabulairesBloc, VocabulairesState>(
-                                        listener: (context, state) {
-                                          Logger.Yellow.log("VocabulairesBloc state: $state");
-                                          BlocStateTracker().updateState('VocabulairesBloc', state);
-                                        },
-                                      ),
-                                      BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
-                                        listener: (context, state) {
-                                          Logger.Yellow.log("VocabulairesUserBloc state: $state");
-                                          BlocStateTracker().updateState('VocabulaireUserBloc', state);
-                                        },
-                                      ),
-                                    ],
-                                    child: child ?? const SizedBox.shrink(),
-                                  );
-                                },
-                              ),
-                            ),
-
-                        );
-
-
-                  },
+                return MultiBlocListener(
+                  listeners: [
+                    BlocListener<AuthBloc, AuthState>(
+                      listener: (context, state) => BlocStateTracker().updateState('AuthBloc', state),
+                    ),
+                    BlocListener<DrawerBloc, DrawerState>(
+                      listener: (context, state) => BlocStateTracker().updateState('DrawerBloc', state),
+                    ),
+                    BlocListener<PurchaseBloc, PurchaseState>(
+                      listener: (context, state) => BlocStateTracker().updateState('PurchaseBloc', state),
+                    ),
+                    BlocListener<UpdateBloc, UpdateState>(
+                      listener: (context, state) => BlocStateTracker().updateState('UpdateBloc', state),
+                    ),
+                    BlocListener<UserBloc, UserState>(
+                      listener: (context, state) => BlocStateTracker().updateState('UserBloc', state),
+                    ),
+                    BlocListener<VocabulairesBloc, VocabulairesState>(
+                      listener: (context, state) {
+                        Logger.Yellow.log("VocabulairesBloc state: $state");
+                        BlocStateTracker().updateState('VocabulairesBloc', state);
+                      },
+                    ),
+                    BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
+                      listener: (context, state) {
+                        Logger.Yellow.log("VocabulaireUserBloc state: $state");
+                        BlocStateTracker().updateState('VocabulaireUserBloc', state);
+                      },
+                    ),
+                  ],
+                  child: child ?? const SizedBox.shrink(),
                 );
               },
             );

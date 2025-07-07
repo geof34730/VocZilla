@@ -141,6 +141,36 @@ abstract class AppLocalizations {
   /// **'vocabulary, learning, English, words, quiz, game, language, review, education, memory, dictation, pronunciation'**
   String get app_keywords;
 
+  /// No description provided for @app_feature_graphic_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Improve your English vocabulary'**
+  String get app_feature_graphic_title;
+
+  /// No description provided for @app_feature_graphic_FeatureItem1.
+  ///
+  /// In en, this message translates to:
+  /// **'5,600 words'**
+  String get app_feature_graphic_FeatureItem1;
+
+  /// No description provided for @app_feature_graphic_FeatureItem2.
+  ///
+  /// In en, this message translates to:
+  /// **'Interactive audio quizzes and tests'**
+  String get app_feature_graphic_FeatureItem2;
+
+  /// No description provided for @app_feature_graphic_FeatureItem3.
+  ///
+  /// In en, this message translates to:
+  /// **'Track your progress in real time'**
+  String get app_feature_graphic_FeatureItem3;
+
+  /// No description provided for @app_feature_graphic_FeatureItem4.
+  ///
+  /// In en, this message translates to:
+  /// **'Personalized and shareable lists'**
+  String get app_feature_graphic_FeatureItem4;
+
   /// No description provided for @hello.
   ///
   /// In en, this message translates to:

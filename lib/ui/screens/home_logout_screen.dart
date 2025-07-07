@@ -78,12 +78,7 @@ class HomeLogoutScreen extends StatelessWidget {
                         },
                         child: Text(context.loc.home_notlogged_button_go)
                     ),
-                    ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/featureGraphic');
-                        },
-                        child: Text("featureGraphic")
-                    )
+
                   ]
               )
             ),
