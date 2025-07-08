@@ -152,18 +152,11 @@ function getAppfileInfo(appfilePath) {
         --skip_upload_metadata false`,
             { stdio: "inherit" }
         );
-
         console.log("\n✅ Déploiement Android terminé avec succès !");
     } catch (error) {
         console.error("\n❌ Échec du déploiement Android :", error.message);
         process.exit(1);
     }
-
-
-
-
-
-
 
 
     console.log("\n✅ Déploiement Android terminé avec succès !");
