@@ -19,9 +19,10 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
         title:TitleSite(),
-
+        key: ValueKey('appBarKey'),
         elevation: 5,
         shadowColor: Colors.grey,
+
         actions:[
           InkWell( // Add
               child:Padding(

@@ -244,7 +244,8 @@ class VocabularyDataSource extends DataTableSource {
                       radius: 30,
                       backgroundColor:  vocabulaire['isSelectedInListPerso'] ? Colors.red : Colors.green,
                       child: IconButton(
-                        key: UniqueKey(),
+                        //key: UniqueKey(),
+                        key: ValueKey('button_add_voc_$index'),
                         icon: Icon(
                           vocabulaire['isSelectedInListPerso'] ? Icons.delete: Icons.add,
                           color: Colors.white,

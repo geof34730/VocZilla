@@ -12,6 +12,7 @@ import 'package:vobzilla/ui/widget/bottomNavigationBar/BottomNavigationBarVocabu
 import 'package:vobzilla/ui/widget/drawer/DrawerLocalisation.dart';
 import 'package:vobzilla/ui/widget/drawer/DrawerNavigation.dart';
 import 'package:vobzilla/ui/widget/elements/debug.dart';
+import 'package:vobzilla/ui/widget/home/TitleWidget.dart';
 
 import '../global.dart';
 import '../logic/blocs/drawer/drawer_state.dart';
@@ -78,20 +79,17 @@ class Layout extends StatelessWidget {
       bottomNavigationBar: (showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: itemSelected) : null,
       body:SingleChildScrollView(
           child:Padding(
-              padding: logged ? EdgeInsets.only(top: kToolbarHeight+50,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
+              padding: logged ? EdgeInsets.only(top: kToolbarHeight+15,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
               child:Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   if(titleScreen != null)...[
-                    Text(titleScreen!,
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: GoogleFonts.titanOne().fontFamily
-                      ),
-                    ),
+                    Padding(
+                    padding: EdgeInsets.only(bottom: 8),
+                      child:titleWidget(text:titleScreen!)
+                    )
                   ],
                   child,
                 ],

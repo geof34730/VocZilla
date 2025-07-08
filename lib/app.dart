@@ -33,6 +33,8 @@ import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'logic/blocs/update/update_bloc.dart';
+import 'core/utils/navigatorKey.dart' show navigatorKey;
+
 
 final Route Function(RouteSettings settings) generateRoute = AppRoute.generateRoute;
 
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
   final String? localForce;
 
   MyApp({super.key, this.localForce});
-  final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+  //final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   final AuthRepository _authRepository = AuthRepository();
 
   @override

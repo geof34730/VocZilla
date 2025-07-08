@@ -1,11 +1,26 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_driver/driver_extension.dart';
+import 'package:vobzilla/app_route.dart';
 import 'package:vobzilla/main.dart' as app;
+import 'package:vobzilla/ui/screens/home_screen.dart';
+
+import '../lib/core/utils/navigatorKey.dart' show navigatorKey;
+
 void main()  {
   enableFlutterDriverExtension(
     handler: (String? message) async {
+
+      print("******************enableFlutterDriverExtension: $message");
       if (message == 'getForFeatureGraphic') {
         const bool forFeatureGraphic = bool.fromEnvironment('FOR_FEATURE_GRAPHIC');
         return forFeatureGraphic.toString();
+      }
+      if (message == 'goToHome') {
+        print("******************goToHome");
+
+
+        navigatorKey.currentState?.pushReplacementNamed('/home');
+        return 'OK';
       }
       return '';
     },
@@ -14,5 +29,5 @@ void main()  {
 
   const String localParameter = String.fromEnvironment('LOCALE', defaultValue: 'en');
 
-  app.main(shootScreenShot: true, localForce:localParameter );
+  app.main(shootScreenShot: true, localForce: localParameter);
 }

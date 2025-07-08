@@ -81,30 +81,24 @@ void main() {
         await scrollUntilVisibleAndTap(driver, scrollableFinder, loginButtonFinder);
 
         await driver.waitFor(find.byValueKey('login_screen'));
-
-        print('Taking screenshot login_screen...');
         await takeScreenshot(driver, 'login_screen');
-
         await driver.waitFor(find.byValueKey('login_field'));
         await driver.tap(find.byValueKey('login_field'));
         await driver.enterText('geoffrey.petain@gmail.com');
-
         await driver.waitFor(find.byValueKey('password_field'));
         await driver.tap(find.byValueKey('password_field'));
         await driver.enterText('sdfsdfs@ddd-df');
-
         await driver.waitFor(find.byValueKey('validate_login_button'));
         await driver.tap(find.byValueKey('validate_login_button'));
 
+
         await driver.waitFor(find.byValueKey('home_logged'));
-
         await takeScreenshot(driver, 'home_logged');
-
-
 
         await driver.waitFor(find.byValueKey('button_create_list'));
         await driver.tap(find.byValueKey('button_create_list'));
 
+        ///CREATE LIST
         await driver.waitFor(find.byValueKey('perso_list_step1'));
         await driver.waitFor(find.byValueKey('title_perso_field'));
         await driver.tap(find.byValueKey('title_perso_field'));
@@ -113,13 +107,47 @@ void main() {
         await takeScreenshot(driver, 'personallist1');
         await driver.waitFor(find.byValueKey('button_valide_step_perso'));
         await driver.tap(find.byValueKey('button_valide_step_perso'));
-
-
         await driver.waitFor(find.byValueKey('perso_list_step2'));
         await takeScreenshot(driver, 'personallist2');
 
+
+
+        ///button_add_voc_
+        await driver.waitFor(find.byValueKey('button_add_voc_1'));
+        await driver.waitFor(find.byValueKey('button_add_voc_4'));
+        await driver.waitFor(find.byValueKey('button_add_voc_5'));
+        await driver.waitFor(find.byValueKey('button_add_voc_7'));
+        await driver.tap(find.byValueKey('button_add_voc_1'));
+        await driver.tap(find.byValueKey('button_add_voc_4'));
+        await driver.tap(find.byValueKey('button_add_voc_5'));
+        await driver.tap(find.byValueKey('button_add_voc_7'));
+        await takeScreenshot(driver, 'personallist2');
+
+
+
+       // await Future.delayed(Duration(seconds: 10));
+        await driver.waitFor(find.byValueKey('appBarKey'));
+
+        final appBar = find.byValueKey("appBarKey");
+        await driver.waitFor(appBar);
+
+        final  back = find.descendant(
+          of: appBar,
+          matching: find.byType('BackButton'),
+          firstMatchOnly: true,
+        );
+          print("*****************$back");
+
+         driver.tap(back);
+
+
+        await driver.waitFor(find.byValueKey('home_logged'));
+        await takeScreenshot(driver, 'homeperso');
+
+
         print('Taking screenshot end...');
       }
-    });
+    },
+      timeout: Timeout(Duration(minutes: 5)),);
   });
 }

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +13,7 @@ import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/cubit/localization_cubit.dart';
 import 'CardHome.dart';
+import 'TitleWidget.dart';
 
 
 class HomelistPerso extends StatelessWidget {
@@ -27,11 +29,17 @@ class HomelistPerso extends StatelessWidget {
              final VocabulaireUser data = state.data;
              final bool listePerso = data.listPerso.length>0;
               return Column(
+                mainAxisSize: MainAxisSize.max,
                 children: [
                   Row(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      titleWidget(context: context),
-                      if(listePerso)
+                      Flexible(
+                        fit: FlexFit.loose,
+                        child: titleWidget(text: context.loc.home_title_my_list_perso),
+                      ),
+                      if (listePerso)
                         Padding(
                           padding: EdgeInsets.only(left: 0),
                           child: ElevatedButton(
@@ -44,9 +52,9 @@ class HomelistPerso extends StatelessWidget {
                               backgroundColor: Colors.blue,
                               padding: EdgeInsets.all(0),
                             ),
-                            child: Icon(Icons.add, size: 25, color: Colors.white), // Utiliser une icône ou un texte court
+                            child: Icon(Icons.add, size: 25, color: Colors.white),
                           ),
-                        )
+                        ),
                     ],
                   ),
                   if(!listePerso)
@@ -80,7 +88,7 @@ class HomelistPerso extends StatelessWidget {
               if(state is VocabulaireUserEmpty) {
                 return Column(
                   children: [
-                    titleWidget(context: context),
+                    titleWidget(text: context.loc.home_title_my_list_perso),
                     descriptionListPersoEmpty(context: context),
                   ],
                 );
@@ -97,17 +105,7 @@ class HomelistPerso extends StatelessWidget {
     Navigator.pushNamed(context, "/personnalisation/step1");
   }
 
-  Text titleWidget({required BuildContext context}){
-    return Text(
-        context.loc.home_title_my_list_perso,
-        style: TextStyle(
-            fontSize: 25,
-            fontFamily: GoogleFonts
-                .titanOne()
-                .fontFamily
-        )
-    );
-  }
+
 
   Card descriptionListPersoEmpty({required BuildContext context}){
     return Card(

@@ -10,6 +10,7 @@ import '../../core/utils/ui.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
+import '../widget/home/TitleWidget.dart';
 import '../widget/statistical/LevelChart.dart';
 import '../widget/home/CardClassementGamer.dart';
 import '../widget/home/HomeListPerso.dart';
@@ -41,12 +42,8 @@ class HomeScreen extends StatelessWidget {
               isListTheme : false,
             ),
             HomelistPerso(),
-            Text(
-              context.loc.home_title_list_defined,
-              style: TextStyle(
-                fontSize: 25,
-                fontFamily: GoogleFonts.titanOne().fontFamily)
-            ),
+            titleWidget(text: context.loc.home_title_list_defined),
+
             HorizontalScrollViewCardHome(
                 children: [
                 CardHome(
@@ -76,19 +73,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ]
             ),
-            Text(
-                context.loc.by_themes,
-                style: TextStyle(
-                    fontSize: 25,
-                    fontFamily: GoogleFonts.titanOne().fontFamily)
-            ),
+            titleWidget(text: context.loc.by_themes),
             HomelistThemes(),
-            Text(
-                context.loc.home_title_classement,
-                style: TextStyle(
-                    fontSize: 25,
-                    fontFamily: GoogleFonts.titanOne().fontFamily)
-            ),
+            titleWidget(text: context.loc.home_title_classement),
             CardClassementGamer(position: 1),
             CardClassementGamer(position: 2),
             CardClassementGamer(position: 3),
