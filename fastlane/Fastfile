@@ -7,6 +7,7 @@ platform :android do
   # 🟢 Helper methods
   ####################################################
 
+
   def extract_locales
     project_root = File.expand_path("..", __dir__)
     arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
@@ -240,5 +241,8 @@ platform :android do
        task: "testReleaseUnitTest"
      )
    end
+
+
+
 
 end

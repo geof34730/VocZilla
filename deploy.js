@@ -25,8 +25,8 @@ function getAppfileInfo(appfilePath) {
 }
 
 (async () => {
-
-
+    const mode = process.argv[2] || 'internal';
+    const track = mode === 'release' ? 'production' : 'internal';
 /*
     try {
         execSync('fastlane deliver ...', { stdio: 'inherit' });
@@ -121,11 +121,11 @@ function getAppfileInfo(appfilePath) {
                 console.error(`❌ Erreur : Fichier de clé de service introuvable à ${serviceAccountPath}`);
                 process.exit(1);
             }
-
+/*
             execSync(
                 `fastlane supply \
             --aab build/app/outputs/bundle/release/app-release.aab \
-            --track internal \
+            --track ${track} \
             --json_key ${serviceAccountPath} \
             --package_name ${appIdentifier} \
             --metadata_path fastlane/metadata \
@@ -135,6 +135,35 @@ function getAppfileInfo(appfilePath) {
             --skip_upload_metadata false`,
                 { stdio: "inherit" }
             );
+*/
+
+
+    try {
+        execSync(
+            `fastlane supply \
+        --aab build/app/outputs/bundle/release/app-release.aab \
+        --track ${track} \
+        --json_key ${serviceAccountPath} \
+        --package_name ${appIdentifier} \
+        --metadata_path fastlane/metadata \
+        --skip_upload_changelogs false \
+        --skip_upload_images false \
+        --skip_upload_screenshots false \
+        --skip_upload_metadata false`,
+            { stdio: "inherit" }
+        );
+
+        console.log("\n✅ Déploiement Android terminé avec succès !");
+    } catch (error) {
+        console.error("\n❌ Échec du déploiement Android :", error.message);
+        process.exit(1);
+    }
+
+
+
+
+
+
 
 
     console.log("\n✅ Déploiement Android terminé avec succès !");

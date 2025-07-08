@@ -23,14 +23,6 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 📸 Générer les screenshots Android multilingues (téléphone + tablettes)
 
-### android release
-
-```sh
-[bundle exec] fastlane android release
-```
-
-🚀 Publier Android (metadata + screenshots)
-
 ### android test
 
 ```sh
@@ -38,6 +30,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 ```
 
 ✅ Lancer les tests unitaires Android
+
+### android deploy
+
+```sh
+[bundle exec] fastlane android deploy
+```
+
+Déploiement vers Google Play production avec tous les pays
 
 ----
 

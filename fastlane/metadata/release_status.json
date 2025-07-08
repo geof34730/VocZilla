@@ -1,0 +1,7 @@
+{
+  "track": "production",
+  "release_status": "completed",
+  "user_fraction": 1.0,
+  "in_app_update_priority": 3,
+  "rollout_countries": "all"
+}

@@ -1,0 +1,5 @@
+# Gemfile
+source "https://rubygems.org"
+
+# Version minimale compatible avec track_config
+gem "fastlane", ">= 2.215.0"

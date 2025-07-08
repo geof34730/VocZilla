@@ -12,7 +12,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla est l’application idéale pour enrichir ton vocabulaire en français, quel que soit ton niveau. Découvre des milliers de mots classés par thèmes, joue à des quiz ludiques, suis ta progression et défie tes amis !';
+  String get app_description => 'VocZilla est l’application idéale pour enrichir ton vocabulaire en anglais, quel que soit ton niveau. Découvre des milliers de mots classés par thèmes, joue à des quiz ludiques, suis ta progression et défie tes amis !';
 
   @override
   String get app_short_description => 'Apprends et révise du vocabulaire anglais !';
