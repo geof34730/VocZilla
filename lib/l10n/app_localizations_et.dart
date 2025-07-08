@@ -12,7 +12,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla on ideaalne rakendus oma prantsuse keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!';
+  String get app_description => 'VocZilla on ideaalne rakendus oma inglise keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!';
 
   @override
   String get app_short_description => 'Õpi ja korda inglise keele sõnavara!';
@@ -153,7 +153,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get home_title_classement => 'TeamZilla edetabel';
 
   @override
-  String get home_notlogged_accroche1 => 'Täiusta oma inglise keelt!';
+  String get home_notlogged_accroche1 => 'Tõsta oma inglise keelt!';
 
   @override
   String get home_notlogged_accroche2 => 'Kas soovite oma inglise keele sõnavara rikastada?';
@@ -322,4 +322,16 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice2 => 'Kõik';
+
+  @override
+  String get title_create_personal_list => 'Kohandatud loendi loomine';
+
+  @override
+  String get title_app_update => 'Värskendus saadaval!';
+
+  @override
+  String get title_subscription => 'Meie tellimused';
+
+  @override
+  String get by_themes => 'Par teemad';
 }

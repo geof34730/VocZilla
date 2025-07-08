@@ -1,6 +1,6 @@
 {
     "app_title": "VocZilla",
-    "app_description": "VocZilla är den perfekta appen för att utöka ditt franska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!",
+    "app_description": "VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!",
     "app_short_description": "Lär dig och repetera engelska ord!",
     "app_keywords": "ordförråd, lärande, engelska, ord, frågesport, spel, språk, repetition, utbildning, minne, diktering, uttal",
     "app_feature_graphic_title": "Förbättra ditt engelska ordförråd",
@@ -93,7 +93,7 @@
     "personnalisation_step1_color_choice": "Välj färgen från din lista",
     "profil_update_title": "Slutför din registrering",
     "widget_dialogHelper_showfreetrialdialog_description1": "Dra nytta av din kostnadsfria provperiod!",
-    "widget_dialogHelper_showfreetrialdialog_description2": "Välkommen! Du har just nu en gratis provperiod på",
+    "widget_dialogHelper_showfreetrialdialog_description2": "Välkommen! Du har för närvarande en gratis provperiod på",
     "widget_dialogHelper_showfreetrialdialog_days": "dagar",
     "widget_dialogHelper_showfreetrialdialog_description3": "för att upptäcka alla funktioner i vår applikation.",
     "widget_dialogHelper_showfreetrialdialog_description4": "Du har lämnat",
@@ -103,5 +103,9 @@
     "widget_congratulation_bravo": "Bravo",
     "widget_congratulation_message": "du har läst klart den här listan",
     "widget_radiochoicevocabularylearnedornot_choice1": "Att lära sig",
-    "widget_radiochoicevocabularylearnedornot_choice2": "Alla"
+    "widget_radiochoicevocabularylearnedornot_choice2": "Alla",
+    "title_create_personal_list": "Skapa en anpassad lista",
+    "title_app_update": "Uppdatering tillgänglig!",
+    "title_subscription": "Våra prenumerationer",
+    "by_themes": "Par-teman"
 }

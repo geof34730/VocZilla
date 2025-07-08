@@ -66,6 +66,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
           bool isNotLearned = state.data.isVocabularyNotLearned;
           int _vocabulaireConnu = isNotLearned ? 0 : 1;
           return Column(
+            key: ValueKey('perso_list_step2'),
             children: [
               RadioChoiceVocabularyLearnedOrNot(
                   state: state,

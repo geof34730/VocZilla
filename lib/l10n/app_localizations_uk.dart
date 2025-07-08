@@ -12,7 +12,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla – ідеальний додаток для розширення вашого французького словникового запасу, незалежно від вашого рівня. Відкрийте для себе тисячі слів, розподілених за темами, грайте у цікаві вікторини, відстежуйте свій прогрес і кидайте виклик друзям!';
+  String get app_description => 'VocZilla – ідеальний додаток для розширення вашого словникового запасу англійської мови, незалежно від вашого рівня. Відкрийте для себе тисячі слів, розподілених за темами, грайте у цікаві вікторини, відстежуйте свій прогрес і кидайте виклик друзям!';
 
   @override
   String get app_short_description => 'Вивчайте та повторюйте англійську лексику!';
@@ -237,7 +237,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get login_entrer_mot_de_passe => 'Введіть свій пароль';
 
   @override
-  String get login_ou_connecter_vous_avec => 'Або зв\'яжіться з';
+  String get login_ou_connecter_vous_avec => 'Або зв’яжіться з';
 
   @override
   String get login_avec_google => 'З Google';
@@ -322,4 +322,16 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice2 => 'Усі';
+
+  @override
+  String get title_create_personal_list => 'Створити власний список';
+
+  @override
+  String get title_app_update => 'Доступне оновлення!';
+
+  @override
+  String get title_subscription => 'Наші підписки';
+
+  @override
+  String get by_themes => 'Парні теми';
 }

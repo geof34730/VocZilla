@@ -1,6 +1,6 @@
 {
     "app_title": "VocZilla",
-    "app_description": "VocZilla on ideaalne rakendus oma prantsuse keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!",
+    "app_description": "VocZilla on ideaalne rakendus oma inglise keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!",
     "app_short_description": "Õpi ja korda inglise keele sõnavara!",
     "app_keywords": "sõnavara, õppimine, inglise keel, sõnad, viktoriin, mäng, keel, arvustus, haridus, mälu, dikteerimine, hääldus",
     "app_feature_graphic_title": "Täienda oma inglise keele sõnavara",
@@ -47,7 +47,7 @@
     "home_title_list_defined": "Väikesest koletisest titaaniks",
     "home_description_list_perso": "Loo ja kohanda oma sõnavaraloendeid, et valitud sõnu tõhusalt õppida ja üle vaadata.",
     "home_title_classement": "TeamZilla edetabel",
-    "home_notlogged_accroche1": "Täiusta oma inglise keelt!",
+    "home_notlogged_accroche1": "Tõsta oma inglise keelt!",
     "home_notlogged_accroche2": "Kas soovite oma inglise keele sõnavara rikastada?",
     "home_notlogged_accroche3": "Juurdepääs ",
     "home_notlogged_accroche4": "5600 olulist sõna",
@@ -103,5 +103,9 @@
     "widget_congratulation_bravo": "Bravo",
     "widget_congratulation_message": "oled selle nimekirja õppimise lõpetanud",
     "widget_radiochoicevocabularylearnedornot_choice1": "Õppima",
-    "widget_radiochoicevocabularylearnedornot_choice2": "Kõik"
+    "widget_radiochoicevocabularylearnedornot_choice2": "Kõik",
+    "title_create_personal_list": "Kohandatud loendi loomine",
+    "title_app_update": "Värskendus saadaval!",
+    "title_subscription": "Meie tellimused",
+    "by_themes": "Par teemad"
 }

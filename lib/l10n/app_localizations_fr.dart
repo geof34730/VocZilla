@@ -322,4 +322,16 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice2 => 'Tous';
+
+  @override
+  String get title_create_personal_list => 'Créer une liste personnalisée';
+
+  @override
+  String get title_app_update => 'Mise à jour disponible !';
+
+  @override
+  String get title_subscription => 'Nos Abonnements';
+
+  @override
+  String get by_themes => 'Par themes';
 }

@@ -77,7 +77,7 @@ class HomeScreen extends StatelessWidget {
               ]
             ),
             Text(
-                "Par themes",
+                context.loc.by_themes,
                 style: TextStyle(
                     fontSize: 25,
                     fontFamily: GoogleFonts.titanOne().fontFamily)

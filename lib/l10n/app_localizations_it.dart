@@ -12,7 +12,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla è l\'app perfetta per ampliare il tuo vocabolario francese, a prescindere dal tuo livello. Scopri migliaia di parole suddivise per tema, gioca a divertenti quiz, monitora i tuoi progressi e sfida i tuoi amici!';
+  String get app_description => 'VocZilla è l\'app perfetta per ampliare il tuo vocabolario inglese, a prescindere dal tuo livello. Scopri migliaia di parole suddivise per tema, gioca a divertenti quiz, monitora i tuoi progressi e sfida i tuoi amici!';
 
   @override
   String get app_short_description => 'Impara e ripassa il vocabolario inglese!';
@@ -264,7 +264,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get email_validation_merci_register => 'Grazie per esserti iscritto!';
 
   @override
-  String get email_validation_msg_email_send => 'Un\'e-mail di verifica è stata inviata al tuo indirizzo e-mail';
+  String get email_validation_msg_email_send => 'Un\'email di verifica è stata inviata al tuo indirizzo email';
 
   @override
   String get email_validation_instruction => 'Controlla la tua casella di posta e segui le istruzioni per convalidare il tuo indirizzo email. Questo ci permetterà di confermare la tua registrazione e di darti accesso a tutte le funzionalità del nostro servizio.';
@@ -322,4 +322,16 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice2 => 'Tutto';
+
+  @override
+  String get title_create_personal_list => 'Crea un elenco personalizzato';
+
+  @override
+  String get title_app_update => 'Aggiornamento disponibile!';
+
+  @override
+  String get title_subscription => 'I nostri abbonamenti';
+
+  @override
+  String get by_themes => 'Temi parziali';
 }

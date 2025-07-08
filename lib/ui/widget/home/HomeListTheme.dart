@@ -56,19 +56,6 @@ class HomelistThemes extends StatelessWidget {
   }
 
 
-  Text titleWidget({required BuildContext context}){
-    return Text(
-        context.loc.home_title_my_list_perso,
-        style: TextStyle(
-            fontSize: 25,
-            fontFamily: GoogleFonts
-                .titanOne()
-                .fontFamily
-        )
-    );
-  }
-
-
 
 }
 

@@ -91,7 +91,7 @@ platform :android do
 
   desc "📸 Générer les screenshots Android multilingues (téléphone + tablettes)"
   lane :screenshots do
-   # take_screenshots_for_emulator("emulator_phone_screenshots_voczilla", "phoneScreenshots")
+    take_screenshots_for_emulator("emulator_phone_screenshots_voczilla", "phoneScreenshots")
     take_screenshots_for_emulator("emulator_tablet_7pouces_screenshots_voczilla", "sevenInchScreenshots")
     take_screenshots_for_emulator("emulator_tablet_10pouces_screenshots_voczilla", "tenInchScreenshots")
     take_screenshots_for_emulator("Emulator_FeatureGraphic_voczilla", "FeatureGraphic")

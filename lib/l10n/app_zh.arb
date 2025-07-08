@@ -1,6 +1,6 @@
 {
     "app_title": "VocZilla",
-    "app_description": "VocZilla 是一款完美的法语词汇扩展应用，无论您的水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪您的学习进度，并挑战您的好友！",
+    "app_description": "VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪学习进度，并挑战您的好友！",
     "app_short_description": "学习并复习英语词汇！",
     "app_keywords": "词汇, 学习, 英语, 单词, 测验, 游戏, 语言, 复习, 教育, 记忆, 听写, 发音",
     "app_feature_graphic_title": "提高你的英语词汇量",
@@ -26,7 +26,7 @@
     "button_next": "套房",
     "error_loading": "加载错误",
     "unknown_error": "未知错误",
-    "no_vocabulary_items_found": "未找到任何词汇条目",
+    "no_vocabulary_items_found": "未找到任何词汇",
     "pronunciation_title": "发音",
     "pronunciation_success": "好极了！",
     "pronunciation_error": "嗯，不太对。再试一次。",
@@ -87,7 +87,7 @@
     "email_validation_msg_email_send": "验证邮件已发送至您的邮箱地址",
     "email_validation_instruction": "请查看您的收件箱，并按照说明验证您的电子邮件地址。这将使我们能够确认您的注册，并允许您访问我们服务的所有功能。",
     "email_validation_help": "如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。",
-    "email_validation_merci_register2": "谢谢您的信任！",
+    "email_validation_merci_register2": "感谢您的信任！",
     "send_mail": "收到新的验证邮件",
     "personnalisation_step1_title_list": "列表标题",
     "personnalisation_step1_color_choice": "从列表中选择颜色",
@@ -103,5 +103,9 @@
     "widget_congratulation_bravo": "太棒了",
     "widget_congratulation_message": "您已学习完此列表",
     "widget_radiochoicevocabularylearnedornot_choice1": "学习",
-    "widget_radiochoicevocabularylearnedornot_choice2": "全部"
+    "widget_radiochoicevocabularylearnedornot_choice2": "全部",
+    "title_create_personal_list": "创建自定义列表",
+    "title_app_update": "有可用更新！",
+    "title_subscription": "我们的订阅",
+    "by_themes": "Par主题"
 }

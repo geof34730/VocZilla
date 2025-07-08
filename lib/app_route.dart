@@ -175,7 +175,7 @@ class AppRoute {
     final userState = context.read<UserBloc>().state;
     if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
       Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
-      return Layout(child: SubscriptionScreen(), titleScreen: "Nos Abonnements");
+      return Layout(child: SubscriptionScreen(), titleScreen: context.loc.title_subscription);
     }
 
     if (uri.pathSegments.isNotEmpty) {
@@ -192,7 +192,7 @@ class AppRoute {
         case subscription:
           return Layout(
               child: SubscriptionScreen(),
-              titleScreen: "Nos Abonnements"
+              titleScreen: context.loc.title_subscription
           );
         case home:
         case homeLogged:
@@ -202,7 +202,7 @@ class AppRoute {
 
         case updateScreen:
           return Layout(
-              titleScreen: "Mise à jour disponible !",
+              titleScreen: context.loc.title_app_update,
               child: UpdateScreen()
           );
         case '/vocabulary':
@@ -274,7 +274,7 @@ class AppRoute {
                   switch (uri.pathSegments[1]) {
                     case 'step1':
                       return Layout(
-                        titleScreen: "Créer une liste personnalisée",
+                        titleScreen: context.loc.title_create_personal_list,
                         showBottomNavigationBar: false,
                         child:  uri.pathSegments.length==3 ?
                           PersonnalisationStep1Screen(
@@ -286,7 +286,7 @@ class AppRoute {
                       );
                     case 'step2':
                       return Layout(
-                        titleScreen: "Créer une liste personnalisée",
+                        titleScreen: context.loc.title_create_personal_list,
                         showBottomNavigationBar: false,
                         child:  PersonnalisationStep2Screen(
                           guidListPerso: uri.pathSegments[2],

@@ -104,5 +104,9 @@
     "widget_congratulation_bravo" : "Bravo",
     "widget_congratulation_message" : "vous avez terminé d'apprendre cette Liste",
     "widget_radiochoicevocabularylearnedornot_choice1" : "À apprendre",
-    "widget_radiochoicevocabularylearnedornot_choice2" : "Tous"
+    "widget_radiochoicevocabularylearnedornot_choice2" : "Tous",
+    "title_create_personal_list" :"Créer une liste personnalisée",
+    "title_app_update" : "Mise à jour disponible !",
+    "title_subscription" : "Nos Abonnements",
+    "by_themes" : "Par themes"
 }

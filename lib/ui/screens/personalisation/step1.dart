@@ -38,12 +38,14 @@ class PersonnalisationStep1Screen extends StatelessWidget {
       });
     }
     return Column(
+        key: ValueKey('perso_list_step1'),
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
               padding: EdgeInsets.only(left: 20, right: 20, top: 10),
               child: TextFormField(
+                  key: ValueKey('title_perso_field'),
                   controller: titleList,
                   maxLength: 50,
                   keyboardType: TextInputType.text,
@@ -56,7 +58,6 @@ class PersonnalisationStep1Screen extends StatelessWidget {
                   onChanged: (value) {
                     changeText(
                         value: value,
-
                         guidListPerso: finalGuidList,
                         context: context
                     );
@@ -106,6 +107,7 @@ class PersonnalisationStep1Screen extends StatelessWidget {
                     ? Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: ElevatedButton(
+                      key: ValueKey('button_valide_step_perso'),
                       onPressed: () {
                         next(
                             context: context,

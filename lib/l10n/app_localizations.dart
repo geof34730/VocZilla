@@ -126,7 +126,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_description.
   ///
   /// In en, this message translates to:
-  /// **'VocZilla is the perfect app to expand your French vocabulary, no matter your level. Discover thousands of words categorized by theme, play fun quizzes, track your progress, and challenge your friends!'**
+  /// **'VocZilla is the perfect app to expand your English vocabulary, no matter your level. Discover thousands of words categorized by theme, play fun quizzes, track your progress, and challenge your friends!'**
   String get app_description;
 
   /// No description provided for @app_short_description.
@@ -746,6 +746,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'All'**
   String get widget_radiochoicevocabularylearnedornot_choice2;
+
+  /// No description provided for @title_create_personal_list.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a custom list'**
+  String get title_create_personal_list;
+
+  /// No description provided for @title_app_update.
+  ///
+  /// In en, this message translates to:
+  /// **'Update available!'**
+  String get title_app_update;
+
+  /// No description provided for @title_subscription.
+  ///
+  /// In en, this message translates to:
+  /// **'Our Subscriptions'**
+  String get title_subscription;
+
+  /// No description provided for @by_themes.
+  ///
+  /// In en, this message translates to:
+  /// **'Par themes'**
+  String get by_themes;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

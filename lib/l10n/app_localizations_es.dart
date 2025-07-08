@@ -12,7 +12,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla es la app perfecta para ampliar tu vocabulario de francés, sin importar tu nivel. Descubre miles de palabras clasificadas por tema, participa en divertidos cuestionarios, sigue tu progreso y reta a tus amigos.';
+  String get app_description => 'VocZilla es la app perfecta para ampliar tu vocabulario de inglés, sin importar tu nivel. Descubre miles de palabras clasificadas por tema, participa en divertidos cuestionarios, sigue tu progreso y reta a tus amigos.';
 
   @override
   String get app_short_description => '¡Aprende y repasa vocabulario en inglés!';
@@ -322,4 +322,16 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice2 => 'Todo';
+
+  @override
+  String get title_create_personal_list => 'Crear una lista personalizada';
+
+  @override
+  String get title_app_update => '¡Actualización disponible!';
+
+  @override
+  String get title_subscription => 'Nuestras suscripciones';
+
+  @override
+  String get by_themes => 'Por temas';
 }

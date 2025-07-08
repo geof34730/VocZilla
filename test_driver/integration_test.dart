@@ -78,8 +78,7 @@ void main() {
         // SCROLL jusqu'à ce que le bouton soit visible, puis tap
         final scrollableFinder = find.byValueKey('scrollBackgroundBlueLinear');
         final loginButtonFinder = find.byValueKey('link_home_login');
-        await scrollUntilVisibleAndTap(
-            driver, scrollableFinder, loginButtonFinder);
+        await scrollUntilVisibleAndTap(driver, scrollableFinder, loginButtonFinder);
 
         await driver.waitFor(find.byValueKey('login_screen'));
 
@@ -100,6 +99,25 @@ void main() {
         await driver.waitFor(find.byValueKey('home_logged'));
 
         await takeScreenshot(driver, 'home_logged');
+
+
+
+        await driver.waitFor(find.byValueKey('button_create_list'));
+        await driver.tap(find.byValueKey('button_create_list'));
+
+        await driver.waitFor(find.byValueKey('perso_list_step1'));
+        await driver.waitFor(find.byValueKey('title_perso_field'));
+        await driver.tap(find.byValueKey('title_perso_field'));
+        await driver.enterText('My personal list');
+        await Future.delayed(Duration(seconds: 5));
+        await takeScreenshot(driver, 'personallist1');
+        await driver.waitFor(find.byValueKey('button_valide_step_perso'));
+        await driver.tap(find.byValueKey('button_valide_step_perso'));
+
+
+        await driver.waitFor(find.byValueKey('perso_list_step2'));
+        await takeScreenshot(driver, 'personallist2');
+
         print('Taking screenshot end...');
       }
     });

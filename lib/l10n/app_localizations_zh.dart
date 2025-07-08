@@ -12,7 +12,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla 是一款完美的法语词汇扩展应用，无论您的水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪您的学习进度，并挑战您的好友！';
+  String get app_description => 'VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪学习进度，并挑战您的好友！';
 
   @override
   String get app_short_description => '学习并复习英语词汇！';
@@ -90,7 +90,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unknown_error => '未知错误';
 
   @override
-  String get no_vocabulary_items_found => '未找到任何词汇条目';
+  String get no_vocabulary_items_found => '未找到任何词汇';
 
   @override
   String get pronunciation_title => '发音';
@@ -273,7 +273,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get email_validation_help => '如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。';
 
   @override
-  String get email_validation_merci_register2 => '谢谢您的信任！';
+  String get email_validation_merci_register2 => '感谢您的信任！';
 
   @override
   String get send_mail => '收到新的验证邮件';
@@ -322,4 +322,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice2 => '全部';
+
+  @override
+  String get title_create_personal_list => '创建自定义列表';
+
+  @override
+  String get title_app_update => '有可用更新！';
+
+  @override
+  String get title_subscription => '我们的订阅';
+
+  @override
+  String get by_themes => 'Par主题';
 }

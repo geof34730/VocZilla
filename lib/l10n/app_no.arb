@@ -1,6 +1,6 @@
 {
     "app_title": "VocZilla",
-    "app_description": "VocZilla er den perfekte appen for å utvide ditt franske vokabular, uansett nivå. Oppdag tusenvis av ord kategorisert etter tema, spill morsomme quizer, følg med på fremgangen din og utfordre vennene dine!",
+    "app_description": "VocZilla er den perfekte appen for å utvide ditt engelske vokabular, uansett nivå. Oppdag tusenvis av ord kategorisert etter tema, spill morsomme quizer, følg med på fremgangen din og utfordre vennene dine!",
     "app_short_description": "Lær og repeter engelsk vokabular!",
     "app_keywords": "vokabular, læring, engelsk, ord, quiz, spill, språk, gjennomgang, utdanning, hukommelse, diktering, uttale",
     "app_feature_graphic_title": "Forbedre ditt engelske ordforråd",
@@ -103,5 +103,9 @@
     "widget_congratulation_bravo": "Bravo",
     "widget_congratulation_message": "du er ferdig med å lære denne listen",
     "widget_radiochoicevocabularylearnedornot_choice1": "Å lære",
-    "widget_radiochoicevocabularylearnedornot_choice2": "Alle"
+    "widget_radiochoicevocabularylearnedornot_choice2": "Alle",
+    "title_create_personal_list": "Opprett en tilpasset liste",
+    "title_app_update": "Oppdatering tilgjengelig!",
+    "title_subscription": "Våre abonnementer",
+    "by_themes": "Par-temaer"
 }

@@ -1,6 +1,6 @@
 {
     "app_title": "VocZilla",
-    "app_description": "VocZilla to idealna aplikacja do poszerzania słownictwa francuskiego, niezależnie od poziomu. Odkryj tysiące słów podzielonych tematycznie, graj w zabawne quizy, śledź swoje postępy i rzucaj wyzwania znajomym!",
+    "app_description": "VocZilla to idealna aplikacja do poszerzania słownictwa angielskiego, niezależnie od poziomu. Odkryj tysiące słów podzielonych tematycznie, graj w zabawne quizy, śledź swoje postępy i rzucaj wyzwania znajomym!",
     "app_short_description": "Poznaj i powtórz angielskie słownictwo!",
     "app_keywords": "słownictwo, nauka, angielski, słowa, quiz, gra, język, przegląd, edukacja, pamięć, dyktando, wymowa",
     "app_feature_graphic_title": "Popraw swoje słownictwo angielskie",
@@ -41,7 +41,7 @@
     "offline_description": "Nie masz połączenia z internetem. Połącz się z internetem, aby kontynuować.",
     "quizz_progression_title": "Moje postępy na tej liście",
     "quizz_en": "W",
-    "quizz_saisie_in": "Wprowadź tłumaczenie w",
+    "quizz_saisie_in": "Wprowadź tłumaczenie",
     "home_title_progresse": "Mój postęp Titana",
     "home_title_my_list_perso": "Moje osobiste listy",
     "home_title_list_defined": "Od małego potwora do Tytana",
@@ -103,5 +103,9 @@
     "widget_congratulation_bravo": "Brawo",
     "widget_congratulation_message": "skończyłeś naukę tej listy",
     "widget_radiochoicevocabularylearnedornot_choice1": "Uczyć się",
-    "widget_radiochoicevocabularylearnedornot_choice2": "Wszystko"
+    "widget_radiochoicevocabularylearnedornot_choice2": "Wszystko",
+    "title_create_personal_list": "Utwórz listę niestandardową",
+    "title_app_update": "Aktualizacja dostępna!",
+    "title_subscription": "Nasze subskrypcje",
+    "by_themes": "Par tematy"
 }

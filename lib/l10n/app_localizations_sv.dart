@@ -12,7 +12,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla är den perfekta appen för att utöka ditt franska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!';
+  String get app_description => 'VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!';
 
   @override
   String get app_short_description => 'Lär dig och repetera engelska ord!';
@@ -291,7 +291,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Dra nytta av din kostnadsfria provperiod!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har just nu en gratis provperiod på';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har för närvarande en gratis provperiod på';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'dagar';
@@ -322,4 +322,16 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice2 => 'Alla';
+
+  @override
+  String get title_create_personal_list => 'Skapa en anpassad lista';
+
+  @override
+  String get title_app_update => 'Uppdatering tillgänglig!';
+
+  @override
+  String get title_subscription => 'Våra prenumerationer';
+
+  @override
+  String get by_themes => 'Par-teman';
 }

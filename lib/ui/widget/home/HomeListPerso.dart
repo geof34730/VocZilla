@@ -134,6 +134,7 @@ class HomelistPerso extends StatelessWidget {
                   ),
                   Center(
                     child: ElevatedButton(
+                      key: ValueKey('button_create_list'),
                       onPressed: () {
                         addNewListPerso(context: context);
                       },

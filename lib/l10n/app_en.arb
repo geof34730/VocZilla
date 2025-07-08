@@ -1,6 +1,6 @@
 {
     "app_title": "VocZilla",
-    "app_description": "VocZilla is the perfect app to expand your French vocabulary, no matter your level. Discover thousands of words categorized by theme, play fun quizzes, track your progress, and challenge your friends!",
+    "app_description": "VocZilla is the perfect app to expand your English vocabulary, no matter your level. Discover thousands of words categorized by theme, play fun quizzes, track your progress, and challenge your friends!",
     "app_short_description": "Learn and review English vocabulary!",
     "app_keywords": "vocabulary, learning, English, words, quiz, game, language, review, education, memory, dictation, pronunciation",
     "app_feature_graphic_title": "Improve your English vocabulary",
@@ -103,5 +103,9 @@
     "widget_congratulation_bravo": "Bravo",
     "widget_congratulation_message": "you have finished learning this List",
     "widget_radiochoicevocabularylearnedornot_choice1": "To learn",
-    "widget_radiochoicevocabularylearnedornot_choice2": "All"
+    "widget_radiochoicevocabularylearnedornot_choice2": "All",
+    "title_create_personal_list": "Create a custom list",
+    "title_app_update": "Update available!",
+    "title_subscription": "Our Subscriptions",
+    "by_themes": "Par themes"
 }
