@@ -1,4 +1,5 @@
 {
+    "app_release_note": "部署 VocZilla 的第一个版本",
     "app_title": "VocZilla",
     "app_description": "VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪学习进度，并挑战您的好友！",
     "app_short_description": "学习并复习英语词汇！",
@@ -26,7 +27,7 @@
     "button_next": "套房",
     "error_loading": "加载错误",
     "unknown_error": "未知错误",
-    "no_vocabulary_items_found": "未找到任何词汇",
+    "no_vocabulary_items_found": "未找到任何词汇条目",
     "pronunciation_title": "发音",
     "pronunciation_success": "好极了！",
     "pronunciation_error": "嗯，不太对。再试一次。",
@@ -46,7 +47,7 @@
     "home_title_my_list_perso": "我的个人清单",
     "home_title_list_defined": "从小怪兽到泰坦",
     "home_description_list_perso": "创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。",
-    "home_title_classement": "TeamZilla排名",
+    "home_title_classement": "TeamZilla 排名",
     "home_notlogged_accroche1": "提高你的英语水平！",
     "home_notlogged_accroche2": "你想丰富你的英语词汇量吗？",
     "home_notlogged_accroche3": "访问 ",
@@ -107,5 +108,6 @@
     "title_create_personal_list": "创建自定义列表",
     "title_app_update": "有可用更新！",
     "title_subscription": "我们的订阅",
-    "by_themes": "Par主题"
+    "by_themes": "Par主题",
+    "no_vocabulary_in_my_list": "此列表中没有任何词汇。请通过编辑列表添加一些词汇。"
 }

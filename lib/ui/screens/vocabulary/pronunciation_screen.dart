@@ -73,6 +73,7 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
           vocabularyEnSelected= data[randomItemData]['EN'];
         }
         return Column(
+            key: ValueKey('screenPrononciation'),
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

@@ -1,4 +1,5 @@
 {
+    "app_release_note": "Distribution av den första versionen av VocZilla",
     "app_title": "VocZilla",
     "app_description": "VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!",
     "app_short_description": "Lär dig och repetera engelska ord!",
@@ -29,7 +30,7 @@
     "no_vocabulary_items_found": "Inga ordförråd hittades",
     "pronunciation_title": "Uttal",
     "pronunciation_success": "Bravo!",
-    "pronunciation_error": "Hmm, det stämmer inte helt. Försök igen.",
+    "pronunciation_error": "Hmm, det stämmer inte riktigt. Försök igen.",
     "pronunciation_i_heard_you_say": "Jag hörde dig säga",
     "pronunciation_description_action": "Tryck på mikrofonen för att tala och kontrollera ditt uttal.",
     "pronunciation_error1": "Misslyckades med att initiera taligenkänning",
@@ -107,5 +108,6 @@
     "title_create_personal_list": "Skapa en anpassad lista",
     "title_app_update": "Uppdatering tillgänglig!",
     "title_subscription": "Våra prenumerationer",
-    "by_themes": "Par-teman"
+    "by_themes": "Par-teman",
+    "no_vocabulary_in_my_list": "Du har inga ord i den här listan. Lägg till några genom att redigera listan."
 }

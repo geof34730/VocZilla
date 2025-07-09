@@ -1,4 +1,5 @@
 {
+    "app_release_note": "Deployment of the first version of VocZilla",
     "app_title": "VocZilla",
     "app_description": "VocZilla is the perfect app to expand your English vocabulary, no matter your level. Discover thousands of words categorized by theme, play fun quizzes, track your progress, and challenge your friends!",
     "app_short_description": "Learn and review English vocabulary!",
@@ -107,5 +108,6 @@
     "title_create_personal_list": "Create a custom list",
     "title_app_update": "Update available!",
     "title_subscription": "Our Subscriptions",
-    "by_themes": "Par themes"
+    "by_themes": "Par themes",
+    "no_vocabulary_in_my_list": "You don't have any vocabulary in this list. Add some by editing the list."
 }

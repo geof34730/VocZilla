@@ -1,4 +1,5 @@
 {
+    "app_release_note": "VocZilla esimese versiooni juurutamine",
     "app_title": "VocZilla",
     "app_description": "VocZilla on ideaalne rakendus oma inglise keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!",
     "app_short_description": "Õpi ja korda inglise keele sõnavara!",
@@ -107,5 +108,6 @@
     "title_create_personal_list": "Kohandatud loendi loomine",
     "title_app_update": "Värskendus saadaval!",
     "title_subscription": "Meie tellimused",
-    "by_themes": "Par teemad"
+    "by_themes": "Par teemad",
+    "no_vocabulary_in_my_list": "Selles nimekirjas pole sõnavara. Lisa uusi sõnu nimekirja muutes."
 }

@@ -145,7 +145,7 @@ function getAppfileInfo(appfilePath) {
         --track ${track} \
         --json_key ${serviceAccountPath} \
         --package_name ${appIdentifier} \
-        --metadata_path fastlane/metadata \
+        --metadata_path fastlane/metadata/android \
         --skip_upload_changelogs false \
         --skip_upload_images false \
         --skip_upload_screenshots false \

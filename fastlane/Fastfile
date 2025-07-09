@@ -91,7 +91,7 @@ platform :android do
 
   desc "📸 Générer les screenshots Android multilingues (téléphone + tablettes)"
   lane :screenshots do
-    take_screenshots_for_emulator("emulator_phone_screenshots_voczilla", "phoneScreenshots")
+   # take_screenshots_for_emulator("emulator_phone_screenshots_voczilla", "phoneScreenshots")
     take_screenshots_for_emulator("emulator_tablet_7pouces_screenshots_voczilla", "sevenInchScreenshots")
     take_screenshots_for_emulator("emulator_tablet_10pouces_screenshots_voczilla", "tenInchScreenshots")
     take_screenshots_for_emulator("Emulator_FeatureGraphic_voczilla", "FeatureGraphic")
@@ -172,7 +172,7 @@ platform :android do
       UI.user_error!("❌ Aucune locale trouvée dans lib/l10n")
     end
 
-    screenshots_dir = File.join(project_root, "test_driver/screenshots")
+    screenshots_dir = File.join(project_root, "test_driver/screenshots/")
     FileUtils.rm_rf(screenshots_dir)
     FileUtils.mkdir_p(screenshots_dir)
     UI.message("🧹 Dossier screenshots nettoyé.")
@@ -190,9 +190,9 @@ platform :android do
       UI.message(screenshots)
 
       if dest_folder == "FeatureGraphic"
-        dest_dir = File.join(project_root, "fastlane/metadata/#{play_locale}/images/")
+        dest_dir = File.join(project_root, "fastlane/metadata/android/#{play_locale}/images/")
       else
-        dest_dir = File.join(project_root, "fastlane/metadata/#{play_locale}/images/#{dest_folder}")
+        dest_dir = File.join(project_root, "fastlane/metadata/android/#{play_locale}/images/#{dest_folder}")
       end
 
 

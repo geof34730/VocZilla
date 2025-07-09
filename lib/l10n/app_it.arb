@@ -1,4 +1,5 @@
 {
+    "app_release_note": "Distribuzione della prima versione di VocZilla",
     "app_title": "VocZilla",
     "app_description": "VocZilla è l'app perfetta per ampliare il tuo vocabolario inglese, a prescindere dal tuo livello. Scopri migliaia di parole suddivise per tema, gioca a divertenti quiz, monitora i tuoi progressi e sfida i tuoi amici!",
     "app_short_description": "Impara e ripassa il vocabolario inglese!",
@@ -107,5 +108,6 @@
     "title_create_personal_list": "Crea un elenco personalizzato",
     "title_app_update": "Aggiornamento disponibile!",
     "title_subscription": "I nostri abbonamenti",
-    "by_themes": "Temi parziali"
+    "by_themes": "Temi parziali",
+    "no_vocabulary_in_my_list": "Non hai alcun vocabolario in questa lista. Aggiungine un po' modificandola."
 }

@@ -33,6 +33,7 @@ class HomelistThemes extends StatelessWidget {
                       itemWidth: itemWidthListPerso(context: context, nbList: 3),
                       children: data.listTheme.map((listTheme) {
                         return CardHome(
+                          keyStringTest: listTheme.guid,
                           isListTheme: true,
                           nbVocabulaire:listTheme.listGuidVocabulary.length,
                           guid: listTheme.guid,

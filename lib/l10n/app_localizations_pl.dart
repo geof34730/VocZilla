@@ -9,16 +9,19 @@ class AppLocalizationsPl extends AppLocalizations {
   AppLocalizationsPl([String locale = 'pl']) : super(locale);
 
   @override
+  String get app_release_note => 'Wdrożenie pierwszej wersji VocZilli';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla to idealna aplikacja do poszerzania słownictwa angielskiego, niezależnie od poziomu. Odkryj tysiące słów podzielonych tematycznie, graj w zabawne quizy, śledź swoje postępy i rzucaj wyzwania znajomym!';
+  String get app_description => 'VocZilla to idealna aplikacja do poszerzania słownictwa angielskiego, niezależnie od poziomu. Odkryj tysiące słówek posegregowanych tematycznie, rozwiązuj ciekawe quizy, śledź swoje postępy i rzucaj wyzwania znajomym!';
 
   @override
   String get app_short_description => 'Poznaj i powtórz angielskie słownictwo!';
 
   @override
-  String get app_keywords => 'słownictwo, nauka, angielski, słowa, quiz, gra, język, przegląd, edukacja, pamięć, dyktando, wymowa';
+  String get app_keywords => 'słownictwo, nauka, angielski, słowa, quiz, gra, język, powtórka, edukacja, pamięć, dyktando, wymowa';
 
   @override
   String get app_feature_graphic_title => 'Popraw swoje słownictwo angielskie';
@@ -90,7 +93,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get unknown_error => 'Nieznany błąd';
 
   @override
-  String get no_vocabulary_items_found => 'Nie znaleziono żadnych elementów słownika';
+  String get no_vocabulary_items_found => 'Nie znaleziono żadnych elementów słownictwa';
 
   @override
   String get pronunciation_title => 'Wymowa';
@@ -114,10 +117,10 @@ class AppLocalizationsPl extends AppLocalizations {
   String get pronunciation_error2 => 'Błąd podczas inicjalizacji';
 
   @override
-  String get pronunciation_error3 => 'Błąd podczas rozpoczynania słuchania';
+  String get pronunciation_error3 => 'Błąd podczas rozpoczynania nasłuchiwania';
 
   @override
-  String get pronunciation_error4 => 'Funkcja rozpoznawania głosu nie jest jeszcze gotowa.';
+  String get pronunciation_error4 => 'Rozpoznawanie głosu nie jest gotowe.';
 
   @override
   String get pronunciation_error5 => 'Odmowa dostępu do mikrofonu';
@@ -153,7 +156,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get home_title_classement => 'Ranking TeamZilla';
 
   @override
-  String get home_notlogged_accroche1 => 'Podszkol swój angielski!';
+  String get home_notlogged_accroche1 => 'Podszlifuj swój angielski!';
 
   @override
   String get home_notlogged_accroche2 => 'Chcesz wzbogacić swoje słownictwo angielskie?';
@@ -177,13 +180,13 @@ class AppLocalizationsPl extends AppLocalizations {
   String get home_notlogged_accroche8 => 'Zoptymalizowane zapamiętywanie w celu szybkiego postępu';
 
   @override
-  String get home_notlogged_accroche9 => 'Chcesz opanować język Szekspira?';
+  String get home_notlogged_accroche9 => 'Gotowy poznać język Szekspira?';
 
   @override
   String get home_notlogged_button_go => 'Zaczynamy!';
 
   @override
-  String get freetrial_info1 => 'Twój okres próbny \$daysFreeTrial dobiegł końca';
+  String get freetrial_info1 => 'Twój bezpłatny okres próbny \$daysFreeTrial dobiegł końca';
 
   @override
   String get freetrial_info2 => 'Dołącz do nas i odkryj świat możliwości dzięki naszym ekskluzywnym członkostwom!';
@@ -204,7 +207,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get abonnement_descriptif_mensuel => 'Wolny jak ptak: anuluj, kiedy tylko chcesz.';
 
   @override
-  String get abonnement_descriptif_annuel => 'Ciesz się w pełni swoimi usługami i oszczędzaj pieniądze.';
+  String get abonnement_descriptif_annuel => 'Ciesz się w pełni swoimi doświadczeniami i oszczędzaj pieniądze.';
 
   @override
   String get button_sabonner => 'Subskrybować';
@@ -216,7 +219,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get login_email => 'E-mail';
 
   @override
-  String get login_entrer_email => 'Wpisz swój adres e-mail';
+  String get login_entrer_email => 'Podaj swój adres e-mail';
 
   @override
   String get login_prenom => 'Imię';
@@ -264,10 +267,10 @@ class AppLocalizationsPl extends AppLocalizations {
   String get email_validation_merci_register => 'Dziękujemy za zapisanie się!';
 
   @override
-  String get email_validation_msg_email_send => 'Wiadomość e-mail weryfikacyjny została wysłana na Twój adres e-mail';
+  String get email_validation_msg_email_send => 'Wiadomość e-mail z potwierdzeniem została wysłana na Twój adres e-mail';
 
   @override
-  String get email_validation_instruction => 'Sprawdź swoją skrzynkę odbiorczą i postępuj zgodnie z instrukcjami, aby zweryfikować swój adres e-mail. Pozwoli nam to potwierdzić Twoją rejestrację i zapewnić Ci dostęp do wszystkich funkcji naszej usługi.';
+  String get email_validation_instruction => 'Sprawdź swoją skrzynkę odbiorczą i postępuj zgodnie z instrukcjami, aby zweryfikować swój adres e-mail. Pozwoli nam to potwierdzić Twoją rejestrację i zapewnić Ci dostęp do wszystkich funkcji naszego serwisu.';
 
   @override
   String get email_validation_help => 'Jeśli nie widzisz wiadomości e-mail w skrzynce odbiorczej, sprawdź folder ze spamem lub wiadomościami-śmieciami.';
@@ -306,7 +309,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'bezpłatne wersje próbne';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Nie pozwól, aby Twoje doświadczenie się zatrzymało! Wybierz subskrypcję, która Ci odpowiada i kontynuuj cieszenie się bez zakłóceń.';
+  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Nie pozwól, by Twoja przygoda się skończyła! Wybierz subskrypcję, która Ci odpowiada i ciesz się nią bez przerw.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_later => 'Później';
@@ -334,4 +337,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get by_themes => 'Par tematy';
+
+  @override
+  String get no_vocabulary_in_my_list => 'Nie masz żadnego słownictwa na tej liście. Dodaj, edytując listę.';
 }

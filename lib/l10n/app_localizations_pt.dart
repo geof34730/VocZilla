@@ -9,6 +9,9 @@ class AppLocalizationsPt extends AppLocalizations {
   AppLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
+  String get app_release_note => 'Implantação da primeira versão do VocZilla';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -334,4 +337,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get by_themes => 'Temas Par';
+
+  @override
+  String get no_vocabulary_in_my_list => 'Você não possui nenhum vocabulário nesta lista. Adicione algum editando a lista.';
 }

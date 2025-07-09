@@ -52,6 +52,7 @@ class _ListScreenState extends State<ListScreen> {
           bool isNotLearned = state.data.isVocabularyNotLearned;
           int _vocabulaireConnu = isNotLearned ? 0 : 1;
           return Column(
+            key: ValueKey('screenList'),
             children: [
               RadioChoiceVocabularyLearnedOrNot(
                   state: state,

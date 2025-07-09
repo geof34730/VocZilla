@@ -9,6 +9,9 @@ class AppLocalizationsEt extends AppLocalizations {
   AppLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
+  String get app_release_note => 'VocZilla esimese versiooni juurutamine';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -334,4 +337,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get by_themes => 'Par teemad';
+
+  @override
+  String get no_vocabulary_in_my_list => 'Selles nimekirjas pole sõnavara. Lisa uusi sõnu nimekirja muutes.';
 }

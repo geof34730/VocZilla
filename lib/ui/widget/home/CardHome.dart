@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 
 import '../../../core/utils/enum.dart';
 import '../../../data/models/vocabulary_user.dart';
@@ -30,10 +31,12 @@ class CardHome extends StatelessWidget {
   final dynamic list;
   final String guid;
   final int nbVocabulaire;
+  final String keyStringTest;
 
   VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
   CardHome({
+
     this.nbVocabulaire=0,
     required this.title,
     this.vocabulaireBegin,
@@ -47,6 +50,7 @@ class CardHome extends StatelessWidget {
     this.list,
     this.backgroundColor = AppColors.colorTextTitle,
     this.paddingLevelBar = const EdgeInsets.all(0),
+    required this.keyStringTest,
   });
   final _vocabulaireRepository=VocabulaireRepository();
 
@@ -106,7 +110,7 @@ class CardHome extends StatelessWidget {
                mainAxisAlignment: MainAxisAlignment.center,
                children: [
                  Text(
-                   "Vous n'avez aucun vocabulaire dans cette liste. Ajoutez-en en modifiant la liste",
+                   context.loc.no_vocabulary_in_my_list,
                    style: TextStyle(
                      color: Colors.white,
                    ),
@@ -129,6 +133,7 @@ class CardHome extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButtonCardHome(
+                    valueKey: "buttonList${keyStringTest}",
                     colorIcon: Colors.green,
                     onClickButton: () {
                       _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme  );
@@ -139,6 +144,7 @@ class CardHome extends StatelessWidget {
                     iconSize: IconSize.bigIcon,
                   ),
                   ElevatedButtonCardHome(
+                    valueKey: 'buttonLearn${keyStringTest}',
                     colorIcon: Colors.green,
                     onClickButton: () {
                       _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
@@ -149,6 +155,7 @@ class CardHome extends StatelessWidget {
                     iconSize: IconSize.bigIcon,
                   ),
                   ElevatedButtonCardHome(
+                    valueKey: 'buttonVoiceDictation${keyStringTest}',
                     colorIcon: Colors.green,
                     onClickButton: () {
                       _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
@@ -159,6 +166,7 @@ class CardHome extends StatelessWidget {
                     iconSize: IconSize.bigIcon,
                   ),
                   ElevatedButtonCardHome(
+                    valueKey: 'buttonPrononciation${keyStringTest}',
                     colorIcon: Colors.green,
                     onClickButton: () {
                       _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
@@ -169,6 +177,7 @@ class CardHome extends StatelessWidget {
                     iconSize: IconSize.bigIcon,
                   ),
                   ElevatedButtonCardHome(
+                    valueKey: 'buttonQuizz${keyStringTest}',
                     colorIcon: Colors.green,
                     onClickButton: () {
                       _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
@@ -219,6 +228,7 @@ class CardHome extends StatelessWidget {
                   children: [
                     if (ownListShare) ...[
                       ElevatedButtonCardHome(
+                        valueKey: 'buttonPersoStep1${keyStringTest}',
                         colorIcon: Colors.green,
                         onClickButton: () {
                           print(guid);
@@ -229,6 +239,7 @@ class CardHome extends StatelessWidget {
                       ),
                     ],
                     ElevatedButtonCardHome(
+                      valueKey: 'buttonDeletePerso${keyStringTest}',
                       colorIcon: Colors.red,
                       onClickButton: () {
                         BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(guid));
@@ -237,6 +248,7 @@ class CardHome extends StatelessWidget {
                       context: context,
                     ),
                     ElevatedButtonCardHome(
+                      valueKey: 'buttonSharePerso${keyStringTest}',
                       colorIcon: Colors.blue,
                       onClickButton: () {
                         _vocabulaireUserRepository.shareListPerso(guid: guid);

@@ -117,6 +117,12 @@ abstract class AppLocalizations {
     Locale('zh')
   ];
 
+  /// No description provided for @app_release_note.
+  ///
+  /// In en, this message translates to:
+  /// **'Deployment of the first version of VocZilla'**
+  String get app_release_note;
+
   /// No description provided for @app_title.
   ///
   /// In en, this message translates to:
@@ -770,6 +776,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Par themes'**
   String get by_themes;
+
+  /// No description provided for @no_vocabulary_in_my_list.
+  ///
+  /// In en, this message translates to:
+  /// **'You don\'t have any vocabulary in this list. Add some by editing the list.'**
+  String get no_vocabulary_in_my_list;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

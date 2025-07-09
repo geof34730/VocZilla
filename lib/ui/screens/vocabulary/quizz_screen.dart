@@ -70,6 +70,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
               }
             }
             return Column(
+              key: ValueKey('screenQuizz'),
               children: [
                 state.data.isListPerso || state.data.isListTheme
                 ?

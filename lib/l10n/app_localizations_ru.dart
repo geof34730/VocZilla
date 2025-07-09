@@ -9,10 +9,13 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
+  String get app_release_note => 'Развертывание первой версии VocZilla';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
-  String get app_description => 'VocZilla — идеальное приложение для расширения вашего словарного запаса английского языка, независимо от вашего уровня. Откройте для себя тысячи слов, отсортированных по темам, играйте в забавные викторины, отслеживайте свой прогресс и бросайте вызов друзьям!';
+  String get app_description => 'VocZilla — идеальное приложение для расширения словарного запаса английского языка, независимо от вашего уровня. Откройте для себя тысячи слов, отсортированных по темам, играйте в увлекательные тесты, отслеживайте свой прогресс и соревнуйтесь с друзьями!';
 
   @override
   String get app_short_description => 'Изучайте и повторяйте английскую лексику!';
@@ -78,7 +81,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get no_results => 'Результаты не найдены.';
 
   @override
-  String get learn_view_carte => 'Нажмите на карту, чтобы увидеть ответ';
+  String get learn_view_carte => 'Нажмите на карту, чтобы увидеть ответ.';
 
   @override
   String get button_next => 'Люкс';
@@ -99,7 +102,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get pronunciation_success => 'Браво!';
 
   @override
-  String get pronunciation_error => 'Хм, это не совсем так. Попробуйте еще раз.';
+  String get pronunciation_error => 'Хм, это не совсем так. Попробуйте ещё раз.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Я слышал, как ты сказал';
@@ -120,13 +123,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get pronunciation_error4 => 'Распознавание голоса не готово.';
 
   @override
-  String get pronunciation_error5 => 'Разрешение на использование микрофона отклонено';
+  String get pronunciation_error5 => 'В доступе к микрофону отказано';
 
   @override
   String get offline_title => 'Оффлайн';
 
   @override
-  String get offline_description => 'У вас нет подключения к интернету. Пожалуйста, подключитесь к интернету, чтобы продолжить.';
+  String get offline_description => 'У вас нет подключения к интернету. Подключитесь к интернету, чтобы продолжить.';
 
   @override
   String get quizz_progression_title => 'Мой прогресс в этом списке';
@@ -138,7 +141,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get quizz_saisie_in => 'Введите перевод на';
 
   @override
-  String get home_title_progresse => 'Мой титановый прогресс';
+  String get home_title_progresse => 'Мой Титан Прогресс';
 
   @override
   String get home_title_my_list_perso => 'Мои личные списки';
@@ -153,7 +156,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get home_title_classement => 'Рейтинг TeamZilla';
 
   @override
-  String get home_notlogged_accroche1 => 'Повысьте свой уровень английского!';
+  String get home_notlogged_accroche1 => 'Повышайте свой уровень английского!';
 
   @override
   String get home_notlogged_accroche2 => 'Хотите обогатить свой словарный запас английского языка?';
@@ -201,10 +204,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get abonnement_annuel => 'Годовая подписка';
 
   @override
-  String get abonnement_descriptif_mensuel => 'Свободен как птица: отмените подписку, когда захотите.';
+  String get abonnement_descriptif_mensuel => 'Свободен как птица: отменяйте подписку, когда захотите.';
 
   @override
-  String get abonnement_descriptif_annuel => 'Наслаждайтесь отдыхом в полной мере, экономя при этом деньги.';
+  String get abonnement_descriptif_annuel => 'Получите максимальное удовольствие и при этом сэкономьте деньги.';
 
   @override
   String get button_sabonner => 'Подписаться';
@@ -222,7 +225,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get login_prenom => 'Имя';
 
   @override
-  String get login_entrer_prenom => 'Введите свое имя';
+  String get login_entrer_prenom => 'Введите ваше имя';
 
   @override
   String get login_nom => 'Имя';
@@ -267,7 +270,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get email_validation_msg_email_send => 'На ваш адрес электронной почты было отправлено письмо с подтверждением.';
 
   @override
-  String get email_validation_instruction => 'Проверьте свой почтовый ящик и следуйте инструкциям, чтобы подтвердить свой адрес электронной почты. Это позволит нам подтвердить вашу регистрацию и предоставить вам доступ ко всем функциям нашего сервиса.';
+  String get email_validation_instruction => 'Проверьте свой почтовый ящик и следуйте инструкциям для подтверждения адреса электронной почты. Это позволит нам подтвердить вашу регистрацию и предоставить вам доступ ко всем функциям нашего сервиса.';
 
   @override
   String get email_validation_help => 'Если вы не видите письмо в своем почтовом ящике, проверьте папку со спамом или нежелательной почтой.';
@@ -291,7 +294,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Воспользуйтесь бесплатным пробным периодом!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Добро пожаловать! В настоящее время вы пользуетесь бесплатным пробным периодом';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Добро пожаловать! Сейчас вы пользуетесь бесплатным пробным периодом';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'дней';
@@ -306,7 +309,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'бесплатные пробные версии';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Не позволяйте своим впечатлениям останавливаться! Выберите подходящую вам подписку и продолжайте наслаждаться без перерывов.';
+  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Не позволяйте своим впечатлениям остановиться! Выберите подходящую вам подписку и продолжайте наслаждаться без перерывов.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_later => 'Позже';
@@ -315,7 +318,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get widget_congratulation_bravo => 'Браво';
 
   @override
-  String get widget_congratulation_message => 'Вы закончили изучать этот список';
+  String get widget_congratulation_message => 'вы закончили изучать этот список';
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice1 => 'Чтобы узнать';
@@ -334,4 +337,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get by_themes => 'Темы пар';
+
+  @override
+  String get no_vocabulary_in_my_list => 'В этом списке нет слов. Добавьте их, отредактировав список.';
 }

@@ -9,6 +9,9 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
+  String get app_release_note => 'Utrulling av den første versjonen av VocZilla';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -315,7 +318,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_congratulation_bravo => 'Bravo';
 
   @override
-  String get widget_congratulation_message => 'du er ferdig med å lære denne listen';
+  String get widget_congratulation_message => 'du er ferdig med å lære deg denne listen';
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice1 => 'Å lære';
@@ -334,4 +337,7 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get by_themes => 'Par-temaer';
+
+  @override
+  String get no_vocabulary_in_my_list => 'Du har ikke noe vokabular i denne listen. Legg til noe ved å redigere listen.';
 }

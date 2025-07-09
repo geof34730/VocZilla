@@ -9,6 +9,9 @@ class AppLocalizationsSv extends AppLocalizations {
   AppLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
+  String get app_release_note => 'Distribution av den första versionen av VocZilla';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -99,7 +102,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get pronunciation_success => 'Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, det stämmer inte helt. Försök igen.';
+  String get pronunciation_error => 'Hmm, det stämmer inte riktigt. Försök igen.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Jag hörde dig säga';
@@ -334,4 +337,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get by_themes => 'Par-teman';
+
+  @override
+  String get no_vocabulary_in_my_list => 'Du har inga ord i den här listan. Lägg till några genom att redigera listan.';
 }

@@ -54,6 +54,25 @@ void main() {
       }
     }
 
+    Future<void> tapBackButton(FlutterDriver driver) async {
+      // Attendre que l'appBar soit présent
+      await driver.waitFor(find.byValueKey('appBarKey'));
+      final appBar = find.byValueKey("appBarKey");
+      await driver.waitFor(appBar);
+
+      // Trouver le bouton retour dans l'appBar
+      final back = find.descendant(
+        of: appBar,
+        matching: find.byType('BackButton'),
+        firstMatchOnly: true,
+      );
+
+      // Taper sur le bouton retour
+      await driver.tap(back);
+    }
+
+
+
     test('check if the app starts', () async {
       await Future.delayed(Duration(seconds: 5));
       // Récupère la valeur de FOR_FEATURE_GRAPHIC depuis l'app
@@ -93,24 +112,22 @@ void main() {
 
 
         await driver.waitFor(find.byValueKey('home_logged'));
-        await takeScreenshot(driver, 'home_logged');
 
-        await driver.waitFor(find.byValueKey('button_create_list'));
-        await driver.tap(find.byValueKey('button_create_list'));
+
+        await driver.waitFor(find.byValueKey('buttonAddList'));
+        await driver.tap(find.byValueKey('buttonAddList'));
 
         ///CREATE LIST
         await driver.waitFor(find.byValueKey('perso_list_step1'));
         await driver.waitFor(find.byValueKey('title_perso_field'));
         await driver.tap(find.byValueKey('title_perso_field'));
         await driver.enterText('My personal list');
-        await Future.delayed(Duration(seconds: 5));
+
         await takeScreenshot(driver, 'personallist1');
         await driver.waitFor(find.byValueKey('button_valide_step_perso'));
         await driver.tap(find.byValueKey('button_valide_step_perso'));
         await driver.waitFor(find.byValueKey('perso_list_step2'));
         await takeScreenshot(driver, 'personallist2');
-
-
 
         ///button_add_voc_
         await driver.waitFor(find.byValueKey('button_add_voc_1'));
@@ -121,28 +138,51 @@ void main() {
         await driver.tap(find.byValueKey('button_add_voc_4'));
         await driver.tap(find.byValueKey('button_add_voc_5'));
         await driver.tap(find.byValueKey('button_add_voc_7'));
-        await takeScreenshot(driver, 'personallist2');
 
 
 
-       // await Future.delayed(Duration(seconds: 10));
-        await driver.waitFor(find.byValueKey('appBarKey'));
-
-        final appBar = find.byValueKey("appBarKey");
-        await driver.waitFor(appBar);
-
-        final  back = find.descendant(
-          of: appBar,
-          matching: find.byType('BackButton'),
-          firstMatchOnly: true,
-        );
-          print("*****************$back");
-
-         driver.tap(back);
-
+        await tapBackButton(driver);
 
         await driver.waitFor(find.byValueKey('home_logged'));
         await takeScreenshot(driver, 'homeperso');
+
+
+
+
+
+        //LEARN
+        await driver.waitFor(find.byValueKey('buttonLearntop20'));
+        await driver.tap(find.byValueKey('buttonLearntop20'));
+        await driver.waitFor(find.byValueKey('screenLearn'));
+        await takeScreenshot(driver, 'screenlearn');
+        await tapBackButton(driver);
+
+
+        ///VoiceDictation
+        await driver.waitFor(find.byValueKey('buttonVoiceDictationtop20'));
+        await driver.tap(find.byValueKey('buttonVoiceDictationtop20'));
+        await driver.waitFor(find.byValueKey('screenVoicedictation'));
+        await takeScreenshot(driver, 'voicedictation');
+        await tapBackButton(driver);
+
+
+
+        ///Quizz
+        await driver.waitFor(find.byValueKey('buttonQuizztop20'));
+        await driver.tap(find.byValueKey('buttonQuizztop20'));
+        await driver.waitFor(find.byValueKey('screenQuizz'));
+        await takeScreenshot(driver, 'quizz');
+
+
+
+        /*buttonListtop20
+        buttonLearntop20
+        buttonVoiceDictationtop20
+        buttonPrononciationtop20
+        buttonQuizztop20
+        */
+
+
 
 
         print('Taking screenshot end...');

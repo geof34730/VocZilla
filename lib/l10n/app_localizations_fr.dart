@@ -9,6 +9,9 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
+  String get app_release_note => 'Déploiement première version de VocZilla';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -334,4 +337,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get by_themes => 'Par themes';
+
+  @override
+  String get no_vocabulary_in_my_list => 'Vous n\'avez aucun vocabulaire dans cette liste. Ajoutez-en en modifiant la liste';
 }

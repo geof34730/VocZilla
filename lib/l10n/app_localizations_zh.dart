@@ -9,6 +9,9 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String get app_release_note => '部署 VocZilla 的第一个版本';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -90,7 +93,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unknown_error => '未知错误';
 
   @override
-  String get no_vocabulary_items_found => '未找到任何词汇';
+  String get no_vocabulary_items_found => '未找到任何词汇条目';
 
   @override
   String get pronunciation_title => '发音';
@@ -150,7 +153,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get home_description_list_perso => '创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。';
 
   @override
-  String get home_title_classement => 'TeamZilla排名';
+  String get home_title_classement => 'TeamZilla 排名';
 
   @override
   String get home_notlogged_accroche1 => '提高你的英语水平！';
@@ -334,4 +337,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get by_themes => 'Par主题';
+
+  @override
+  String get no_vocabulary_in_my_list => '此列表中没有任何词汇。请通过编辑列表添加一些词汇。';
 }

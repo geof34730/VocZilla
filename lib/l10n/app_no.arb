@@ -1,4 +1,5 @@
 {
+    "app_release_note": "Utrulling av den første versjonen av VocZilla",
     "app_title": "VocZilla",
     "app_description": "VocZilla er den perfekte appen for å utvide ditt engelske vokabular, uansett nivå. Oppdag tusenvis av ord kategorisert etter tema, spill morsomme quizer, følg med på fremgangen din og utfordre vennene dine!",
     "app_short_description": "Lær og repeter engelsk vokabular!",
@@ -101,11 +102,12 @@
     "widget_dialogHelper_showfreetrialdialog_description6": "Ikke la opplevelsen din stoppe! Velg abonnementet som passer deg, og fortsett å nyte det uten avbrudd.",
     "widget_dialogHelper_showfreetrialdialog_later": "Seinere",
     "widget_congratulation_bravo": "Bravo",
-    "widget_congratulation_message": "du er ferdig med å lære denne listen",
+    "widget_congratulation_message": "du er ferdig med å lære deg denne listen",
     "widget_radiochoicevocabularylearnedornot_choice1": "Å lære",
     "widget_radiochoicevocabularylearnedornot_choice2": "Alle",
     "title_create_personal_list": "Opprett en tilpasset liste",
     "title_app_update": "Oppdatering tilgjengelig!",
     "title_subscription": "Våre abonnementer",
-    "by_themes": "Par-temaer"
+    "by_themes": "Par-temaer",
+    "no_vocabulary_in_my_list": "Du har ikke noe vokabular i denne listen. Legg til noe ved å redigere listen."
 }

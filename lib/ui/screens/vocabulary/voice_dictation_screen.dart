@@ -60,9 +60,10 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
             randomItemData = random.nextInt(data.length);
           }
 
-          return SingleChildScrollView(
-            child: Center(
-                child: Column(
+      return SingleChildScrollView(
+        child: Center(
+            child: Column(
+              key: ValueKey('screenVoicedictation'),
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),

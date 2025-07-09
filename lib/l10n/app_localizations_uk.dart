@@ -9,6 +9,9 @@ class AppLocalizationsUk extends AppLocalizations {
   AppLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
+  String get app_release_note => 'Розгортання першої версії VocZilla';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -334,4 +337,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get by_themes => 'Парні теми';
+
+  @override
+  String get no_vocabulary_in_my_list => 'У цьому списку немає словникового запасу. Додайте його, відредагувавши список.';
 }

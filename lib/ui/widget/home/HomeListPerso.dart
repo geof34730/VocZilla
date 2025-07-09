@@ -43,6 +43,7 @@ class HomelistPerso extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.only(left: 0),
                           child: ElevatedButton(
+                            key: ValueKey('button_create_list'),
                             onPressed: () {
                               addNewListPerso(context: context);
                             },
@@ -66,6 +67,7 @@ class HomelistPerso extends StatelessWidget {
                           context: context, nbList: 3),
                           children: data.listPerso.reversed.map((listPerso) {
                             return CardHome(
+                              keyStringTest: 'buttonDeletePerso${listPerso.guid}',
                               nbVocabulaire:listPerso.listGuidVocabulary.length,
                               guid: listPerso.guid,
                               title: listPerso.title,
@@ -125,14 +127,12 @@ class HomelistPerso extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
-                        fontFamily: GoogleFonts
-                            .roboto()
-                            .fontFamily
+                        fontFamily: GoogleFonts.roboto().fontFamily
                     ),
                   ),
                   Center(
                     child: ElevatedButton(
-                      key: ValueKey('button_create_list'),
+                      key: ValueKey('buttonAddList'),
                       onPressed: () {
                         addNewListPerso(context: context);
                       },

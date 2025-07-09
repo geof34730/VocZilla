@@ -11,6 +11,7 @@ class ElevatedButtonCardHome extends StatelessWidget {
   final IconSize iconSize;
   final bool disabledButton;
   final bool visibilityButton;
+  final String valueKey;
 
   ElevatedButtonCardHome({
     required this.colorIcon,
@@ -20,6 +21,7 @@ class ElevatedButtonCardHome extends StatelessWidget {
     this.iconSize = IconSize.smallIcon,
     this.disabledButton = true,
     this.visibilityButton = true,
+    required this.valueKey
     // Valeur par défaut
   });
 
@@ -45,17 +47,17 @@ class ElevatedButtonCardHome extends StatelessWidget {
                       color: Colors.white,
                     ),
                       child: IconButton(
-                      key: UniqueKey(),
-                      padding: const EdgeInsets.all(0.0),
-                      color: colorIcon,
-                      alignment: Alignment.center,
-                      iconSize: sizeIconDouble,
-                      icon: Icon(iconContent),
-                      onPressed: (disabledButton
-                          ? () {
-                              onClickButton();
-                            }
-                          : null),
+                          key: ValueKey(valueKey),
+                          padding: const EdgeInsets.all(0.0),
+                          color: colorIcon,
+                          alignment: Alignment.center,
+                          iconSize: sizeIconDouble,
+                          icon: Icon(iconContent),
+                          onPressed: (disabledButton
+                              ? () {
+                                  onClickButton();
+                                }
+                              : null),
                     )
                 )
             )

@@ -69,6 +69,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
           return SingleChildScrollView(
             child: Center(
                 child: Column(
+                  key: ValueKey('screenLearn'),
                     children: [
                       RadioChoiceVocabularyLearnedOrNot(
                           state: state,

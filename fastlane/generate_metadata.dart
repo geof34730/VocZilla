@@ -9,7 +9,7 @@ void main() async {
 
   final projectRoot = Directory.current.path;
   final inputDir = Directory('$projectRoot/lib/l10n');
-  final outputDir = Directory('$projectRoot/fastlane/metadata');
+  final outputDir = Directory('$projectRoot/fastlane/metadata/android');
 
   //final inputDir = Directory('lib/l10n');
  // final outputDir = Directory('fastlane/metadata');
@@ -45,23 +45,26 @@ void main() async {
     final title = content['app_title'] ?? 'Titre manquant';
     final keywords = content['app_keywords'] ?? 'keyword manquant';
     final shortdescripotion = content['app_short_description'] ?? 'short description manquant';
+    final releasenote = content['app_release_note'] ?? 'app release note manquant';
 
     final androidLocale = toPlayLocale(locale);
     final iosLocale = toAppleLocale(locale);
 
-    writeMetadata(outputDir.path, '$androidLocale', title, description, keywords, shortdescripotion);
+    writeMetadata(outputDir.path, '$androidLocale', title, description, keywords, shortdescripotion,releasenote);
    // writeMetadata(outputDir.path, 'ios/$iosLocale', title, description, keywords, shortdescripotion);
 
     print('✅ Métadonnées générées pour $locale → $androidLocale / $iosLocale');
   }
 }
 
-void writeMetadata(String basePath, String localePath, String title, String desc, String keywords, String shortDesc) {
+void writeMetadata(String basePath, String localePath, String title, String desc, String keywords, String shortDesc,String releasenote) {
   final path = '$basePath/$localePath';
   Directory(path).createSync(recursive: true);
 
   File('$path/title.txt').writeAsStringSync(title.trim());
   File('$path/full_description.txt').writeAsStringSync(desc.trim());
+  Directory('$path/changelogs').createSync(recursive: true);
+  File('$path/changelogs/156.txt').writeAsStringSync(releasenote.trim());
   if (keywords.isNotEmpty) {
     File('$path/keywords.txt').writeAsStringSync(keywords.trim());
   }

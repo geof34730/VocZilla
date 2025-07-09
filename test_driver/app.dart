@@ -9,25 +9,13 @@ import '../lib/core/utils/navigatorKey.dart' show navigatorKey;
 void main()  {
   enableFlutterDriverExtension(
     handler: (String? message) async {
-
-      print("******************enableFlutterDriverExtension: $message");
       if (message == 'getForFeatureGraphic') {
         const bool forFeatureGraphic = bool.fromEnvironment('FOR_FEATURE_GRAPHIC');
         return forFeatureGraphic.toString();
       }
-      if (message == 'goToHome') {
-        print("******************goToHome");
-
-
-        navigatorKey.currentState?.pushReplacementNamed('/home');
-        return 'OK';
-      }
       return '';
     },
   );
-
-
   const String localParameter = String.fromEnvironment('LOCALE', defaultValue: 'en');
-
   app.main(shootScreenShot: true, localForce: localParameter);
 }

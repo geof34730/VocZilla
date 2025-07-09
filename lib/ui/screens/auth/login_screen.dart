@@ -20,10 +20,10 @@ import '../../widget/form/CustomTextField.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
-  final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
-  final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
- // final TextEditingController emailController = TextEditingController();
- // final TextEditingController passwordController = TextEditingController();
+ // final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
+ // final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
