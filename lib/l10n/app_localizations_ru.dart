@@ -15,16 +15,19 @@ class AppLocalizationsRu extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
+  String get app_subtitle => 'Учите английскую лексику!';
+
+  @override
   String get app_description => 'VocZilla — идеальное приложение для расширения словарного запаса английского языка, независимо от вашего уровня. Откройте для себя тысячи слов, отсортированных по темам, играйте в увлекательные тесты, отслеживайте свой прогресс и соревнуйтесь с друзьями!';
 
   @override
   String get app_short_description => 'Изучайте и повторяйте английскую лексику!';
 
   @override
-  String get app_keywords => 'словарный запас, обучение, английский, слова, тест, игра, язык, повторение, образование, память, диктант, произношение';
+  String get app_keywords => 'словарный запас, изучение, английский, слова, язык, диктант, произношение, тест, память, учить, легко, тест, аудирование';
 
   @override
-  String get app_feature_graphic_title => 'Расширьте свой словарный запас английского языка';
+  String get app_feature_graphic_title => 'Улучшите свой словарный запас английского языка';
 
   @override
   String get app_feature_graphic_FeatureItem1 => '5600 слов';
@@ -105,7 +108,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get pronunciation_error => 'Хм, это не совсем так. Попробуйте ещё раз.';
 
   @override
-  String get pronunciation_i_heard_you_say => 'Я слышал, как ты сказал';
+  String get pronunciation_i_heard_you_say => 'Я слышал, ты сказал';
 
   @override
   String get pronunciation_description_action => 'Нажмите на микрофон, чтобы говорить и проверить свое произношение.';
@@ -243,13 +246,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get login_ou_connecter_vous_avec => 'Или свяжитесь с';
 
   @override
-  String get login_avec_google => 'С Гуглом';
+  String get login_avec_google => 'С Google';
 
   @override
   String get login_avec_facebook => 'С Фейсбуком';
 
   @override
-  String get login_avec_apple => 'С Яблоком';
+  String get login_avec_apple => 'С Apple';
 
   @override
   String get login_no_compte => 'У вас нет учетной записи?';
@@ -261,7 +264,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get login_sinscrire => 'Зарегистрироваться';
 
   @override
-  String get login_ou_inscrivez_vous_avec => 'Или зарегистрируйтесь с помощью';
+  String get login_ou_inscrivez_vous_avec => 'Или зарегистрируйтесь';
 
   @override
   String get email_validation_merci_register => 'Спасибо за регистрацию!';

@@ -3,7 +3,7 @@
     "deploy:test": "node deploy.js test",
     "deploy:release": "node deploy.js release",
     "rebuild": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get && flutter run",
-    "translate": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get && flutter run"
+    "translate": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get"
 
   },
   "dependencies": {

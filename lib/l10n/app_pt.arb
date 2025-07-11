@@ -1,9 +1,10 @@
 {
     "app_release_note": "Implantação da primeira versão do VocZilla",
     "app_title": "VocZilla",
+    "app_subtitle": "Aprenda vocabulário em inglês!",
     "app_description": "O VocZilla é o aplicativo perfeito para expandir seu vocabulário de inglês, independentemente do seu nível. Descubra milhares de palavras categorizadas por tema, faça quizzes divertidos, acompanhe seu progresso e desafie seus amigos!",
     "app_short_description": "Aprenda e revise o vocabulário em inglês!",
-    "app_keywords": "vocabulário, aprendizagem, inglês, palavras, teste, jogo, idioma, revisão, educação, memória, ditado, pronúncia",
+    "app_keywords": "vocabulário, aprendizagem, inglês, palavras, idioma, ditado, pronúncia, teste, memória, aprender, fácil, teste, audição",
     "app_feature_graphic_title": "Melhore seu vocabulário em inglês",
     "app_feature_graphic_FeatureItem1": "5.600 palavras",
     "app_feature_graphic_FeatureItem2": "Questionários e testes de áudio interativos",

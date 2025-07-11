@@ -7,15 +7,23 @@ import 'package:vobzilla/ui/screens/home_screen.dart';
 import '../lib/core/utils/navigatorKey.dart' show navigatorKey;
 
 void main()  {
+  const String platform = String.fromEnvironment('PLATFORM', defaultValue: 'android');
+  const String destfolder = String.fromEnvironment('DESTFOLDER', defaultValue: '');
   enableFlutterDriverExtension(
     handler: (String? message) async {
       if (message == 'getForFeatureGraphic') {
         const bool forFeatureGraphic = bool.fromEnvironment('FOR_FEATURE_GRAPHIC');
         return forFeatureGraphic.toString();
       }
+      if (message == 'getPlatform') return platform;
+      if (message == 'getDestFolder') return destfolder;
+
       return '';
     },
   );
   const String localParameter = String.fromEnvironment('LOCALE', defaultValue: 'en');
+
+
+
   app.main(shootScreenShot: true, localForce: localParameter);
 }

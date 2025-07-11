@@ -15,13 +15,16 @@ class AppLocalizationsPl extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
+  String get app_subtitle => 'Naucz się angielskiego słownictwa!';
+
+  @override
   String get app_description => 'VocZilla to idealna aplikacja do poszerzania słownictwa angielskiego, niezależnie od poziomu. Odkryj tysiące słówek posegregowanych tematycznie, rozwiązuj ciekawe quizy, śledź swoje postępy i rzucaj wyzwania znajomym!';
 
   @override
   String get app_short_description => 'Poznaj i powtórz angielskie słownictwo!';
 
   @override
-  String get app_keywords => 'słownictwo, nauka, angielski, słowa, quiz, gra, język, powtórka, edukacja, pamięć, dyktando, wymowa';
+  String get app_keywords => 'słownictwo, nauka, angielski, słowa, język, dyktando, wymowa, quiz, pamięć, nauka, łatwy, test, słuchanie';
 
   @override
   String get app_feature_graphic_title => 'Popraw swoje słownictwo angielskie';
@@ -75,7 +78,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get search => 'Do badań';
 
   @override
-  String get audios => 'Audios';
+  String get audios => 'Pliki audio';
 
   @override
   String get no_results => 'Nie znaleziono wyników';
@@ -303,7 +306,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'aby odkryć wszystkie funkcje naszej aplikacji.';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Wyszedłeś';
+  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Odszedłeś';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'bezpłatne wersje próbne';

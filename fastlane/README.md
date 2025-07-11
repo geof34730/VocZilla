@@ -13,31 +13,23 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-## Android
+## all
 
-### android screenshots
-
-```sh
-[bundle exec] fastlane android screenshots
-```
-
-📸 Générer les screenshots Android multilingues (téléphone + tablettes)
-
-### android release
+### all generate_metadata
 
 ```sh
-[bundle exec] fastlane android release
+[bundle exec] fastlane all generate_metadata
 ```
 
-🚀 Publier Android (metadata + screenshots)
+📸 Générer les screenshots Android & iOS multilingues
 
-### android test
+### all screenshots
 
 ```sh
-[bundle exec] fastlane android test
+[bundle exec] fastlane all screenshots
 ```
 
-✅ Lancer les tests unitaires Android
+
 
 ----
 

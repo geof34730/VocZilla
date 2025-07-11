@@ -129,6 +129,12 @@ abstract class AppLocalizations {
   /// **'VocZilla'**
   String get app_title;
 
+  /// No description provided for @app_subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn English vocabulary!'**
+  String get app_subtitle;
+
   /// No description provided for @app_description.
   ///
   /// In en, this message translates to:
@@ -144,7 +150,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_keywords.
   ///
   /// In en, this message translates to:
-  /// **'vocabulary, learning, English, words, quiz, game, language, review, education, memory, dictation, pronunciation'**
+  /// **'vocabulary, learning, english, words, language, dictation, pronunciation, quiz, memory, learn, easy, test, listening'**
   String get app_keywords;
 
   /// No description provided for @app_feature_graphic_title.

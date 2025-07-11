@@ -1,9 +1,10 @@
 {
     "app_release_note": "Bereitstellung der ersten Version von VocZilla",
     "app_title": "VocZilla",
+    "app_subtitle": "Lerne englischen Wortschatz!",
     "app_description": "VocZilla ist die perfekte App, um Ihren englischen Wortschatz zu erweitern, unabhängig von Ihrem Niveau. Entdecken Sie Tausende von Wörtern, kategorisiert nach Themen, spielen Sie lustige Quizze, verfolgen Sie Ihren Fortschritt und fordern Sie Ihre Freunde heraus!",
     "app_short_description": "Lernen und wiederholen Sie den englischen Wortschatz!",
-    "app_keywords": "Vokabeln, Lernen, Englisch, Wörter, Quiz, Spiel, Sprache, Wiederholung, Bildung, Gedächtnis, Diktat, Aussprache",
+    "app_keywords": "Wortschatz, Lernen, Englisch, Wörter, Sprache, Diktat, Aussprache, Quiz, Gedächtnis, Lernen, einfach, Test, Zuhören",
     "app_feature_graphic_title": "Verbessern Sie Ihren englischen Wortschatz",
     "app_feature_graphic_FeatureItem1": "5.600 Wörter",
     "app_feature_graphic_FeatureItem2": "Interaktive Audio-Quizze und Tests",

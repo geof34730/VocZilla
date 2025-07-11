@@ -15,13 +15,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
+  String get app_subtitle => '学习英语词汇！';
+
+  @override
   String get app_description => 'VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪学习进度，并挑战您的好友！';
 
   @override
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
-  String get app_keywords => '词汇, 学习, 英语, 单词, 测验, 游戏, 语言, 复习, 教育, 记忆, 听写, 发音';
+  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 简单, 测试, 听力';
 
   @override
   String get app_feature_graphic_title => '提高你的英语词汇量';

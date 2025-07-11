@@ -15,13 +15,16 @@ class AppLocalizationsEt extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
+  String get app_subtitle => 'Õpi inglise keele sõnavara!';
+
+  @override
   String get app_description => 'VocZilla on ideaalne rakendus oma inglise keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!';
 
   @override
   String get app_short_description => 'Õpi ja korda inglise keele sõnavara!';
 
   @override
-  String get app_keywords => 'sõnavara, õppimine, inglise keel, sõnad, viktoriin, mäng, keel, arvustus, haridus, mälu, dikteerimine, hääldus';
+  String get app_keywords => 'sõnavara, õppimine, inglise keel, sõnad, keel, dikteerimine, hääldus, viktoriin, mälu, õppimine, lihtne, test, kuulamine';
 
   @override
   String get app_feature_graphic_title => 'Täienda oma inglise keele sõnavara';

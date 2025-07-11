@@ -3,12 +3,22 @@ import 'package:test/test.dart';
 import 'dart:io';
 import 'package:path/path.dart' as path;
 
+
+
+
 void main() {
   group('App Integration Tests', () {
     late FlutterDriver driver;
+    late String platform;
+    late String destfolder;
+
 
     setUpAll(() async {
       driver = await FlutterDriver.connect();
+      platform = await driver.requestData('getPlatform');
+      destfolder = await driver.requestData('getDestFolder');
+      print('📦 PLATFORM = $platform');
+      print('📦 DESTFOLDER = $destfolder');
     });
 
     tearDownAll(() async {
@@ -24,170 +34,136 @@ void main() {
       final filePath = path.join(screenshotsDir.path, '$name.png');
       final file = File(filePath);
       await file.writeAsBytes(pixels);
-      print('Screenshot saved to $filePath');
+      print('📸 Screenshot saved to $filePath');
     }
 
-    /// Scroll jusqu'à ce que [itemFinder] soit visible, puis tap dessus.
-    /// [scrollableFinder] doit cibler le widget scrollable parent (ex: ListView, SingleChildScrollView).
     Future<void> scrollUntilVisibleAndTap(
         FlutterDriver driver,
         SerializableFinder scrollableFinder,
         SerializableFinder itemFinder, {
           double dx = 0,
-          double dy = -10,
+          double dy = -300,
           int maxScrolls = 10,
           Duration duration = const Duration(milliseconds: 500),
         }) async {
-      bool isVisible = false;
+      bool found = false;
       int scrollCount = 0;
-      while (!isVisible && scrollCount < maxScrolls) {
+      while (!found && scrollCount < maxScrolls) {
         try {
+          await driver.waitFor(itemFinder, timeout: Duration(seconds: 2));
           await driver.tap(itemFinder);
-          isVisible = true;
-        } catch (e) {
+          found = true;
+          print("✅ Élément trouvé et tapé après $scrollCount scroll(s).");
+        } catch (_) {
+          print("🔁 Scroll... ($scrollCount/$maxScrolls)");
           await driver.scroll(scrollableFinder, dx, dy, duration);
           scrollCount++;
         }
       }
-      if (!isVisible) {
-        throw Exception('Item not found after scrolling');
+      if (!found) {
+        throw Exception("❌ Élément introuvable après $maxScrolls scrolls.");
+      }
+    }
+
+
+    int i=0;
+    String getNameFile(String value) {
+      print("*********************$value   -   $platform - $platform");
+      if (platform == 'ios') {
+        i++;
+        return "${i}_${destfolder}";
+      } else {
+        return "$value";
       }
     }
 
     Future<void> tapBackButton(FlutterDriver driver) async {
-      // Attendre que l'appBar soit présent
-      await driver.waitFor(find.byValueKey('appBarKey'));
       final appBar = find.byValueKey("appBarKey");
       await driver.waitFor(appBar);
 
-      // Trouver le bouton retour dans l'appBar
       final back = find.descendant(
         of: appBar,
         matching: find.byType('BackButton'),
         firstMatchOnly: true,
       );
-
-      // Taper sur le bouton retour
       await driver.tap(back);
     }
 
+    test(
+      'check if the app starts',
+          () async {
+        await Future.delayed(Duration(seconds: 5));
 
+        final forFeatureGraphicStr = await driver.requestData('getForFeatureGraphic');
+        final forFeatureGraphic = forFeatureGraphicStr == 'true';
+        print('📦 FOR_FEATURE_GRAPHIC: $forFeatureGraphic');
 
-    test('check if the app starts', () async {
-      await Future.delayed(Duration(seconds: 5));
-      // Récupère la valeur de FOR_FEATURE_GRAPHIC depuis l'app
-      final forFeatureGraphicStr = await driver.requestData('getForFeatureGraphic');
-      print("forFeatureGraphicStr: $forFeatureGraphicStr");
-      final forFeatureGraphic = forFeatureGraphicStr == 'true';
-      print('FOR_FEATURE_GRAPHIC from app: $forFeatureGraphic');
+        if (forFeatureGraphic) {
+          await takeScreenshot(driver, 'featureGraphic');
+          return;
+        }
 
-      if (forFeatureGraphic) {
-        print('Taking screenshot featureGraphic...');
-        await takeScreenshot(driver, 'featureGraphic');
-      } else {
-        print('Taking screenshot Home...');
-        await takeScreenshot(driver, 'home');
+        await takeScreenshot(driver, getNameFile('home'));
 
-        // Attendre que le bouton de login soit présent dans l'arbre
-
-        await driver.waitFor(find.byValueKey('link_home_login'));
-        await driver.waitFor(find.byValueKey('scrollBackgroundBlueLinear'));
-        print('clique link_home_login..');
-
-        // SCROLL jusqu'à ce que le bouton soit visible, puis tap
-        final scrollableFinder = find.byValueKey('scrollBackgroundBlueLinear');
         final loginButtonFinder = find.byValueKey('link_home_login');
-        await scrollUntilVisibleAndTap(driver, scrollableFinder, loginButtonFinder);
+        final scrollableFinder = find.byValueKey('scrollBackgroundBlueLinear');
 
+        await driver.waitFor(loginButtonFinder);
+        await driver.waitFor(scrollableFinder);
+
+        await scrollUntilVisibleAndTap(driver, scrollableFinder, loginButtonFinder);
         await driver.waitFor(find.byValueKey('login_screen'));
-        await takeScreenshot(driver, 'login_screen');
-        await driver.waitFor(find.byValueKey('login_field'));
+        await takeScreenshot(driver, getNameFile('login_screen'));
+
         await driver.tap(find.byValueKey('login_field'));
         await driver.enterText('geoffrey.petain@gmail.com');
-        await driver.waitFor(find.byValueKey('password_field'));
         await driver.tap(find.byValueKey('password_field'));
         await driver.enterText('sdfsdfs@ddd-df');
+
         await driver.waitFor(find.byValueKey('validate_login_button'));
         await driver.tap(find.byValueKey('validate_login_button'));
 
-
         await driver.waitFor(find.byValueKey('home_logged'));
-
-
-        await driver.waitFor(find.byValueKey('buttonAddList'));
         await driver.tap(find.byValueKey('buttonAddList'));
 
-        ///CREATE LIST
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await driver.waitFor(find.byValueKey('title_perso_field'));
         await driver.tap(find.byValueKey('title_perso_field'));
         await driver.enterText('My personal list');
+        await takeScreenshot(driver, getNameFile('personallist1'));
 
-        await takeScreenshot(driver, 'personallist1');
-        await driver.waitFor(find.byValueKey('button_valide_step_perso'));
         await driver.tap(find.byValueKey('button_valide_step_perso'));
         await driver.waitFor(find.byValueKey('perso_list_step2'));
-        await takeScreenshot(driver, 'personallist2');
+        await takeScreenshot(driver, getNameFile('personallist2'));
 
-        ///button_add_voc_
-        await driver.waitFor(find.byValueKey('button_add_voc_1'));
-        await driver.waitFor(find.byValueKey('button_add_voc_4'));
-        await driver.waitFor(find.byValueKey('button_add_voc_5'));
-        await driver.waitFor(find.byValueKey('button_add_voc_7'));
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_4'));
         await driver.tap(find.byValueKey('button_add_voc_5'));
         await driver.tap(find.byValueKey('button_add_voc_7'));
 
-
-
         await tapBackButton(driver);
-
         await driver.waitFor(find.byValueKey('home_logged'));
-        await takeScreenshot(driver, 'homeperso');
+        await takeScreenshot(driver, getNameFile('homeperso'));
 
-
-
-
-
-        //LEARN
-        await driver.waitFor(find.byValueKey('buttonLearntop20'));
+        // Learn
         await driver.tap(find.byValueKey('buttonLearntop20'));
         await driver.waitFor(find.byValueKey('screenLearn'));
-        await takeScreenshot(driver, 'screenlearn');
+        await takeScreenshot(driver, getNameFile('screenlearn'));
         await tapBackButton(driver);
 
-
-        ///VoiceDictation
-        await driver.waitFor(find.byValueKey('buttonVoiceDictationtop20'));
+        // Dictation
         await driver.tap(find.byValueKey('buttonVoiceDictationtop20'));
         await driver.waitFor(find.byValueKey('screenVoicedictation'));
-        await takeScreenshot(driver, 'voicedictation');
+        await takeScreenshot(driver, getNameFile('voicedictation'));
         await tapBackButton(driver);
 
-
-
-        ///Quizz
-        await driver.waitFor(find.byValueKey('buttonQuizztop20'));
+        // Quizz
         await driver.tap(find.byValueKey('buttonQuizztop20'));
         await driver.waitFor(find.byValueKey('screenQuizz'));
-        await takeScreenshot(driver, 'quizz');
+        await takeScreenshot(driver, getNameFile('quizz'));
 
-
-
-        /*buttonListtop20
-        buttonLearntop20
-        buttonVoiceDictationtop20
-        buttonPrononciationtop20
-        buttonQuizztop20
-        */
-
-
-
-
-        print('Taking screenshot end...');
-      }
-    },
-      timeout: Timeout(Duration(minutes: 5)),);
+        print('✅ Fin des screenshots');
+      },
+      timeout: Timeout(Duration(minutes: 10)),
+    );
   });
 }

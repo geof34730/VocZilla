@@ -15,13 +15,16 @@ class AppLocalizationsSv extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
+  String get app_subtitle => 'Lär dig engelska ordförråd!';
+
+  @override
   String get app_description => 'VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!';
 
   @override
   String get app_short_description => 'Lär dig och repetera engelska ord!';
 
   @override
-  String get app_keywords => 'ordförråd, lärande, engelska, ord, frågesport, spel, språk, repetition, utbildning, minne, diktering, uttal';
+  String get app_keywords => 'ordförråd, lärande, engelska, ord, språk, diktering, uttal, frågesport, minne, lära sig, enkelt, test, lyssnande';
 
   @override
   String get app_feature_graphic_title => 'Förbättra ditt engelska ordförråd';
@@ -102,7 +105,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get pronunciation_success => 'Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, det stämmer inte riktigt. Försök igen.';
+  String get pronunciation_error => 'Hmm, det stämmer inte helt. Försök igen.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Jag hörde dig säga';
