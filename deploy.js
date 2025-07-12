@@ -154,7 +154,7 @@ function getAppfileInfo(appfilePath) {
 
     try {
         const command = `
-            fastlane deliver \
+            FASTLANE_VERBOSE=1 fastlane deliver \
               --ipa build/ios/ipa/voczilla.ipa \
               --force \
               --username geoffrey.petain@gmail.com \
