@@ -161,7 +161,7 @@ function getAppfileInfo(appfilePath) {
               --app_identifier com.geoffreypetain.voczilla.voczilla \
               --team_id 124128909 \
               --metadata_path fastlane/metadata/ios \
-              --screenshots_path fastlane/screenshots/ios \
+              --screenshots_path fastlane/metadata/ios \
               --skip_screenshots false \
               --skip_metadata false \
               --run_precheck_before_submit false

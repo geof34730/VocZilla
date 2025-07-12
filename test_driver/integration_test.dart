@@ -140,7 +140,7 @@ void main() {
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));
         await driver.tap(find.byValueKey('button_add_voc_4'));
-        
+
 
         await tapBackButton(driver);
         await driver.waitFor(find.byValueKey('home_logged'));
