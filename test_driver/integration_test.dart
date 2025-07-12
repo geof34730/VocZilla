@@ -71,7 +71,8 @@ void main() {
       print("*********************$value   -   $platform - $platform");
       if (platform == 'ios') {
         i++;
-        return "${i}_${destfolder}";
+        return "${destfolder}_${i}";
+        //return "${i}_${destfolder}";
       } else {
         return "$value";
       }

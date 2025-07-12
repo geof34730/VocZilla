@@ -27,16 +27,13 @@ platform :all do
     UI.message("📦 Construction APK...")
     sh("flutter build apk")
 
-
-
-
-
     UI.message("🌟 Lancement de l'émulateur...")
     start_emulator_once(avd_name)
-    #"ios"     => %w[iphone6_7_inch iphone6_5_inch iphone5_5_inch iphone4_7_inch ipad_pro_3gen_12_9_inch ipad_pro_11_inch ipad_pro_10_5_inch],
+    # "ios"     => %w[iphone6_7_inch iphone6_5_inch iphone5_5_inch ipad_pro_3gen_12_9_inch ipad_pro_11_inch ipad_pro_10_5_inch],
+    #"android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
     {
-      "ios"     => %w[iphone6_7_inch iphone6_5_inch iphone5_5_inch ipad_pro_3gen_12_9_inch ipad_pro_11_inch ipad_pro_10_5_inch],
-      "android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
+      "ios"     => %w[6_5_inch],
+
 
     }.each do |platform, folders|
       folders.each do |folder|
@@ -237,28 +234,42 @@ end
 
   def set_emulator_resolution(emulator_id, dest_folder)
    case dest_folder
-   when "phoneScreenshots"
-     sh("adb -s #{emulator_id} shell wm size 1080x1920 && adb -s #{emulator_id} shell wm density 420")
-   when "sevenInchScreenshots"
-     sh("adb -s #{emulator_id} shell wm size 800x1280 && adb -s #{emulator_id} shell wm density 213")
-   when "tenInchScreenshots"
-     sh("adb -s #{emulator_id} shell wm size 1600x2560 && adb -s #{emulator_id} shell wm density 320")
-   when "FeatureGraphic"
-     sh("adb -s #{emulator_id} shell wm size 1024x500 && adb -s #{emulator_id} shell wm density 160")
-   when "iphone6_7_inch"
-     sh("adb -s #{emulator_id} shell wm size 1284x2778 && adb -s #{emulator_id} shell wm density 480")
-   when "iphone6_5_inch"
-     sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 480")
-   when "iphone5_5_inch"
-     sh("adb -s #{emulator_id} shell wm size 1242x2208 && adb -s #{emulator_id} shell wm density 480")
-   when "iphone4_7_inch"
-     sh("adb -s #{emulator_id} shell wm size 750x1334 && adb -s #{emulator_id} shell wm density 326")
-   when "ipad_pro_3gen_12_9_inch"
-     sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
-   when "ipad_pro_11_inch"
-     sh("adb -s #{emulator_id} shell wm size 1668x2388 && adb -s #{emulator_id} shell wm density 264")
-   when "ipad_pro_10_5_inch"
-     sh("adb -s #{emulator_id} shell wm size 1668x2224 && adb -s #{emulator_id} shell wm density 264")
+        when "phoneScreenshots"
+            sh("adb -s #{emulator_id} shell wm size 1080x1920 && adb -s #{emulator_id} shell wm density 420")
+        when "sevenInchScreenshots"
+            sh("adb -s #{emulator_id} shell wm size 800x1280 && adb -s #{emulator_id} shell wm density 213")
+        when "tenInchScreenshots"
+            sh("adb -s #{emulator_id} shell wm size 1600x2560 && adb -s #{emulator_id} shell wm density 320")
+        when "FeatureGraphic"
+            sh("adb -s #{emulator_id} shell wm size 1024x500 && adb -s #{emulator_id} shell wm density 160")
+        when "6_7_inch"
+            sh("adb -s #{emulator_id} shell wm size 1290x2796 && adb -s #{emulator_id} shell wm density 460")
+        when "6_5_inch"
+            sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 458")
+        when "6.1-inch (Pro)"
+            sh("adb -s #{emulator_id} shell wm size 1179X2556 && adb -s #{emulator_id} shell wm density 460")
+        when "6.1-inch"
+            sh("adb -s #{emulator_id} shell wm size 1170X2532 && adb -s #{emulator_id} shell wm density 460")
+        when "5.8-inch"
+            sh("adb -s #{emulator_id} shell wm size 1125X2436 && adb -s #{emulator_id} shell wm density 458")
+        when "5.5-inch"
+            sh("adb -s #{emulator_id} shell wm size 1242X2208 && adb -s #{emulator_id} shell wm density 401")
+        when "4.7-inch"
+            sh("adb -s #{emulator_id} shell wm size 750X1334 && adb -s #{emulator_id} shell wm density 326")
+        when "4.0-inch"
+            sh("adb -s #{emulator_id} shell wm size 640X1136 && adb -s #{emulator_id} shell wm density 326")
+        when "12.9-inch"
+            sh("adb -s #{emulator_id} shell wm size 2048X2732 && adb -s #{emulator_id} shell wm density 264")
+        when "11-inch"
+            sh("adb -s #{emulator_id} shell wm size 1668X2388 && adb -s #{emulator_id} shell wm density 264")
+        when "10.5-inch"
+            sh("adb -s #{emulator_id} shell wm size 1668X2224 && adb -s #{emulator_id} shell wm density 264")
+        when "10.2-inch"
+            sh("adb -s #{emulator_id} shell wm size 1620X2160 && adb -s #{emulator_id} shell wm density 264")
+        when "9.7-inch"
+            sh("adb -s #{emulator_id} shell wm size 1536X2048 && adb -s #{emulator_id} shell wm density 264")
+        when "Mac"
+            sh("adb -s #{emulator_id} shell wm size 1280X800 && adb -s #{emulator_id} shell wm density 220")
    else
      UI.error("Unsupported size: #{dest_folder}")
    end
