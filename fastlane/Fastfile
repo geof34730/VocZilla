@@ -32,7 +32,7 @@ platform :all do
     # "ios"     => %w[iphone6_7_inch iphone6_5_inch iphone5_5_inch ipad_pro_3gen_12_9_inch ipad_pro_11_inch ipad_pro_10_5_inch],
     #"android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
     {
-      "ios"     => %w[6_5_inch],
+      "ios"     => %w[6.5-inch],
 
 
     }.each do |platform, folders|
@@ -244,7 +244,7 @@ end
             sh("adb -s #{emulator_id} shell wm size 1024x500 && adb -s #{emulator_id} shell wm density 160")
         when "6_7_inch"
             sh("adb -s #{emulator_id} shell wm size 1290x2796 && adb -s #{emulator_id} shell wm density 460")
-        when "6_5_inch"
+        when "6.5-inch"
             sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 458")
         when "6.1-inch (Pro)"
             sh("adb -s #{emulator_id} shell wm size 1179X2556 && adb -s #{emulator_id} shell wm density 460")
