@@ -88,9 +88,6 @@ function getAppfileInfo(appfilePath) {
         },
     ]);
 
-
-
-
         versionName = versionParts.join('.');
         buildNumber = lastBuildNumber + 1;
     await fs.writeFileSync(deployInfoPath, JSON.stringify({ lastVersionName: versionName, lastBuildNumber: buildNumber }, null, 2));
@@ -123,15 +120,15 @@ function getAppfileInfo(appfilePath) {
     try {
         execSync(
             `fastlane supply \
-        --aab build/app/outputs/bundle/release/app-release.aab \
-        --track ${track} \
-        --json_key ${serviceAccountPath} \
-        --package_name ${appIdentifier} \
-        --metadata_path fastlane/metadata/android \
-        --skip_upload_changelogs false \
-        --skip_upload_images false \
-        --skip_upload_screenshots false \
-        --skip_upload_metadata false`,
+            --aab build/app/outputs/bundle/release/app-release.aab \
+            --track ${track} \
+            --json_key ${serviceAccountPath} \
+            --package_name ${appIdentifier} \
+            --metadata_path fastlane/metadata/android \
+            --skip_upload_changelogs false \
+            --skip_upload_images false \
+            --skip_upload_screenshots false \
+            --skip_upload_metadata false`,
             { stdio: "inherit" }
         );
         console.log("\n✅ Déploiement Android terminé avec succès !");
@@ -142,10 +139,7 @@ function getAppfileInfo(appfilePath) {
 
 
     console.log("\n✅ Déploiement Android terminé avec succès !");
-
- */
-
-
+*/
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -160,18 +154,18 @@ function getAppfileInfo(appfilePath) {
 
     try {
         const command = `
-fastlane deliver \
-  --ipa build/ios/ipa/voczilla.ipa \
-  --force \
-  --username geoffrey.petain@gmail.com \
-  --app_identifier ${appIdentifier} \
-  --team_id ${teamId} \
-  --metadata_path fastlane/metadata/ios \
-  --screenshots_path fastlane/screenshots/ios \
-  --skip_screenshots false \
-  --skip_metadata false \
-  --run_precheck_before_submit false
-`;
+            fastlane deliver \
+              --ipa build/ios/ipa/voczilla.ipa \
+              --force \
+              --username geoffrey.petain@gmail.com \
+              --app_identifier com.geoffreypetain.voczilla.voczilla \
+              --team_id 124128909 \
+              --metadata_path fastlane/metadata/ios \
+              --screenshots_path fastlane/screenshots/ios \
+              --skip_screenshots false \
+              --skip_metadata false \
+              --run_precheck_before_submit false
+            `;
         console.log(command);
         execSync(`echo $FASTLANE_SESSION`, { stdio: "inherit" });
         execSync(command, {

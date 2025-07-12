@@ -20,16 +20,16 @@ import '../../widget/form/CustomTextField.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
-  final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
-  final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
- // final TextEditingController emailController = TextEditingController();
- // final TextEditingController passwordController = TextEditingController();
+ // final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
+ // final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return backgroundBlueLinear(
-        context: context,
-        child: BlocConsumer<AuthBloc, AuthState>(
+    return BackgroundBlueLinear(
+        child: Center(
+            child: BlocConsumer<AuthBloc, AuthState>(
           listener: (context, state) {
             if (state is AuthError) {
               ErrorMessage(context:context, message:state.message);
@@ -159,7 +159,7 @@ class LoginScreen extends StatelessWidget {
               ),
             );
           },
-        )
+        ))
     );
   }
 }

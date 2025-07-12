@@ -1,13 +1,16 @@
+import 'dart:io';
+
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'package:vobzilla/global.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
+import 'package:vobzilla/ui/widget/scaled_app_builder.dart';
 import 'app_route.dart';
 import 'core/utils/logger.dart';
 import 'data/repository/auth_repository.dart';
@@ -36,6 +39,7 @@ import 'logic/blocs/update/update_bloc.dart';
 import 'core/utils/navigatorKey.dart' show navigatorKey;
 
 
+
 final Route Function(RouteSettings settings) generateRoute = AppRoute.generateRoute;
 
 class MyApp extends StatelessWidget {
@@ -45,6 +49,18 @@ class MyApp extends StatelessWidget {
   //final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   final AuthRepository _authRepository = AuthRepository();
 
+  Future<bool> isTablet() async {
+    final deviceInfo = DeviceInfoPlugin();
+
+    if (Platform.isAndroid) {
+      final androidInfo = await deviceInfo.androidInfo;
+      return androidInfo.systemFeatures.contains('android.hardware.type.tablet');
+    } else if (Platform.isIOS) {
+      final iosInfo = await deviceInfo.iosInfo;
+      return iosInfo.model?.toLowerCase().contains("ipad") ?? false;
+    }
+    return false;
+  }
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -67,56 +83,85 @@ class MyApp extends StatelessWidget {
             final Locale effectiveLocale = localForce != null
                 ? Locale(localForce!)
                 : locale;
-
             FirebaseAuth.instance.setLanguageCode(locale.languageCode);
+            return FutureBuilder<bool>(
+              future: isTablet(),
+              builder: (context, snapshot) {
+                if (!snapshot.hasData) {
+                  return const MaterialApp(
+                      home: Scaffold(body: Center(child: CircularProgressIndicator())));
+                }
 
-            return MaterialApp(
-              theme: VobdzillaTheme.lightTheme,
-              debugShowCheckedModeBanner: debugMode,
-              locale: effectiveLocale,
-              supportedLocales: AppLocalizations.supportedLocales,
-              localizationsDelegates: const [
-                AppLocalizations.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              onGenerateRoute: generateRoute,
-              navigatorKey: navigatorKey,
-              builder: (context, child) {
-                return MultiBlocListener(
-                  listeners: [
-                    BlocListener<AuthBloc, AuthState>(
-                      listener: (context, state) => BlocStateTracker().updateState('AuthBloc', state),
-                    ),
-                    BlocListener<DrawerBloc, DrawerState>(
-                      listener: (context, state) => BlocStateTracker().updateState('DrawerBloc', state),
-                    ),
-                    BlocListener<PurchaseBloc, PurchaseState>(
-                      listener: (context, state) => BlocStateTracker().updateState('PurchaseBloc', state),
-                    ),
-                    BlocListener<UpdateBloc, UpdateState>(
-                      listener: (context, state) => BlocStateTracker().updateState('UpdateBloc', state),
-                    ),
-                    BlocListener<UserBloc, UserState>(
-                      listener: (context, state) => BlocStateTracker().updateState('UserBloc', state),
-                    ),
-                    BlocListener<VocabulairesBloc, VocabulairesState>(
-                      listener: (context, state) {
-                        Logger.Yellow.log("VocabulairesBloc state: $state");
-                        BlocStateTracker().updateState('VocabulairesBloc', state);
-                      },
-                    ),
-                    BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
-                      listener: (context, state) {
-                        Logger.Yellow.log("VocabulaireUserBloc state: $state");
-                        BlocStateTracker().updateState('VocabulaireUserBloc', state);
-                      },
-                    ),
-                  ],
-                  child: child ?? const SizedBox.shrink(),
-                );
-              },
+                final bool tablet = snapshot.data!;
+                final double designWidth = tablet ? 1024 : 1024;
+                  return MaterialApp(
+                    theme: VobdzillaTheme.lightTheme,
+                    debugShowCheckedModeBanner: debugMode,
+                    locale: effectiveLocale,
+                    supportedLocales: AppLocalizations.supportedLocales,
+                    localizationsDelegates: const [
+                      AppLocalizations.delegate,
+                      GlobalMaterialLocalizations.delegate,
+                      GlobalWidgetsLocalizations.delegate,
+                      GlobalCupertinoLocalizations.delegate,
+                    ],
+                    onGenerateRoute: generateRoute,
+                    navigatorKey: navigatorKey,
+                    builder: (context, child) {
+                      return MultiBlocListener(
+                        listeners: [
+                          BlocListener<AuthBloc, AuthState>(
+                            listener: (context, state) =>
+                                BlocStateTracker().updateState('AuthBloc', state),
+                          ),
+                          BlocListener<DrawerBloc, DrawerState>(
+                            listener: (context, state) =>
+                                BlocStateTracker().updateState('DrawerBloc', state),
+                          ),
+                          BlocListener<PurchaseBloc, PurchaseState>(
+                            listener: (context, state) =>
+                                BlocStateTracker().updateState('PurchaseBloc', state),
+                          ),
+                          BlocListener<UpdateBloc, UpdateState>(
+                            listener: (context, state) =>
+                                BlocStateTracker().updateState('UpdateBloc', state),
+                          ),
+                          BlocListener<UserBloc, UserState>(
+                            listener: (context, state) =>
+                                BlocStateTracker().updateState('UserBloc', state),
+                          ),
+                          BlocListener<VocabulairesBloc, VocabulairesState>(
+                            listener: (context, state) {
+                              Logger.Yellow.log("VocabulairesBloc state: $state");
+                              BlocStateTracker().updateState('VocabulairesBloc', state);
+                            },
+                          ),
+                          BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
+                            listener: (context, state) {
+                              Logger.Yellow.log("VocabulaireUserBloc state: $state");
+                              BlocStateTracker().updateState(
+                                  'VocabulaireUserBloc', state);
+                            },
+                          ),
+                        ],
+
+
+                         child:ScaledAppBuilder(
+                              designWidth: designWidth,
+                              child:child ?? const SizedBox.shrink(),
+
+                         )
+
+
+
+
+
+
+
+                      );
+                    },
+                  );
+              }
             );
           },
         ),

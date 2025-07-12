@@ -71,7 +71,7 @@ void main() {
       print("*********************$value   -   $platform - $platform");
       if (platform == 'ios') {
         i++;
-        return "${destfolder}_${i}";
+        return "${i}";
         //return "${i}_${destfolder}";
       } else {
         return "$value";
@@ -106,13 +106,14 @@ void main() {
 
         await takeScreenshot(driver, getNameFile('home'));
 
-        final loginButtonFinder = find.byValueKey('link_home_login');
-        final scrollableFinder = find.byValueKey('scrollBackgroundBlueLinear');
 
-        await driver.waitFor(loginButtonFinder);
-        await driver.waitFor(scrollableFinder);
+        await driver.tap(find.byValueKey('link_home_login'));
 
-        await scrollUntilVisibleAndTap(driver, scrollableFinder, loginButtonFinder);
+
+
+
+        await driver.waitFor(find.byValueKey('login_screen'));
+
         await driver.waitFor(find.byValueKey('login_screen'));
         await takeScreenshot(driver, getNameFile('login_screen'));
 
@@ -137,9 +138,9 @@ void main() {
         await takeScreenshot(driver, getNameFile('personallist2'));
 
         await driver.tap(find.byValueKey('button_add_voc_1'));
+        await driver.tap(find.byValueKey('button_add_voc_2'));
         await driver.tap(find.byValueKey('button_add_voc_4'));
-        await driver.tap(find.byValueKey('button_add_voc_5'));
-        await driver.tap(find.byValueKey('button_add_voc_7'));
+        
 
         await tapBackButton(driver);
         await driver.waitFor(find.byValueKey('home_logged'));

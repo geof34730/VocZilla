@@ -23,8 +23,7 @@ class ProfileUpdateScreen extends StatelessWidget {
     if (authState is AuthAuthenticated) {
       user = authState.user;
     }
-    return backgroundBlueLinear(
-      context: context,
+    return BackgroundBlueLinear(
       child: BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is AuthAuthenticated && state.user!.displayName != null) {

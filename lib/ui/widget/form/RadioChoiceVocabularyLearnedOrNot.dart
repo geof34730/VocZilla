@@ -101,7 +101,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
                 color: isSelected ? Colors.white : Colors.black,
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Roboto',
-                fontSize: 11
+                fontSize: 18
               ),
             ),
           ],

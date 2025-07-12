@@ -25,8 +25,8 @@ class RegisterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return backgroundBlueLinear(
-        context: context,
+    return BackgroundBlueLinear(
+
         child: BlocConsumer<AuthBloc, AuthState>(
             listener: (context, state) {
               if (state is AuthError) {

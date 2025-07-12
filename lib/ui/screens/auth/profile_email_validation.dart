@@ -28,8 +28,8 @@ class ProfileEmailValidation extends StatelessWidget {
           }
         }
       },
-      child: backgroundBlueLinear(
-        context: context,
+      child: BackgroundBlueLinear(
+
         child: Center(
             child: Padding(
               padding: EdgeInsets.all(20),
