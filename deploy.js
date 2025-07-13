@@ -165,6 +165,7 @@ function getAppfileInfo(appfilePath) {
                 --skip_screenshots false \
                 --skip_metadata false \
                 --skip_binary_upload true \
+                --overwrite_screenshots true \
                 --run_precheck_before_submit false
                 
                 
