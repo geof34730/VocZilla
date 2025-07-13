@@ -1,8 +1,4 @@
 // deploy.js
-
-
-
-
 const { execSync } = require("child_process");
 const inquirer = require("inquirer");
 const fs = require("fs");
@@ -154,7 +150,7 @@ function getAppfileInfo(appfilePath) {
 
     try {
         const command = `
-              FASTLANE_VERBOSE=1 fastlane deliver \
+              FASTLANE_VERBOSE=1 FASTLANE_SKIP_UPDATE_CHECK=1 fastlane deliver \
                 --ipa build/ios/ipa/voczilla.ipa \
                 --force \
                 --username geoffrey.petain@gmail.com \
@@ -166,7 +162,8 @@ function getAppfileInfo(appfilePath) {
                 --skip_metadata false \
                 --skip_binary_upload true \
                 --overwrite_screenshots true \
-                --run_precheck_before_submit false
+                --ignore_language_directory_validation true  \
+                --run_precheck_before_submit true
                 
                 
                 
