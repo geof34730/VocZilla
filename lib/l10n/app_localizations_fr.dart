@@ -24,7 +24,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get app_short_description => 'Apprends et révise du vocabulaire anglais !';
 
   @override
-  String get app_keywords => 'vocabulaire, apprentissage, anglais, mots, langue, dictée, prononciation, quiz, mémoire, apprendre, facile, test, écoute';
+  String get app_keywords => 'vocabulaire, apprentissage, anglais, mots, langue, dictée, prononciation, quiz, mémoire, apprendre, facile, écoute';
 
   @override
   String get app_feature_graphic_title => 'Améliorez votre vocabulaire anglais';

@@ -15,7 +15,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_subtitle => 'Вивчайте англійську лексику!';
+  String get app_subtitle => 'Англійська лексика';
 
   @override
   String get app_description => 'VocZilla – ідеальний додаток для розширення вашого словникового запасу англійської мови, незалежно від вашого рівня. Відкрийте для себе тисячі слів, розподілених за темами, грайте у цікаві вікторини, відстежуйте свій прогрес і кидайте виклик друзям!';
@@ -24,7 +24,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get app_short_description => 'Вивчайте та повторюйте англійську лексику!';
 
   @override
-  String get app_keywords => 'словниковий запас, навчання, англійська, слова, мова, диктант, вимова, вікторина, пам\'ять, вчитися, легко, тест, аудіювання';
+  String get app_keywords => 'словниковий запас, навчання, англійська, слова, мова, диктант, вимова, вікторина, пам\'ять, вчитися, легко, аудіювання';
 
   @override
   String get app_feature_graphic_title => 'Покращте свій словниковий запас англійської мови';

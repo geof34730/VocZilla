@@ -78,22 +78,19 @@ platform :all do
 #            iPhone\ 5.5\ inch
 #            iPhone\ 4.7\ inch
 #            iPhone\ 4.0\ inch
-#            iPad\ Pro\ \(12.9-inch\)
-#            iPad\ Pro\ \(11-inch\)
-#            iPad\ Pro\ \(10.5-inch\)
-#            iPad\ \(10.2-inch\)
-#            iPad\ Pro\ \(9.7-inch\)
+#            iPad\ Pro\ (12.9-inch)
+#            iPad\ Pro\ (11-inch)
+#            iPad\ Pro\ (10.5-inch)
+#            iPad\ (10.2-inch)
+#            iPad\ Pro\ (9.7-inch)
 #          ],
 
 
     #"android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
     {
       "ios" => %w[
-        iPhone\ 6.7\ inch
-        iPhone\ 6.5\ inch
-
-        iPad\ Pro\ \(12.9-inch\)
-        iPad\ Pro\ \(11-inch\)
+        iPad\ Pro\ (12.9-inch)
+        iPad\ Pro\ (11-inch)
       ],
 
 
@@ -216,7 +213,6 @@ platform :all do
           --dart-define=LOCALE=#{locale} \
           --dart-define=FOR_FEATURE_GRAPHIC=#{is_feature} \
           --dart-define=PLATFORM=#{platformStore} \
-          --dart-define=DESTFOLDER=#{dest_folder} \
           --screenshot=test_driver/screenshots")
 
     rescue => e
@@ -228,13 +224,19 @@ platform :all do
     next unless normalized_locale
 
     screenshots = Dir[File.join(screenshots_dir, "*.png")]
+
+    dest_dir = File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/#{dest_folder}/")
+    UI.message("📁 Creating directory: #{dest_dir}")
+
      dest_dir = if is_feature
        File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/")
      else
        if platformStore == "ios"
-         File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/#{dest_folder}/")
+
+         File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/#{dest_folder}/")
+
        else
-         File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/#{dest_folder}/")
+         File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/images/#{dest_folder}/")
        end
      end
 

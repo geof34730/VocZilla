@@ -15,7 +15,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_subtitle => 'Lerne englischen Wortschatz!';
+  String get app_subtitle => 'Englischer Wortschatz';
 
   @override
   String get app_description => 'VocZilla ist die perfekte App, um Ihren englischen Wortschatz zu erweitern, unabhängig von Ihrem Niveau. Entdecken Sie Tausende von Wörtern, kategorisiert nach Themen, spielen Sie lustige Quizze, verfolgen Sie Ihren Fortschritt und fordern Sie Ihre Freunde heraus!';
@@ -24,7 +24,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get app_short_description => 'Lernen und wiederholen Sie den englischen Wortschatz!';
 
   @override
-  String get app_keywords => 'Wortschatz, Lernen, Englisch, Wörter, Sprache, Diktat, Aussprache, Quiz, Gedächtnis, Lernen, einfach, Test, Zuhören';
+  String get app_keywords => 'Wortschatz, Lernen, Englisch, Wörter, Sprache, Diktat, Aussprache, Quiz, Gedächtnis, Lernen, einfach, Zuhören';
 
   @override
   String get app_feature_graphic_title => 'Verbessern Sie Ihren englischen Wortschatz';

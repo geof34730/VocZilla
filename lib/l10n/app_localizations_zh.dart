@@ -15,7 +15,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_subtitle => '学习英语词汇！';
+  String get app_subtitle => '英语词汇';
 
   @override
   String get app_description => 'VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪学习进度，并挑战您的好友！';
@@ -24,7 +24,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
-  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 简单, 测试, 听力';
+  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 轻松, 听力';
 
   @override
   String get app_feature_graphic_title => '提高你的英语词汇量';
@@ -156,7 +156,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get home_description_list_perso => '创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。';
 
   @override
-  String get home_title_classement => 'TeamZilla 排名';
+  String get home_title_classement => 'TeamZilla排名';
 
   @override
   String get home_notlogged_accroche1 => '提高你的英语水平！';
@@ -279,7 +279,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get email_validation_help => '如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。';
 
   @override
-  String get email_validation_merci_register2 => '感谢您的信任！';
+  String get email_validation_merci_register2 => '谢谢您的信任！';
 
   @override
   String get send_mail => '收到新的验证邮件';

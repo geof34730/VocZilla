@@ -15,7 +15,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_subtitle => 'Impara il vocabolario inglese!';
+  String get app_subtitle => 'vocabolario inglese';
 
   @override
   String get app_description => 'VocZilla è l\'app perfetta per ampliare il tuo vocabolario inglese, a prescindere dal tuo livello. Scopri migliaia di parole suddivise per tema, gioca a divertenti quiz, monitora i tuoi progressi e sfida i tuoi amici!';
@@ -24,7 +24,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get app_short_description => 'Impara e ripassa il vocabolario inglese!';
 
   @override
-  String get app_keywords => 'vocabolario, apprendimento, inglese, parole, lingua, dettato, pronuncia, quiz, memoria, imparare, facile, test, ascolto';
+  String get app_keywords => 'vocabolario, apprendimento, inglese, parole, lingua, dettato, pronuncia, quiz, memoria, imparare, facile, ascolto';
 
   @override
   String get app_feature_graphic_title => 'Migliora il tuo vocabolario inglese';

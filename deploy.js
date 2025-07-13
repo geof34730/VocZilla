@@ -160,7 +160,7 @@ function getAppfileInfo(appfilePath) {
                 --screenshots_path fastlane/screenshots/ios \
                 --skip_screenshots false \
                 --skip_metadata false \
-                --skip_binary_upload true \
+                --skip_binary_upload false \
                 --overwrite_screenshots true \
                 --ignore_language_directory_validation true  \
                 --run_precheck_before_submit false

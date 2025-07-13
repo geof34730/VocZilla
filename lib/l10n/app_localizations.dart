@@ -132,7 +132,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_subtitle.
   ///
   /// In en, this message translates to:
-  /// **'Learn English vocabulary!'**
+  /// **'English vocabulary'**
   String get app_subtitle;
 
   /// No description provided for @app_description.
@@ -150,7 +150,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_keywords.
   ///
   /// In en, this message translates to:
-  /// **'vocabulary, learning, english, words, language, dictation, pronunciation, quiz, memory, learn, easy, test, listening'**
+  /// **'vocabulary, learning, english, words, language, dictation, pronunciation, quiz, memory, learn, easy, listening'**
   String get app_keywords;
 
   /// No description provided for @app_feature_graphic_title.

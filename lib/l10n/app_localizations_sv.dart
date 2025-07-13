@@ -15,7 +15,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_subtitle => 'Lär dig engelska ordförråd!';
+  String get app_subtitle => 'Engelskt ordförråd';
 
   @override
   String get app_description => 'VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!';
@@ -24,7 +24,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get app_short_description => 'Lär dig och repetera engelska ord!';
 
   @override
-  String get app_keywords => 'ordförråd, lärande, engelska, ord, språk, diktering, uttal, frågesport, minne, lära sig, enkelt, test, lyssnande';
+  String get app_keywords => 'ordförråd, lärande, engelska, ord, språk, diktering, uttal, frågesport, minne, lära sig, enkelt, lyssnande';
 
   @override
   String get app_feature_graphic_title => 'Förbättra ditt engelska ordförråd';
@@ -297,7 +297,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Dra nytta av din kostnadsfria provperiod!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har för närvarande en gratis provperiod på';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har just nu en gratis provperiod på';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'dagar';

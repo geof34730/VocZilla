@@ -15,7 +15,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get app_title => 'VocZilla';
 
   @override
-  String get app_subtitle => 'Lær engelsk vokabular!';
+  String get app_subtitle => 'Engelsk ordforråd';
 
   @override
   String get app_description => 'VocZilla er den perfekte appen for å utvide ditt engelske vokabular, uansett nivå. Oppdag tusenvis av ord kategorisert etter tema, spill morsomme quizer, følg med på fremgangen din og utfordre vennene dine!';
@@ -24,7 +24,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get app_short_description => 'Lær og repeter engelsk vokabular!';
 
   @override
-  String get app_keywords => 'vokabular, læring, engelsk, ord, språk, diktering, uttale, quiz, hukommelse, lær, lett, test, lytting';
+  String get app_keywords => 'vokabular, læring, engelsk, ord, språk, diktering, uttale, quiz, hukommelse, lær, lett, lytting';
 
   @override
   String get app_feature_graphic_title => 'Forbedre ditt engelske ordforråd';
@@ -321,7 +321,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_congratulation_bravo => 'Bravo';
 
   @override
-  String get widget_congratulation_message => 'du er ferdig med å lære deg denne listen';
+  String get widget_congratulation_message => 'du er ferdig med å lære denne listen';
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice1 => 'Å lære';

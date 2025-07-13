@@ -10,15 +10,13 @@ void main() {
   group('App Integration Tests', () {
     late FlutterDriver driver;
     late String platform;
-    late String destfolder;
 
 
     setUpAll(() async {
       driver = await FlutterDriver.connect();
       platform = await driver.requestData('getPlatform');
-      destfolder = await driver.requestData('getDestFolder');
       print('📦 PLATFORM = $platform');
-      print('📦 DESTFOLDER = $destfolder');
+
     });
 
     tearDownAll(() async {
@@ -72,8 +70,7 @@ void main() {
       if (platform == 'ios') {
         i++;
         return "${i}";
-        //return "${i}_${destfolder}";
-      } else {
+       } else {
         return "$value";
       }
     }
