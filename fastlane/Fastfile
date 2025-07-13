@@ -1,7 +1,37 @@
+
+platform :ios do
+  lane :upload_debug_screenshots do
+    UI.message("🚀 Lane upload_debug_screenshots démarrée !")
+    require 'fastimage'
+
+    files = `find screenshots/ios -name '*.png'`.split("\n")
+    UI.message("📂 Fichiers trouvés : #{files.size}")
+
+    files.each do |file|
+      parts = file.split("/")
+      lang = parts[3]
+      device = parts[4]
+      size = FastImage.size(file)
+
+      if size
+        UI.message("🖼 Screenshot: #{file} (lang: #{lang}, device: #{device}, size: #{size[0]}x#{size[1]})")
+      else
+        UI.important("⚠️  Cannot read size of: #{file}")
+      end
+    end
+  end
+end
+
+
 platform :all do
+
   desc "📸 Générer les screenshots Android & iOS multilingues"
 
   lane:generate_metadata do
+
+
+
+
 
       project_root = File.expand_path("..", __dir__)
 
@@ -16,7 +46,16 @@ platform :all do
 
       UI.message("🧠 Génération des métadonnées iOS...")
       Dir.chdir(project_root) { sh("dart '#{dart_script_ios}'") }
+
+
+
   end
+
+
+
+
+
+
 
   lane :screenshots do
     avd_name = "emulator_tablet_10pouces_screenshots_voczilla"

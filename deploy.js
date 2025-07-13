@@ -154,17 +154,21 @@ function getAppfileInfo(appfilePath) {
 
     try {
         const command = `
-            FASTLANE_VERBOSE=1 fastlane deliver \
-              --ipa build/ios/ipa/voczilla.ipa \
-              --force \
-              --username geoffrey.petain@gmail.com \
-              --app_identifier com.geoffreypetain.voczilla.voczilla \
-              --team_id 124128909 \
-              --metadata_path fastlane/metadata/ios \
-              --screenshots_path fastlane/metadata/ios \
-              --skip_screenshots false \
-              --skip_metadata false \
-              --run_precheck_before_submit false
+              FASTLANE_VERBOSE=1 fastlane deliver \
+                --ipa build/ios/ipa/voczilla.ipa \
+                --force \
+                --username geoffrey.petain@gmail.com \
+                --app_identifier com.geoffreypetain.voczilla.voczilla \
+                --team_id 124128909 \
+                --metadata_path fastlane/metadata/ios \
+                --screenshots_path fastlane/screenshots/ios \
+                --skip_screenshots false \
+                --skip_metadata false \
+                --skip_binary_upload true \
+                --run_precheck_before_submit false
+                
+                
+                
             `;
         console.log(command);
         execSync(`echo $FASTLANE_SESSION`, { stdio: "inherit" });
