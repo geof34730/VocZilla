@@ -150,7 +150,7 @@ function getAppfileInfo(appfilePath) {
 
     try {
         const command = `
-              FASTLANE_VERBOSE=1 FASTLANE_SKIP_UPDATE_CHECK=1 fastlane deliver \
+              fastlane deliver \
                 --ipa build/ios/ipa/voczilla.ipa \
                 --force \
                 --username geoffrey.petain@gmail.com \
@@ -163,7 +163,7 @@ function getAppfileInfo(appfilePath) {
                 --skip_binary_upload true \
                 --overwrite_screenshots true \
                 --ignore_language_directory_validation true  \
-                --run_precheck_before_submit true
+                --run_precheck_before_submit false
                 
                 
                 
@@ -173,7 +173,9 @@ function getAppfileInfo(appfilePath) {
         execSync(command, {
             stdio: "inherit",
             env: {
-                ...process.env
+                ...process.env,
+                FASTLANE_VERBOSE: "1",
+                FASTLANE_SKIP_UPDATE_CHECK: "1",
 
             }
         });

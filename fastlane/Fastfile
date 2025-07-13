@@ -68,22 +68,32 @@ platform :all do
 
     UI.message("🌟 Lancement de l'émulateur...")
     start_emulator_once(avd_name)
-    # "ios"     => %w[iphone6_7_inch iphone6_5_inch iphone5_5_inch ipad_pro_3gen_12_9_inch ipad_pro_11_inch ipad_pro_10_5_inch],
+
+
+#    "ios" => %w[
+#            iPhone\ 6.7\ inch
+#            iPhone\ 6.5\ inch
+#            iPhone\ 6.1\ inch
+#            iPhone\ 5.8\ inch
+#            iPhone\ 5.5\ inch
+#            iPhone\ 4.7\ inch
+#            iPhone\ 4.0\ inch
+#            iPad\ Pro\ \(12.9-inch\)
+#            iPad\ Pro\ \(11-inch\)
+#            iPad\ Pro\ \(10.5-inch\)
+#            iPad\ \(10.2-inch\)
+#            iPad\ Pro\ \(9.7-inch\)
+#          ],
+
+
     #"android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
     {
       "ios" => %w[
         iPhone\ 6.7\ inch
         iPhone\ 6.5\ inch
-        iPhone\ 6.1\ inch
-        iPhone\ 5.8\ inch
-        iPhone\ 5.5\ inch
-        iPhone\ 4.7\ inch
-        iPhone\ 4.0\ inch
+
         iPad\ Pro\ \(12.9-inch\)
         iPad\ Pro\ \(11-inch\)
-        iPad\ Pro\ \(10.5-inch\)
-        iPad\ \(10.2-inch\)
-        iPad\ Pro\ \(9.7-inch\)
       ],
 
 
