@@ -11,9 +11,9 @@ fi
 # Définition des variables
 APP_IDENTIFIER=${APP_IDENTIFIER:-com.geoffreypetain.voczilla.voczilla}
 USERNAME=${FASTLANE_USER:-geoffrey.petain@gmail.com}
-TEAM_ID=${TEAM_ID:-124128909}
+TEAM_ID=${TEAM_ID:-58A9XC46QY}
 PLATFORM="ios"
-APP_VERSION=${APP_VERSION:-"9.1.4"}
+APP_VERSION=${APP_VERSION:-"9.1.6"}
 TMP_DIR="./fastlane/tmp_screenshot/ios"
 SCREENSHOT_DIR="./fastlane/screenshots"
 

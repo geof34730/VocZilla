@@ -159,7 +159,6 @@ function getAppfileInfo(appfilePath) {
                 --overwrite_screenshots true \
                 --ignore_language_directory_validation true  \
                 --run_precheck_before_submit false  \
-                --app_version 9.1.6 \
                 --platform ios`;
         console.log(command);
         execSync(`echo $FASTLANE_SESSION`, { stdio: "inherit" });

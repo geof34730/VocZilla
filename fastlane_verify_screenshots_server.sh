@@ -10,9 +10,9 @@ fi
 
 APP_IDENTIFIER=${APP_IDENTIFIER:-com.geoffreypetain.voczilla.voczilla}
 USERNAME=${FASTLANE_USER:-geoffrey.petain@gmail.com}
-TEAM_ID=${TEAM_ID:-124128909}
+TEAM_ID=${TEAM_ID:-58A9XC46QY}
 PLATFORM="ios"
-APP_VERSION=${APP_VERSION:-"9.1.4"} # 👈 ici tu spécifies la version à analyser
+APP_VERSION=${APP_VERSION:-"9.1.6"} # 👈 ici tu spécifies la version à analyser
 
 SOURCE_DIR="fastlane/screenshots"
 TEMP_BACKUP_DIR="fastlane/screenshots_backup"
