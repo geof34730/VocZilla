@@ -13,7 +13,7 @@ APP_IDENTIFIER=${APP_IDENTIFIER:-com.geoffreypetain.voczilla.voczilla}
 USERNAME=${FASTLANE_USER:-geoffrey.petain@gmail.com}
 TEAM_ID=${TEAM_ID:-58A9XC46QY}
 PLATFORM="ios"
-APP_VERSION=${APP_VERSION:-"9.1.6"}
+APP_VERSION=${APP_VERSION:-"9.2.7"}
 TMP_DIR="./fastlane/tmp_screenshot/ios"
 SCREENSHOT_DIR="./fastlane/screenshots"
 
@@ -70,6 +70,8 @@ fastlane deliver \
   --skip_metadata true \
   --overwrite_screenshots true \
   --run_precheck_before_submit false \
-  --force
+  --force \
+  --verbose
+
 
 echo "✅ Upload terminé avec succès."
