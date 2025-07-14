@@ -145,29 +145,45 @@ function getAppfileInfo(appfilePath) {
 
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
 
+    if (!process.env.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD) {
+        console.error("❌ La variable FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD est manquante.");
+        process.exit(1);
+    }
+    else{
+        console.error("YES !!!!! La variable FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD est trouvé.");
+
+
+    }
+
+
     try {
         const command = `
-              fastlane deliver \
-                --ipa build/ios/ipa/voczilla.ipa \
-                --force \
-                --username geoffrey.petain@gmail.com \
-                --app_identifier com.geoffreypetain.voczilla.voczilla \
-                --team_id 58A9XC46QY \
-                --skip_screenshots false \
-                --skip_metadata false \
-                --skip_binary_upload false \
-                --overwrite_screenshots true \
-                --ignore_language_directory_validation true  \
-                --run_precheck_before_submit false  \
-                --platform ios`;
+          fastlane deliver \
+            --ipa build/ios/ipa/voczilla.ipa \
+            --force \
+            --username geoffrey.petain@gmail.com \
+            --app_identifier com.geoffreypetain.voczilla.voczilla \
+            --team_id 58A9XC46QY \
+            --skip_screenshots false \
+            --skip_metadata false \
+            --skip_binary_upload false \
+            --overwrite_screenshots true \
+            --ignore_language_directory_validation true \
+            --run_precheck_before_submit false \
+            --platform ios
+        `;
+
         console.log(command);
+
         execSync(`echo $FASTLANE_SESSION`, { stdio: "inherit" });
+
         execSync(command, {
             stdio: "inherit",
             env: {
                 ...process.env,
                 FASTLANE_VERBOSE: "1",
                 FASTLANE_SKIP_UPDATE_CHECK: "1",
+                FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: process.env.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD,
             }
         });
 
