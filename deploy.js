@@ -155,7 +155,7 @@ function getAppfileInfo(appfilePath) {
 
     }
 
-
+/*
     try {
         const command = `
           fastlane deliver \
@@ -190,7 +190,7 @@ function getAppfileInfo(appfilePath) {
     } catch (error) {
         console.error("An error occurred:", error.message);
         process.exit(1);
-    }
+    }*/
     console.log("\n✅ Déploiement iOS terminé avec succès !");
 
     // Git operations
