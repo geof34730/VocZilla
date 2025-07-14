@@ -145,9 +145,6 @@ function getAppfileInfo(appfilePath) {
 
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
 
-
-
-
     try {
         const command = `
               fastlane deliver \
@@ -162,6 +159,7 @@ function getAppfileInfo(appfilePath) {
                 --overwrite_screenshots true \
                 --ignore_language_directory_validation true  \
                 --run_precheck_before_submit false  \
+                --app_version 9.1.5 \
                 --platform ios`;
         console.log(command);
         execSync(`echo $FASTLANE_SESSION`, { stdio: "inherit" });
@@ -171,7 +169,6 @@ function getAppfileInfo(appfilePath) {
                 ...process.env,
                 FASTLANE_VERBOSE: "1",
                 FASTLANE_SKIP_UPDATE_CHECK: "1",
-
             }
         });
 

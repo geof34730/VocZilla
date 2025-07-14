@@ -6,7 +6,9 @@
     "translate": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get",
     "viewmadataios" : "./fastlane-view-meta.sh",
     "fastlaneauth": "./fastlane-auth.sh",
-    "fastlaneuploadscreenshots": "./fastlane_upload_screenshots.sh"
+    "fastlaneuploadscreenshots": "./fastlane_upload_screenshots.sh",
+    "fastlaneverifyuploaded" : "./fastlane_verify_uploaded_screenshots.sh",
+    "downloadscreenshotsios" : "./fastlane_verify_screenshots_server.sh"
 
 
   },
