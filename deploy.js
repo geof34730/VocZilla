@@ -156,18 +156,13 @@ function getAppfileInfo(appfilePath) {
                 --username geoffrey.petain@gmail.com \
                 --app_identifier com.geoffreypetain.voczilla.voczilla \
                 --team_id 124128909 \
-                --metadata_path fastlane/metadata/ios \
-                --screenshots_path fastlane/screenshots/ios \
                 --skip_screenshots false \
                 --skip_metadata false \
                 --skip_binary_upload false \
                 --overwrite_screenshots true \
                 --ignore_language_directory_validation true  \
-                --run_precheck_before_submit false
-                
-                
-                
-            `;
+                --run_precheck_before_submit false  \
+                --platform ios`;
         console.log(command);
         execSync(`echo $FASTLANE_SESSION`, { stdio: "inherit" });
         execSync(command, {

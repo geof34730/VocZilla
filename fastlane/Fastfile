@@ -24,15 +24,8 @@ end
 
 
 platform :all do
-
   desc "📸 Générer les screenshots Android & iOS multilingues"
-
   lane:generate_metadata do
-
-
-
-
-
       project_root = File.expand_path("..", __dir__)
 
       dart_script_android = File.join(project_root, "fastlane/generate_metadata_android.dart")
@@ -89,8 +82,8 @@ platform :all do
     #"android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
     {
       "ios" => %w[
-        iPad\ Pro\ (12.9-inch)
-        iPad\ Pro\ (11-inch)
+        iPhone_6.7_inch
+        iPhone_6.5_inch
       ],
 
 
@@ -313,17 +306,17 @@ end
             sh("adb -s #{emulator_id} shell wm size 1600x2560 && adb -s #{emulator_id} shell wm density 320")
         when "FeatureGraphic"
             sh("adb -s #{emulator_id} shell wm size 1024x500 && adb -s #{emulator_id} shell wm density 160")
-        when "iPhone 6.7 inch"
+        when "iPhone_6.7_inch"
             sh("adb -s #{emulator_id} shell wm size 1290x2796 && adb -s #{emulator_id} shell wm density 460")
-        when "iPhone 6.5 inch"
+        when "iPhone_6.5_inch"
             sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 458")
-        when "iPhone 6.1 inch (Pro)"
+        when "iPhone_6.1_inch_(Pro)"
             sh("adb -s #{emulator_id} shell wm size 1179x2556 && adb -s #{emulator_id} shell wm density 460")
-        when "iPhone 6.1 inch"
+        when "iPhone_6.1_inch"
             sh("adb -s #{emulator_id} shell wm size 1170x2532 && adb -s #{emulator_id} shell wm density 460")
-        when "iPhone 5.8 inch"
+        when "iPhone_5.8_inch"
             sh("adb -s #{emulator_id} shell wm size 1125x2436 && adb -s #{emulator_id} shell wm density 458")
-        when "iPhone 5.5 inch"
+        when "iPhone_5.5_inch"
             sh("adb -s #{emulator_id} shell wm size 1242x2208 && adb -s #{emulator_id} shell wm density 401")
         when "iPhone 4.7 inch"
             sh("adb -s #{emulator_id} shell wm size 750x1334 && adb -s #{emulator_id} shell wm density 326")
