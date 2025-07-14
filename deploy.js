@@ -152,6 +152,7 @@ function getAppfileInfo(appfilePath) {
                 --force \
                 --username geoffrey.petain@gmail.com \
                 --app_identifier com.geoffreypetain.voczilla.voczilla \
+                --app_password: ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"]
                 --team_id 58A9XC46QY \
                 --skip_screenshots false \
                 --skip_metadata false \
