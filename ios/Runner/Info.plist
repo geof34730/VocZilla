@@ -25,6 +25,8 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>Nous avons besoin du microphone pour permettre l’enregistrement audio dans certaines fonctionnalités.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
     <string>Nous utilisons la reconnaissance vocale pour vous permettre d’interagir avec l’application à l’aide de votre voix.</string>
 	<key>CFBundleURLTypes</key>
