@@ -152,14 +152,14 @@ function getAppfileInfo(appfilePath) {
                 --force \
                 --username geoffrey.petain@gmail.com \
                 --app_identifier com.geoffreypetain.voczilla.voczilla \
-                --team_id 124128909 \
+                --team_id 58A9XC46QY \
                 --skip_screenshots false \
                 --skip_metadata false \
                 --skip_binary_upload false \
                 --overwrite_screenshots true \
                 --ignore_language_directory_validation true  \
                 --run_precheck_before_submit false  \
-                --app_version 9.1.5 \
+                --app_version 9.1.6 \
                 --platform ios`;
         console.log(command);
         execSync(`echo $FASTLANE_SESSION`, { stdio: "inherit" });
