@@ -9,7 +9,7 @@ require('dotenv').config();
 function getAppfileInfo(appfilePath) {
     return {
         appleId: process.env.FASTLANE_APPLE_ID,
-        appIdentifier: process.env.FASTLANE_APP_IDENTIFIER,
+        appIdentifier: process.env.ENV_FASTLANE_APP_ID,
         teamId: process.env.FASTLANE_TEAM_ID
     };
 }
@@ -75,28 +75,15 @@ function getAppfileInfo(appfilePath) {
                 }
             }
         }
-    const { generateMetadata } = await inquirer.prompt([
-        {
-            type: "confirm",
-            name: "generateMetadata",
-            message: "veux-tu générer  les screenshots ?",
-            default: false,
-        },
-    ]);
+
 
         versionName = versionParts.join('.');
         buildNumber = lastBuildNumber + 1;
     await fs.writeFileSync(deployInfoPath, JSON.stringify({ lastVersionName: versionName, lastBuildNumber: buildNumber }, null, 2));
-    if (generateMetadata) {
-        execSync(`fastlane all screenshots`, { stdio: "inherit" });
-    }
-    else{
-
-        execSync(`fastlane all generate_metadata`, { stdio: "inherit" });
-    }
+    execSync(`fastlane all generate_metadata`, { stdio: "inherit" });
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
     execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
-/*
+
             console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
             execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -123,7 +110,7 @@ function getAppfileInfo(appfilePath) {
             --metadata_path fastlane/metadata/android \
             --skip_upload_changelogs false \
             --skip_upload_images false \
-            --skip_upload_screenshots false \
+            --skip_upload_screenshots true \
             --skip_upload_metadata false`,
             { stdio: "inherit" }
         );
@@ -135,7 +122,7 @@ function getAppfileInfo(appfilePath) {
 
 
     console.log("\n✅ Déploiement Android terminé avec succès !");
-*/
+
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -145,7 +132,7 @@ function getAppfileInfo(appfilePath) {
 
     console.log("\n📤 Déploiement vers l'App Store d'Apple...");
 
-    if (!process.env.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD) {
+    if (!process.env.ENV_FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD) {
         console.error("❌ La variable FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD est manquante.");
         process.exit(1);
     }
@@ -161,12 +148,11 @@ function getAppfileInfo(appfilePath) {
           fastlane deliver \
             --ipa build/ios/ipa/voczilla.ipa \
             --force \
-            --screenshots_path fastlane/screenshot/ios \
+            --screenshots_path fastlane/metadata/ios \
             --metadata_path fastlane/metadata/ios \
-            --skip_screenshots false \
-            --skip_metadata true \
+            --skip_screenshots true \
+            --skip_metadata false \
             --skip_binary_upload false \
-            --overwrite_screenshots false \
             --ignore_language_directory_validation true \
             --run_precheck_before_submit false \
             --platform ios
@@ -182,7 +168,7 @@ function getAppfileInfo(appfilePath) {
                 ...process.env,
                 FASTLANE_VERBOSE: "1",
                 FASTLANE_SKIP_UPDATE_CHECK: "1",
-                FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: process.env.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD,
+                FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: process.env.ENV_FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD,
             }
         });
 

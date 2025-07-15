@@ -3,7 +3,7 @@
 echo "🧹 Suppression de ./Preview.html si présent..."
 rm -f ./Preview.html
 
-SCREENSHOTS_DIR="fastlane/screenshots/android"
+SCREENSHOTS_DIR="fastlane/metadata/android"
 METADATA_DIR="fastlane/metadata/android"
 
 echo "📄 Génération de Preview.html depuis $SCREENSHOTS_DIR et $METADATA_DIR..."

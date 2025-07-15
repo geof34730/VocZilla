@@ -31,20 +31,10 @@ platform :all do
     UI.message("🌟 Lancement de l'émulateur...")
     start_emulator_once(avd_name)
 
-
-    #"android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
+        #phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic
     {
-      "ios" => %w[
-          iphone4_7_inch
-          iphone5_5_inch
-          iphone5_8_inch
-          iphone6_5_inch
-          iphone6_7_inch
-          ipad_9_7_inch
-          ipad_10_5_inch
-          ipad_11_inch
-          ipad_12.9_inch
-      ],
+    "android" => %w[FeatureGraphic]
+    #"ios" => %w[iphone4_7_inch iphone5_5_inch iphone5_8_inch iphone6_5_inch iphone6_7_inch ipad_9_7_inch ipad_10_5_inch ipad_11_inch ipad_12.9_inch ipad_13_inch]
 
 
     }.each do |platform, folders|
@@ -60,7 +50,7 @@ platform :all do
     {
       'af' => 'af-ZA', 'am' => 'am-ET', 'ar' => 'ar', 'az' => 'az-AZ', 'be' => 'be-BY', 'bg' => 'bg-BG',
       'bn' => 'bn-BD', 'bs' => 'bs-BA', 'ca' => 'ca-ES', 'cs' => 'cs-CZ', 'da' => 'da-DK', 'de' => 'de-DE',
-      'el' => 'el-GR', 'en' => 'en-US', 'es' => 'es-ES', 'et' => 'et-EE', 'eu' => 'eu-ES', 'fa' => 'fa-IR',
+      'el' => 'el-GR', 'en' => 'en-US', 'es' => 'es-ES', 'et' => 'et', 'et-EE' => 'et' ,'eu' => 'eu-ES', 'fa' => 'fa-IR',
       'fi' => 'fi-FI', 'fr' => 'fr-FR', 'gl' => 'gl-ES', 'gu' => 'gu-IN', 'hi' => 'hi-IN', 'hr' => 'hr-HR',
       'hu' => 'hu-HU', 'hy' => 'hy-AM', 'id' => 'id-ID', 'is' => 'is-IS', 'it' => 'it-IT', 'iw' => 'iw-IL',
       'ja' => 'ja-JP', 'ka' => 'ka-GE', 'kk' => 'kk-KZ', 'km' => 'km-KH', 'kn' => 'kn-IN', 'ko' => 'ko-KR',
@@ -68,7 +58,7 @@ platform :all do
       'mn' => 'mn-MN', 'mr' => 'mr-IN', 'ms' => 'ms-MY', 'my' => 'my-MM', 'ne' => 'ne-NP', 'nl' => 'nl-NL',
       'no' => 'no-NO', 'pa' => 'pa-IN', 'pl' => 'pl-PL', 'pt' => 'pt-BR', 'ro' => 'ro-RO', 'ru' => 'ru-RU',
       'si' => 'si-LK', 'sk' => 'sk-SK', 'sl' => 'sl-SI', 'sq' => 'sq-AL', 'sr' => 'sr', 'sv' => 'sv-SE',
-      'sw' => 'sw', 'ta' => 'ta-IN', 'te' => 'te-IN', 'th' => 'th-TH', 'tr' => 'tr-TR', 'uk' => 'uk-UA',
+      'sw' => 'sw', 'ta' => 'ta-IN', 'te' => 'te-IN', 'th' => 'th-TH', 'tr' => 'tr-TR', 'uk' => 'uk',
       'ur' => 'ur', 'uz' => 'uz-UZ', 'vi' => 'vi-VN', 'zh' => 'zh-CN', 'zu' => 'zu-ZA'
     }
   end
@@ -91,6 +81,8 @@ platform :all do
   'pt'  => 'pt-PT',
   'pt-BR'  => 'pt-BR',
   'zh'  => 'zh-Hans',
+  'et-EE' => 'et',
+  'uk-UA' => 'uk',
   'zh-CN'  => 'zh-Hans',
   'zh-HK'  => 'zh-Hant',
   'zh-TW'  => 'zh-Hant',
@@ -171,16 +163,16 @@ platform :all do
 
     screenshots = Dir[File.join(screenshots_dir, "*.png")]
 
-    dest_dir = File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/#{dest_folder}/")
+    dest_dir = File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/#{dest_folder}/")
     UI.message("📁 Creating directory: #{dest_dir}")
 
      dest_dir = if is_feature
        File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/")
      else
        if platformStore == "ios"
-         File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/")
+         File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/")
        else
-         File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/images/#{dest_folder}/")
+         File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/#{dest_folder}/")
        end
      end
 
@@ -277,8 +269,10 @@ end
             sh("adb -s #{emulator_id} shell wm size 1668x2388 && adb -s #{emulator_id} shell wm density 264")
         when "iPad_12.9_inch"
             sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
+        when "iPad_13_inch"
+            sh("adb -s #{emulator_id} shell wm size 2064x2752 && adb -s #{emulator_id} shell wm density 264")
         when "Mac"
-            sh("adb -s #{emulator_id} shell wm size 1280X800 && adb -s #{emulator_id} shell wm density 220")
+            sh("adb -s #{emulator_id} shell wm size 1440x900 && adb -s #{emulator_id} shell wm density 220")
    else
      UI.error("Unsupported size: #{dest_folder}")
    end

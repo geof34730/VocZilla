@@ -6,15 +6,12 @@
     "translate": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get",
     "viewmadataios" : "SH/fastlane-view-meta.sh",
     "fastlaneauth": "SH/fastlane-auth.sh",
-    "fastlaneUploadScreenshots": "SH/fastlane_upload_screenshots.sh",
-    "fastlaneVerifyUploaded" : "./fastlane_verify_uploaded_screenshots.sh",
+    "fastlaneUploadScreenshotsIos": "SH/fastlane_upload_screenshots_ios.sh",
+    "fastlaneUploadScreenshotsAndroid": "SH/fastlane_upload_screenshots_android.sh",
+    "fastlaneVerifyUploaded" : "SH/fastlane_verify_uploaded_screenshots.sh",
     "fastlaneViewMetadataScreenshotsIos" : "./SH/fastlane-view-meta-ios.sh",
     "fastlaneViewMetadataScreenshotsAndroid" : "./SH/fastlane-view-meta-android.sh",
-
-    "fastlaneSownloadScreenshotsIos" : "./fastlane_verify_screenshots_server.sh",
-    "deleteIphone61inch" : ",./SH/delete_iphone6_1_inch.sh"
-
-
+    "fastlaneSownloadScreenshotsIos" : "SH/fastlane_verify_screenshots_server.sh"
   },
   "dependencies": {
     "dotenv": "^16.5.0",
