@@ -13,19 +13,6 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-## iOS
-
-### ios upload_debug_screenshots
-
-```sh
-[bundle exec] fastlane ios upload_debug_screenshots
-```
-
-
-
-----
-
-
 ## all
 
 ### all generate_metadata

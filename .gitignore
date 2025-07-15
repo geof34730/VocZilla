@@ -22,7 +22,7 @@ voczilla-play.json
 .env
 firebase.json
 /firebase.json
-fastlane-auth.sh
+SH/fastlane-auth.sh
 
 node_modules
 

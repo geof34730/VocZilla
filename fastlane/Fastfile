@@ -1,28 +1,4 @@
 
-platform :ios do
-  lane :upload_debug_screenshots do
-    UI.message("🚀 Lane upload_debug_screenshots démarrée !")
-    require 'fastimage'
-
-    files = `find screenshots/ios -name '*.png'`.split("\n")
-    UI.message("📂 Fichiers trouvés : #{files.size}")
-
-    files.each do |file|
-      parts = file.split("/")
-      lang = parts[3]
-      device = parts[4]
-      size = FastImage.size(file)
-
-      if size
-        UI.message("🖼 Screenshot: #{file} (lang: #{lang}, device: #{device}, size: #{size[0]}x#{size[1]})")
-      else
-        UI.important("⚠️  Cannot read size of: #{file}")
-      end
-    end
-  end
-end
-
-
 platform :all do
   desc "📸 Générer les screenshots Android & iOS multilingues"
   lane:generate_metadata do
@@ -39,14 +15,7 @@ platform :all do
 
       UI.message("🧠 Génération des métadonnées iOS...")
       Dir.chdir(project_root) { sh("dart '#{dart_script_ios}'") }
-
-
-
   end
-
-
-
-
 
 
 
@@ -63,27 +32,18 @@ platform :all do
     start_emulator_once(avd_name)
 
 
-#    "ios" => %w[
-#            iPhone\ 6.7\ inch
-#            iPhone\ 6.5\ inch
-#            iPhone\ 6.1\ inch
-#            iPhone\ 5.8\ inch
-#            iPhone\ 5.5\ inch
-#            iPhone\ 4.7\ inch
-#            iPhone\ 4.0\ inch
-#            iPad\ Pro\ (12.9-inch)
-#            iPad\ Pro\ (11-inch)
-#            iPad\ Pro\ (10.5-inch)
-#            iPad\ (10.2-inch)
-#            iPad\ Pro\ (9.7-inch)
-#          ],
-
-
     #"android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
     {
       "ios" => %w[
-        iPhone_6.7_inch
-        iPhone_6.5_inch
+          iphone4_7_inch
+          iphone5_5_inch
+          iphone5_8_inch
+          iphone6_5_inch
+          iphone6_7_inch
+          ipad_9_7_inch
+          ipad_10_5_inch
+          ipad_11_inch
+          ipad_12.9_inch
       ],
 
 
@@ -92,14 +52,6 @@ platform :all do
         run_screenshots_for_folder(folder, platform)
       end
     end
-
-
-
-
-
-
-
-
     UI.message("🚩 Arrêt de l'émulateur...")
     stop_emulator
   end
@@ -206,6 +158,7 @@ platform :all do
           --dart-define=LOCALE=#{locale} \
           --dart-define=FOR_FEATURE_GRAPHIC=#{is_feature} \
           --dart-define=PLATFORM=#{platformStore} \
+          --dart-define=DESTFOLDER=#{dest_folder} \
           --screenshot=test_driver/screenshots")
 
     rescue => e
@@ -225,9 +178,7 @@ platform :all do
        File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/")
      else
        if platformStore == "ios"
-
-         File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/#{dest_folder}/")
-
+         File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/")
        else
          File.join(project_root, "fastlane/screenshots/#{platformStore}/#{normalized_locale}/images/#{dest_folder}/")
        end
@@ -306,32 +257,26 @@ end
             sh("adb -s #{emulator_id} shell wm size 1600x2560 && adb -s #{emulator_id} shell wm density 320")
         when "FeatureGraphic"
             sh("adb -s #{emulator_id} shell wm size 1024x500 && adb -s #{emulator_id} shell wm density 160")
-        when "iPhone_6.7_inch"
-            sh("adb -s #{emulator_id} shell wm size 1290x2796 && adb -s #{emulator_id} shell wm density 460")
-        when "iPhone_6.5_inch"
-            sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 458")
-        when "iPhone_6.1_inch_(Pro)"
-            sh("adb -s #{emulator_id} shell wm size 1179x2556 && adb -s #{emulator_id} shell wm density 460")
-        when "iPhone_6.1_inch"
-            sh("adb -s #{emulator_id} shell wm size 1170x2532 && adb -s #{emulator_id} shell wm density 460")
-        when "iPhone_5.8_inch"
-            sh("adb -s #{emulator_id} shell wm size 1125x2436 && adb -s #{emulator_id} shell wm density 458")
-        when "iPhone_5.5_inch"
-            sh("adb -s #{emulator_id} shell wm size 1242x2208 && adb -s #{emulator_id} shell wm density 401")
-        when "iPhone 4.7 inch"
+        when "iphone4_7_inch"
             sh("adb -s #{emulator_id} shell wm size 750x1334 && adb -s #{emulator_id} shell wm density 326")
-        when "iPhone 4.0 inch"
-            sh("adb -s #{emulator_id} shell wm size 640x1136 && adb -s #{emulator_id} shell wm density 326")
-        when "iPad Pro (12.9-inch)"
-            sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
-        when "iPad Pro (11-inch)"
-            sh("adb -s #{emulator_id} shell wm size 1668x2388 && adb -s #{emulator_id} shell wm density 264")
-        when "iPad Pro (10.5-inch)"
-            sh("adb -s #{emulator_id} shell wm size 1668x2224 && adb -s #{emulator_id} shell wm density 264")
-        when "iPad (10.2-inch)"
-            sh("adb -s #{emulator_id} shell wm size 1620x2160 && adb -s #{emulator_id} shell wm density 264")
-        when "iPad Pro (9.7-inch)"
+        when "iphone5_5_inch"
+              sh("adb -s #{emulator_id} shell wm size 1242x2208 && adb -s #{emulator_id} shell wm density 401")
+        when "iphone5_8_inch"
+            sh("adb -s #{emulator_id} shell wm size 1125x2436 && adb -s #{emulator_id} shell wm density 458")
+        when "iphone6_1_inch"
+            sh("adb -s #{emulator_id} shell wm size 1170x2532 && adb -s #{emulator_id} shell wm density 460")
+        when "iphone6_5_inch"
+            sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 458")
+        when "iphone6_7_inch"
+            sh("adb -s #{emulator_id} shell wm size 1290x2796 && adb -s #{emulator_id} shell wm density 460")
+        when "iPad_9_7_inch"
             sh("adb -s #{emulator_id} shell wm size 1536x2048 && adb -s #{emulator_id} shell wm density 264")
+        when "iPad_10_5_inch"
+            sh("adb -s #{emulator_id} shell wm size 1668x2224 && adb -s #{emulator_id} shell wm density 264")
+        when "iPad_11_inch"
+            sh("adb -s #{emulator_id} shell wm size 1668x2388 && adb -s #{emulator_id} shell wm density 264")
+        when "iPad_12.9_inch"
+            sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
         when "Mac"
             sh("adb -s #{emulator_id} shell wm size 1280X800 && adb -s #{emulator_id} shell wm density 220")
    else

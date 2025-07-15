@@ -8,6 +8,7 @@ import '../lib/core/utils/navigatorKey.dart' show navigatorKey;
 
 void main()  {
   const String platform = String.fromEnvironment('PLATFORM', defaultValue: 'android');
+  const String destFolder = String.fromEnvironment('DESTFOLDER', defaultValue: '');
 
   enableFlutterDriverExtension(
     handler: (String? message) async {
@@ -16,9 +17,8 @@ void main()  {
         return forFeatureGraphic.toString();
       }
       if (message == 'getPlatform') return platform;
-
-
-      return '';
+      if (message == 'getDestFolder') return destFolder;
+      return "";
     },
   );
   const String localParameter = String.fromEnvironment('LOCALE', defaultValue: 'en');

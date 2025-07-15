@@ -161,13 +161,12 @@ function getAppfileInfo(appfilePath) {
           fastlane deliver \
             --ipa build/ios/ipa/voczilla.ipa \
             --force \
-            --username geoffrey.petain@gmail.com \
-            --app_identifier com.geoffreypetain.voczilla.voczilla \
-            --team_id 58A9XC46QY \
+            --screenshots_path fastlane/screenshot/ios \
+            --metadata_path fastlane/metadata/ios \
             --skip_screenshots false \
-            --skip_metadata false \
+            --skip_metadata true \
             --skip_binary_upload false \
-            --overwrite_screenshots true \
+            --overwrite_screenshots false \
             --ignore_language_directory_validation true \
             --run_precheck_before_submit false \
             --platform ios
