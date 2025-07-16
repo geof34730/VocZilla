@@ -1,148 +1,94 @@
+# /Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/Fastfile
 
 platform :all do
-  desc "📸 Générer les screenshots Android & iOS multilingues"
-  lane:generate_metadata do
-      project_root = File.expand_path("..", __dir__)
+  desc "📸 Générer les métadonnées et captures d'écran Android & iOS multilingues"
 
-      dart_script_android = File.join(project_root, "fastlane/generate_metadata_android.dart")
-      dart_script_ios = File.join(project_root, "fastlane/generate_metadata_ios.dart")
+  # Lane pour générer uniquement les fichiers de métadonnées (titres, descriptions, etc.)
+  lane :generate_metadata do
+    project_root = File.expand_path("..", __dir__)
+    dart_script_android = File.join(project_root, "fastlane/generate_metadata_android.dart")
+    dart_script_ios = File.join(project_root, "fastlane/generate_metadata_ios.dart")
 
-      UI.user_error!("❌ Script Dart android introuvable: #{dart_script_android}") unless File.exist?(dart_script_android)
-      UI.user_error!("❌ Script Dart iOS introuvable: #{dart_script_ios}") unless File.exist?(dart_script_ios)
+    UI.user_error!("❌ Script Dart android introuvable: #{dart_script_android}") unless File.exist?(dart_script_android)
+    UI.user_error!("❌ Script Dart iOS introuvable: #{dart_script_ios}") unless File.exist?(dart_script_ios)
 
-      UI.message("🧠 Génération des métadonnées Android...")
-      Dir.chdir(project_root) { sh("dart '#{dart_script_android}'") }
+    UI.message("🧠 Génération des métadonnées Android...")
+    Dir.chdir(project_root) { sh("dart '#{dart_script_android}'") }
 
-      UI.message("🧠 Génération des métadonnées iOS...")
-      Dir.chdir(project_root) { sh("dart '#{dart_script_ios}'") }
+    UI.message("🧠 Génération des métadonnées iOS...")
+    Dir.chdir(project_root) { sh("dart '#{dart_script_ios}'") }
   end
 
-
-
+  # Lane complète pour générer les captures d'écran
   lane :screenshots do
     avd_name = "emulator_tablet_10pouces_screenshots_voczilla"
     project_root = File.expand_path("..", __dir__)
 
-    sh("fastlane all generate_metadata");
+    # 1. Générer les métadonnées textuelles
+    sh("fastlane all generate_metadata")
 
+    # 2. Construire l'APK pour les tests
     UI.message("📦 Construction APK...")
     sh("flutter build apk")
 
+    # 3. Démarrer l'émulateur
     UI.message("🌟 Lancement de l'émulateur...")
     start_emulator_once(avd_name)
 
-        #phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic
+    # 4. Définir les formats de capture d'écran à générer
+    # Exemples:
+    # "android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic]
+     #"ios" => %w[iphone4_7_inch iphone5_5_inch iphone5_8_inch iphone6_5_inch iphone6_7_inch ipad_9_7_inch ipad_10_5_inch ipad_11_inch ipad_12_9_inch ipad_13_inch]
+   #"ios" => %w[iphone6_7_inch ipad_12_9_inch iPad Pro (12.9-inch) (3rd generation)],
     {
-    "android" => %w[FeatureGraphic]
-    #"ios" => %w[iphone4_7_inch iphone5_5_inch iphone5_8_inch iphone6_5_inch iphone6_7_inch ipad_9_7_inch ipad_10_5_inch ipad_11_inch ipad_12.9_inch ipad_13_inch]
-
-
+      "ios" => %w[iphone6_7_inch ipad_12_9_inch,iPad Pro (12.9-inch) (3rd generation)],
+    #  "android" => %w[FeatureGraphic]
     }.each do |platform, folders|
       folders.each do |folder|
         run_screenshots_for_folder(folder, platform)
       end
     end
+
+    # 5. Arrêter l'émulateur
     UI.message("🚩 Arrêt de l'émulateur...")
     stop_emulator
   end
 
-  def locale_mapping
-    {
-      'af' => 'af-ZA', 'am' => 'am-ET', 'ar' => 'ar', 'az' => 'az-AZ', 'be' => 'be-BY', 'bg' => 'bg-BG',
-      'bn' => 'bn-BD', 'bs' => 'bs-BA', 'ca' => 'ca-ES', 'cs' => 'cs-CZ', 'da' => 'da-DK', 'de' => 'de-DE',
-      'el' => 'el-GR', 'en' => 'en-US', 'es' => 'es-ES', 'et' => 'et', 'et-EE' => 'et' ,'eu' => 'eu-ES', 'fa' => 'fa-IR',
-      'fi' => 'fi-FI', 'fr' => 'fr-FR', 'gl' => 'gl-ES', 'gu' => 'gu-IN', 'hi' => 'hi-IN', 'hr' => 'hr-HR',
-      'hu' => 'hu-HU', 'hy' => 'hy-AM', 'id' => 'id-ID', 'is' => 'is-IS', 'it' => 'it-IT', 'iw' => 'iw-IL',
-      'ja' => 'ja-JP', 'ka' => 'ka-GE', 'kk' => 'kk-KZ', 'km' => 'km-KH', 'kn' => 'kn-IN', 'ko' => 'ko-KR',
-      'ky' => 'ky-KG', 'lo' => 'lo-LA', 'lt' => 'lt-LT', 'lv' => 'lv-LV', 'mk' => 'mk-MK', 'ml' => 'ml-IN',
-      'mn' => 'mn-MN', 'mr' => 'mr-IN', 'ms' => 'ms-MY', 'my' => 'my-MM', 'ne' => 'ne-NP', 'nl' => 'nl-NL',
-      'no' => 'no-NO', 'pa' => 'pa-IN', 'pl' => 'pl-PL', 'pt' => 'pt-BR', 'ro' => 'ro-RO', 'ru' => 'ru-RU',
-      'si' => 'si-LK', 'sk' => 'sk-SK', 'sl' => 'sl-SI', 'sq' => 'sq-AL', 'sr' => 'sr', 'sv' => 'sv-SE',
-      'sw' => 'sw', 'ta' => 'ta-IN', 'te' => 'te-IN', 'th' => 'th-TH', 'tr' => 'tr-TR', 'uk' => 'uk',
-      'ur' => 'ur', 'uz' => 'uz-UZ', 'vi' => 'vi-VN', 'zh' => 'zh-CN', 'zu' => 'zu-ZA'
-    }
+  # Appelle le script Dart centralisé pour obtenir la locale normalisée pour un store.
+  # C'est la méthode recommandée pour garantir la cohérence dans tout le projet.
+  def get_normalized_locale(locale, platform)
+    project_root = File.expand_path("..", __dir__)
+    # On appelle le script "pont" qui, lui, utilise la logique de locale_mapper.dart
+    map_script = File.join(project_root, "fastlane/invoke_locale_mapper.dart")
+    UI.user_error!("❌ Script de mapping de locale introuvable: #{map_script}") unless File.exist?(map_script)
+
+    # Exécute le script Dart et capture sa sortie. `log: false` évite de polluer la console.
+    normalized = sh("dart \"#{map_script}\" #{platform} #{locale}", log: false).strip
+
+    # Retourne la locale si le script a produit une sortie, sinon nil.
+    return normalized.empty? ? nil : normalized
   end
 
-  def play_supported_locales
-    locale_mapping.values.uniq
-  end
-
-  def normalize_locale(locale, platform)
-   mapping_ios = {
-  'en' => 'en-US',
-  'en-GB'  => 'en-GB',
-  'en-CA'  => 'en-CA',
-  'fr'  => 'fr-FR',
-  'fr-CA'  => 'fr-CA',
-  'es'  => 'es-ES',
-  'es-MX'  => 'es-MX',
-  'de'  => 'de-DE',
-  'it'  => 'it',
-  'pt'  => 'pt-PT',
-  'pt-BR'  => 'pt-BR',
-  'zh'  => 'zh-Hans',
-  'et-EE' => 'et',
-  'uk-UA' => 'uk',
-  'zh-CN'  => 'zh-Hans',
-  'zh-HK'  => 'zh-Hant',
-  'zh-TW'  => 'zh-Hant',
-  'ja'  => 'ja',
-  'ko'  => 'ko',
-  'ru'  => 'ru',
-  'ar'  => 'ar-SA',
-  'nl'  => 'nl-NL',
-  'sv'  => 'sv',
-  'fi'  => 'fi',
-  'da'  => 'da',
-  'no'  => 'no',
-  'tr'  => 'tr',
-  'pl'  => 'pl',
-  'id'  => 'id',
-  'th'  => 'th',
-  'vi' => 'vi',
-  'he' => 'he',
-  'ms' => 'ms',
-  'ro' => 'ro',
-  'cs' => 'cs',
-  'sk' => 'sk',
-  'hr' => 'hr',
-  'uk' => 'uk',
-  'hi' => 'hi',
-  'el' => 'el',
-  'ca' => 'ca',
-   }
-
-    supported_ios = mapping_ios.values.uniq
-
-    case platform
-    when "android"
-      mapped = locale_mapping[locale] || (locale =~ /^[a-z]{2}$/ ? "#{locale}-#{locale.upcase}" : locale)
-      return mapped if play_supported_locales.include?(mapped)
-    when "ios"
-      mapped = mapping_ios[locale] || locale
-      return mapped if supported_ios.include?(mapped)
-    end
-    nil
-  end
-#adb -s #{emulator_id} shell pm clear com.geoffreypetain.voczilla.voczilla &&
+  # Exécute la prise de captures pour un format d'appareil donné
   def run_screenshots_for_folder(dest_folder, platformStore)
-  project_root = File.expand_path("..", __dir__)
-  screenshots_dir = File.join(project_root, "test_driver/screenshots/")
-  FileUtils.rm_rf(screenshots_dir)
-  FileUtils.mkdir_p(screenshots_dir)
-  UI.message("🧹 Dossier screenshots nettoyé pour #{dest_folder}.")
+    project_root = File.expand_path("..", __dir__)
+    screenshots_dir = File.join(project_root, "test_driver/screenshots/")
+    emulator_id = get_running_emulator_id
 
-  emulator_id = get_running_emulator_id
-  set_emulator_resolution(emulator_id, dest_folder)
+    set_emulator_resolution(emulator_id, dest_folder)
 
-  locales = extract_locales
-  UI.user_error!("❌ Aucune locale trouvée dans lib/l10n") if locales.empty?
+    locales = extract_locales
+    UI.user_error!("❌ Aucune locale trouvée dans lib/l10n") if locales.empty?
 
-  locales.each do |locale|
-    UI.message("🌐 Locale : #{locale}")
-    is_feature = dest_folder == "FeatureGraphic"
+    locales.each do |locale|
+      # Il est crucial de nettoyer le dossier pour CHAQUE locale
+      FileUtils.rm_rf(screenshots_dir)
+      FileUtils.mkdir_p(screenshots_dir)
 
-    begin
+      UI.message("🌐 Prise des captures pour [#{dest_folder}] en [#{locale}]...")
+      is_feature = dest_folder == "FeatureGraphic"
+
+      begin
         sh("caffeinate -s flutter drive \
           --driver=test_driver/integration_test.dart \
           --target=test_driver/app.dart \
@@ -152,49 +98,53 @@ platform :all do
           --dart-define=PLATFORM=#{platformStore} \
           --dart-define=DESTFOLDER=#{dest_folder} \
           --screenshot=test_driver/screenshots")
+      rescue => e
+        UI.error("🚨 Erreur durant flutter drive pour #{locale}/#{dest_folder} : #{e}")
+        next
+      end
 
-    rescue => e
-      UI.error("🚨 Erreur durant flutter drive pour #{locale}/#{dest_folder} : #{e}")
-      next
+      # Utilise la logique centralisée pour obtenir le nom du dossier de locale
+      normalized_locale = get_normalized_locale(locale, platformStore)
+      next unless normalized_locale
+
+      # Supprime les captures d'écran par défaut générées par flutter_driver (ex: driver_01.png)
+      driver_files_to_delete = Dir[File.join(screenshots_dir, "driver*.png")]
+      unless driver_files_to_delete.empty?
+        UI.message("🗑️  Suppression des captures intermédiaires: #{driver_files_to_delete.join(', ')}")
+        FileUtils.rm(driver_files_to_delete)
+      end
+
+      # Copie les captures d'écran restantes
+      screenshots = Dir[File.join(screenshots_dir, "*.png")]
+
+      dest_dir = if is_feature
+                   File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/")
+                 else
+                   if platformStore == "ios"
+                     File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/")
+                   else
+                     File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/#{dest_folder}/")
+                   end
+                 end
+
+      UI.message("📁 Copie des captures vers : #{dest_dir}")
+      FileUtils.mkdir_p(dest_dir)
+      screenshots.empty? ? UI.important("Aucune capture pour #{locale}") : FileUtils.cp(screenshots, dest_dir)
     end
 
-    normalized_locale = normalize_locale(locale, platformStore)
-    next unless normalized_locale
-
-    screenshots = Dir[File.join(screenshots_dir, "*.png")]
-
-    dest_dir = File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/#{dest_folder}/")
-    UI.message("📁 Creating directory: #{dest_dir}")
-
-     dest_dir = if is_feature
-       File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/")
-     else
-       if platformStore == "ios"
-         File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/")
-       else
-         File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/#{dest_folder}/")
-       end
-     end
-
-    FileUtils.mkdir_p(dest_dir)
-    screenshots.empty? ? UI.important("Aucune capture pour #{locale}") : FileUtils.cp(screenshots, dest_dir)
+    reset_emulator_resolution(emulator_id)
   end
 
-  reset_emulator_resolution(emulator_id)
-end
+  # Extrait les locales depuis les noms de fichiers .arb
+  def extract_locales
+    project_root = File.expand_path("..", __dir__)
+    arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
+    locales = arb_files.map { |f| f.match(/app_(.+)\.arb$/)&.captures&.first }.compact.uniq
+    UI.user_error!("❌ Aucune locale trouvée dans les fichiers ARB.") if locales.empty?
+    locales
+  end
 
-
-def extract_locales
-  project_root = File.expand_path("..", __dir__)
-  arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
-  locales = arb_files.map do |f|
-    match = f.match(/app_(.+)\.arb$/)
-    match[1] if match
-  end.compact.uniq
-
-  UI.user_error!("❌ Erreur d'extraction des locales: aucun nom de locale trouvé dans les fichiers ARB") if locales.empty?
-  locales
-end
+  # --- Helpers pour l'émulateur ---
 
   def get_running_emulator_id
     line = sh("adb devices", log: false).lines.find { |l| l.start_with?("emulator") && l.include?("device") }
@@ -202,23 +152,23 @@ end
   end
 
   def start_emulator_once(avd_name)
-    devices = sh("adb devices", log: false)
-    unless devices.lines.any? { |line| line.start_with?("emulator") && line.include?("device") }
-      emulator_cmd = [
-        ENV['ANDROID_HOME'] + "/emulator/emulator",
-        "-avd", avd_name,
-        "-no-snapshot-load",
-        "-no-audio"
-      ]
-      Process.spawn(*emulator_cmd, [:out, :err] => "/dev/null")
+    return if get_running_emulator_id
 
-      UI.message("⌛ Attente de connexion ADB...")
-      24.times do
-        sleep(5)
-        devices = sh("adb devices", log: false)
-        break if devices.lines.any? { |line| line.start_with?("emulator") && line.include?("device") }
-      end
+    emulator_cmd = [
+      File.join(ENV['ANDROID_HOME'], "emulator", "emulator"),
+      "-avd", avd_name,
+      "-no-snapshot-load",
+      "-no-audio"
+    ]
+    Process.spawn(*emulator_cmd, [:out, :err] => "/dev/null")
+
+    UI.message("⌛ Attente de connexion ADB...")
+    24.times do
+      sleep(5)
+      break if get_running_emulator_id
     end
+
+    UI.user_error!("❌ L'émulateur n'a pas démarré après 2 minutes.") unless get_running_emulator_id
 
     UI.message("⚙️ Attente de boot complet Android...")
     24.times do
@@ -240,41 +190,41 @@ end
   end
 
   def set_emulator_resolution(emulator_id, dest_folder)
-   case dest_folder
-        when "phoneScreenshots"
-            sh("adb -s #{emulator_id} shell wm size 1080x1920 && adb -s #{emulator_id} shell wm density 420")
-        when "sevenInchScreenshots"
-            sh("adb -s #{emulator_id} shell wm size 800x1280 && adb -s #{emulator_id} shell wm density 213")
-        when "tenInchScreenshots"
-            sh("adb -s #{emulator_id} shell wm size 1600x2560 && adb -s #{emulator_id} shell wm density 320")
-        when "FeatureGraphic"
-            sh("adb -s #{emulator_id} shell wm size 1024x500 && adb -s #{emulator_id} shell wm density 160")
-        when "iphone4_7_inch"
-            sh("adb -s #{emulator_id} shell wm size 750x1334 && adb -s #{emulator_id} shell wm density 326")
-        when "iphone5_5_inch"
-              sh("adb -s #{emulator_id} shell wm size 1242x2208 && adb -s #{emulator_id} shell wm density 401")
-        when "iphone5_8_inch"
-            sh("adb -s #{emulator_id} shell wm size 1125x2436 && adb -s #{emulator_id} shell wm density 458")
-        when "iphone6_1_inch"
-            sh("adb -s #{emulator_id} shell wm size 1170x2532 && adb -s #{emulator_id} shell wm density 460")
-        when "iphone6_5_inch"
-            sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 458")
-        when "iphone6_7_inch"
-            sh("adb -s #{emulator_id} shell wm size 1290x2796 && adb -s #{emulator_id} shell wm density 460")
-        when "iPad_9_7_inch"
-            sh("adb -s #{emulator_id} shell wm size 1536x2048 && adb -s #{emulator_id} shell wm density 264")
-        when "iPad_10_5_inch"
-            sh("adb -s #{emulator_id} shell wm size 1668x2224 && adb -s #{emulator_id} shell wm density 264")
-        when "iPad_11_inch"
-            sh("adb -s #{emulator_id} shell wm size 1668x2388 && adb -s #{emulator_id} shell wm density 264")
-        when "iPad_12.9_inch"
-            sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
-        when "iPad_13_inch"
-            sh("adb -s #{emulator_id} shell wm size 2064x2752 && adb -s #{emulator_id} shell wm density 264")
-        when "Mac"
-            sh("adb -s #{emulator_id} shell wm size 1440x900 && adb -s #{emulator_id} shell wm density 220")
-   else
-     UI.error("Unsupported size: #{dest_folder}")
-   end
+    case dest_folder
+    when "phoneScreenshots"
+      sh("adb -s #{emulator_id} shell wm size 1080x1920 && adb -s #{emulator_id} shell wm density 420")
+    when "sevenInchScreenshots"
+      sh("adb -s #{emulator_id} shell wm size 800x1280 && adb -s #{emulator_id} shell wm density 213")
+    when "tenInchScreenshots"
+      sh("adb -s #{emulator_id} shell wm size 1600x2560 && adb -s #{emulator_id} shell wm density 320")
+    when "FeatureGraphic"
+      sh("adb -s #{emulator_id} shell wm size 1024x500 && adb -s #{emulator_id} shell wm density 160")
+    when "iphone4_7_inch"
+      sh("adb -s #{emulator_id} shell wm size 750x1334 && adb -s #{emulator_id} shell wm density 326")
+    when "iphone5_5_inch"
+      sh("adb -s #{emulator_id} shell wm size 1242x2208 && adb -s #{emulator_id} shell wm density 401")
+    when "iphone5_8_inch"
+      sh("adb -s #{emulator_id} shell wm size 1125x2436 && adb -s #{emulator_id} shell wm density 458")
+    when "iphone6_1_inch"
+      sh("adb -s #{emulator_id} shell wm size 1170x2532 && adb -s #{emulator_id} shell wm density 460")
+    when "iphone6_5_inch"
+      sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 458")
+    when "iphone6_7_inch"
+      sh("adb -s #{emulator_id} shell wm size 1290x2796 && adb -s #{emulator_id} shell wm density 460")
+    when "ipad_9_7_inch"
+      sh("adb -s #{emulator_id} shell wm size 1536x2048 && adb -s #{emulator_id} shell wm density 264")
+    when "ipad_10_5_inch"
+      sh("adb -s #{emulator_id} shell wm size 1668x2224 && adb -s #{emulator_id} shell wm density 264")
+    when "ipad_11_inch"
+      sh("adb -s #{emulator_id} shell wm size 1668x2388 && adb -s #{emulator_id} shell wm density 264")
+    when "ipad_12_9_inch"
+      sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
+    when "iPad Pro (12.9-inch) (3rd generation)"
+      sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
+    when "Mac"
+      sh("adb -s #{emulator_id} shell wm size 1440x900 && adb -s #{emulator_id} shell wm density 220")
+    else
+      UI.error("Unsupported size: #{dest_folder}")
+    end
   end
 end

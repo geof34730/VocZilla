@@ -21,7 +21,7 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane all generate_metadata
 ```
 
-📸 Générer les screenshots Android & iOS multilingues
+📸 Générer les métadonnées et captures d'écran Android & iOS multilingues
 
 ### all screenshots
 

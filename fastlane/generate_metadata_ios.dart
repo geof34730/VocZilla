@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'locale_mapper.dart';
 
 // dart fastlane/generate_metadata_ios.dart
 Future<int> getLastBuildNumber() async {
@@ -46,11 +47,11 @@ void main() async {
     final shortDescription = content['app_short_description'] ?? 'short description manquant';
     final releaseNote = content['app_release_note'] ?? 'app release note manquant';
     final String subtitle=content['app_subtitle'] ?? 'app subtitle manquant';
-    final iosLocale = toAppleLocale(locale);
+    final iosLocale = toAppleLocale(locale); // Utilise la bibliothèque partagée
 
     writeMetadata(
       outputDir.path,
-      iosLocale,
+      iosLocale!,
       title,
       subtitle,
       description,
@@ -146,87 +147,4 @@ String truncateSubtitle(String input) {
   }
 
   return result;
-}
-
-
-// Liste officielle des locales supportées par l'App Store (2024)
-const Map<String, String> appleLocaleMapping = {
-  'en': 'en-US',
-  'en-GB': 'en-GB',
-  'en-CA': 'en-CA',
-  'fr': 'fr-FR',
-  'fr-CA': 'fr-CA',
-  'es': 'es-ES',
-  'es-MX': 'es-MX',
-  'de': 'de-DE',
-  'it': 'it',
-  'pt': 'pt-PT',
-  'pt-BR': 'pt-BR',
-  'zh': 'zh-Hans',
-  'zh-CN': 'zh-Hans',
-  'zh-HK': 'zh-Hant',
-  'zh-TW': 'zh-Hant',
-  'ja': 'ja',
-  'ko': 'ko',
-  'ru': 'ru',
-  'ar': 'ar-SA',
-  'nl': 'nl-NL',
-  'sv': 'sv',
-  'fi': 'fi',
-  'da': 'da',
-  'no': 'no',
-  'tr': 'tr',
-  'pl': 'pl',
-  'id': 'id',
-  'th': 'th',
-  'vi': 'vi',
-  'he': 'he',
-  'ms': 'ms',
-  'ro': 'ro',
-  'cs': 'cs',
-  'sk': 'sk',
-  'hr': 'hr',
-  'uk': 'uk',
-  'hi': 'hi',
-  'el': 'el',
-  'ca': 'ca',
-  // ajoute d'autres si nécessaire
-};
-
-const Set<String> appStoreSupportedLocales = {
-  'ar-SA', 'ca', 'cs', 'da', 'de-DE', 'el', 'en-AU', 'en-CA', 'en-GB', 'en-US',
-  'es-ES', 'es-MX', 'fi', 'fr-CA', 'fr-FR', 'he', 'hi', 'hr', 'hu', 'id', 'it',
-  'ja', 'ko', 'ms', 'nl-NL', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk',
-  'sv', 'th', 'tr', 'uk', 'vi', 'zh-Hans', 'zh-Hant'
-};
-
-
-String toAppleLocale(String locale) {
-  // 1. Mapping explicite
-  if (appleLocaleMapping.containsKey(locale)) {
-    final appleLocale = appleLocaleMapping[locale]!;
-    return appStoreSupportedLocales.contains(appleLocale) ? appleLocale : 'en-US';
-  }
-
-  // 2. xx_XX ou xx-XX → xx-XX
-  final match = RegExp(r'^([a-z]{2,3})[_-]([A-Z]{2,3})$').firstMatch(locale);
-  if (match != null) {
-    final appleLocale = '${match.group(1)}-${match.group(2)}';
-    return appStoreSupportedLocales.contains(appleLocale) ? appleLocale : 'en-US';
-  }
-
-  // 3. xx → mapping ou xx-XX
-  final twoLetterLocale = RegExp(r'^[a-z]{2}$');
-  if (twoLetterLocale.hasMatch(locale)) {
-    final appleLocale = '${locale}';
-    return appStoreSupportedLocales.contains(appleLocale) ? appleLocale : 'en-US';
-  }
-
-  // 4. Si déjà au bon format et supporté
-  if (appStoreSupportedLocales.contains(locale)) {
-    return locale;
-  }
-
-  // 5. Sinon, fallback
-  return 'en-US';
 }

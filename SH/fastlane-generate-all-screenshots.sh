@@ -1,0 +1,1 @@
+fastlane all screenshots
