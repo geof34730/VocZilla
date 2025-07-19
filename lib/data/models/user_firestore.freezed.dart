@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -18,6 +17,9 @@ mixin _$UserFirestore {
   String get uid;
   String get email;
   String get displayName;
+  String get lastName;
+  String get firstName;
+  String get pseudo;
   String get photoURL;
   String get providerId;
   bool get isEmailVerified;
@@ -44,6 +46,11 @@ mixin _$UserFirestore {
             (identical(other.email, email) || other.email == email) &&
             (identical(other.displayName, displayName) ||
                 other.displayName == displayName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.pseudo, pseudo) || other.pseudo == pseudo) &&
             (identical(other.photoURL, photoURL) ||
                 other.photoURL == photoURL) &&
             (identical(other.providerId, providerId) ||
@@ -62,6 +69,9 @@ mixin _$UserFirestore {
       uid,
       email,
       displayName,
+      lastName,
+      firstName,
+      pseudo,
       photoURL,
       providerId,
       isEmailVerified,
@@ -70,7 +80,7 @@ mixin _$UserFirestore {
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmTokens: $fcmTokens)';
+    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, lastName: $lastName, firstName: $firstName, pseudo: $pseudo, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmTokens: $fcmTokens)';
   }
 }
 
@@ -84,6 +94,9 @@ abstract mixin class $UserFirestoreCopyWith<$Res> {
       {String uid,
       String email,
       String displayName,
+      String lastName,
+      String firstName,
+      String pseudo,
       String photoURL,
       String providerId,
       bool isEmailVerified,
@@ -107,6 +120,9 @@ class _$UserFirestoreCopyWithImpl<$Res>
     Object? uid = null,
     Object? email = null,
     Object? displayName = null,
+    Object? lastName = null,
+    Object? firstName = null,
+    Object? pseudo = null,
     Object? photoURL = null,
     Object? providerId = null,
     Object? isEmailVerified = null,
@@ -125,6 +141,18 @@ class _$UserFirestoreCopyWithImpl<$Res>
       displayName: null == displayName
           ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastName: null == lastName
+          ? _self.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      firstName: null == firstName
+          ? _self.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      pseudo: null == pseudo
+          ? _self.pseudo
+          : pseudo // ignore: cast_nullable_to_non_nullable
               as String,
       photoURL: null == photoURL
           ? _self.photoURL
@@ -150,6 +178,232 @@ class _$UserFirestoreCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [UserFirestore].
+extension UserFirestorePatterns on UserFirestore {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_UserFirestore value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _UserFirestore() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_UserFirestore value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _UserFirestore():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_UserFirestore value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _UserFirestore() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String uid,
+            String email,
+            String displayName,
+            String lastName,
+            String firstName,
+            String pseudo,
+            String photoURL,
+            String providerId,
+            bool isEmailVerified,
+            DateTime? createdAt,
+            List<String> fcmTokens)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _UserFirestore() when $default != null:
+        return $default(
+            _that.uid,
+            _that.email,
+            _that.displayName,
+            _that.lastName,
+            _that.firstName,
+            _that.pseudo,
+            _that.photoURL,
+            _that.providerId,
+            _that.isEmailVerified,
+            _that.createdAt,
+            _that.fcmTokens);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String uid,
+            String email,
+            String displayName,
+            String lastName,
+            String firstName,
+            String pseudo,
+            String photoURL,
+            String providerId,
+            bool isEmailVerified,
+            DateTime? createdAt,
+            List<String> fcmTokens)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _UserFirestore():
+        return $default(
+            _that.uid,
+            _that.email,
+            _that.displayName,
+            _that.lastName,
+            _that.firstName,
+            _that.pseudo,
+            _that.photoURL,
+            _that.providerId,
+            _that.isEmailVerified,
+            _that.createdAt,
+            _that.fcmTokens);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String uid,
+            String email,
+            String displayName,
+            String lastName,
+            String firstName,
+            String pseudo,
+            String photoURL,
+            String providerId,
+            bool isEmailVerified,
+            DateTime? createdAt,
+            List<String> fcmTokens)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _UserFirestore() when $default != null:
+        return $default(
+            _that.uid,
+            _that.email,
+            _that.displayName,
+            _that.lastName,
+            _that.firstName,
+            _that.pseudo,
+            _that.photoURL,
+            _that.providerId,
+            _that.isEmailVerified,
+            _that.createdAt,
+            _that.fcmTokens);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _UserFirestore implements UserFirestore {
@@ -157,6 +411,9 @@ class _UserFirestore implements UserFirestore {
       {required this.uid,
       required this.email,
       required this.displayName,
+      required this.lastName,
+      required this.firstName,
+      required this.pseudo,
       required this.photoURL,
       required this.providerId,
       required this.isEmailVerified,
@@ -172,6 +429,12 @@ class _UserFirestore implements UserFirestore {
   final String email;
   @override
   final String displayName;
+  @override
+  final String lastName;
+  @override
+  final String firstName;
+  @override
+  final String pseudo;
   @override
   final String photoURL;
   @override
@@ -212,6 +475,11 @@ class _UserFirestore implements UserFirestore {
             (identical(other.email, email) || other.email == email) &&
             (identical(other.displayName, displayName) ||
                 other.displayName == displayName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.pseudo, pseudo) || other.pseudo == pseudo) &&
             (identical(other.photoURL, photoURL) ||
                 other.photoURL == photoURL) &&
             (identical(other.providerId, providerId) ||
@@ -231,6 +499,9 @@ class _UserFirestore implements UserFirestore {
       uid,
       email,
       displayName,
+      lastName,
+      firstName,
+      pseudo,
       photoURL,
       providerId,
       isEmailVerified,
@@ -239,7 +510,7 @@ class _UserFirestore implements UserFirestore {
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmTokens: $fcmTokens)';
+    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, lastName: $lastName, firstName: $firstName, pseudo: $pseudo, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmTokens: $fcmTokens)';
   }
 }
 
@@ -255,6 +526,9 @@ abstract mixin class _$UserFirestoreCopyWith<$Res>
       {String uid,
       String email,
       String displayName,
+      String lastName,
+      String firstName,
+      String pseudo,
       String photoURL,
       String providerId,
       bool isEmailVerified,
@@ -278,6 +552,9 @@ class __$UserFirestoreCopyWithImpl<$Res>
     Object? uid = null,
     Object? email = null,
     Object? displayName = null,
+    Object? lastName = null,
+    Object? firstName = null,
+    Object? pseudo = null,
     Object? photoURL = null,
     Object? providerId = null,
     Object? isEmailVerified = null,
@@ -296,6 +573,18 @@ class __$UserFirestoreCopyWithImpl<$Res>
       displayName: null == displayName
           ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastName: null == lastName
+          ? _self.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      firstName: null == firstName
+          ? _self.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      pseudo: null == pseudo
+          ? _self.pseudo
+          : pseudo // ignore: cast_nullable_to_non_nullable
               as String,
       photoURL: null == photoURL
           ? _self.photoURL

@@ -237,6 +237,12 @@ class AppLocalizationsNo extends AppLocalizations {
   String get login_entrer_nom => 'Skriv inn navnet ditt';
 
   @override
+  String get login_pseudo => 'Pseudo';
+
+  @override
+  String get login_entrer_pseudo => 'Skriv inn brukernavnet ditt';
+
+  @override
   String get login_mot_de_passe => 'Passord';
 
   @override
@@ -343,4 +349,7 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get no_vocabulary_in_my_list => 'Du har ikke noe vokabular i denne listen. Legg til noe ved å redigere listen.';
+
+  @override
+  String get anonymous_user => 'Anonym bruker';
 }

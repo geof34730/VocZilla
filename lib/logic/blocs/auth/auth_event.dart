@@ -1,6 +1,9 @@
 // lib/logic/blocs/auth/auth_event.dart
 import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
+
+import '../notification/notification_bloc.dart';
 
 abstract class AuthEvent extends Equatable {
   const AuthEvent();
@@ -14,13 +17,14 @@ class SignUpRequested extends AuthEvent {
   final String password;
   final String firstName;
   final String lastName;
+  final String pseudo;
 
   SignUpRequested({
     required this.email,
     required this.password,
     required this.firstName,
     required this.lastName,
-
+    required this.pseudo,
   });
 }
 class AppStarted extends AuthEvent {}
@@ -53,10 +57,23 @@ class UpdateUserEvent extends AuthEvent {
   List<Object> get props => [user];
 }
 
-class UpdateDisplayNameEvent extends AuthEvent {
+
+
+class UpdateUserProfilEvent extends AuthEvent {
   final String displayName;
-  const UpdateDisplayNameEvent(this.displayName);
+  final String lastName;
+  final String firstName;
+  final String pseudo;
+  final NotificationBloc notificationBloc;
+
+  const UpdateUserProfilEvent({
+    required this.displayName,
+    required this.lastName,
+    required this.firstName,
+    required this.pseudo,
+    required this.notificationBloc,
+  });
 
   @override
-  List<Object> get props => [displayName];
+  List<Object> get props => [displayName, lastName, firstName, pseudo];
 }

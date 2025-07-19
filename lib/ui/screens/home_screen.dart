@@ -4,10 +4,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/data/repository/vocabulaire_repository.dart';
 import 'package:vobzilla/ui/widget/home/CardHome.dart';
+import 'package:vobzilla/ui/widget/home/HomeClassement.dart';
 import 'package:vobzilla/ui/widget/home/HomeListTheme.dart';
 import 'package:vobzilla/ui/widget/statistical/global_statisctical_widget.dart';
 import '../../core/utils/ui.dart';
+import '../../data/repository/data_user_repository.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
+import '../../logic/blocs/notification/notification_bloc.dart';
+import '../../logic/blocs/notification/notification_event.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
 import '../widget/home/TitleWidget.dart';
@@ -26,11 +30,19 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            /*
-            ElevatedButton(onPressed: (){
-              Navigator.pushReplacementNamed(context, "/update");
-            }, child: Text("Update app")
-            ),*/
+            /*ElevatedButton(onPressed: (){
+              DataUserRepository().emailVerifiedUpdateUserFirestore();
+            }, child: Text("emailVerifiedUpdateUserFirestore")
+            ),
+       */
+
+            ElevatedButton(onPressed: () {
+              context.read<NotificationBloc>().add(ShowNotification(
+                message: "Profil utilisateur mis à jour avec succès",
+                backgroundColor: Colors.green,
+              ));
+            }, child: Text("emailVerifiedUpdateUserFirestore")
+            ),
             Text(
                 context.loc.home_title_progresse,
                 style: TextStyle(
@@ -80,9 +92,7 @@ class HomeScreen extends StatelessWidget {
             titleWidget(text: context.loc.by_themes),
             HomelistThemes(),
             titleWidget(text: context.loc.home_title_classement),
-            CardClassementGamer(position: 1),
-            CardClassementGamer(position: 2),
-            CardClassementGamer(position: 3),
+            HomeClassement()
           ]
 
     );

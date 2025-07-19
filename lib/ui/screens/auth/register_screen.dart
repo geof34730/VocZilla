@@ -16,27 +16,53 @@ import '../../widget/elements/Loading.dart';
 import '../../widget/form/CustomPasswordField.dart';
 import '../../widget/form/CustomTextField.dart';
 
-class RegisterScreen extends StatelessWidget {
-  RegisterScreen({super.key});
-  final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
-  final TextEditingController passwordController = TextEditingController(text:"sdfsdfs@ddd-df");
-  final TextEditingController firstNameController = TextEditingController(text: 'John');
-  final TextEditingController lastNameController = TextEditingController(text: 'Doe');
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  late final TextEditingController emailController;
+  late final TextEditingController passwordController;
+  late final TextEditingController firstNameController;
+  late final TextEditingController lastNameController;
+  late final TextEditingController pseudoController;
+
+  @override
+  void initState() {
+    super.initState();
+    emailController = TextEditingController(text:"geoffrey.petain@gmail.com");
+    passwordController = TextEditingController(text:"Hefpccy%08%08");
+    firstNameController = TextEditingController(text:"Geoffrey");
+    lastNameController = TextEditingController(text:"Petain");
+    pseudoController = TextEditingController(text:"GeofMix");
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    firstNameController.dispose();
+    lastNameController.dispose();
+    pseudoController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return BackgroundBlueLinear(
-
         child: BlocConsumer<AuthBloc, AuthState>(
             listener: (context, state) {
               if (state is AuthError) {
                 ErrorMessage(context:context, message:state.message);
               }
-              if (state is AuthLoading) {
-                Loading();
-              }
             },
             builder: (context, state) {
+              if (state is AuthLoading) {
+                return const Loading();
+              }
               return Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
@@ -60,6 +86,13 @@ class RegisterScreen extends StatelessWidget {
                       labelText: context.loc.login_mot_de_passe,
                       hintText: context.loc.login_entrer_mot_de_passe,
                     ),
+
+
+                    CustomTextField(
+                      controller: pseudoController,
+                      labelText: context.loc.login_pseudo,
+                      hintText: context.loc.login_entrer_pseudo,
+                    ),
                     CustomTextField(
                       controller: firstNameController,
                       labelText: context.loc.login_prenom,
@@ -82,6 +115,7 @@ class RegisterScreen extends StatelessWidget {
                             password: passwordController.text,
                             firstName: firstNameController.text,
                             lastName: lastNameController.text,
+                            pseudo: pseudoController.text,
                           ));
                         },
                         child: Text(context.loc.login_sinscrire),

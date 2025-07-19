@@ -12,6 +12,9 @@ class ScaledAppBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+    return child;
     return LayoutBuilder(
       builder: (context, constraints) {
         double scale = constraints.maxWidth / designWidth;

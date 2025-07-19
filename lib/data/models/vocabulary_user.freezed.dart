@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -114,6 +113,187 @@ class _$VocabulaireUserCopyWithImpl<$Res>
           : countVocabulaireAll // ignore: cast_nullable_to_non_nullable
               as int,
     ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [VocabulaireUser].
+extension VocabulaireUserPatterns on VocabulaireUser {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_VocabulaireUser value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _VocabulaireUser() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_VocabulaireUser value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _VocabulaireUser():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_VocabulaireUser value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _VocabulaireUser() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: "ListPerso") List<ListPerso> listPerso,
+            @JsonKey(name: "ListTheme") List<ListTheme> listTheme,
+            @JsonKey(name: "ListGuidVocabularyLearned")
+            List<String> listGuidVocabularyLearned,
+            @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+            int countVocabulaireAll)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _VocabulaireUser() when $default != null:
+        return $default(_that.listPerso, _that.listTheme,
+            _that.listGuidVocabularyLearned, _that.countVocabulaireAll);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: "ListPerso") List<ListPerso> listPerso,
+            @JsonKey(name: "ListTheme") List<ListTheme> listTheme,
+            @JsonKey(name: "ListGuidVocabularyLearned")
+            List<String> listGuidVocabularyLearned,
+            @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+            int countVocabulaireAll)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _VocabulaireUser():
+        return $default(_that.listPerso, _that.listTheme,
+            _that.listGuidVocabularyLearned, _that.countVocabulaireAll);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: "ListPerso") List<ListPerso> listPerso,
+            @JsonKey(name: "ListTheme") List<ListTheme> listTheme,
+            @JsonKey(name: "ListGuidVocabularyLearned")
+            List<String> listGuidVocabularyLearned,
+            @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+            int countVocabulaireAll)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _VocabulaireUser() when $default != null:
+        return $default(_that.listPerso, _that.listTheme,
+            _that.listGuidVocabularyLearned, _that.countVocabulaireAll);
+      case _:
+        return null;
+    }
   }
 }
 
@@ -397,6 +577,211 @@ class _$ListPersoCopyWithImpl<$Res> implements $ListPersoCopyWith<$Res> {
   }
 }
 
+/// Adds pattern-matching-related methods to [ListPerso].
+extension ListPersoPatterns on ListPerso {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_ListPerso value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ListPerso() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_ListPerso value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListPerso():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_ListPerso value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListPerso() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: "guid") String guid,
+            @JsonKey(name: "title") String title,
+            @JsonKey(name: "color") int color,
+            @JsonKey(name: "listGuidVocabulary")
+            List<String> listGuidVocabulary,
+            @JsonKey(name: "isListShare") bool isListShare,
+            @JsonKey(name: "ownListShare") bool ownListShare,
+            @JsonKey(name: "urlShare") String urlShare)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ListPerso() when $default != null:
+        return $default(
+            _that.guid,
+            _that.title,
+            _that.color,
+            _that.listGuidVocabulary,
+            _that.isListShare,
+            _that.ownListShare,
+            _that.urlShare);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: "guid") String guid,
+            @JsonKey(name: "title") String title,
+            @JsonKey(name: "color") int color,
+            @JsonKey(name: "listGuidVocabulary")
+            List<String> listGuidVocabulary,
+            @JsonKey(name: "isListShare") bool isListShare,
+            @JsonKey(name: "ownListShare") bool ownListShare,
+            @JsonKey(name: "urlShare") String urlShare)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListPerso():
+        return $default(
+            _that.guid,
+            _that.title,
+            _that.color,
+            _that.listGuidVocabulary,
+            _that.isListShare,
+            _that.ownListShare,
+            _that.urlShare);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: "guid") String guid,
+            @JsonKey(name: "title") String title,
+            @JsonKey(name: "color") int color,
+            @JsonKey(name: "listGuidVocabulary")
+            List<String> listGuidVocabulary,
+            @JsonKey(name: "isListShare") bool isListShare,
+            @JsonKey(name: "ownListShare") bool ownListShare,
+            @JsonKey(name: "urlShare") String urlShare)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListPerso() when $default != null:
+        return $default(
+            _that.guid,
+            _that.title,
+            _that.color,
+            _that.listGuidVocabulary,
+            _that.isListShare,
+            _that.ownListShare,
+            _that.urlShare);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _ListPerso implements ListPerso {
@@ -649,6 +1034,178 @@ class _$ListThemeCopyWithImpl<$Res> implements $ListThemeCopyWith<$Res> {
           : listGuidVocabulary // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [ListTheme].
+extension ListThemePatterns on ListTheme {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_ListTheme value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ListTheme() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_ListTheme value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListTheme():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_ListTheme value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListTheme() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: "guid") String guid,
+            @JsonKey(name: "title") Map<String, String> title,
+            @JsonKey(name: "listGuidVocabulary")
+            List<String> listGuidVocabulary)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ListTheme() when $default != null:
+        return $default(_that.guid, _that.title, _that.listGuidVocabulary);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: "guid") String guid,
+            @JsonKey(name: "title") Map<String, String> title,
+            @JsonKey(name: "listGuidVocabulary")
+            List<String> listGuidVocabulary)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListTheme():
+        return $default(_that.guid, _that.title, _that.listGuidVocabulary);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: "guid") String guid,
+            @JsonKey(name: "title") Map<String, String> title,
+            @JsonKey(name: "listGuidVocabulary")
+            List<String> listGuidVocabulary)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ListTheme() when $default != null:
+        return $default(_that.guid, _that.title, _that.listGuidVocabulary);
+      case _:
+        return null;
+    }
   }
 }
 

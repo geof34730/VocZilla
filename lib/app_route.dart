@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/ui/featureGraphic.dart';
@@ -5,6 +6,10 @@ import 'package:vobzilla/ui/screens/personalisation/step2.dart';
 import 'package:vobzilla/ui/screens/update_screen.dart';
 
 import 'core/utils/feature_graphic_flag.dart';
+import 'logic/blocs/auth/auth_event.dart';
+import 'logic/blocs/notification/notification_bloc.dart';
+import 'logic/blocs/notification/notification_event.dart';
+import 'logic/blocs/notification/notification_state.dart';
 import 'logic/check_connectivity.dart';
 import 'core/utils/logger.dart';
 import 'logic/blocs/update/update_state.dart';
@@ -70,15 +75,38 @@ class AppRoute {
         return MultiBlocListener(
           listeners: [
             BlocListener<AuthBloc, AuthState>(
-              listener: (context, authState) {
+              listener: (context, authState) async {
                 Logger.Red.log('ROUTE listener AuthBloc');
                 if (authState is AuthAuthenticated) {
                   final user = authState.user;
-                  if (!user!.emailVerified && settings.name != verifiedEmail) {
+
+                  // 1. Ajout d'une vérification de nullité pour la robustesse
+                  if (user == null) {
+                   // _redirectTo(context, settings, login);
+                    return;
+                  }
+                  if (!user.emailVerified &&
+                      settings.name != verifiedEmail &&
+                      !user.providerData.any((info) =>
+                      info.providerId == 'facebook.com' ||
+                          info.providerId == 'google.com' ||
+                          info.providerId == 'apple.com'
+                      )
+                  ){
                     Logger.Red.log('ROUTE !user!.emailVerified');
-                    user.sendEmailVerification();
+                    try {
+                      await user.sendEmailVerification();
+                    } catch (e) {
+                      if (context.mounted && e is FirebaseAuthException && e.code == 'too-many-requests') {
+                          // Affiche un message à l'utilisateur
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text("Trop de demandes. Réessaie plus tard."))
+                          );
+                      }
+                    }
                     notRedirectNow = false;
-                    _redirectTo(context, settings, verifiedEmail);
+                    Logger.Green.log("REDIRIGE VERS VERIFER EMAIL PAS EMAIL VALIDE");
+                    Navigator.pushReplacementNamed(context, verifiedEmail);
                   } else if ((user.displayName == null || user.displayName!.isEmpty) && settings.name != updateProfile) {
                     Logger.Red.log('ROUTE user.displayName == null');
                     notRedirectNow = false;
@@ -102,26 +130,30 @@ class AppRoute {
             ),
             BlocListener<UserBloc, UserState>(
               listener: (context, userState) {
-                Logger.Red.log("BlocListener<UserBloc, UserState>");
-                if (userState is UserFreeTrialPeriodAndNotSubscribed) {
-                  userRepository.showDialogueFreeTrialOnceByDay(context: context);
-                }
-                if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
-                  Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
-                  if (settings.name != subscription) {
-                    notRedirectNow = false;
-                    Navigator.pushReplacementNamed(context, subscription);
+                if (FirebaseAuth.instance.currentUser != null) {
+                  Logger.Red.log("BlocListener<UserBloc, UserState>");
+                  if (userState is UserFreeTrialPeriodAndNotSubscribed) {
+                    userRepository.showDialogueFreeTrialOnceByDay(context: context);
+                  }
+                  if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
+                    Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
+                    if (settings.name != subscription) {
+                      notRedirectNow = false;
+                      Navigator.pushReplacementNamed(context, subscription);
+                    }
                   }
                 }
               },
             ),
             BlocListener<PurchaseBloc, PurchaseState>(
               listener: (context, purchaseState) {
-                Logger.Red.log("BlocListener<PurchaseBloc, PurchaseState>");
-                if (purchaseState is PurchaseCompleted) {
-                  Logger.Red.log('Purchase completed, redirecting to HomeScreen');
-                  userRepository.checkUserStatusForce();
-                  Navigator.pushReplacementNamed(context, home);
+                if (FirebaseAuth.instance.currentUser != null) {
+                  Logger.Red.log("BlocListener<PurchaseBloc, PurchaseState>");
+                  if (purchaseState is PurchaseCompleted) {
+                    Logger.Red.log('Purchase completed, redirecting to HomeScreen');
+                    userRepository.checkUserStatusForce();
+                    Navigator.pushReplacementNamed(context, home);
+                  }
                 }
               },
             ),
@@ -133,6 +165,9 @@ class AppRoute {
                 }
               },
             ),
+
+
+
           ],
           child: ConnectivityAwareWidget(
             child: BlocBuilder<AuthBloc, AuthState>(
@@ -160,22 +195,24 @@ class AppRoute {
       case featureGraphic:
         return FeatureGraphic();
       case login:
-        return Layout(child: LoginScreen(), logged: false);
+        return Layout(logged: false, child: LoginScreen());
       case register:
-        return Layout(child: RegisterScreen(), logged: false);
+        return Layout(logged: false, child: RegisterScreen());
       default:
         return _errorPage(settings, secure: false);
     }
   }
 
   static Widget _getAuthenticatedPage(RouteSettings settings, BuildContext context) {
-    final uri = Uri.parse(settings.name!);
+    final uri = Uri.parse(settings.name ?? ''); // 2. Sécurisation contre un `settings.name` nul
     Logger.Blue.log("_getAuthenticatedPage settings.name: ${settings.name}");
 
     final userState = context.read<UserBloc>().state;
     if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
       Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
-      return Layout(child: SubscriptionScreen(), titleScreen: context.loc.title_subscription);
+      if (FirebaseAuth.instance.currentUser != null) {
+        return Layout(titleScreen: context.loc.title_subscription, child: SubscriptionScreen());
+      }
     }
 
     if (uri.pathSegments.isNotEmpty) {
@@ -189,10 +226,12 @@ class AppRoute {
               logged: false,
               child: ProfileUpdateScreen()
           );
+        case register:
+          return Layout(logged: false, child: RegisterScreen());
         case subscription:
           return Layout(
-              child: SubscriptionScreen(),
-              titleScreen: context.loc.title_subscription
+              titleScreen: context.loc.title_subscription,
+              child: SubscriptionScreen()
           );
         case home:
         case homeLogged:
@@ -307,11 +346,21 @@ class AppRoute {
   }
 
   static void _redirectTo(BuildContext context, RouteSettings settings, String targetRoute) {
-    Logger.Blue.log('_redirectTo targetRoute: $targetRoute ${settings.name}');
+    Logger.Blue.log('_redirectTo targetRoute: $targetRoute from ${settings.name}');
+    if(settings.name==verifiedEmail && targetRoute==login){
+      //context.read<AuthBloc>().add(SignOutRequested());
+    //  Navigator.pushNamedAndRemoveUntil(context, targetRoute, (Route<dynamic> route) => false);
+    }
+
+
     if (settings.name != targetRoute) {
-      Logger.Blue.log('REDIRECT GO TO $targetRoute');
+      Logger.Blue.log('REDIRECTING TO $targetRoute');
+      // 3. Correction de la logique de redirection
+      // L'utilisation précédente de `Navigator.pop` était incorrecte et provoquait des crashs.
+      // On utilise `pushNamedAndRemoveUntil` pour naviguer vers la nouvelle route et supprimer
+      // tout l'historique, ce qui est le comportement attendu pour un changement d'état d'authentification.
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        Navigator.pop(context, targetRoute);
+        Navigator.pushNamedAndRemoveUntil(context, targetRoute, (Route<dynamic> route) => false);
       });
     }
   }

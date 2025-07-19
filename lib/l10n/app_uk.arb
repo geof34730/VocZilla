@@ -75,6 +75,8 @@
     "login_entrer_prenom": "Введіть своє ім'я",
     "login_nom": "Ім'я",
     "login_entrer_nom": "Введіть своє ім'я",
+    "login_pseudo": "Псевдо",
+    "login_entrer_pseudo": "Введіть своє ім'я користувача",
     "login_mot_de_passe": "Пароль",
     "login_entrer_mot_de_passe": "Введіть свій пароль",
     "login_ou_connecter_vous_avec": "Або зв’яжіться з",
@@ -110,5 +112,6 @@
     "title_app_update": "Доступне оновлення!",
     "title_subscription": "Наші підписки",
     "by_themes": "Парні теми",
-    "no_vocabulary_in_my_list": "У цьому списку немає словникового запасу. Додайте його, відредагувавши список."
+    "no_vocabulary_in_my_list": "У цьому списку немає словникового запасу. Додайте його, відредагувавши список.",
+    "anonymous_user": "Анонімний користувач"
 }

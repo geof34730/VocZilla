@@ -573,6 +573,18 @@ abstract class AppLocalizations {
   /// **'Enter your name'**
   String get login_entrer_nom;
 
+  /// No description provided for @login_pseudo.
+  ///
+  /// In en, this message translates to:
+  /// **'Pseudo'**
+  String get login_pseudo;
+
+  /// No description provided for @login_entrer_pseudo.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your username'**
+  String get login_entrer_pseudo;
+
   /// No description provided for @login_mot_de_passe.
   ///
   /// In en, this message translates to:
@@ -788,6 +800,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You don\'t have any vocabulary in this list. Add some by editing the list.'**
   String get no_vocabulary_in_my_list;
+
+  /// No description provided for @anonymous_user.
+  ///
+  /// In en, this message translates to:
+  /// **'Anonymous user'**
+  String get anonymous_user;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

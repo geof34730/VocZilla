@@ -75,6 +75,8 @@
     "login_entrer_prenom": "Ingrese su nombre",
     "login_nom": "Nombre",
     "login_entrer_nom": "Introduce tu nombre",
+    "login_pseudo": "Seudo",
+    "login_entrer_pseudo": "Introduce tu nombre de usuario",
     "login_mot_de_passe": "Contraseña",
     "login_entrer_mot_de_passe": "Ingrese su contraseña",
     "login_ou_connecter_vous_avec": "O conéctate con",
@@ -110,5 +112,6 @@
     "title_app_update": "¡Actualización disponible!",
     "title_subscription": "Nuestras suscripciones",
     "by_themes": "Por temas",
-    "no_vocabulary_in_my_list": "No tienes vocabulario en esta lista. Añade algo editándola."
+    "no_vocabulary_in_my_list": "No tienes vocabulario en esta lista. Añade algo editándola.",
+    "anonymous_user": "Usuario anónimo"
 }

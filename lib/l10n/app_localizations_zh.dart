@@ -237,6 +237,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get login_entrer_nom => '输入您的姓名';
 
   @override
+  String get login_pseudo => '伪';
+
+  @override
+  String get login_entrer_pseudo => '输入您的用户名';
+
+  @override
   String get login_mot_de_passe => '密码';
 
   @override
@@ -279,7 +285,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get email_validation_help => '如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。';
 
   @override
-  String get email_validation_merci_register2 => '谢谢您的信任！';
+  String get email_validation_merci_register2 => '感谢您的信任！';
 
   @override
   String get send_mail => '收到新的验证邮件';
@@ -343,4 +349,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get no_vocabulary_in_my_list => '此列表中没有任何词汇。请通过编辑列表添加一些词汇。';
+
+  @override
+  String get anonymous_user => '匿名用户';
 }

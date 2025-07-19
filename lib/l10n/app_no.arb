@@ -75,6 +75,8 @@
     "login_entrer_prenom": "Skriv inn fornavnet ditt",
     "login_nom": "Navn",
     "login_entrer_nom": "Skriv inn navnet ditt",
+    "login_pseudo": "Pseudo",
+    "login_entrer_pseudo": "Skriv inn brukernavnet ditt",
     "login_mot_de_passe": "Passord",
     "login_entrer_mot_de_passe": "Skriv inn passordet ditt",
     "login_ou_connecter_vous_avec": "Eller koble til",
@@ -110,5 +112,6 @@
     "title_app_update": "Oppdatering tilgjengelig!",
     "title_subscription": "Våre abonnementer",
     "by_themes": "Par-temaer",
-    "no_vocabulary_in_my_list": "Du har ikke noe vokabular i denne listen. Legg til noe ved å redigere listen."
+    "no_vocabulary_in_my_list": "Du har ikke noe vokabular i denne listen. Legg til noe ved å redigere listen.",
+    "anonymous_user": "Anonym bruker"
 }

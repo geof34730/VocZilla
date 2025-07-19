@@ -75,6 +75,8 @@
     "login_entrer_prenom": "输入您的名字",
     "login_nom": "姓名",
     "login_entrer_nom": "输入您的姓名",
+    "login_pseudo": "伪",
+    "login_entrer_pseudo": "输入您的用户名",
     "login_mot_de_passe": "密码",
     "login_entrer_mot_de_passe": "输入您的密码",
     "login_ou_connecter_vous_avec": "或连接至",
@@ -89,7 +91,7 @@
     "email_validation_msg_email_send": "验证邮件已发送至您的邮箱地址",
     "email_validation_instruction": "请查看您的收件箱，并按照说明验证您的电子邮件地址。这将使我们能够确认您的注册，并允许您访问我们服务的所有功能。",
     "email_validation_help": "如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。",
-    "email_validation_merci_register2": "谢谢您的信任！",
+    "email_validation_merci_register2": "感谢您的信任！",
     "send_mail": "收到新的验证邮件",
     "personnalisation_step1_title_list": "列表标题",
     "personnalisation_step1_color_choice": "从列表中选择颜色",
@@ -110,5 +112,6 @@
     "title_app_update": "有可用更新！",
     "title_subscription": "我们的订阅",
     "by_themes": "Par主题",
-    "no_vocabulary_in_my_list": "此列表中没有任何词汇。请通过编辑列表添加一些词汇。"
+    "no_vocabulary_in_my_list": "此列表中没有任何词汇。请通过编辑列表添加一些词汇。",
+    "anonymous_user": "匿名用户"
 }

@@ -75,6 +75,8 @@
     "login_entrer_prenom": "Wpisz swoje imię",
     "login_nom": "Nazwa",
     "login_entrer_nom": "Wpisz swoje imię",
+    "login_pseudo": "Rzekomy",
+    "login_entrer_pseudo": "Wprowadź swoją nazwę użytkownika",
     "login_mot_de_passe": "Hasło",
     "login_entrer_mot_de_passe": "Wprowadź swoje hasło",
     "login_ou_connecter_vous_avec": "Lub połącz się z",
@@ -110,5 +112,6 @@
     "title_app_update": "Aktualizacja dostępna!",
     "title_subscription": "Nasze subskrypcje",
     "by_themes": "Par tematy",
-    "no_vocabulary_in_my_list": "Nie masz żadnego słownictwa na tej liście. Dodaj, edytując listę."
+    "no_vocabulary_in_my_list": "Nie masz żadnego słownictwa na tej liście. Dodaj, edytując listę.",
+    "anonymous_user": "Użytkownik anonimowy"
 }

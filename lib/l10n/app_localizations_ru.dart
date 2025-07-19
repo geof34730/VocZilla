@@ -132,7 +132,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get offline_title => 'Оффлайн';
 
   @override
-  String get offline_description => 'У вас нет подключения к интернету. Подключитесь к интернету, чтобы продолжить.';
+  String get offline_description => 'У вас нет подключения к интернету. Пожалуйста, подключитесь к интернету, чтобы продолжить.';
 
   @override
   String get quizz_progression_title => 'Мой прогресс в этом списке';
@@ -235,6 +235,12 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get login_entrer_nom => 'Введите свое имя';
+
+  @override
+  String get login_pseudo => 'Псевдо';
+
+  @override
+  String get login_entrer_pseudo => 'Введите ваше имя пользователя';
 
   @override
   String get login_mot_de_passe => 'Пароль';
@@ -343,4 +349,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get no_vocabulary_in_my_list => 'В этом списке нет слов. Добавьте их, отредактировав список.';
+
+  @override
+  String get anonymous_user => 'Анонимный пользователь';
 }

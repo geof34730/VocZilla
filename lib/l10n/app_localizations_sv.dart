@@ -237,6 +237,12 @@ class AppLocalizationsSv extends AppLocalizations {
   String get login_entrer_nom => 'Ange ditt namn';
 
   @override
+  String get login_pseudo => 'Pseudo';
+
+  @override
+  String get login_entrer_pseudo => 'Ange ditt användarnamn';
+
+  @override
   String get login_mot_de_passe => 'Lösenord';
 
   @override
@@ -297,7 +303,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Dra nytta av din kostnadsfria provperiod!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har just nu en gratis provperiod på';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har för närvarande en gratis provperiod på';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'dagar';
@@ -343,4 +349,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get no_vocabulary_in_my_list => 'Du har inga ord i den här listan. Lägg till några genom att redigera listan.';
+
+  @override
+  String get anonymous_user => 'Anonym användare';
 }

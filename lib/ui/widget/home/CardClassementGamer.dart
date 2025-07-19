@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,21 +24,25 @@ class CardClassementGamer extends StatelessWidget {
           color: Colors.green,
           child: ListTile(
             leading:SizedBox(
-              width: 20,
+              width: 40,
               child:Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children:
                   [
-                    Text(
-                        position.toString(),
-                        style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.white,
-                            fontFamily: GoogleFonts.titanOne().fontFamily
-                        )
-                    ),
+                    AutoSizeText(
+                      position.toString(),
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontFamily: GoogleFonts.titanOne().fontFamily
+                      ),
+                      maxLines: 1,
+                      minFontSize: 10,
+                    )
+
+
                   ]
               ),
             ),

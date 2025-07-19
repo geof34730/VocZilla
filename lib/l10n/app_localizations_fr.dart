@@ -237,6 +237,12 @@ class AppLocalizationsFr extends AppLocalizations {
   String get login_entrer_nom => 'Entrez votre nom';
 
   @override
+  String get login_pseudo => 'Pseudo';
+
+  @override
+  String get login_entrer_pseudo => 'Entrez votre pseudo';
+
+  @override
   String get login_mot_de_passe => 'Mot de passe';
 
   @override
@@ -343,4 +349,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get no_vocabulary_in_my_list => 'Vous n\'avez aucun vocabulaire dans cette liste. Ajoutez-en en modifiant la liste';
+
+  @override
+  String get anonymous_user => 'Utilisateur anonyme';
 }

@@ -75,6 +75,8 @@
     "login_entrer_prenom": "Geben Sie Ihren Vornamen ein",
     "login_nom": "Name",
     "login_entrer_nom": "Geben Sie Ihren Namen ein",
+    "login_pseudo": "Pseudo",
+    "login_entrer_pseudo": "Geben Sie Ihren Benutzernamen ein",
     "login_mot_de_passe": "Passwort",
     "login_entrer_mot_de_passe": "Geben Sie Ihr Passwort ein",
     "login_ou_connecter_vous_avec": "Oder verbinden Sie sich mit",
@@ -110,5 +112,6 @@
     "title_app_update": "Update verfügbar!",
     "title_subscription": "Unsere Abonnements",
     "by_themes": "Par-Themen",
-    "no_vocabulary_in_my_list": "Diese Liste enthält keine Vokabeln. Fügen Sie welche hinzu, indem Sie die Liste bearbeiten."
+    "no_vocabulary_in_my_list": "Diese Liste enthält keine Vokabeln. Fügen Sie welche hinzu, indem Sie die Liste bearbeiten.",
+    "anonymous_user": "Anonymer Benutzer"
 }

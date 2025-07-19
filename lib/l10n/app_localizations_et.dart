@@ -159,7 +159,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get home_title_classement => 'TeamZilla edetabel';
 
   @override
-  String get home_notlogged_accroche1 => 'Tõsta oma inglise keelt!';
+  String get home_notlogged_accroche1 => 'Täiusta oma inglise keelt!';
 
   @override
   String get home_notlogged_accroche2 => 'Kas soovite oma inglise keele sõnavara rikastada?';
@@ -235,6 +235,12 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get login_entrer_nom => 'Sisesta oma nimi';
+
+  @override
+  String get login_pseudo => 'Pseudo';
+
+  @override
+  String get login_entrer_pseudo => 'Sisesta oma kasutajanimi';
 
   @override
   String get login_mot_de_passe => 'Parool';
@@ -343,4 +349,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get no_vocabulary_in_my_list => 'Selles nimekirjas pole sõnavara. Lisa uusi sõnu nimekirja muutes.';
+
+  @override
+  String get anonymous_user => 'Anonüümne kasutaja';
 }

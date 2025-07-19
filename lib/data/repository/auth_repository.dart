@@ -7,6 +7,7 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import '../../core/utils/logger.dart';
 import '../../logic/blocs/auth/auth_bloc.dart';
 import '../../logic/blocs/auth/auth_event.dart';
+import '../../logic/blocs/notification/notification_bloc.dart';
 import '../services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'data_user_repository.dart';
@@ -23,33 +24,43 @@ class AuthRepository {
     required String password,
     required String firstName,
     required String lastName,
-  }) async {
-    UserCredential? userCredential = await _authService.signUpWithEmail(
+    required String pseudo
+  }) async { UserCredential? userCredential = await _authService.signUpWithEmail(
       email: email,
       password: password,
       firstName: firstName,
       lastName: lastName,
+      pseudo: pseudo,
+      );
+
+
+    Logger.Green.log('userCredential go createUserFirestore: $firstName');
+    dataUserRepository.createUserFirestore(
+        userCredential: userCredential,
+        firstName: firstName,
+        lastName: lastName,
+        pseudo: pseudo
+
     );
-    userCredential?.user?.updateDisplayName('$firstName $lastName');
-    dataUserRepository.createUser(userCredential: userCredential);
     return userCredential?.user;
   }
 
   Future<User?> signInWithEmail({required String email, required String password}) async {
     UserCredential? userCredential = await _authService.signInWithEmail(email:email, password:password);
-    dataUserRepository.createUser(userCredential: userCredential);
+    //dataUserRepository.createUserFirestore(userCredential: userCredential);
     return userCredential?.user;
   }
 
   Future<User> signInWithGoogle() async {
     UserCredential? userCredential= await _authService.signInWithGoogle();
-    dataUserRepository.createUser(userCredential: userCredential);
+    dataUserRepository.createUserFirestore(userCredential: userCredential);
     return userCredential!.user!;
   }
 
   Future<User> signInWithFacebook() async {
     UserCredential? userCredential= await _authService.signInWithFacebook();
-    dataUserRepository.createUser(userCredential: userCredential);
+    Logger.Cyan.log('userCredential: $userCredential');
+    dataUserRepository.createUserFirestore(userCredential: userCredential);
     return userCredential!.user!;
   }
 
@@ -62,14 +73,12 @@ class AuthRepository {
           AppleIDAuthorizationScopes.fullName,
         ],
       );
-
       final oauthCredential = OAuthProvider("apple.com").credential(
         idToken: appleCredential.identityToken,
         accessToken: appleCredential.authorizationCode,
       );
-
       UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(oauthCredential);
-      dataUserRepository.createUser(userCredential: userCredential);
+      dataUserRepository.createUserFirestore(userCredential: userCredential);
       Logger.Cyan.log('userCredential: ${userCredential.user}');
       return userCredential.user;
     } catch (e) {
@@ -82,38 +91,43 @@ class AuthRepository {
     await _authService.signOut();
   }
 
-  Future<User> getUser() async {
-    return FirebaseAuth.instance.currentUser!;
+  Future<User?> getUserFirebase() async {
+    return FirebaseAuth.instance.currentUser;
   }
 
-  Future<void> updateDisplayName({required String displayName}) async {
-    try {
-      User? user = await FirebaseAuth.instance.currentUser;
-      if (user != null) {
-        await FirebaseAuth.instance.currentUser?.updateDisplayName(displayName);
-        await FirebaseAuth.instance.currentUser?.reload();
-        await dataUserRepository.updateDisplayName(displayName:displayName,uid: FirebaseAuth.instance.currentUser?.uid);
+  Future<void> updateProfil({required NotificationBloc notificationBloc,required String firstName,required String lastName, required String pseudo}) async {
+    if (FirebaseAuth.instance.currentUser != null) {
+      try {
+          await dataUserRepository.updateProfilUserFirestore(
+              firstName: firstName,
+              lastName: lastName,
+              pseudo: pseudo,
+              notificationBloc:notificationBloc
+          );
+
+      } catch (e) {
+        Logger.Red.log("Erreur lors de la mise à jour du Profil: $e");
       }
-    } catch (e) {
-      Logger.Red.log("Erreur lors de la mise à jour du DisplayName: $e");
     }
   }
 
   Future<void> checkEmailVerifiedPeriodically({required AuthBloc authBloc}) async {
-    Timer.periodic(Duration(seconds: 5), (timer) async {
-      User? user = FirebaseAuth.instance.currentUser;
-      if (user != null) {
-        await user.reload();
-        user = FirebaseAuth.instance.currentUser;
-        if (user!.emailVerified && !_emailVerified) {
-          _displayName=true;
-          timer.cancel();
-          authBloc.add(UpdateUserEvent(user));
-          authBloc.add(EmailVerifiedEvent());
-          timer.cancel();
+    if (FirebaseAuth.instance.currentUser != null) {
+      Timer.periodic(Duration(seconds: 5), (timer) async {
+        User? user = FirebaseAuth.instance.currentUser;
+        if (user != null) {
+          await user.reload();
+          user = FirebaseAuth.instance.currentUser;
+          if (user!.emailVerified && !_emailVerified) {
+            _displayName = true;
+            timer.cancel();
+            authBloc.add(UpdateUserEvent(user));
+            authBloc.add(EmailVerifiedEvent());
+            timer.cancel();
+          }
         }
-      }
-    });
+      });
+    }
   }
 
   Future<void> setPersistence() async {

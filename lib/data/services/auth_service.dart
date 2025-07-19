@@ -14,12 +14,12 @@ class AuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  Future<UserCredential?> signUpWithEmail({required String email,required String password,required String firstName,required String lastName}) async {
+  Future<UserCredential?> signUpWithEmail({required String email,required String password,required String firstName,required String lastName, required String pseudo}) async {
     UserCredential userCredential = await _firebaseAuth.createUserWithEmailAndPassword(
       email: email,
       password: password,
     );
-    userCredential.user?.updateDisplayName('$firstName $lastName');
+    userCredential.user?.updateDisplayName('$firstName $lastName $pseudo');
     return userCredential;
   }
 
@@ -104,7 +104,7 @@ class AuthService {
 
       // Se connecter avec Firebase
       UserCredential userCredential =await _firebaseAuth.signInWithCredential(oauthCredential);
-      dataUserRepository.createUser(userCredential: userCredential);
+      dataUserRepository.createUserFirestore(userCredential: userCredential);
       return userCredential;
     } catch (e) {
       Logger.Red.log("Error during Apple sign-in: $e");

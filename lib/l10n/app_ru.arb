@@ -40,7 +40,7 @@
     "pronunciation_error4": "Распознавание голоса не готово.",
     "pronunciation_error5": "В доступе к микрофону отказано",
     "offline_title": "Оффлайн",
-    "offline_description": "У вас нет подключения к интернету. Подключитесь к интернету, чтобы продолжить.",
+    "offline_description": "У вас нет подключения к интернету. Пожалуйста, подключитесь к интернету, чтобы продолжить.",
     "quizz_progression_title": "Мой прогресс в этом списке",
     "quizz_en": "В",
     "quizz_saisie_in": "Введите перевод на",
@@ -75,6 +75,8 @@
     "login_entrer_prenom": "Введите ваше имя",
     "login_nom": "Имя",
     "login_entrer_nom": "Введите свое имя",
+    "login_pseudo": "Псевдо",
+    "login_entrer_pseudo": "Введите ваше имя пользователя",
     "login_mot_de_passe": "Пароль",
     "login_entrer_mot_de_passe": "Введите ваш пароль",
     "login_ou_connecter_vous_avec": "Или свяжитесь с",
@@ -110,5 +112,6 @@
     "title_app_update": "Доступно обновление!",
     "title_subscription": "Наши подписки",
     "by_themes": "Темы пар",
-    "no_vocabulary_in_my_list": "В этом списке нет слов. Добавьте их, отредактировав список."
+    "no_vocabulary_in_my_list": "В этом списке нет слов. Добавьте их, отредактировав список.",
+    "anonymous_user": "Анонимный пользователь"
 }

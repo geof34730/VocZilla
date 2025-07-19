@@ -237,6 +237,12 @@ class AppLocalizationsUk extends AppLocalizations {
   String get login_entrer_nom => 'Введіть своє ім\'я';
 
   @override
+  String get login_pseudo => 'Псевдо';
+
+  @override
+  String get login_entrer_pseudo => 'Введіть своє ім\'я користувача';
+
+  @override
   String get login_mot_de_passe => 'Пароль';
 
   @override
@@ -343,4 +349,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get no_vocabulary_in_my_list => 'У цьому списку немає словникового запасу. Додайте його, відредагувавши список.';
+
+  @override
+  String get anonymous_user => 'Анонімний користувач';
 }

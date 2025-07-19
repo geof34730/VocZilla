@@ -16,6 +16,9 @@ import 'package:vobzilla/ui/widget/home/TitleWidget.dart';
 
 import '../global.dart';
 import '../logic/blocs/drawer/drawer_state.dart';
+import '../logic/blocs/notification/notification_bloc.dart';
+import '../logic/blocs/notification/notification_event.dart';
+import '../logic/blocs/notification/notification_state.dart';
 
 class Layout extends StatelessWidget {
   const Layout({
@@ -96,6 +99,7 @@ class Layout extends StatelessWidget {
               )
             )
       )
+
     );
     }
 }
