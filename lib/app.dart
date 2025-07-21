@@ -1,20 +1,19 @@
+// lib/app.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:vobzilla/global.dart';
+
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
-import 'package:vobzilla/ui/widget/scaled_app_builder.dart';
 import 'app_route.dart';
-import 'core/utils/device.dart';
+import 'core/utils/navigatorKey.dart';
 import 'core/utils/logger.dart';
 import 'data/repository/auth_repository.dart';
 import 'data/repository/data_user_repository.dart';
 import 'data/repository/vocabulaire_user_repository.dart';
-import 'data/services/data_user_service.dart';
 import 'data/services/localstorage_service.dart';
 import 'data/services/vocabulaires_server_service.dart';
 import 'l10n/app_localizations.dart';
@@ -39,7 +38,7 @@ import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'logic/blocs/update/update_bloc.dart';
-import 'core/utils/navigatorKey.dart' show navigatorKey;
+
 
 
 
@@ -85,6 +84,7 @@ class MyApp extends StatelessWidget {
                 : locale;
             FirebaseAuth.instance.setLanguageCode(locale.languageCode);
             return MaterialApp(
+              navigatorKey: navigatorKey,
               theme: VobdzillaTheme.lightTheme,
               debugShowCheckedModeBanner: false,
               locale: effectiveLocale,
@@ -96,7 +96,6 @@ class MyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               onGenerateRoute: generateRoute,
-              navigatorKey: navigatorKey,
               builder: (context, child) {
                 return MultiBlocListener(
                   listeners: [
@@ -137,22 +136,34 @@ class MyApp extends StatelessWidget {
                       listener: (context, state) {
                         Logger.Yellow.log("NotificationState state: $state");
                         if (state is NotificationVisible) {
-                          ScaffoldMessenger.of(context).removeCurrentSnackBar();
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(state.message),
-                              backgroundColor: state.backgroundColor,
-                              behavior: SnackBarBehavior.floating,
-                            ),
-                          );
-                          context.read<NotificationBloc>().add(NotificationDismissed());
+                          WidgetsBinding.instance.addPostFrameCallback((_) {
+                            Future.delayed(const Duration(milliseconds: 50), () {
+                              final navigatorContext = navigatorKey.currentContext;
+                              if (navigatorContext != null && context.mounted) {
+                                ScaffoldMessenger.of(navigatorContext)
+                                  ..removeCurrentSnackBar()
+                                  ..showSnackBar(
+                                    SnackBar(
+                                      content: Text(state.message),
+                                      backgroundColor: state.backgroundColor,
+                                      behavior: SnackBarBehavior.floating,
+                                      showCloseIcon: true,
+                                      duration: const Duration(seconds: 4),
+                                    ),
+
+                                  );
+                                context
+                                    .read<NotificationBloc>()
+                                    .add(NotificationDismissed());
+                                context.read<AuthBloc>().add(AuthErrorCleared());
+                              }
+                            });
+                          });
                         }
                       },
                     ),
-
                   ],
-                   child:child ?? const SizedBox.shrink(),
-
+                  child: child ?? const SizedBox.shrink(),
                 );
               },
             );

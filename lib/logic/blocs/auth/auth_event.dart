@@ -46,7 +46,7 @@ class SignOutRequested extends AuthEvent {}
 
 class EmailVerifiedEvent extends AuthEvent {}
 
-class DisplayNameUpdateEvent extends AuthEvent {}
+class AuthErrorCleared extends AuthEvent {}
 
 class UpdateUserEvent extends AuthEvent {
   final User user;
@@ -60,14 +60,13 @@ class UpdateUserEvent extends AuthEvent {
 
 
 class UpdateUserProfilEvent extends AuthEvent {
-  final String displayName;
+
   final String lastName;
   final String firstName;
   final String pseudo;
   final NotificationBloc notificationBloc;
 
   const UpdateUserProfilEvent({
-    required this.displayName,
     required this.lastName,
     required this.firstName,
     required this.pseudo,
@@ -75,5 +74,5 @@ class UpdateUserProfilEvent extends AuthEvent {
   });
 
   @override
-  List<Object> get props => [displayName, lastName, firstName, pseudo];
+  List<Object> get props => [lastName, firstName, pseudo];
 }

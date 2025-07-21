@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 String titleApp="VocZilla";
 //String appId="com.geoffreypetain.voczilla.voczilla";
 int titleAppCute1=3;
@@ -13,5 +15,6 @@ final String serverVocabulaireUserUrl = 'https://subscription-v1-275313479574.eu
 
 String ANDROID_APP_STORE_URL="https://play.google.com/store/apps/details?id=com.geoffreypetain.voczilla.voczilla";
 String IOS_APP_STORE_URL="https://apps.apple.com/us/app/com.geoffreypetain.voczilla.voczilla/6742488058";
+
 
 

@@ -16,15 +16,15 @@ T _$identity<T>(T value) => value;
 mixin _$UserFirestore {
   String get uid;
   String get email;
-  String get displayName;
   String get lastName;
   String get firstName;
   String get pseudo;
-  String get photoURL;
   String get providerId;
   bool get isEmailVerified;
-  DateTime? get createdAt;
+  String get photoURL;
+  String get imageAvatar;
   List<String> get fcmTokens;
+  DateTime? get createdAt;
 
   /// Create a copy of UserFirestore
   /// with the given fields replaced by the non-null parameter values.
@@ -44,22 +44,22 @@ mixin _$UserFirestore {
             other is UserFirestore &&
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.email, email) || other.email == email) &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName) &&
             (identical(other.lastName, lastName) ||
                 other.lastName == lastName) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
             (identical(other.pseudo, pseudo) || other.pseudo == pseudo) &&
-            (identical(other.photoURL, photoURL) ||
-                other.photoURL == photoURL) &&
             (identical(other.providerId, providerId) ||
                 other.providerId == providerId) &&
             (identical(other.isEmailVerified, isEmailVerified) ||
                 other.isEmailVerified == isEmailVerified) &&
+            (identical(other.photoURL, photoURL) ||
+                other.photoURL == photoURL) &&
+            (identical(other.imageAvatar, imageAvatar) ||
+                other.imageAvatar == imageAvatar) &&
+            const DeepCollectionEquality().equals(other.fcmTokens, fcmTokens) &&
             (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            const DeepCollectionEquality().equals(other.fcmTokens, fcmTokens));
+                other.createdAt == createdAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -68,19 +68,19 @@ mixin _$UserFirestore {
       runtimeType,
       uid,
       email,
-      displayName,
       lastName,
       firstName,
       pseudo,
-      photoURL,
       providerId,
       isEmailVerified,
-      createdAt,
-      const DeepCollectionEquality().hash(fcmTokens));
+      photoURL,
+      imageAvatar,
+      const DeepCollectionEquality().hash(fcmTokens),
+      createdAt);
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, lastName: $lastName, firstName: $firstName, pseudo: $pseudo, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmTokens: $fcmTokens)';
+    return 'UserFirestore(uid: $uid, email: $email, lastName: $lastName, firstName: $firstName, pseudo: $pseudo, providerId: $providerId, isEmailVerified: $isEmailVerified, photoURL: $photoURL, imageAvatar: $imageAvatar, fcmTokens: $fcmTokens, createdAt: $createdAt)';
   }
 }
 
@@ -93,15 +93,15 @@ abstract mixin class $UserFirestoreCopyWith<$Res> {
   $Res call(
       {String uid,
       String email,
-      String displayName,
       String lastName,
       String firstName,
       String pseudo,
-      String photoURL,
       String providerId,
       bool isEmailVerified,
-      DateTime? createdAt,
-      List<String> fcmTokens});
+      String photoURL,
+      String imageAvatar,
+      List<String> fcmTokens,
+      DateTime? createdAt});
 }
 
 /// @nodoc
@@ -119,15 +119,15 @@ class _$UserFirestoreCopyWithImpl<$Res>
   $Res call({
     Object? uid = null,
     Object? email = null,
-    Object? displayName = null,
     Object? lastName = null,
     Object? firstName = null,
     Object? pseudo = null,
-    Object? photoURL = null,
     Object? providerId = null,
     Object? isEmailVerified = null,
-    Object? createdAt = freezed,
+    Object? photoURL = null,
+    Object? imageAvatar = null,
     Object? fcmTokens = null,
+    Object? createdAt = freezed,
   }) {
     return _then(_self.copyWith(
       uid: null == uid
@@ -137,10 +137,6 @@ class _$UserFirestoreCopyWithImpl<$Res>
       email: null == email
           ? _self.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
-          ? _self.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
               as String,
       lastName: null == lastName
           ? _self.lastName
@@ -154,10 +150,6 @@ class _$UserFirestoreCopyWithImpl<$Res>
           ? _self.pseudo
           : pseudo // ignore: cast_nullable_to_non_nullable
               as String,
-      photoURL: null == photoURL
-          ? _self.photoURL
-          : photoURL // ignore: cast_nullable_to_non_nullable
-              as String,
       providerId: null == providerId
           ? _self.providerId
           : providerId // ignore: cast_nullable_to_non_nullable
@@ -166,14 +158,22 @@ class _$UserFirestoreCopyWithImpl<$Res>
           ? _self.isEmailVerified
           : isEmailVerified // ignore: cast_nullable_to_non_nullable
               as bool,
-      createdAt: freezed == createdAt
-          ? _self.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      photoURL: null == photoURL
+          ? _self.photoURL
+          : photoURL // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageAvatar: null == imageAvatar
+          ? _self.imageAvatar
+          : imageAvatar // ignore: cast_nullable_to_non_nullable
+              as String,
       fcmTokens: null == fcmTokens
           ? _self.fcmTokens
           : fcmTokens // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      createdAt: freezed == createdAt
+          ? _self.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -274,15 +274,15 @@ extension UserFirestorePatterns on UserFirestore {
     TResult Function(
             String uid,
             String email,
-            String displayName,
             String lastName,
             String firstName,
             String pseudo,
-            String photoURL,
             String providerId,
             bool isEmailVerified,
-            DateTime? createdAt,
-            List<String> fcmTokens)?
+            String photoURL,
+            String imageAvatar,
+            List<String> fcmTokens,
+            DateTime? createdAt)?
         $default, {
     required TResult orElse(),
   }) {
@@ -292,15 +292,15 @@ extension UserFirestorePatterns on UserFirestore {
         return $default(
             _that.uid,
             _that.email,
-            _that.displayName,
             _that.lastName,
             _that.firstName,
             _that.pseudo,
-            _that.photoURL,
             _that.providerId,
             _that.isEmailVerified,
-            _that.createdAt,
-            _that.fcmTokens);
+            _that.photoURL,
+            _that.imageAvatar,
+            _that.fcmTokens,
+            _that.createdAt);
       case _:
         return orElse();
     }
@@ -324,15 +324,15 @@ extension UserFirestorePatterns on UserFirestore {
     TResult Function(
             String uid,
             String email,
-            String displayName,
             String lastName,
             String firstName,
             String pseudo,
-            String photoURL,
             String providerId,
             bool isEmailVerified,
-            DateTime? createdAt,
-            List<String> fcmTokens)
+            String photoURL,
+            String imageAvatar,
+            List<String> fcmTokens,
+            DateTime? createdAt)
         $default,
   ) {
     final _that = this;
@@ -341,15 +341,15 @@ extension UserFirestorePatterns on UserFirestore {
         return $default(
             _that.uid,
             _that.email,
-            _that.displayName,
             _that.lastName,
             _that.firstName,
             _that.pseudo,
-            _that.photoURL,
             _that.providerId,
             _that.isEmailVerified,
-            _that.createdAt,
-            _that.fcmTokens);
+            _that.photoURL,
+            _that.imageAvatar,
+            _that.fcmTokens,
+            _that.createdAt);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -372,15 +372,15 @@ extension UserFirestorePatterns on UserFirestore {
     TResult? Function(
             String uid,
             String email,
-            String displayName,
             String lastName,
             String firstName,
             String pseudo,
-            String photoURL,
             String providerId,
             bool isEmailVerified,
-            DateTime? createdAt,
-            List<String> fcmTokens)?
+            String photoURL,
+            String imageAvatar,
+            List<String> fcmTokens,
+            DateTime? createdAt)?
         $default,
   ) {
     final _that = this;
@@ -389,15 +389,15 @@ extension UserFirestorePatterns on UserFirestore {
         return $default(
             _that.uid,
             _that.email,
-            _that.displayName,
             _that.lastName,
             _that.firstName,
             _that.pseudo,
-            _that.photoURL,
             _that.providerId,
             _that.isEmailVerified,
-            _that.createdAt,
-            _that.fcmTokens);
+            _that.photoURL,
+            _that.imageAvatar,
+            _that.fcmTokens,
+            _that.createdAt);
       case _:
         return null;
     }
@@ -410,15 +410,15 @@ class _UserFirestore implements UserFirestore {
   const _UserFirestore(
       {required this.uid,
       required this.email,
-      required this.displayName,
       required this.lastName,
       required this.firstName,
       required this.pseudo,
-      required this.photoURL,
       required this.providerId,
       required this.isEmailVerified,
-      required this.createdAt,
-      required final List<String> fcmTokens})
+      this.photoURL = '',
+      this.imageAvatar = '',
+      final List<String> fcmTokens = const [],
+      this.createdAt})
       : _fcmTokens = fcmTokens;
   factory _UserFirestore.fromJson(Map<String, dynamic> json) =>
       _$UserFirestoreFromJson(json);
@@ -428,28 +428,32 @@ class _UserFirestore implements UserFirestore {
   @override
   final String email;
   @override
-  final String displayName;
-  @override
   final String lastName;
   @override
   final String firstName;
   @override
   final String pseudo;
   @override
-  final String photoURL;
-  @override
   final String providerId;
   @override
   final bool isEmailVerified;
   @override
-  final DateTime? createdAt;
+  @JsonKey()
+  final String photoURL;
+  @override
+  @JsonKey()
+  final String imageAvatar;
   final List<String> _fcmTokens;
   @override
+  @JsonKey()
   List<String> get fcmTokens {
     if (_fcmTokens is EqualUnmodifiableListView) return _fcmTokens;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_fcmTokens);
   }
+
+  @override
+  final DateTime? createdAt;
 
   /// Create a copy of UserFirestore
   /// with the given fields replaced by the non-null parameter values.
@@ -473,23 +477,23 @@ class _UserFirestore implements UserFirestore {
             other is _UserFirestore &&
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.email, email) || other.email == email) &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName) &&
             (identical(other.lastName, lastName) ||
                 other.lastName == lastName) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
             (identical(other.pseudo, pseudo) || other.pseudo == pseudo) &&
-            (identical(other.photoURL, photoURL) ||
-                other.photoURL == photoURL) &&
             (identical(other.providerId, providerId) ||
                 other.providerId == providerId) &&
             (identical(other.isEmailVerified, isEmailVerified) ||
                 other.isEmailVerified == isEmailVerified) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
+            (identical(other.photoURL, photoURL) ||
+                other.photoURL == photoURL) &&
+            (identical(other.imageAvatar, imageAvatar) ||
+                other.imageAvatar == imageAvatar) &&
             const DeepCollectionEquality()
-                .equals(other._fcmTokens, _fcmTokens));
+                .equals(other._fcmTokens, _fcmTokens) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -498,19 +502,19 @@ class _UserFirestore implements UserFirestore {
       runtimeType,
       uid,
       email,
-      displayName,
       lastName,
       firstName,
       pseudo,
-      photoURL,
       providerId,
       isEmailVerified,
-      createdAt,
-      const DeepCollectionEquality().hash(_fcmTokens));
+      photoURL,
+      imageAvatar,
+      const DeepCollectionEquality().hash(_fcmTokens),
+      createdAt);
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, displayName: $displayName, lastName: $lastName, firstName: $firstName, pseudo: $pseudo, photoURL: $photoURL, providerId: $providerId, isEmailVerified: $isEmailVerified, createdAt: $createdAt, fcmTokens: $fcmTokens)';
+    return 'UserFirestore(uid: $uid, email: $email, lastName: $lastName, firstName: $firstName, pseudo: $pseudo, providerId: $providerId, isEmailVerified: $isEmailVerified, photoURL: $photoURL, imageAvatar: $imageAvatar, fcmTokens: $fcmTokens, createdAt: $createdAt)';
   }
 }
 
@@ -525,15 +529,15 @@ abstract mixin class _$UserFirestoreCopyWith<$Res>
   $Res call(
       {String uid,
       String email,
-      String displayName,
       String lastName,
       String firstName,
       String pseudo,
-      String photoURL,
       String providerId,
       bool isEmailVerified,
-      DateTime? createdAt,
-      List<String> fcmTokens});
+      String photoURL,
+      String imageAvatar,
+      List<String> fcmTokens,
+      DateTime? createdAt});
 }
 
 /// @nodoc
@@ -551,15 +555,15 @@ class __$UserFirestoreCopyWithImpl<$Res>
   $Res call({
     Object? uid = null,
     Object? email = null,
-    Object? displayName = null,
     Object? lastName = null,
     Object? firstName = null,
     Object? pseudo = null,
-    Object? photoURL = null,
     Object? providerId = null,
     Object? isEmailVerified = null,
-    Object? createdAt = freezed,
+    Object? photoURL = null,
+    Object? imageAvatar = null,
     Object? fcmTokens = null,
+    Object? createdAt = freezed,
   }) {
     return _then(_UserFirestore(
       uid: null == uid
@@ -569,10 +573,6 @@ class __$UserFirestoreCopyWithImpl<$Res>
       email: null == email
           ? _self.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
-          ? _self.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
               as String,
       lastName: null == lastName
           ? _self.lastName
@@ -586,10 +586,6 @@ class __$UserFirestoreCopyWithImpl<$Res>
           ? _self.pseudo
           : pseudo // ignore: cast_nullable_to_non_nullable
               as String,
-      photoURL: null == photoURL
-          ? _self.photoURL
-          : photoURL // ignore: cast_nullable_to_non_nullable
-              as String,
       providerId: null == providerId
           ? _self.providerId
           : providerId // ignore: cast_nullable_to_non_nullable
@@ -598,14 +594,22 @@ class __$UserFirestoreCopyWithImpl<$Res>
           ? _self.isEmailVerified
           : isEmailVerified // ignore: cast_nullable_to_non_nullable
               as bool,
-      createdAt: freezed == createdAt
-          ? _self.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      photoURL: null == photoURL
+          ? _self.photoURL
+          : photoURL // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageAvatar: null == imageAvatar
+          ? _self.imageAvatar
+          : imageAvatar // ignore: cast_nullable_to_non_nullable
+              as String,
       fcmTokens: null == fcmTokens
           ? _self._fcmTokens
           : fcmTokens // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      createdAt: freezed == createdAt
+          ? _self.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }

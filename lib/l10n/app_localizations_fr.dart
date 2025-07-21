@@ -237,10 +237,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get login_entrer_nom => 'Entrez votre nom';
 
   @override
-  String get login_pseudo => 'Pseudo';
+  String get login_pseudo => 'Pseudonyme';
 
   @override
-  String get login_entrer_pseudo => 'Entrez votre pseudo';
+  String get login_entrer_pseudo => 'Entrez votre pseudonyme';
 
   @override
   String get login_mot_de_passe => 'Mot de passe';

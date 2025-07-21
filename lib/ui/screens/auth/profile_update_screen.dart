@@ -46,78 +46,85 @@ class _ProfileUpdateScreenState extends State<ProfileUpdateScreen> {
   @override
   Widget build(BuildContext context) {
     final notificationBloc = context.read<NotificationBloc>();
-    return BackgroundBlueLinear(
-      child: FutureBuilder<UserFirestore?>(
-        future: LocalStorageService().loadUser(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          if (snapshot.hasError) {
-            return Center(child: Text("Erreur de chargement du profil: ${snapshot.error}"));
-          }
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+     Center(
 
-          if (snapshot.hasData) {
-            final userProfile = snapshot.data!;
-            _initializeControllers(userProfile);
+             child: FutureBuilder<UserFirestore?>(
+                future: LocalStorageService().loadUser(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  if (snapshot.hasError) {
+                    return Center(child: Text("Erreur de chargement du profil: ${snapshot.error}"));
+                  }
 
-            return BlocListener<AuthBloc, AuthState>(
-              listener: (context, state) {
-                if (state is AuthAuthenticated) {
-                  Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
-                }
+                  if (snapshot.hasData) {
+                    final userProfile = snapshot.data!;
+                    _initializeControllers(userProfile);
 
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(context.loc.profil_update_title,
-                        style: TextStyle(
-                            fontSize: 25,
-                            fontFamily: GoogleFonts.titanOne().fontFamily)),
+                    return BlocListener<AuthBloc, AuthState>(
+                      listener: (context, state) {
+                        if (state is AuthAuthenticated) {
+                          Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
+                        }
 
-                    CustomTextField(
-                      controller: pseudoController,
-                      labelText: context.loc.login_pseudo,
-                      hintText: context.loc.login_entrer_pseudo,
-                    ),
-                    CustomTextField(
-                      controller: firstNameController,
-                      labelText: context.loc.login_prenom,
-                      hintText: context.loc.login_entrer_prenom,
-                    ),
-                    CustomTextField(
-                      controller: lastNameController,
-                      labelText: context.loc.login_nom,
-                      hintText: context.loc.login_entrer_nom,
-                    ),
-                    const SizedBox(height: 20),
-                   ElevatedButton(
-                          onPressed: () {
-                            context.read<AuthBloc>().add(
-                              UpdateUserProfilEvent(
-                                displayName: '${firstNameController.text} ${lastNameController.text}'.trim(),
-                                firstName: firstNameController.text,
-                                lastName: lastNameController.text,
-                                pseudo: pseudoController.text,
-                                notificationBloc: notificationBloc,
-                              ),
-                            );
-                          },
-                          child: const Text("Enregistrer les modifications"),
-                        )
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Mettre à jour votre profil",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontFamily: GoogleFonts.titanOne().fontFamily)),
 
-                  ],
-                ),
+                            CustomTextField(
+                              controller: pseudoController,
+                              labelText: context.loc.login_pseudo,
+                              hintText: context.loc.login_entrer_pseudo,
+                            ),
+                            CustomTextField(
+                              controller: firstNameController,
+                              labelText: context.loc.login_prenom,
+                              hintText: context.loc.login_entrer_prenom,
+                            ),
+                            CustomTextField(
+                              controller: lastNameController,
+                              labelText: context.loc.login_nom,
+                              hintText: context.loc.login_entrer_nom,
+                            ),
+                            const SizedBox(height: 20),
+                            ElevatedButton(
+                                  onPressed: () {
+                                    context.read<AuthBloc>().add(
+                                      UpdateUserProfilEvent(
+                                        firstName: firstNameController.text,
+                                        lastName: lastNameController.text,
+                                        pseudo: pseudoController.text,
+                                        notificationBloc: notificationBloc,
+                                      ),
+                                    );
+                                  },
+                                  child: const Text("Enregistrer"),
+                                )
+
+                          ],
+                        ),
+                      ),
+                    );
+                  }
+
+                  return Center(child: Text("Erreur de chargement du profil: ${snapshot.error}"));
+                },
               ),
-            );
-          }
-
-          return Center(child: Text("Erreur de chargement du profil: ${snapshot.error}"));
-        },
-      ),
+    )
+      ]
     );
   }
 }

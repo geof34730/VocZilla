@@ -1,33 +1,30 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
-import 'package:vobzilla/data/repository/data_user_repository.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/user/user_bloc.dart';
 import 'package:vobzilla/logic/blocs/user/user_state.dart';
-import 'package:vobzilla/ui/theme/appColors.dart';
 import 'package:vobzilla/ui/widget/drawer/trial_period_tile.dart';
 import 'package:vobzilla/ui/widget/drawer/voczilla_tile.dart';
 import '../../../app_route.dart';
-import '../../../core/utils/logger.dart';
-import '../../../data/models/user_firestore.dart';
-import '../../../data/services/localstorage_service.dart';
+import '../../../global.dart'; // Needed for daysFreeTrial
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
-import '../../theme/theme.dart';
 import '../elements/DialogHelper.dart';
 
-// === DRAWER NAVIGATION ===
-
+/// Builds the main navigation drawer for the application.
+///
+/// Note: For better structure and testability, consider converting this
+/// top-level function into a `StatelessWidget` class in the future.
 Drawer DrawerNavigation({
   required BuildContext context,
-  String selectedLang = 'fr',
-  void Function(String)? onLanguageChanged,
 }) {
   return Drawer(
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
     elevation: 5,
     child: Container(
       color: Colors.white,
@@ -35,186 +32,205 @@ Drawer DrawerNavigation({
         padding: EdgeInsets.zero,
         children: [
           // ===== HEADER =====
-          DrawerHeader(
-            decoration: BoxDecoration(color: Colors.cyan[200]),
-            child:BlocBuilder<AuthBloc, AuthState>(
-                builder: (context, state) {
-                if (state is AuthAuthenticated && state.user != null) {
-                  final user = state.user!;
-                    return FutureBuilder<UserFirestore?>(
-                          future: LocalStorageService().loadUser(),
-                          builder: (context, snapshot) {
-                              if (snapshot.connectionState == ConnectionState.waiting) {
-                                return const Center(child: CircularProgressIndicator());
-                              }
-                              if (snapshot.hasError) {
-                                return Center(child: Text("Erreur de chargement du profil: ${snapshot.error}"));
-                              }
-                              if (snapshot.hasData) {
-                                final userProfile = snapshot.data!;
-                                final String displayName = "${userProfile.firstName} ${userProfile.lastName}";
-                                final String pseudo = userProfile.pseudo;
-                                Logger.Green.log(userProfile);
-                                return Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          userProfile.photoURL != ''
-                                            ?
-                                            ProfilePicture(
-                                              name: _getValidName(displayName),
-                                              radius: 30,
-                                              fontsize: 30,
-                                              img: userProfile.photoURL,
-                                            )
-                                            :
-                                            Avatar(
-                                              radius: 30,
-                                              name: _getValidName(pseudo),
-                                              fontsize: 30,
-                                            ),
-                                            SizedBox(width: 12),
-                                            Expanded(
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(pseudo,
-                                                      style: TextStyle(
-                                                          fontSize: 16,
-                                                          fontWeight: FontWeight.bold)),
-                                                  Text(displayName,
-                                                      style: TextStyle(fontSize: 12)),
-                                                ],
-                                              ),
-                                            ),
-                                        ],
-                                      ),
-                                      SizedBox(height: 10),
-                                      Center(
-                                        child: Container(
-                                          padding: EdgeInsets.symmetric(horizontal: 20),
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius: BorderRadius.circular(8),
-                                          ),
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                              value: selectedLang,
-                                              icon: Icon(Icons.keyboard_arrow_down),
-                                              items: {
-                                                'fr': 'Français', // TODO: Localize these names
-                                                'en': 'English',
-                                                'de': 'Deutsch',
-                                                'es': 'Español',
-                                              }.entries.map((entry) {
-                                                return DropdownMenuItem(
-                                                  value: entry.key,
-                                                  child: Text(entry.value),
-                                                );
-                                              }).toList(),
-                                              onChanged: (value) {
-                                                if (value != null) {
-                                                  //context.read<LocalizationCubit>().changeLocale(Locale(value));
-                                                }
-                                              },
-                                            ),
-                                          ),
-                                        ),
-                                      )
-                                  ],
-                                );
-                              }
-                          return const Center(child: CircularProgressIndicator());
-                         }
-                    );
-                  }
-
-                return const Center(child: CircularProgressIndicator());
-                //return SizedBox.shrink();
-              },
-            ),
-          ),
-
-
+          _buildDrawerHeader(context),
 
           // === PÉRIODE D'ESSAI (ANIMÉE) ===
-          BlocBuilder<UserBloc, UserState>(
-            builder: (context, state) {
-              if (state is UserFreeTrialPeriodAndNotSubscribed) {
-                //final int daysUsed = state.daysUsed;
-                //final int totalTrial = state.totalTrialDays;
-                final int daysUsed = 10;
-                final int totalTrial = 30;
-
-                final int daysRemaining =(totalTrial - daysUsed).clamp(0, totalTrial);
-                final double progress = daysUsed / totalTrial;
-
-                return TrialPeriodTile(
-                  progress: progress,
-                  daysRemaining: daysRemaining,
-                  onTap: () {
-                    closeDrawer(context);
-                    DialogHelper().showFreeTrialDialog(context: context);
-                  },
-                );
-              }
-              return SizedBox.shrink();
-            },
-          ),
+          _buildTrialPeriodTile(context),
 
           // ===== MENU ITEMS =====
-         /* VocZillaTile(
-            icon: Icons.show_chart,
-            label: 'Mes statistiques',
-            color: Colors.orange,
-            onTap: () => closeDrawer(context),
-          ),*/
-          VocZillaTile(
-            icon: Icons.person,
-            label: 'Mon profil',
-            color: Colors.green,
-            onTap: () {
-              closeDrawer(context);
-              Navigator.pushNamed(context, '/updateprofile');
-            },
-          ),
-
-          VocZillaTile(
-            icon: Icons.subscriptions_rounded,
-            label: context.loc.my_purchase,
-            color: Colors.purple,
-            onTap: () {
-              closeDrawer(context);
-              Navigator.pushNamed(context, AppRoute.subscription);
-            },
-          ),
-          VocZillaTile(
-            icon: Icons.logout,
-            label: 'Déconnexion',
-            color: Colors.grey,
-            onTap: () {
-              closeDrawer(context);
-              context.read<AuthBloc>().add(SignOutRequested());
-            },
-          ),
+          _buildMenuItems(context),
         ],
       ),
     ),
   );
 }
 
-// === CLOSE DRAWER ===
+/// Builds the header of the drawer, displaying user information.
+Widget _buildDrawerHeader(BuildContext context) {
+  return DrawerHeader(
+    decoration: BoxDecoration(color: Colors.cyan[200]),
+    child: BlocBuilder<AuthBloc, AuthState>(
+      builder: (context, authState) {
+        // If the user is authenticated, display their profile information.
+        if (authState is AuthAuthenticated) {
+          final userProfile = authState.userProfile;
+          final String displayName ="${userProfile.firstName} ${userProfile.lastName}".trim();
+          final String pseudo = userProfile.pseudo;
 
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  // Display the user's avatar or a default one.
+                  userProfile.imageAvatar.isNotEmpty
+                      ? ClipOval(
+                    child: Image.memory(
+                      base64Decode(userProfile.imageAvatar),
+                      width: 60,
+                      height: 60,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Avatar(
+                          radius: 30,
+                          name: _getValidName(pseudo),
+                          fontsize: 30,
+                        );
+                      },
+                    ),
+                  )
+                      : Avatar(
+                    radius: 30,
+                    name: _getValidName(pseudo),
+                    fontsize: 30,
+                  ),
+                  const SizedBox(width: 12),
+                  // Display pseudo and full name.
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          pseudo,
+                          style: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        if (displayName.isNotEmpty)
+                          Text(
+                            displayName,
+                            style: const TextStyle(fontSize: 12),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              // Language selection dropdown.
+              Center(
+                child: _buildLanguageDropdown(context),
+              ),
+            ],
+          );
+        }
+        // Show a loading indicator while the auth state is being determined.
+        return const Center(child: CircularProgressIndicator());
+      },
+    ),
+  );
+}
+
+/// Builds the language selection dropdown, connected to the LocalizationCubit.
+Widget _buildLanguageDropdown(BuildContext context) {
+  return Container(
+    padding: const EdgeInsets.symmetric(horizontal: 20),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: BlocBuilder<LocalizationCubit, Locale>(
+      builder: (context, locale) {
+        return DropdownButtonHideUnderline(
+          child: DropdownButton<String>(
+            value: locale.languageCode,
+            icon: const Icon(Icons.keyboard_arrow_down),
+            items: {
+              'fr': 'Français',
+              'en': 'English',
+              'de': 'Deutsch',
+              'es': 'Español',
+            }.entries.map((entry) {
+              return DropdownMenuItem(
+                value: entry.key,
+                child: Text(entry.value),
+              );
+            }).toList(),
+            onChanged: (value) {
+              if (value != null) {
+                // Update the app's locale via the cubit.
+                //context.read<LocalizationCubit>().changeLocale(Locale(value));
+              }
+            },
+          ),
+        );
+      },
+    ),
+  );
+}
+
+/// Builds the trial period tile if the user is in their trial period.
+Widget _buildTrialPeriodTile(BuildContext context) {
+  return BlocBuilder<UserBloc, UserState>(
+    builder: (context, userState) {
+      if (userState is UserFreeTrialPeriodAndNotSubscribed) {
+        final int daysLeft = userState.daysLeft;
+        // Calculate progress based on the total trial days.
+        final double progress =
+            (daysFreeTrial - daysLeft).clamp(0, daysFreeTrial) / daysFreeTrial;
+
+        return TrialPeriodTile(
+          progress: progress,
+          daysRemaining: daysLeft,
+          onTap: () {
+            Navigator.of(context).pop(); // Close the drawer first.
+            DialogHelper()
+                .showFreeTrialDialog(context: context, daysLeft: daysLeft);
+          },
+        );
+      }
+      // If not in trial, show nothing.
+      return const SizedBox.shrink();
+    },
+  );
+}
+
+/// Builds the list of menu items for navigation.
+Widget _buildMenuItems(BuildContext context) {
+  return Column(
+    children: [
+      VocZillaTile(
+        icon: Icons.person,
+        label: "mon profil", // Using localized string
+        color: Colors.green,
+        onTap: () {
+          Navigator.of(context).pop();
+          Navigator.pushNamed(context, AppRoute.updateProfile);
+        },
+      ),
+      VocZillaTile(
+        icon: Icons.subscriptions_rounded,
+        label: context.loc.my_purchase,
+        color: Colors.purple,
+        onTap: () {
+          Navigator.of(context).pop();
+          Navigator.pushNamed(context, AppRoute.subscription);
+        },
+      ),
+      VocZillaTile(
+        icon: Icons.logout,
+        label: "Déconnéxion", // Using localized string
+        color: Colors.grey,
+        onTap: () {
+          Navigator.of(context).pop();
+          context.read<AuthBloc>().add(SignOutRequested());
+        },
+      ),
+    ],
+  );
+}
+
+/// Helper function to close the drawer.
 void closeDrawer(BuildContext context) {
   Navigator.of(context).pop();
 }
+
+/// Helper function to provide a valid name for the Avatar widget.
 String _getValidName(String? input) {
-  final fallback = '?';
+  const fallback = '?';
   if (input == null || input.trim().isEmpty) return fallback;
-
-  // Remove invalid characters if necessary
   final clean = input.trim().replaceAll(RegExp(r'[^\w\s]'), '');
-
   return clean.isEmpty ? fallback : clean;
 }

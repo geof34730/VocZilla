@@ -5,27 +5,23 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
-import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vobzilla/data/repository/auth_repository.dart';
-
-// AJOUT : Imports pour le modèle et le service de données Firestore
-import 'package:vobzilla/data/models/user_firestore.dart';
-import 'package:vobzilla/data/services/data_user_service.dart';
+import 'package:vobzilla/core/utils/ui.dart';
 
 import '../../core/utils/logger.dart';
-import '../../core/utils/ui.dart';
 import '../../global.dart';
 import '../../logic/blocs/user/user_bloc.dart';
 import '../../logic/blocs/user/user_event.dart';
-import '../../logic/blocs/user/user_state.dart';
 import '../../ui/widget/elements/DialogHelper.dart';
 
+/// This repository primarily handles user-related business logic that isn't
+/// direct data manipulation, such as In-App Purchases and status checks.
+/// For creating, reading, or updating user data in Firestore/cache,
+/// use the `DataUserRepository`.
 class UserRepository {
-  final InAppPurchase inAppPurchase = InAppPurchase.instance;
+  final InAppPurchase _inAppPurchase = InAppPurchase.instance;
   final Dio _dio = Dio();
-  // AJOUT : Instance du service pour communiquer avec Firestore
-  final DataUserService _dataUserService = DataUserService();
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   String? _purchaseToken;
   String? _platform;
@@ -33,42 +29,11 @@ class UserRepository {
   Completer<void> _purchaseCompleter = Completer<void>();
   StreamSubscription<List<PurchaseDetails>>? _purchaseSubscription;
 
-  // AJOUT : Méthode pour sauvegarder un nouvel utilisateur dans Firestore
-  /// Appelle le service de données pour sauvegarder un nouvel utilisateur.
-  /// Retourne l'objet [UserFirestore] sauvegardé en cas de succès.
-  Future<UserFirestore> saveNewUser(UserFirestore user) async {
-    try {
-      Logger.Green.log("UserRepository: Saving new user to Firestore...");
-      // On délègue la sauvegarde au service et on retourne le résultat
-      final savedUser = await _dataUserService.saveUserToFirestore(user: user);
-      Logger.Green.log("UserRepository: User saved successfully.");
-      return savedUser;
-    } catch (e) {
-      Logger.Red.log("UserRepository: Failed to save new user: $e");
-      // On propage l'erreur pour que le BLoC puisse la gérer
-      throw Exception("La création du profil utilisateur dans Firestore a échoué.");
-    }
-  }
-
-  // AJOUT : Méthode pour mettre à jour un utilisateur dans Firestore
-  /// Appelle le service de données pour mettre à jour un utilisateur.
-  /// Retourne l'objet [UserFirestore] mis à jour en cas de succès.
-  Future<UserFirestore> updateUserProfile(UserFirestore user) async {
-    try {
-      Logger.Green.log("UserRepository: Updating user profile in Firestore...");
-      final updatedUser = await _dataUserService.updateUserToFirestore(user: user);
-      Logger.Green.log("UserRepository: User profile updated successfully.");
-      return updatedUser;
-    } catch (e) {
-      Logger.Red.log("UserRepository: Failed to update user profile: $e");
-      throw Exception("La mise à jour du profil a échoué.");
-    }
-  }
-
   Future<void> checkUserStatusOncePerDay(BuildContext context) async {
-    // GARDE D'AUTHENTIFICATION : Ne rien faire si aucun utilisateur n'est connecté.
-    if (FirebaseAuth.instance.currentUser == null) {
-      Logger.Yellow.log("checkUserStatusOncePerDay annulé : utilisateur non authentifié.");
+    // AUTHENTICATION GUARD: Do nothing if no user is signed in.
+    if (_firebaseAuth.currentUser == null) {
+      Logger.Yellow
+          .log("checkUserStatusOncePerDay cancelled: user not authenticated.");
       return;
     }
 
@@ -77,189 +42,171 @@ class UserRepository {
     final prefs = await SharedPreferences.getInstance();
     final today = DateTime.now().toIso8601String().substring(0, 10);
     final lastCheckStatusDate = prefs.getString('lastCheckStatusDate');
+
     if (lastCheckStatusDate != today) {
-      Logger.Green.log("checkUserStatusOncePerDay Checking user status");
+      Logger.Green.log("checkUserStatusOncePerDay: Checking user status...");
       prefs.setString('lastCheckStatusDate', today);
-      context.read<UserBloc>().add(CheckUserStatus());
-    }
-    else{
-      Logger.Green.log("checkUserStatusOncePerDay Already checked today");
+      // It's safer to check if the context is still mounted before using it.
+      if (context.mounted) {
+        context.read<UserBloc>().add(CheckUserStatus());
+      }
+    } else {
+      Logger.Green.log("checkUserStatusOncePerDay: Already checked today.");
     }
   }
 
   Future<void> checkUserStatusForce() async {
-    Logger.Green.log("checkUserStatusOncePerDayForce");
+    Logger.Green.log("checkUserStatusForce triggered.");
     final prefs = await SharedPreferences.getInstance();
-    final yesterday = DateTime
-        .now()
-        .subtract(Duration(days: 5))
-        .toIso8601String()
-        .substring(0, 10);
-    prefs.setString('lastCheckStatusDate', yesterday);
+    // Forcing a check by setting the last check date to the past.
+    final yesterday =
+    DateTime.now().subtract(const Duration(days: 1)).toIso8601String().substring(0, 10);
+    await prefs.setString('lastCheckStatusDate', yesterday);
   }
 
-  Future<void> showDialogueFreeTrialOnceByDay({required BuildContext context}) async {
-    // GARDE D'AUTHENTIFICATION : Ne rien faire si aucun utilisateur n'est connecté.
-    if (FirebaseAuth.instance.currentUser == null) {
-      Logger.Yellow.log("showDialogueFreeTrialOnceByDay annulé : utilisateur non authentifié.");
+  Future<void> showDialogueFreeTrialOnceByDay(
+      {required BuildContext context}) async {
+    // AUTHENTICATION GUARD: Do nothing if no user is signed in.
+    if (_firebaseAuth.currentUser == null) {
+      Logger.Yellow.log(
+          "showDialogueFreeTrialOnceByDay cancelled: user not authenticated.");
       return;
     }
 
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String today = DateTime.now().toIso8601String().substring(0, 10);
-    String? lastShownDate = prefs.getString('lastFreeTrialDialogDate');
+    final prefs = await SharedPreferences.getInstance();
+    final today = DateTime.now().toIso8601String().substring(0, 10);
+    final lastShownDate = prefs.getString('lastFreeTrialDialogDate');
+
     if (lastShownDate != today) {
-      // Mettre à jour la date dans SharedPreferences
       await prefs.setString('lastFreeTrialDialogDate', today);
       Logger.Green.log(
-          "Check me status for UserFreeTrialPeriodAndNotSubscribed for free trial dialogue");
+          "Showing free trial dialog for UserFreeTrialPeriodAndNotSubscribed.");
       final daysLeft = await getLeftDaysFreeTrial();
-      WidgetsBinding.instance.addPostFrameCallback((_) async {
-        DialogHelper().showFreeTrialDialog(context: context, daysLeft: daysLeft);
+      // Ensure the widget is built before showing a dialog.
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (context.mounted) {
+          DialogHelper().showFreeTrialDialog(context: context, daysLeft: daysLeft);
+        }
       });
     } else {
-      Logger.Cyan.log("Le dialogue a déjà été affiché aujourd'hui");
+      Logger.Cyan.log("Free trial dialog already shown today.");
     }
   }
 
   Future<void> restorePurchases() async {
-    // Annuler toute souscription existante pour éviter les fuites avant d'en démarrer une nouvelle.
+    // Cancel any existing subscription to avoid leaks before starting a new one.
     await _purchaseSubscription?.cancel();
-    print("restorePurchases");
+    _purchaseSubscription = null;
 
-    final bool available = await inAppPurchase.isAvailable();
+    final bool available = await _inAppPurchase.isAvailable();
     if (!available) {
       print("In-app purchases not available");
-      if (!_purchaseCompleter.isCompleted) {
-        _purchaseCompleter.complete();
-      }
+      if (!_purchaseCompleter.isCompleted) _purchaseCompleter.complete();
       return;
     }
-    print("restorePurchases 2");
-    // Écouter le stream d'achats pour obtenir les résultats de l'opération de restauration.
-    _purchaseSubscription = inAppPurchase.purchaseStream.listen((List<PurchaseDetails> purchaseDetailsList) {
-      print("restorePurchases 4");
-      if (purchaseDetailsList.isEmpty) {
-        if (!_purchaseCompleter.isCompleted) {
-          _purchaseCompleter.complete();
-        }
-      }
-      for (final purchase in purchaseDetailsList) {
-        print("restorePurchases 5");
-        if (purchase.status == PurchaseStatus.purchased || purchase.status == PurchaseStatus.restored) {
-          Logger.Green.log('Produit: ${purchase.productID}');
-          Logger.Green.log('Token: ${purchase.verificationData.serverVerificationData}');
-          Logger.Green.log('Produit: ${purchase.verificationData.localVerificationData}');
-          _purchaseToken =purchase.verificationData.serverVerificationData;
-          _subscriptionId = purchase.productID;
-          if (Platform.isAndroid) {
-            _platform = 'android';
-          } else if (Platform.isIOS) {
-            _platform = 'ios';
-          }
-          if (!_purchaseCompleter.isCompleted) {
-            _purchaseCompleter.complete();
-          }
-        }
-      }
-    });
 
-    // Ceci déclenche la restauration. Les résultats seront livrés à l'écouteur ci-dessus.
-    await inAppPurchase.restorePurchases();
-    print("restorePurchases 3");
+    // Listen to the purchase stream to get results from the restore operation.
+    _purchaseSubscription =
+        _inAppPurchase.purchaseStream.listen((purchaseDetailsList) {
+          if (purchaseDetailsList.isEmpty && !_purchaseCompleter.isCompleted) {
+            _purchaseCompleter.complete();
+            return;
+          }
+          for (final purchase in purchaseDetailsList) {
+            if (purchase.status == PurchaseStatus.purchased ||
+                purchase.status == PurchaseStatus.restored) {
+              Logger.Green.log('Product restored: ${purchase.productID}');
+              _purchaseToken = purchase.verificationData.serverVerificationData;
+              _subscriptionId = purchase.productID;
+              _platform = Platform.isAndroid ? 'android' : 'ios';
+
+              if (!_purchaseCompleter.isCompleted) {
+                _purchaseCompleter.complete();
+              }
+              // We found a valid purchase, no need to process further in this loop.
+              break;
+            }
+          }
+        }, onDone: () {
+          if (!_purchaseCompleter.isCompleted) _purchaseCompleter.complete();
+        }, onError: (error) {
+          if (!_purchaseCompleter.isCompleted) _purchaseCompleter.completeError(error);
+        });
+
+    // This triggers the restore. Results will be delivered to the listener above.
+    await _inAppPurchase.restorePurchases();
   }
 
   Future<bool> checkSubscriptionStatus() async {
-    // Réinitialiser le completer pour cette nouvelle opération de vérification afin de s'assurer qu'il peut être attendu à nouveau.
+    // Reset the completer for this new check operation.
     if (_purchaseCompleter.isCompleted) {
       _purchaseCompleter = Completer<void>();
     }
 
-    // Vérifier le statut de l'abonnement
-    Logger.Magenta.log("begin checkSubscriptionStatus");
-    restorePurchases();
-    await _purchaseCompleter.future;
+    Logger.Magenta.log("Beginning checkSubscriptionStatus...");
+    try {
+      await restorePurchases();
+      await _purchaseCompleter.future;
+    } catch (e) {
+      Logger.Red.log("Error during restorePurchases: $e");
+    } finally {
+      // It's crucial to cancel the stream listener once the operation is complete
+      // to prevent memory leaks and unexpected behavior from old listeners.
+      await _purchaseSubscription?.cancel();
+      _purchaseSubscription = null;
+    }
 
-    // Annuler l'écouteur de stream une fois l'opération terminée est crucial
-    // pour éviter les fuites de mémoire et les comportements inattendus des anciens écouteurs.
-    await _purchaseSubscription?.cancel();
-    _purchaseSubscription = null;
 
     if (_purchaseToken == null || _subscriptionId == null) {
-      Logger.Red.log("No valid purchase details available");
+      Logger.Red.log("No valid purchase details available after restore.");
       return false;
     }
 
-    var suscriptionId = await getPackageName();
-    Logger.Magenta.log("go checkSubscriptionStatus");
-    Logger.Magenta.log('_purchaseToken: ${_purchaseToken}');
-    Logger.Magenta.log('platform: ${_platform}');
-    Logger.Magenta.log('subscriptionId: ${suscriptionId}');
-    Logger.Magenta.log("Checking subscription status");
+    Logger.Magenta.log("Verifying subscription with backend...");
     try {
-      Logger.Red.log("GO SERVICE");
-      Logger.Yellow.log({
-        'userId': FirebaseAuth.instance.currentUser?.uid,
-        'purchaseToken': _purchaseToken,
-        'platform': _platform,
-        'subscriptionId': suscriptionId
-      });
       final response = await _dio.post(
         serverSubcriptionStaturUrl,
         options: Options(headers: {'Content-Type': 'application/json'}),
         data: {
-          'userId': FirebaseAuth.instance.currentUser?.uid,
+          'userId': _firebaseAuth.currentUser?.uid,
           'purchaseToken': _purchaseToken,
           'platform': _platform,
           'subscriptionId': _subscriptionId
         },
       );
-      if (response.statusCode == 200) {
-        final data = response.data;
-        Logger.Blue.log("isSubscribed: ${data}");
-        return data;
+
+      if (response.statusCode == 200 && response.data is bool) {
+        Logger.Blue.log("Subscription status from backend: ${response.data}");
+        return response.data;
       } else {
-        Logger.Red.log("Failed to verify subscription");
-        throw Exception('Failed to verify subscription');
+        Logger.Red.log(
+            "Failed to verify subscription. Status: ${response.statusCode}, Body: ${response.data}");
+        return false;
       }
     } catch (e) {
-      Logger.Red.log("Error verifying subscription: $e");
-      Logger.Red.log('Error verifying subscription: $e');
+      Logger.Red.log("Error verifying subscription with backend: $e");
       return false;
     }
   }
 
   Future<DateTime?> getTrialEndDate() async {
-    //retourne la date de fin de l'essai gratuit
-    final endDate = await getDaysEndFreetrial();
-    return endDate;
+    return await _getDaysEndFreetrial();
   }
 
   Future<int> getLeftDaysEndDate() async {
-    //retourne le nombre de jour de l'essai gratuit
     return await getLeftDaysFreeTrial();
   }
 
-  Future<DateTime?> getDaysEndFreetrial() async {
-    if (FirebaseAuth.instance.currentUser == null) {
-      return null;
-    }
-    try {
-      final user = await AuthRepository().getUserFirebase();
-      if (user == null) {
-        return null;
-      }
-      // creationTime peut aussi être null. L'opérateur ?. gère ce cas.
-      return user.metadata.creationTime?.add(Duration(days: daysFreeTrial));
-    } catch (e, s) {
-      Logger.Red.log("Erreur lors de la récupération de l'utilisateur pour la date de fin d'essai : $e\nStackTrace: $s");
-      return null;
-    }
+  Future<DateTime?> _getDaysEndFreetrial() async {
+    // The user object from FirebaseAuth contains the metadata.
+    final user = _firebaseAuth.currentUser;
+    // creationTime can also be null. The ?. operator handles this case.
+    return user?.metadata.creationTime?.add(Duration(days: daysFreeTrial));
   }
 
   Future<int> getLeftDaysFreeTrial() async {
     final now = DateTime.now();
-    final endDate = await getDaysEndFreetrial();
+    final endDate = await _getDaysEndFreetrial();
     if (endDate == null) {
       return 0;
     }
@@ -268,4 +215,5 @@ class UserRepository {
   }
 }
 
+/// A global instance for easy access, following the service locator pattern.
 final UserRepository userRepository = UserRepository();
