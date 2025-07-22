@@ -1,67 +1,147 @@
+// /Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/lib/ui/widget/home/HomeClassement.dart
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/device.dart';
 import 'package:vobzilla/core/utils/localization.dart';
+import 'package:vobzilla/data/models/leaderboard_user.dart';
+import 'package:vobzilla/global.dart';
+import 'package:vobzilla/main.dart'; // NOUVEAU: Importer main.dart
+import 'package:vobzilla/ui/widget/elements/Loading.dart';
 
-import '../../../core/utils/languageUtils.dart';
-import '../../../core/utils/logger.dart';
-import '../../../core/utils/ui.dart';
-import '../../../data/models/vocabulary_user.dart';
-import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
-import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
-import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
-import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
-import '../../../logic/cubit/localization_cubit.dart';
+import '../../../logic/blocs/leaderboard/leaderboard_bloc.dart';
+import '../../../logic/blocs/leaderboard/leaderboard_event.dart';
+import '../../../logic/blocs/leaderboard/leaderboard_state.dart';
 import 'CardClassementGamer.dart';
 import 'CardClassementUser.dart';
-import 'CardHome.dart';
-import 'TitleWidget.dart';
 
+class HomeClassement extends StatefulWidget {
+  const HomeClassement({super.key});
 
-class HomeClassement extends StatelessWidget {
+  @override
+  State<HomeClassement> createState() => _HomeClassementState();
+}
+class _HomeClassementState extends State<HomeClassement> with RouteAware {
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    routeObserver.subscribe(this, ModalRoute.of(context)!);
+  }
+
+  @override
+  void dispose() {
+    routeObserver.unsubscribe(this);
+    super.dispose();
+  }
+
+  @override
+  void didPopNext() {
+    super.didPopNext();
+    if (changeVocabulaireSinceVisiteHome) {
+      context.read<LeaderboardBloc>().add(FetchLeaderboard());
+      changeVocabulaireSinceVisiteHome = false;
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    if (changeVocabulaireSinceVisiteHome) {
+      context.read<LeaderboardBloc>().add(FetchLeaderboard());
+      changeVocabulaireSinceVisiteHome = false;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
-        builder: (context, state) {
-          if (state is VocabulaireUserLoading) {
-            return Center(child: CircularProgressIndicator());
-          } else if( state is VocabulaireUserUpdate){
-            return Center(child: CircularProgressIndicator());
-          } else if (state is VocabulaireUserLoaded  ) {
-            final VocabulaireUser data = state.data;
-            //final bool listePerso = data.listTheme.length>0;
-            return Column(
-              children: [
-                LayoutBuilder(builder: (context, constraints) {
-                      final double spacing = 8.0;
-                      final int crossAxisCount = isTablet(context) ? 2 : 1;
-                      final double cardWidth = (constraints.maxWidth - (spacing * (crossAxisCount - 1))) / crossAxisCount;
-                      final List<Widget> gamerCards = List.generate(4, (index) {
-                        return SizedBox(
-                          width: cardWidth,
-                          child: index != 3 ? CardClassementGamer(position: index + 1) : CardClassementUser(),
-                        );
-                      });
-                      return Wrap(
-                        spacing: spacing,
-                        runSpacing: spacing,
-                        children: gamerCards,
-                      );
-                    }
-                  )
-              ],
-            );
-          } else if (state is VocabulaireUserError) {
-            return Center(child: Text(context.loc.error_loading));
-          } else {
-            return Center(child: Text(context.loc.unknown_error)); // fallback
-          }
+    return BlocBuilder<LeaderboardBloc, LeaderboardState>(
+      builder: (context, state) {
+        if (state is LeaderboardLoading || state is LeaderboardInitial) {
+          return const Loading();
         }
+        if (state is LeaderboardLoaded) {
+          return _buildLoaded(context, state.users);
+        }
+        if (state is LeaderboardError) {
+          return _buildError(context, state.message);
+        }
+        return const SizedBox.shrink();
+      },
     );
   }
 
+  Widget _buildLoaded(BuildContext context, List<LeaderboardUser> users) {
+    return RefreshIndicator(
+      onRefresh: () async {
+        context.read<LeaderboardBloc>().add(FetchLeaderboard());
+      },
+      child: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        padding: const EdgeInsets.all(8.0),
+        child: LayoutBuilder(builder: (context, constraints) {
+          final double spacing = 8.0;
+          final int crossAxisCount = isTablet(context) ? 2 : 1;
+          final double cardWidth = (constraints.maxWidth - (spacing * (crossAxisCount - 1))) / crossAxisCount;
 
+          final List<Widget> gamerCards = users.asMap().entries.map((entry) {
+            int index = entry.key;
+            var user = entry.value;
 
+            return SizedBox(
+              width: cardWidth,
+              child: CardClassementGamer(
+                position: index + 1,
+                user: user,
+                // TODO: Rendre cette valeur dynamique
+                totalWordsForLevel: 5600,
+              ),
+            );
+          }).toList();
+
+          if (gamerCards.length < 4) {
+            gamerCards.add(
+              SizedBox(
+                width: cardWidth,
+                child: CardClassementUser(),
+              ),
+            );
+          }
+
+          return Wrap(
+            spacing: spacing,
+            runSpacing: spacing,
+            children: gamerCards,
+          );
+        }),
+      ),
+    );
+  }
+
+  /// Construit l'UI pour l'état d'erreur, avec un bouton pour réessayer.
+  Widget _buildError(BuildContext context, String message) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "${context.loc.error_loading}:\n$message",
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.red),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.refresh),
+              onPressed: () {
+                context.read<LeaderboardBloc>().add(FetchLeaderboard());
+              },
+              label: Text("Réessayer"),
+            )
+          ],
+        ),
+      ),
+    );
+  }
 }

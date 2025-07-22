@@ -14,6 +14,15 @@ class VocabulaireUserEmpty extends VocabulaireUserState {
 
 }
 
+class ListPersoDeletionSuccess extends VocabulaireUserState {
+  final String deletedListGuid;
+
+   ListPersoDeletionSuccess(this.deletedListGuid);
+
+  @override
+  List<Object> get props => [deletedListGuid];
+}
+
 class VocabulaireUserLoaded extends VocabulaireUserState {
   final VocabulaireUser data;
   VocabulaireUserLoaded(this.data);

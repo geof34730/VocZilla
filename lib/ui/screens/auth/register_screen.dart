@@ -33,7 +33,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   void initState() {
     super.initState();
-    emailController = TextEditingController(text:"geoffrey.petain@gmail.com");
+    emailController = TextEditingController(text:"voczilla.test1@flutter-now.com");
     passwordController = TextEditingController(text:"Hefpccy%08%08");
     firstNameController = TextEditingController(text:"Geoffrey");
     lastNameController = TextEditingController(text:"Petain");

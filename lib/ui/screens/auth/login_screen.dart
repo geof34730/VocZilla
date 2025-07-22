@@ -24,7 +24,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController emailController = TextEditingController(text: 'geoffrey.petain@gmail.com');
+  final TextEditingController emailController = TextEditingController(text: "voczilla.test1@flutter-now.com");
   final TextEditingController passwordController = TextEditingController(text: "Hefpccy%08%08");
 
   @override

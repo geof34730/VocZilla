@@ -13,6 +13,7 @@ import 'core/utils/navigatorKey.dart';
 import 'core/utils/logger.dart';
 import 'data/repository/auth_repository.dart';
 import 'data/repository/data_user_repository.dart';
+import 'data/repository/leaderboard_repository.dart';
 import 'data/repository/vocabulaire_user_repository.dart';
 import 'data/services/localstorage_service.dart';
 import 'data/services/vocabulaires_server_service.dart';
@@ -22,6 +23,8 @@ import 'logic/blocs/auth/auth_bloc.dart';
 import 'logic/blocs/auth/auth_state.dart';
 import 'logic/blocs/drawer/drawer_bloc.dart';
 import 'logic/blocs/drawer/drawer_state.dart';
+import 'logic/blocs/leaderboard/leaderboard_bloc.dart';
+import 'logic/blocs/leaderboard/leaderboard_event.dart';
 import 'logic/blocs/notification/notification_bloc.dart';
 import 'logic/blocs/notification/notification_event.dart';
 import 'logic/blocs/notification/notification_state.dart';
@@ -38,6 +41,7 @@ import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'logic/blocs/update/update_bloc.dart';
+import 'main.dart';
 
 
 
@@ -75,6 +79,12 @@ class MyApp extends StatelessWidget {
           BlocProvider<NotificationBloc>(
             create: (context) => NotificationBloc(),
           ),
+          BlocProvider(
+            create: (context) => LeaderboardBloc(
+              leaderboardRepository: LeaderboardRepository(),
+              )..add(FetchLeaderboard()
+            )
+          ),
         ],
         child: BlocBuilder<LocalizationCubit, Locale>(
           builder: (context, locale) {
@@ -83,6 +93,7 @@ class MyApp extends StatelessWidget {
                 : locale;
             FirebaseAuth.instance.setLanguageCode(locale.languageCode);
             return MaterialApp(
+              navigatorObservers: [routeObserver],
               navigatorKey: navigatorKey,
               theme: VobdzillaTheme.lightTheme,
               debugShowCheckedModeBanner: false,
@@ -98,7 +109,7 @@ class MyApp extends StatelessWidget {
               builder: (context, child) {
                 return MultiBlocListener(
                   listeners: [
-                    BlocListener<AuthBloc, AuthState>(
+                   /* BlocListener<AuthBloc, AuthState>(
                       listener: (context, state) =>
                           BlocStateTracker().updateState('AuthBloc', state),
                     ),
@@ -120,15 +131,20 @@ class MyApp extends StatelessWidget {
                     ),
                     BlocListener<VocabulairesBloc, VocabulairesState>(
                       listener: (context, state) {
-                        Logger.Yellow.log("VocabulairesBloc state: $state");
-                        BlocStateTracker().updateState('VocabulairesBloc', state);
+                          BlocStateTracker().updateState('VocabulairesBloc', state);
                       },
-                    ),
+                    ),*/
                     BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
                       listener: (context, state) {
                         Logger.Yellow.log("VocabulaireUserBloc state: $state");
-                        BlocStateTracker().updateState(
-                            'VocabulaireUserBloc', state);
+                        BlocStateTracker().updateState('VocabulaireUserBloc', state);
+                        if (state is ListPersoDeletionSuccess) {
+                              context.read<LeaderboardBloc>().add(FetchLeaderboard());
+                              context.read<NotificationBloc>().add(ShowNotification(
+                                  message: "Liste supprimée avec succès.",
+                                  backgroundColor: Colors.green,
+                              ));
+                        }
                       },
                     ),
                     BlocListener<NotificationBloc, NotificationState>(
@@ -149,9 +165,7 @@ class MyApp extends StatelessWidget {
                                             color:Colors.white,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 18
-
                                           )
-
                                       ),
                                       backgroundColor: state.backgroundColor,
                                       behavior: SnackBarBehavior.floating,
@@ -161,13 +175,13 @@ class MyApp extends StatelessWidget {
 
                                   );
                                 context.read<NotificationBloc>().add(NotificationDismissed());
-
                               }
                             });
                           });
                         }
                       },
                     ),
+
                   ],
                   child: child ?? const SizedBox.shrink(),
                 );

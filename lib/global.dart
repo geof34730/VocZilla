@@ -7,11 +7,14 @@ String versionApp="1.0.0";
 bool debugMode=true;
 int daysFreeTrial=150;
 
-//final String serverSubcriptionStaturUrl = 'https://subscription-v1-275313479574.europe-central2.run.app/verify-subscription';
-final String serverSubcriptionStaturUrl = 'http://192.168.0.11:8080/verify-subscription';
-//final String serverVocabulaireUserUrl = 'https://subscription-v1-275313479574.europe-central2.run.app/vocabulaires-user';
-final String serverVocabulaireUserUrl = 'http://192.168.0.11:8080/vocabulaires-user';
+bool changeVocabulaireSinceVisiteHome = false;
 
+final String serveurUrl="http://192.168.0.11:8080";
+//final String serveurUrl="'https://subscription-v1-275313479574.europe-central2.run.app";
+
+final String serverSubcriptionStaturUrl = '$serveurUrl/verify-subscription';
+final String serverVocabulaireUserUrl = '$serveurUrl/vocabulaires-user';
+final String serverLeaderBoardUrl = '$serveurUrl/api/leaderboard/top3';
 
 String ANDROID_APP_STORE_URL="https://play.google.com/store/apps/details?id=com.geoffreypetain.voczilla.voczilla";
 String IOS_APP_STORE_URL="https://apps.apple.com/us/app/com.geoffreypetain.voczilla.voczilla/6742488058";

@@ -36,11 +36,8 @@ class VocabulaireServerService {
       uid = userMap['uid'] as String?;
     }
     userData.remove('ListTheme');
-
-    Logger.Blue.log("VocabulaireServerService updateUserData Clean $userData");
     final list = userData['ListGuidVocabularyLearned'];
     final int ListGuidVocabularyLearnedLength = (list is List) ? list.length : 0;
-    Logger.Blue.log("Taille de ListGuidVocabularyLearned : $ListGuidVocabularyLearnedLength");
     final listLearned = userData['ListGuidVocabularyLearned'];
 
     final listPerso = userData['ListPerso'];
@@ -60,22 +57,8 @@ class VocabulaireServerService {
           },
         SetOptions(merge: true),
       );
-/*
-      final top3Snapshot = await FirebaseFirestore.instance
-          .collection('users')
-          .orderBy('countGuidVocabularyLearned', descending: true)
-          .orderBy('createdAt') // plus ancien d'abord en cas d'égalité
-          .limit(3)
-          .get();
-      final top3 = top3Snapshot.docs.map((doc) => doc.data()).toList();
 
-
-      Logger.Blue.log("FFFFFFFFF******************");
-      Logger.Blue.log(top3);
-      Logger.Blue.log("JJJJJJJJJ******************");
-*/
-
-
+      changeVocabulaireSinceVisiteHome=true;
     } else {
       Logger.Red.log("Impossible de sauvegarder : uid ou ListGuidVocabularyLearned manquant");
     }
