@@ -112,12 +112,11 @@ class AppRoute {
                     _redirectTo(context, settings, login);
                   }
                 } else if (authState is AuthError) {
-                 _redirectTo(
-                    context,
-                    settings,
-                    login,
-                    arguments: {'errorMessage': authState.message},
-                  );
+                  Logger.Red.log('ROUTE AuthError');
+                  context.read<NotificationBloc>().add(ShowNotification(
+                    message: authState.message,
+                    backgroundColor: Colors.red,
+                  ));
 
                 }
               },
@@ -127,10 +126,13 @@ class AppRoute {
           child: ConnectivityAwareWidget(
             child: BlocBuilder<AuthBloc, AuthState>(
               builder: (context, authState) {
+                if (authState is AuthError) {
+                  return _getUnauthenticatedPage(settings, context);
+                }
                 if (authState is AuthAuthenticated) {
                   return _getAuthenticatedPage(settings, context);
                 }
-                if (authState is AuthUnauthenticated || authState is AuthError) {
+                if (authState is AuthUnauthenticated ) {
                   return _getUnauthenticatedPage(settings, context);
                 }
 
@@ -155,7 +157,7 @@ class AppRoute {
         final args = settings.arguments as Map<String, dynamic>?;
         return Layout(
           logged: false,
-          child: LoginScreen(errorMessage: args?['errorMessage']),
+          child: LoginScreen(),
         );
       case register:
         return Layout(logged: false, child: RegisterScreen());
@@ -183,7 +185,7 @@ class AppRoute {
         case login:
         // MODIFICATION : On extrait les arguments et on les passe à LoginScreen.
           final args = settings.arguments as Map<String, dynamic>?;
-          return Layout(appBarNotLogged: true,logged: false, child: LoginScreen(errorMessage: args?['errorMessage']));
+          return Layout(appBarNotLogged: true,logged: false, child: LoginScreen());
         case updateProfileGafa:
           return Layout(appBarNotLogged: true, logged: false, child: ProfileUpdateGafaScreen());
         case subscription:

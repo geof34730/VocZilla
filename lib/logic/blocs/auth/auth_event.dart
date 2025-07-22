@@ -9,7 +9,9 @@ abstract class AuthEvent extends Equatable {
   const AuthEvent();
 
   @override
-  List<Object> get props => [];
+  // CORRECTION : On autorise les objets nuls dans la liste de props.
+  // Cela rend la classe de base compatible avec toutes les classes enfants.
+  List<Object?> get props => [];
 }
 
 class SignUpRequested extends AuthEvent {
@@ -26,7 +28,12 @@ class SignUpRequested extends AuthEvent {
     required this.lastName,
     required this.pseudo,
   });
+
+  // On ajoute les props pour que Equatable puisse comparer les instances
+  @override
+  List<Object> get props => [email, password, firstName, lastName, pseudo];
 }
+
 class AppStarted extends AuthEvent {}
 
 class SignInRequested extends AuthEvent {
@@ -34,6 +41,9 @@ class SignInRequested extends AuthEvent {
   final String password;
 
   SignInRequested({required this.email, required this.password});
+
+  @override
+  List<Object> get props => [email, password];
 }
 
 class GoogleSignInRequested extends AuthEvent {}
@@ -50,17 +60,12 @@ class AuthErrorCleared extends AuthEvent {}
 
 class UpdateUserEvent extends AuthEvent {
   final User user;
-
   const UpdateUserEvent(this.user);
-
   @override
   List<Object> get props => [user];
 }
 
-
-
 class UpdateUserProfilEvent extends AuthEvent {
-
   final String lastName;
   final String firstName;
   final String pseudo;
@@ -75,4 +80,11 @@ class UpdateUserProfilEvent extends AuthEvent {
 
   @override
   List<Object> get props => [lastName, firstName, pseudo];
+}
+
+class AuthUserChanged extends AuthEvent {
+  final User? user;
+  const AuthUserChanged(this.user);
+  @override
+  List<Object?> get props => [user];
 }

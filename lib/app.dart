@@ -152,9 +152,7 @@ class MyApp extends StatelessWidget {
                                     ),
 
                                   );
-                                context
-                                    .read<NotificationBloc>()
-                                    .add(NotificationDismissed());
+                                context.read<NotificationBloc>().add(NotificationDismissed());
                                 context.read<AuthBloc>().add(AuthErrorCleared());
                               }
                             });
