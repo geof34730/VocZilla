@@ -25,6 +25,10 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Nous avons besoin d'accéder à votre galerie pour vous permettre de choisir une photo de profil.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Nous avons besoin d'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.</string>
 	<key>NSMicrophoneUsageDescription</key>
     <string>Nous avons besoin du microphone pour permettre l’enregistrement audio dans certaines fonctionnalités.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>

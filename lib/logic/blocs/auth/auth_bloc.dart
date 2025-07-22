@@ -194,6 +194,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           firstName: event.firstName,
           lastName: event.lastName,
           pseudo: event.pseudo,
+          imageAvatar: event.imageAvatar
         );
         final updatedProfile =
         await _dataUserRepository.getUser(currentProfile.uid);

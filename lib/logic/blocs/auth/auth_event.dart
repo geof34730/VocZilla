@@ -69,12 +69,14 @@ class UpdateUserProfilEvent extends AuthEvent {
   final String lastName;
   final String firstName;
   final String pseudo;
+  final String? imageAvatar;
   final NotificationBloc notificationBloc;
 
   const UpdateUserProfilEvent({
     required this.lastName,
     required this.firstName,
     required this.pseudo,
+    this.imageAvatar,
     required this.notificationBloc,
   });
 

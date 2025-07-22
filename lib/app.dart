@@ -48,8 +48,7 @@ class MyApp extends StatelessWidget {
   final String? localForce;
 
   MyApp({super.key, this.localForce});
-  //final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-  final AuthRepository _authRepository = AuthRepository();
+
 
   @override
   Widget build(BuildContext context) {
@@ -144,7 +143,16 @@ class MyApp extends StatelessWidget {
                                   ..removeCurrentSnackBar()
                                   ..showSnackBar(
                                     SnackBar(
-                                      content: Text(state.message),
+                                      content: Text(
+                                          state.message,
+                                          style:TextStyle(
+                                            color:Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18
+
+                                          )
+
+                                      ),
                                       backgroundColor: state.backgroundColor,
                                       behavior: SnackBarBehavior.floating,
                                       showCloseIcon: true,
@@ -153,7 +161,7 @@ class MyApp extends StatelessWidget {
 
                                   );
                                 context.read<NotificationBloc>().add(NotificationDismissed());
-                                context.read<AuthBloc>().add(AuthErrorCleared());
+
                               }
                             });
                           });

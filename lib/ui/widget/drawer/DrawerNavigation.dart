@@ -11,6 +11,7 @@ import 'package:vobzilla/logic/blocs/user/user_state.dart';
 import 'package:vobzilla/ui/widget/drawer/trial_period_tile.dart';
 import 'package:vobzilla/ui/widget/drawer/voczilla_tile.dart';
 import '../../../app_route.dart';
+import '../../../core/utils/string.dart';
 import '../../../global.dart'; // Needed for daysFreeTrial
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
@@ -73,7 +74,7 @@ Widget _buildDrawerHeader(BuildContext context) {
                       errorBuilder: (context, error, stackTrace) {
                         return Avatar(
                           radius: 30,
-                          name: _getValidName(pseudo),
+                          name: GetValidName(pseudo),
                           fontsize: 30,
                         );
                       },
@@ -81,7 +82,7 @@ Widget _buildDrawerHeader(BuildContext context) {
                   )
                       : Avatar(
                     radius: 30,
-                    name: _getValidName(pseudo),
+                    name: GetValidName(pseudo),
                     fontsize: 30,
                   ),
                   const SizedBox(width: 12),
@@ -228,9 +229,4 @@ void closeDrawer(BuildContext context) {
 }
 
 /// Helper function to provide a valid name for the Avatar widget.
-String _getValidName(String? input) {
-  const fallback = '?';
-  if (input == null || input.trim().isEmpty) return fallback;
-  final clean = input.trim().replaceAll(RegExp(r'[^\w\s]'), '');
-  return clean.isEmpty ? fallback : clean;
-}
+

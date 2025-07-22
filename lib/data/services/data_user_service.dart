@@ -3,8 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/user_firestore.dart';
 
 class DataUserService {
-  final CollectionReference _usersCollection =
-  FirebaseFirestore.instance.collection('users');
+  final CollectionReference _usersCollection = FirebaseFirestore.instance.collection('users');
 
   /// Récupère un document utilisateur depuis Firestore par son UID.
   Future<UserFirestore?> getUserFromFirestore(String uid) async {
@@ -26,11 +25,16 @@ class DataUserService {
     required String firstName,
     required String lastName,
     required String pseudo,
+    String? imageAvatar,
   }) async {
-    await _usersCollection.doc(uid).update({
+    final Map<String, dynamic> data = {
       'firstName': firstName,
       'lastName': lastName,
       'pseudo': pseudo,
-    });
+    };
+    if (imageAvatar != null) {
+      data['imageAvatar'] = imageAvatar;
+    }
+    await _usersCollection.doc(uid).update(data);
   }
 }

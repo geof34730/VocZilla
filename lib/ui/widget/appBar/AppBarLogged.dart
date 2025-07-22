@@ -7,6 +7,7 @@ import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
 import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 import 'package:vobzilla/ui/widget/appBar/TitleSite.dart';
 
+import '../../../core/utils/string.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 
@@ -33,9 +34,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
                 padding: const EdgeInsets.only(right: 15),
                 child: GestureDetector(
                   onTap: () {
-                    context
-                        .read<DrawerBloc>()
-                        .add(OpenSettingsDrawer(context: context));
+                    context.read<DrawerBloc>().add(OpenSettingsDrawer(context: context));
                     scaffoldKey.currentState!.openEndDrawer();
                   },
                   child: Stack(
@@ -49,7 +48,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
                       )
                           : Avatar(
                         radius: 22,
-                        name: _getValidName(pseudo),
+                        name: GetValidName(pseudo),
                         fontsize: 28,
                       ),
                       Positioned(
@@ -87,13 +86,3 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
-/// Valide une chaîne de caractères pour l'utiliser comme nom dans le widget Avatar.
-String _getValidName(String? input) {
-  const fallback = '?';
-  if (input == null || input.trim().isEmpty) return fallback;
-
-  // Optionnel : Nettoie la chaîne si elle contient des caractères non valides.
-  final clean = input.trim().replaceAll(RegExp(r'[^\w\s]'), '');
-
-  return clean.isEmpty ? fallback : clean;
-}

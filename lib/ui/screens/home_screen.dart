@@ -30,19 +30,6 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            /*ElevatedButton(onPressed: (){
-              DataUserRepository().emailVerifiedUpdateUserFirestore();
-            }, child: Text("emailVerifiedUpdateUserFirestore")
-            ),
-       */
-
-            ElevatedButton(onPressed: () {
-              context.read<NotificationBloc>().add(ShowNotification(
-                message: "Profil utilisateur mis à jour avec succès",
-                backgroundColor: Colors.green,
-              ));
-            }, child: Text("emailVerifiedUpdateUserFirestore")
-            ),
             Text(
                 context.loc.home_title_progresse,
                 style: TextStyle(

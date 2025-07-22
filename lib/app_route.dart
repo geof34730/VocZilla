@@ -117,11 +117,28 @@ class AppRoute {
                     message: authState.message,
                     backgroundColor: Colors.red,
                   ));
-
+                  context.read<AuthBloc>().add(AuthErrorCleared());
                 }
               },
             ),
-            // ... autres BlocListeners
+            BlocListener<UpdateBloc, UpdateState>(
+              listener: (context, updateState) {
+                if (updateState is UpdateAvailable) {
+                  Logger.Red.log('Update available, redirecting to UpdateScreen');
+                  Navigator.pushReplacementNamed(context, updateScreen);
+                }
+              },
+            ),
+            BlocListener<PurchaseBloc, PurchaseState>(
+              listener: (context, purchaseState) {
+                Logger.Red.log("BlocListener<PurchaseBloc, PurchaseState>");
+                if (purchaseState is PurchaseCompleted) {
+                  Logger.Red.log('Purchase completed, redirecting to HomeScreen');
+                  userRepository.checkUserStatusForce();
+                  Navigator.pushReplacementNamed(context, home);
+                }
+              },
+            ),
           ],
           child: ConnectivityAwareWidget(
             child: BlocBuilder<AuthBloc, AuthState>(
@@ -161,6 +178,11 @@ class AppRoute {
         );
       case register:
         return Layout(logged: false, child: RegisterScreen());
+      case updateScreen:
+        return Layout(
+            titleScreen: "Mise à jour disponible !",
+            child: UpdateScreen()
+        );
       default:
         return _errorPage(settings, secure: false);
     }
@@ -183,8 +205,6 @@ class AppRoute {
         case updateProfile:
           return Layout(appBarNotLogged: false, logged: true, child: ProfileUpdateScreen());
         case login:
-        // MODIFICATION : On extrait les arguments et on les passe à LoginScreen.
-          final args = settings.arguments as Map<String, dynamic>?;
           return Layout(appBarNotLogged: true,logged: false, child: LoginScreen());
         case updateProfileGafa:
           return Layout(appBarNotLogged: true, logged: false, child: ProfileUpdateGafaScreen());
@@ -195,16 +215,56 @@ class AppRoute {
           return Layout(child: HomeScreen());
         case updateScreen:
           return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
-
+        case updateScreen:
+          return Layout(
+              titleScreen: "Mise à jour disponible !",
+              child: UpdateScreen()
+          );
         case '/vocabulary':
           if (uri.pathSegments.length == 2) {
             switch (uri.pathSegments[1]) {
-              case 'list': return ListScreen();
-              case 'learn': return LearnScreen();
-              case 'voicedictation': return VoiceDictationScreen();
-              case 'pronunciation': return PronunciationScreen();
-              case 'quizz': return QuizzScreen();
-              case 'statistical': return StatisticalScreen();
+              case 'list':
+                return Layout(
+                  titleScreen: context.loc.liste_title,
+                  showBottomNavigationBar: true,
+                  itemSelected: 0,
+                  child: ListScreen(),
+                );
+              case 'learn':
+                return Layout(
+                  titleScreen: context.loc.apprendre_title,
+                  showBottomNavigationBar: true,
+                  itemSelected: 1,
+                  child: LearnScreen(),
+                );
+              case 'voicedictation':
+                return Layout(
+                  titleScreen: context.loc.dictation_title,
+                  showBottomNavigationBar: true,
+                  itemSelected: 2,
+                  child: VoiceDictationScreen(),
+                );
+              case 'pronunciation':
+                return Layout(
+                  titleScreen: context.loc.pronunciation_title,
+                  showBottomNavigationBar: true,
+                  itemSelected: 3,
+                  child: PronunciationScreen(),
+                );
+              case 'quizz':
+                return Layout(
+                  titleScreen: context.loc.tester_title,
+                  showBottomNavigationBar: true,
+                  itemSelected: 4,
+                  child: QuizzScreen(),
+                );
+              case 'statistical':
+                return Layout(
+                  titleScreen: context.loc.statistiques_title,
+                  showBottomNavigationBar: true,
+                  itemSelected: 5,
+                  child: StatisticalScreen(),
+                );
               default: return _errorPage(settings);
             }
           }

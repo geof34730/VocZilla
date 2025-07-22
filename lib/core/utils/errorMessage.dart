@@ -1,36 +1,19 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'logger.dart';
 
-String errorFirebaseMessage(e) {
-  String messageErreur = "erreur inconnue";
-  switch (e.code) {
-    case 'invalid-email':
-      messageErreur="L'adresse e-mail est mal formée.";
-      break;
-    case 'user-disabled':
-      messageErreur="Ce compte utilisateur a été désactivé.";
-      break;
-    case 'user-not-found':
-      messageErreur="Aucun utilisateur trouvé avec cet e-mail.";
-      break;
-    case 'wrong-password':
-      messageErreur="Le mot de passe est incorrect.";
-      break;
-    case 'email-already-in-use':
-      messageErreur="L'adresse e-mail est déjà utilisée par un autre compte.";
-      break;
-    case 'operation-not-allowed':
-      messageErreur="Cette opération n'est pas autorisée.";
-      break;
-    case 'weak-password':
-      messageErreur="Le mot de passe est trop faible.";
-      break;
-    case 'account-exists-with-different-credential':
-      messageErreur="Un compte existe déjà avec la même adresse e-mail mais avec des informations d'identification différentes. Connectez-vous en utilisant une méthode associée à ce compte.";
-      break;
-    case 'invalid-credential':
-      messageErreur="Email ou mot de passe invalide.";
-      break;
-  }
-  Logger.Red.log("SignInRequested error=============> ${e.code} ${e.message}e" );
-  return messageErreur;
+String errorFirebaseMessage(FirebaseAuthException e) {
+  Logger.Red.log("Firebase Auth Error => Code: ${e.code}, Message: ${e.message}");
+  return switch (e.code) {
+    'invalid-email' => "L'adresse e-mail est mal formée.",
+    'user-disabled' => "Ce compte utilisateur a été désactivé.",
+    'user-not-found' || 'wrong-password' || 'invalid-credential' => "L'e-mail ou le mot de passe est incorrect.",
+    'email-already-in-use' => "L'adresse e-mail est déjà utilisée par un autre compte.",
+    'operation-not-allowed' => "Cette opération n'est pas autorisée.",
+    'weak-password' => "Le mot de passe est trop faible.",
+    'account-exists-with-different-credential' => "Un compte existe déjà avec la même adresse e-mail mais avec des informations d'identification différentes.",
+    'too-many-requests' => "Trop de tentatives. Veuillez réessayer plus tard.", // Ajout d'un cas commun
+
+  // Cas par défaut amélioré pour toutes les autres erreurs (ex: problème réseau).
+    _ => "Une erreur inattendue est survenue. Veuillez réessayer.",
+  };
 }

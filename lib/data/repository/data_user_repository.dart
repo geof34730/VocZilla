@@ -7,7 +7,6 @@ import 'package:vobzilla/data/services/localstorage_service.dart';
 class DataUserRepository {
   final DataUserService _dataUserService = DataUserService();
   final LocalStorageService _localStorageService = LocalStorageService();
-
   /// Récupère les informations de l'utilisateur.
   /// Tente d'abord de charger depuis le cache local, sinon depuis Firestore.
   Future<UserFirestore?> getUser(String uid) async {
@@ -16,10 +15,8 @@ class DataUserRepository {
     if (user != null && user.uid == uid) {
       return user;
     }
-
     // 2. Si non trouvé dans le cache, récupérer depuis Firestore
     user = await _dataUserService.getUserFromFirestore(uid);
-
     // 3. Si trouvé sur Firestore, le sauvegarder dans le cache local pour les prochains accès
     if (user != null) {
       await _localStorageService.saveUser(user);
@@ -39,6 +36,7 @@ class DataUserRepository {
     required String firstName,
     required String lastName,
     required String pseudo,
+    String? imageAvatar,
   }) async {
     final uid = FirebaseAuth.instance.currentUser?.uid;
     if (uid == null) {
@@ -51,10 +49,11 @@ class DataUserRepository {
       firstName: firstName,
       lastName: lastName,
       pseudo: pseudo,
+      imageAvatar: imageAvatar,
     );
 
     // Invalide le cache local en le supprimant.
     // La prochaine fois que `getUser` sera appelé, il rechargera les données fraîches.
-    await _localStorageService.clearUser();
+     await _localStorageService.clearUser();
   }
 }
