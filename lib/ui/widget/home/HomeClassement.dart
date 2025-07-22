@@ -9,6 +9,7 @@ import 'package:vobzilla/global.dart';
 import 'package:vobzilla/main.dart'; // NOUVEAU: Importer main.dart
 import 'package:vobzilla/ui/widget/elements/Loading.dart';
 
+import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_bloc.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_event.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_state.dart';
@@ -43,9 +44,15 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
       changeVocabulaireSinceVisiteHome = false;
     }
   }
-
+  int totalWordsForLevel=0;
   @override
   void initState() {
+    VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
+      isListPerso:false,
+      isListTheme:false,
+    ).then((value) {
+      totalWordsForLevel=  value.countVocabulaireAll;
+    });
     super.initState();
     if (changeVocabulaireSinceVisiteHome) {
       context.read<LeaderboardBloc>().add(FetchLeaderboard());
@@ -83,18 +90,16 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
           final double spacing = 8.0;
           final int crossAxisCount = isTablet(context) ? 2 : 1;
           final double cardWidth = (constraints.maxWidth - (spacing * (crossAxisCount - 1))) / crossAxisCount;
-
           final List<Widget> gamerCards = users.asMap().entries.map((entry) {
             int index = entry.key;
             var user = entry.value;
-
             return SizedBox(
               width: cardWidth,
               child: CardClassementGamer(
                 position: index + 1,
                 user: user,
                 // TODO: Rendre cette valeur dynamique
-                totalWordsForLevel: 5600,
+                totalWordsForLevel: totalWordsForLevel,
               ),
             );
           }).toList();
