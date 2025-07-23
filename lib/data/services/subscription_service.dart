@@ -13,7 +13,6 @@ class SubscriptionService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _fireAuth = FirebaseAuth.instance;
   late StreamSubscription<List<PurchaseDetails>> _subscription;
-  final Dio _dio = Dio();
   SubscriptionService() {
     _subscription = _iap.purchaseStream.listen(
           (purchaseDetailsList) {

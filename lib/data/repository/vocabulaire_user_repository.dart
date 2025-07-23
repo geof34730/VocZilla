@@ -187,6 +187,12 @@ class VocabulaireUserRepository {
     }
   }
 
+  Future<int>getCountVocabulaireAll() async {
+    var data = await VocabulaireRepository().getDataTop();
+    return data.length;
+  }
+
+
   Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({
     String? guidList,
     int? vocabulaireBegin,

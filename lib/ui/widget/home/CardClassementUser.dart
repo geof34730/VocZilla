@@ -15,8 +15,15 @@ import '../statistical/LevelChart.dart';
 
 class CardClassementUser extends StatelessWidget {
 
+  final int position;
 
-  CardClassementUser();
+  const CardClassementUser({
+    super.key,
+    required this.position,
+
+
+  });
+
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +47,6 @@ class CardClassementUser extends StatelessWidget {
                     final int daysSinceCreation = userProfile.createdAt != null
                         ? DateTime.now().difference(userProfile.createdAt!).inDays
                         : 0;
-                    print(userProfile.createdAt);
                     return Card(
                         color: Colors.deepPurple,
                         child: ListTile(
@@ -114,7 +120,7 @@ class CardClassementUser extends StatelessWidget {
                               Padding(
                                   padding: EdgeInsetsGeometry.only(bottom: 3),
                                   child:AutoSizeText(
-                                    "12 550",
+                                    position.toString(),
                                     style: TextStyle(
                                         fontSize: 30,
                                         color: Colors.white,

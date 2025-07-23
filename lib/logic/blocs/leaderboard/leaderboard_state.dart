@@ -1,6 +1,8 @@
+// lib/logic/blocs/leaderboard/leaderboard_state.dart
 import 'package:equatable/equatable.dart';
-import '../../../data/models/leaderboard_user.dart'; // Mettez le bon chemin
+import 'package:vobzilla/data/models/leaderboard_data.dart'; // Assurez-vous que le chemin est correct
 
+// Classe de base abstraite pour tous les états.
 abstract class LeaderboardState extends Equatable {
   const LeaderboardState();
 
@@ -8,19 +10,23 @@ abstract class LeaderboardState extends Equatable {
   List<Object> get props => [];
 }
 
+// État initial, avant tout chargement.
 class LeaderboardInitial extends LeaderboardState {}
 
+// État de chargement, pendant l'appel réseau.
 class LeaderboardLoading extends LeaderboardState {}
 
+// État de succès, contenant les données prêtes à être affichées.
 class LeaderboardLoaded extends LeaderboardState {
-  final List<LeaderboardUser> users;
+  final LeaderboardData leaderboardData;
 
-  const LeaderboardLoaded(this.users);
+  const LeaderboardLoaded(this.leaderboardData);
 
   @override
-  List<Object> get props => [users];
+  List<Object> get props => [leaderboardData];
 }
 
+// État d'erreur, contenant un message à afficher.
 class LeaderboardError extends LeaderboardState {
   final String message;
 

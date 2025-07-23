@@ -1,21 +1,38 @@
-// lib/data/repositories/leaderboard_repository.dart
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import '../../global.dart';
-import '../models/leaderboard_user.dart'; // Assurez-vous que le chemin est correct
+// lib/data/repository/leaderboard_repository.dart
+import 'package:vobzilla/data/models/leaderboard_data.dart';
+import 'package:vobzilla/data/models/leaderboard_user.dart';
+import 'package:vobzilla/data/repository/vocabulaire_user_repository.dart';
+import 'package:vobzilla/data/services/leaderboard_service.dart';
 
 class LeaderboardRepository {
+  final LeaderboardService _leaderboardService;
+  final VocabulaireUserRepository _vocabulaireUserRepository;
 
-  Future<List<LeaderboardUser>> fetchTop3() async {
-    final response = await http.get(Uri.parse(serverLeaderBoardUrl));
+  LeaderboardRepository({
+    required LeaderboardService leaderboardService,
+    required VocabulaireUserRepository vocabulaireUserRepository,
+  })  : _leaderboardService = leaderboardService,
+        _vocabulaireUserRepository = vocabulaireUserRepository;
 
-    if (response.statusCode == 200) {
-      // Si le serveur retourne une réponse 200 OK, on parse le JSON.
-      final List<dynamic> data = json.decode(response.body);
-      return data.map((json) => LeaderboardUser.fromJson(json)).toList();
-    } else {
-      // Si la réponse n'est pas OK, on lève une exception.
-      throw Exception('Failed to load leaderboard');
+  Future<LeaderboardData> fetchLeaderboardData({required String currentUserId}) async {
+    try {
+      final results = await Future.wait([
+        _leaderboardService.fetchTopUsers(),
+        _leaderboardService.fetchUserRank(uid: currentUserId),
+        _vocabulaireUserRepository.getCountVocabulaireAll()
+      ]);
+
+      final topUsers = results[0] as List<LeaderboardUser>;
+      final currentUserRank = results[1] as int;
+      final totalWords = results[2] as int;
+      return LeaderboardData(
+        topUsers: topUsers,
+        currentUserRank: currentUserRank,
+        totalWordsInLevel: totalWords,
+      );
+    } catch (e, stackTrace) {
+      print('Erreur dans le LeaderboardRepository: $e\n$stackTrace');
+      rethrow;
     }
   }
 }

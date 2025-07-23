@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:vobzilla/data/services/leaderboard_service.dart';
 
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider(
             create: (context) => LeaderboardBloc(
-              leaderboardRepository: LeaderboardRepository(),
+              leaderboardRepository: LeaderboardRepository(leaderboardService: LeaderboardService(), vocabulaireUserRepository: VocabulaireUserRepository()),
               )..add(FetchLeaderboard()
             )
           ),

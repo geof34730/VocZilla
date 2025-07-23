@@ -10,6 +10,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
 import 'package:vobzilla/data/models/leaderboard_user.dart';
 
+import '../../../core/utils/logger.dart';
+
 class CardClassementGamer extends StatelessWidget {
   final int position;
   final LeaderboardUser user;
@@ -52,7 +54,6 @@ class CardClassementGamer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Calculs dynamiques basés sur les données de l'utilisateur
     final daysSinceCreation = DateTime.now().difference(user.createdAt).inDays;
     final percentage = (totalWordsForLevel > 0)
         ? user.countGuidVocabularyLearned / totalWordsForLevel

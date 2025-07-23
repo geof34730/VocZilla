@@ -1,14 +1,14 @@
-// /Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/lib/ui/widget/home/HomeClassement.dart
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:vobzilla/core/utils/device.dart';
 import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/data/models/leaderboard_user.dart';
+import 'package:vobzilla/data/models/leaderboard_data.dart';
 import 'package:vobzilla/global.dart';
-import 'package:vobzilla/main.dart'; // NOUVEAU: Importer main.dart
+import 'package:vobzilla/main.dart'; // NOUVEAU: Importer main.dart pour routeObserver
 import 'package:vobzilla/ui/widget/elements/Loading.dart';
 
+import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_bloc.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_event.dart';
@@ -22,53 +22,65 @@ class HomeClassement extends StatefulWidget {
   @override
   State<HomeClassement> createState() => _HomeClassementState();
 }
+
+// --- CORRECTION 1 : Ajouter le mixin RouteAware ---
 class _HomeClassementState extends State<HomeClassement> with RouteAware {
 
   @override
+  void initState() {
+    super.initState();
+    _fetchData();
+  }
+
+  // --- CORRECTION 2 : S'abonner à l'observateur de route ---
+  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    // On abonne ce widget aux événements de navigation
     routeObserver.subscribe(this, ModalRoute.of(context)!);
   }
 
+  // --- CORRECTION 3 : Se désabonner pour éviter les fuites de mémoire ---
   @override
   void dispose() {
+    // Il est crucial de se désabonner lorsque le widget est détruit
     routeObserver.unsubscribe(this);
     super.dispose();
   }
 
+  // --- CORRECTION 4 : Implémenter la logique de rafraîchissement ---
+  /// Cette méthode est appelée lorsque l'utilisateur revient sur cet écran
+  /// après avoir "pop" une autre route.
   @override
   void didPopNext() {
     super.didPopNext();
+    // Si le drapeau a été activé sur un autre écran...
     if (changeVocabulaireSinceVisiteHome) {
-      context.read<LeaderboardBloc>().add(FetchLeaderboard());
+      print("Retour sur HomeClassement, rafraîchissement des données...");
+      _fetchData(); // ...on recharge les données du classement.
+      // On réinitialise le drapeau pour éviter des rechargements inutiles.
       changeVocabulaireSinceVisiteHome = false;
     }
   }
-  int totalWordsForLevel=0;
-  @override
-  void initState() {
-    VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
-      isListPerso:false,
-      isListTheme:false,
-    ).then((value) {
-      totalWordsForLevel=  value.countVocabulaireAll;
-    });
-    super.initState();
-    if (changeVocabulaireSinceVisiteHome) {
+
+  /// Méthode centralisée pour déclencher le chargement des données.
+  void _fetchData() {
+    final userId = FirebaseAuth.instance.currentUser?.uid;
+    if (userId != null) {
       context.read<LeaderboardBloc>().add(FetchLeaderboard());
-      changeVocabulaireSinceVisiteHome = false;
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    // Le reste du code reste identique...
     return BlocBuilder<LeaderboardBloc, LeaderboardState>(
       builder: (context, state) {
         if (state is LeaderboardLoading || state is LeaderboardInitial) {
           return const Loading();
         }
         if (state is LeaderboardLoaded) {
-          return _buildLoaded(context, state.users);
+          return _buildLoaded(context, state.leaderboardData);
         }
         if (state is LeaderboardError) {
           return _buildError(context, state.message);
@@ -78,40 +90,38 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
     );
   }
 
-  Widget _buildLoaded(BuildContext context, List<LeaderboardUser> users) {
+  Widget _buildLoaded(BuildContext context, LeaderboardData data) {
     return RefreshIndicator(
       onRefresh: () async {
-        context.read<LeaderboardBloc>().add(FetchLeaderboard());
+        _fetchData();
       },
       child: SingleChildScrollView(
+        // ... le reste de votre widget _buildLoaded
         physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.all(8.0),
         child: LayoutBuilder(builder: (context, constraints) {
           final double spacing = 8.0;
           final int crossAxisCount = isTablet(context) ? 2 : 1;
           final double cardWidth = (constraints.maxWidth - (spacing * (crossAxisCount - 1))) / crossAxisCount;
-          final List<Widget> gamerCards = users.asMap().entries.map((entry) {
-            int index = entry.key;
-            var user = entry.value;
+
+          final List<Widget> gamerCards = data.topUsers.map((user) {
+            Logger.Yellow.log("user: ${user}");
             return SizedBox(
               width: cardWidth,
               child: CardClassementGamer(
-                position: index + 1,
+                position: user.rank,
                 user: user,
-                // TODO: Rendre cette valeur dynamique
-                totalWordsForLevel: totalWordsForLevel,
+                totalWordsForLevel: data.totalWordsInLevel,
               ),
             );
           }).toList();
 
-          if (gamerCards.length < 4) {
-            gamerCards.add(
-              SizedBox(
-                width: cardWidth,
-                child: CardClassementUser(),
-              ),
-            );
-          }
+          gamerCards.add(
+            SizedBox(
+              width: cardWidth,
+              child: CardClassementUser(position: data.currentUserRank),
+            ),
+          );
 
           return Wrap(
             spacing: spacing,
@@ -123,7 +133,6 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
     );
   }
 
-  /// Construit l'UI pour l'état d'erreur, avec un bouton pour réessayer.
   Widget _buildError(BuildContext context, String message) {
     return Center(
       child: Padding(
@@ -139,10 +148,8 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
             const SizedBox(height: 20),
             ElevatedButton.icon(
               icon: const Icon(Icons.refresh),
-              onPressed: () {
-                context.read<LeaderboardBloc>().add(FetchLeaderboard());
-              },
-              label: Text("Réessayer"),
+              onPressed: _fetchData,
+              label: Text("réessayer"),
             )
           ],
         ),

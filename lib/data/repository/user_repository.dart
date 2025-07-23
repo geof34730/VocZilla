@@ -32,8 +32,7 @@ class UserRepository {
   Future<void> checkUserStatusOncePerDay(BuildContext context) async {
     // AUTHENTICATION GUARD: Do nothing if no user is signed in.
     if (_firebaseAuth.currentUser == null) {
-      Logger.Yellow
-          .log("checkUserStatusOncePerDay cancelled: user not authenticated.");
+      Logger.Yellow.log("checkUserStatusOncePerDay cancelled: user not authenticated.");
       return;
     }
 
@@ -68,8 +67,7 @@ class UserRepository {
       {required BuildContext context}) async {
     // AUTHENTICATION GUARD: Do nothing if no user is signed in.
     if (_firebaseAuth.currentUser == null) {
-      Logger.Yellow.log(
-          "showDialogueFreeTrialOnceByDay cancelled: user not authenticated.");
+      Logger.Yellow.log("showDialogueFreeTrialOnceByDay cancelled: user not authenticated.");
       return;
     }
 
@@ -79,8 +77,7 @@ class UserRepository {
 
     if (lastShownDate != today) {
       await prefs.setString('lastFreeTrialDialogDate', today);
-      Logger.Green.log(
-          "Showing free trial dialog for UserFreeTrialPeriodAndNotSubscribed.");
+      Logger.Green.log("Showing free trial dialog for UserFreeTrialPeriodAndNotSubscribed.");
       final daysLeft = await getLeftDaysFreeTrial();
       // Ensure the widget is built before showing a dialog.
       WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -179,8 +176,7 @@ class UserRepository {
         Logger.Blue.log("Subscription status from backend: ${response.data}");
         return response.data;
       } else {
-        Logger.Red.log(
-            "Failed to verify subscription. Status: ${response.statusCode}, Body: ${response.data}");
+        Logger.Red.log("Failed to verify subscription. Status: ${response.statusCode}, Body: ${response.data}");
         return false;
       }
     } catch (e) {
