@@ -181,8 +181,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _authRepository.signOut();
       emit(AuthUnauthenticated());
     } catch (e) {
-      emit(AuthError(
-          message: "Une erreur est survenue lors de la déconnexion."));
+      emit(AuthError(message: "Une erreur est survenue lors de la déconnexion."));
     }
   }
 

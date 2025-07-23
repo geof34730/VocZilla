@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +13,8 @@ import '../../data/repository/data_user_repository.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../logic/blocs/notification/notification_bloc.dart';
 import '../../logic/blocs/notification/notification_event.dart';
+import '../../logic/blocs/user/user_bloc.dart';
+import '../../logic/blocs/user/user_event.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
 import '../widget/home/TitleWidget.dart';
@@ -25,6 +28,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Column(
           key: ValueKey('home_logged'),
           mainAxisAlignment: MainAxisAlignment.start,

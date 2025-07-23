@@ -40,7 +40,10 @@ class DeleteVocabulaireListPerso extends VocabulaireUserEvent {
   final String guidVocabulaire;
   DeleteVocabulaireListPerso({required this.guidListPerso, required  this.guidVocabulaire});
 }
-
+class VocabulaireUserUpdate extends VocabulaireUserEvent {
+  final Map<String, dynamic> userData;
+  VocabulaireUserUpdate(this.userData);
+}
 
 
 

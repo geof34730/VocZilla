@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -14,20 +15,32 @@ import '../../logic/blocs/user/user_bloc.dart';
 import '../../logic/blocs/user/user_event.dart';
 import '../../ui/widget/elements/DialogHelper.dart';
 
-/// This repository primarily handles user-related business logic that isn't
-/// direct data manipulation, such as In-App Purchases and status checks.
-/// For creating, reading, or updating user data in Firestore/cache,
-/// use the `DataUserRepository`.
+
 class UserRepository {
+
   final InAppPurchase _inAppPurchase = InAppPurchase.instance;
   final Dio _dio = Dio();
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   String? _purchaseToken;
   String? _platform;
   String? _subscriptionId;
   Completer<void> _purchaseCompleter = Completer<void>();
   StreamSubscription<List<PurchaseDetails>>? _purchaseSubscription;
+
+  Future<Map<String, dynamic>> fetchUserData(String userId) async {
+    final doc = await _firestore
+        .collection('users')
+        .doc(userId)
+        .get();
+    if (doc.exists) {
+      return doc.data()!;
+    } else {
+      throw Exception("User not found");
+    }
+  }
+
 
   Future<void> checkUserStatusOncePerDay(BuildContext context) async {
     // AUTHENTICATION GUARD: Do nothing if no user is signed in.

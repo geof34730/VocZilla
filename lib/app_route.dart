@@ -12,6 +12,7 @@ import 'data/models/user_firestore.dart';
 import 'logic/blocs/auth/auth_event.dart';
 import 'logic/blocs/notification/notification_bloc.dart';
 import 'logic/blocs/notification/notification_event.dart';
+import 'logic/blocs/user/user_event.dart';
 import 'logic/check_connectivity.dart';
 import 'core/utils/logger.dart';
 import 'logic/blocs/update/update_state.dart';
@@ -147,6 +148,7 @@ class AppRoute {
                   return _getUnauthenticatedPage(settings, context);
                 }
                 if (authState is AuthAuthenticated) {
+                  BlocProvider.of<UserBloc>(context, listen: false).add(LoadUserData(authState.userProfile.uid));
                   return _getAuthenticatedPage(settings, context);
                 }
                 if (authState is AuthUnauthenticated ) {

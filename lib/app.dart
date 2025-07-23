@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:vobzilla/data/repository/user_repository.dart';
 import 'package:vobzilla/data/services/leaderboard_service.dart';
 
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
@@ -39,7 +40,7 @@ import 'logic/blocs/user/user_event.dart';
 import 'logic/blocs/user/user_state.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
-import 'logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
+import 'logic/blocs/vocabulaire_user/vocabulaire_user_state.dart' hide VocabulaireUserUpdate;
 import 'logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'logic/blocs/update/update_bloc.dart';
 import 'main.dart';
@@ -73,7 +74,10 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => DrawerBloc()),
           BlocProvider(create: (context) => LocalizationCubit()),
           BlocProvider(create: (context) => PurchaseBloc()..add(LoadProducts())),
-          BlocProvider(create: (context) => UserBloc()..add(CheckUserStatus())),
+          BlocProvider(create: (context) => UserBloc(UserRepository())..add(CheckUserStatus())),
+
+
+
           BlocProvider(create: (context) => VocabulairesBloc()),
           BlocProvider(create: (context) => UpdateBloc()..add(CheckForUpdate())),
           BlocProvider(create: (context) => VocabulaireUserBloc()..add(CheckVocabulaireUserStatus())),
@@ -135,9 +139,17 @@ class MyApp extends StatelessWidget {
                           BlocStateTracker().updateState('VocabulairesBloc', state);
                       },
                     ),*/
+
+                    BlocListener<UserBloc, UserState>(
+                      listener: (context, state) {
+                        BlocStateTracker().updateState('UserBloc', state);
+                        if (state is UserLoaded) {
+                          context.read<VocabulaireUserBloc>().add(VocabulaireUserUpdate(state.userData));
+                        }
+                      },
+                    ),
                     BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
                       listener: (context, state) {
-                        Logger.Yellow.log("VocabulaireUserBloc state: $state");
                         BlocStateTracker().updateState('VocabulaireUserBloc', state);
                         if (state is ListPersoDeletionSuccess) {
                               context.read<LeaderboardBloc>().add(FetchLeaderboard());
@@ -150,7 +162,6 @@ class MyApp extends StatelessWidget {
                     ),
                     BlocListener<NotificationBloc, NotificationState>(
                       listener: (context, state) {
-                        Logger.Yellow.log("NotificationState state: $state");
                         if (state is NotificationVisible) {
                           WidgetsBinding.instance.addPostFrameCallback((_) {
                             Future.delayed(const Duration(milliseconds: 50), () {

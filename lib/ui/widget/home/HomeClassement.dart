@@ -105,7 +105,6 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
           final double cardWidth = (constraints.maxWidth - (spacing * (crossAxisCount - 1))) / crossAxisCount;
 
           final List<Widget> gamerCards = data.topUsers.map((user) {
-            Logger.Yellow.log("user: ${user}");
             return SizedBox(
               width: cardWidth,
               child: CardClassementGamer(

@@ -16,7 +16,6 @@ class VocabulaireRepository {
   final VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
    goVocabulaires({isVocabularyNotLearned = false,required bool isListPerso, required bool isListTheme, required String? guid, required BuildContext context, int? vocabulaireBegin, int? vocabulaireEnd,  required String titleList }){
-      Logger.Yellow.log("goVocabulaires ");
       BlocProvider.of<VocabulairesBloc>(context).add(GetVocabulaireList(
           isVocabularyNotLearned:isVocabularyNotLearned,
           vocabulaireBegin: vocabulaireBegin,
@@ -139,9 +138,8 @@ class VocabulaireRepository {
           ListTheme? listTheme = userData?.listTheme.firstWhere((listTheme) => listTheme.guid == guid,
             orElse: () => ListTheme(guid: "", title: {"fr" : ""}, listGuidVocabulary: []),
           );
-        Logger.Yellow.log("listTheme: $listTheme");
+
         final List<dynamic> dataSlice = data.where((vocab) => listTheme != null && listTheme.listGuidVocabulary.contains(vocab['GUID'])).toList();
-        Logger.Yellow.log("dataSlice: $dataSlice");
 
           final List<dynamic> updatedDataSlice = dataSlice.map((vocabulaire) {
             return {

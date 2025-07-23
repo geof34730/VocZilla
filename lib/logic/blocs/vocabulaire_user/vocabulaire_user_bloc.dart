@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/data/models/vocabulary_user.dart';
 import 'package:vobzilla/data/repository/vocabulaire_user_repository.dart';
 import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
-import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
+import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_state.dart' hide VocabulaireUserUpdate;
 import '../../../core/utils/logger.dart';
 
 class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserState> {
@@ -25,6 +25,14 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<UpdateListPerso>(_onUpdateListPerso);
     on<AddVocabulaireListPerso>(_onAddVocabulaireListPerso);
     on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
+    on<VocabulaireUserUpdate>((event, emit) {
+      Logger.Blue.log(
+          'VocabulaireUserBloc - Traitement de VocabulaireUserUpdate');
+      emit(VocabulaireUserLoading());
+      // Convertir Map<String, dynamic> en VocabulaireUser
+      final vocabulaireUser = VocabulaireUser.fromJson(event.userData);
+      emit(VocabulaireUserLoaded(vocabulaireUser));
+    });
   }
 
   // --- Implémentation des gestionnaires d'événements ---

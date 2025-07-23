@@ -1,9 +1,10 @@
 import 'dart:convert';
+import 'dart:io'; // <-- AJOUTÉ pour File (même si on utilise les bytes, c'est une bonne pratique)
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
-import 'package:image_picker/image_picker.dart'; // <-- 1. AJOUTER CET IMPORT
+import 'package:image_picker/image_picker.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/data/models/user_firestore.dart';
 import 'package:vobzilla/data/services/localstorage_service.dart';
@@ -28,7 +29,7 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
   final TextEditingController pseudoController = TextEditingController();
 
   bool _controllersInitialized = false;
-  String? _newImageAvatarBase64; // Pour stocker la nouvelle image choisie
+  String? _newImageAvatarBase64;
 
   @override
   void dispose() {
@@ -47,14 +48,15 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
     }
   }
 
-  // Fonction pour sélectionner une image depuis la galerie
-  Future<void> _pickImage() async {
+  // <-- MODIFIÉ: La fonction accepte maintenant une `ImageSource`
+  // pour savoir si elle doit ouvrir la galerie ou l'appareil photo.
+  Future<void> _pickImage(ImageSource source) async {
     final ImagePicker picker = ImagePicker();
     try {
       final XFile? image = await picker.pickImage(
-        source: ImageSource.gallery,
-        imageQuality: 70, // Compresser l'image pour optimiser
-        maxWidth: 500,   // Redimensionner pour ne pas stocker d'images trop grandes
+        source: source, // Utilise la source passée en paramètre
+        imageQuality: 70,
+        maxWidth: 500,
       );
       if (image != null) {
         final bytes = await image.readAsBytes();
@@ -63,13 +65,43 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
         });
       }
     } catch (e) {
-      // Gérer les erreurs (ex: permissions refusées)
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Erreur lors de la sélection de l'image.")),
+          SnackBar(content: Text("Erreur lors de la sélection de l'image: $e")),
         );
       }
     }
+  }
+
+  // <-- NOUVEAU: La fonction qui affiche le menu de choix.
+  void _showImageSourceActionSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return SafeArea(
+          child: Wrap(
+            children: <Widget>[
+              ListTile(
+                leading: const Icon(Icons.photo_library),
+                title: const Text('Galerie'),
+                onTap: () {
+                  _pickImage(ImageSource.gallery);
+                  Navigator.of(context).pop(); // Ferme le menu
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.photo_camera),
+                title: const Text('Appareil photo'),
+                onTap: () {
+                  _pickImage(ImageSource.camera);
+                  Navigator.of(context).pop(); // Ferme le menu
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -90,7 +122,6 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
             final userProfile = snapshot.data!;
             _initializeControllers(userProfile);
 
-            // Utilise la nouvelle image si elle existe, sinon celle du profil
             final imageToShow = _newImageAvatarBase64 ?? userProfile.imageAvatar;
 
             return BlocListener<AuthBloc, AuthState>(
@@ -109,9 +140,8 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
                       height: 120,
                       child: Stack(
                         fit: StackFit.expand,
-                        clipBehavior: Clip.none, // Permet au bouton de déborder légèrement
+                        clipBehavior: Clip.none,
                         children: [
-                          // Widget principal de l'avatar
                           if (imageToShow.isNotEmpty)
                             ClipOval(
                               child: Image.memory(
@@ -120,7 +150,6 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
                                 height: 120,
                                 fit: BoxFit.cover,
                                 errorBuilder: (context, error, stackTrace) {
-                                  // Fallback si le décodage de l'image échoue
                                   return Avatar(
                                     radius: 60,
                                     name: GetValidName(userProfile.pseudo),
@@ -130,19 +159,17 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
                               ),
                             )
                           else
-                          // Fallback si aucune image n'est disponible
                             Avatar(
-                              radius: 60, // Taille corrigée
+                              radius: 60,
                               name: GetValidName(userProfile.pseudo),
-                              fontsize: 60, // Taille de police corrigée
+                              fontsize: 60,
                             ),
-
-                          // Bouton d'édition
                           Positioned(
                             bottom: -5,
                             right: -5,
                             child: GestureDetector(
-                              onTap: _pickImage,
+                              // <-- MODIFIÉ: On appelle la fonction qui affiche le menu
+                              onTap: () => _showImageSourceActionSheet(context),
                               child: Container(
                                 height: 40,
                                 width: 40,
@@ -165,7 +192,7 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 25), // Espace ajouté après l'avatar
+                    const SizedBox(height: 25),
                     CustomTextField(
                       controller: pseudoController,
                       labelText: context.loc.login_pseudo,
