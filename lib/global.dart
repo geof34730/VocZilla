@@ -4,7 +4,7 @@ String titleApp="VocZilla";
 //String appId="com.geoffreypetain.voczilla.voczilla";
 int titleAppCute1=3;
 String versionApp="1.0.0";
-bool debugMode=true;
+bool debugMode=false;
 int daysFreeTrial=150;
 
 bool changeVocabulaireSinceVisiteHome = false;

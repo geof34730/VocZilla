@@ -37,9 +37,11 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
   GlobalKey<PaginatedDataTableState> tableKey = GlobalKey();
   TextEditingController searchController = TextEditingController();
   final _vocabulaireRepository=VocabulaireRepository();
+
   @override
   Widget build(BuildContext context) {
     String guidListPerso=widget.guidListPerso;
+    final langCode = LanguageUtils().getSmallCodeLanguage(context: context);
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
       builder: (context, state) {
         if (state is VocabulairesLoading) {
@@ -53,15 +55,14 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
               return vocabulaire['EN']
                   .toLowerCase()
                   .contains(searchQuery.toLowerCase()) ||
-                  vocabulaire[LanguageUtils().getSmallCodeLanguage(context: context)]
+                  vocabulaire[langCode]
                       .toLowerCase()
                       .contains(searchQuery.toLowerCase());
             }).toList();
           }
-
           final dataSource = data.isEmpty
               ? EmptyDataSource(context: context)
-              : VocabularyDataSource(data: data, context: context,guidListPerso: guidListPerso);
+              : VocabularyDataSource(data: data, context: context,guidListPerso: guidListPerso,dataToLearn:state.data.isVocabularyNotLearned,langCode: langCode);
           int rowsPerPage = data.isEmpty ? 1 : (data.length < 10 ? data.length : 10);
           bool isNotLearned = state.data.isVocabularyNotLearned;
           int _vocabulaireConnu = isNotLearned ? 0 : 1;
@@ -104,7 +105,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
                 ),
               ),
               // Use a fixed height for the table or wrap it in a ListView
-              if (!data.isEmpty) ...[
+              if (!data.isEmpty)
                 Container(
                   // Set a fixed height
                   width: MediaQuery.of(context).size.width,
@@ -150,10 +151,8 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
                     horizontalMargin: 10,
                     // headingRowColor: WidgetStateProperty.all(AppColors.cardBackground),
                   ),
-                ),
-              ],
-
-              if (data.isEmpty) ...[
+                )
+              else
                 Container(
                   // Set a fixed height
                   width: MediaQuery.of(context).size.width,
@@ -173,7 +172,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
                   ),
                 ),
               ]
-            ],
+
           );
         } else if (state is VocabulairesError) {
           return Center(child: Text(context.loc.error_loading));
@@ -189,7 +188,10 @@ class VocabularyDataSource extends DataTableSource {
   final List<Map<String, dynamic>> data;
   final BuildContext context;
   final String guidListPerso;
-  VocabularyDataSource({required this.data, required this.context, required this.guidListPerso});
+  final bool dataToLearn;
+  final String langCode;
+
+  VocabularyDataSource({required this.data, required this.context, required this.guidListPerso, required this.dataToLearn, required this.langCode});
 
   @override
   DataRow getRow(int index) {
@@ -228,7 +230,7 @@ class VocabularyDataSource extends DataTableSource {
         ),
         DataCell(
             Center(
-                child: Text(vocabulaire[LanguageUtils().getSmallCodeLanguage(context: context) ?? ''],
+                child: Text(vocabulaire[langCode ?? ''],
                   style: TextStyle(
                     fontFamily: 'Roboto',
                   ),
@@ -259,7 +261,7 @@ class VocabularyDataSource extends DataTableSource {
                             Logger.Green.log("ADD: ${vocabulaire['GUID']}");
                             BlocProvider.of<VocabulaireUserBloc>(context).add(AddVocabulaireListPerso(guidListPerso: guidListPerso, guidVocabulaire: vocabulaire['GUID']));
                           }
-                          BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(false,guidListPerso));
+                          BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(dataToLearn,guidListPerso));
                         },
                       ),
                     ),

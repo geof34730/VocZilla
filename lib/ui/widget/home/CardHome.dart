@@ -96,7 +96,7 @@ class CardHome extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "${title.toUpperCase()} - ${isListPerso.toString()}",
+            title.toUpperCase(),
             textAlign: TextAlign.center,
             style: getFontForLanguage(
               codelang: Localizations.localeOf(context).languageCode,

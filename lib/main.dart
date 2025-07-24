@@ -19,6 +19,13 @@ FirebaseMessaging messaging = FirebaseMessaging.instance;
 
 void main({bool shootScreenShot = false,String? localForce=null}) async {
   WidgetsFlutterBinding.ensureInitialized();
+
+
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   await FirebaseInitializer.initialize();
   if (!shootScreenShot) {
