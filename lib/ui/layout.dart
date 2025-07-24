@@ -91,7 +91,7 @@ class Layout extends StatelessWidget {
                   if(titleScreen != null)...[
                     Padding(
                     padding: EdgeInsets.only(bottom: 8),
-                      child:titleWidget(text:titleScreen!)
+                      child:titleWidget(text:titleScreen!,codelang: Localizations.localeOf(context).languageCode)
                     )
                   ],
                   child,

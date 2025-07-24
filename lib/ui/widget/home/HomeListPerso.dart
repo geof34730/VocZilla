@@ -37,7 +37,7 @@ class HomelistPerso extends StatelessWidget {
                     children: [
                       Flexible(
                         fit: FlexFit.loose,
-                        child: titleWidget(text: context.loc.home_title_my_list_perso),
+                        child: titleWidget(text: context.loc.home_title_my_list_perso,codelang: Localizations.localeOf(context).languageCode),
                       ),
                       if (listePerso)
                         Padding(
@@ -90,7 +90,7 @@ class HomelistPerso extends StatelessWidget {
               if(state is VocabulaireUserEmpty) {
                 return Column(
                   children: [
-                    titleWidget(text: context.loc.home_title_my_list_perso),
+                    titleWidget(text: context.loc.home_title_my_list_perso,codelang: Localizations.localeOf(context).languageCode),
                     descriptionListPersoEmpty(context: context),
                   ],
                 );

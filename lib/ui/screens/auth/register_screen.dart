@@ -10,6 +10,7 @@ import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
 
 
+import '../../../core/utils/getFontForLanguage.dart';
 import '../../backgroundBlueLinear.dart';
 import '../../widget/elements/Error.dart';
 import '../../widget/elements/Loading.dart';
@@ -71,9 +72,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Padding(
                       padding: EdgeInsets.only(bottom: 10),
                       child: Text(context.loc.login_sinscrire,
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontFamily: GoogleFonts.titanOne().fontFamily)
+                          style: getFontForLanguage(
+                            codelang: Localizations.localeOf(context).languageCode,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w600,
+                          )
                       ),
                     ),
                     CustomTextField(
@@ -124,9 +127,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Padding(
                       padding: EdgeInsets.only(top: 20.0, bottom: 5),
                       child: Text(context.loc.login_ou_inscrivez_vous_avec,
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: GoogleFonts.titanOne().fontFamily
+                          style: getFontForLanguage(
+                            codelang: Localizations.localeOf(context).languageCode,
+                            fontSize: 20,
                           )
                       ),
                     ),

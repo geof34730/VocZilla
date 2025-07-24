@@ -29,7 +29,6 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
             if (state is AuthAuthenticated) {
               final userProfile = state.userProfile;
               final String pseudo = userProfile.pseudo;
-
               return Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: GestureDetector(
@@ -43,8 +42,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
                           ? CircleAvatar(
                         radius: 22,
                         backgroundColor: Colors.blue.shade700,
-                        backgroundImage: MemoryImage(
-                            base64Decode(userProfile.imageAvatar)),
+                        backgroundImage: MemoryImage(base64Decode(userProfile.imageAvatar)),
                       )
                           : Avatar(
                         radius: 22,

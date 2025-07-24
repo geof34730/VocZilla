@@ -4,12 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
 
-import '../../../core/utils/logger.dart';
 import '../../../data/models/statistical_length.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
-import 'LevelChart.dart';
 
 class GlobalStatisticalWidget extends StatelessWidget {
   final int? vocabulaireBegin;
@@ -24,8 +22,7 @@ class GlobalStatisticalWidget extends StatelessWidget {
     this.vocabulaireEnd,
     this.guidList,
     required this.isListPerso,
-    required this.isListTheme
-
+    required this.isListTheme,
   });
 
   @override
@@ -37,133 +34,150 @@ class GlobalStatisticalWidget extends StatelessWidget {
             future: VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
               vocabulaireBegin: vocabulaireBegin,
               vocabulaireEnd: vocabulaireEnd,
-              guidList:guidList,
-              isListPerso:isListPerso,
-              isListTheme:isListTheme,
+              guidList: guidList,
+              isListPerso: isListPerso,
+              isListTheme: isListTheme,
             ),
             builder: (context, userDataSnapshot) {
               if (userDataSnapshot.connectionState == ConnectionState.waiting) {
-                return const CircularProgressIndicator();
+                return const Center(child: CircularProgressIndicator());
               } else if (userDataSnapshot.hasError) {
-                return const Text('Erreur affichage Statistique');
+                // Affiche une erreur plus informative
+                return Text('Erreur de statistique: ${userDataSnapshot.error}');
               } else if (userDataSnapshot.hasData) {
                 final statisticalData = userDataSnapshot.data!;
-                double percentageProgression = ((statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll));
+                double percentageProgression = 0.0;
+                if (statisticalData.countVocabulaireAll > 0) {
+                  percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
+                }
+
                 return LayoutBuilder(
                   builder: (context, constraints) {
-                    return getLinearPercentIndicator(
-                        percentage: percentageProgression,
-                        width:constraints.maxWidth
+                    return _buildIndicator(
+                      percentage: percentageProgression,
+                      width: constraints.maxWidth,
                     );
-                  });
+                  },
+                );
               } else {
+                // Si pas de données, on affiche une barre de progression à 0%
                 return LayoutBuilder(
-                    builder: (context, constraints) {
-                      return getLinearPercentIndicator(
-                          percentage: 0,
-                          width:constraints.maxWidth
-                      );
-                    });
+                  builder: (context, constraints) {
+                    return _buildIndicator(
+                      percentage: 0,
+                      width: constraints.maxWidth,
+                    );
+                  },
+                );
               }
             },
           );
+        } else if (state is VocabulaireUserEmpty) {
+          // Si l'utilisateur n'a pas de données, on affiche 0%
+          return LayoutBuilder(
+            builder: (context, constraints) {
+              return _buildIndicator(
+                percentage: 0,
+                width: constraints.maxWidth,
+              );
+            },
+          );
         } else {
-          if (state is VocabulaireUserEmpty) {
-            return LayoutBuilder(
-                builder: (context, constraints) {
-                  return getLinearPercentIndicator(
-                      percentage: 0,
-                      width:constraints.maxWidth
-                  );
-                });
-          }
-          else {
-            return const Text('Erreur affichage Statistique');
-          }
+          // Cas par défaut pour les autres états (initial, erreur...)
+          return const SizedBox.shrink();
         }
       },
     );
   }
 
-  dynamic getLinearPercentIndicator({required double percentage , required double width}){
+  /// Construit l'indicateur de progression pour éviter la duplication de code.
+  /// Le type de retour est `Widget` pour plus de sûreté.
+  Widget _buildIndicator({required double percentage, required double width}) {
+    // S'assure que le pourcentage est toujours entre 0.0 et 1.0
+    final clampedPercentage = percentage.clamp(0.0, 1.0);
+
     return Center(
-        child:Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              width: width,
-              height: 20.0,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 0.5),
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(5.0),
-                child: MultiSegmentLinearIndicator(
-                  padding: EdgeInsets.zero,
-                  width: double.infinity,
-                  lineHeight: 20.0,
-                  segments: [
-                    SegmentLinearIndicator(
-                      percent: max(0.05,percentage),
-                      color: Colors.green,
-                      enableStripes: true,
-                    ),
-                    SegmentLinearIndicator(
-                      percent: 1.0 - max(0.05,percentage),
-                      color: Colors.orange,
-                    ),
-                  ],
-                  barRadius: Radius.circular(5.0),
-                ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            width: width,
+            height: 20.0,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 0.5),
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5.0),
+              child: MultiSegmentLinearIndicator(
+                padding: EdgeInsets.zero,
+                lineHeight: 20.0,
+                segments: [
+                  SegmentLinearIndicator(
+                    percent: max(0.05, clampedPercentage),
+                    color: Colors.green,
+                    enableStripes: true,
+                  ),
+                  SegmentLinearIndicator(
+                    percent: 1.0 - max(0.05, clampedPercentage),
+                    color: Colors.orange,
+                  ),
+                ],
+                barRadius: const Radius.circular(5.0),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(left:getPositionLeftCursor(
-                  percentage: percentage,
-                  width: width
-              )),
-              child:Row(
-                children: [
-                    if(percentage>0.2)...[
-                        Container(
-                          padding: EdgeInsets.only(right:5),
-                           width: 60,
-                           child:Text(
-                            "${(percentage * 100).toStringAsFixed(1)}%",
-                            textAlign: TextAlign.right,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              )
-                           ),
-                        )
-                    ],
-                  Image.asset("assets/brand/logo_landing.png",
-                    width: 80,
-                  ),
-                    if(percentage<=0.2)...[
-                      Text(
-                        "${(percentage * 100).toStringAsFixed(1)}%",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: _getPositionLeftCursor(
+                percentage: clampedPercentage,
+                width: width,
+              ),
+            ),
+            child: Row(
+              children: [
+                if (clampedPercentage > 0.2) ...[
+                  SizedBox(
+                    width: 60,
+                    child: Text(
+                      "${(clampedPercentage * 100).toStringAsFixed(1)}%",
+                      textAlign: TextAlign.right,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
                       ),
-                  ]
-               ],
-              )
-            )
-          ],
-        )
+                    ),
+                  ),
+                  const SizedBox(width: 5),
+                ],
+                Image.asset(
+                  "assets/brand/logo_landing.png",
+                  width: 80,
+                ),
+                if (clampedPercentage <= 0.2) ...[
+                  const SizedBox(width: 5),
+                  Text(
+                    "${(clampedPercentage * 100).toStringAsFixed(1)}%",
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
-  double getPositionLeftCursor({required double percentage, required double width}){
-    double position = width * percentage - (percentage > 0.2 ? 120 : 40);
-    return max(0, min(position, width - 140));
+  double _getPositionLeftCursor({required double percentage, required double width}) {
+    const double cursorRowWidth = 145.0;
+    const double imageOffset = 40.0;
+    double position = width * percentage - imageOffset;
+    return position.clamp(0.0, width - cursorRowWidth);
   }
-
 }

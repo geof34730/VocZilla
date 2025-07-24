@@ -9,6 +9,7 @@ import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_event.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
+import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';
 import '../../../core/utils/ui.dart';
 import '../../backgroundBlueLinear.dart';
@@ -36,6 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final codelang = Localizations.localeOf(context).languageCode;
     return BackgroundBlueLinear(
       child: Center(
         child: Padding(
@@ -48,9 +50,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10),
                       child: Text(context.loc.login_se_connecter,
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontFamily: GoogleFonts.titanOne().fontFamily)),
+                          style: getFontForLanguage(
+                            codelang: codelang,
+                            fontSize: 25,
+                          ),
+                      )
                     ),
                     CustomTextField(
                       keyForShoot: 'login_field',
@@ -77,15 +81,24 @@ class _LoginScreenState extends State<LoginScreen> {
                             password: passwordController.text,
                           ));
                         },
-                        child: Text(context.loc.login_se_connecter),
+                        child: Text(
+                            context.loc.login_se_connecter,
+                            style: getFontForLanguage(
+                                codelang: codelang,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                            ),
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0, bottom: 5),
                       child: Text(context.loc.login_ou_connecter_vous_avec,
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: GoogleFonts.titanOne().fontFamily)),
+                          style: getFontForLanguage(
+                            codelang: codelang,
+                            fontSize: 20,
+                          ),
+                       ),
                     ),
                     Opacity(
                       opacity:  1.0,
@@ -124,15 +137,23 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0, bottom: 5),
                       child: Text(context.loc.login_no_compte,
-                          style: TextStyle(
+                            style: getFontForLanguage(
+                              codelang: codelang,
                               fontSize: 20,
-                              fontFamily: GoogleFonts.titanOne().fontFamily)),
+                            ),
+                         ),
                     ),
                     ElevatedButton(
                       onPressed:  () {
                         Navigator.pushNamed(context, '/register');
                       },
-                      child: Text(context.loc.login_inscrivez_vous),
+                      child: Text(
+                          context.loc.login_inscrivez_vous,
+                          style: getFontForLanguage(
+                            codelang: codelang,
+
+                          ),
+                      ),
                     ),
                     const SizedBox(height: 20),
                     FutureBuilder<String>(

@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/blocs/notification/notification_bloc.dart';
 import 'package:vobzilla/logic/blocs/notification/notification_event.dart';
+import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
 import '../../../logic/blocs/auth/auth_event.dart'; // Importez vos événements
@@ -102,10 +103,11 @@ class _ProfileEmailValidationState extends State<ProfileEmailValidation> {
                   Text(
                     context.loc.email_validation_merci_register,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: getFontForLanguage(
+                      codelang: Localizations.localeOf(context).languageCode,
                       fontSize: 30,
-                      fontFamily: GoogleFonts.titanOne().fontFamily,
-                    ),
+                    )
+
                   ),
                   const SizedBox(height: 10),
                   Text(

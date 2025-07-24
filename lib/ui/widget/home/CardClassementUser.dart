@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
+import '../../../core/utils/getFontForLanguage.dart';
 import '../../../data/models/user_firestore.dart';
 import '../../../data/services/localstorage_service.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
@@ -92,10 +93,11 @@ class CardClassementUser extends StatelessWidget {
                                     child: Text(
                                       pseudo,
                                       textAlign: TextAlign.start,
-                                      style: TextStyle(
+                                      style: getFontForLanguage(
+                                        codelang: Localizations.localeOf(context).languageCode,
                                         fontSize: 20,
+                                      ).copyWith(
                                         color: Colors.white,
-                                        fontFamily: GoogleFonts.titanOne().fontFamily,
                                       ),
                                     ),
                                   ),
@@ -121,10 +123,11 @@ class CardClassementUser extends StatelessWidget {
                                   padding: EdgeInsetsGeometry.only(bottom: 3),
                                   child:AutoSizeText(
                                     position.toString(),
-                                    style: TextStyle(
-                                        fontSize: 30,
-                                        color: Colors.white,
-                                        fontFamily: GoogleFonts.titanOne().fontFamily
+                                    style: getFontForLanguage(
+                                      codelang: Localizations.localeOf(context).languageCode,
+                                      fontSize: 30,
+                                    ).copyWith(
+                                      color: Colors.white,
                                     ),
                                     maxLines: 1,
                                     minFontSize: 30,

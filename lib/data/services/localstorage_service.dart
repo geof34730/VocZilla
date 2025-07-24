@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../core/utils/logger.dart';
 import '../models/user_firestore.dart';
 
 class LocalStorageService {
@@ -56,8 +57,6 @@ class LocalStorageService {
     await prefs.remove(_userKey);
   }
 
-  // Note : Ces méthodes sont correctes, mais pourraient être redondantes
-  // si vous n'avez besoin de sauvegarder que l'objet UserFirestore complet.
   Future<void> saveUserData(Map<String, dynamic> userData) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('userData', jsonEncode(userData));

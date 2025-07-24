@@ -12,7 +12,9 @@ import 'package:vobzilla/ui/widget/drawer/trial_period_tile.dart';
 import 'package:vobzilla/ui/widget/drawer/voczilla_tile.dart';
 import '../../../app_route.dart';
 import '../../../core/utils/string.dart';
+import '../../../core/utils/switchLanguageItems.dart';
 import '../../../global.dart'; // Needed for daysFreeTrial
+import '../../../l10n/app_localizations.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 import '../elements/DialogHelper.dart';
@@ -94,8 +96,7 @@ Widget _buildDrawerHeader(BuildContext context) {
                       children: [
                         Text(
                           pseudo,
-                          style: const TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                           overflow: TextOverflow.ellipsis,
                         ),
                         if (displayName.isNotEmpty)
@@ -124,7 +125,7 @@ Widget _buildDrawerHeader(BuildContext context) {
   );
 }
 
-/// Builds the language selection dropdown, connected to the LocalizationCubit.
+
 Widget _buildLanguageDropdown(BuildContext context) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -136,23 +137,18 @@ Widget _buildLanguageDropdown(BuildContext context) {
       builder: (context, locale) {
         return DropdownButtonHideUnderline(
           child: DropdownButton<String>(
-            value: locale.languageCode,
+            value: Localizations.localeOf(context).languageCode,
             icon: const Icon(Icons.keyboard_arrow_down),
-            items: {
-              'fr': 'Français',
-              'en': 'English',
-              'de': 'Deutsch',
-              'es': 'Español',
-            }.entries.map((entry) {
-              return DropdownMenuItem(
-                value: entry.key,
-                child: Text(entry.value),
+            items: AppLocalizations.supportedLocales.map((locale) {
+              String languageName = switchLanguageItems(languageCode: locale.languageCode);
+              return DropdownMenuItem<String>(
+                value: locale.languageCode,
+                child: Text(languageName),
               );
             }).toList(),
             onChanged: (value) {
               if (value != null) {
-                // Update the app's locale via the cubit.
-                //context.read<LocalizationCubit>().changeLocale(Locale(value));
+                context.read<LocalizationCubit>().changeLocale(value);
               }
             },
           ),
@@ -162,16 +158,14 @@ Widget _buildLanguageDropdown(BuildContext context) {
   );
 }
 
+
 /// Builds the trial period tile if the user is in their trial period.
 Widget _buildTrialPeriodTile(BuildContext context) {
   return BlocBuilder<UserBloc, UserState>(
     builder: (context, userState) {
       if (userState is UserFreeTrialPeriodAndNotSubscribed) {
         final int daysLeft = userState.daysLeft;
-        // Calculate progress based on the total trial days.
-        final double progress =
-            (daysFreeTrial - daysLeft).clamp(0, daysFreeTrial) / daysFreeTrial;
-
+        final double progress =(daysFreeTrial - daysLeft).clamp(0, daysFreeTrial) / daysFreeTrial;
         return TrialPeriodTile(
           progress: progress,
           daysRemaining: daysLeft,

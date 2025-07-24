@@ -3,14 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 
-Padding titleWidget({required String text}){
+import '../../../core/utils/getFontForLanguage.dart';
+
+Padding titleWidget({required String text, required String codelang}){
   return Padding(
       padding: EdgeInsets.only(top:10),
       child:AutoSizeText(
         text,
-        style: TextStyle(
-          fontFamily: GoogleFonts.titanOne().fontFamily,
+        style: getFontForLanguage(
+          codelang: codelang,
           fontSize: 22,
+          fontWeight: FontWeight.bold,
+          // Tu peux ajouter fontWeight si besoin
+        ).copyWith(
           height: 1,
           color: Colors.black,
           decoration: TextDecoration.none,

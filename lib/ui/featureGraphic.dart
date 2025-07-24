@@ -4,6 +4,8 @@ import 'package:vobzilla/ui/theme/appColors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
+import '../core/utils/getFontForLanguage.dart';
+
 class FeatureGraphic extends StatelessWidget {
   const FeatureGraphic({Key? key}) : super(key: key);
 
@@ -37,10 +39,11 @@ class FeatureGraphic extends StatelessWidget {
                   Flexible(
                     child: AutoSizeText(
                       context.loc.app_feature_graphic_title,
-                      style: TextStyle(
-                        fontFamily: GoogleFonts.titanOne().fontFamily,
+                      style: getFontForLanguage(
+                        codelang: Localizations.localeOf(context).languageCode,
                         fontSize: 40,
                         fontWeight: FontWeight.w600,
+                      ).copyWith(
                         color: Colors.black,
                         decoration: TextDecoration.none,
                       ),

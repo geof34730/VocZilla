@@ -104,11 +104,8 @@ class VocabulaireRepository {
      required String titleList,
      isVocabularyNotLearned=false
    }) async {
-     //ICI ADD FIELD IsLearnerd
-      Logger.Yellow.log("getVocabulairesList with theme: $guid");
       late VocabularyBlocLocal dataSliceWithTitle;
       var data =  await getDataTop();
-
       final List<dynamic> learnedVocabularies = await _vocabulaireUserRepository.getVocabulaireUserDataLearned(vocabulaireSpecificList: data);
       final Set<String> learnedVocabulariesGuids = learnedVocabularies.map((vocabulaire) => vocabulaire['GUID'] as String).toSet();
       if(isListPerso){
@@ -157,8 +154,6 @@ class VocabulaireRepository {
             guid: guid,
             //guidListTheme: listTheme?.guid,
           );
-
-         // Logger.Blue.log(dataSliceWithTitle);
       }
       else
       {
@@ -189,7 +184,6 @@ class VocabulaireRepository {
         );
         dataSliceWithTitle=updatedBlocLocal;
       }
-     // Logger.Yellow.log(dataSliceWithTitle);
       return dataSliceWithTitle;
   }
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 
+import '../../core/utils/getFontForLanguage.dart';
 import '../theme/appColors.dart';
 import '../backgroundBlueLinear.dart';
 
@@ -10,7 +11,9 @@ class HomeLogoutScreen extends StatelessWidget {
   const HomeLogoutScreen({super.key});
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
+    final codelang = Localizations.localeOf(context).languageCode;
+    final baseStyle = Theme.of(context).textTheme.bodyMedium;
+    return Scaffold(
        body: BackgroundBlueLinear(
          child: Center(
               child:Padding(
@@ -21,18 +24,19 @@ class HomeLogoutScreen extends StatelessWidget {
                       children: [
                         Image.asset("assets/brand/logo_landing.png"),
                        // TitleSite(typoSize: 80),
-                        Text(context.loc.home_notlogged_accroche1,
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontFamily: GoogleFonts.titanOne().fontFamily
-                            ),
+                        Text(
+                          context.loc.home_notlogged_accroche1,
+                          style: getFontForLanguage(
+                            codelang: codelang,
+                            fontSize: 25,
+                          ),
                           textAlign: TextAlign.center,
-
                         ),
                         SizedBox(height: 5),
                         Text(
                             context.loc.home_notlogged_accroche2,
-                            style: TextStyle(
+                            style: getFontForLanguage(
+                              codelang: codelang,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
@@ -42,8 +46,12 @@ class HomeLogoutScreen extends StatelessWidget {
                         RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
-                            style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                            style: getFontForLanguage(
+                              codelang: codelang,
                               fontSize: 14,
+                              fontWeight: baseStyle?.fontWeight,
+                            ).copyWith(
+                              color: baseStyle?.color,
                             ),
                             children:  <TextSpan>[
                               TextSpan(text: context.loc.home_notlogged_accroche3),
@@ -80,10 +88,17 @@ class HomeLogoutScreen extends StatelessWidget {
                         SizedBox(height: 15),
                         ElevatedButton(
                             key: ValueKey('link_home_login'),
+
                             onPressed: () {
                               Navigator.pushNamed(context, '/login');
                             },
-                            child: Text(context.loc.home_notlogged_button_go)
+                            child: Text(context.loc.home_notlogged_button_go,
+                              style: getFontForLanguage(
+                                codelang: codelang,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )
                         ),
 
                       ]

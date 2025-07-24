@@ -40,7 +40,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Center(
+        child:Column(
+
       children: [
         BlocBuilder<VocabulairesBloc, VocabulairesState>(
         builder: (context, state) {
@@ -179,6 +181,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
         },
       )
       ],
+        )
     );
   }
 

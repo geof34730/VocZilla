@@ -10,6 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
 import 'package:vobzilla/data/models/leaderboard_user.dart';
 
+import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';
 
 class CardClassementGamer extends StatelessWidget {
@@ -68,10 +69,14 @@ class CardClassementGamer extends StatelessWidget {
               child: Center( // Simplifié pour un meilleur centrage
                 child: AutoSizeText(
                   position.toString(),
-                  style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.white,
-                      fontFamily: GoogleFonts.titanOne().fontFamily),
+                  style: getFontForLanguage(
+                    codelang: Localizations.localeOf(context).languageCode,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w600,
+                  ).copyWith(
+                    color: Colors.white,
+                    decoration: TextDecoration.none,
+                  ),
                   maxLines: 1,
                   minFontSize: 10,
                 ),
@@ -89,10 +94,11 @@ class CardClassementGamer extends StatelessWidget {
                       child: Text(
                         user.pseudo, // Pseudo dynamique
                         textAlign: TextAlign.start,
-                        style: TextStyle(
+                        style: getFontForLanguage(
+                          codelang: Localizations.localeOf(context).languageCode,
                           fontSize: 20,
+                        ).copyWith(
                           color: Colors.white,
-                          fontFamily: GoogleFonts.titanOne().fontFamily,
                         ),
                         overflow: TextOverflow.ellipsis,
                       ),

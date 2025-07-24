@@ -11,13 +11,9 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   final VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
   VocabulaireUserBloc() : super(VocabulaireUserInitial()) {
-    // Ce gestionnaire générique est utile pour le débogage.
-    // Il s'exécute pour chaque événement avant le gestionnaire spécifique.
     on<VocabulaireUserEvent>((event, emit) {
       Logger.Blue.log("VocabulaireUserBloc - Event: $event, Current State: $state");
     });
-
-    // Enregistrement de tous les gestionnaires d'événements spécifiques
     on<CheckVocabulaireUserStatus>(_onCheckVocabulaireUserStatus);
     on<LoadVocabulaireUserData>(_onLoadVocabulaireUserData);
     on<DeleteListPerso>(_onDeleteListPerso);
@@ -26,13 +22,13 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<AddVocabulaireListPerso>(_onAddVocabulaireListPerso);
     on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
     on<VocabulaireUserUpdate>((event, emit) {
-      Logger.Blue.log(
-          'VocabulaireUserBloc - Traitement de VocabulaireUserUpdate');
+      Logger.Blue.log('VocabulaireUserBloc - Traitement de VocabulaireUserUpdate');
       emit(VocabulaireUserLoading());
       // Convertir Map<String, dynamic> en VocabulaireUser
       final vocabulaireUser = VocabulaireUser.fromJson(event.userData);
       emit(VocabulaireUserLoaded(vocabulaireUser));
     });
+
   }
 
   // --- Implémentation des gestionnaires d'événements ---

@@ -21,19 +21,14 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   }
 
 
-
   Future<void> _onLoadUserData(LoadUserData event, Emitter<UserState> emit) async {
     emit(UserLoading());
     try {
       final userData = await repository.fetchUserData(event.userId);
-
-      // Attends le résultat du Future avant de l'ajouter
       var themes = await VocabulaireService().getThemesData();
       userData["ListTheme"] = themes.map((theme) => theme.toJson()).toList();
-
       final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('UserData', jsonEncode(userData));
-      Logger.Pink.log(jsonEncode(userData));
+      await prefs.setString('userData', jsonEncode(userData));
       emit(UserLoaded(userData));
     } catch (e) {
       Logger.Red.log("Error loading user data: $e");

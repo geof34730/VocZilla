@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 
 import '../../../core/utils/enum.dart';
+import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
@@ -58,7 +59,6 @@ class CardHome extends StatelessWidget {
   final _vocabulaireRepository=VocabulaireRepository();
 
 
-
   @override
   Widget build(BuildContext context) {
 
@@ -96,11 +96,14 @@ class CardHome extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            title.toUpperCase(),
+            "${title.toUpperCase()} - ${isListPerso.toString()}",
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: getFontForLanguage(
+              codelang: Localizations.localeOf(context).languageCode,
               fontSize: 18,
-              fontFamily: GoogleFonts.titanOne().fontFamily,
+              fontWeight: FontWeight.bold,
+              // Tu peux ajouter fontWeight si besoin
+            ).copyWith(
               color: backgroundColor == Colors.white ? Colors.black : Colors.white,
             ),
           ),

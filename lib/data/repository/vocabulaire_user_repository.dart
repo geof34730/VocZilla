@@ -48,6 +48,10 @@ class VocabulaireUserRepository {
   Future<VocabulaireUser?> getVocabulaireUserData() async {
     try {
       var userDataJson = await localStorageService.getUserData();
+
+
+
+      Logger.Blue.log("getVocabulaireUserData') userData: $userDataJson");
       if (userDataJson != null) {
         return VocabulaireUser.fromJson(userDataJson);
       }
@@ -78,6 +82,7 @@ class VocabulaireUserRepository {
     Logger.Pink.log('VocabulaireUserRepository:  getEmptyVocabulaireUserData');
     final vocabulairesAll = await VocabulaireService().getAllData();
     final List<ListTheme> userTheme = await VocabulaireService().getThemesData();
+    Logger.Yellow.log("LIST PERSO VIDE");
     VocabulaireUser dataEmpty = VocabulaireUser(
       countVocabulaireAll: vocabulairesAll.length,
       listPerso: [],

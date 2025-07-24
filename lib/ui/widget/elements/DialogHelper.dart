@@ -7,6 +7,7 @@ import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/blocs/user/user_bloc.dart';
 import 'package:vobzilla/logic/blocs/user/user_state.dart';
 import '../../../app_route.dart';
+import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';
 import '../../../global.dart';
 
@@ -27,11 +28,9 @@ class DialogHelper {
                 title: Text(
                   context.loc.widget_dialogHelper_showfreetrialdialog_description1,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: getFontForLanguage(
+                    codelang: Localizations.localeOf(context).languageCode,
                     fontSize: 18,
-                    fontFamily: GoogleFonts
-                        .titanOne()
-                        .fontFamily,
                   ),
                 ),
                 content: SingleChildScrollView(
@@ -55,13 +54,12 @@ class DialogHelper {
                             children: <TextSpan>[
                               TextSpan(
                                 text: '$daysFreeTrial ${context.loc.widget_dialogHelper_showfreetrialdialog_days}',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
+                                style: getFontForLanguage(
+                                  codelang: Localizations.localeOf(context).languageCode,
                                   fontSize: 15,
-                                  fontFamily: GoogleFonts
-                                      .titanOne()
-                                      .fontFamily,
+                                  fontWeight: FontWeight.bold,
+                                ).copyWith(
+                                  color: Colors.black,
                                 ),
                               ),
                               TextSpan(
@@ -77,14 +75,13 @@ class DialogHelper {
                         child: Text(
                           '${context.loc.widget_dialogHelper_showfreetrialdialog_description4} ${daysLeft} ${context.loc.widget_dialogHelper_showfreetrialdialog_days}',
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            height: 1.2,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.red,
+                          style: getFontForLanguage(
+                            codelang: Localizations.localeOf(context).languageCode,
                             fontSize: 22,
-                            fontFamily: GoogleFonts
-                                .titanOne()
-                                .fontFamily,
+                            fontWeight: FontWeight.bold,
+                          ).copyWith(
+                            height: 1.2,
+                            color: Colors.red,
                           ),
                         ),
                       ),
@@ -94,13 +91,12 @@ class DialogHelper {
                         child: Text(
                           context.loc.widget_dialogHelper_showfreetrialdialog_description5,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: getFontForLanguage(
+                            codelang: Localizations.localeOf(context).languageCode,
+                            fontSize: 18,
+                          ).copyWith(
                             height: 1.0,
                             color: Colors.black,
-                            fontSize: 18,
-                            fontFamily: GoogleFonts
-                                .titanOne()
-                                .fontFamily,
                           ),
                         ),
                       ),

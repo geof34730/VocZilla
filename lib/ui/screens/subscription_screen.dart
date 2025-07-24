@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
+import '../../core/utils/getFontForLanguage.dart';
 import '../../core/utils/logger.dart';
 import '../../data/repository/user_repository.dart';
 import '../../global.dart';
@@ -99,13 +100,13 @@ class SubscriptionScreen extends StatelessWidget {
                                                     idSubscriptionMensuel
                                                     ? '/${context.loc.mois}'
                                                     : '/${context.loc.annee}'),
-                                                style: TextStyle(
-                                                  fontFamily: GoogleFonts
-                                                      .titanOne()
-                                                      .fontFamily,
-                                                  fontSize: 15,
-                                                  height: 1,
-                                                )),
+                                                style: getFontForLanguage(
+                                                    codelang: Localizations.localeOf(context).languageCode,
+                                                    fontSize: 15,
+                                                  ).copyWith(
+                                                    height: 1,
+                                                  ),
+                                                ),
                                           ])),
                                   title: Text(
                                     (product.id == idSubscriptionMensuel

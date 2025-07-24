@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 
+import '../../../core/utils/getFontForLanguage.dart';
 import '../../widget/form/FormProfilUpdate.dart';
 
 
@@ -24,9 +25,10 @@ class _ProfileUpdateScreenState extends State<ProfileUpdateScreen> {
           Padding(
             padding: const EdgeInsets.only(top:20),
             child:Text(context.loc.profil_update_title,
-                style: TextStyle(
-                    fontSize: 25,
-                    fontFamily: GoogleFonts.titanOne().fontFamily)
+                style: getFontForLanguage(
+                  codelang: Localizations.localeOf(context).languageCode,
+                  fontSize: 25,
+                )
             ),
           ),
           FormProfilUpdate()

@@ -8,6 +8,7 @@ import 'package:vobzilla/ui/widget/home/CardHome.dart';
 import 'package:vobzilla/ui/widget/home/HomeClassement.dart';
 import 'package:vobzilla/ui/widget/home/HomeListTheme.dart';
 import 'package:vobzilla/ui/widget/statistical/global_statisctical_widget.dart';
+import '../../core/utils/getFontForLanguage.dart';
 import '../../core/utils/ui.dart';
 import '../../data/repository/data_user_repository.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
@@ -28,24 +29,19 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    final codelang = Localizations.localeOf(context).languageCode;
     return Column(
           key: ValueKey('home_logged'),
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-                context.loc.home_title_progresse,
-                style: TextStyle(
-                    fontSize: 25,
-                    fontFamily: GoogleFonts.titanOne().fontFamily)
-            ),
+            titleWidget(text:  context.loc.home_title_progresse,codelang: codelang),
             GlobalStatisticalWidget(
               isListPerso : false,
               isListTheme : false,
             ),
             HomelistPerso(),
-            titleWidget(text: context.loc.home_title_list_defined),
+            titleWidget(text: context.loc.home_title_list_defined,codelang: codelang),
 
             HorizontalScrollViewCardHome(
                 children: [
@@ -80,9 +76,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ]
             ),
-            titleWidget(text: context.loc.by_themes),
+            titleWidget(text: context.loc.by_themes,codelang: codelang),
             HomelistThemes(),
-            titleWidget(text: context.loc.home_title_classement),
+            titleWidget(text: context.loc.home_title_classement,codelang: codelang),
             HomeClassement()
           ]
 

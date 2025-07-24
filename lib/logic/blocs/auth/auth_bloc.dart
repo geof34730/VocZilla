@@ -11,6 +11,7 @@ import '../../../data/models/user_firestore.dart';
 import '../../../data/repository/data_user_repository.dart';
 import '../../../data/repository/fcm_repository.dart';
 import '../notification/notification_event.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
 
@@ -195,8 +196,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           pseudo: event.pseudo,
           imageAvatar: event.imageAvatar
         );
-        final updatedProfile =
-        await _dataUserRepository.getUser(currentProfile.uid);
+        final updatedProfile =  await _dataUserRepository.getUser(currentProfile.uid);
         if (updatedProfile != null) {
           emit(AuthAuthenticated(updatedProfile));
           event.notificationBloc.add(ShowNotification(
