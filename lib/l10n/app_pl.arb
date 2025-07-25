@@ -59,7 +59,7 @@
     "home_notlogged_accroche8": "Zoptymalizowane zapamiętywanie w celu szybkiego postępu",
     "home_notlogged_accroche9": "Gotowy poznać język Szekspira?",
     "home_notlogged_button_go": "Zaczynamy!",
-    "freetrial_info1": "Twój okres próbny $daysFreeTrial dobiegł końca",
+    "freetrial_info1": "Twój bezpłatny okres próbny $daysFreeTrial dobiegł końca",
     "freetrial_info2": "Dołącz do nas i odkryj świat możliwości dzięki naszym ekskluzywnym członkostwom!",
     "mois": "miesiąc",
     "annee": "rok",
@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Błąd podczas dodawania listy",
     "vocabulaire_user_error_update_list_perso": "Błąd podczas aktualizacji listy",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Błąd podczas dodawania słownika do listy",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Błąd podczas usuwania słownika z listy"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Błąd podczas usuwania słownika z listy",
+    "alert_dialogue_suppression_list_title": "Potwierdzenie usunięcia",
+    "alert_dialogue_suppression_list_question": "Czy na pewno chcesz usunąć swoją listę niestandardową?",
+    "non": "Nie",
+    "oui": "Tak"
 }

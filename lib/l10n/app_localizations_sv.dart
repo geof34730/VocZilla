@@ -105,7 +105,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get pronunciation_success => 'Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, det stämmer inte helt. Försök igen.';
+  String get pronunciation_error => 'Hmm, det stämmer inte riktigt. Försök igen.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Jag hörde dig säga';
@@ -306,7 +306,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Dra nytta av din kostnadsfria provperiod!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har för närvarande en gratis provperiod på';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har just nu en gratis provperiod på';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'dagar';
@@ -499,4 +499,16 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Fel vid borttagning av ordförråd från listan';
+
+  @override
+  String get alert_dialogue_suppression_list_title => 'Bekräftelse av radering';
+
+  @override
+  String get alert_dialogue_suppression_list_question => 'Är du säker på att du vill ta bort din anpassade lista?';
+
+  @override
+  String get non => 'Icke';
+
+  @override
+  String get oui => 'Ja';
 }

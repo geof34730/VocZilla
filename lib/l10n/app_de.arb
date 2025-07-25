@@ -138,7 +138,7 @@
     "firebase_error_message_error_generic": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "auth_success_update_profile": "Profil erfolgreich aktualisiert!",
     "vocabulaire_success_delete_list": "Liste erfolgreich gelöscht.",
-    "update_app_text_1": "Eine neue Version von Voczilla ist verfügbar mit erheblichen Verbesserungen, neuen Funktionen und Fehlerbehebungen für ein noch besseres Erlebnis",
+    "update_app_text_1": "Eine neue Version von Voczilla ist mit erheblichen Verbesserungen, neuen Funktionen und Fehlerbehebungen für ein noch besseres Erlebnis verfügbar.",
     "update_app_text_2": "Verpassen Sie keine Neuigkeiten!",
     "update_app_text_3": "Klicken Sie unten, um jetzt zu aktualisieren",
     "update_app_text_4": "VocZilla aktualisieren",
@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Fehler beim Hinzufügen der Liste",
     "vocabulaire_user_error_update_list_perso": "Fehler beim Aktualisieren der Liste",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Fehler beim Hinzufügen von Vokabeln zur Liste",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Fehler beim Löschen des Vokabulars aus der Liste"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Fehler beim Löschen des Vokabulars aus der Liste",
+    "alert_dialogue_suppression_list_title": "Löschbestätigung",
+    "alert_dialogue_suppression_list_question": "Möchten Sie Ihre benutzerdefinierte Liste wirklich löschen?",
+    "non": "Nicht",
+    "oui": "Ja"
 }

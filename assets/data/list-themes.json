@@ -13,7 +13,8 @@
             "pl": "Gotowanie i jedzenie",
             "uk": "Приготування їжі та їжа",
             "sv": "Matlagning och mat",
-            "ru": "Приготовление пищи и еда"
+            "ru": "Приготовление пищи и еда",
+            "nl": "Koken en eten"
         },
         "guid": "694ed9c5-d40d-405f-a33b-bd9f4d12b2b4",
         "listGuidVocabulary": [
@@ -63,7 +64,8 @@
             "pl": "Technologia",
             "uk": "Технології",
             "sv": "Teknologi",
-            "ru": "Технология"
+            "ru": "Технология",
+            "nl": "Technologie"
         },
         "guid": "aa34a87a-4f0e-48bc-b2fb-1ec1e5a7031e",
         "listGuidVocabulary": [
@@ -113,7 +115,8 @@
             "pl": "Emocje i uczucia",
             "uk": "Емоції та почуття",
             "sv": "Känslor och känslor",
-            "ru": "Эмоции и чувства"
+            "ru": "Эмоции и чувства",
+            "nl": "Emoties en gevoelens"
         },
         "guid": "a0f421f3-385f-4423-8dd7-3b393496b4b0",
         "listGuidVocabulary": [
@@ -156,7 +159,8 @@
             "pl": "Transport",
             "uk": "Транспорт",
             "sv": "Transport",
-            "ru": "Транспорт"
+            "ru": "Транспорт",
+            "nl": "Vervoer"
         },
         "guid": "1887b377-802e-48c3-a173-73bb5570fdf8",
         "listGuidVocabulary": [
@@ -206,7 +210,8 @@
             "pl": "Dom i przedmioty",
             "uk": "Дім та предмети",
             "sv": "Hem och föremål",
-            "ru": "Дом и предметы"
+            "ru": "Дом и предметы",
+            "nl": "Huis en voorwerpen"
         },
         "guid": "3b486c94-d5b0-43e2-87f4-0d726bd73d92",
         "listGuidVocabulary": [

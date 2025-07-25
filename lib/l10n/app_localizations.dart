@@ -11,6 +11,7 @@ import 'app_localizations_es.dart';
 import 'app_localizations_et.dart';
 import 'app_localizations_fr.dart';
 import 'app_localizations_it.dart';
+import 'app_localizations_nl.dart';
 import 'app_localizations_no.dart';
 import 'app_localizations_pl.dart';
 import 'app_localizations_pt.dart';
@@ -108,6 +109,7 @@ abstract class AppLocalizations {
     Locale('et'),
     Locale('fr'),
     Locale('it'),
+    Locale('nl'),
     Locale('no'),
     Locale('pl'),
     Locale('pt'),
@@ -1100,6 +1102,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Error deleting vocabulary from list'**
   String get vocabulaire_user_error_delete_vocabulaire_list;
+
+  /// No description provided for @alert_dialogue_suppression_list_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Deletion confirmation'**
+  String get alert_dialogue_suppression_list_title;
+
+  /// No description provided for @alert_dialogue_suppression_list_question.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete your custom list?'**
+  String get alert_dialogue_suppression_list_question;
+
+  /// No description provided for @non.
+  ///
+  /// In en, this message translates to:
+  /// **'Non'**
+  String get non;
+
+  /// No description provided for @oui.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes'**
+  String get oui;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -1111,7 +1137,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'et', 'fr', 'it', 'no', 'pl', 'pt', 'ru', 'sv', 'uk', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'et', 'fr', 'it', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'uk', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -1128,6 +1154,7 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'et': return AppLocalizationsEt();
     case 'fr': return AppLocalizationsFr();
     case 'it': return AppLocalizationsIt();
+    case 'nl': return AppLocalizationsNl();
     case 'no': return AppLocalizationsNo();
     case 'pl': return AppLocalizationsPl();
     case 'pt': return AppLocalizationsPt();

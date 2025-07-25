@@ -43,7 +43,7 @@
     "offline_description": "Teil puudub internetiühendus. Jätkamiseks looge internetiühendus.",
     "quizz_progression_title": "Minu edusammud selles nimekirjas",
     "quizz_en": "Sisse",
-    "quizz_saisie_in": "Sisestage tõlge",
+    "quizz_saisie_in": "Sisesta tõlge",
     "home_title_progresse": "Minu Titani edusammud",
     "home_title_my_list_perso": "Minu isiklikud nimekirjad",
     "home_title_list_defined": "Väikesest koletisest titaaniks",
@@ -130,7 +130,7 @@
     "firebase_error_message_default": "Tekkis tundmatu viga.",
     "firebase_error_message_invalid_email": "E-posti aadress on vigane.",
     "firebase_error_message_user_disabled": "See kasutajakonto on keelatud.",
-    "firebase_error_message_invalid_credential": "E-posti aadress või parool on vale.",
+    "firebase_error_message_invalid_credential": "Meiliaadress või parool on vale.",
     "firebase_error_message_email_already_in_use": "See e-posti aadress on juba teise konto poolt kasutusel.",
     "firebase_error_message_operation_not_allowed": "See toiming ei ole lubatud.",
     "firebase_error_message_weak_password": "Parool on liiga nõrk.",
@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Viga nimekirja lisamisel",
     "vocabulaire_user_error_update_list_perso": "Viga nimekirja värskendamisel",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Sõnavara lisamisel loendisse tekkis viga",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Viga sõnavara loendist kustutamisel"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Viga sõnavara loendist kustutamisel",
+    "alert_dialogue_suppression_list_title": "Kustutamise kinnitus",
+    "alert_dialogue_suppression_list_question": "Kas olete kindel, et soovite oma kohandatud loendi kustutada?",
+    "non": "Mitte",
+    "oui": "Jah"
 }

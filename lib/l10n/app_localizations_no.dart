@@ -330,7 +330,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_congratulation_bravo => 'Bravo';
 
   @override
-  String get widget_congratulation_message => 'du er ferdig med å lære deg denne listen';
+  String get widget_congratulation_message => 'du er ferdig med å lære denne listen';
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice1 => 'Å lære';
@@ -499,4 +499,16 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Feil ved sletting av vokabular fra listen';
+
+  @override
+  String get alert_dialogue_suppression_list_title => 'Slettingsbekreftelse';
+
+  @override
+  String get alert_dialogue_suppression_list_question => 'Er du sikker på at du vil slette den tilpassede listen din?';
+
+  @override
+  String get non => 'Ikke';
+
+  @override
+  String get oui => 'Ja';
 }

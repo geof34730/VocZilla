@@ -140,28 +140,16 @@ class AppRoute {
           ],
           child: ConnectivityAwareWidget(
             child: BlocBuilder<AuthBloc, AuthState>(
-              // 1. On utilise `buildWhen` pour contrôler les reconstructions.
-              //    On ne reconstruit PAS pour un succès ou une mise à jour de profil,
-              //    car le Listener s'en occupe déjà (pour la notification).
               buildWhen: (previous, current) {
                 return current is! AuthSuccess && current is! AuthProfileUpdated;
               },
               builder: (context, authState) {
-                // 2. La logique est maintenant simple et sans ambiguïté.
-                //    Si l'état est une sous-classe de AuthAuthenticated, on est connecté.
-
-                Logger.Pink.log("authState;: $authState");
-
                 if (authState is AuthAuthenticated) {
                   return _getAuthenticatedPage(settings, context);
                 }
-
-                // 3. On groupe les cas qui mènent à la même page.
                 if (authState is AuthUnauthenticated || authState is AuthError) {
                   return _getUnauthenticatedPage(settings, context);
                 }
-
-                // 4. Cas par défaut pour les états de chargement (AuthInitial, AuthLoading)
                 return Scaffold(
                   body: Loading(),
                 );
@@ -202,7 +190,6 @@ class AppRoute {
     Logger.Blue.log("_getAuthenticatedPage settings.name: ${settings.name}");
 
     if (uri.pathSegments.isEmpty && settings.name == '/') {
-      Logger.Pink.log("yili 1");
       return Layout(child: HomeScreen());
     }
 
@@ -214,14 +201,13 @@ class AppRoute {
         case updateProfile:
           return Layout(appBarNotLogged: false, logged: true, child: ProfileUpdateScreen());
         case login:
-          return Layout(appBarNotLogged: true,logged: false, child: LoginScreen());
+          return Scaffold(body: Loading());
         case updateProfileGafa:
           return Layout(appBarNotLogged: true, logged: false, child: ProfileUpdateGafaScreen());
         case subscription:
           return Layout(titleScreen: context.loc.title_subscription, child: SubscriptionScreen());
         case home:
         case homeLogged:
-        Logger.Pink.log("yili 2");
           return Layout(child: HomeScreen());
         case updateScreen:
           return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
@@ -301,7 +287,6 @@ class AppRoute {
           return _errorPage(settings);
       }
     }
-    Logger.Pink.log("yili 3");
     return Layout(child: HomeScreen());
   }
 

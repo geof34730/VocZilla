@@ -31,7 +31,7 @@
     "no_vocabulary_items_found": "Inga ordförråd hittades",
     "pronunciation_title": "Uttal",
     "pronunciation_success": "Bravo!",
-    "pronunciation_error": "Hmm, det stämmer inte helt. Försök igen.",
+    "pronunciation_error": "Hmm, det stämmer inte riktigt. Försök igen.",
     "pronunciation_i_heard_you_say": "Jag hörde dig säga",
     "pronunciation_description_action": "Tryck på mikrofonen för att tala och kontrollera ditt uttal.",
     "pronunciation_error1": "Misslyckades med att initiera taligenkänning",
@@ -98,7 +98,7 @@
     "profil_update_title": "Uppdatera din profil",
     "profil_complete_registration_title": "Slutför din registrering",
     "widget_dialogHelper_showfreetrialdialog_description1": "Dra nytta av din kostnadsfria provperiod!",
-    "widget_dialogHelper_showfreetrialdialog_description2": "Välkommen! Du har för närvarande en gratis provperiod på",
+    "widget_dialogHelper_showfreetrialdialog_description2": "Välkommen! Du har just nu en gratis provperiod på",
     "widget_dialogHelper_showfreetrialdialog_days": "dagar",
     "widget_dialogHelper_showfreetrialdialog_description3": "för att upptäcka alla funktioner i vår applikation.",
     "widget_dialogHelper_showfreetrialdialog_description4": "Du har lämnat",
@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Fel vid tillägg av lista",
     "vocabulaire_user_error_update_list_perso": "Fel vid uppdatering av listan",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Fel vid tillägg av ordförråd i listan",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Fel vid borttagning av ordförråd från listan"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Fel vid borttagning av ordförråd från listan",
+    "alert_dialogue_suppression_list_title": "Bekräftelse av radering",
+    "alert_dialogue_suppression_list_question": "Är du säker på att du vill ta bort din anpassade lista?",
+    "non": "Icke",
+    "oui": "Ja"
 }

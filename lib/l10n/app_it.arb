@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Errore durante l'aggiunta dell'elenco",
     "vocabulaire_user_error_update_list_perso": "Errore durante l'aggiornamento dell'elenco",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Errore durante l'aggiunta del vocabolario all'elenco",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Errore durante l'eliminazione del vocabolario dall'elenco"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Errore durante l'eliminazione del vocabolario dall'elenco",
+    "alert_dialogue_suppression_list_title": "Conferma di eliminazione",
+    "alert_dialogue_suppression_list_question": "Vuoi davvero eliminare il tuo elenco personalizzato?",
+    "non": "Non",
+    "oui": "SÌ"
 }

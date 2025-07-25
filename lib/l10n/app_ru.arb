@@ -89,7 +89,7 @@
     "login_ou_inscrivez_vous_avec": "Или зарегистрируйтесь",
     "email_validation_merci_register": "Спасибо за регистрацию!",
     "email_validation_msg_email_send": "На ваш адрес электронной почты было отправлено письмо с подтверждением.",
-    "email_validation_instruction": "Проверьте свой почтовый ящик и следуйте инструкциям для подтверждения адреса электронной почты. Это позволит нам подтвердить вашу регистрацию и предоставить вам доступ ко всем функциям нашего сервиса.",
+    "email_validation_instruction": "Проверьте свой почтовый ящик и следуйте инструкциям для подтверждения адреса электронной почты. Это позволит нам подтвердить вашу регистрацию и предоставит вам доступ ко всем функциям нашего сервиса.",
     "email_validation_help": "Если вы не видите письмо в своем почтовом ящике, проверьте папку со спамом или нежелательной почтой.",
     "email_validation_merci_register2": "Спасибо за ваше доверие!",
     "send_mail": "Получите новое письмо с подтверждением",
@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Ошибка добавления списка",
     "vocabulaire_user_error_update_list_perso": "Ошибка обновления списка",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Ошибка добавления словаря в список",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Ошибка удаления словаря из списка"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Ошибка удаления словаря из списка",
+    "alert_dialogue_suppression_list_title": "Подтверждение удаления",
+    "alert_dialogue_suppression_list_question": "Вы уверены, что хотите удалить свой пользовательский список?",
+    "non": "Нет",
+    "oui": "Да"
 }

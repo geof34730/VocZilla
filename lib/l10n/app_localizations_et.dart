@@ -141,7 +141,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get quizz_en => 'Sisse';
 
   @override
-  String get quizz_saisie_in => 'Sisestage tõlge';
+  String get quizz_saisie_in => 'Sisesta tõlge';
 
   @override
   String get home_title_progresse => 'Minu Titani edusammud';
@@ -402,7 +402,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get firebase_error_message_user_disabled => 'See kasutajakonto on keelatud.';
 
   @override
-  String get firebase_error_message_invalid_credential => 'E-posti aadress või parool on vale.';
+  String get firebase_error_message_invalid_credential => 'Meiliaadress või parool on vale.';
 
   @override
   String get firebase_error_message_email_already_in_use => 'See e-posti aadress on juba teise konto poolt kasutusel.';
@@ -499,4 +499,16 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Viga sõnavara loendist kustutamisel';
+
+  @override
+  String get alert_dialogue_suppression_list_title => 'Kustutamise kinnitus';
+
+  @override
+  String get alert_dialogue_suppression_list_question => 'Kas olete kindel, et soovite oma kohandatud loendi kustutada?';
+
+  @override
+  String get non => 'Mitte';
+
+  @override
+  String get oui => 'Jah';
 }

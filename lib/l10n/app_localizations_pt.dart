@@ -499,4 +499,16 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Erro ao excluir vocabulário da lista';
+
+  @override
+  String get alert_dialogue_suppression_list_title => 'Confirmação de exclusão';
+
+  @override
+  String get alert_dialogue_suppression_list_question => 'Tem certeza de que deseja excluir sua lista personalizada?';
+
+  @override
+  String get non => 'Não';
+
+  @override
+  String get oui => 'Sim';
 }

@@ -426,7 +426,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Liste erfolgreich gelöscht.';
 
   @override
-  String get update_app_text_1 => 'Eine neue Version von Voczilla ist verfügbar mit erheblichen Verbesserungen, neuen Funktionen und Fehlerbehebungen für ein noch besseres Erlebnis';
+  String get update_app_text_1 => 'Eine neue Version von Voczilla ist mit erheblichen Verbesserungen, neuen Funktionen und Fehlerbehebungen für ein noch besseres Erlebnis verfügbar.';
 
   @override
   String get update_app_text_2 => 'Verpassen Sie keine Neuigkeiten!';
@@ -499,4 +499,16 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Fehler beim Löschen des Vokabulars aus der Liste';
+
+  @override
+  String get alert_dialogue_suppression_list_title => 'Löschbestätigung';
+
+  @override
+  String get alert_dialogue_suppression_list_question => 'Möchten Sie Ihre benutzerdefinierte Liste wirklich löschen?';
+
+  @override
+  String get non => 'Nicht';
+
+  @override
+  String get oui => 'Ja';
 }

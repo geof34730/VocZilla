@@ -100,7 +100,7 @@
     "widget_dialogHelper_showfreetrialdialog_description1": "Скористайтеся безкоштовним пробним періодом!",
     "widget_dialogHelper_showfreetrialdialog_description2": "Ласкаво просимо! Ви зараз користуєтеся безкоштовним пробним періодом",
     "widget_dialogHelper_showfreetrialdialog_days": "дні",
-    "widget_dialogHelper_showfreetrialdialog_description3": "щоб ознайомитися з усіма функціями нашого застосунку.",
+    "widget_dialogHelper_showfreetrialdialog_description3": "щоб відкрити для себе всі можливості нашого застосунку.",
     "widget_dialogHelper_showfreetrialdialog_description4": "Ви пішли",
     "widget_dialogHelper_showfreetrialdialog_description5": "безкоштовні пробні версії",
     "widget_dialogHelper_showfreetrialdialog_description6": "Не зупиняйтеся на досягнутому! Оберіть підписку, яка вам підходить, і продовжуйте насолоджуватися без перерв.",
@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Помилка додавання списку",
     "vocabulaire_user_error_update_list_perso": "Помилка оновлення списку",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Помилка додавання словникового запасу до списку",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Помилка видалення словника зі списку"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Помилка видалення словника зі списку",
+    "alert_dialogue_suppression_list_title": "Підтвердження видалення",
+    "alert_dialogue_suppression_list_question": "Ви впевнені, що хочете видалити свій власний список?",
+    "non": "Не",
+    "oui": "Так"
 }

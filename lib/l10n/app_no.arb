@@ -106,7 +106,7 @@
     "widget_dialogHelper_showfreetrialdialog_description6": "Ikke la opplevelsen din stoppe! Velg abonnementet som passer deg, og fortsett å nyte det uten avbrudd.",
     "widget_dialogHelper_showfreetrialdialog_later": "Seinere",
     "widget_congratulation_bravo": "Bravo",
-    "widget_congratulation_message": "du er ferdig med å lære deg denne listen",
+    "widget_congratulation_message": "du er ferdig med å lære denne listen",
     "widget_radiochoicevocabularylearnedornot_choice1": "Å lære",
     "widget_radiochoicevocabularylearnedornot_choice2": "Alle",
     "title_create_personal_list": "Opprett en tilpasset liste",
@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Feil ved tillegging av liste",
     "vocabulaire_user_error_update_list_perso": "Feil under oppdatering av listen",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Feil ved å legge til vokabular i listen",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Feil ved sletting av vokabular fra listen"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Feil ved sletting av vokabular fra listen",
+    "alert_dialogue_suppression_list_title": "Slettingsbekreftelse",
+    "alert_dialogue_suppression_list_question": "Er du sikker på at du vil slette den tilpassede listen din?",
+    "non": "Ikke",
+    "oui": "Ja"
 }

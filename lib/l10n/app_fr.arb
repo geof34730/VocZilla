@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso" : "Erreur lors de l'ajout de la liste",
     "vocabulaire_user_error_update_list_perso" : "Erreur lors de la mise à jour de la liste",
     "vocabulaire_user_error_add_vocabulaire_list_perso" : "Erreur lors de l'ajout du vocabulaire à la liste",
-    "vocabulaire_user_error_delete_vocabulaire_list" : "Erreur lors de la suppression du vocabulaire de la liste"
+    "vocabulaire_user_error_delete_vocabulaire_list" : "Erreur lors de la suppression du vocabulaire de la liste",
+    "alert_dialogue_suppression_list_title" : "Confirmation de suppression",
+    "alert_dialogue_suppression_list_question" : "Êtes-vous sûr de vouloir supprimer votre liste personnalisée",
+    "non" : "Non",
+    "oui" : "Oui"
 }

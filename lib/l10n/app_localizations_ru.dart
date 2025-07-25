@@ -279,7 +279,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get email_validation_msg_email_send => 'На ваш адрес электронной почты было отправлено письмо с подтверждением.';
 
   @override
-  String get email_validation_instruction => 'Проверьте свой почтовый ящик и следуйте инструкциям для подтверждения адреса электронной почты. Это позволит нам подтвердить вашу регистрацию и предоставить вам доступ ко всем функциям нашего сервиса.';
+  String get email_validation_instruction => 'Проверьте свой почтовый ящик и следуйте инструкциям для подтверждения адреса электронной почты. Это позволит нам подтвердить вашу регистрацию и предоставит вам доступ ко всем функциям нашего сервиса.';
 
   @override
   String get email_validation_help => 'Если вы не видите письмо в своем почтовом ящике, проверьте папку со спамом или нежелательной почтой.';
@@ -499,4 +499,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Ошибка удаления словаря из списка';
+
+  @override
+  String get alert_dialogue_suppression_list_title => 'Подтверждение удаления';
+
+  @override
+  String get alert_dialogue_suppression_list_question => 'Вы уверены, что хотите удалить свой пользовательский список?';
+
+  @override
+  String get non => 'Нет';
+
+  @override
+  String get oui => 'Да';
 }

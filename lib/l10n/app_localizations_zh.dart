@@ -24,7 +24,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
-  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 轻松, 听力';
+  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 简单, 听力';
 
   @override
   String get app_feature_graphic_title => '提高你的英语词汇量';
@@ -96,7 +96,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unknown_error => '未知错误';
 
   @override
-  String get no_vocabulary_items_found => '未找到任何词汇';
+  String get no_vocabulary_items_found => '未找到任何词汇条目';
 
   @override
   String get pronunciation_title => '发音';
@@ -499,4 +499,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => '从列表中删除词汇时出错';
+
+  @override
+  String get alert_dialogue_suppression_list_title => '删除确认';
+
+  @override
+  String get alert_dialogue_suppression_list_question => '您确定要删除您的自定义列表吗？';
+
+  @override
+  String get non => '非';
+
+  @override
+  String get oui => '是的';
 }

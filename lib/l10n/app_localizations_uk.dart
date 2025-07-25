@@ -312,7 +312,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_days => 'дні';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб ознайомитися з усіма функціями нашого застосунку.';
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб відкрити для себе всі можливості нашого застосунку.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Ви пішли';
@@ -499,4 +499,16 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Помилка видалення словника зі списку';
+
+  @override
+  String get alert_dialogue_suppression_list_title => 'Підтвердження видалення';
+
+  @override
+  String get alert_dialogue_suppression_list_question => 'Ви впевнені, що хочете видалити свій власний список?';
+
+  @override
+  String get non => 'Не';
+
+  @override
+  String get oui => 'Так';
 }

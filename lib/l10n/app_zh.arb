@@ -4,7 +4,7 @@
     "app_subtitle": "英语词汇",
     "app_description": "VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，参与趣味测验，追踪学习进度，并挑战您的好友！",
     "app_short_description": "学习并复习英语词汇！",
-    "app_keywords": "词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 轻松, 听力",
+    "app_keywords": "词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 简单, 听力",
     "app_feature_graphic_title": "提高你的英语词汇量",
     "app_feature_graphic_FeatureItem1": "5,600 字",
     "app_feature_graphic_FeatureItem2": "交互式音频测验和测试",
@@ -28,7 +28,7 @@
     "button_next": "套房",
     "error_loading": "加载错误",
     "unknown_error": "未知错误",
-    "no_vocabulary_items_found": "未找到任何词汇",
+    "no_vocabulary_items_found": "未找到任何词汇条目",
     "pronunciation_title": "发音",
     "pronunciation_success": "好极了！",
     "pronunciation_error": "嗯，不太对。再试一次。",
@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "添加列表时出错",
     "vocabulaire_user_error_update_list_perso": "更新列表时出错",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "将词汇添加到列表时出错",
-    "vocabulaire_user_error_delete_vocabulaire_list": "从列表中删除词汇时出错"
+    "vocabulaire_user_error_delete_vocabulaire_list": "从列表中删除词汇时出错",
+    "alert_dialogue_suppression_list_title": "删除确认",
+    "alert_dialogue_suppression_list_question": "您确定要删除您的自定义列表吗？",
+    "non": "非",
+    "oui": "是的"
 }

@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Error adding list",
     "vocabulaire_user_error_update_list_perso": "Error updating the list",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Error adding vocabulary to list",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Error deleting vocabulary from list"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Error deleting vocabulary from list",
+    "alert_dialogue_suppression_list_title": "Deletion confirmation",
+    "alert_dialogue_suppression_list_question": "Are you sure you want to delete your custom list?",
+    "non": "Non",
+    "oui": "Yes"
 }

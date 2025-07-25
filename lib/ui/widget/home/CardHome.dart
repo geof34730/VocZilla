@@ -248,7 +248,44 @@ class CardHome extends StatelessWidget {
                       valueKey: 'buttonDeletePerso${keyStringTest}',
                       colorIcon: Colors.red,
                       onClickButton: () {
-                        BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(guid));
+                        // Affiche une boîte de dialogue pour confirmer la suppression
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext dialogContext) {
+
+                            return AlertDialog(
+                              title: Text(context.loc.alert_dialogue_suppression_list_title), // Vous pouvez aussi utiliser context.loc ici
+                              content: Text("${context.loc.alert_dialogue_suppression_list_question.replaceAll("?", "")} $title ?"),
+                              actions: <Widget>[
+                                // Bouton "Non" avec un style discret
+                                OutlinedButton(
+                                  child: Text(context.loc.non), // Idéalement : Text(context.loc.no)
+                                  onPressed: () {
+                                    Navigator.of(dialogContext).pop();
+                                  },
+                                  style: OutlinedButton.styleFrom(
+                                    foregroundColor: Colors.grey.shade700,
+                                    side: BorderSide(color: Colors.grey.shade400),
+                                  ),
+                                ),
+                                // Bouton "Oui" avec un style marqué pour l'action principale
+                                ElevatedButton(
+                                  child: Text(context.loc.oui), // Idéalement : Text(context.loc.yes)
+                                  onPressed: () {
+                                    BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(guid));
+                                    Navigator.of(dialogContext).pop();
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    // Le fond rouge est cohérent avec l'icône de suppression
+                                    backgroundColor: Colors.red,
+                                    // Le texte en blanc pour un bon contraste
+                                    foregroundColor: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            );
+                          },
+                        );
                       },
                       iconContent: Icons.delete,
                       context: context,

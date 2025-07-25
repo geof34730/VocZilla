@@ -162,5 +162,9 @@
     "vocabulaire_user_error_add_list_perso": "Erro ao adicionar lista",
     "vocabulaire_user_error_update_list_perso": "Erro ao atualizar a lista",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Erro ao adicionar vocabulário à lista",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Erro ao excluir vocabulário da lista"
+    "vocabulaire_user_error_delete_vocabulaire_list": "Erro ao excluir vocabulário da lista",
+    "alert_dialogue_suppression_list_title": "Confirmação de exclusão",
+    "alert_dialogue_suppression_list_question": "Tem certeza de que deseja excluir sua lista personalizada?",
+    "non": "Não",
+    "oui": "Sim"
 }

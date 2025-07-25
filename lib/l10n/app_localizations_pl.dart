@@ -189,7 +189,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get home_notlogged_button_go => 'Zaczynamy!';
 
   @override
-  String get freetrial_info1 => 'Twój okres próbny \$daysFreeTrial dobiegł końca';
+  String get freetrial_info1 => 'Twój bezpłatny okres próbny \$daysFreeTrial dobiegł końca';
 
   @override
   String get freetrial_info2 => 'Dołącz do nas i odkryj świat możliwości dzięki naszym ekskluzywnym członkostwom!';
@@ -499,4 +499,16 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Błąd podczas usuwania słownika z listy';
+
+  @override
+  String get alert_dialogue_suppression_list_title => 'Potwierdzenie usunięcia';
+
+  @override
+  String get alert_dialogue_suppression_list_question => 'Czy na pewno chcesz usunąć swoją listę niestandardową?';
+
+  @override
+  String get non => 'Nie';
+
+  @override
+  String get oui => 'Tak';
 }
