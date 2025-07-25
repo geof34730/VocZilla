@@ -237,10 +237,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get login_entrer_nom => 'Sisesta oma nimi';
 
   @override
-  String get login_pseudo => 'Pseudo';
+  String get login_pseudo => 'Varjunimi';
 
   @override
-  String get login_entrer_pseudo => 'Sisesta oma kasutajanimi';
+  String get login_entrer_pseudo => 'Sisesta oma hüüdnimi';
 
   @override
   String get login_mot_de_passe => 'Parool';
@@ -297,7 +297,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Vali värv oma loendist';
 
   @override
-  String get profil_update_title => 'Lõpeta registreerimine';
+  String get profil_update_title => 'Värskenda oma profiili';
+
+  @override
+  String get profil_complete_registration_title => 'Lõpeta registreerimine';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Kasuta oma tasuta prooviperioodi ära!';
@@ -352,4 +355,130 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Anonüümne kasutaja';
+
+  @override
+  String get alert_message_email_verify_send => 'Kinnitusmeil saadetud!';
+
+  @override
+  String get alert_message_email_send_error => 'Viga e-kirja saatmisel.';
+
+  @override
+  String get auth_error_deconnect => 'Väljalogimisel ilmnes viga.';
+
+  @override
+  String get auth_error_connect => 'Ühendamise ajal ilmnes tundmatu viga.';
+
+  @override
+  String get auth_error_register_unknown => 'Registreerimisel ilmnes tundmatu viga.';
+
+  @override
+  String get auth_error_create_user => 'Kasutaja loomine ebaõnnestus.';
+
+  @override
+  String get auth_error_update_profil => 'Viga profiili uuendamisel.';
+
+  @override
+  String get auth_error_facebook => 'Facebooki sisselogimisel ilmnes tundmatu viga.';
+
+  @override
+  String get auth_error_google => 'Google\'i sisselogimisel ilmnes tundmatu viga.';
+
+  @override
+  String get auth_error_apple => 'Apple\'i sisselogimisel ilmnes tundmatu viga.';
+
+  @override
+  String get auth_error_echoue => 'Autentimine ebaõnnestus, proovige uuesti';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'Liiga palju päringuid. Proovige hiljem uuesti.';
+
+  @override
+  String get firebase_error_message_default => 'Tekkis tundmatu viga.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'E-posti aadress on vigane.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'See kasutajakonto on keelatud.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'Meiliaadress või parool on vale.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'See e-posti aadress on juba teise konto poolt kasutusel.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'See toiming ei ole lubatud.';
+
+  @override
+  String get firebase_error_message_weak_password => 'Parool on liiga nõrk.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'Sama e-posti aadressiga, aga erinevate sisselogimisandmetega konto on juba olemas.';
+
+  @override
+  String get firebase_error_message_error_generic => 'Tekkis ootamatu viga. Palun proovige uuesti.';
+
+  @override
+  String get auth_success_update_profile => 'Profiili värskendamine õnnestus!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'Loend edukalt kustutatud.';
+
+  @override
+  String get update_app_text_1 => 'Voczilla uus versioon on saadaval oluliste täiustuste, uute funktsioonide ja veaparandustega veelgi parema kogemuse tagamiseks.';
+
+  @override
+  String get update_app_text_2 => 'Ära maga maha värskeimaid uudiseid!';
+
+  @override
+  String get update_app_text_3 => 'Klõpsake allpool, et kohe värskendada';
+
+  @override
+  String get update_app_text_4 => 'VocZilla värskendamine';
+
+  @override
+  String get update_app_text_5 => 'Täname teid Voczilla kogukonna liikmeks olemise eest';
+
+  @override
+  String get drawer_my_profil => 'Minu profiil';
+
+  @override
+  String get drawer_disconnect => 'Logi välja';
+
+  @override
+  String get drawer_free_trial => 'Minu prooviperiood';
+
+  @override
+  String get drawer_free_trial_day => 'päev';
+
+  @override
+  String get drawer_free_trial_days => 'päevad';
+
+  @override
+  String get drawer_free_trial_restants => 'ülejäänud';
+
+  @override
+  String get drawer_free_trial_restant => 'ülejäänud';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Profiili laadimise viga';
+
+  @override
+  String get save => 'Salvesta';
+
+  @override
+  String get card_home_user_day => 'päeva)';
+
+  @override
+  String get card_home_user_liste_perso => 'nimekiri(d) Kadunud';
+
+  @override
+  String get card_home_share => 'jagatud';
+
+  @override
+  String get card_home_mot => 'vastu';
+
+  @override
+  String get card_home_reessayer => 'Proovi uuesti';
 }

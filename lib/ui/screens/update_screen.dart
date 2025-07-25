@@ -45,7 +45,7 @@ class UpdateScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top:20, bottom: 0,left:20,right:20),
             child:Text(
-              "Une nouvelle version de Voczilla est disponible avec des améliorations importantes, de nouvelles fonctionnalités et des corrections de bugs pour une expérience encore meilleure",
+              context.loc.update_app_text_1,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16
@@ -55,24 +55,22 @@ class UpdateScreen extends StatelessWidget {
 
           Padding(
             padding: EdgeInsets.only(top:10, bottom: 10),
-            child:Text("🎉 Ne manquez pas les nouveautés !",
+            child:Text("🎉 ${context.loc.update_app_text_2}",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
 
             ),
           ),
 
-          Text("Cliquez ci-dessous pour mettre à jour maintenant"),
+          Text(context.loc.update_app_text_3),
           ElevatedButton(
               onPressed: _launchStore,
-              child: Text("Mettre à jour VocZilla")
+              child: Text(context.loc.update_app_text_4)
           ),
 
           Padding(
             padding: EdgeInsets.only(top:20, bottom: 10),
-            child:Text("Merci de faire partie de la communauté Voczilla 💜",
+            child:Text("${context.loc.update_app_text_5} 💜",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
-
-
             )
           ),
 

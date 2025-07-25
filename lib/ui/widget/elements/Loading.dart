@@ -4,7 +4,7 @@ class Loading extends StatelessWidget {
   const Loading({super.key});
   @override
   Widget build(BuildContext context) {
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    //ScaffoldMessenger.of(context).hideCurrentSnackBar();
     return Center(
       child: CircularProgressIndicator(),
     );

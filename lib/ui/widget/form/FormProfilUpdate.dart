@@ -115,7 +115,7 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
             return const Center(child: CircularProgressIndicator());
           }
           if (snapshot.hasError) {
-            return Center(child: Text("Erreur de chargement du profil: ${snapshot.error}"));
+            return Center(child: Text("${context.loc.erreur_de_chargement_du_profil} ${snapshot.error}"));
           }
 
           if (snapshot.hasData) {
@@ -217,18 +217,17 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
                             lastName: lastNameController.text,
                             pseudo: pseudoController.text,
                             imageAvatar: _newImageAvatarBase64,
-                            notificationBloc: notificationBloc,
                           ),
                         );
                       },
-                      child: const Text("Enregistrer"),
+                      child:  Text(context.loc.save),
                     )
                   ],
                 ),
               ),
             );
           }
-          return Center(child: Text("Erreur de chargement du profil: ${snapshot.error}"));
+          return Center(child: Text("${context.loc.erreur_de_chargement_du_profil} ${snapshot.error}"));
         },
       ),
     );

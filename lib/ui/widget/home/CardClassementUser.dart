@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import '../../../core/utils/getFontForLanguage.dart';
 import '../../../data/models/user_firestore.dart';
 import '../../../data/services/localstorage_service.dart';
@@ -40,7 +41,7 @@ class CardClassementUser extends StatelessWidget {
                     return const Center(child: CircularProgressIndicator());
                   }
                   if (snapshot.hasError) {
-                    return Center(child: Text("Erreur de chargement du profil: ${snapshot.error}"));
+                    return Center(child: Text("${context.loc.erreur_de_chargement_du_profil} ${snapshot.error}"));
                   }
                   if (snapshot.hasData) {
                     final userProfile = snapshot.data!;
@@ -58,7 +59,6 @@ class CardClassementUser extends StatelessWidget {
                             width: 80,
                             height: 80,
                             decoration: BoxDecoration(
-                              // La couleur de fond sera visible si l'image n'est pas carrée
                               color: Colors.blue.shade700,
                               shape: BoxShape.circle,
                             ),
@@ -88,7 +88,7 @@ class CardClassementUser extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  SizedBox(width: 8), // Ajoutez un espacement entre l'avatar et le texte
+                                  SizedBox(width: 8),
                                   Expanded(
                                     child: Text(
                                       pseudo,
@@ -107,11 +107,10 @@ class CardClassementUser extends StatelessWidget {
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
                                         Text(
-                                            '$daysSinceCreation jour(s)',
+                                            '$daysSinceCreation ${context.loc.card_home_user_day}',
                                             style: TextStyle(
                                               fontSize: 10,
                                               color: Colors.white,
-
                                             )
                                         ),
 

@@ -237,10 +237,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get login_entrer_nom => 'Skriv inn navnet ditt';
 
   @override
-  String get login_pseudo => 'Pseudo';
+  String get login_pseudo => 'Pseudonym';
 
   @override
-  String get login_entrer_pseudo => 'Skriv inn brukernavnet ditt';
+  String get login_entrer_pseudo => 'Skriv inn kallenavnet ditt';
 
   @override
   String get login_mot_de_passe => 'Passord';
@@ -297,7 +297,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Velg fargen fra listen din';
 
   @override
-  String get profil_update_title => 'Fullfør registreringen din';
+  String get profil_update_title => 'Oppdater profilen din';
+
+  @override
+  String get profil_complete_registration_title => 'Fullfør registreringen din';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Benytt deg av din gratis prøveperiode!';
@@ -352,4 +355,130 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Anonym bruker';
+
+  @override
+  String get alert_message_email_verify_send => 'Bekreftelses-e-post sendt!';
+
+  @override
+  String get alert_message_email_send_error => 'Feil ved sending av e-post.';
+
+  @override
+  String get auth_error_deconnect => 'Det oppsto en feil under utlogging.';
+
+  @override
+  String get auth_error_connect => 'Det oppsto en ukjent feil under tilkobling.';
+
+  @override
+  String get auth_error_register_unknown => 'Det oppsto en ukjent feil under registreringen.';
+
+  @override
+  String get auth_error_create_user => 'Brukeroppretting mislyktes.';
+
+  @override
+  String get auth_error_update_profil => 'Feil ved oppdatering av profilen.';
+
+  @override
+  String get auth_error_facebook => 'Det oppsto en ukjent feil med Facebook-innlogging.';
+
+  @override
+  String get auth_error_google => 'Det oppsto en ukjent feil med Google-pålogging.';
+
+  @override
+  String get auth_error_apple => 'Det oppsto en ukjent feil med Apple-pålogging.';
+
+  @override
+  String get auth_error_echoue => 'Autentisering mislyktes. Prøv på nytt.';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'For mange forespørsler. Prøv igjen senere.';
+
+  @override
+  String get firebase_error_message_default => 'Det har oppstått en ukjent feil.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'E-postadressen er feilformatert.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'Denne brukerkontoen er deaktivert.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'E-postadressen eller passordet er feil.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'E-postadressen brukes allerede av en annen konto.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'Denne operasjonen er ikke tillatt.';
+
+  @override
+  String get firebase_error_message_weak_password => 'Passordet er for svakt.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'Det finnes allerede en konto med samme e-postadresse, men med annen påloggingsinformasjon.';
+
+  @override
+  String get firebase_error_message_error_generic => 'Det har oppstått en uventet feil. Prøv på nytt.';
+
+  @override
+  String get auth_success_update_profile => 'Profilen er oppdatert!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'Listen er slettet.';
+
+  @override
+  String get update_app_text_1 => 'En ny versjon av Voczilla er tilgjengelig med betydelige forbedringer, nye funksjoner og feilrettinger for en enda bedre opplevelse';
+
+  @override
+  String get update_app_text_2 => 'Ikke gå glipp av de siste nyhetene!';
+
+  @override
+  String get update_app_text_3 => 'Klikk nedenfor for å oppdatere nå';
+
+  @override
+  String get update_app_text_4 => 'Oppdater VocZilla';
+
+  @override
+  String get update_app_text_5 => 'Takk for at du er en del av Voczilla-fellesskapet';
+
+  @override
+  String get drawer_my_profil => 'Min profil';
+
+  @override
+  String get drawer_disconnect => 'Logg ut';
+
+  @override
+  String get drawer_free_trial => 'Min prøveperiode';
+
+  @override
+  String get drawer_free_trial_day => 'dag';
+
+  @override
+  String get drawer_free_trial_days => 'dager';
+
+  @override
+  String get drawer_free_trial_restants => 'gjenværende';
+
+  @override
+  String get drawer_free_trial_restant => 'gjenværende';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Feil ved innlasting av profil';
+
+  @override
+  String get save => 'Spare';
+
+  @override
+  String get card_home_user_day => 'dager)';
+
+  @override
+  String get card_home_user_liste_perso => 'liste(r) Tapt';
+
+  @override
+  String get card_home_share => 'delt';
+
+  @override
+  String get card_home_mot => 'imot';
+
+  @override
+  String get card_home_reessayer => 'Prøv igjen';
 }

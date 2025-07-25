@@ -11,6 +11,7 @@ import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:vobzilla/ui/theme/theme.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'app_route.dart';
+import 'core/utils/errorMessage.dart';
 import 'core/utils/navigatorKey.dart';
 import 'core/utils/logger.dart';
 import 'data/repository/auth_repository.dart';
@@ -154,7 +155,7 @@ class MyApp extends StatelessWidget {
                         if (state is ListPersoDeletionSuccess) {
                               context.read<LeaderboardBloc>().add(FetchLeaderboard());
                               context.read<NotificationBloc>().add(ShowNotification(
-                                  message: "Liste supprimée avec succès.",
+                                  message: getLocalizedSuccessMessage(context, "[SuccessBloc/vocabulaire_success_delete_list]"),
                                   backgroundColor: Colors.green,
                               ));
                         }
@@ -187,6 +188,7 @@ class MyApp extends StatelessWidget {
 
                                   );
                                 context.read<NotificationBloc>().add(NotificationDismissed());
+                                //context.read<AuthBloc>().add(AuthErrorCleared());
                               }
                             });
                           });

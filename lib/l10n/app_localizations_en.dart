@@ -237,10 +237,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get login_entrer_nom => 'Enter your name';
 
   @override
-  String get login_pseudo => 'Pseudo';
+  String get login_pseudo => 'Pseudonym';
 
   @override
-  String get login_entrer_pseudo => 'Enter your username';
+  String get login_entrer_pseudo => 'Enter your nickname';
 
   @override
   String get login_mot_de_passe => 'Password';
@@ -297,7 +297,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Choose the color from your list';
 
   @override
-  String get profil_update_title => 'Complete your registration';
+  String get profil_update_title => 'Update your profile';
+
+  @override
+  String get profil_complete_registration_title => 'Complete your registration';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Take advantage of your free trial period!';
@@ -352,4 +355,130 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Anonymous user';
+
+  @override
+  String get alert_message_email_verify_send => 'Verification email sent!';
+
+  @override
+  String get alert_message_email_send_error => 'Error sending email.';
+
+  @override
+  String get auth_error_deconnect => 'An error occurred while logging out.';
+
+  @override
+  String get auth_error_connect => 'An unknown error occurred while connecting.';
+
+  @override
+  String get auth_error_register_unknown => 'An unknown error occurred during registration.';
+
+  @override
+  String get auth_error_create_user => 'User creation failed.';
+
+  @override
+  String get auth_error_update_profil => 'Error updating profile.';
+
+  @override
+  String get auth_error_facebook => 'An unknown error occurred with Facebook login.';
+
+  @override
+  String get auth_error_google => 'An unknown error occurred with Google login.';
+
+  @override
+  String get auth_error_apple => 'An unknown error occurred with Apple login.';
+
+  @override
+  String get auth_error_echoue => 'Authentication failed, please try again';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'Too many requests. Try again later.';
+
+  @override
+  String get firebase_error_message_default => 'An unknown error has occurred.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'The email address is malformed.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'This user account has been disabled.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'The email or password is incorrect.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'The email address is already used by another account.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'This operation is not permitted.';
+
+  @override
+  String get firebase_error_message_weak_password => 'The password is too weak.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'An account already exists with the same email address but different credentials.';
+
+  @override
+  String get firebase_error_message_error_generic => 'An unexpected error has occurred. Please try again.';
+
+  @override
+  String get auth_success_update_profile => 'Profile successfully updated!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'List deleted successfully.';
+
+  @override
+  String get update_app_text_1 => 'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience';
+
+  @override
+  String get update_app_text_2 => 'Don\'t miss out on the latest news!';
+
+  @override
+  String get update_app_text_3 => 'Click below to update now';
+
+  @override
+  String get update_app_text_4 => 'Update VocZilla';
+
+  @override
+  String get update_app_text_5 => 'Thank you for being part of the Voczilla community';
+
+  @override
+  String get drawer_my_profil => 'My profile';
+
+  @override
+  String get drawer_disconnect => 'Logout';
+
+  @override
+  String get drawer_free_trial => 'My trial period';
+
+  @override
+  String get drawer_free_trial_day => 'day';
+
+  @override
+  String get drawer_free_trial_days => 'days';
+
+  @override
+  String get drawer_free_trial_restants => 'remaining';
+
+  @override
+  String get drawer_free_trial_restant => 'remaining';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Profile loading error';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get card_home_user_day => 'days)';
+
+  @override
+  String get card_home_user_liste_perso => 'list(s) Lost';
+
+  @override
+  String get card_home_share => 'shared';
+
+  @override
+  String get card_home_mot => 'against';
+
+  @override
+  String get card_home_reessayer => 'Try again';
 }

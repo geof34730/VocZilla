@@ -1,19 +1,16 @@
-// lib/logic/blocs/auth/auth_bloc.dart
 import 'dart:async';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/data/repository/auth_repository.dart';
-import '../../../core/utils/errorMessage.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/models/user_firestore.dart';
 import '../../../data/repository/data_user_repository.dart';
-import '../../../data/repository/fcm_repository.dart';
 import '../notification/notification_event.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
+
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository _authRepository;
@@ -63,14 +60,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         // 4. Émet l'état authentifié avec le profil qui vient d'être créé.
         emit(AuthAuthenticated(newUserProfile));
       } else {
-        // Ce cas est peu probable si signUpWithEmail ne lève pas d'exception,
-        // mais c'est une bonne pratique de le gérer.
-        emit(AuthError(message: "La création de l'utilisateur a échoué."));
+        emit(AuthError(message: "auth_error_create_user"));
       }
     } on FirebaseAuthException catch (e) {
       await _handleAuthException(e, emit);
     } catch (e) {
-      emit(AuthError(message: "Une erreur inconnue est survenue lors de l'inscription."));
+      emit(AuthError(message: "auth_error_register_unknown"));
     }
   }
 
@@ -85,7 +80,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     } on FirebaseAuthException catch (e) {
       await _handleAuthException(e, emit);
     } catch (e) {
-      emit(AuthError(message: "Une erreur inconnue est survenue lors de la connexion."));
+      emit(AuthError(message: "auth_error_connect"));
     }
   }
 
@@ -106,14 +101,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       );
 
       try {
-        // On sauvegarde cette mise à jour dans Firestore
         await _dataUserRepository.saveUser(updatedProfile);
-        // On émet le nouvel état, ce qui déclenchera le BlocListener dans l'UI
         emit(AuthAuthenticated(updatedProfile));
       } catch (e) {
         Logger.Red.log("Erreur lors de la mise à jour du profil après vérification: $e");
-        // Vous pouvez gérer l'erreur ici si nécessaire
-      }
+        emit(AuthError(message: "auth_error_update_profil"));
+        }
+
     }
   }
 
@@ -126,9 +120,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       // NOUVEAU : Appel du gestionnaire d'erreur centralisé
       await _handleAuthException(e, emit);
     } catch (e) {
-      emit(AuthError(
-          message: "Une erreur inconnue est survenue avec la connexion Google."));
-    }
+      emit(AuthError(message: "auth_error_google"));
+      }
   }
 
   Future<void> _onFacebookSignInRequested(FacebookSignInRequested event, Emitter<AuthState> emit) async {
@@ -140,8 +133,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       // NOUVEAU : Appel du gestionnaire d'erreur centralisé
       await _handleAuthException(e, emit);
     } catch (e) {
-      emit(AuthError(
-          message: "Une erreur inconnue est survenue avec la connexion Facebook."));
+      emit(AuthError(message: "auth_error_facebook"));
     }
   }
 
@@ -154,26 +146,36 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       // NOUVEAU : Appel du gestionnaire d'erreur centralisé
       await _handleAuthException(e, emit);
     } catch (e) {
-      emit(AuthError( message: "Une erreur inconnue est survenue avec la connexion Apple."));
+      emit(AuthError( message: "auth_error_apple"));
     }
   }
 
+
   Future<void> _onAppStarted(AppStarted event, Emitter<AuthState> emit) async {
     try {
-      final firebaseUser = _authRepository.currentUser;
+      Logger.Pink.log("AuthBloc: AppStarted event received. Checking current user...");
+      final firebaseUser = await _authRepository.currentUser;
+
       if (firebaseUser != null) {
+        Logger.Pink.log("AuthBloc: User found with UID ${firebaseUser.uid}. Fetching profile...");
         final userProfile = await _dataUserRepository.getUser(firebaseUser.uid);
         if (userProfile != null) {
+          Logger.Pink.log("AuthBloc: User profile found. Emitting AuthAuthenticated.");
           emit(AuthAuthenticated(userProfile));
         } else {
+          Logger.Pink.log("AuthBloc: User profile not found in Firestore for a valid Firebase user. Signing out.");
           await _authRepository.signOut();
           emit(AuthUnauthenticated());
         }
       } else {
+        Logger.Pink.log("AuthBloc: No user found. Emitting AuthUnauthenticated.");
         emit(AuthUnauthenticated());
       }
-    } catch (_) {
-      emit(AuthUnauthenticated());
+    } catch (e, stackTrace) { // MODIFICATION : On capture l'erreur et la stack trace
+      // AFFICHE L'ERREUR DANS LA CONSOLE POUR LE DÉBOGAGE
+      Logger.Pink.log("AuthBloc: CRITICAL ERROR during AppStarted: $e , $stackTrace");
+      // On peut émettre un état d'erreur pour que l'UI puisse réagir
+      emit(AuthError(message: "init_failed"));
     }
   }
 
@@ -182,7 +184,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _authRepository.signOut();
       emit(AuthUnauthenticated());
     } catch (e) {
-      emit(AuthError(message: "Une erreur est survenue lors de la déconnexion."));
+      emit(AuthError(message: 'auth-error-deconnect'));
+
     }
   }
 
@@ -198,45 +201,33 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         );
         final updatedProfile =  await _dataUserRepository.getUser(currentProfile.uid);
         if (updatedProfile != null) {
-          emit(AuthAuthenticated(updatedProfile));
-          event.notificationBloc.add(ShowNotification(
-            message: "Profil mis à jour avec succès !",
-            backgroundColor: Colors.green,
-          ));
+          emit(AuthSuccess(message: "[SuccessBloc/auth_success_update_profile]"));
+          emit(AuthProfileUpdated(updatedProfile));
         } else {
+          emit(AuthError(message: 'auth_error_update_profil'));
           throw Exception("Impossible de récupérer le profil mis à jour.");
         }
       } catch (e) {
-        event.notificationBloc.add(ShowNotification(
-          message: "Erreur lors de la mise à jour du profil : ${e.toString()}",
-          backgroundColor: Colors.red,
-        ));
+        emit(AuthError(message: 'auth_error_update_profil'));
       }
     }
   }
 
   Future<void> _handleAuthenticationSuccess(UserCredential? userCredential, Emitter<AuthState> emit) async {
     if (userCredential?.user != null) {
-      Logger.Green.log("1. Succès d'authentification. Traitement du profil...");
       UserFirestore? userProfile =
       await _dataUserRepository.getUser(userCredential!.user!.uid);
-      Logger.Green.log("2. Profil récupéré depuis le repo. Est-il null ? ${userProfile == null}");
       if (userProfile == null) {
-        Logger.Yellow.log("3. Le profil est null. Création d'un nouveau profil...");
         userProfile = await UserFirestore.fromUserCredential(userCredential);
-        Logger.Yellow.log("4. Nouveau profil créé. Sauvegarde dans le repo...");
         await _dataUserRepository.saveUser(userProfile);
-        Logger.Yellow.log("5. Nouveau profil sauvegardé.");
       }
-      Logger.Green.log("6. Émission de l'état AuthAuthenticated.");
       emit(AuthAuthenticated(userProfile));
     } else {
-      emit(AuthError(
-          message: "L'authentification a échoué, veuillez réessayer."));
+      emit(AuthError(message: "auth_error_echoue"));
     }
   }
 
   Future<void> _handleAuthException(FirebaseAuthException e, Emitter<AuthState> emit) async {
-    emit(AuthError(message: errorFirebaseMessage(e)));
+    emit(AuthError(message: e.toString()));
   }
 }

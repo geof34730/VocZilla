@@ -58,6 +58,8 @@ class EmailVerifiedEvent extends AuthEvent {}
 
 class AuthErrorCleared extends AuthEvent {}
 
+class AuthSuccessCleared extends AuthEvent {}
+
 class UpdateUserEvent extends AuthEvent {
   final User user;
   const UpdateUserEvent(this.user);
@@ -70,14 +72,12 @@ class UpdateUserProfilEvent extends AuthEvent {
   final String firstName;
   final String pseudo;
   final String? imageAvatar;
-  final NotificationBloc notificationBloc;
 
   const UpdateUserProfilEvent({
     required this.lastName,
     required this.firstName,
     required this.pseudo,
     this.imageAvatar,
-    required this.notificationBloc,
   });
 
   @override

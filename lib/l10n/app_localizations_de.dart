@@ -237,10 +237,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get login_entrer_nom => 'Geben Sie Ihren Namen ein';
 
   @override
-  String get login_pseudo => 'Pseudo';
+  String get login_pseudo => 'Pseudonym';
 
   @override
-  String get login_entrer_pseudo => 'Geben Sie Ihren Benutzernamen ein';
+  String get login_entrer_pseudo => 'Geben Sie Ihren Spitznamen ein';
 
   @override
   String get login_mot_de_passe => 'Passwort';
@@ -297,7 +297,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Wählen Sie die Farbe aus Ihrer Liste';
 
   @override
-  String get profil_update_title => 'Vervollständigen Sie Ihre Registrierung';
+  String get profil_update_title => 'Aktualisieren Sie Ihr Profil';
+
+  @override
+  String get profil_complete_registration_title => 'Vervollständigen Sie Ihre Registrierung';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Nutzen Sie Ihre kostenlose Testphase!';
@@ -352,4 +355,130 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Anonymer Benutzer';
+
+  @override
+  String get alert_message_email_verify_send => 'Bestätigungs-E-Mail gesendet!';
+
+  @override
+  String get alert_message_email_send_error => 'Fehler beim Senden der E-Mail.';
+
+  @override
+  String get auth_error_deconnect => 'Beim Abmelden ist ein Fehler aufgetreten.';
+
+  @override
+  String get auth_error_connect => 'Beim Verbinden ist ein unbekannter Fehler aufgetreten.';
+
+  @override
+  String get auth_error_register_unknown => 'Bei der Registrierung ist ein unbekannter Fehler aufgetreten.';
+
+  @override
+  String get auth_error_create_user => 'Die Benutzererstellung ist fehlgeschlagen.';
+
+  @override
+  String get auth_error_update_profil => 'Fehler beim Aktualisieren des Profils.';
+
+  @override
+  String get auth_error_facebook => 'Bei der Facebook-Anmeldung ist ein unbekannter Fehler aufgetreten.';
+
+  @override
+  String get auth_error_google => 'Bei der Google-Anmeldung ist ein unbekannter Fehler aufgetreten.';
+
+  @override
+  String get auth_error_apple => 'Bei der Apple-Anmeldung ist ein unbekannter Fehler aufgetreten.';
+
+  @override
+  String get auth_error_echoue => 'Authentifizierung fehlgeschlagen, bitte versuchen Sie es erneut';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'Zu viele Anfragen. Versuchen Sie es später erneut.';
+
+  @override
+  String get firebase_error_message_default => 'Ein unbekannter Fehler ist aufgetreten.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'Die E-Mail-Adresse ist falsch formatiert.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'Dieses Benutzerkonto wurde deaktiviert.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'Die E-Mail oder das Passwort ist falsch.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'Die E-Mail-Adresse wird bereits von einem anderen Konto verwendet.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'Dieser Vorgang ist nicht zulässig.';
+
+  @override
+  String get firebase_error_message_weak_password => 'Das Passwort ist zu schwach.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'Es besteht bereits ein Konto mit derselben E-Mail-Adresse, aber anderen Anmeldeinformationen.';
+
+  @override
+  String get firebase_error_message_error_generic => 'Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.';
+
+  @override
+  String get auth_success_update_profile => 'Profil erfolgreich aktualisiert!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'Liste erfolgreich gelöscht.';
+
+  @override
+  String get update_app_text_1 => 'Eine neue Version von Voczilla ist verfügbar mit erheblichen Verbesserungen, neuen Funktionen und Fehlerbehebungen für ein noch besseres Erlebnis';
+
+  @override
+  String get update_app_text_2 => 'Verpassen Sie keine Neuigkeiten!';
+
+  @override
+  String get update_app_text_3 => 'Klicken Sie unten, um jetzt zu aktualisieren';
+
+  @override
+  String get update_app_text_4 => 'VocZilla aktualisieren';
+
+  @override
+  String get update_app_text_5 => 'Vielen Dank, dass Sie Teil der Voczilla-Community sind';
+
+  @override
+  String get drawer_my_profil => 'Mein Profil';
+
+  @override
+  String get drawer_disconnect => 'Ausloggen';
+
+  @override
+  String get drawer_free_trial => 'Meine Probezeit';
+
+  @override
+  String get drawer_free_trial_day => 'Tag';
+
+  @override
+  String get drawer_free_trial_days => 'Tage';
+
+  @override
+  String get drawer_free_trial_restants => 'übrig';
+
+  @override
+  String get drawer_free_trial_restant => 'übrig';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Fehler beim Laden des Profils';
+
+  @override
+  String get save => 'Speichern';
+
+  @override
+  String get card_home_user_day => 'Tage)';
+
+  @override
+  String get card_home_user_liste_perso => 'Liste(n) Verloren';
+
+  @override
+  String get card_home_share => 'geteilt';
+
+  @override
+  String get card_home_mot => 'gegen';
+
+  @override
+  String get card_home_reessayer => 'Versuchen Sie es erneut';
 }

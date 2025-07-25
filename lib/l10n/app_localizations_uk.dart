@@ -237,10 +237,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get login_entrer_nom => 'Введіть своє ім\'я';
 
   @override
-  String get login_pseudo => 'Псевдо';
+  String get login_pseudo => 'Псевдонім';
 
   @override
-  String get login_entrer_pseudo => 'Введіть своє ім\'я користувача';
+  String get login_entrer_pseudo => 'Введіть свій нікнейм';
 
   @override
   String get login_mot_de_passe => 'Пароль';
@@ -297,7 +297,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Виберіть колір зі свого списку';
 
   @override
-  String get profil_update_title => 'Завершіть реєстрацію';
+  String get profil_update_title => 'Оновіть свій профіль';
+
+  @override
+  String get profil_complete_registration_title => 'Завершіть реєстрацію';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Скористайтеся безкоштовним пробним періодом!';
@@ -309,7 +312,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_days => 'дні';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб ознайомитися з усіма функціями нашого застосунку.';
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб відкрити для себе всі можливості нашого застосунку.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Ви пішли';
@@ -352,4 +355,130 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Анонімний користувач';
+
+  @override
+  String get alert_message_email_verify_send => 'Лист з підтвердженням надіслано!';
+
+  @override
+  String get alert_message_email_send_error => 'Помилка надсилання електронного листа.';
+
+  @override
+  String get auth_error_deconnect => 'Під час виходу сталася помилка.';
+
+  @override
+  String get auth_error_connect => 'Під час підключення сталася невідома помилка.';
+
+  @override
+  String get auth_error_register_unknown => 'Під час реєстрації сталася невідома помилка.';
+
+  @override
+  String get auth_error_create_user => 'Не вдалося створити користувача.';
+
+  @override
+  String get auth_error_update_profil => 'Помилка оновлення профілю.';
+
+  @override
+  String get auth_error_facebook => 'Сталася невідома помилка під час входу у Facebook.';
+
+  @override
+  String get auth_error_google => 'Сталася невідома помилка під час входу в Google.';
+
+  @override
+  String get auth_error_apple => 'Сталася невідома помилка під час входу в Apple.';
+
+  @override
+  String get auth_error_echoue => 'Не вдалося виконати автентифікацію, спробуйте ще раз';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'Забагато запитів. Спробуйте пізніше.';
+
+  @override
+  String get firebase_error_message_default => 'Сталася невідома помилка.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'Адреса електронної пошти має неправильний формат.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'Цей обліковий запис користувача було вимкнено.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'Електронна пошта або пароль неправильні.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'Ця адреса електронної пошти вже використовується іншим обліковим записом.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'Ця операція не дозволена.';
+
+  @override
+  String get firebase_error_message_weak_password => 'Пароль занадто слабкий.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'Обліковий запис із такою ж адресою електронної пошти, але з іншими обліковими даними, вже існує.';
+
+  @override
+  String get firebase_error_message_error_generic => 'Сталася неочікувана помилка. Будь ласка, спробуйте ще раз.';
+
+  @override
+  String get auth_success_update_profile => 'Профіль успішно оновлено!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'Список успішно видалено.';
+
+  @override
+  String get update_app_text_1 => 'Нова версія Voczilla доступна зі значними покращеннями, новими функціями та виправленнями помилок для ще кращого досвіду.';
+
+  @override
+  String get update_app_text_2 => 'Не пропустіть останні новини!';
+
+  @override
+  String get update_app_text_3 => 'Натисніть нижче, щоб оновити зараз';
+
+  @override
+  String get update_app_text_4 => 'Оновлення VocZilla';
+
+  @override
+  String get update_app_text_5 => 'Дякуємо, що ви є частиною спільноти Voczilla';
+
+  @override
+  String get drawer_my_profil => 'Мій профіль';
+
+  @override
+  String get drawer_disconnect => 'Вийти';
+
+  @override
+  String get drawer_free_trial => 'Мій випробувальний термін';
+
+  @override
+  String get drawer_free_trial_day => 'день';
+
+  @override
+  String get drawer_free_trial_days => 'дні';
+
+  @override
+  String get drawer_free_trial_restants => 'залишилося';
+
+  @override
+  String get drawer_free_trial_restant => 'залишилося';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Помилка завантаження профілю';
+
+  @override
+  String get save => 'Зберегти';
+
+  @override
+  String get card_home_user_day => 'днів)';
+
+  @override
+  String get card_home_user_liste_perso => 'список(и) Втрачено';
+
+  @override
+  String get card_home_share => 'спільний';
+
+  @override
+  String get card_home_mot => 'проти';
+
+  @override
+  String get card_home_reessayer => 'Спробуйте ще раз';
 }

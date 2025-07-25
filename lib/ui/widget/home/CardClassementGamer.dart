@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/data/models/leaderboard_user.dart';
 
 import '../../../core/utils/getFontForLanguage.dart';
@@ -107,13 +108,13 @@ class CardClassementGamer extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
-                              '$daysSinceCreation jour(s)', // Ancienneté dynamique
+                              '$daysSinceCreation ${context.loc.card_home_user_day}', // Ancienneté dynamique
                               style: const TextStyle(
                                 fontSize: 10,
                                 color: Colors.white,
                               )),
                           Text(
-                              '${user.listPersoCount} liste(s) Perso', // Listes dynamiques
+                              '${user.listPersoCount} ${context.loc.card_home_user_liste_perso}', // Listes dynamiques
                               style: const TextStyle(
                                 fontSize: 10,
                                 color: Colors.white,

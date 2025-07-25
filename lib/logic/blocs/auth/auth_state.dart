@@ -28,9 +28,17 @@ class AuthUnauthenticated extends AuthState {}
 
 class AuthError extends AuthState {
   final String message;
-
   AuthError({required this.message});
-
   @override
   List<Object> get props => [message];
+}
+
+class AuthSuccess extends AuthState {
+  final String message;
+ const AuthSuccess({required this.message});
+  @override
+  List<Object> get props => [message];
+}
+class AuthProfileUpdated extends AuthAuthenticated {
+  AuthProfileUpdated(UserFirestore userProfile) : super(userProfile);
 }

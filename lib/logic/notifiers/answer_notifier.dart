@@ -16,22 +16,17 @@ class AnswerNotifier extends ChangeNotifier {
   Future<void> markAsAnsweredCorrectly({required bool isAnswerUser, required String guidVocabulaire}) async {
     final VocabulaireUserRepository vocabulaireUserRepository=VocabulaireUserRepository();
     final vocabulaireUserBloc = BlocProvider.of<VocabulaireUserBloc>(context);
-    Logger.Red.log('markAsAnsweredCorrectly : guidVocabulaire: $guidVocabulaire isAnswerUser: $isAnswerUser' );
     if (isAnswerUser) {
-      Logger.Green.log("Bonne réponse de l'utilisateur");
       await vocabulaireUserRepository.addVocabulaireUserDataLearned(vocabularyGuid: guidVocabulaire);
     } else {
       await vocabulaireUserRepository.removeVocabulaireUserDataLearned(vocabularyGuid: guidVocabulaire);
-      Logger.Red.log("Pas la bonne réponse de l'utilisateur et suppression de la liste");
     }
     vocabulaireUserBloc.add(CheckVocabulaireUserStatus());
-
     if (!_hasAnsweredCorrectly) {
       _hasAnsweredCorrectly = true;
       notifyListeners();
     }
   }
-
   void reset() {
     _hasAnsweredCorrectly = false;
     notifyListeners();

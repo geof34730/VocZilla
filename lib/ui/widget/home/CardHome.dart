@@ -69,7 +69,7 @@ class CardHome extends StatelessWidget {
           Ribbon(
               nearLength: 35.00,
               farLength: 50.00,
-              title: 'partagée'.toUpperCase(),
+              title: context.loc.card_home_share.toUpperCase(),
               titleStyle: const TextStyle(
                   color: Colors.white,
                   fontSize: 9,
@@ -221,7 +221,7 @@ class CardHome extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left:15),
-                  child:Text("$nbVocabulaire mot(s)",
+                  child:Text("$nbVocabulaire ${context.loc.card_home_mot}",
                       style:TextStyle(
                           color:Colors.white,
                           fontWeight: FontWeight.bold

@@ -182,13 +182,13 @@ Widget _buildTrialPeriodTile(BuildContext context) {
   );
 }
 
-/// Builds the list of menu items for navigation.
+
 Widget _buildMenuItems(BuildContext context) {
   return Column(
     children: [
       VocZillaTile(
         icon: Icons.person,
-        label: "mon profil", // Using localized string
+        label: context.loc.drawer_my_profil,
         color: Colors.green,
         onTap: () {
           Navigator.of(context).pop();
@@ -206,7 +206,7 @@ Widget _buildMenuItems(BuildContext context) {
       ),
       VocZillaTile(
         icon: Icons.logout,
-        label: "Déconnéxion", // Using localized string
+        label: context.loc.drawer_disconnect,
         color: Colors.grey,
         onTap: () {
           Navigator.of(context).pop();

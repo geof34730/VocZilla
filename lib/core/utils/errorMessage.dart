@@ -1,19 +1,61 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import '../../l10n/app_localizations.dart';
 import 'logger.dart';
 
-String errorFirebaseMessage(FirebaseAuthException e) {
-  Logger.Red.log("Firebase Auth Error => Code: ${e.code}, Message: ${e.message}");
-  return switch (e.code) {
-    'invalid-email' => "L'adresse e-mail est mal formée.",
-    'user-disabled' => "Ce compte utilisateur a été désactivé.",
-    'user-not-found' || 'wrong-password' || 'invalid-credential' => "L'e-mail ou le mot de passe est incorrect.",
-    'email-already-in-use' => "L'adresse e-mail est déjà utilisée par un autre compte.",
-    'operation-not-allowed' => "Cette opération n'est pas autorisée.",
-    'weak-password' => "Le mot de passe est trop faible.",
-    'account-exists-with-different-credential' => "Un compte existe déjà avec la même adresse e-mail mais avec des informations d'identification différentes.",
-    'too-many-requests' => "Trop de tentatives. Veuillez réessayer plus tard.", // Ajout d'un cas commun
-
-  // Cas par défaut amélioré pour toutes les autres erreurs (ex: problème réseau).
-    _ => "Une erreur inattendue est survenue. Veuillez réessayer.",
+String getLocalizedErrorMessage(BuildContext context, String inputError) {
+  final l10n = AppLocalizations.of(context)!;
+  String keyToTranslate = inputError;
+  final regExp = RegExp(r'\[firebase_auth\/([^\]]+)\]');
+  final match = regExp.firstMatch(inputError);
+  if (match != null) {
+    keyToTranslate = match.group(1)!;
+    Logger.Green.log("Firebase error code extracted: $keyToTranslate");
+  } else {
+    Logger.Yellow.log("Input is not a Firebase error string, using as is: $keyToTranslate");
+  }
+  return switch (keyToTranslate) {
+    'invalid-email' => l10n.firebase_error_message_invalid_email,
+    'user-disabled' => l10n.firebase_error_message_user_disabled,
+    'invalid-credential' => l10n.firebase_error_message_invalid_credential,
+    'wrong-password' => l10n.firebase_error_message_invalid_credential,
+    'user-not-found' => l10n.firebase_error_message_invalid_credential,
+    'email-already-in-use' => l10n.firebase_error_message_email_already_in_use,
+    'operation-not-allowed' => l10n.firebase_error_message_operation_not_allowed,
+    'weak-password' => l10n.firebase_error_message_weak_password,
+    'account-exists-with-different-credential' => l10n.firebase_error_message_account_exists_with_different_credential,
+    'too-many-requests' => l10n.firebase_error_message_too_many_requests,
+    'auth-error-deconnect' => l10n.auth_error_deconnect,
+    'auth_error_register_unknown' => l10n.auth_error_register_unknown,
+    'auth_error_create_user' => l10n.auth_error_create_user,
+    'auth_error_connect' => l10n.auth_error_connect,
+    'auth_error_update_profil' => l10n.auth_error_update_profil,
+    'auth_error_google' => l10n.auth_error_google,
+    'auth_error_facebook' => l10n.auth_error_facebook,
+    'auth_error_apple' => l10n.auth_error_apple,
+    'auth_error_echoue' => l10n.auth_error_echoue,
+    'auth_success_update_profile' => l10n.auth_success_update_profile,
+    _ => l10n.firebase_error_message_error_generic,
   };
 }
+
+String getLocalizedSuccessMessage(BuildContext context, String inputError) {
+  final l10n = AppLocalizations.of(context)!;
+  String keyToTranslate = inputError;
+  final regExp = RegExp(r'\[SuccessBloc\/([^\]]+)\]');
+  final match = regExp.firstMatch(inputError);
+
+  if (match != null) {
+    keyToTranslate = match.group(1)!;
+    Logger.Green.log("Firebase error code extracted: $keyToTranslate");
+  } else {
+    Logger.Yellow.log("Input is not a Firebase error string, using as is: $keyToTranslate");
+  }
+  return switch (keyToTranslate) {
+    'auth_success_update_profile' => l10n.auth_success_update_profile,
+    'vocabulaire_success_delete_list' => l10n.vocabulaire_success_delete_list,
+
+    _ => 'success action',
+  };
+}
+

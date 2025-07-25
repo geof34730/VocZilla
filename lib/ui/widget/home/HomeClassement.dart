@@ -31,39 +31,27 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
     super.initState();
     _fetchData();
   }
-
-  // --- CORRECTION 2 : S'abonner à l'observateur de route ---
-  @override
+ @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    // On abonne ce widget aux événements de navigation
     routeObserver.subscribe(this, ModalRoute.of(context)!);
   }
 
-  // --- CORRECTION 3 : Se désabonner pour éviter les fuites de mémoire ---
   @override
   void dispose() {
-    // Il est crucial de se désabonner lorsque le widget est détruit
     routeObserver.unsubscribe(this);
     super.dispose();
   }
 
-  // --- CORRECTION 4 : Implémenter la logique de rafraîchissement ---
-  /// Cette méthode est appelée lorsque l'utilisateur revient sur cet écran
-  /// après avoir "pop" une autre route.
   @override
   void didPopNext() {
     super.didPopNext();
-    // Si le drapeau a été activé sur un autre écran...
     if (changeVocabulaireSinceVisiteHome) {
-      print("Retour sur HomeClassement, rafraîchissement des données...");
-      _fetchData(); // ...on recharge les données du classement.
-      // On réinitialise le drapeau pour éviter des rechargements inutiles.
+      _fetchData();
       changeVocabulaireSinceVisiteHome = false;
     }
   }
 
-  /// Méthode centralisée pour déclencher le chargement des données.
   void _fetchData() {
     final userId = FirebaseAuth.instance.currentUser?.uid;
     if (userId != null) {
@@ -73,7 +61,6 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
 
   @override
   Widget build(BuildContext context) {
-    // Le reste du code reste identique...
     return BlocBuilder<LeaderboardBloc, LeaderboardState>(
       builder: (context, state) {
         if (state is LeaderboardLoading || state is LeaderboardInitial) {
@@ -96,7 +83,6 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
         _fetchData();
       },
       child: SingleChildScrollView(
-        // ... le reste de votre widget _buildLoaded
         physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.all(8.0),
         child: LayoutBuilder(builder: (context, constraints) {
@@ -148,7 +134,7 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
             ElevatedButton.icon(
               icon: const Icon(Icons.refresh),
               onPressed: _fetchData,
-              label: Text("réessayer"),
+              label: Text(context.loc.card_home_reessayer),
             )
           ],
         ),

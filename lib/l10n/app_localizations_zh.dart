@@ -24,7 +24,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
-  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 轻松, 听力';
+  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 简单, 听力';
 
   @override
   String get app_feature_graphic_title => '提高你的英语词汇量';
@@ -96,7 +96,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unknown_error => '未知错误';
 
   @override
-  String get no_vocabulary_items_found => '未找到任何词汇条目';
+  String get no_vocabulary_items_found => '未找到任何词汇';
 
   @override
   String get pronunciation_title => '发音';
@@ -156,7 +156,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get home_description_list_perso => '创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。';
 
   @override
-  String get home_title_classement => 'TeamZilla排名';
+  String get home_title_classement => 'TeamZilla 排名';
 
   @override
   String get home_notlogged_accroche1 => '提高你的英语水平！';
@@ -237,10 +237,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get login_entrer_nom => '输入您的姓名';
 
   @override
-  String get login_pseudo => '伪';
+  String get login_pseudo => '笔名';
 
   @override
-  String get login_entrer_pseudo => '输入您的用户名';
+  String get login_entrer_pseudo => '输入你的昵称';
 
   @override
   String get login_mot_de_passe => '密码';
@@ -297,7 +297,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get personnalisation_step1_color_choice => '从列表中选择颜色';
 
   @override
-  String get profil_update_title => '完成注册';
+  String get profil_update_title => '更新您的个人资料';
+
+  @override
+  String get profil_complete_registration_title => '完成注册';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => '充分利用您的免费试用期！';
@@ -352,4 +355,130 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get anonymous_user => '匿名用户';
+
+  @override
+  String get alert_message_email_verify_send => '验证邮件已发送！';
+
+  @override
+  String get alert_message_email_send_error => '发送电子邮件时出错。';
+
+  @override
+  String get auth_error_deconnect => '注销时发生错误。';
+
+  @override
+  String get auth_error_connect => '连接时发生未知错误。';
+
+  @override
+  String get auth_error_register_unknown => '注册时发生未知错误。';
+
+  @override
+  String get auth_error_create_user => '用户创建失败。';
+
+  @override
+  String get auth_error_update_profil => '更新个人资料时出错。';
+
+  @override
+  String get auth_error_facebook => 'Facebook 登录时出现未知错误。';
+
+  @override
+  String get auth_error_google => 'Google 登录时出现未知错误。';
+
+  @override
+  String get auth_error_apple => 'Apple 登录时出现未知错误。';
+
+  @override
+  String get auth_error_echoue => '身份验证失败，请重试';
+
+  @override
+  String get firebase_error_message_too_many_requests => '请求过多。请稍后重试。';
+
+  @override
+  String get firebase_error_message_default => '发生了未知错误。';
+
+  @override
+  String get firebase_error_message_invalid_email => '电子邮件地址格式不正确。';
+
+  @override
+  String get firebase_error_message_user_disabled => '该用户帐户已被禁用。';
+
+  @override
+  String get firebase_error_message_invalid_credential => '电子邮件或密码不正确。';
+
+  @override
+  String get firebase_error_message_email_already_in_use => '该电子邮件地址已被其他帐户使用。';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => '不允许此操作。';
+
+  @override
+  String get firebase_error_message_weak_password => '密码太弱。';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => '已存在具有相同电子邮件地址但不同凭据的帐户。';
+
+  @override
+  String get firebase_error_message_error_generic => '发生意外错误。请重试。';
+
+  @override
+  String get auth_success_update_profile => '个人资料更新成功！';
+
+  @override
+  String get vocabulaire_success_delete_list => '列表删除成功。';
+
+  @override
+  String get update_app_text_1 => 'Voczilla 的新版本现已推出，其中包含重大改进、新功能和错误修复，可提供更好的体验';
+
+  @override
+  String get update_app_text_2 => '不要错过最新消息！';
+
+  @override
+  String get update_app_text_3 => '点击下面立即更新';
+
+  @override
+  String get update_app_text_4 => '更新 VocZilla';
+
+  @override
+  String get update_app_text_5 => '感谢您加入 Voczilla 社区';
+
+  @override
+  String get drawer_my_profil => '我的个人资料';
+
+  @override
+  String get drawer_disconnect => '登出';
+
+  @override
+  String get drawer_free_trial => '我的试用期';
+
+  @override
+  String get drawer_free_trial_day => '天';
+
+  @override
+  String get drawer_free_trial_days => '天';
+
+  @override
+  String get drawer_free_trial_restants => '其余的';
+
+  @override
+  String get drawer_free_trial_restant => '其余的';
+
+  @override
+  String get erreur_de_chargement_du_profil => '配置文件加载错误';
+
+  @override
+  String get save => '节省';
+
+  @override
+  String get card_home_user_day => '天）';
+
+  @override
+  String get card_home_user_liste_perso => '遗失清单';
+
+  @override
+  String get card_home_share => '共享';
+
+  @override
+  String get card_home_mot => '反对';
+
+  @override
+  String get card_home_reessayer => '再试一次';
 }

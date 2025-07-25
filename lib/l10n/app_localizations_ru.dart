@@ -237,10 +237,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get login_entrer_nom => 'Введите свое имя';
 
   @override
-  String get login_pseudo => 'Псевдо';
+  String get login_pseudo => 'Псевдоним';
 
   @override
-  String get login_entrer_pseudo => 'Введите ваше имя пользователя';
+  String get login_entrer_pseudo => 'Введите свой псевдоним';
 
   @override
   String get login_mot_de_passe => 'Пароль';
@@ -297,13 +297,16 @@ class AppLocalizationsRu extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Выберите цвет из вашего списка';
 
   @override
-  String get profil_update_title => 'Завершите регистрацию';
+  String get profil_update_title => 'Обновите свой профиль';
+
+  @override
+  String get profil_complete_registration_title => 'Завершите регистрацию';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Воспользуйтесь бесплатным пробным периодом!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Добро пожаловать! Сейчас вы пользуетесь бесплатным пробным периодом';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Добро пожаловать! Сейчас у вас бесплатный пробный период';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'дней';
@@ -352,4 +355,130 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Анонимный пользователь';
+
+  @override
+  String get alert_message_email_verify_send => 'Письмо с подтверждением отправлено!';
+
+  @override
+  String get alert_message_email_send_error => 'Ошибка отправки письма.';
+
+  @override
+  String get auth_error_deconnect => 'Произошла ошибка при выходе из системы.';
+
+  @override
+  String get auth_error_connect => 'При подключении произошла неизвестная ошибка.';
+
+  @override
+  String get auth_error_register_unknown => 'Во время регистрации произошла неизвестная ошибка.';
+
+  @override
+  String get auth_error_create_user => 'Не удалось создать пользователя.';
+
+  @override
+  String get auth_error_update_profil => 'Ошибка обновления профиля.';
+
+  @override
+  String get auth_error_facebook => 'При входе в Facebook произошла неизвестная ошибка.';
+
+  @override
+  String get auth_error_google => 'Произошла неизвестная ошибка при входе в Google.';
+
+  @override
+  String get auth_error_apple => 'При входе в учетную запись Apple произошла неизвестная ошибка.';
+
+  @override
+  String get auth_error_echoue => 'Аутентификация не удалась, попробуйте еще раз';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'Слишком много запросов. Попробуйте позже.';
+
+  @override
+  String get firebase_error_message_default => 'Произошла неизвестная ошибка.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'Адрес электронной почты неверен.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'Эта учетная запись пользователя отключена.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'Неверный адрес электронной почты или пароль.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'Адрес электронной почты уже используется другой учетной записью.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'Данная операция не допускается.';
+
+  @override
+  String get firebase_error_message_weak_password => 'Пароль слишком слабый.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'Учетная запись с таким же адресом электронной почты, но другими учетными данными уже существует.';
+
+  @override
+  String get firebase_error_message_error_generic => 'Произошла непредвиденная ошибка. Попробуйте ещё раз.';
+
+  @override
+  String get auth_success_update_profile => 'Профиль успешно обновлен!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'Список успешно удален.';
+
+  @override
+  String get update_app_text_1 => 'Доступна новая версия Voczilla со значительными улучшениями, новыми функциями и исправлениями ошибок для еще лучшего опыта использования.';
+
+  @override
+  String get update_app_text_2 => 'Не пропустите последние новости!';
+
+  @override
+  String get update_app_text_3 => 'Нажмите ниже, чтобы обновить сейчас';
+
+  @override
+  String get update_app_text_4 => 'Обновление VocZilla';
+
+  @override
+  String get update_app_text_5 => 'Спасибо, что вы являетесь частью сообщества Voczilla';
+
+  @override
+  String get drawer_my_profil => 'Мой профиль';
+
+  @override
+  String get drawer_disconnect => 'Выйти';
+
+  @override
+  String get drawer_free_trial => 'Мой испытательный срок';
+
+  @override
+  String get drawer_free_trial_day => 'день';
+
+  @override
+  String get drawer_free_trial_days => 'дней';
+
+  @override
+  String get drawer_free_trial_restants => 'оставшийся';
+
+  @override
+  String get drawer_free_trial_restant => 'оставшийся';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Ошибка загрузки профиля';
+
+  @override
+  String get save => 'Сохранять';
+
+  @override
+  String get card_home_user_day => 'дней)';
+
+  @override
+  String get card_home_user_liste_perso => 'список(ы) потерянных';
+
+  @override
+  String get card_home_share => 'поделился';
+
+  @override
+  String get card_home_mot => 'против';
+
+  @override
+  String get card_home_reessayer => 'Попробуйте еще раз';
 }

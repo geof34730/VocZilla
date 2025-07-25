@@ -237,10 +237,10 @@ class AppLocalizationsIt extends AppLocalizations {
   String get login_entrer_nom => 'Inserisci il tuo nome';
 
   @override
-  String get login_pseudo => 'Pseudo';
+  String get login_pseudo => 'Pseudonimo';
 
   @override
-  String get login_entrer_pseudo => 'Inserisci il tuo nome utente';
+  String get login_entrer_pseudo => 'Inserisci il tuo nickname';
 
   @override
   String get login_mot_de_passe => 'Password';
@@ -297,7 +297,10 @@ class AppLocalizationsIt extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Scegli il colore dalla tua lista';
 
   @override
-  String get profil_update_title => 'Completa la tua registrazione';
+  String get profil_update_title => 'Aggiorna il tuo profilo';
+
+  @override
+  String get profil_complete_registration_title => 'Completa la tua registrazione';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Approfitta del tuo periodo di prova gratuito!';
@@ -352,4 +355,130 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Utente anonimo';
+
+  @override
+  String get alert_message_email_verify_send => 'Email di verifica inviata!';
+
+  @override
+  String get alert_message_email_send_error => 'Errore durante l\'invio dell\'e-mail.';
+
+  @override
+  String get auth_error_deconnect => 'Si è verificato un errore durante la disconnessione.';
+
+  @override
+  String get auth_error_connect => 'Si è verificato un errore sconosciuto durante la connessione.';
+
+  @override
+  String get auth_error_register_unknown => 'Si è verificato un errore sconosciuto durante la registrazione.';
+
+  @override
+  String get auth_error_create_user => 'Creazione utente fallita.';
+
+  @override
+  String get auth_error_update_profil => 'Errore durante l\'aggiornamento del profilo.';
+
+  @override
+  String get auth_error_facebook => 'Si è verificato un errore sconosciuto durante l\'accesso a Facebook.';
+
+  @override
+  String get auth_error_google => 'Si è verificato un errore sconosciuto durante l\'accesso a Google.';
+
+  @override
+  String get auth_error_apple => 'Si è verificato un errore sconosciuto durante l\'accesso Apple.';
+
+  @override
+  String get auth_error_echoue => 'Autenticazione non riuscita, riprovare';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'Troppe richieste. Riprova più tardi.';
+
+  @override
+  String get firebase_error_message_default => 'Si è verificato un errore sconosciuto.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'L\'indirizzo email non è corretto.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'Questo account utente è stato disabilitato.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'L\'indirizzo email o la password non sono corretti.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'L\'indirizzo email è già utilizzato da un altro account.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'Questa operazione non è consentita.';
+
+  @override
+  String get firebase_error_message_weak_password => 'La password è troppo debole.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'Esiste già un account con lo stesso indirizzo email ma credenziali diverse.';
+
+  @override
+  String get firebase_error_message_error_generic => 'Si è verificato un errore imprevisto. Riprova.';
+
+  @override
+  String get auth_success_update_profile => 'Profilo aggiornato con successo!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'Elenco eliminato con successo.';
+
+  @override
+  String get update_app_text_1 => 'È disponibile una nuova versione di Voczilla con miglioramenti significativi, nuove funzionalità e correzioni di bug per un\'esperienza ancora migliore';
+
+  @override
+  String get update_app_text_2 => 'Non perderti le ultime novità!';
+
+  @override
+  String get update_app_text_3 => 'Fai clic qui sotto per aggiornare ora';
+
+  @override
+  String get update_app_text_4 => 'Aggiorna VocZilla';
+
+  @override
+  String get update_app_text_5 => 'Grazie per essere parte della comunità Voczilla';
+
+  @override
+  String get drawer_my_profil => 'Il mio profilo';
+
+  @override
+  String get drawer_disconnect => 'Esci';
+
+  @override
+  String get drawer_free_trial => 'Il mio periodo di prova';
+
+  @override
+  String get drawer_free_trial_day => 'giorno';
+
+  @override
+  String get drawer_free_trial_days => 'giorni';
+
+  @override
+  String get drawer_free_trial_restants => 'rimanente';
+
+  @override
+  String get drawer_free_trial_restant => 'rimanente';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Errore di caricamento del profilo';
+
+  @override
+  String get save => 'Salva';
+
+  @override
+  String get card_home_user_day => 'giorni)';
+
+  @override
+  String get card_home_user_liste_perso => 'liste(s) Perso';
+
+  @override
+  String get card_home_share => 'condiviso';
+
+  @override
+  String get card_home_mot => 'contro';
+
+  @override
+  String get card_home_reessayer => 'Riprova';
 }

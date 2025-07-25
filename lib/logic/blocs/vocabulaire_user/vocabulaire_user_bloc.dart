@@ -31,9 +31,6 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
 
   }
 
-  // --- Implémentation des gestionnaires d'événements ---
-
-  /// Charge ou recharge l'état complet des données de vocabulaire de l'utilisateur.
   Future<void> _onCheckVocabulaireUserStatus(
       CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
     try {
@@ -49,7 +46,6 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     }
   }
 
-  /// Charge des données pré-existantes dans le BLoC.
   Future<void> _onLoadVocabulaireUserData(
       LoadVocabulaireUserData event, Emitter<VocabulaireUserState> emit) async {
     emit(VocabulaireUserLoading());
@@ -61,17 +57,11 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     }
   }
 
-  /// Gère la suppression d'une liste personnelle.
   Future<void> _onDeleteListPerso(
       DeleteListPerso event, Emitter<VocabulaireUserState> emit) async {
     try {
-      // 1. Effectue la suppression
       await _vocabulaireUserRepository.deleteListPerso(guid: event.listPersoGuid);
-
-      // 2. Émet le signal de succès pour les listeners (ex: rafraîchir le classement)
       emit(ListPersoDeletionSuccess(event.listPersoGuid));
-
-      // 3. Déclenche un rechargement complet des données pour mettre à jour l'UI
       add(CheckVocabulaireUserStatus());
     } catch (e) {
       emit(VocabulaireUserError("Erreur lors de la suppression de la liste : $e"));

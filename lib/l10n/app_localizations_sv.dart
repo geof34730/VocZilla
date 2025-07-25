@@ -105,7 +105,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get pronunciation_success => 'Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, det stämmer inte helt. Försök igen.';
+  String get pronunciation_error => 'Hmm, det stämmer inte riktigt. Försök igen.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Jag hörde dig säga';
@@ -237,10 +237,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get login_entrer_nom => 'Ange ditt namn';
 
   @override
-  String get login_pseudo => 'Pseudo';
+  String get login_pseudo => 'Pseudonym';
 
   @override
-  String get login_entrer_pseudo => 'Ange ditt användarnamn';
+  String get login_entrer_pseudo => 'Ange ditt smeknamn';
 
   @override
   String get login_mot_de_passe => 'Lösenord';
@@ -297,7 +297,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Välj färgen från din lista';
 
   @override
-  String get profil_update_title => 'Slutför din registrering';
+  String get profil_update_title => 'Uppdatera din profil';
+
+  @override
+  String get profil_complete_registration_title => 'Slutför din registrering';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Dra nytta av din kostnadsfria provperiod!';
@@ -352,4 +355,130 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Anonym användare';
+
+  @override
+  String get alert_message_email_verify_send => 'Verifieringsmejl skickat!';
+
+  @override
+  String get alert_message_email_send_error => 'Fel vid sändning av e-post.';
+
+  @override
+  String get auth_error_deconnect => 'Ett fel uppstod vid utloggning.';
+
+  @override
+  String get auth_error_connect => 'Ett okänt fel uppstod vid anslutning.';
+
+  @override
+  String get auth_error_register_unknown => 'Ett okänt fel uppstod under registreringen.';
+
+  @override
+  String get auth_error_create_user => 'Användarskapandet misslyckades.';
+
+  @override
+  String get auth_error_update_profil => 'Fel vid uppdatering av profilen.';
+
+  @override
+  String get auth_error_facebook => 'Ett okänt fel uppstod vid inloggning på Facebook.';
+
+  @override
+  String get auth_error_google => 'Ett okänt fel uppstod vid inloggning på Google.';
+
+  @override
+  String get auth_error_apple => 'Ett okänt fel uppstod vid Apple-inloggning.';
+
+  @override
+  String get auth_error_echoue => 'Autentiseringen misslyckades, försök igen';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'För många förfrågningar. Försök igen senare.';
+
+  @override
+  String get firebase_error_message_default => 'Ett okänt fel har uppstått.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'E-postadressen är felaktigt formaterad.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'Det här användarkontot har inaktiverats.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'E-postadressen eller lösenordet är felaktigt.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'E-postadressen används redan av ett annat konto.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'Denna operation är inte tillåten.';
+
+  @override
+  String get firebase_error_message_weak_password => 'Lösenordet är för svagt.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'Ett konto finns redan med samma e-postadress men olika inloggningsuppgifter.';
+
+  @override
+  String get firebase_error_message_error_generic => 'Ett oväntat fel har uppstått. Försök igen.';
+
+  @override
+  String get auth_success_update_profile => 'Profilen har uppdaterats!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'Listan har raderats.';
+
+  @override
+  String get update_app_text_1 => 'En ny version av Voczilla finns tillgänglig med betydande förbättringar, nya funktioner och buggfixar för en ännu bättre upplevelse';
+
+  @override
+  String get update_app_text_2 => 'Missa inte de senaste nyheterna!';
+
+  @override
+  String get update_app_text_3 => 'Klicka nedan för att uppdatera nu';
+
+  @override
+  String get update_app_text_4 => 'Uppdatera VocZilla';
+
+  @override
+  String get update_app_text_5 => 'Tack för att du är en del av Voczilla-communityn';
+
+  @override
+  String get drawer_my_profil => 'Min profil';
+
+  @override
+  String get drawer_disconnect => 'Utloggning';
+
+  @override
+  String get drawer_free_trial => 'Min provperiod';
+
+  @override
+  String get drawer_free_trial_day => 'dag';
+
+  @override
+  String get drawer_free_trial_days => 'dagar';
+
+  @override
+  String get drawer_free_trial_restants => 'återstående';
+
+  @override
+  String get drawer_free_trial_restant => 'återstående';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Fel vid inläsning av profil';
+
+  @override
+  String get save => 'Spara';
+
+  @override
+  String get card_home_user_day => 'dagar)';
+
+  @override
+  String get card_home_user_liste_perso => 'lista(or) Förlorad';
+
+  @override
+  String get card_home_share => 'delad';
+
+  @override
+  String get card_home_mot => 'mot(s)';
+
+  @override
+  String get card_home_reessayer => 'Försök igen';
 }

@@ -18,37 +18,26 @@ import '../../backgroundBlueLinear.dart';
 
 class ProfileEmailValidation extends StatefulWidget {
   const ProfileEmailValidation({super.key});
-
   @override
   State<ProfileEmailValidation> createState() => _ProfileEmailValidationState();
 }
 
 class _ProfileEmailValidationState extends State<ProfileEmailValidation> {
   Timer? _timer;
-
   @override
   void initState() {
     super.initState();
-    // On démarre un timer qui va vérifier le statut toutes les 3 secondes.
     _timer = Timer.periodic(const Duration(seconds: 3), (timer) async {
       try {
-        // Il est crucial de rafraîchir l'utilisateur pour obtenir le dernier statut.
         await FirebaseAuth.instance.currentUser?.reload();
         final user = FirebaseAuth.instance.currentUser;
-        Logger.Green.log("TIMER: ${user?.emailVerified ?? false}");
-        // Si l'email est vérifié et que le widget est toujours affiché.
         if (user?.emailVerified ?? false) {
-          // On a trouvé que l'utilisateur est vérifié, on arrête le timer.
           timer.cancel();
-
-          // On notifie l'AuthBloc. Le BLoC mettra à jour Firestore et l'état.
           if (mounted) {
-            // CORRECTION : On instancie la classe d'événement directement.
             context.read<AuthBloc>().add(EmailVerifiedEvent());
           }
         }
       } catch (e) {
-        // Gère les erreurs possibles (ex: l'utilisateur a été supprimé).
         Logger.Red.log("Erreur pendant la vérification de l'email: $e");
         timer.cancel(); // Arrête le timer en cas d'erreur pour éviter les boucles.
       }
@@ -57,25 +46,17 @@ class _ProfileEmailValidationState extends State<ProfileEmailValidation> {
 
   @override
   void dispose() {
-    // Toujours annuler les timers dans dispose pour éviter les fuites de mémoire.
     _timer?.cancel();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    Logger.Green.log("Building ProfileEmailValidation Screen");
-
     final authState = context.watch<AuthBloc>().state;
-
     if (authState is! AuthAuthenticated) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
-
     final userProfile = authState.userProfile;
-
-    // Votre BlocListener existant est parfait. Il réagira au nouvel état
-    // émis par le BLoC une fois la vérification détectée.
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
         if (state is AuthAuthenticated && state.userProfile.isEmailVerified) {
@@ -143,22 +124,22 @@ class _ProfileEmailValidationState extends State<ProfileEmailValidation> {
                         await FirebaseAuth.instance.currentUser
                             ?.sendEmailVerification();
                         context.read<NotificationBloc>().add(ShowNotification(
-                            message: "Email de vérification envoyé !",
+                            message: context.loc.alert_message_email_verify_send,
                             backgroundColor: Colors.green));
                       } on FirebaseAuthException catch (e) {
                         if (e.code == 'too-many-requests') {
                           context.read<NotificationBloc>().add(ShowNotification(
                               message:
-                              "Trop de demandes. Réessayez plus tard.",
-                              backgroundColor: Colors.orange));
+                              context.loc.firebase_error_message_too_many_requests,
+                              backgroundColor: Colors.red));
                         } else {
                           context.read<NotificationBloc>().add(ShowNotification(
-                              message: "Erreur lors de l'envoi de l'email.",
+                              message: context.loc.alert_message_email_send_error,
                               backgroundColor: Colors.red));
                         }
                       } catch (e) {
                         context.read<NotificationBloc>().add(ShowNotification(
-                            message: "Une erreur inconnue est survenue.",
+                            message: context.loc.firebase_error_message_default,
                             backgroundColor: Colors.red));
                       }
                     },

@@ -237,10 +237,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get login_entrer_nom => 'Digite seu nome';
 
   @override
-  String get login_pseudo => 'Pseudo';
+  String get login_pseudo => 'Pseudônimo';
 
   @override
-  String get login_entrer_pseudo => 'Digite seu nome de usuário';
+  String get login_entrer_pseudo => 'Digite seu apelido';
 
   @override
   String get login_mot_de_passe => 'Senha';
@@ -297,7 +297,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get personnalisation_step1_color_choice => 'Escolha a cor da sua lista';
 
   @override
-  String get profil_update_title => 'Conclua seu registro';
+  String get profil_update_title => 'Atualize seu perfil';
+
+  @override
+  String get profil_complete_registration_title => 'Conclua seu registro';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Aproveite seu período de teste gratuito!';
@@ -352,4 +355,130 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get anonymous_user => 'Usuário anônimo';
+
+  @override
+  String get alert_message_email_verify_send => 'E-mail de verificação enviado!';
+
+  @override
+  String get alert_message_email_send_error => 'Erro ao enviar e-mail.';
+
+  @override
+  String get auth_error_deconnect => 'Ocorreu um erro ao sair.';
+
+  @override
+  String get auth_error_connect => 'Ocorreu um erro desconhecido durante a conexão.';
+
+  @override
+  String get auth_error_register_unknown => 'Ocorreu um erro desconhecido durante o registro.';
+
+  @override
+  String get auth_error_create_user => 'Falha na criação do usuário.';
+
+  @override
+  String get auth_error_update_profil => 'Erro ao atualizar o perfil.';
+
+  @override
+  String get auth_error_facebook => 'Ocorreu um erro desconhecido com o login do Facebook.';
+
+  @override
+  String get auth_error_google => 'Ocorreu um erro desconhecido com o login do Google.';
+
+  @override
+  String get auth_error_apple => 'Ocorreu um erro desconhecido com o login da Apple.';
+
+  @override
+  String get auth_error_echoue => 'A autenticação falhou, tente novamente';
+
+  @override
+  String get firebase_error_message_too_many_requests => 'Muitas solicitações. Tente novamente mais tarde.';
+
+  @override
+  String get firebase_error_message_default => 'Ocorreu um erro desconhecido.';
+
+  @override
+  String get firebase_error_message_invalid_email => 'O endereço de e-mail está incorreto.';
+
+  @override
+  String get firebase_error_message_user_disabled => 'Esta conta de usuário foi desativada.';
+
+  @override
+  String get firebase_error_message_invalid_credential => 'O e-mail ou a senha estão incorretos.';
+
+  @override
+  String get firebase_error_message_email_already_in_use => 'O endereço de e-mail já está sendo usado por outra conta.';
+
+  @override
+  String get firebase_error_message_operation_not_allowed => 'Esta operação não é permitida.';
+
+  @override
+  String get firebase_error_message_weak_password => 'A senha é muito fraca.';
+
+  @override
+  String get firebase_error_message_account_exists_with_different_credential => 'Já existe uma conta com o mesmo endereço de e-mail, mas com credenciais diferentes.';
+
+  @override
+  String get firebase_error_message_error_generic => 'Ocorreu um erro inesperado. Tente novamente.';
+
+  @override
+  String get auth_success_update_profile => 'Perfil atualizado com sucesso!';
+
+  @override
+  String get vocabulaire_success_delete_list => 'Lista excluída com sucesso.';
+
+  @override
+  String get update_app_text_1 => 'Uma nova versão do Voczilla está disponível com melhorias significativas, novos recursos e correções de bugs para uma experiência ainda melhor';
+
+  @override
+  String get update_app_text_2 => 'Não perca as últimas notícias!';
+
+  @override
+  String get update_app_text_3 => 'Clique abaixo para atualizar agora';
+
+  @override
+  String get update_app_text_4 => 'Atualizar VocZilla';
+
+  @override
+  String get update_app_text_5 => 'Obrigado por fazer parte da comunidade Voczilla';
+
+  @override
+  String get drawer_my_profil => 'Meu perfil';
+
+  @override
+  String get drawer_disconnect => 'Sair';
+
+  @override
+  String get drawer_free_trial => 'Meu período de teste';
+
+  @override
+  String get drawer_free_trial_day => 'dia';
+
+  @override
+  String get drawer_free_trial_days => 'dias';
+
+  @override
+  String get drawer_free_trial_restants => 'restante';
+
+  @override
+  String get drawer_free_trial_restant => 'restante';
+
+  @override
+  String get erreur_de_chargement_du_profil => 'Erro de carregamento de perfil';
+
+  @override
+  String get save => 'Salvar';
+
+  @override
+  String get card_home_user_day => 'dias)';
+
+  @override
+  String get card_home_user_liste_perso => 'lista(s) Perdida(s)';
+
+  @override
+  String get card_home_share => 'compartilhado';
+
+  @override
+  String get card_home_mot => 'contra';
+
+  @override
+  String get card_home_reessayer => 'Tentar novamente';
 }

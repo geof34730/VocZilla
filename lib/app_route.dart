@@ -7,6 +7,7 @@ import 'package:vobzilla/ui/screens/auth/profile_update_screen_gafa.dart';
 import 'package:vobzilla/ui/screens/personalisation/step2.dart';
 import 'package:vobzilla/ui/screens/update_screen.dart';
 
+import 'core/utils/errorMessage.dart';
 import 'core/utils/feature_graphic_flag.dart';
 import 'data/models/user_firestore.dart';
 import 'logic/blocs/auth/auth_event.dart';
@@ -71,18 +72,14 @@ class AppRoute {
           listeners: [
             BlocListener<AuthBloc, AuthState>(
               listener: (context, authState) {
-                Logger.Red.log('ROUTE listener AuthBloc');
-                if (authState is AuthAuthenticated) {
+                if (authState is AuthAuthenticated && authState is! AuthProfileUpdated) {
                   final userProfile = authState.userProfile;
                   final firebaseUser = FirebaseAuth.instance.currentUser;
-
                   if (firebaseUser == null) {
                    //_redirectTo(context, settings, login);
                     return;
                   }
-
                   if (userProfile.isProfileIncomplete && settings.name != updateProfileGafa) {
-                    Logger.Red.log('Redirecting to updateProfileGafa because profile is incomplete.');
                     _redirectTo(context, settings, updateProfileGafa);
                   } else if (!firebaseUser.emailVerified &&
                       settings.name != verifiedEmail &&
@@ -90,51 +87,51 @@ class AppRoute {
                       info.providerId == 'facebook.com' ||
                           info.providerId == 'google.com' ||
                           info.providerId == 'apple.com')) {
-                    Logger.Red.log('ROUTE !user.emailVerified');
                     try {
                       firebaseUser.sendEmailVerification();
                     } catch (e) {
-                      if (context.mounted && e is FirebaseAuthException && e.code == 'too-many-requests') {
+                      if (context.mounted && e is FirebaseAuthException ) {
                         context.read<NotificationBloc>().add(ShowNotification(
-                          message: "Trop de demandes. Réessayez plus tard.",
+                          message: getLocalizedErrorMessage(context, e.code),
                           backgroundColor: Colors.orange,
                         ));
                       }
                     }
-                    Logger.Green.log("Redirecting to email verification");
                     _redirectTo(context, settings, verifiedEmail);
                   } else if (settings.name == login) {
                     _redirectTo(context, settings, home);
                   }
                 } else if (authState is AuthUnauthenticated) {
-                  Logger.Blue.log('ROUTE AuthUnauthenticated');
                   if (settings.name != login && settings.name != register && settings.name != home) {
-                    Logger.Blue.log('Redirecting to login');
                     _redirectTo(context, settings, login);
                   }
-                } else if (authState is AuthError) {
-                  Logger.Red.log('ROUTE AuthError');
+                }
+                if (authState is AuthError) {
                   context.read<NotificationBloc>().add(ShowNotification(
-                    message: authState.message,
+                    message: getLocalizedErrorMessage(context, authState.message),
                     backgroundColor: Colors.red,
                   ));
                   context.read<AuthBloc>().add(AuthErrorCleared());
+                }
+                if (authState is AuthSuccess) {
+                  // Cette partie est correcte et continue de fonctionner pour la notification
+                  context.read<NotificationBloc>().add(ShowNotification(
+                    message: getLocalizedSuccessMessage(context, authState.message),
+                    backgroundColor: Colors.green,
+                  ));
                 }
               },
             ),
             BlocListener<UpdateBloc, UpdateState>(
               listener: (context, updateState) {
                 if (updateState is UpdateAvailable) {
-                  Logger.Red.log('Update available, redirecting to UpdateScreen');
                   Navigator.pushReplacementNamed(context, updateScreen);
                 }
               },
             ),
             BlocListener<PurchaseBloc, PurchaseState>(
               listener: (context, purchaseState) {
-                Logger.Red.log("BlocListener<PurchaseBloc, PurchaseState>");
                 if (purchaseState is PurchaseCompleted) {
-                  Logger.Red.log('Purchase completed, redirecting to HomeScreen');
                   userRepository.checkUserStatusForce();
                   Navigator.pushReplacementNamed(context, home);
                 }
@@ -143,19 +140,31 @@ class AppRoute {
           ],
           child: ConnectivityAwareWidget(
             child: BlocBuilder<AuthBloc, AuthState>(
+              // 1. On utilise `buildWhen` pour contrôler les reconstructions.
+              //    On ne reconstruit PAS pour un succès ou une mise à jour de profil,
+              //    car le Listener s'en occupe déjà (pour la notification).
+              buildWhen: (previous, current) {
+                return current is! AuthSuccess && current is! AuthProfileUpdated;
+              },
               builder: (context, authState) {
-                if (authState is AuthError) {
-                  return _getUnauthenticatedPage(settings, context);
-                }
+                // 2. La logique est maintenant simple et sans ambiguïté.
+                //    Si l'état est une sous-classe de AuthAuthenticated, on est connecté.
+
+                Logger.Pink.log("authState;: $authState");
+
                 if (authState is AuthAuthenticated) {
-                  BlocProvider.of<UserBloc>(context, listen: false).add(LoadUserData(authState.userProfile.uid));
                   return _getAuthenticatedPage(settings, context);
                 }
-                if (authState is AuthUnauthenticated ) {
+
+                // 3. On groupe les cas qui mènent à la même page.
+                if (authState is AuthUnauthenticated || authState is AuthError) {
                   return _getUnauthenticatedPage(settings, context);
                 }
 
-              return Loading();
+                // 4. Cas par défaut pour les états de chargement (AuthInitial, AuthLoading)
+                return Scaffold(
+                  body: Loading(),
+                );
               },
             ),
           ),
@@ -181,10 +190,7 @@ class AppRoute {
       case register:
         return Layout(logged: false, child: RegisterScreen());
       case updateScreen:
-        return Layout(
-            titleScreen: "Mise à jour disponible !",
-            child: UpdateScreen()
-        );
+        return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
       default:
         return _errorPage(settings, secure: false);
     }
@@ -196,6 +202,7 @@ class AppRoute {
     Logger.Blue.log("_getAuthenticatedPage settings.name: ${settings.name}");
 
     if (uri.pathSegments.isEmpty && settings.name == '/') {
+      Logger.Pink.log("yili 1");
       return Layout(child: HomeScreen());
     }
 
@@ -214,14 +221,10 @@ class AppRoute {
           return Layout(titleScreen: context.loc.title_subscription, child: SubscriptionScreen());
         case home:
         case homeLogged:
+        Logger.Pink.log("yili 2");
           return Layout(child: HomeScreen());
         case updateScreen:
           return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
-        case updateScreen:
-          return Layout(
-              titleScreen: "Mise à jour disponible !",
-              child: UpdateScreen()
-          );
         case '/vocabulary':
           if (uri.pathSegments.length == 2) {
             switch (uri.pathSegments[1]) {
@@ -298,10 +301,11 @@ class AppRoute {
           return _errorPage(settings);
       }
     }
+    Logger.Pink.log("yili 3");
     return Layout(child: HomeScreen());
   }
 
-  // MODIFICATION : La fonction accepte maintenant des arguments.
+
   static void _redirectTo(BuildContext context, RouteSettings settings, String targetRoute, {Object? arguments}) {
     if (settings.name != targetRoute) {
       Logger.Blue.log('REDIRECTING TO $targetRoute from ${settings.name}');
@@ -319,7 +323,6 @@ class AppRoute {
   }
 
   static Widget _errorPage(RouteSettings settings, {bool secure = true}) {
-    Logger.Red.log('${secure ? "" : "NOT "}SECURE No route defined for ${settings.name}');
     return Layout(child: Center(child: Text('Page non trouvée pour la route : ${settings.name}')));
   }
 }

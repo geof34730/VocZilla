@@ -20,16 +20,4 @@ class NotificationBloc extends Bloc<NotificationEvent, NotificationState> {
 }
 
 
-/*
-context.read<NotificationBloc>().add(ShowNotification(
-                  message: "Trop de demandes. Réessayez plus tard.",
-                  backgroundColor: Colors.orangeAccent,
-                ));
 
-
-
-                 notificationBloc.add(ShowNotification(
-        message: "Erreur : Utilisateur non trouvé. Reconnectez-vous.",
-        backgroundColor: Colors.red,
-      ));
- */

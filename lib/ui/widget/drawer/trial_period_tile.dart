@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vobzilla/core/utils/localization.dart';
 
 class TrialPeriodTile extends StatefulWidget {
   final double progress; // Entre 0.0 et 1.0
@@ -56,7 +57,7 @@ class _TrialPeriodTileState extends State<TrialPeriodTile>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Ma période d’essai",
+            context.loc.drawer_free_trial,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16,
@@ -108,7 +109,7 @@ class _TrialPeriodTileState extends State<TrialPeriodTile>
                   ),
                   SizedBox(width: 12),
                   Text(
-                    "${widget.daysRemaining} jour${widget.daysRemaining > 1 ? 's' : ''} rest${widget.daysRemaining > 1 ? 'ants' : 'ant'}",
+                    "${widget.daysRemaining} ${widget.daysRemaining > 1 ? context.loc.drawer_free_trial_days : context.loc.drawer_free_trial_day} ${widget.daysRemaining > 1 ? context.loc.drawer_free_trial_restants : context.loc.drawer_free_trial_restant}",
                     style: TextStyle(
                       color: isWarning ? Colors.yellow : Colors.white,
                       fontWeight: FontWeight.bold,

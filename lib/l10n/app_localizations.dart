@@ -576,13 +576,13 @@ abstract class AppLocalizations {
   /// No description provided for @login_pseudo.
   ///
   /// In en, this message translates to:
-  /// **'Pseudo'**
+  /// **'Pseudonym'**
   String get login_pseudo;
 
   /// No description provided for @login_entrer_pseudo.
   ///
   /// In en, this message translates to:
-  /// **'Enter your username'**
+  /// **'Enter your nickname'**
   String get login_entrer_pseudo;
 
   /// No description provided for @login_mot_de_passe.
@@ -696,8 +696,14 @@ abstract class AppLocalizations {
   /// No description provided for @profil_update_title.
   ///
   /// In en, this message translates to:
-  /// **'Complete your registration'**
+  /// **'Update your profile'**
   String get profil_update_title;
+
+  /// No description provided for @profil_complete_registration_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your registration'**
+  String get profil_complete_registration_title;
 
   /// No description provided for @widget_dialogHelper_showfreetrialdialog_description1.
   ///
@@ -806,6 +812,258 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Anonymous user'**
   String get anonymous_user;
+
+  /// No description provided for @alert_message_email_verify_send.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification email sent!'**
+  String get alert_message_email_verify_send;
+
+  /// No description provided for @alert_message_email_send_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Error sending email.'**
+  String get alert_message_email_send_error;
+
+  /// No description provided for @auth_error_deconnect.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred while logging out.'**
+  String get auth_error_deconnect;
+
+  /// No description provided for @auth_error_connect.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error occurred while connecting.'**
+  String get auth_error_connect;
+
+  /// No description provided for @auth_error_register_unknown.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error occurred during registration.'**
+  String get auth_error_register_unknown;
+
+  /// No description provided for @auth_error_create_user.
+  ///
+  /// In en, this message translates to:
+  /// **'User creation failed.'**
+  String get auth_error_create_user;
+
+  /// No description provided for @auth_error_update_profil.
+  ///
+  /// In en, this message translates to:
+  /// **'Error updating profile.'**
+  String get auth_error_update_profil;
+
+  /// No description provided for @auth_error_facebook.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error occurred with Facebook login.'**
+  String get auth_error_facebook;
+
+  /// No description provided for @auth_error_google.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error occurred with Google login.'**
+  String get auth_error_google;
+
+  /// No description provided for @auth_error_apple.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error occurred with Apple login.'**
+  String get auth_error_apple;
+
+  /// No description provided for @auth_error_echoue.
+  ///
+  /// In en, this message translates to:
+  /// **'Authentication failed, please try again'**
+  String get auth_error_echoue;
+
+  /// No description provided for @firebase_error_message_too_many_requests.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many requests. Try again later.'**
+  String get firebase_error_message_too_many_requests;
+
+  /// No description provided for @firebase_error_message_default.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error has occurred.'**
+  String get firebase_error_message_default;
+
+  /// No description provided for @firebase_error_message_invalid_email.
+  ///
+  /// In en, this message translates to:
+  /// **'The email address is malformed.'**
+  String get firebase_error_message_invalid_email;
+
+  /// No description provided for @firebase_error_message_user_disabled.
+  ///
+  /// In en, this message translates to:
+  /// **'This user account has been disabled.'**
+  String get firebase_error_message_user_disabled;
+
+  /// No description provided for @firebase_error_message_invalid_credential.
+  ///
+  /// In en, this message translates to:
+  /// **'The email or password is incorrect.'**
+  String get firebase_error_message_invalid_credential;
+
+  /// No description provided for @firebase_error_message_email_already_in_use.
+  ///
+  /// In en, this message translates to:
+  /// **'The email address is already used by another account.'**
+  String get firebase_error_message_email_already_in_use;
+
+  /// No description provided for @firebase_error_message_operation_not_allowed.
+  ///
+  /// In en, this message translates to:
+  /// **'This operation is not permitted.'**
+  String get firebase_error_message_operation_not_allowed;
+
+  /// No description provided for @firebase_error_message_weak_password.
+  ///
+  /// In en, this message translates to:
+  /// **'The password is too weak.'**
+  String get firebase_error_message_weak_password;
+
+  /// No description provided for @firebase_error_message_account_exists_with_different_credential.
+  ///
+  /// In en, this message translates to:
+  /// **'An account already exists with the same email address but different credentials.'**
+  String get firebase_error_message_account_exists_with_different_credential;
+
+  /// No description provided for @firebase_error_message_error_generic.
+  ///
+  /// In en, this message translates to:
+  /// **'An unexpected error has occurred. Please try again.'**
+  String get firebase_error_message_error_generic;
+
+  /// No description provided for @auth_success_update_profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile successfully updated!'**
+  String get auth_success_update_profile;
+
+  /// No description provided for @vocabulaire_success_delete_list.
+  ///
+  /// In en, this message translates to:
+  /// **'List deleted successfully.'**
+  String get vocabulaire_success_delete_list;
+
+  /// No description provided for @update_app_text_1.
+  ///
+  /// In en, this message translates to:
+  /// **'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience'**
+  String get update_app_text_1;
+
+  /// No description provided for @update_app_text_2.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t miss out on the latest news!'**
+  String get update_app_text_2;
+
+  /// No description provided for @update_app_text_3.
+  ///
+  /// In en, this message translates to:
+  /// **'Click below to update now'**
+  String get update_app_text_3;
+
+  /// No description provided for @update_app_text_4.
+  ///
+  /// In en, this message translates to:
+  /// **'Update VocZilla'**
+  String get update_app_text_4;
+
+  /// No description provided for @update_app_text_5.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you for being part of the Voczilla community'**
+  String get update_app_text_5;
+
+  /// No description provided for @drawer_my_profil.
+  ///
+  /// In en, this message translates to:
+  /// **'My profile'**
+  String get drawer_my_profil;
+
+  /// No description provided for @drawer_disconnect.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get drawer_disconnect;
+
+  /// No description provided for @drawer_free_trial.
+  ///
+  /// In en, this message translates to:
+  /// **'My trial period'**
+  String get drawer_free_trial;
+
+  /// No description provided for @drawer_free_trial_day.
+  ///
+  /// In en, this message translates to:
+  /// **'day'**
+  String get drawer_free_trial_day;
+
+  /// No description provided for @drawer_free_trial_days.
+  ///
+  /// In en, this message translates to:
+  /// **'days'**
+  String get drawer_free_trial_days;
+
+  /// No description provided for @drawer_free_trial_restants.
+  ///
+  /// In en, this message translates to:
+  /// **'remaining'**
+  String get drawer_free_trial_restants;
+
+  /// No description provided for @drawer_free_trial_restant.
+  ///
+  /// In en, this message translates to:
+  /// **'remaining'**
+  String get drawer_free_trial_restant;
+
+  /// No description provided for @erreur_de_chargement_du_profil.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile loading error'**
+  String get erreur_de_chargement_du_profil;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @card_home_user_day.
+  ///
+  /// In en, this message translates to:
+  /// **'days)'**
+  String get card_home_user_day;
+
+  /// No description provided for @card_home_user_liste_perso.
+  ///
+  /// In en, this message translates to:
+  /// **'list(s) Lost'**
+  String get card_home_user_liste_perso;
+
+  /// No description provided for @card_home_share.
+  ///
+  /// In en, this message translates to:
+  /// **'shared'**
+  String get card_home_share;
+
+  /// No description provided for @card_home_mot.
+  ///
+  /// In en, this message translates to:
+  /// **'against'**
+  String get card_home_mot;
+
+  /// No description provided for @card_home_reessayer.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get card_home_reessayer;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
