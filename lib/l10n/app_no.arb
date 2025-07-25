@@ -106,7 +106,7 @@
     "widget_dialogHelper_showfreetrialdialog_description6": "Ikke la opplevelsen din stoppe! Velg abonnementet som passer deg, og fortsett å nyte det uten avbrudd.",
     "widget_dialogHelper_showfreetrialdialog_later": "Seinere",
     "widget_congratulation_bravo": "Bravo",
-    "widget_congratulation_message": "du er ferdig med å lære denne listen",
+    "widget_congratulation_message": "du er ferdig med å lære deg denne listen",
     "widget_radiochoicevocabularylearnedornot_choice1": "Å lære",
     "widget_radiochoicevocabularylearnedornot_choice2": "Alle",
     "title_create_personal_list": "Opprett en tilpasset liste",
@@ -152,9 +152,15 @@
     "drawer_free_trial_restant": "gjenværende",
     "erreur_de_chargement_du_profil": "Feil ved innlasting av profil",
     "save": "Spare",
-    "card_home_user_day": "dager)",
+    "card_home_user_day": "dager",
     "card_home_user_liste_perso": "liste(r) Tapt",
     "card_home_share": "delt",
     "card_home_mot": "imot",
-    "card_home_reessayer": "Prøv igjen"
+    "card_home_reessayer": "Prøv igjen",
+    "vocabulaire_user_error_delete_list": "Feil ved sletting av liste",
+    "vocabulaire_user_error_user_data_not_found": "Feil ved lasting av brukerdata",
+    "vocabulaire_user_error_add_list_perso": "Feil ved tillegging av liste",
+    "vocabulaire_user_error_update_list_perso": "Feil under oppdatering av listen",
+    "vocabulaire_user_error_add_vocabulaire_list_perso": "Feil ved å legge til vokabular i listen",
+    "vocabulaire_user_error_delete_vocabulaire_list": "Feil ved sletting av vokabular fra listen"
 }

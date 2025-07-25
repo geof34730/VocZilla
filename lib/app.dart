@@ -143,7 +143,7 @@ class MyApp extends StatelessWidget {
 
                     BlocListener<UserBloc, UserState>(
                       listener: (context, state) {
-                        BlocStateTracker().updateState('UserBloc', state);
+                        //BlocStateTracker().updateState('UserBloc', state);
                         if (state is UserLoaded) {
                           context.read<VocabulaireUserBloc>().add(VocabulaireUserUpdate(state.userData));
                         }
@@ -151,7 +151,7 @@ class MyApp extends StatelessWidget {
                     ),
                     BlocListener<VocabulaireUserBloc, VocabulaireUserState>(
                       listener: (context, state) {
-                        BlocStateTracker().updateState('VocabulaireUserBloc', state);
+                       // BlocStateTracker().updateState('VocabulaireUserBloc', state);
                         if (state is ListPersoDeletionSuccess) {
                               context.read<LeaderboardBloc>().add(FetchLeaderboard());
                               context.read<NotificationBloc>().add(ShowNotification(
@@ -159,6 +159,16 @@ class MyApp extends StatelessWidget {
                                   backgroundColor: Colors.green,
                               ));
                         }
+                        if (state is VocabulaireUserError) {
+                          context.read<NotificationBloc>().add(ShowNotification(
+                            message: getLocalizedErrorMessage(context, state.error),
+                            backgroundColor: Colors.red,
+                          ));
+                          context.read<VocabulaireUserBloc>().add(VocabulaireUserBlocErrorCleared());
+                        }
+
+
+
                       },
                     ),
                     BlocListener<NotificationBloc, NotificationState>(

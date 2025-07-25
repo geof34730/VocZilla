@@ -24,7 +24,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
-  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 简单, 听力';
+  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 轻松, 听力';
 
   @override
   String get app_feature_graphic_title => '提高你的英语词汇量';
@@ -156,7 +156,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get home_description_list_perso => '创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。';
 
   @override
-  String get home_title_classement => 'TeamZilla 排名';
+  String get home_title_classement => 'TeamZilla排名';
 
   @override
   String get home_notlogged_accroche1 => '提高你的英语水平！';
@@ -468,7 +468,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get save => '节省';
 
   @override
-  String get card_home_user_day => '天）';
+  String get card_home_user_day => '天';
 
   @override
   String get card_home_user_liste_perso => '遗失清单';
@@ -481,4 +481,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get card_home_reessayer => '再试一次';
+
+  @override
+  String get vocabulaire_user_error_delete_list => '删除列表时出错';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => '加载用户数据时出错';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => '添加列表时出错';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => '更新列表时出错';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => '将词汇添加到列表时出错';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => '从列表中删除词汇时出错';
 }

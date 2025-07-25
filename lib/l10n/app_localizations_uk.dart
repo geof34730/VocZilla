@@ -312,7 +312,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_days => 'дні';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб відкрити для себе всі можливості нашого застосунку.';
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб ознайомитися з усіма функціями нашого застосунку.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Ви пішли';
@@ -399,7 +399,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get firebase_error_message_invalid_email => 'Адреса електронної пошти має неправильний формат.';
 
   @override
-  String get firebase_error_message_user_disabled => 'Цей обліковий запис користувача було вимкнено.';
+  String get firebase_error_message_user_disabled => 'Цей обліковий запис користувача вимкнено.';
 
   @override
   String get firebase_error_message_invalid_credential => 'Електронна пошта або пароль неправильні.';
@@ -468,7 +468,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get save => 'Зберегти';
 
   @override
-  String get card_home_user_day => 'днів)';
+  String get card_home_user_day => 'дні';
 
   @override
   String get card_home_user_liste_perso => 'список(и) Втрачено';
@@ -481,4 +481,22 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Спробуйте ще раз';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Помилка видалення списку';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Помилка завантаження даних користувача';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Помилка додавання списку';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Помилка оновлення списку';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Помилка додавання словникового запасу до списку';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Помилка видалення словника зі списку';
 }

@@ -35,6 +35,15 @@ String getLocalizedErrorMessage(BuildContext context, String inputError) {
     'auth_error_apple' => l10n.auth_error_apple,
     'auth_error_echoue' => l10n.auth_error_echoue,
     'auth_success_update_profile' => l10n.auth_success_update_profile,
+    'vocabulaire_user_error_delete_list' => l10n.vocabulaire_user_error_delete_list,
+    'vocabulaire_user_error_delete_vocabulaire_list' => l10n.vocabulaire_user_error_delete_vocabulaire_list,
+    'vocabulaire_user_error_user_data_not_found' => l10n.vocabulaire_user_error_user_data_not_found,
+    'vocabulaire_user_error_add_list_perso' => l10n.vocabulaire_user_error_add_list_perso,
+    'vocabulaire_user_error_update_list_perso' => l10n.vocabulaire_user_error_update_list_perso,
+    'vocabulaire_user_error_add_vocabulaire_list_perso' => l10n.vocabulaire_user_error_add_vocabulaire_list_perso,
+
+
+
     _ => l10n.firebase_error_message_error_generic,
   };
 }

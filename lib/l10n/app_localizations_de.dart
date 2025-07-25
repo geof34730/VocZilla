@@ -468,7 +468,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get save => 'Speichern';
 
   @override
-  String get card_home_user_day => 'Tage)';
+  String get card_home_user_day => 'Tage';
 
   @override
   String get card_home_user_liste_perso => 'Liste(n) Verloren';
@@ -481,4 +481,22 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Versuchen Sie es erneut';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Fehler beim Löschen der Liste';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Fehler beim Laden der Benutzerdaten';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Fehler beim Hinzufügen der Liste';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Fehler beim Aktualisieren der Liste';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Fehler beim Hinzufügen von Vokabeln zur Liste';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Fehler beim Löschen des Vokabulars aus der Liste';
 }

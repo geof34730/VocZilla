@@ -152,9 +152,15 @@
     "drawer_free_trial_restant": "rimanente",
     "erreur_de_chargement_du_profil": "Errore di caricamento del profilo",
     "save": "Salva",
-    "card_home_user_day": "giorni)",
+    "card_home_user_day": "giorni",
     "card_home_user_liste_perso": "liste(s) Perso",
     "card_home_share": "condiviso",
     "card_home_mot": "contro",
-    "card_home_reessayer": "Riprova"
+    "card_home_reessayer": "Riprova",
+    "vocabulaire_user_error_delete_list": "Errore durante l'eliminazione dell'elenco",
+    "vocabulaire_user_error_user_data_not_found": "Errore durante il caricamento dei dati utente",
+    "vocabulaire_user_error_add_list_perso": "Errore durante l'aggiunta dell'elenco",
+    "vocabulaire_user_error_update_list_perso": "Errore durante l'aggiornamento dell'elenco",
+    "vocabulaire_user_error_add_vocabulaire_list_perso": "Errore durante l'aggiunta del vocabolario all'elenco",
+    "vocabulaire_user_error_delete_vocabulaire_list": "Errore durante l'eliminazione del vocabolario dall'elenco"
 }

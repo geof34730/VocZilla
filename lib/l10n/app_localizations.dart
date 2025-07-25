@@ -1038,7 +1038,7 @@ abstract class AppLocalizations {
   /// No description provided for @card_home_user_day.
   ///
   /// In en, this message translates to:
-  /// **'days)'**
+  /// **'days'**
   String get card_home_user_day;
 
   /// No description provided for @card_home_user_liste_perso.
@@ -1064,6 +1064,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Try again'**
   String get card_home_reessayer;
+
+  /// No description provided for @vocabulaire_user_error_delete_list.
+  ///
+  /// In en, this message translates to:
+  /// **'Error deleting list'**
+  String get vocabulaire_user_error_delete_list;
+
+  /// No description provided for @vocabulaire_user_error_user_data_not_found.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading user data'**
+  String get vocabulaire_user_error_user_data_not_found;
+
+  /// No description provided for @vocabulaire_user_error_add_list_perso.
+  ///
+  /// In en, this message translates to:
+  /// **'Error adding list'**
+  String get vocabulaire_user_error_add_list_perso;
+
+  /// No description provided for @vocabulaire_user_error_update_list_perso.
+  ///
+  /// In en, this message translates to:
+  /// **'Error updating the list'**
+  String get vocabulaire_user_error_update_list_perso;
+
+  /// No description provided for @vocabulaire_user_error_add_vocabulaire_list_perso.
+  ///
+  /// In en, this message translates to:
+  /// **'Error adding vocabulary to list'**
+  String get vocabulaire_user_error_add_vocabulaire_list_perso;
+
+  /// No description provided for @vocabulaire_user_error_delete_vocabulaire_list.
+  ///
+  /// In en, this message translates to:
+  /// **'Error deleting vocabulary from list'**
+  String get vocabulaire_user_error_delete_vocabulaire_list;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

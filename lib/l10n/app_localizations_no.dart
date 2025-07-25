@@ -330,7 +330,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_congratulation_bravo => 'Bravo';
 
   @override
-  String get widget_congratulation_message => 'du er ferdig med å lære denne listen';
+  String get widget_congratulation_message => 'du er ferdig med å lære deg denne listen';
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice1 => 'Å lære';
@@ -468,7 +468,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get save => 'Spare';
 
   @override
-  String get card_home_user_day => 'dager)';
+  String get card_home_user_day => 'dager';
 
   @override
   String get card_home_user_liste_perso => 'liste(r) Tapt';
@@ -481,4 +481,22 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Prøv igjen';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Feil ved sletting av liste';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Feil ved lasting av brukerdata';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Feil ved tillegging av liste';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Feil under oppdatering av listen';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Feil ved å legge til vokabular i listen';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Feil ved sletting av vokabular fra listen';
 }

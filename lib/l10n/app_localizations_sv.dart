@@ -105,7 +105,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get pronunciation_success => 'Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, det stämmer inte riktigt. Försök igen.';
+  String get pronunciation_error => 'Hmm, det stämmer inte helt. Försök igen.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Jag hörde dig säga';
@@ -468,7 +468,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get save => 'Spara';
 
   @override
-  String get card_home_user_day => 'dagar)';
+  String get card_home_user_day => 'dagar';
 
   @override
   String get card_home_user_liste_perso => 'lista(or) Förlorad';
@@ -481,4 +481,22 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Försök igen';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Fel vid borttagning av lista';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Fel vid inläsning av användardata';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Fel vid tillägg av lista';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Fel vid uppdatering av listan';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Fel vid tillägg av ordförråd i listan';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Fel vid borttagning av ordförråd från listan';
 }

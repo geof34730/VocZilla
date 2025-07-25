@@ -9,7 +9,7 @@ import '../../../core/utils/logger.dart';
 
 class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserState> {
   final VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
-
+  VocabulaireUserState? _lastStateBeforeError;
   VocabulaireUserBloc() : super(VocabulaireUserInitial()) {
     on<VocabulaireUserEvent>((event, emit) {
       Logger.Blue.log("VocabulaireUserBloc - Event: $event, Current State: $state");
@@ -21,6 +21,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<UpdateListPerso>(_onUpdateListPerso);
     on<AddVocabulaireListPerso>(_onAddVocabulaireListPerso);
     on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
+    on<VocabulaireUserBlocErrorCleared>(_onVocabulaireUserBlocErrorCleared);
     on<VocabulaireUserUpdate>((event, emit) {
       Logger.Blue.log('VocabulaireUserBloc - Traitement de VocabulaireUserUpdate');
       emit(VocabulaireUserLoading());
@@ -30,7 +31,15 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     });
 
   }
-
+  void _onVocabulaireUserBlocErrorCleared(VocabulaireUserBlocErrorCleared event, Emitter<VocabulaireUserState> emit,) {
+      if (state is VocabulaireUserError) {
+        if (_lastStateBeforeError != null) {
+          emit(_lastStateBeforeError!);
+        } else {
+          emit(VocabulaireUserEmpty());
+      }
+    }
+  }
   Future<void> _onCheckVocabulaireUserStatus(
       CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
     try {
@@ -38,11 +47,10 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       if (userData != null) {
         emit(VocabulaireUserLoaded(userData));
       } else {
-        // Il est préférable d'émettre un état "vide" pour le différencier d'une erreur.
         emit(VocabulaireUserEmpty());
       }
     } catch (e) {
-      emit(VocabulaireUserError("Erreur lors du chargement des données utilisateur : $e"));
+      emit(VocabulaireUserError("vocabulaire_user_error_user_data_not_found"));
     }
   }
 
@@ -53,7 +61,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       emit(VocabulaireUserLoaded(event.data));
     } catch (e) {
       Logger.Red.log("VocabulaireUserError lors du chargement : $e");
-      emit(VocabulaireUserError("erreur : $e"));
+      emit(VocabulaireUserError("vocabulaire_user_error_user_data_not_found"));
     }
   }
 
@@ -64,7 +72,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       emit(ListPersoDeletionSuccess(event.listPersoGuid));
       add(CheckVocabulaireUserStatus());
     } catch (e) {
-      emit(VocabulaireUserError("Erreur lors de la suppression de la liste : $e"));
+      emit(VocabulaireUserError("vocabulaire_user_error_delete_list"));
     }
   }
 
@@ -76,7 +84,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       // Rafraîchit les données après l'action
       add(CheckVocabulaireUserStatus());
     } catch (e) {
-      emit(VocabulaireUserError("Erreur lors de l'ajout de la liste : $e"));
+      emit(VocabulaireUserError("vocabulaire_user_error_add_list_perso"));
     }
   }
 
@@ -88,7 +96,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       // Rafraîchit les données après l'action
       add(CheckVocabulaireUserStatus());
     } catch (e) {
-      emit(VocabulaireUserError("Erreur lors de la mise à jour de la liste : $e"));
+      emit(VocabulaireUserError("vocabulaire_user_error_update_list_perso"));
     }
   }
 
@@ -101,7 +109,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       // Rafraîchit les données après l'action
       add(CheckVocabulaireUserStatus());
     } catch (e) {
-      emit(VocabulaireUserError("Erreur lors de l'ajout du vocabulaire à la liste : $e"));
+      emit(VocabulaireUserError("vocabulaire_user_error_add_vocabulaire_list_perso"));
     }
   }
 
@@ -110,11 +118,12 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       DeleteVocabulaireListPerso event, Emitter<VocabulaireUserState> emit) async {
     try {
       await _vocabulaireUserRepository.deleteVocabulaireListPerso(
-          guidListPerso: event.guidListPerso, guidVocabulaire: event.guidVocabulaire);
+          guidListPerso: event.guidListPerso, guidVocabulaire: event.guidVocabulaire
+      );
       // Rafraîchit les données après l'action
       add(CheckVocabulaireUserStatus());
     } catch (e) {
-      emit(VocabulaireUserError("Erreur lors de la suppression du vocabulaire de la liste : $e"));
+      emit(VocabulaireUserError("vocabulaire_user_error_add_vocabulaire_list_perso"));
     }
   }
 }

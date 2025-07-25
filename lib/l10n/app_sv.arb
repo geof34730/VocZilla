@@ -31,7 +31,7 @@
     "no_vocabulary_items_found": "Inga ordförråd hittades",
     "pronunciation_title": "Uttal",
     "pronunciation_success": "Bravo!",
-    "pronunciation_error": "Hmm, det stämmer inte riktigt. Försök igen.",
+    "pronunciation_error": "Hmm, det stämmer inte helt. Försök igen.",
     "pronunciation_i_heard_you_say": "Jag hörde dig säga",
     "pronunciation_description_action": "Tryck på mikrofonen för att tala och kontrollera ditt uttal.",
     "pronunciation_error1": "Misslyckades med att initiera taligenkänning",
@@ -152,9 +152,15 @@
     "drawer_free_trial_restant": "återstående",
     "erreur_de_chargement_du_profil": "Fel vid inläsning av profil",
     "save": "Spara",
-    "card_home_user_day": "dagar)",
+    "card_home_user_day": "dagar",
     "card_home_user_liste_perso": "lista(or) Förlorad",
     "card_home_share": "delad",
     "card_home_mot": "mot(s)",
-    "card_home_reessayer": "Försök igen"
+    "card_home_reessayer": "Försök igen",
+    "vocabulaire_user_error_delete_list": "Fel vid borttagning av lista",
+    "vocabulaire_user_error_user_data_not_found": "Fel vid inläsning av användardata",
+    "vocabulaire_user_error_add_list_perso": "Fel vid tillägg av lista",
+    "vocabulaire_user_error_update_list_perso": "Fel vid uppdatering av listan",
+    "vocabulaire_user_error_add_vocabulaire_list_perso": "Fel vid tillägg av ordförråd i listan",
+    "vocabulaire_user_error_delete_vocabulaire_list": "Fel vid borttagning av ordförråd från listan"
 }

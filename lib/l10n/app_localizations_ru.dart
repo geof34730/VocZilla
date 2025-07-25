@@ -132,7 +132,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get offline_title => 'Оффлайн';
 
   @override
-  String get offline_description => 'У вас нет подключения к интернету. Пожалуйста, подключитесь к интернету, чтобы продолжить.';
+  String get offline_description => 'У вас нет подключения к интернету. Подключитесь к интернету, чтобы продолжить.';
 
   @override
   String get quizz_progression_title => 'Мой прогресс в этом списке';
@@ -306,7 +306,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Воспользуйтесь бесплатным пробным периодом!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Добро пожаловать! Сейчас у вас бесплатный пробный период';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Добро пожаловать! Сейчас вы пользуетесь бесплатным пробным периодом';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'дней';
@@ -468,7 +468,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get save => 'Сохранять';
 
   @override
-  String get card_home_user_day => 'дней)';
+  String get card_home_user_day => 'дней';
 
   @override
   String get card_home_user_liste_perso => 'список(ы) потерянных';
@@ -481,4 +481,22 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Попробуйте еще раз';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Ошибка удаления списка';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Ошибка загрузки данных пользователя';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Ошибка добавления списка';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Ошибка обновления списка';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Ошибка добавления словаря в список';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Ошибка удаления словаря из списка';
 }

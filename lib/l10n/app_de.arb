@@ -152,9 +152,15 @@
     "drawer_free_trial_restant": "übrig",
     "erreur_de_chargement_du_profil": "Fehler beim Laden des Profils",
     "save": "Speichern",
-    "card_home_user_day": "Tage)",
+    "card_home_user_day": "Tage",
     "card_home_user_liste_perso": "Liste(n) Verloren",
     "card_home_share": "geteilt",
     "card_home_mot": "gegen",
-    "card_home_reessayer": "Versuchen Sie es erneut"
+    "card_home_reessayer": "Versuchen Sie es erneut",
+    "vocabulaire_user_error_delete_list": "Fehler beim Löschen der Liste",
+    "vocabulaire_user_error_user_data_not_found": "Fehler beim Laden der Benutzerdaten",
+    "vocabulaire_user_error_add_list_perso": "Fehler beim Hinzufügen der Liste",
+    "vocabulaire_user_error_update_list_perso": "Fehler beim Aktualisieren der Liste",
+    "vocabulaire_user_error_add_vocabulaire_list_perso": "Fehler beim Hinzufügen von Vokabeln zur Liste",
+    "vocabulaire_user_error_delete_vocabulaire_list": "Fehler beim Löschen des Vokabulars aus der Liste"
 }

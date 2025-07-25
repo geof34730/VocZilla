@@ -189,7 +189,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get home_notlogged_button_go => 'Zaczynamy!';
 
   @override
-  String get freetrial_info1 => 'Twój bezpłatny okres próbny \$daysFreeTrial dobiegł końca';
+  String get freetrial_info1 => 'Twój okres próbny \$daysFreeTrial dobiegł końca';
 
   @override
   String get freetrial_info2 => 'Dołącz do nas i odkryj świat możliwości dzięki naszym ekskluzywnym członkostwom!';
@@ -468,7 +468,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get save => 'Ratować';
 
   @override
-  String get card_home_user_day => 'dni)';
+  String get card_home_user_day => 'dni';
 
   @override
   String get card_home_user_liste_perso => 'lista(y) Zagubione';
@@ -481,4 +481,22 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Spróbuj ponownie';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Błąd podczas usuwania listy';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Błąd ładowania danych użytkownika';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Błąd podczas dodawania listy';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Błąd podczas aktualizacji listy';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Błąd podczas dodawania słownika do listy';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Błąd podczas usuwania słownika z listy';
 }

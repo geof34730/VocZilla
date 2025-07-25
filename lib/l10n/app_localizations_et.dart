@@ -159,7 +159,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get home_title_classement => 'TeamZilla edetabel';
 
   @override
-  String get home_notlogged_accroche1 => 'Täiusta oma inglise keelt!';
+  String get home_notlogged_accroche1 => 'Tõsta oma inglise keelt!';
 
   @override
   String get home_notlogged_accroche2 => 'Kas soovite oma inglise keele sõnavara rikastada?';
@@ -402,7 +402,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get firebase_error_message_user_disabled => 'See kasutajakonto on keelatud.';
 
   @override
-  String get firebase_error_message_invalid_credential => 'Meiliaadress või parool on vale.';
+  String get firebase_error_message_invalid_credential => 'E-posti aadress või parool on vale.';
 
   @override
   String get firebase_error_message_email_already_in_use => 'See e-posti aadress on juba teise konto poolt kasutusel.';
@@ -468,7 +468,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get save => 'Salvesta';
 
   @override
-  String get card_home_user_day => 'päeva)';
+  String get card_home_user_day => 'päevad';
 
   @override
   String get card_home_user_liste_perso => 'nimekiri(d) Kadunud';
@@ -481,4 +481,22 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Proovi uuesti';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Viga nimekirja kustutamisel';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Viga kasutajaandmete laadimisel';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Viga nimekirja lisamisel';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Viga nimekirja värskendamisel';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Sõnavara lisamisel loendisse tekkis viga';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Viga sõnavara loendist kustutamisel';
 }

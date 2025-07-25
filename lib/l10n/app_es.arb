@@ -138,7 +138,7 @@
     "firebase_error_message_error_generic": "Se ha producido un error inesperado. Inténtalo de nuevo.",
     "auth_success_update_profile": "¡Perfil actualizado exitosamente!",
     "vocabulaire_success_delete_list": "Lista eliminada exitosamente",
-    "update_app_text_1": "Ya está disponible una nueva versión de Voczilla con mejoras significativas, nuevas funciones y correcciones de errores para una experiencia aún mejor.",
+    "update_app_text_1": "Una nueva versión de Voczilla está disponible con mejoras significativas, nuevas funciones y correcciones de errores para una experiencia aún mejor.",
     "update_app_text_2": "¡No te pierdas las últimas novedades!",
     "update_app_text_3": "Haga clic a continuación para actualizar ahora",
     "update_app_text_4": "Actualizar VocZilla",
@@ -152,9 +152,15 @@
     "drawer_free_trial_restant": "restante",
     "erreur_de_chargement_du_profil": "Error al cargar el perfil",
     "save": "Ahorrar",
-    "card_home_user_day": "días)",
+    "card_home_user_day": "días",
     "card_home_user_liste_perso": "lista(s) perdida(s)",
     "card_home_share": "compartido",
     "card_home_mot": "contra",
-    "card_home_reessayer": "Intentar otra vez"
+    "card_home_reessayer": "Intentar otra vez",
+    "vocabulaire_user_error_delete_list": "Error al eliminar la lista",
+    "vocabulaire_user_error_user_data_not_found": "Error al cargar los datos del usuario",
+    "vocabulaire_user_error_add_list_perso": "Error al agregar lista",
+    "vocabulaire_user_error_update_list_perso": "Error al actualizar la lista",
+    "vocabulaire_user_error_add_vocabulaire_list_perso": "Error al agregar vocabulario a la lista",
+    "vocabulaire_user_error_delete_vocabulaire_list": "Error al eliminar vocabulario de la lista"
 }

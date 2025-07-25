@@ -152,9 +152,15 @@
     "drawer_free_trial_restant": "restante",
     "erreur_de_chargement_du_profil": "Erro de carregamento de perfil",
     "save": "Salvar",
-    "card_home_user_day": "dias)",
+    "card_home_user_day": "dias",
     "card_home_user_liste_perso": "lista(s) Perdida(s)",
     "card_home_share": "compartilhado",
     "card_home_mot": "contra",
-    "card_home_reessayer": "Tentar novamente"
+    "card_home_reessayer": "Tentar novamente",
+    "vocabulaire_user_error_delete_list": "Erro ao excluir lista",
+    "vocabulaire_user_error_user_data_not_found": "Erro ao carregar dados do usuário",
+    "vocabulaire_user_error_add_list_perso": "Erro ao adicionar lista",
+    "vocabulaire_user_error_update_list_perso": "Erro ao atualizar a lista",
+    "vocabulaire_user_error_add_vocabulaire_list_perso": "Erro ao adicionar vocabulário à lista",
+    "vocabulaire_user_error_delete_vocabulaire_list": "Erro ao excluir vocabulário da lista"
 }

@@ -8,16 +8,11 @@ class VocabulaireUserInitial extends VocabulaireUserState {}
 
 class VocabulaireUserLoading extends VocabulaireUserState {}
 
-
-class VocabulaireUserEmpty extends VocabulaireUserState {
-
-
-}
+class VocabulaireUserEmpty extends VocabulaireUserState {}
 
 class ListPersoDeletionSuccess extends VocabulaireUserState {
   final String deletedListGuid;
-
-   ListPersoDeletionSuccess(this.deletedListGuid);
+  ListPersoDeletionSuccess(this.deletedListGuid);
 
   @override
   List<Object> get props => [deletedListGuid];
@@ -32,7 +27,6 @@ class VocabulaireUserError extends VocabulaireUserState {
   final String error;
   VocabulaireUserError(this.error);
 }
-
 
 class VocabulaireUserUpdate extends VocabulaireUserState {}
 

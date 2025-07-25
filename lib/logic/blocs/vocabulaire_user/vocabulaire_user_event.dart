@@ -44,6 +44,6 @@ class VocabulaireUserUpdate extends VocabulaireUserEvent {
   final Map<String, dynamic> userData;
   VocabulaireUserUpdate(this.userData);
 }
-
+class VocabulaireUserBlocErrorCleared extends VocabulaireUserEvent {}
 
 

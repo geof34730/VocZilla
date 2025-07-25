@@ -468,7 +468,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get save => 'Salvar';
 
   @override
-  String get card_home_user_day => 'dias)';
+  String get card_home_user_day => 'dias';
 
   @override
   String get card_home_user_liste_perso => 'lista(s) Perdida(s)';
@@ -481,4 +481,22 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Tentar novamente';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Erro ao excluir lista';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Erro ao carregar dados do usuário';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Erro ao adicionar lista';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Erro ao atualizar a lista';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Erro ao adicionar vocabulário à lista';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Erro ao excluir vocabulário da lista';
 }

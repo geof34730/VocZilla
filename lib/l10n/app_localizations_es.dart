@@ -426,7 +426,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Lista eliminada exitosamente';
 
   @override
-  String get update_app_text_1 => 'Ya está disponible una nueva versión de Voczilla con mejoras significativas, nuevas funciones y correcciones de errores para una experiencia aún mejor.';
+  String get update_app_text_1 => 'Una nueva versión de Voczilla está disponible con mejoras significativas, nuevas funciones y correcciones de errores para una experiencia aún mejor.';
 
   @override
   String get update_app_text_2 => '¡No te pierdas las últimas novedades!';
@@ -468,7 +468,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get save => 'Ahorrar';
 
   @override
-  String get card_home_user_day => 'días)';
+  String get card_home_user_day => 'días';
 
   @override
   String get card_home_user_liste_perso => 'lista(s) perdida(s)';
@@ -481,4 +481,22 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get card_home_reessayer => 'Intentar otra vez';
+
+  @override
+  String get vocabulaire_user_error_delete_list => 'Error al eliminar la lista';
+
+  @override
+  String get vocabulaire_user_error_user_data_not_found => 'Error al cargar los datos del usuario';
+
+  @override
+  String get vocabulaire_user_error_add_list_perso => 'Error al agregar lista';
+
+  @override
+  String get vocabulaire_user_error_update_list_perso => 'Error al actualizar la lista';
+
+  @override
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Error al agregar vocabulario a la lista';
+
+  @override
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Error al eliminar vocabulario de la lista';
 }
