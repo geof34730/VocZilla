@@ -38,9 +38,10 @@ platform :all do
     # 4. Définir les formats de capture d'écran à générer
     # Exemples:
     # "android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic]
-     #"ios" => %w[iphone4_7_inch iphone5_5_inch iphone5_8_inch iphone6_5_inch iphone6_7_inch ipad_9_7_inch ipad_10_5_inch ipad_11_inch ipad_12_9_inch ipad_13_inch]
-   #"ios" => %w[iphone6_7_inch ipad_12_9_inch iPad Pro (12.9-inch) (3rd generation)],
+    #"ios" => %w[iphone4_7_inch iphone5_5_inch iphone5_8_inch iphone6_5_inch iphone6_7_inch ipad_9_7_inch ipad_10_5_inch ipad_11_inch ipad_12_9_inch ipad_13_inch]
+    #"ios" => %w[iphone6_7_inch ipad_12_9_inch iPad Pro (12.9-inch) (3rd generation)],
     {
+      "android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
       "ios" => %w[iphone6_7_inch ipad_12_9_inch,iPad Pro (12.9-inch) (3rd generation)],
     #  "android" => %w[FeatureGraphic]
     }.each do |platform, folders|

@@ -106,7 +106,7 @@
     "widget_dialogHelper_showfreetrialdialog_description6": "Ikke la opplevelsen din stoppe! Velg abonnementet som passer deg, og fortsett å nyte det uten avbrudd.",
     "widget_dialogHelper_showfreetrialdialog_later": "Seinere",
     "widget_congratulation_bravo": "Bravo",
-    "widget_congratulation_message": "du er ferdig med å lære denne listen",
+    "widget_congratulation_message": "du er ferdig med å lære deg denne listen",
     "widget_radiochoicevocabularylearnedornot_choice1": "Å lære",
     "widget_radiochoicevocabularylearnedornot_choice2": "Alle",
     "title_create_personal_list": "Opprett en tilpasset liste",
@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Slettingsbekreftelse",
     "alert_dialogue_suppression_list_question": "Er du sikker på at du vil slette den tilpassede listen din?",
     "non": "Ikke",
-    "oui": "Ja"
+    "oui": "Ja",
+    "login_confirmer_mot_de_passe": "Bekreft passord",
+    "login_entrer_confirmer_mot_de_passe": "Vennligst skriv inn passordet ditt på nytt",
+    "login_mots_de_passe_differents": "Passordene stemmer ikke overens",
+    "login_tous_champs_obligatoires": "Vennligst fyll ut alle feltene"
 }

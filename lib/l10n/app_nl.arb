@@ -47,7 +47,7 @@
     "home_title_progresse": "Mijn Titan-voortgang",
     "home_title_my_list_perso": "Mijn persoonlijke lijsten",
     "home_title_list_defined": "Van klein monster tot Titan",
-    "home_description_list_perso": "Maak uw eigen woordenschatlijsten aan en pas ze aan, zodat u effectief de woorden van uw keuze kunt leren en herhalen.",
+    "home_description_list_perso": "Maak uw eigen woordenschatlijsten en pas ze aan, zodat u effectief de woorden van uw keuze kunt leren en herhalen.",
     "home_title_classement": "TeamZilla-ranglijst",
     "home_notlogged_accroche1": "Verbeter je Engels!",
     "home_notlogged_accroche2": "Wilt u uw Engelse woordenschat verrijken?",
@@ -74,7 +74,7 @@
     "login_prenom": "Voornaam",
     "login_entrer_prenom": "Voer uw voornaam in",
     "login_nom": "Naam",
-    "login_entrer_nom": "Vul je naam in",
+    "login_entrer_nom": "Voer uw naam in",
     "login_pseudo": "Pseudoniem",
     "login_entrer_pseudo": "Voer je bijnaam in",
     "login_mot_de_passe": "Wachtwoord",
@@ -138,7 +138,7 @@
     "firebase_error_message_error_generic": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
     "auth_success_update_profile": "Profiel succesvol bijgewerkt!",
     "vocabulaire_success_delete_list": "Lijst succesvol verwijderd.",
-    "update_app_text_1": "Er is een nieuwe versie van Voczilla beschikbaar met aanzienlijke verbeteringen, nieuwe functies en bugfixes voor een nog betere ervaring.",
+    "update_app_text_1": "Er is een nieuwe versie van Voczilla beschikbaar met aanzienlijke verbeteringen, nieuwe functies en bugfixes voor een nog betere ervaring",
     "update_app_text_2": "Mis het laatste nieuws niet!",
     "update_app_text_3": "Klik hieronder om nu te updaten",
     "update_app_text_4": "VocZilla bijwerken",
@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Bevestiging van verwijdering",
     "alert_dialogue_suppression_list_question": "Weet u zeker dat u uw aangepaste lijst wilt verwijderen?",
     "non": "Niet",
-    "oui": "Ja"
+    "oui": "Ja",
+    "login_confirmer_mot_de_passe": "Bevestig wachtwoord",
+    "login_entrer_confirmer_mot_de_passe": "Voer uw wachtwoord opnieuw in",
+    "login_mots_de_passe_differents": "Wachtwoorden komen niet overeen",
+    "login_tous_champs_obligatoires": "Vul alle velden in"
 }

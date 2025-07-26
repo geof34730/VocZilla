@@ -5,207 +5,72 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: fastlane all generate_metadata" time="1.348659">
+      <testcase classname="fastlane.lanes" name="00: fastlane all generate_metadata" time="1.321163">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: flutter build apk" time="10.072815">
+      <testcase classname="fastlane.lanes" name="01: flutter build apk" time="59.177583">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: shell command" time="0.168964">
+      <testcase classname="fastlane.lanes" name="02: shell command" time="0.151279">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: shell command" time="0.017022">
+      <testcase classname="fastlane.lanes" name="03: shell command" time="0.010213">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: shell command" time="0.013392">
+      <testcase classname="fastlane.lanes" name="04: adb -s emulator-5554 shell wm size 1080x1920 &amp;&amp; adb -s emulator-5554 shell wm density 420" time="0.100743">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: shell command" time="0.014899">
+      <testcase classname="fastlane.lanes" name="05: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=de           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="62.335121">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: shell command" time="0.012081">
+      <testcase classname="fastlane.lanes" name="06: shell command" time="0.308104">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: shell command" time="0.018522">
+      <testcase classname="fastlane.lanes" name="07: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=en           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="58.435579">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: shell command" time="0.019974">
+      <testcase classname="fastlane.lanes" name="08: shell command" time="0.211495">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: shell command" time="0.028446">
+      <testcase classname="fastlane.lanes" name="09: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=es           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="58.920263">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: shell command" time="0.012957">
+      <testcase classname="fastlane.lanes" name="10: shell command" time="0.222884">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="11: adb -s emulator-5554 shell wm size 2048x2732 &amp;&amp; adb -s emulator-5554 shell wm density 264" time="0.221155">
+      <testcase classname="fastlane.lanes" name="11: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=et           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="58.631667">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="12: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=de           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="59.918856">
+      <testcase classname="fastlane.lanes" name="12: shell command" time="0.202478">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="13: shell command" time="0.2084">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="14: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=en           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="63.162052">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="15: shell command" time="0.221516">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="16: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=es           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="63.86203">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="17: shell command" time="0.212675">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="18: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=et           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="64.109726">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="19: shell command" time="0.209255">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="20: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=fr           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="65.178201">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="21: shell command" time="0.338074">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="22: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=it           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="64.930069">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="23: shell command" time="0.234568">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="24: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=no           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="62.846279">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="25: shell command" time="0.213143">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="26: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=pl           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="66.670565">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="27: shell command" time="0.230983">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="28: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=pt           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="63.98784">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="29: shell command" time="0.220779">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="30: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=ru           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="65.147745">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="31: shell command" time="0.207292">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="32: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=sv           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="63.367049">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="33: shell command" time="0.225554">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="34: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=uk           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="63.172489">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="35: shell command" time="0.224958">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="36: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=zh           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=ios           --dart-define=DESTFOLDER=ipad_13_inch           --screenshot=test_driver/screenshots" time="64.467152">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="37: shell command" time="0.218931">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="38: adb -s emulator-5554 shell wm size reset &amp;&amp; adb -s emulator-5554 shell wm density reset" time="0.236479">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="39: shell command" time="0.012162">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="40: adb -s emulator-5554 emu kill" time="0.01185">
+      <testcase classname="fastlane.lanes" name="13: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=fr           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="2.226858">
         
       </testcase>
     

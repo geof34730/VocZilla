@@ -511,4 +511,16 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get oui => 'Sim';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Confirme sua senha';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Por favor, digite sua senha novamente';
+
+  @override
+  String get login_mots_de_passe_differents => 'As senhas não correspondem';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Por favor preencha todos os campos';
 }

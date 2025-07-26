@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Подтверждение удаления",
     "alert_dialogue_suppression_list_question": "Вы уверены, что хотите удалить свой пользовательский список?",
     "non": "Нет",
-    "oui": "Да"
+    "oui": "Да",
+    "login_confirmer_mot_de_passe": "Подтвердите пароль",
+    "login_entrer_confirmer_mot_de_passe": "Пожалуйста, введите ваш пароль еще раз.",
+    "login_mots_de_passe_differents": "Пароли не совпадают",
+    "login_tous_champs_obligatoires": "Пожалуйста, заполните все поля"
 }

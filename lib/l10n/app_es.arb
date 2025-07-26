@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Confirmación de eliminación",
     "alert_dialogue_suppression_list_question": "¿Está seguro de que desea eliminar su lista personalizada?",
     "non": "No",
-    "oui": "Sí"
+    "oui": "Sí",
+    "login_confirmer_mot_de_passe": "Confirmar Contraseña",
+    "login_entrer_confirmer_mot_de_passe": "Por favor, vuelva a introducir su contraseña",
+    "login_mots_de_passe_differents": "Las contraseñas no coinciden",
+    "login_tous_champs_obligatoires": "Por favor, rellene todos los campos"
 }

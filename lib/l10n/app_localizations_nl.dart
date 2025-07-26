@@ -153,7 +153,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get home_title_list_defined => 'Van klein monster tot Titan';
 
   @override
-  String get home_description_list_perso => 'Maak uw eigen woordenschatlijsten aan en pas ze aan, zodat u effectief de woorden van uw keuze kunt leren en herhalen.';
+  String get home_description_list_perso => 'Maak uw eigen woordenschatlijsten en pas ze aan, zodat u effectief de woorden van uw keuze kunt leren en herhalen.';
 
   @override
   String get home_title_classement => 'TeamZilla-ranglijst';
@@ -234,7 +234,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get login_nom => 'Naam';
 
   @override
-  String get login_entrer_nom => 'Vul je naam in';
+  String get login_entrer_nom => 'Voer uw naam in';
 
   @override
   String get login_pseudo => 'Pseudoniem';
@@ -426,7 +426,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Lijst succesvol verwijderd.';
 
   @override
-  String get update_app_text_1 => 'Er is een nieuwe versie van Voczilla beschikbaar met aanzienlijke verbeteringen, nieuwe functies en bugfixes voor een nog betere ervaring.';
+  String get update_app_text_1 => 'Er is een nieuwe versie van Voczilla beschikbaar met aanzienlijke verbeteringen, nieuwe functies en bugfixes voor een nog betere ervaring';
 
   @override
   String get update_app_text_2 => 'Mis het laatste nieuws niet!';
@@ -511,4 +511,16 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get oui => 'Ja';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Bevestig wachtwoord';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Voer uw wachtwoord opnieuw in';
+
+  @override
+  String get login_mots_de_passe_differents => 'Wachtwoorden komen niet overeen';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Vul alle velden in';
 }

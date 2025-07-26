@@ -20,6 +20,7 @@ import 'data/repository/leaderboard_repository.dart';
 import 'data/repository/vocabulaire_user_repository.dart';
 import 'data/services/localstorage_service.dart';
 import 'data/services/vocabulaires_server_service.dart';
+import 'global.dart';
 import 'l10n/app_localizations.dart';
 import 'logic/blocs/BlocStateTracker.dart';
 import 'logic/blocs/auth/auth_bloc.dart';
@@ -162,10 +163,9 @@ class MyApp extends StatelessWidget {
                        // BlocStateTracker().updateState('VocabulaireUserBloc', state);
                         if (state is ListPersoDeletionSuccess) {
                               context.read<LeaderboardBloc>().add(FetchLeaderboard());
-                              context.read<NotificationBloc>().add(ShowNotification(
-                                  message: getLocalizedSuccessMessage(context, "[SuccessBloc/vocabulaire_success_delete_list]"),
-                                  backgroundColor: Colors.green,
-                              ));
+                              if(!testScreenShot) {
+                                context.read<NotificationBloc>().add(ShowNotification(message: getLocalizedSuccessMessage(context,"[SuccessBloc/vocabulaire_success_delete_list]"),backgroundColor: Colors.green));
+                              }
                         }
                         if (state is VocabulaireUserError) {
                           context.read<NotificationBloc>().add(ShowNotification(

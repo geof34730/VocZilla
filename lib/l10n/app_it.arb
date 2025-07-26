@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Conferma di eliminazione",
     "alert_dialogue_suppression_list_question": "Vuoi davvero eliminare il tuo elenco personalizzato?",
     "non": "Non",
-    "oui": "SÌ"
+    "oui": "SÌ",
+    "login_confirmer_mot_de_passe": "Conferma password",
+    "login_entrer_confirmer_mot_de_passe": "Inserisci nuovamente la password",
+    "login_mots_de_passe_differents": "Le password non corrispondono",
+    "login_tous_champs_obligatoires": "Si prega di compilare tutti i campi"
 }

@@ -312,7 +312,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_days => 'дні';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб відкрити для себе всі можливості нашого застосунку.';
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб ознайомитися з усіма функціями нашого застосунку.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Ви пішли';
@@ -511,4 +511,16 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get oui => 'Так';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Підтвердьте пароль';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Будь ласка, введіть свій пароль ще раз';
+
+  @override
+  String get login_mots_de_passe_differents => 'Паролі не збігаються';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Будь ласка, заповніть усі поля';
 }

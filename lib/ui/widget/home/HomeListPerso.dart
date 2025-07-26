@@ -17,8 +17,10 @@ import 'TitleWidget.dart';
 
 
 class HomelistPerso extends StatelessWidget {
+  int i =0;
   @override
   Widget build(BuildContext context) {
+
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
         builder: (context, state) {
           if (state is VocabulaireUserLoading) {
@@ -26,6 +28,7 @@ class HomelistPerso extends StatelessWidget {
           } else if( state is VocabulaireUserUpdate){
             return Center(child: CircularProgressIndicator());
           } else if (state is VocabulaireUserLoaded  ) {
+            int i =0;
              final VocabulaireUser data = state.data;
              final bool listePerso = data.listPerso.length>0;
               return Column(
@@ -63,11 +66,11 @@ class HomelistPerso extends StatelessWidget {
 
                   if(listePerso)
                     HorizontalScrollViewCardHome(
-                      itemWidth: itemWidthListPerso(
-                          context: context, nbList: 3),
+                      itemWidth: itemWidthListPerso(context: context, nbList: 3),
                           children: data.listPerso.reversed.map((listPerso) {
+                            i=i+1;
                             return CardHome(
-                              keyStringTest: 'buttonDeletePerso${listPerso.guid}',
+                              keyStringTest: i.toString(),
                               nbVocabulaire:listPerso.listGuidVocabulary.length,
                               guid: listPerso.guid,
                               title: listPerso.title,
@@ -80,7 +83,6 @@ class HomelistPerso extends StatelessWidget {
                               paddingLevelBar: EdgeInsets.only(top: 5),
                             );
                           }).toList()
-
                     ),
                 ],
               );
@@ -106,8 +108,6 @@ class HomelistPerso extends StatelessWidget {
   addNewListPerso({required BuildContext context}) {
     Navigator.pushNamed(context, "/personnalisation/step1");
   }
-
-
 
   Card descriptionListPersoEmpty({required BuildContext context}){
     return Card(

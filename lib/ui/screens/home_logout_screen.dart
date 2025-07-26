@@ -49,7 +49,7 @@ class HomeLogoutScreen extends StatelessWidget {
                             style: getFontForLanguage(
                               codelang: codelang,
                               fontSize: 14,
-                              fontWeight: baseStyle?.fontWeight,
+
                             ).copyWith(
                               color: baseStyle?.color,
                             ),

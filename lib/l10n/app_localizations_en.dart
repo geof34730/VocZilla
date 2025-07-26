@@ -426,7 +426,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'List deleted successfully.';
 
   @override
-  String get update_app_text_1 => 'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience';
+  String get update_app_text_1 => 'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience.';
 
   @override
   String get update_app_text_2 => 'Don\'t miss out on the latest news!';
@@ -511,4 +511,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get oui => 'Yes';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Confirm password';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Please re-enter your password';
+
+  @override
+  String get login_mots_de_passe_differents => 'Passwords do not match';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Please fill in all fields';
 }

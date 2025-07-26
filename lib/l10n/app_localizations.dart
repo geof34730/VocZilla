@@ -956,7 +956,7 @@ abstract class AppLocalizations {
   /// No description provided for @update_app_text_1.
   ///
   /// In en, this message translates to:
-  /// **'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience'**
+  /// **'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience.'**
   String get update_app_text_1;
 
   /// No description provided for @update_app_text_2.
@@ -1126,6 +1126,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Yes'**
   String get oui;
+
+  /// No description provided for @login_confirmer_mot_de_passe.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password'**
+  String get login_confirmer_mot_de_passe;
+
+  /// No description provided for @login_entrer_confirmer_mot_de_passe.
+  ///
+  /// In en, this message translates to:
+  /// **'Please re-enter your password'**
+  String get login_entrer_confirmer_mot_de_passe;
+
+  /// No description provided for @login_mots_de_passe_differents.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords do not match'**
+  String get login_mots_de_passe_differents;
+
+  /// No description provided for @login_tous_champs_obligatoires.
+  ///
+  /// In en, this message translates to:
+  /// **'Please fill in all fields'**
+  String get login_tous_champs_obligatoires;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

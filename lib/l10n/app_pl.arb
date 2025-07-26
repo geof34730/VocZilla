@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Potwierdzenie usunięcia",
     "alert_dialogue_suppression_list_question": "Czy na pewno chcesz usunąć swoją listę niestandardową?",
     "non": "Nie",
-    "oui": "Tak"
+    "oui": "Tak",
+    "login_confirmer_mot_de_passe": "Potwierdź hasło",
+    "login_entrer_confirmer_mot_de_passe": "Proszę ponownie wpisać hasło",
+    "login_mots_de_passe_differents": "Hasła nie pasują",
+    "login_tous_champs_obligatoires": "Proszę wypełnić wszystkie pola"
 }

@@ -9,6 +9,7 @@ import '../../../core/utils/logger.dart';
 import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
+import '../../../global.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_bloc.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_event.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
@@ -245,41 +246,52 @@ class CardHome extends StatelessWidget {
                       ),
                     ],
                     ElevatedButtonCardHome(
-                      valueKey: 'buttonDeletePerso${keyStringTest}',
+                      valueKey: "buttonDeletePerso${keyStringTest}",
                       colorIcon: Colors.red,
                       onClickButton: () {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext dialogContext) {
-                            return AlertDialog(
-                              title: Text(context.loc.alert_dialogue_suppression_list_title), // Vous pouvez aussi utiliser context.loc ici
-                              content: Text("${context.loc.alert_dialogue_suppression_list_question.replaceAll("?", "")} $title ?"),
-                              actions: <Widget>[
-                                OutlinedButton(
-                                  child: Text(context.loc.non),
-                                  onPressed: () {
-                                    Navigator.of(dialogContext).pop();
-                                  },
-                                  style: OutlinedButton.styleFrom(
-                                    foregroundColor: Colors.grey.shade700,
-                                    side: BorderSide(color: Colors.grey.shade400),
+                        if(testScreenShot) {
+                          BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(guid));
+                        }
+                        else {
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext dialogContext) {
+                              return AlertDialog(
+                                title: Text(context.loc
+                                    .alert_dialogue_suppression_list_title),
+
+                                content: Text("${context.loc
+                                    .alert_dialogue_suppression_list_question
+                                    .replaceAll("?", "")} $title ?"),
+                                actions: <Widget>[
+                                  OutlinedButton(
+                                    child: Text(context.loc.non),
+                                    onPressed: () {
+                                      Navigator.of(dialogContext).pop();
+                                    },
+                                    style: OutlinedButton.styleFrom(
+                                      foregroundColor: Colors.grey.shade700,
+                                      side: BorderSide(
+                                          color: Colors.grey.shade400),
+                                    ),
                                   ),
-                                ),
-                                ElevatedButton(
-                                  child: Text(context.loc.oui),
-                                  onPressed: () {
-                                    BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(guid));
-                                    Navigator.of(dialogContext).pop();
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.red,
-                                    foregroundColor: Colors.white,
+                                  ElevatedButton(
+                                    child: Text(context.loc.oui),
+                                    onPressed: () {
+                                      BlocProvider.of<VocabulaireUserBloc>(
+                                          context).add(DeleteListPerso(guid));
+                                      Navigator.of(dialogContext).pop();
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.red,
+                                      foregroundColor: Colors.white,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            );
-                          },
-                        );
+                                ],
+                              );
+                            },
+                          );
+                        }
                       },
                       iconContent: Icons.delete,
                       context: context,

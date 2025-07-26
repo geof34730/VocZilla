@@ -28,7 +28,7 @@
     "button_next": "套房",
     "error_loading": "加载错误",
     "unknown_error": "未知错误",
-    "no_vocabulary_items_found": "未找到任何词汇条目",
+    "no_vocabulary_items_found": "未找到任何词汇",
     "pronunciation_title": "发音",
     "pronunciation_success": "好极了！",
     "pronunciation_error": "嗯，不太对。再试一次。",
@@ -48,7 +48,7 @@
     "home_title_my_list_perso": "我的个人清单",
     "home_title_list_defined": "从小怪兽到泰坦",
     "home_description_list_perso": "创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。",
-    "home_title_classement": "TeamZilla排名",
+    "home_title_classement": "TeamZilla 排名",
     "home_notlogged_accroche1": "提高你的英语水平！",
     "home_notlogged_accroche2": "你想丰富你的英语词汇量吗？",
     "home_notlogged_accroche3": "访问 ",
@@ -91,7 +91,7 @@
     "email_validation_msg_email_send": "验证邮件已发送至您的邮箱地址",
     "email_validation_instruction": "请查看您的收件箱，并按照说明验证您的电子邮件地址。这将使我们能够确认您的注册，并允许您访问我们服务的所有功能。",
     "email_validation_help": "如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。",
-    "email_validation_merci_register2": "感谢您的信任！",
+    "email_validation_merci_register2": "谢谢您的信任！",
     "send_mail": "收到新的验证邮件",
     "personnalisation_step1_title_list": "列表标题",
     "personnalisation_step1_color_choice": "从列表中选择颜色",
@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "删除确认",
     "alert_dialogue_suppression_list_question": "您确定要删除您的自定义列表吗？",
     "non": "非",
-    "oui": "是的"
+    "oui": "是的",
+    "login_confirmer_mot_de_passe": "确认密码",
+    "login_entrer_confirmer_mot_de_passe": "请重新输入您的密码",
+    "login_mots_de_passe_differents": "密码不匹配",
+    "login_tous_champs_obligatoires": "请填写所有字段"
 }

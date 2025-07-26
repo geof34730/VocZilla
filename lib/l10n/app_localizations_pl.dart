@@ -511,4 +511,16 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get oui => 'Tak';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Potwierdź hasło';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Proszę ponownie wpisać hasło';
+
+  @override
+  String get login_mots_de_passe_differents => 'Hasła nie pasują';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Proszę wypełnić wszystkie pola';
 }

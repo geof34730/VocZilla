@@ -511,4 +511,16 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get oui => 'SÌ';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Conferma password';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Inserisci nuovamente la password';
+
+  @override
+  String get login_mots_de_passe_differents => 'Le password non corrispondono';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Si prega di compilare tutti i campi';
 }

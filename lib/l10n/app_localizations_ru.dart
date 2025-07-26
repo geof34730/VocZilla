@@ -511,4 +511,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get oui => 'Да';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Подтвердите пароль';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Пожалуйста, введите ваш пароль еще раз.';
+
+  @override
+  String get login_mots_de_passe_differents => 'Пароли не совпадают';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Пожалуйста, заполните все поля';
 }

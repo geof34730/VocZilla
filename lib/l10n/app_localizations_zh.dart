@@ -96,7 +96,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unknown_error => '未知错误';
 
   @override
-  String get no_vocabulary_items_found => '未找到任何词汇条目';
+  String get no_vocabulary_items_found => '未找到任何词汇';
 
   @override
   String get pronunciation_title => '发音';
@@ -156,7 +156,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get home_description_list_perso => '创建和定制您自己的词汇表，以有效地学习和复习您选择的单词。';
 
   @override
-  String get home_title_classement => 'TeamZilla排名';
+  String get home_title_classement => 'TeamZilla 排名';
 
   @override
   String get home_notlogged_accroche1 => '提高你的英语水平！';
@@ -285,7 +285,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get email_validation_help => '如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。';
 
   @override
-  String get email_validation_merci_register2 => '感谢您的信任！';
+  String get email_validation_merci_register2 => '谢谢您的信任！';
 
   @override
   String get send_mail => '收到新的验证邮件';
@@ -511,4 +511,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get oui => '是的';
+
+  @override
+  String get login_confirmer_mot_de_passe => '确认密码';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => '请重新输入您的密码';
+
+  @override
+  String get login_mots_de_passe_differents => '密码不匹配';
+
+  @override
+  String get login_tous_champs_obligatoires => '请填写所有字段';
 }

@@ -138,7 +138,7 @@
     "firebase_error_message_error_generic": "An unexpected error has occurred. Please try again.",
     "auth_success_update_profile": "Profile successfully updated!",
     "vocabulaire_success_delete_list": "List deleted successfully.",
-    "update_app_text_1": "A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience",
+    "update_app_text_1": "A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience.",
     "update_app_text_2": "Don't miss out on the latest news!",
     "update_app_text_3": "Click below to update now",
     "update_app_text_4": "Update VocZilla",
@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Deletion confirmation",
     "alert_dialogue_suppression_list_question": "Are you sure you want to delete your custom list?",
     "non": "Non",
-    "oui": "Yes"
+    "oui": "Yes",
+    "login_confirmer_mot_de_passe": "Confirm password",
+    "login_entrer_confirmer_mot_de_passe": "Please re-enter your password",
+    "login_mots_de_passe_differents": "Passwords do not match",
+    "login_tous_champs_obligatoires": "Please fill in all fields"
 }

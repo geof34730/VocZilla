@@ -306,7 +306,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Dra nytta av din kostnadsfria provperiod!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har just nu en gratis provperiod på';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Välkommen! Du har för närvarande en gratis provperiod på';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'dagar';
@@ -511,4 +511,16 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get oui => 'Ja';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Bekräfta lösenord';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Ange ditt lösenord igen';
+
+  @override
+  String get login_mots_de_passe_differents => 'Lösenorden matchar inte';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Vänligen fyll i alla fält';
 }

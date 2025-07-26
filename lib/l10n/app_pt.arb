@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Confirmação de exclusão",
     "alert_dialogue_suppression_list_question": "Tem certeza de que deseja excluir sua lista personalizada?",
     "non": "Não",
-    "oui": "Sim"
+    "oui": "Sim",
+    "login_confirmer_mot_de_passe": "Confirme sua senha",
+    "login_entrer_confirmer_mot_de_passe": "Por favor, digite sua senha novamente",
+    "login_mots_de_passe_differents": "As senhas não correspondem",
+    "login_tous_champs_obligatoires": "Por favor preencha todos os campos"
 }

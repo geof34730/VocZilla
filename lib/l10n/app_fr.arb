@@ -166,5 +166,11 @@
     "alert_dialogue_suppression_list_title" : "Confirmation de suppression",
     "alert_dialogue_suppression_list_question" : "Êtes-vous sûr de vouloir supprimer votre liste personnalisée",
     "non" : "Non",
-    "oui" : "Oui"
+    "oui" : "Oui",
+    "login_ou_inscrivez_vous_avec" : "Ou inscrivez-vous avec",
+    "login_confirmer_mot_de_passe": "Confirmer le mot de passe",
+    "login_entrer_confirmer_mot_de_passe": "Entrez à nouveau votre mot de passe",
+    "login_mots_de_passe_differents": "Les mots de passe ne correspondent pas",
+    "login_tous_champs_obligatoires": "Veuillez remplir tous les champs",
+    "email_validation_merci_register" : "Merci de vous être inscrit !"
 }

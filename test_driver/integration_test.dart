@@ -118,15 +118,18 @@ void main() {
         await takeScreenshot(driver, getNameFile('login_screen'));
 
         await driver.tap(find.byValueKey('login_field'));
-        await driver.enterText('geoffrey.petain@gmail.com');
+        await driver.enterText('voczilla.test2@flutter-now.com');
         await driver.tap(find.byValueKey('password_field'));
-        await driver.enterText('sdfsdfs@ddd-df');
+        await driver.enterText('Hefpccy%08%08');
 
         await driver.waitFor(find.byValueKey('validate_login_button'));
         await driver.tap(find.byValueKey('validate_login_button'));
 
         await driver.waitFor(find.byValueKey('home_logged'));
-        await driver.tap(find.byValueKey('buttonAddList'));
+        await takeScreenshot(driver, getNameFile('homeperso'));
+
+
+        await driver.tap(find.byValueKey('button_create_list'));
 
         await driver.waitFor(find.byValueKey('perso_list_step1'));
         await driver.tap(find.byValueKey('title_perso_field'));
@@ -143,8 +146,12 @@ void main() {
 
 
         await tapBackButton(driver);
-        await driver.waitFor(find.byValueKey('home_logged'));
-        await takeScreenshot(driver, getNameFile('homeperso'));
+
+        final deleteButtonFinder = find.byValueKey('buttonDeletePerso1');
+            await driver.waitFor(deleteButtonFinder);
+            await driver.tap(deleteButtonFinder);
+
+
 
         // Learn
         await driver.tap(find.byValueKey('buttonLearntop20'));

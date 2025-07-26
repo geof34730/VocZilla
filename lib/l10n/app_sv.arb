@@ -98,7 +98,7 @@
     "profil_update_title": "Uppdatera din profil",
     "profil_complete_registration_title": "Slutför din registrering",
     "widget_dialogHelper_showfreetrialdialog_description1": "Dra nytta av din kostnadsfria provperiod!",
-    "widget_dialogHelper_showfreetrialdialog_description2": "Välkommen! Du har just nu en gratis provperiod på",
+    "widget_dialogHelper_showfreetrialdialog_description2": "Välkommen! Du har för närvarande en gratis provperiod på",
     "widget_dialogHelper_showfreetrialdialog_days": "dagar",
     "widget_dialogHelper_showfreetrialdialog_description3": "för att upptäcka alla funktioner i vår applikation.",
     "widget_dialogHelper_showfreetrialdialog_description4": "Du har lämnat",
@@ -166,5 +166,9 @@
     "alert_dialogue_suppression_list_title": "Bekräftelse av radering",
     "alert_dialogue_suppression_list_question": "Är du säker på att du vill ta bort din anpassade lista?",
     "non": "Icke",
-    "oui": "Ja"
+    "oui": "Ja",
+    "login_confirmer_mot_de_passe": "Bekräfta lösenord",
+    "login_entrer_confirmer_mot_de_passe": "Ange ditt lösenord igen",
+    "login_mots_de_passe_differents": "Lösenorden matchar inte",
+    "login_tous_champs_obligatoires": "Vänligen fyll i alla fält"
 }

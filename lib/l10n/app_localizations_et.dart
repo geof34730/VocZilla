@@ -141,7 +141,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get quizz_en => 'Sisse';
 
   @override
-  String get quizz_saisie_in => 'Sisesta tõlge';
+  String get quizz_saisie_in => 'Sisestage tõlge';
 
   @override
   String get home_title_progresse => 'Minu Titani edusammud';
@@ -159,7 +159,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get home_title_classement => 'TeamZilla edetabel';
 
   @override
-  String get home_notlogged_accroche1 => 'Tõsta oma inglise keelt!';
+  String get home_notlogged_accroche1 => 'Täiusta oma inglise keelt!';
 
   @override
   String get home_notlogged_accroche2 => 'Kas soovite oma inglise keele sõnavara rikastada?';
@@ -402,7 +402,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get firebase_error_message_user_disabled => 'See kasutajakonto on keelatud.';
 
   @override
-  String get firebase_error_message_invalid_credential => 'Meiliaadress või parool on vale.';
+  String get firebase_error_message_invalid_credential => 'E-posti aadress või parool on vale.';
 
   @override
   String get firebase_error_message_email_already_in_use => 'See e-posti aadress on juba teise konto poolt kasutusel.';
@@ -498,7 +498,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Sõnavara lisamisel loendisse tekkis viga';
 
   @override
-  String get vocabulaire_user_error_delete_vocabulaire_list => 'Viga sõnavara loendist kustutamisel';
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Sõnavara loendist kustutamisel tekkis viga';
 
   @override
   String get alert_dialogue_suppression_list_title => 'Kustutamise kinnitus';
@@ -511,4 +511,16 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get oui => 'Jah';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Kinnita parool';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Palun sisestage oma parool uuesti';
+
+  @override
+  String get login_mots_de_passe_differents => 'Paroolid ei ühti';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Palun täitke kõik väljad';
 }

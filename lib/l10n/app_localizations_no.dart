@@ -330,7 +330,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_congratulation_bravo => 'Bravo';
 
   @override
-  String get widget_congratulation_message => 'du er ferdig med å lære denne listen';
+  String get widget_congratulation_message => 'du er ferdig med å lære deg denne listen';
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice1 => 'Å lære';
@@ -511,4 +511,16 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get oui => 'Ja';
+
+  @override
+  String get login_confirmer_mot_de_passe => 'Bekreft passord';
+
+  @override
+  String get login_entrer_confirmer_mot_de_passe => 'Vennligst skriv inn passordet ditt på nytt';
+
+  @override
+  String get login_mots_de_passe_differents => 'Passordene stemmer ikke overens';
+
+  @override
+  String get login_tous_champs_obligatoires => 'Vennligst fyll ut alle feltene';
 }
