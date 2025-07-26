@@ -37,7 +37,7 @@ class HomelistThemes extends StatelessWidget {
                           isListTheme: true,
                           nbVocabulaire:listTheme.listGuidVocabulary.length,
                           guid: listTheme.guid,
-                          title: listTheme.title[LanguageUtils().getSmallCodeLanguage(context: context).toLowerCase()] ?? "Default Title",
+                          title: listTheme.title[LanguageUtils.getSmallCodeLanguage(context: context).toLowerCase()] ?? "Default Title",
                           backgroundColor: Colors.greenAccent, // Remplacez par la couleur appropriée
                           list: listTheme,
                           //isListTheme:true,

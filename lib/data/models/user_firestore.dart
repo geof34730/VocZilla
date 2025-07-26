@@ -32,8 +32,7 @@ abstract class UserFirestore with _$UserFirestore {
   factory UserFirestore.fromJson(Map<String, dynamic> json) =>
       _$UserFirestoreFromJson(json);
 
-  static Future<UserFirestore> fromUserCredential(
-      UserCredential userCredential) async {
+  static Future<UserFirestore> fromUserCredential(UserCredential userCredential) async {
     final user = userCredential.user!;
     String? urlPhoto;
 

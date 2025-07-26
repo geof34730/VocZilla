@@ -41,7 +41,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
   @override
   Widget build(BuildContext context) {
     String guidListPerso=widget.guidListPerso;
-    final langCode = LanguageUtils().getSmallCodeLanguage(context: context);
+    final langCode = LanguageUtils.getSmallCodeLanguage(context: context);
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
       builder: (context, state) {
         if (state is VocabulairesLoading) {

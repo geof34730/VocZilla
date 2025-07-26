@@ -49,7 +49,7 @@ class DataUserRepository {
       firstName: firstName,
       lastName: lastName,
       pseudo: pseudo,
-      imageAvatar: imageAvatar,
+      imageAvatar:imageAvatar
     );
 
     // Invalide le cache local en le supprimant.

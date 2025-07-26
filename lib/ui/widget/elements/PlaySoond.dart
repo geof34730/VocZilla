@@ -1,17 +1,17 @@
+// lib/ui/widget/elements/PlaySoond.dart
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/utils/logger.dart';
-import '../../../global.dart';
-
 final player = AudioPlayer();
+
 class PlaySoond {
   final String guidVocabulaire;
-  late double sizeButton;
-  late Color iconColor;
-  late Color buttonColor;
-  late IconData iconData;
-  late Function? onpressedActionSup;
+  final double sizeButton;
+  final Color iconColor;
+  final Color buttonColor;
+  final IconData iconData;
+  final VoidCallback? onpressedActionSup;
 
   PlaySoond({
     required this.guidVocabulaire,
@@ -24,23 +24,26 @@ class PlaySoond {
 
   Widget buttonPlay() {
     return Material(
-      shape: CircleBorder(),
-      color: buttonColor, // Background color of the CircleAvatar
+      shape: const CircleBorder(),
+      color: buttonColor,
       child: InkWell(
-        customBorder: CircleBorder(),
+        customBorder: const CircleBorder(),
         onTap: () {
-            playAudio(guidVocabulaire: guidVocabulaire);
+          // On exécute d'abord l'action supplémentaire (annuler l'enregistrement)
           if (onpressedActionSup != null) {
-            onpressedActionSup;
+            // CORRECTION CRITIQUE : Appel de la fonction avec les parenthèses ()
+            onpressedActionSup!();
           }
+          // Puis on joue le son
+          playAudio(guidVocabulaire: guidVocabulaire);
         },
         child: CircleAvatar(
           radius: sizeButton,
-          backgroundColor: Colors.transparent, // Make the CircleAvatar transparent
+          backgroundColor: Colors.transparent,
           child: Icon(
             iconData,
             color: iconColor,
-            size: sizeButton, // Adjust the size relative to the button size
+            size: sizeButton,
           ),
         ),
       ),
@@ -49,6 +52,6 @@ class PlaySoond {
 
   void playAudio({required String guidVocabulaire}) async {
     await player.stop();
-    await player.play(AssetSource('audios/gcloud/${guidVocabulaire}.mp3'));
+    await player.play(AssetSource('audios/gcloud/$guidVocabulaire.mp3'));
   }
 }

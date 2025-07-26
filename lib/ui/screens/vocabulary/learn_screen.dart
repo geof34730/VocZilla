@@ -127,7 +127,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
                                               Text(
-                                                "${data[numItemVocabulary][LanguageUtils().getSmallCodeLanguage(context: context)]}",
+                                                "${data[numItemVocabulary][LanguageUtils.getSmallCodeLanguage(context: context)]}",
                                                 style: TextStyle(
                                                   fontSize: 40,
                                                   fontWeight: FontWeight.bold,

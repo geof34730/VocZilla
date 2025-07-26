@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../../core/utils/logger.dart';
 import '../models/user_firestore.dart';
 
 class DataUserService {
@@ -8,6 +9,8 @@ class DataUserService {
   Future<UserFirestore?> getUserFromFirestore(String uid) async {
     final docSnapshot = await _usersCollection.doc(uid).get();
     if (docSnapshot.exists) {
+      Logger.Green.log("getUserFromFirestore $uid ${docSnapshot.data()}");
+
       return UserFirestore.fromJson(docSnapshot.data() as Map<String, dynamic>);
     }
     return null;

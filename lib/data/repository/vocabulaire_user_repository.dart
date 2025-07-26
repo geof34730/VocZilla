@@ -11,23 +11,22 @@ class VocabulaireUserRepository {
   final VocabulaireServerService vocabulaireServerService = VocabulaireServerService();
 
   VocabulaireUserRepository();
-/*
+
   Future<void> initializeVocabulaireUserData() async {
     Logger.Pink.log('********VocabulaireUserRepository: initializeUserData');
     try {
-      /*final serverData = await vocabulaireServerService.fetchUserData();
+      final serverData = await vocabulaireServerService.fetchUserData();
       if (serverData != null) {
         final userData = VocabulaireUser.fromJson(serverData);
         await localStorageService.saveUserData(userData.toJson());
-      }*/
+      }
 
     } catch (e) {
       // Gérer les erreurs de récupération de données
       print('Erreur lors de la récupération des données utilisateur : $e');
-
     }
   }
-*/
+
 
   Future<void> updateListTheme() async {
     try {
@@ -46,6 +45,10 @@ class VocabulaireUserRepository {
   }
 
   Future<VocabulaireUser?> getVocabulaireUserData() async {
+
+
+
+    Logger.Green.log("getVocabulaireUserData 222");
     try {
       var userDataJson = await localStorageService.getUserData();
 

@@ -8,6 +8,8 @@ class LeaderboardService {
   LeaderboardService();
   final Dio _dio = Dio();
   Future<List<LeaderboardUser>> fetchTopUsers() async {
+
+    Logger.Pink.log('fetchTopUsers: $serverLeaderBoardUrl');
     try {
       final response = await _dio.get(serverLeaderBoardUrl);
       if (response.statusCode == 200 && response.data is List) {

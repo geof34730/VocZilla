@@ -76,9 +76,6 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => LocalizationCubit()),
           BlocProvider(create: (context) => PurchaseBloc()..add(LoadProducts())),
           BlocProvider(create: (context) => UserBloc(UserRepository())..add(CheckUserStatus())),
-
-
-
           BlocProvider(create: (context) => VocabulairesBloc()),
           BlocProvider(create: (context) => UpdateBloc()..add(CheckForUpdate())),
           BlocProvider(create: (context) => VocabulaireUserBloc()..add(CheckVocabulaireUserStatus())),
@@ -140,10 +137,21 @@ class MyApp extends StatelessWidget {
                           BlocStateTracker().updateState('VocabulairesBloc', state);
                       },
                     ),*/
-
+                    BlocListener<AuthBloc, AuthState>(
+                      listener: (context, state) {
+                        if (state is AuthAuthenticated) {
+                          Logger.Green.log("User is authenticated, loading user data for UID: ${state.userProfile.uid}");
+                          context.read<UserBloc>().add(LoadUserData(state.userProfile.uid));
+                        }
+                        // Optionnel mais recommandé : gérer la déconnexion
+                        else if (state is AuthUnauthenticated) {
+                          context.read<UserBloc>().add(CheckUserStatus());
+                        }
+                      },
+                    ),
                     BlocListener<UserBloc, UserState>(
                       listener: (context, state) {
-                        //BlocStateTracker().updateState('UserBloc', state);
+                        BlocStateTracker().updateState('UserBloc', state);
                         if (state is UserLoaded) {
                           context.read<VocabulaireUserBloc>().add(VocabulaireUserUpdate(state.userData));
                         }
@@ -166,9 +174,6 @@ class MyApp extends StatelessWidget {
                           ));
                           context.read<VocabulaireUserBloc>().add(VocabulaireUserBlocErrorCleared());
                         }
-
-
-
                       },
                     ),
                     BlocListener<NotificationBloc, NotificationState>(

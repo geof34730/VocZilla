@@ -6,6 +6,7 @@ import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/models/user_firestore.dart';
 import '../../../data/repository/data_user_repository.dart';
+import '../../../data/services/localstorage_service.dart';
 import '../notification/notification_event.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'auth_event.dart';
@@ -182,10 +183,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Future<void> _onSignOutRequested( SignOutRequested event, Emitter<AuthState> emit) async {
     try {
       await _authRepository.signOut();
+      await LocalStorageService().clearUser();
       emit(AuthUnauthenticated());
     } catch (e) {
       emit(AuthError(message: 'auth-error-deconnect'));
-
     }
   }
 

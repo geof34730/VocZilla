@@ -18,6 +18,7 @@ class LocalStorageService {
 
   /// Sauvegarde l'objet UserFirestore en le convertissant d'abord en String JSON.
   Future<void> saveUser(UserFirestore user) async {
+    Logger.Green.log("LocalStorageService saveUser $user");
     try {
       final prefs = await SharedPreferences.getInstance();
       // 1. Convertir l'objet UserFirestore en Map.
@@ -63,6 +64,7 @@ class LocalStorageService {
   }
 
   Future<Map<String, dynamic>?> getUserData() async {
+
     final prefs = await SharedPreferences.getInstance();
     final userDataString = prefs.getString('userData');
     if (userDataString != null) {

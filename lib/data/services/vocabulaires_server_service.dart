@@ -62,7 +62,5 @@ class VocabulaireServerService {
     } else {
       Logger.Red.log("Impossible de sauvegarder : uid ou ListGuidVocabularyLearned manquant");
     }
-
-
   }
 }

@@ -40,7 +40,7 @@ class _ListScreenState extends State<ListScreen> {
               return vocabulaire['EN']
                   .toLowerCase()
                   .contains(searchQuery.toLowerCase()) ||
-                  vocabulaire[LanguageUtils().getSmallCodeLanguage(context: context)]
+                  vocabulaire[LanguageUtils.getSmallCodeLanguage(context: context)]
                       .toLowerCase()
                       .contains(searchQuery.toLowerCase());
             }).toList();
@@ -213,7 +213,7 @@ class VocabularyDataSource extends DataTableSource {
         ),
         DataCell(
           Center(
-              child: Text(vocabulaire[LanguageUtils().getSmallCodeLanguage(context: context) ?? ''],
+              child: Text(vocabulaire[LanguageUtils.getSmallCodeLanguage(context: context) ?? ''],
               style: TextStyle(
                 fontFamily: 'Roboto',
               ),

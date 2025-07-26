@@ -109,7 +109,7 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
                         ),
                       ),
                       Text(
-                        "(${data[randomItemData][LanguageUtils().getSmallCodeLanguage(context: context)]})",
+                        "(${data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)]})",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 14,
@@ -283,19 +283,10 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
 
   next() {
     Navigator.pushReplacementNamed(context, '/vocabulary/pronunciation');
-
-    /*
-    setState(() {
-      refrechRandom=true;
-      viewResulte=false;
-    });
-    */
-
   }
 
 
   void _toggleRecording() {
-
    if(isRecording){
       _stopListening();
       _stopAnimation();

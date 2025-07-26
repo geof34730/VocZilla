@@ -156,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    FutureBuilder<String>(
+                    /*FutureBuilder<String>(
                       future: getAppVersion(),
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {
@@ -164,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                         return const SizedBox.shrink();
                       },
-                    ),
+                    ),*/
                   ],
                 ),
               ),
