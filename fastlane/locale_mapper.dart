@@ -54,7 +54,7 @@ const Map<String, String> _playLocaleMapping = {
    'sr': 'sr', 'sk': 'sk', 'sl': 'sl',  'sw': 'sw',
   'fil': 'fil', 'cs': 'cs-CZ', 'th': 'th',  'uk': 'uk', 'vi': 'vi',
   'zu': 'zu','gu':'gu','kk':'kk','pa':'pa','sq':'sq','ur':'ur',
-
+  'ar':'ar',
   // Gestion de l'Indonésien (id/in)
   'id': 'id',
   'in': 'id', // 'in' est un ancien code pour 'id'
@@ -67,7 +67,7 @@ const Map<String, String> _playLocaleMapping = {
   'zh': 'zh-CN', // Défaut pour 'zh'
   'sv': 'sv-SE',
   'ta' : 'ta-IN',
-  'te': 'te-IN',// Défaut pour 'ta-IN"
+  'te': 'te-IN', // Défaut pour 'ta-IN"
   'tr': 'tr-TR',
   'de': 'de-DE',
   'fi': 'fi-FI',
@@ -82,6 +82,26 @@ const Map<String, String> _playLocaleMapping = {
   'pl': 'pl-PL',
   'ru': 'ru-RU',
   'da': 'da-DK',
+  'az':"az-AZ",
+  'be':'be',
+  'bn':'bn-BD',
+  'eu':'eu-ES',
+  'fa':'fa-IR',
+  'gl':'gl-ES',
+  'he':"iw-IL",
+  'hy':"hy-AM",
+  'ka':'ka-GE',
+  'km':'km-KH',
+  'kn':'kn-IN',
+  'ky':'ky-KG',
+  'lo':'lo-LA',
+  'mk':'mk-MK',
+  'ml':'ml-in',
+  'mn':'mn-MN',
+  'mr':'mr-in',
+  'my':'my-MM',
+  'ne':'ne-NP',
+  'si':'si-LK',
   // Mappages régionaux qui sont déjà corrects et supportés (pour la robustesse)
   'en-US': 'en-US', 'en-GB': 'en-GB', 'zh-HK': 'zh-HK', 'zh-CN': 'zh-CN',
   'zh-TW': 'zh-TW', 'es-419': 'es-419', 'es-ES': 'es-ES', 'fr-CA': 'fr-CA',
@@ -90,36 +110,28 @@ const Map<String, String> _playLocaleMapping = {
 
 /// CORRIGÉ : Liste des locales officiellement supportées par VOTRE Google Play Store.
 const Set<String> _playSupportedLocales = {
-  'af', 'de', 'am', 'en-US', 'en-GB', 'bg', 'ca', 'zh-HK', 'zh-CN', 'zh-TW',
-  'ko', 'hr', 'da', 'es-419', 'es-ES', 'et', 'fi', 'fr-CA', 'fr-FR', 'el',
-   'hi', 'hu', 'id', 'in', 'is', 'it', 'ja', 'lv', 'lt', 'ms', 'nl',
-  'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sr', 'sk', 'sl', 'sv', 'sw',
-  'fil', 'cs', 'th', 'tr', 'uk', 'vi', 'zu','gu','kk','pa','sq','ta','te','ur'
+  'be','ar','af','az', 'de', 'am', 'en-US', 'en-GB', 'bg', 'ca', 'zh-HK', 'zh-CN', 'zh-TW',
+  'ko', 'hr', 'da', 'es-419', 'es-ES', 'et', 'fi', 'fr-CA', 'fr-FR', 'el','si'
+   'hi', 'hu', 'id', 'in', 'is', 'it', 'ja', 'lv', 'lt', 'ms', 'nl','mk','my','ne',
+  'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sr', 'sk', 'sl', 'sv', 'sw','ka','km','kn','ky','lo','mn','mr',
+  'fil', 'cs', 'th', 'tr', 'uk', 'vi', 'zu','gu','kk','pa','sq','ta','te','ur','bn','eu','fa','gl','he','hy','ml'
 };
 
 /// Convertit une locale du projet en sa version pour le Google Play Store.
 String? toPlayLocale(String locale) {
-  // Tente un mappage direct
-  if (_playLocaleMapping.containsKey(locale)) {
-    final playLocale = _playLocaleMapping[locale]!;
-    return _playSupportedLocales.contains(playLocale) ? playLocale : null;
+  // Normalise la locale (ex: ja_JP -> ja-JP)
+  final normalizedLocale = locale.replaceAll('_', '-');
+
+  // 1. Cherche un mappage explicite pour les codes simples (ex: 'ja' -> 'ja-JP')
+  if (_playLocaleMapping.containsKey(normalizedLocale)) {
+    return _playLocaleMapping[normalizedLocale];
   }
 
-  // Gère les cas comme "en_GB" -> "en-GB"
-  final match = RegExp(r'^([a-z]{2,3})[_-]([A-Z]{2,3}|[A-Z][a-z]{3})$').firstMatch(locale);
-  if (match != null) {
-    final lang = match.group(1)!;
-    final region = match.group(2)!;
-    final playLocale = '$lang-$region';
-    if (_playSupportedLocales.contains(playLocale)) {
-      return playLocale;
-    }
+  // 2. Vérifie si la locale est déjà dans un format supporté (ex: 'fr-CA')
+  if (_playSupportedLocales.contains(normalizedLocale)) {
+    return normalizedLocale;
   }
 
-  // Si déjà dans un format supporté
-  if (_playSupportedLocales.contains(locale)) {
-    return locale;
-  }
-
+  // 3. La locale n'est pas supportée
   return null;
 }

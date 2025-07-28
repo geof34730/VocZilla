@@ -57,7 +57,7 @@ class AppRoute {
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
-    if (forFeatureGraphic && settings.name == AppRoute.home) {
+   if (forFeatureGraphic && settings.name == AppRoute.home) {
       return MaterialPageRoute(
         settings: settings,
         builder: (context) => FeatureGraphic(),
