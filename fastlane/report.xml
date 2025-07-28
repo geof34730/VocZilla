@@ -5,72 +5,12 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: fastlane all generate_metadata" time="1.321163">
+      <testcase classname="fastlane.lanes" name="0: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="1.365687">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: flutter build apk" time="59.177583">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="02: shell command" time="0.151279">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="03: shell command" time="0.010213">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="04: adb -s emulator-5554 shell wm size 1080x1920 &amp;&amp; adb -s emulator-5554 shell wm density 420" time="0.100743">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="05: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=de           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="62.335121">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="06: shell command" time="0.308104">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="07: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=en           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="58.435579">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="08: shell command" time="0.211495">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="09: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=es           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="58.920263">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="10: shell command" time="0.222884">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="11: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=et           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="58.631667">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="12: shell command" time="0.202478">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="13: caffeinate -s flutter drive           --driver=test_driver/integration_test.dart           --target=test_driver/app.dart           -d emulator-5554           --dart-define=LOCALE=fr           --dart-define=FOR_FEATURE_GRAPHIC=false           --dart-define=PLATFORM=android           --dart-define=DESTFOLDER=phoneScreenshots           --screenshot=test_driver/screenshots" time="2.226858">
+      <testcase classname="fastlane.lanes" name="1: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="0.239322">
         
       </testcase>
     

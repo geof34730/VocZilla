@@ -11,6 +11,8 @@ import 'firebase_initialiser.dart';
 import 'package:vobzilla/app.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
+import 'global.dart';
+
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 final RouteObserver<ModalRoute<void>> routeObserver = RouteObserver<ModalRoute<void>>();
@@ -20,11 +22,12 @@ FirebaseMessaging messaging = FirebaseMessaging.instance;
 void main({bool shootScreenShot = false,String? localForce=null}) async {
   WidgetsFlutterBinding.ensureInitialized();
 
-
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+  if(!testScreenShot) {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   await FirebaseInitializer.initialize();

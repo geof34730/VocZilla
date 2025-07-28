@@ -38,47 +38,51 @@ String? toAppleLocale(String locale) {
   return null; // Fallback : la locale n'est pas supportée.
 }
 
-// ===========================================================================
-// LOGIQUE POUR GOOGLE PLAY (ANDROID)
+/// ===========================================================================
+// LOGIQUE POUR GOOGLE PLAY (ANDROID) - CORRIGÉ
 // ===========================================================================
 
 /// Mappage des locales du projet vers les locales spécifiques à Google Play.
-/// Basé sur la liste exhaustive du Fastfile, avec les ambiguïtés résolues.
+/// CORRIGÉ : Cette table est maintenant basée sur la liste officielle de votre
+/// fiche Play Store. Elle résout les ambiguïtés (ex: 'fr' -> 'fr-FR') et
+/// mappe les codes simples vers eux-mêmes si c'est le format attendu.
 const Map<String, String> _playLocaleMapping = {
-  'af': 'af-ZA', 'am': 'am-ET', 'ar': 'ar-EG', 'az': 'az-AZ', 'be': 'be-BY',
-  'bg': 'bg-BG', 'bn': 'bn-BD', 'bs': 'bs-BA', 'ca': 'ca-ES', 'cs': 'cs-CZ',
-  'da': 'da-DK', 'de': 'de-DE', 'el': 'el-GR', 'en': 'en-US', 'es': 'es-ES',
-  'et': 'et','eu': 'eu-ES', 'fa': 'fa-IR', 'fi': 'fi-FI', 'fr': 'fr-FR',
-  'gl': 'gl-ES', 'gu': 'gu-IN', 'hi': 'hi-IN', 'hr': 'hr-HR', 'hu': 'hu-HU',
-  'hy': 'hy-AM', 'id': 'id-ID', 'is': 'is-IS', 'it': 'it-IT', 'iw': 'iw-IL',
-  'ja': 'ja-JP', 'ka': 'ka-GE', 'kk': 'kk-KZ', 'km': 'km-KH', 'kn': 'kn-IN',
-  'ko': 'ko-KR', 'ky': 'ky-KG', 'lo': 'lo-LA', 'lt': 'lt-LT', 'lv': 'lv-LV',
-  'mk': 'mk-MK', 'ml': 'ml-IN', 'mn': 'mn-MN', 'mr': 'mr-IN', 'ms': 'ms-MY',
-  'my': 'my-MM', 'ne': 'ne-NP', 'nl': 'nl-NL', 'no': 'no-NO', 'pa': 'pa-IN',
-  'pl': 'pl-PL',
-  'pt': 'pt-BR', // Spécifique à Android : Portugais (Brésil)
-  'pt-PT': 'pt-PT', 'pt-BR': 'pt-BR',
-  'ro': 'ro-RO', 'ru': 'ru-RU', 'si': 'si-LK', 'sk': 'sk-SK', 'sl': 'sl-SI',
-  'sq': 'sq-AL', 'sr': 'sr-Latn', 'sv': 'sv-SE', 'sw': 'sw-KE', 'ta': 'ta-IN',
-  'te': 'te-IN', 'th': 'th-TH', 'tr': 'tr-TR', 'uk': 'uk', 'ur': 'ur-PK',
-  'uz': 'uz-UZ', 'vi': 'vi-VN',
-  'zh': 'zh-CN', 'zh-TW': 'zh-TW', 'zh-HK': 'zh-HK',
-  'zu': 'zu-ZA'
+  // Mappages directs (le code simple est le format attendu)
+  'af': 'af', 'de': 'de', 'am': 'am', 'bg': 'bg', 'ca': 'ca', 'ko': 'ko',
+  'hr': 'hr', 'da': 'da', 'et': 'et', 'fi': 'fi', 'el': 'el', 'he': 'he',
+  'hi': 'hi', 'hu': 'hu', 'is': 'is', 'it': 'it', 'ja': 'ja', 'lv': 'lv',
+  'lt': 'lt', 'ms': 'ms', 'nl': 'nl', 'no': 'no', 'pl': 'pl', 'ro': 'ro',
+  'ru': 'ru', 'sr': 'sr', 'sk': 'sk', 'sl': 'sl',  'sw': 'sw',
+  'fil': 'fil', 'cs': 'cs', 'th': 'th',  'uk': 'uk', 'vi': 'vi',
+  'zu': 'zu','gu':'gu','kk':'kk','pa':'pa','sq':'sq','ur':'ur',
+
+  // Gestion de l'Indonésien (id/in)
+  'id': 'id',
+  'in': 'id', // 'in' est un ancien code pour 'id'
+
+  // Mappages pour résoudre les ambiguïtés ou suivre des règles spécifiques
+  'fr': 'fr-FR', // Instruction explicite : fr -> fr-FR
+  'en': 'en-US', // Défaut pour 'en'
+  'es': 'es-ES', // Défaut pour 'es'
+  'pt': 'pt-BR', // Défaut pour 'pt'
+  'zh': 'zh-CN', // Défaut pour 'zh'
+  'sv': 'sv-SE',
+  'ta' : 'ta-IN',
+  'te': 'te-IN',// Défaut pour 'ta-IN"
+  'tr': 'tr-TR',
+  // Mappages régionaux qui sont déjà corrects et supportés (pour la robustesse)
+  'en-US': 'en-US', 'en-GB': 'en-GB', 'zh-HK': 'zh-HK', 'zh-CN': 'zh-CN',
+  'zh-TW': 'zh-TW', 'es-419': 'es-419', 'es-ES': 'es-ES', 'fr-CA': 'fr-CA',
+  'fr-FR': 'fr-FR', 'pt-BR': 'pt-BR', 'pt-PT': 'pt-PT',
 };
 
-/// Liste des locales officiellement supportées par le Google Play Store.
+/// CORRIGÉ : Liste des locales officiellement supportées par VOTRE Google Play Store.
 const Set<String> _playSupportedLocales = {
-  'af-ZA', 'am-ET', 'ar-EG', 'az-AZ', 'be-BY', 'bg-BG', 'bn-BD', 'bs-BA',
-  'ca-ES', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'en-US', 'en-GB', 'en-AU',
-  'en-CA', 'en-IN', 'en-SG', 'en-ZA', 'es-ES', 'es-419', 'et', 'eu-ES',
-  'fa-IR', 'fi-FI', 'fr-FR', 'fr-CA', 'gl-ES', 'gu-IN', 'hi-IN', 'hr-HR',
-  'hu-HU', 'hy-AM', 'id-ID', 'is-IS', 'it-IT', 'iw-IL', 'ja-JP', 'ka-GE',
-  'kk-KZ', 'km-KH', 'kn-IN', 'ko-KR', 'ky-KG', 'lo-LA', 'lt-LT', 'lv-LV',
-  'mk-MK', 'ml-IN', 'mn-MN', 'mr-IN', 'ms-MY', 'my-MM', 'ne-NP', 'nl-NL',
-  'no-NO', 'pa-IN', 'pl-PL', 'pt-BR', 'pt-PT', 'ro-RO', 'ru-RU', 'si-LK',
-  'sk-SK', 'sl-SI', 'sq-AL', 'sr-Latn', 'sv-SE', 'sw-KE', 'ta-IN',
-  'te-IN', 'th-TH', 'tr-TR', 'uk', 'ur-PK', 'uz-UZ', 'vi-VN', 'zh-CN',
-  'zh-TW', 'zh-HK', 'zu-ZA'
+  'af', 'de', 'am', 'en-US', 'en-GB', 'bg', 'ca', 'zh-HK', 'zh-CN', 'zh-TW',
+  'ko', 'hr', 'da', 'es-419', 'es-ES', 'et', 'fi', 'fr-CA', 'fr-FR', 'el',
+  'he', 'hi', 'hu', 'id', 'in', 'is', 'it', 'ja', 'lv', 'lt', 'ms', 'nl',
+  'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sr', 'sk', 'sl', 'sv', 'sw',
+  'fil', 'cs', 'th', 'tr', 'uk', 'vi', 'zu','gu','kk','pa','sq','ta','te','ur'
 };
 
 /// Convertit une locale du projet en sa version pour le Google Play Store.

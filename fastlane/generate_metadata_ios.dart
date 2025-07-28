@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'locale_mapper.dart';
 
-// dart fastlane/generate_metadata_ios.dart
+// 📦 Récupère le dernier build number depuis le fichier JSON
 Future<int> getLastBuildNumber() async {
   final file = File('deploy-info.json');
   if (!await file.exists()) {
@@ -10,8 +10,7 @@ Future<int> getLastBuildNumber() async {
   }
   final content = await file.readAsString();
   final jsonData = json.decode(content);
-  int last = jsonData['lastBuildNumber'];
-  return last+1;
+  return jsonData['lastBuildNumber'];
 }
 
 void main() async {
@@ -19,11 +18,39 @@ void main() async {
   final inputDir = Directory('$projectRoot/lib/l10n');
   final outputDir = Directory('$projectRoot/fastlane/metadata/ios');
 
-  if (!await inputDir.exists()) {
+  // ✅ Gère le lien symbolique
+  String resolvedPath;
+  final expectedLinkTarget = '/Volumes/data/voczilla/metadata/ios';
+
+  if (Link(outputDir.path).existsSync()) {
+    try {
+      resolvedPath = outputDir.resolveSymbolicLinksSync();
+    } on FileSystemException {
+      final linkTarget = Link(outputDir.path).targetSync();
+      print('⚠️ Lien cassé détecté vers : $linkTarget');
+      final resolved = Directory(linkTarget);
+      if (!resolved.existsSync()) {
+        print('📁 Création du dossier cible manquant : $linkTarget');
+        resolved.createSync(recursive: true);
+      }
+      resolvedPath = resolved.path;
+    }
+  } else {
+    print('🔗 Lien symbolique manquant. Création de $outputDir → $expectedLinkTarget');
+    Link(outputDir.path).createSync(expectedLinkTarget, recursive: true);
+    final resolved = Directory(expectedLinkTarget);
+    if (!resolved.existsSync()) {
+      print('📁 Création du dossier cible : $expectedLinkTarget');
+      resolved.createSync(recursive: true);
+    }
+    resolvedPath = resolved.path;
+  }
+
+  if (!inputDir.existsSync()) {
     print('❌ Dossier lib/l10n introuvable.');
     exit(1);
   } else {
-    print('✅  Dossier lib/l10n trouvé.');
+    print('✅ Dossier lib/l10n trouvé.');
   }
 
   final files = inputDir
@@ -31,7 +58,6 @@ void main() async {
       .where((file) => file.path.endsWith('.arb'))
       .toList();
 
-  print(files);
   final buildNumber = await getLastBuildNumber();
 
   for (final file in files) {
@@ -44,14 +70,19 @@ void main() async {
     final description = content['app_description'] ?? 'description manquante';
     final title = content['app_title'] ?? 'Titre manquant';
     final keywords = content['app_keywords'] ?? 'keyword manquant';
-    final shortDescription = content['app_short_description'] ?? 'short description manquant';
-    final releaseNote = content['app_release_note'] ?? 'app release note manquant';
-    final String subtitle=content['app_subtitle'] ?? 'app subtitle manquant';
-    final iosLocale = toAppleLocale(locale); // Utilise la bibliothèque partagée
+    final shortDescription = content['app_short_description'] ?? 'short description manquante';
+    final releaseNote = content['app_release_note'] ?? 'app release note manquante';
+    final subtitle = content['app_subtitle'] ?? 'app subtitle manquant';
+
+    final iosLocale = toAppleLocale(locale);
+    if (iosLocale == null) {
+      print('⚠️ Locale non supportée pour iOS ignorée: $locale');
+      continue;
+    }
 
     writeMetadata(
-      outputDir.path,
-      iosLocale!,
+      resolvedPath,
+      iosLocale,
       title,
       subtitle,
       description,
@@ -59,10 +90,10 @@ void main() async {
       shortDescription,
       releaseNote,
       buildNumber,
-      "https://flutter-now.com/voczilla-politique-de-confidentialite/"
+      "https://flutter-now.com/voczilla-politique-de-confidentialite/",
     );
 
-    print('✅ Métadonnées générées pour $locale → $iosLocale');
+    print('✅ Métadonnées iOS générées pour $locale → $iosLocale');
   }
 }
 
@@ -80,23 +111,20 @@ void writeMetadata(
     ) {
   final path = '$basePath/$localePath';
   Directory(path).createSync(recursive: true);
-  Directory("$path/app_review_information").createSync(recursive: true);
+  Directory('$path/app_review_information').createSync(recursive: true);
 
-  // Keywords
   final trimmedKeywords = keywords.trim();
   final limitedKeywords = truncateKeywords(trimmedKeywords);
   if (limitedKeywords.length < trimmedKeywords.length) {
-    print("⚠️ [$localePath] Keywords truncated to 100 characters.");
+    print("⚠️ [$localePath] Keywords tronqués à 100 caractères.");
   }
 
-  // Subtitle
   final trimmedSubtitle = subtitle.trim();
   final limitedSubtitle = truncateSubtitle(trimmedSubtitle);
   if (limitedSubtitle.length < trimmedSubtitle.length) {
-    print("⚠️ [$localePath] Subtitle truncated to 30 characters.");
+    print("⚠️ [$localePath] Subtitle tronqué à 30 caractères.");
   }
 
-  // Fichiers attendus par Fastlane/deliver pour iOS
   File('$path/name.txt').writeAsStringSync(title.trim());
   File('$path/description.txt').writeAsStringSync(desc.trim());
   File('$path/keywords.txt').writeAsStringSync(limitedKeywords);
@@ -112,30 +140,21 @@ void writeMetadata(
   File('$path/app_review_information/demo_password.txt').writeAsStringSync("Hefpccy%08%08");
 }
 
-
-/// Nettoie les mots-clés de caractères invisibles ou problématiques
-String cleanKeywords(String input) {
-  return input
-      .replaceAll(RegExp(r'\s+'), ' ') // espaces multiples, tab, \n, etc. -> 1 espace
-      .replaceAll(String.fromCharCode(160), ' ') // remplace U+00A0 (espace insécable)
-      .trim();
-}
-
-/// Limite à 100 caractères max sans couper les mots (séparés par virgule)
 String truncateKeywords(String input) {
   final parts = input.split(',').map((s) => s.trim()).toList();
   List<String> selected = [];
   int totalLength = 0;
 
   for (final keyword in parts) {
-    int keywordLength = keyword.length + (selected.isNotEmpty ? 2 : 0); // +2 pour ", "
-    if (totalLength + keywordLength > 100) break;
+    final length = keyword.length + (selected.isNotEmpty ? 2 : 0);
+    if (totalLength + length > 100) break;
     selected.add(keyword);
-    totalLength += keywordLength;
+    totalLength += length;
   }
 
   return selected.join(', ');
 }
+
 String truncateSubtitle(String input) {
   if (input.length <= 30) return input;
   final words = input.split(' ');

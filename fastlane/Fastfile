@@ -1,9 +1,6 @@
-# /Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/Fastfile
-
 platform :all do
   desc "📸 Générer les métadonnées et captures d'écran Android & iOS multilingues"
 
-  # Lane pour générer uniquement les fichiers de métadonnées (titres, descriptions, etc.)
   lane :generate_metadata do
     project_root = File.expand_path("..", __dir__)
     dart_script_android = File.join(project_root, "fastlane/generate_metadata_android.dart")
@@ -19,70 +16,76 @@ platform :all do
     Dir.chdir(project_root) { sh("dart '#{dart_script_ios}'") }
   end
 
-  # Lane complète pour générer les captures d'écran
   lane :screenshots do
     avd_name = "emulator_tablet_10pouces_screenshots_voczilla"
     project_root = File.expand_path("..", __dir__)
 
-    # 1. Générer les métadonnées textuelles
+    # On nettoie une seule fois au début pour être sûr de partir sur de bonnes bases
+    UI.message("🧹 Nettoyage initial du projet...")
+    sh("flutter clean")
+
+    # On génère les métadonnées (titres, descriptions, etc.)
     sh("fastlane all generate_metadata")
 
-    # 2. Construire l'APK pour les tests
-    UI.message("📦 Construction APK...")
-    sh("flutter build apk")
-
-    # 3. Démarrer l'émulateur
     UI.message("🌟 Lancement de l'émulateur...")
     start_emulator_once(avd_name)
 
-    # 4. Définir les formats de capture d'écran à générer
-    # Exemples:
-    # "android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic]
-    #"ios" => %w[iphone4_7_inch iphone5_5_inch iphone5_8_inch iphone6_5_inch iphone6_7_inch ipad_9_7_inch ipad_10_5_inch ipad_11_inch ipad_12_9_inch ipad_13_inch]
-    #"ios" => %w[iphone6_7_inch ipad_12_9_inch iPad Pro (12.9-inch) (3rd generation)],
+    # On recompile l'application une seule fois après le clean
+    UI.message("📦 Construction de l'application...")
+    sh("flutter build apk")
+
     {
-      "android" => %w[phoneScreenshots sevenInchScreenshots tenInchScreenshots FeatureGraphic],
-      "ios" => %w[iphone6_7_inch ipad_12_9_inch,iPad Pro (12.9-inch) (3rd generation)],
-    #  "android" => %w[FeatureGraphic]
+      "ios" => [
+        'iPad Pro (12.9-inch) (3rd generation)',
+        'iphone6_7_inch', # 💅 CORRIGÉ : Espace en fin de ligne supprimée
+        'ipad_12_9_inch'
+      ],
+      "android" => [
+        'phoneScreenshots',
+        'sevenInchScreenshots',
+        'tenInchScreenshots',
+        'FeatureGraphic'
+      ]
     }.each do |platform, folders|
       folders.each do |folder|
         run_screenshots_for_folder(folder, platform)
       end
+      sh("flutter clean")
     end
 
-    # 5. Arrêter l'émulateur
     UI.message("🚩 Arrêt de l'émulateur...")
     stop_emulator
+
+    UI.success("✅ Toutes les captures d'écran ont été générées avec succès !")
   end
 
-  # Appelle le script Dart centralisé pour obtenir la locale normalisée pour un store.
-  # C'est la méthode recommandée pour garantir la cohérence dans tout le projet.
+  # Cette fonction est le pont entre Ruby (Fastlane) et Dart (votre logique de mappage).
+  # Elle est déjà correcte et garantit que la logique de locale_mapper.dart est respectée.
   def get_normalized_locale(locale, platform)
     project_root = File.expand_path("..", __dir__)
-    # On appelle le script "pont" qui, lui, utilise la logique de locale_mapper.dart
     map_script = File.join(project_root, "fastlane/invoke_locale_mapper.dart")
     UI.user_error!("❌ Script de mapping de locale introuvable: #{map_script}") unless File.exist?(map_script)
 
-    # Exécute le script Dart et capture sa sortie. `log: false` évite de polluer la console.
     normalized = sh("dart \"#{map_script}\" #{platform} #{locale}", log: false).strip
-
-    # Retourne la locale si le script a produit une sortie, sinon nil.
     return normalized.empty? ? nil : normalized
   end
 
-  # Exécute la prise de captures pour un format d'appareil donné
   def run_screenshots_for_folder(dest_folder, platformStore)
     project_root = File.expand_path("..", __dir__)
     screenshots_dir = File.join(project_root, "test_driver/screenshots/")
     emulator_id = get_running_emulator_id
-
     set_emulator_resolution(emulator_id, dest_folder)
 
     locales = extract_locales
     UI.user_error!("❌ Aucune locale trouvée dans lib/l10n") if locales.empty?
 
     locales.each do |locale|
-      # Il est crucial de nettoyer le dossier pour CHAQUE locale
+      normalized_locale = get_normalized_locale(locale, platformStore)
+      if normalized_locale.nil?
+        UI.important("⚠️ Locale #{locale} non supportée pour #{platformStore}. Ignorée.")
+        next
+      end
+
       FileUtils.rm_rf(screenshots_dir)
       FileUtils.mkdir_p(screenshots_dir)
 
@@ -96,47 +99,41 @@ platform :all do
           -d #{emulator_id} \
           --dart-define=LOCALE=#{locale} \
           --dart-define=FOR_FEATURE_GRAPHIC=#{is_feature} \
-          --dart-define=PLATFORM=#{platformStore} \
-          --dart-define=DESTFOLDER=#{dest_folder} \
+          --dart-define=PLATFORM='#{platformStore}' \
+          --dart-define=DESTFOLDER='#{dest_folder}' \
           --screenshot=test_driver/screenshots")
       rescue => e
         UI.error("🚨 Erreur durant flutter drive pour #{locale}/#{dest_folder} : #{e}")
         next
       end
 
-      # Utilise la logique centralisée pour obtenir le nom du dossier de locale
-      normalized_locale = get_normalized_locale(locale, platformStore)
-      next unless normalized_locale
-
-      # Supprime les captures d'écran par défaut générées par flutter_driver (ex: driver_01.png)
       driver_files_to_delete = Dir[File.join(screenshots_dir, "driver*.png")]
-      unless driver_files_to_delete.empty?
-        UI.message("🗑️  Suppression des captures intermédiaires: #{driver_files_to_delete.join(', ')}")
-        FileUtils.rm(driver_files_to_delete)
-      end
+      FileUtils.rm(driver_files_to_delete) unless driver_files_to_delete.empty?
 
-      # Copie les captures d'écran restantes
       screenshots = Dir[File.join(screenshots_dir, "*.png")]
 
-      dest_dir = if is_feature
-                   File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/")
-                 else
-                   if platformStore == "ios"
-                     File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/")
-                   else
-                     File.join(project_root, "fastlane/metadata/#{platformStore}/#{normalized_locale}/images/#{dest_folder}/")
-                   end
-                 end
+      # 💅 AMÉLIORATION : Logique de chemin clarifiée
+      relative_metadata = if is_feature
+                            File.join(platformStore, normalized_locale, "images")
+                          elsif platformStore == "ios"
+                            File.join(platformStore, normalized_locale)
+                          else # android
+                            File.join(platformStore, normalized_locale, "images", dest_folder)
+                          end
 
-      UI.message("📁 Copie des captures vers : #{dest_dir}")
-      FileUtils.mkdir_p(dest_dir)
-      screenshots.empty? ? UI.important("Aucune capture pour #{locale}") : FileUtils.cp(screenshots, dest_dir)
+      dest_dir_project = File.join(project_root, "fastlane/metadata", relative_metadata)
+      dest_dir_symlink = File.join("/Volumes/data/voczilla/metadata", relative_metadata)
+
+      [dest_dir_project, dest_dir_symlink].each do |dest_dir|
+        UI.message("📁 Copie des captures vers : #{dest_dir}")
+        FileUtils.mkdir_p(dest_dir)
+        screenshots.empty? ? UI.important("Aucune capture pour #{locale}") : FileUtils.cp(screenshots, dest_dir)
+      end
     end
 
     reset_emulator_resolution(emulator_id)
   end
 
-  # Extrait les locales depuis les noms de fichiers .arb
   def extract_locales
     project_root = File.expand_path("..", __dir__)
     arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
@@ -144,8 +141,6 @@ platform :all do
     UI.user_error!("❌ Aucune locale trouvée dans les fichiers ARB.") if locales.empty?
     locales
   end
-
-  # --- Helpers pour l'émulateur ---
 
   def get_running_emulator_id
     line = sh("adb devices", log: false).lines.find { |l| l.start_with?("emulator") && l.include?("device") }
@@ -191,39 +186,19 @@ platform :all do
   end
 
   def set_emulator_resolution(emulator_id, dest_folder)
-    case dest_folder
-    when "phoneScreenshots"
-      sh("adb -s #{emulator_id} shell wm size 1080x1920 && adb -s #{emulator_id} shell wm density 420")
-    when "sevenInchScreenshots"
-      sh("adb -s #{emulator_id} shell wm size 800x1280 && adb -s #{emulator_id} shell wm density 213")
-    when "tenInchScreenshots"
-      sh("adb -s #{emulator_id} shell wm size 1600x2560 && adb -s #{emulator_id} shell wm density 320")
-    when "FeatureGraphic"
-      sh("adb -s #{emulator_id} shell wm size 1024x500 && adb -s #{emulator_id} shell wm density 160")
-    when "iphone4_7_inch"
-      sh("adb -s #{emulator_id} shell wm size 750x1334 && adb -s #{emulator_id} shell wm density 326")
-    when "iphone5_5_inch"
-      sh("adb -s #{emulator_id} shell wm size 1242x2208 && adb -s #{emulator_id} shell wm density 401")
-    when "iphone5_8_inch"
-      sh("adb -s #{emulator_id} shell wm size 1125x2436 && adb -s #{emulator_id} shell wm density 458")
-    when "iphone6_1_inch"
-      sh("adb -s #{emulator_id} shell wm size 1170x2532 && adb -s #{emulator_id} shell wm density 460")
-    when "iphone6_5_inch"
-      sh("adb -s #{emulator_id} shell wm size 1242x2688 && adb -s #{emulator_id} shell wm density 458")
-    when "iphone6_7_inch"
-      sh("adb -s #{emulator_id} shell wm size 1290x2796 && adb -s #{emulator_id} shell wm density 460")
-    when "ipad_9_7_inch"
-      sh("adb -s #{emulator_id} shell wm size 1536x2048 && adb -s #{emulator_id} shell wm density 264")
-    when "ipad_10_5_inch"
-      sh("adb -s #{emulator_id} shell wm size 1668x2224 && adb -s #{emulator_id} shell wm density 264")
-    when "ipad_11_inch"
-      sh("adb -s #{emulator_id} shell wm size 1668x2388 && adb -s #{emulator_id} shell wm density 264")
-    when "ipad_12_9_inch"
-      sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
-    when "iPad Pro (12.9-inch) (3rd generation)"
-      sh("adb -s #{emulator_id} shell wm size 2048x2732 && adb -s #{emulator_id} shell wm density 264")
-    when "Mac"
-      sh("adb -s #{emulator_id} shell wm size 1440x900 && adb -s #{emulator_id} shell wm density 220")
+    resolution_map = {
+      "phoneScreenshots" => ["1080x1920", "420"],
+      "sevenInchScreenshots" => ["800x1280", "213"],
+      "tenInchScreenshots" => ["1600x2560", "320"],
+      "FeatureGraphic" => ["1024x500", "160"],
+      "iphone6_7_inch" => ["1290x2796", "460"],
+      "ipad_12_9_inch" => ["2048x2732", "264"],
+      "iPad Pro (12.9-inch) (3rd generation)" => ["2048x2732", "264"]
+    }
+
+    size, density = resolution_map[dest_folder] || [nil, nil]
+    if size && density
+      sh("adb -s #{emulator_id} shell wm size #{size} && adb -s #{emulator_id} shell wm density #{density}")
     else
       UI.error("Unsupported size: #{dest_folder}")
     end
