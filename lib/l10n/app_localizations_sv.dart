@@ -12,6 +12,12 @@ class AppLocalizationsSv extends AppLocalizations {
   String get app_release_note => 'Distribution av den första versionen av VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funktionen för att dela listor kommer att finnas tillgänglig mycket snart!';
+
+  @override
+  String get information => 'Information';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -105,7 +111,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get pronunciation_success => 'Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, det stämmer inte riktigt. Försök igen.';
+  String get pronunciation_error => 'Hmm, det stämmer inte helt. Försök igen.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Jag hörde dig säga';

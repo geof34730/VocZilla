@@ -12,6 +12,12 @@ class AppLocalizationsFi extends AppLocalizations {
   String get app_release_note => 'VocZillan ensimmäisen version käyttöönotto';
 
   @override
+  String get share_list_perso_alert_disponible => 'Listan jakamisominaisuus on saatavilla pian!';
+
+  @override
+  String get information => 'Tiedot';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get apprendre_title => 'Oppia';
 
   @override
-  String get language_locale => 'Finnois';
+  String get language_locale => 'Finnish';
 
   @override
   String get language_anglais => 'englanti';

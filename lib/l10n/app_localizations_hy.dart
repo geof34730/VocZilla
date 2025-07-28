@@ -12,6 +12,12 @@ class AppLocalizationsHy extends AppLocalizations {
   String get app_release_note => 'VocZilla-ի առաջին տարբերակի տեղակայումը';
 
   @override
+  String get share_list_perso_alert_disponible => 'Ցուցակի համօգտագործման գործառույթը շատ շուտով հասանելի կլինի։';
+
+  @override
+  String get information => 'Տեղեկատվություն';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get apprendre_title => 'Սովորել';
 
   @override
-  String get language_locale => 'Arménien';
+  String get language_locale => 'Armenian';
 
   @override
   String get language_anglais => 'անգլերեն';
@@ -492,7 +498,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Սխալ առաջացավ ցուցակը ավելացնելիս։';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Սխալ առաջացավ ցուցակը թարմացնելիս։';
+  String get vocabulaire_user_error_update_list_perso => 'Սխալ՝ ցուցակը թարմացնելիս';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Սխալ՝ բառապաշարը ցանկին ավելացնելիս։';

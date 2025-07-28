@@ -12,6 +12,12 @@ class AppLocalizationsOr extends AppLocalizations {
   String get app_release_note => 'VocZillaର ପ୍ରଥମ ସଂସ୍କରଣର ନିୟୋଜନ';
 
   @override
+  String get share_list_perso_alert_disponible => 'ତାଲିକା ସେୟାରିଂ ବୈଶିଷ୍ଟ୍ୟ ଖୁବ୍ ଶୀଘ୍ର ଉପଲବ୍ଧ ହେବ!';
+
+  @override
+  String get information => 'ସୂଚନା';
+
+  @override
   String get app_title => 'ଭୋକ୍‌ଜିଲା';
 
   @override

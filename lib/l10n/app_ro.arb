@@ -1,5 +1,7 @@
 {
     "app_release_note": "Implementarea primei versiuni de VocZilla",
+    "share_list_perso_alert_disponible": "Funcția de partajare a listei va fi disponibilă foarte curând!",
+    "information": "Informaţii",
     "app_title": "VocZilla",
     "app_subtitle": "Vocabularul englezesc",
     "app_description": "VocZilla este aplicația perfectă pentru a-ți extinde vocabularul în limba engleză, indiferent de nivelul tău. Descoperă mii de cuvinte clasificate pe teme, joacă chestionare distractive, urmărește-ți progresul și provoacă-ți prietenii!",
@@ -19,7 +21,7 @@
     "liste_title": "Listă",
     "tester_title": "Evaluare",
     "apprendre_title": "Învăţa",
-    "language_locale": "Roumain",
+    "language_locale": "Romanian",
     "language_anglais": "Engleză",
     "search": "A cerceta",
     "audios": "Audio-uri",

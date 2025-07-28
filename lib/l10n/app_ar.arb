@@ -1,5 +1,7 @@
 {
     "app_release_note": "نشر الإصدار الأول من VocZilla",
+    "share_list_perso_alert_disponible": "ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!",
+    "information": "معلومة",
     "app_title": "فوكزيلا",
     "app_subtitle": "المفردات الإنجليزية",
     "app_description": "فوكزيلا هو التطبيق الأمثل لإثراء مفرداتك الإنجليزية، مهما كان مستواك. اكتشف آلاف الكلمات المصنفة حسب الموضوع، وشارك في اختبارات ممتعة، وتابع تقدمك، وتحدَّ أصدقاءك!",
@@ -19,7 +21,7 @@
     "liste_title": "قائمة",
     "tester_title": "تقييم",
     "apprendre_title": "يتعلم",
-    "language_locale": "Arabe",
+    "language_locale": "Arabic",
     "language_anglais": "إنجليزي",
     "search": "للبحث",
     "audios": "الصوتيات",

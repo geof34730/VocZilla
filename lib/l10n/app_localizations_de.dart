@@ -12,6 +12,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get app_release_note => 'Bereitstellung der ersten Version von VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!';
+
+  @override
+  String get information => 'Information';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override

@@ -12,6 +12,12 @@ class AppLocalizationsBe extends AppLocalizations {
   String get app_release_note => 'Разгортванне першай версіі VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Функцыя сумеснага выкарыстання спісу будзе даступная вельмі хутка!';
+
+  @override
+  String get information => 'Інфармацыя';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get apprendre_title => 'Даведайцеся';
 
   @override
-  String get language_locale => 'Biélorusse';
+  String get language_locale => 'Belarusian';
 
   @override
   String get language_anglais => 'Англійская';
@@ -339,7 +345,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get widget_radiochoicevocabularylearnedornot_choice2 => 'Усе';
 
   @override
-  String get title_create_personal_list => 'Стварыць уласны спіс';
+  String get title_create_personal_list => 'Стварыць карыстальніцкі спіс';
 
   @override
   String get title_app_update => 'Даступнае абнаўленне!';

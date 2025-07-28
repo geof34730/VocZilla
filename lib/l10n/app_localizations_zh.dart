@@ -12,6 +12,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_release_note => '部署 VocZilla 的第一个版本';
 
   @override
+  String get share_list_perso_alert_disponible => '列表共享功能即将推出！';
+
+  @override
+  String get information => '信息';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -24,7 +30,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
-  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 简单, 听力';
+  String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 轻松, 听力';
 
   @override
   String get app_feature_graphic_title => '提高你的英语词汇量';
@@ -285,7 +291,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get email_validation_help => '如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。';
 
   @override
-  String get email_validation_merci_register2 => '谢谢您的信任！';
+  String get email_validation_merci_register2 => '感谢您的信任！';
 
   @override
   String get send_mail => '收到新的验证邮件';
@@ -426,7 +432,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get vocabulaire_success_delete_list => '列表删除成功。';
 
   @override
-  String get update_app_text_1 => 'Voczilla 的新版本现已推出，其中包含重大改进、新功能和错误修复，可提供更好的体验';
+  String get update_app_text_1 => 'Voczilla 的新版本现已推出，它具有重大改进、新功能和错误修复，可提供更好的体验';
 
   @override
   String get update_app_text_2 => '不要错过最新消息！';

@@ -12,6 +12,12 @@ class AppLocalizationsBn extends AppLocalizations {
   String get app_release_note => 'VocZilla-এর প্রথম সংস্করণের স্থাপনা';
 
   @override
+  String get share_list_perso_alert_disponible => 'তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!';
+
+  @override
+  String get information => 'তথ্য';
+
+  @override
   String get app_title => 'VocZilla সম্পর্কে';
 
   @override

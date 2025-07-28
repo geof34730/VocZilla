@@ -12,6 +12,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get app_release_note => 'VocZilla இன் முதல் பதிப்பின் பயன்பாடு';
 
   @override
+  String get share_list_perso_alert_disponible => 'பட்டியல் பகிர்வு அம்சம் மிக விரைவில் கிடைக்கும்!';
+
+  @override
+  String get information => 'தகவல்';
+
+  @override
   String get app_title => 'வோக்ஸில்லா';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get apprendre_title => 'அறிய';
 
   @override
-  String get language_locale => 'Tamoul';
+  String get language_locale => 'Tamil';
 
   @override
   String get language_anglais => 'ஆங்கிலம்';

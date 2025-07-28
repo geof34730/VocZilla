@@ -12,6 +12,12 @@ class AppLocalizationsKm extends AppLocalizations {
   String get app_release_note => 'ការដាក់ពង្រាយកំណែដំបូងនៃ VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'មុខងារចែករំលែកបញ្ជីនឹងមានក្នុងពេលឆាប់ៗនេះ!';
+
+  @override
+  String get information => 'ព័ត៌មាន';
+
+  @override
   String get app_title => 'វ៉ុកហ្សីឡា';
 
   @override
@@ -273,7 +279,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get login_ou_inscrivez_vous_avec => 'ឬចុះឈ្មោះជាមួយ';
 
   @override
-  String get email_validation_merci_register => 'សូមអរគុណសម្រាប់ការចុះឈ្មោះ!';
+  String get email_validation_merci_register => 'អរគុណសម្រាប់ការចុះឈ្មោះ!';
 
   @override
   String get email_validation_msg_email_send => 'អ៊ីមែលផ្ទៀងផ្ទាត់ត្រូវបានផ្ញើទៅអាសយដ្ឋានអ៊ីមែលរបស់អ្នក។';
@@ -390,7 +396,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get auth_error_echoue => 'ការផ្ទៀងផ្ទាត់បានបរាជ័យ សូមព្យាយាមម្តងទៀត';
 
   @override
-  String get firebase_error_message_too_many_requests => 'សំណើច្រើនពេក។ ព្យាយាមម្តងទៀតនៅពេលក្រោយ។';
+  String get firebase_error_message_too_many_requests => 'សំណើច្រើនពេក។ សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ។';
 
   @override
   String get firebase_error_message_default => 'កំហុសមិនស្គាល់បានកើតឡើង។';

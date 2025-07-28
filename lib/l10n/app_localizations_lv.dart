@@ -12,6 +12,12 @@ class AppLocalizationsLv extends AppLocalizations {
   String get app_release_note => 'Pirmās VocZilla versijas ieviešana';
 
   @override
+  String get share_list_perso_alert_disponible => 'Saraksta koplietošanas funkcija būs pieejama jau pavisam drīz!';
+
+  @override
+  String get information => 'Informācija';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get apprendre_title => 'Mācīties';
 
   @override
-  String get language_locale => 'Letton';
+  String get language_locale => 'Latvian';
 
   @override
   String get language_anglais => 'Angļu';
@@ -270,7 +276,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get login_sinscrire => 'Reģistrēties';
 
   @override
-  String get login_ou_inscrivez_vous_avec => 'Vai reģistrējieties vietnē';
+  String get login_ou_inscrivez_vous_avec => 'Vai reģistrējieties ar';
 
   @override
   String get email_validation_merci_register => 'Paldies par reģistrēšanos!';
@@ -492,7 +498,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Kļūda, pievienojot sarakstu';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Kļūda atjauninot sarakstu';
+  String get vocabulaire_user_error_update_list_perso => 'Kļūda, atjauninot sarakstu';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Kļūda, pievienojot vārdu krājumu sarakstam';

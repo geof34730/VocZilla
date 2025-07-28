@@ -1,5 +1,7 @@
 {
     "app_release_note": "VocZillan ensimmäisen version käyttöönotto",
+    "share_list_perso_alert_disponible": "Listan jakamisominaisuus on saatavilla pian!",
+    "information": "Tiedot",
     "app_title": "VocZilla",
     "app_subtitle": "Englannin sanastoa",
     "app_description": "VocZilla on täydellinen sovellus englannin sanavarastosi laajentamiseen taitotasostasi riippumatta. Löydä tuhansia sanoja teeman mukaan luokiteltuina, pelaa hauskoja tietokilpailuja, seuraa edistymistäsi ja haasta ystäväsi!",
@@ -19,7 +21,7 @@
     "liste_title": "Lista",
     "tester_title": "Arviointi",
     "apprendre_title": "Oppia",
-    "language_locale": "Finnois",
+    "language_locale": "Finnish",
     "language_anglais": "englanti",
     "search": "Tutkimus",
     "audios": "Äänitteet",

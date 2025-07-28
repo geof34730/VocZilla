@@ -1,5 +1,7 @@
 {
     "app_release_note" : "Déploiement première version de VocZilla",
+    "share_list_perso_alert_disponible" : "La fonctionnalité de partage de liste sera disponible très prochainement !",
+    "information" : "Information",
     "app_title": "VocZilla",
     "app_subtitle" : "Vocabulaire anglais",
     "app_description": "VocZilla est l’application idéale pour enrichir ton vocabulaire en anglais, quel que soit ton niveau. Découvre des milliers de mots classés par thèmes, joue à des quiz ludiques, suis ta progression et défie tes amis !",

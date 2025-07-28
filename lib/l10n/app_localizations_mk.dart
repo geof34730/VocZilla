@@ -12,6 +12,12 @@ class AppLocalizationsMk extends AppLocalizations {
   String get app_release_note => 'Распоредување на првата верзија на VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Функцијата за споделување на листа ќе биде достапна многу наскоро!';
+
+  @override
+  String get information => 'Информации';
+
+  @override
   String get app_title => 'ВокЗила';
 
   @override
@@ -45,7 +51,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get hello => 'Добро утро!';
 
   @override
-  String get change_language => 'Промени го јазикот';
+  String get change_language => 'Промени јазик';
 
   @override
   String get my_purchase => 'Мојата претплата';
@@ -69,7 +75,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get apprendre_title => 'Научи';
 
   @override
-  String get language_locale => 'Macédonien';
+  String get language_locale => 'Macedonian';
 
   @override
   String get language_anglais => 'англиски';
@@ -492,7 +498,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Грешка при додавање на листата';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Грешка при ажурирањето на листата';
+  String get vocabulaire_user_error_update_list_perso => 'Грешка при ажурирање на листата';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Грешка при додавање на вокабулар во листата';

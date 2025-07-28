@@ -12,6 +12,12 @@ class AppLocalizationsBg extends AppLocalizations {
   String get app_release_note => 'Разгръщане на първата версия на VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Функцията за споделяне на списъци ще бъде достъпна съвсем скоро!';
+
+  @override
+  String get information => 'Информация';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get apprendre_title => 'Научете';
 
   @override
-  String get language_locale => 'Bulgare';
+  String get language_locale => 'Bulgarian';
 
   @override
   String get language_anglais => 'английски';
@@ -96,7 +102,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get unknown_error => 'Неизвестна грешка';
 
   @override
-  String get no_vocabulary_items_found => 'Не са намерени елементи от речника';
+  String get no_vocabulary_items_found => 'Няма намерени елементи от речника';
 
   @override
   String get pronunciation_title => 'Произношение';
@@ -213,7 +219,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get abonnement_descriptif_annuel => 'Насладете се максимално на преживяването си, като същевременно спестите пари.';
 
   @override
-  String get button_sabonner => 'Абониране';
+  String get button_sabonner => 'Абонирайте се';
 
   @override
   String get login_se_connecter => 'Вход';
@@ -492,7 +498,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Грешка при добавяне на списъка';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Грешка при актуализиране на списъка';
+  String get vocabulaire_user_error_update_list_perso => 'Грешка при актуализирането на списъка';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Грешка при добавяне на речник към списъка';

@@ -12,6 +12,12 @@ class AppLocalizationsDa extends AppLocalizations {
   String get app_release_note => 'Implementering af den første version af VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funktionen til deling af lister vil være tilgængelig meget snart!';
+
+  @override
+  String get information => 'Information';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get apprendre_title => 'Lære';
 
   @override
-  String get language_locale => 'Danois';
+  String get language_locale => 'Danish';
 
   @override
   String get language_anglais => 'Engelsk';
@@ -105,7 +111,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get pronunciation_success => 'Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, det er ikke helt korrekt. Prøv igen.';
+  String get pronunciation_error => 'Hmm, det er ikke helt rigtigt. Prøv igen.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Jeg hørte dig sige';
@@ -378,7 +384,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get auth_error_update_profil => 'Fejl ved opdatering af profil.';
 
   @override
-  String get auth_error_facebook => 'Der opstod en ukendt fejl under Facebook-login.';
+  String get auth_error_facebook => 'Der opstod en ukendt fejl under login på Facebook.';
 
   @override
   String get auth_error_google => 'Der opstod en ukendt fejl med Google-login.';

@@ -12,6 +12,12 @@ class AppLocalizationsUz extends AppLocalizations {
   String get app_release_note => 'VocZilla ning birinchi versiyasini o\'rnatish';
 
   @override
+  String get share_list_perso_alert_disponible => 'Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!';
+
+  @override
+  String get information => 'Ma\'lumot';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get apprendre_title => 'O\'rganing';
 
   @override
-  String get language_locale => 'Ouzbek';
+  String get language_locale => 'Uzbek';
 
   @override
   String get language_anglais => 'Ingliz';
@@ -180,7 +186,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get home_notlogged_accroche7 => 'Avval eng foydali so\'zlarni bilib oling';
 
   @override
-  String get home_notlogged_accroche8 => 'Tez rivojlanishi uchun optimallashtirilgan yodlash';
+  String get home_notlogged_accroche8 => 'Tez o\'sishi uchun optimallashtirilgan yodlash';
 
   @override
   String get home_notlogged_accroche9 => 'Shekspir tilini o\'zlashtirishga tayyormisiz?';
@@ -390,7 +396,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get auth_error_echoue => 'Autentifikatsiya amalga oshmadi, qayta urinib ko‘ring';
 
   @override
-  String get firebase_error_message_too_many_requests => 'Juda koʻp soʻrovlar. Keyinroq qayta urinib ko‘ring.';
+  String get firebase_error_message_too_many_requests => 'Juda koʻp soʻrovlar. Keyinroq qayta urining.';
 
   @override
   String get firebase_error_message_default => 'Noma\'lum xatolik yuz berdi.';

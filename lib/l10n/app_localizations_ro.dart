@@ -12,6 +12,12 @@ class AppLocalizationsRo extends AppLocalizations {
   String get app_release_note => 'Implementarea primei versiuni de VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funcția de partajare a listei va fi disponibilă foarte curând!';
+
+  @override
+  String get information => 'Informaţii';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get apprendre_title => 'Învăţa';
 
   @override
-  String get language_locale => 'Roumain';
+  String get language_locale => 'Romanian';
 
   @override
   String get language_anglais => 'Engleză';

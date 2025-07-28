@@ -12,6 +12,12 @@ class AppLocalizationsAm extends AppLocalizations {
   String get app_release_note => 'የ VocZilla የመጀመሪያ ስሪት መዘርጋት';
 
   @override
+  String get share_list_perso_alert_disponible => 'የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!';
+
+  @override
+  String get information => 'መረጃ';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get apprendre_title => 'ተማር';
 
   @override
-  String get language_locale => 'Amharique';
+  String get language_locale => 'Amharic';
 
   @override
   String get language_anglais => 'እንግሊዝኛ';
@@ -177,7 +183,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get home_notlogged_accroche6 => 'ፈጣን እና ውጤታማ ዘዴ';
 
   @override
-  String get home_notlogged_accroche7 => 'በመጀመሪያ በጣም ጠቃሚ የሆኑትን ቃላት ተማር';
+  String get home_notlogged_accroche7 => 'መጀመሪያ በጣም ጠቃሚ የሆኑትን ቃላት ተማር';
 
   @override
   String get home_notlogged_accroche8 => 'የተመቻቸ የማስታወስ ችሎታ በፍጥነት ወደ እድገት';
@@ -417,7 +423,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get firebase_error_message_account_exists_with_different_credential => 'ተመሳሳዩ የኢሜይል አድራሻ ያለው ነገር ግን የተለያዩ ምስክርነቶች ያለው መለያ አስቀድሞ አለ።';
 
   @override
-  String get firebase_error_message_error_generic => 'ያልተጠበቀ ስህተት ተፈጥሯል። እባክህ እንደገና ሞክር።';
+  String get firebase_error_message_error_generic => 'ያልተጠበቀ ስህተት ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።';
 
   @override
   String get auth_success_update_profile => 'መገለጫ በተሳካ ሁኔታ ዘምኗል!';
@@ -429,7 +435,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get update_app_text_1 => 'አዲስ የVoczilla ስሪት ጉልህ ማሻሻያዎችን፣ አዲስ ባህሪያትን እና የሳንካ ጥገናዎችን ለተሻለ ተሞክሮ ይገኛል።';
 
   @override
-  String get update_app_text_2 => 'የቅርብ ጊዜ ዜና እንዳያመልጥዎ!';
+  String get update_app_text_2 => 'የቅርብ ዜና እንዳያመልጥዎ!';
 
   @override
   String get update_app_text_3 => 'አሁን ለማዘመን ከታች ጠቅ ያድርጉ';
@@ -492,7 +498,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'ዝርዝር ማከል ላይ ስህተት';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'ዝርዝሩን ማዘመን ላይ ስህተት';
+  String get vocabulaire_user_error_update_list_perso => 'ዝርዝርን በማዘመን ላይ ስህተት';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'መዝገበ ቃላትን ወደ ዝርዝር ማከል ላይ ስህተት';

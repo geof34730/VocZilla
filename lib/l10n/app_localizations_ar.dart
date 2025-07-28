@@ -12,6 +12,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get app_release_note => 'نشر الإصدار الأول من VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!';
+
+  @override
+  String get information => 'معلومة';
+
+  @override
   String get app_title => 'فوكزيلا';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get apprendre_title => 'يتعلم';
 
   @override
-  String get language_locale => 'Arabe';
+  String get language_locale => 'Arabic';
 
   @override
   String get language_anglais => 'إنجليزي';

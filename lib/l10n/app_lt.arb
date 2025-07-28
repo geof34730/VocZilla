@@ -1,5 +1,7 @@
 {
     "app_release_note": "Pirmosios „VocZilla“ versijos diegimas",
+    "share_list_perso_alert_disponible": "Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!",
+    "information": "Informacija",
     "app_title": "VocZilla",
     "app_subtitle": "Anglų kalbos žodynas",
     "app_description": "„VocZilla“ – puiki programėlė, skirta praplėsti anglų kalbos žodyną, nesvarbu, koks jūsų lygis. Atraskite tūkstančius žodžių, suskirstytų pagal temas, žaiskite smagius viktorinas, stebėkite savo pažangą ir meskite iššūkį draugams!",
@@ -19,7 +21,7 @@
     "liste_title": "Sąrašas",
     "tester_title": "Vertinimas",
     "apprendre_title": "Mokytis",
-    "language_locale": "Lituanien",
+    "language_locale": "Lithuanian",
     "language_anglais": "Anglų",
     "search": "Tyrimams",
     "audios": "Garso įrašai",

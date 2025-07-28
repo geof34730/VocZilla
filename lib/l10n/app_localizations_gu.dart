@@ -9,7 +9,13 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla ના પ્રથમ સંસ્કરણનું જમાવટ';
+  String get app_release_note => 'VocZilla ના પ્રથમ સંસ્કરણનું વિતરણ';
+
+  @override
+  String get share_list_perso_alert_disponible => 'યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!';
+
+  @override
+  String get information => 'માહિતી';
 
   @override
   String get app_title => 'વોકઝિલા';
@@ -390,7 +396,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get auth_error_echoue => 'પ્રમાણીકરણ નિષ્ફળ ગયું, કૃપા કરીને ફરી પ્રયાસ કરો.';
 
   @override
-  String get firebase_error_message_too_many_requests => 'ઘણી બધી વિનંતીઓ છે. પછીથી ફરી પ્રયાસ કરો.';
+  String get firebase_error_message_too_many_requests => 'ઘણી બધી વિનંતીઓ. પછીથી ફરી પ્રયાસ કરો.';
 
   @override
   String get firebase_error_message_default => 'એક અજાણી ભૂલ આવી છે.';
@@ -426,7 +432,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'સૂચિ સફળતાપૂર્વક કાઢી નાખવામાં આવી.';
 
   @override
-  String get update_app_text_1 => 'વધુ સારા અનુભવ માટે Voczilla નું નવું વર્ઝન નોંધપાત્ર સુધારાઓ, નવી સુવિધાઓ અને બગ ફિક્સ સાથે ઉપલબ્ધ છે.';
+  String get update_app_text_1 => 'વધુ સારા અનુભવ માટે Voczilla નું નવું સંસ્કરણ નોંધપાત્ર સુધારાઓ, નવી સુવિધાઓ અને બગ ફિક્સ સાથે ઉપલબ્ધ છે.';
 
   @override
   String get update_app_text_2 => 'નવીનતમ સમાચાર ચૂકશો નહીં!';
@@ -519,7 +525,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get login_entrer_confirmer_mot_de_passe => 'કૃપા કરીને તમારો પાસવર્ડ ફરીથી દાખલ કરો.';
 
   @override
-  String get login_mots_de_passe_differents => 'પાસવર્ડ્સ મેળ ખાતા નથી.';
+  String get login_mots_de_passe_differents => 'પાસવર્ડ્સ મેળ ખાતા નથી';
 
   @override
   String get login_tous_champs_obligatoires => 'કૃપા કરીને બધા ફીલ્ડ ભરો.';

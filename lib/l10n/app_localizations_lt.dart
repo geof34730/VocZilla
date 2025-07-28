@@ -12,6 +12,12 @@ class AppLocalizationsLt extends AppLocalizations {
   String get app_release_note => 'Pirmosios „VocZilla“ versijos diegimas';
 
   @override
+  String get share_list_perso_alert_disponible => 'Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!';
+
+  @override
+  String get information => 'Informacija';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get apprendre_title => 'Mokytis';
 
   @override
-  String get language_locale => 'Lituanien';
+  String get language_locale => 'Lithuanian';
 
   @override
   String get language_anglais => 'Anglų';

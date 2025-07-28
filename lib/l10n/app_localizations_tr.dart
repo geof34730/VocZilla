@@ -12,6 +12,12 @@ class AppLocalizationsTr extends AppLocalizations {
   String get app_release_note => 'VocZilla\'nın ilk sürümünün dağıtımı';
 
   @override
+  String get share_list_perso_alert_disponible => 'Liste paylaşım özelliği çok yakında kullanıma sunulacak!';
+
+  @override
+  String get information => 'Bilgi';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -51,7 +57,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get my_purchase => 'Aboneliğim';
 
   @override
-  String get dictation_title => 'Ses diktesi';
+  String get dictation_title => 'Sesli dikte';
 
   @override
   String get dictation_label_text_field => 'Dinleyin ve metni yazın';
@@ -69,7 +75,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get apprendre_title => 'Öğrenmek';
 
   @override
-  String get language_locale => 'Turc';
+  String get language_locale => 'Turkish';
 
   @override
   String get language_anglais => 'İngilizce';

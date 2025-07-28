@@ -12,6 +12,12 @@ class AppLocalizationsTh extends AppLocalizations {
   String get app_release_note => 'การปรับใช้ VocZilla เวอร์ชันแรก';
 
   @override
+  String get share_list_perso_alert_disponible => 'ฟีเจอร์การแชร์รายการจะพร้อมใช้งานเร็วๆ นี้!';
+
+  @override
+  String get information => 'ข้อมูล';
+
+  @override
   String get app_title => 'วอคซิลล่า';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get apprendre_title => 'เรียนรู้';
 
   @override
-  String get language_locale => 'Thaï';
+  String get language_locale => 'Thai';
 
   @override
   String get language_anglais => 'ภาษาอังกฤษ';
@@ -342,7 +348,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get title_create_personal_list => 'สร้างรายการที่กำหนดเอง';
 
   @override
-  String get title_app_update => 'อัปเดตได้แล้ว!';
+  String get title_app_update => 'มีอัปเดตแล้ว!';
 
   @override
   String get title_subscription => 'การสมัครสมาชิกของเรา';
@@ -492,7 +498,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'เกิดข้อผิดพลาดในการเพิ่มรายการ';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'เกิดข้อผิดพลาดในการอัพเดตรายการ';
+  String get vocabulaire_user_error_update_list_perso => 'เกิดข้อผิดพลาดในการอัปเดตรายการ';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'เกิดข้อผิดพลาดในการเพิ่มคำศัพท์ลงในรายการ';

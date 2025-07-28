@@ -12,6 +12,12 @@ class AppLocalizationsZu extends AppLocalizations {
   String get app_release_note => 'Ukuthunyelwa kwenguqulo yokuqala ye-VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Isici sokwabelana ngohlu sizotholakala maduze!';
+
+  @override
+  String get information => 'Ulwazi';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get apprendre_title => 'Funda';
 
   @override
-  String get language_locale => 'Zoulou';
+  String get language_locale => 'Zulu';
 
   @override
   String get language_anglais => 'IsiNgisi';
@@ -285,7 +291,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get email_validation_help => 'Uma ungayiboni i-imeyili ebhokisini lakho lokungenayo, cabanga ukuhlola ugaxekile wakho noma ifolda kadoti.';
 
   @override
-  String get email_validation_merci_register2 => 'Siyabonga ngokwethemba kwakho!';
+  String get email_validation_merci_register2 => 'Siyabonga ngokukwethemba kwakho!';
 
   @override
   String get send_mail => 'Thola i-imeyili yokuqinisekisa entsha';

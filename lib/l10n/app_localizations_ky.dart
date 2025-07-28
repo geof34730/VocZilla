@@ -12,6 +12,12 @@ class AppLocalizationsKy extends AppLocalizations {
   String get app_release_note => 'VocZilla биринчи версиясын жайылтуу';
 
   @override
+  String get share_list_perso_alert_disponible => 'Тизме менен бөлүшүү функциясы жакында жеткиликтүү болот!';
+
+  @override
+  String get information => 'Маалымат';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get apprendre_title => 'Үйрөнүү';
 
   @override
-  String get language_locale => 'Kirghiz';
+  String get language_locale => 'Kyrgyz';
 
   @override
   String get language_anglais => 'Англисче';
@@ -351,7 +357,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get by_themes => 'Пар темалар';
 
   @override
-  String get no_vocabulary_in_my_list => 'Бул тизмеде сиздин сөз байлыгыңыз жок. Тизмени түзөтүү менен айрымдарын кошуңуз.';
+  String get no_vocabulary_in_my_list => 'Бул тизмеде сиздин сөз байлыгыңыз жок. Тизмени түзөтүү менен бир аз кошуңуз.';
 
   @override
   String get anonymous_user => 'Анонимдүү колдонуучу';
@@ -423,7 +429,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get auth_success_update_profile => 'Профиль ийгиликтүү жаңыртылды!';
 
   @override
-  String get vocabulaire_success_delete_list => 'Тизме ийгиликтүү жок кылынды.';
+  String get vocabulaire_success_delete_list => 'Тизме ийгиликтүү өчүрүлдү.';
 
   @override
   String get update_app_text_1 => 'Voczilla жаңы версиясы олуттуу жакшыртуулар, жаңы функциялар жана мүчүлүштүктөрдү оңдоолор менен жеткиликтүү';

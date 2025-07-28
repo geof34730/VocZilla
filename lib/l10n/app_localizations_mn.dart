@@ -12,6 +12,12 @@ class AppLocalizationsMn extends AppLocalizations {
   String get app_release_note => 'VocZilla-ийн анхны хувилбарыг байршуулах';
 
   @override
+  String get share_list_perso_alert_disponible => 'Жагсаалт хуваалцах онцлог тун удахгүй бэлэн болно!';
+
+  @override
+  String get information => 'Мэдээлэл';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -36,7 +42,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get app_feature_graphic_FeatureItem2 => 'Интерактив аудио асуулт хариултууд болон тестүүд';
 
   @override
-  String get app_feature_graphic_FeatureItem3 => 'Өөрийн ахиц дэвшлийг бодит цаг хугацаанд нь хянах';
+  String get app_feature_graphic_FeatureItem3 => 'Бодит цаг хугацаанд ахиц дэвшлээ хянах';
 
   @override
   String get app_feature_graphic_FeatureItem4 => 'Хувь хүний болон хуваалцах боломжтой жагсаалт';
@@ -69,7 +75,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get apprendre_title => 'Сурах';
 
   @override
-  String get language_locale => 'Mongol';
+  String get language_locale => 'Mongolian';
 
   @override
   String get language_anglais => 'Англи';
@@ -312,7 +318,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_days => 'өдрүүд';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description3 => 'Манай програмын бүх шинж чанарыг олж мэдэх.';
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'манай програмын бүх онцлогийг олж мэдэх.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Та явлаа';
@@ -378,7 +384,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get auth_error_update_profil => 'Профайлыг шинэчлэхэд алдаа гарлаа.';
 
   @override
-  String get auth_error_facebook => 'Facebook-т нэвтрэхэд үл мэдэгдэх алдаа гарлаа.';
+  String get auth_error_facebook => 'Facebook-т нэвтрэх үед үл мэдэгдэх алдаа гарлаа.';
 
   @override
   String get auth_error_google => 'Google-д нэвтрэхэд үл мэдэгдэх алдаа гарлаа.';
@@ -387,7 +393,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get auth_error_apple => 'Apple-д нэвтрэх үед үл мэдэгдэх алдаа гарлаа.';
 
   @override
-  String get auth_error_echoue => 'Баталгаажуулалт амжилтгүй боллоо, дахин оролдоно уу';
+  String get auth_error_echoue => 'Баталгаажуулалт амжилтгүй болсон тул дахин оролдоно уу';
 
   @override
   String get firebase_error_message_too_many_requests => 'Хэт олон хүсэлт. Дараа дахин оролдоно уу.';

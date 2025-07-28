@@ -1,5 +1,7 @@
 {
     "app_release_note": "Implementació de la primera versió de VocZilla",
+    "share_list_perso_alert_disponible": "La funció de compartir llistes estarà disponible molt aviat!",
+    "information": "Informació",
     "app_title": "VocZilla",
     "app_subtitle": "Vocabulari anglès",
     "app_description": "VocZilla és l'aplicació perfecta per ampliar el teu vocabulari anglès, independentment del teu nivell. Descobreix milers de paraules classificades per tema, juga a divertits qüestionaris, fes un seguiment del teu progrés i desafia els teus amics!",
@@ -123,7 +125,7 @@
     "auth_error_create_user": "La creació de l'usuari ha fallat.",
     "auth_error_update_profil": "Error en actualitzar el perfil.",
     "auth_error_facebook": "S'ha produït un error desconegut en iniciar la sessió a Facebook.",
-    "auth_error_google": "S'ha produït un error desconegut en iniciar la sessió a Google.",
+    "auth_error_google": "S'ha produït un error desconegut en iniciar sessió a Google.",
     "auth_error_apple": "S'ha produït un error desconegut en iniciar sessió a Apple.",
     "auth_error_echoue": "L'autenticació ha fallat, torna-ho a intentar.",
     "firebase_error_message_too_many_requests": "Massa sol·licituds. Torna-ho a provar més tard.",

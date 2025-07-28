@@ -12,6 +12,12 @@ class AppLocalizationsUk extends AppLocalizations {
   String get app_release_note => 'Розгортання першої версії VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Функція спільного доступу до списку буде доступна дуже скоро!';
+
+  @override
+  String get information => 'Інформація';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -399,7 +405,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get firebase_error_message_invalid_email => 'Адреса електронної пошти має неправильний формат.';
 
   @override
-  String get firebase_error_message_user_disabled => 'Цей обліковий запис користувача вимкнено.';
+  String get firebase_error_message_user_disabled => 'Цей обліковий запис користувача було вимкнено.';
 
   @override
   String get firebase_error_message_invalid_credential => 'Електронна пошта або пароль неправильні.';

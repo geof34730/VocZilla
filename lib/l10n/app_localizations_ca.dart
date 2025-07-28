@@ -12,6 +12,12 @@ class AppLocalizationsCa extends AppLocalizations {
   String get app_release_note => 'Implementació de la primera versió de VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'La funció de compartir llistes estarà disponible molt aviat!';
+
+  @override
+  String get information => 'Informació';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -381,7 +387,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get auth_error_facebook => 'S\'ha produït un error desconegut en iniciar la sessió a Facebook.';
 
   @override
-  String get auth_error_google => 'S\'ha produït un error desconegut en iniciar la sessió a Google.';
+  String get auth_error_google => 'S\'ha produït un error desconegut en iniciar sessió a Google.';
 
   @override
   String get auth_error_apple => 'S\'ha produït un error desconegut en iniciar sessió a Apple.';

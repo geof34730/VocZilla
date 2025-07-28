@@ -12,6 +12,12 @@ class AppLocalizationsHi extends AppLocalizations {
   String get app_release_note => 'वोकज़िला के पहले संस्करण की तैनाती';
 
   @override
+  String get share_list_perso_alert_disponible => 'सूची साझा करने की सुविधा बहुत जल्द उपलब्ध होगी!';
+
+  @override
+  String get information => 'जानकारी';
+
+  @override
   String get app_title => 'वोकज़िला';
 
   @override

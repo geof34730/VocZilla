@@ -12,6 +12,12 @@ class AppLocalizationsHr extends AppLocalizations {
   String get app_release_note => 'Implementacija prve verzije VocZille';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funkcija dijeljenja popisa bit će dostupna vrlo brzo!';
+
+  @override
+  String get information => 'Informacija';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get apprendre_title => 'Naučiti';
 
   @override
-  String get language_locale => 'Croate';
+  String get language_locale => 'Croatian';
 
   @override
   String get language_anglais => 'engleski';
@@ -180,7 +186,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get home_notlogged_accroche7 => 'Prvo naučite najkorisnije riječi';
 
   @override
-  String get home_notlogged_accroche8 => 'Optimizirano pamćenje za brži napredak';
+  String get home_notlogged_accroche8 => 'Optimizirano pamćenje za brzi napredak';
 
   @override
   String get home_notlogged_accroche9 => 'Spremni ste savladati Shakespeareov jezik?';
@@ -210,7 +216,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get abonnement_descriptif_mensuel => 'Slobodan kao ptica: otkažite kad god želite.';
 
   @override
-  String get abonnement_descriptif_annuel => 'Uživajte u svom iskustvu u potpunosti uz uštedu novca.';
+  String get abonnement_descriptif_annuel => 'Uživajte u svom iskustvu u potpunosti, a istovremeno uštedite novac.';
 
   @override
   String get button_sabonner => 'Pretplatite se';

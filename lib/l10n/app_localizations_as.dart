@@ -12,6 +12,12 @@ class AppLocalizationsAs extends AppLocalizations {
   String get app_release_note => 'VocZilla ৰ প্ৰথম সংস্কৰণৰ মোতায়েন';
 
   @override
+  String get share_list_perso_alert_disponible => 'অতি সোনকালে উপলব্ধ হ’ব তালিকা শ্বেয়াৰিং বৈশিষ্ট্য!';
+
+  @override
+  String get information => 'তথ্য';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get apprendre_title => 'শিকা';
 
   @override
-  String get language_locale => 'Assamais';
+  String get language_locale => 'Assamese';
 
   @override
   String get language_anglais => 'ইংৰাজী';
@@ -246,7 +252,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get login_mot_de_passe => 'পাছৱৰ্ড';
 
   @override
-  String get login_entrer_mot_de_passe => 'আপোনাৰ গুপ্তশব্দ দিয়ক';
+  String get login_entrer_mot_de_passe => 'আপোনাৰ পাছৱৰ্ড দিয়ক';
 
   @override
   String get login_ou_connecter_vous_avec => 'বা সংযোগ কৰক';

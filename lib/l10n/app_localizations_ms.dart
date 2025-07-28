@@ -12,6 +12,12 @@ class AppLocalizationsMs extends AppLocalizations {
   String get app_release_note => 'Penggunaan versi pertama VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Ciri perkongsian senarai akan tersedia tidak lama lagi!';
+
+  @override
+  String get information => 'Maklumat';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -39,7 +45,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get app_feature_graphic_FeatureItem3 => 'Jejaki kemajuan anda dalam masa nyata';
 
   @override
-  String get app_feature_graphic_FeatureItem4 => 'Senarai diperibadikan dan boleh dikongsi';
+  String get app_feature_graphic_FeatureItem4 => 'Senarai yang diperibadikan dan boleh dikongsi';
 
   @override
   String get hello => 'selamat pagi!';
@@ -69,7 +75,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get apprendre_title => 'Belajar';
 
   @override
-  String get language_locale => 'Malaisien';
+  String get language_locale => 'Malay';
 
   @override
   String get language_anglais => 'Inggeris';
@@ -471,7 +477,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get card_home_user_day => 'hari';
 
   @override
-  String get card_home_user_liste_perso => 'senarai Hilang';
+  String get card_home_user_liste_perso => 'senarai (s) Hilang';
 
   @override
   String get card_home_share => 'dikongsi';

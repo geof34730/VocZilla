@@ -12,6 +12,12 @@ class AppLocalizationsKa extends AppLocalizations {
   String get app_release_note => 'VocZilla-ს პირველი ვერსიის განლაგება';
 
   @override
+  String get share_list_perso_alert_disponible => 'სიის გაზიარების ფუნქცია ძალიან მალე იქნება ხელმისაწვდომი!';
+
+  @override
+  String get information => 'ინფორმაცია';
+
+  @override
   String get app_title => 'ვოკზილა';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get apprendre_title => 'სწავლა';
 
   @override
-  String get language_locale => 'Géorgien';
+  String get language_locale => 'Georgian';
 
   @override
   String get language_anglais => 'ინგლისური';

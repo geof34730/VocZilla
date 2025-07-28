@@ -12,6 +12,12 @@ class AppLocalizationsUr extends AppLocalizations {
   String get app_release_note => 'VocZilla کے پہلے ورژن کی تعیناتی۔';
 
   @override
+  String get share_list_perso_alert_disponible => 'لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!';
+
+  @override
+  String get information => 'معلومات';
+
+  @override
   String get app_title => 'ووک زیلا';
 
   @override
@@ -426,7 +432,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'فہرست کامیابی کے ساتھ حذف کر دی گئی۔';
 
   @override
-  String get update_app_text_1 => 'Voczilla کا ایک نیا ورژن ایک اور بھی بہتر تجربہ کے لیے نمایاں بہتریوں، نئی خصوصیات اور بگ فکسز کے ساتھ دستیاب ہے۔';
+  String get update_app_text_1 => 'Voczilla کا ایک نیا ورژن ایک اور بھی بہتر تجربے کے لیے نمایاں بہتریوں، نئی خصوصیات اور بگ فکسز کے ساتھ دستیاب ہے۔';
 
   @override
   String get update_app_text_2 => 'تازہ ترین خبروں سے محروم نہ ہوں!';

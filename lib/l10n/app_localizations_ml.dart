@@ -12,6 +12,12 @@ class AppLocalizationsMl extends AppLocalizations {
   String get app_release_note => 'വോക്‌സില്ലയുടെ ആദ്യ പതിപ്പിന്റെ വിന്യാസം';
 
   @override
+  String get share_list_perso_alert_disponible => 'ലിസ്റ്റ് പങ്കിടൽ സവിശേഷത വളരെ വേഗം ലഭ്യമാകും!';
+
+  @override
+  String get information => 'വിവരങ്ങൾ';
+
+  @override
   String get app_title => 'വോക്‌സില്ല';
 
   @override
@@ -495,7 +501,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get vocabulaire_user_error_update_list_perso => 'ലിസ്റ്റ് അപ്ഡേറ്റ് ചെയ്യുന്നതിൽ പിശക്';
 
   @override
-  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'പട്ടികയിൽ പദാവലി ചേർക്കുന്നതിൽ പിശക്.';
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'പട്ടികയിൽ പദാവലി ചേർക്കുന്നതിൽ പിശക്';
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'പട്ടികയിൽ നിന്ന് പദാവലി ഇല്ലാതാക്കുന്നതിൽ പിശക്';

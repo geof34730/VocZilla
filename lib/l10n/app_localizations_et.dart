@@ -12,6 +12,12 @@ class AppLocalizationsEt extends AppLocalizations {
   String get app_release_note => 'VocZilla esimese versiooni juurutamine';
 
   @override
+  String get share_list_perso_alert_disponible => 'Loendi jagamise funktsioon on saadaval peagi!';
+
+  @override
+  String get information => 'Teave';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -498,7 +504,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Sõnavara lisamisel loendisse tekkis viga';
 
   @override
-  String get vocabulaire_user_error_delete_vocabulaire_list => 'Sõnavara loendist kustutamisel tekkis viga';
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Viga sõnavara loendist kustutamisel';
 
   @override
   String get alert_dialogue_suppression_list_title => 'Kustutamise kinnitus';

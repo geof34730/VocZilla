@@ -12,7 +12,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get app_release_note => 'VocZilla 첫 번째 버전 배포';
 
   @override
-  String get app_title => '보크질라';
+  String get share_list_perso_alert_disponible => '목록 공유 기능이 곧 출시됩니다!';
+
+  @override
+  String get information => '정보';
+
+  @override
+  String get app_title => 'VocZilla';
 
   @override
   String get app_subtitle => '영어 어휘';
@@ -69,7 +75,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get apprendre_title => '배우다';
 
   @override
-  String get language_locale => 'Coréen';
+  String get language_locale => 'Korean';
 
   @override
   String get language_anglais => '영어';
@@ -486,7 +492,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get vocabulaire_user_error_delete_list => '목록 삭제 오류';
 
   @override
-  String get vocabulaire_user_error_user_data_not_found => '사용자 데이터 로딩 중 오류가 발생했습니다.';
+  String get vocabulaire_user_error_user_data_not_found => '사용자 데이터 로딩 중 오류 발생';
 
   @override
   String get vocabulaire_user_error_add_list_perso => '목록 추가 중 오류 발생';

@@ -12,13 +12,19 @@ class AppLocalizationsSw extends AppLocalizations {
   String get app_release_note => 'Usambazaji wa toleo la kwanza la VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Kipengele cha kushiriki orodha kitapatikana hivi karibuni!';
+
+  @override
+  String get information => 'Habari';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
   String get app_subtitle => 'msamiati wa Kiingereza';
 
   @override
-  String get app_description => 'VocZilla ndio programu bora ya kupanua msamiati wako wa Kiingereza, haijalishi kiwango chako. Gundua maelfu ya maneno yaliyoainishwa kulingana na mandhari, cheza maswali ya kufurahisha, fuatilia maendeleo yako na uwape changamoto marafiki zako!';
+  String get app_description => 'VocZilla ndiyo programu bora zaidi ya kupanua msamiati wako wa Kiingereza, haijalishi kiwango chako. Gundua maelfu ya maneno yaliyoainishwa kulingana na mandhari, cheza maswali ya kufurahisha, fuatilia maendeleo yako na uwape changamoto marafiki zako!';
 
   @override
   String get app_short_description => 'Jifunze na uhakiki msamiati wa Kiingereza!';

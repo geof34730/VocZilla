@@ -12,13 +12,19 @@ class AppLocalizationsMy extends AppLocalizations {
   String get app_release_note => 'VocZilla ၏ပထမဗားရှင်းကိုဖြန့်ကျက်ခြင်း။';
 
   @override
+  String get share_list_perso_alert_disponible => 'စာရင်းမျှဝေခြင်းအင်္ဂါရပ်ကို မကြာမီ ရနိုင်ပါမည်။';
+
+  @override
+  String get information => 'သတင်းအချက်အလက်';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
   String get app_subtitle => 'အင်္ဂလိပ်ဝေါဟာရ';
 
   @override
-  String get app_description => 'VocZilla သည် သင်၏အင်္ဂလိပ်ဝေါဟာရကို ချဲ့ထွင်ရန် အကောင်းဆုံးအက်ပ်ဖြစ်သည်။ အပြင်အဆင်အလိုက် အမျိုးအစားခွဲထားသော စကားလုံးထောင်ပေါင်းများစွာကို ရှာဖွေပါ၊ ပျော်ရွှင်စရာ ပဟေဋ္ဌိများကို ကစားပါ၊ သင့်တိုးတက်မှုကို ခြေရာခံကာ သင့်သူငယ်ချင်းများကို စိန်ခေါ်လိုက်ပါ။';
+  String get app_description => 'VocZilla သည် သင်၏အင်္ဂလိပ်ဝေါဟာရကို ချဲ့ထွင်ရန် ပြီးပြည့်စုံသောအက်ပ်ဖြစ်သည်။ အပြင်အဆင်အလိုက် အမျိုးအစားခွဲထားသော စကားလုံးထောင်ပေါင်းများစွာကို ရှာဖွေပါ၊ ပျော်ရွှင်စရာ ပဟေဋ္ဌိများကို ကစားပါ၊ သင့်တိုးတက်မှုကို ခြေရာခံကာ သင့်သူငယ်ချင်းများကို စိန်ခေါ်ပါ။';
 
   @override
   String get app_short_description => 'အင်္ဂလိပ်ဝေါဟာရကို လေ့လာပြီး ပြန်လည်သုံးသပ်ပါ။';
@@ -69,7 +75,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get apprendre_title => 'လေ့လာပါ။';
 
   @override
-  String get language_locale => 'Birman';
+  String get language_locale => 'Myanmar (Burmese)';
 
   @override
   String get language_anglais => 'အင်္ဂလိပ်စာ';
@@ -315,7 +321,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'ကျွန်ုပ်တို့၏အပလီကေးရှင်း၏အင်္ဂါရပ်အားလုံးကိုရှာဖွေရန်။';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description4 => 'မင်းထားခဲ့ပြီ။';
+  String get widget_dialogHelper_showfreetrialdialog_description4 => 'မင်းထွက်သွားပြီ။';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'အခမဲ့စမ်းသပ်မှုများ';
@@ -492,7 +498,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'စာရင်းထည့်ရာတွင် အမှားအယွင်းရှိသည်။';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'စာရင်းကို အပ်ဒိတ်လုပ်ရာတွင် အမှားအယွင်းရှိနေသည်။';
+  String get vocabulaire_user_error_update_list_perso => 'စာရင်းကို အပ်ဒိတ်လုပ်ရာတွင် အမှားအယွင်းရှိသည်။';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'စာရင်းသို့ ဝေါဟာရထည့်ရာတွင် အမှားအယွင်းရှိသည်။';

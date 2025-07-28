@@ -12,6 +12,12 @@ class AppLocalizationsKk extends AppLocalizations {
   String get app_release_note => 'VocZilla бірінші нұсқасын орналастыру';
 
   @override
+  String get share_list_perso_alert_disponible => 'Тізіммен бөлісу мүмкіндігі жақын арада қолжетімді болады!';
+
+  @override
+  String get information => 'Ақпарат';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -51,7 +57,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get my_purchase => 'Менің жазылым';
 
   @override
-  String get dictation_title => 'Дауыс диктанты';
+  String get dictation_title => 'Дауысты диктант';
 
   @override
   String get dictation_label_text_field => 'Мәтінді тыңдап, теріңіз';
@@ -183,7 +189,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get home_notlogged_accroche8 => 'Жылдам өту үшін оңтайландырылған есте сақтау';
 
   @override
-  String get home_notlogged_accroche9 => 'Шекспир тілін меңгеруге дайынсыз ба?';
+  String get home_notlogged_accroche9 => 'Шекспирдің тілін меңгеруге дайынсыз ба?';
 
   @override
   String get home_notlogged_button_go => 'Мінеки біз!';
@@ -300,13 +306,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get profil_update_title => 'Профильді жаңартыңыз';
 
   @override
-  String get profil_complete_registration_title => 'Тіркеуіңізді аяқтаңыз';
+  String get profil_complete_registration_title => 'Тіркеуді аяқтаңыз';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Тегін сынақ мерзімін пайдаланыңыз!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Қош келдіңіз! Қазір тегін сынақ мерзімін пайдаланып жатырсыз';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Қош келдіңіз! Сіз қазір тегін сынақ мерзімін пайдаланып жатырсыз';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'күндер';
@@ -363,7 +369,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get alert_message_email_send_error => 'Электрондық поштаны жіберу қатесі.';
 
   @override
-  String get auth_error_deconnect => 'Шығу кезінде қате орын алды.';
+  String get auth_error_deconnect => 'Жүйеден шығу кезінде қате орын алды.';
 
   @override
   String get auth_error_connect => 'Қосылу кезінде белгісіз қате орын алды.';
@@ -390,7 +396,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get auth_error_echoue => 'Аутентификация орындалмады, әрекетті қайталаңыз';
 
   @override
-  String get firebase_error_message_too_many_requests => 'Тым көп сұраулар. Әрекетті кейінірек қайталаңыз.';
+  String get firebase_error_message_too_many_requests => 'Өтініштер тым көп. Әрекетті кейінірек қайталаңыз.';
 
   @override
   String get firebase_error_message_default => 'Белгісіз қате орын алды.';
@@ -426,7 +432,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Тізім сәтті жойылды.';
 
   @override
-  String get update_app_text_1 => 'Voczilla қолданбасының жаңа нұсқасы айтарлықтай жақсартулармен, жаңа мүмкіндіктермен және қателерді түзетумен қол жетімді';
+  String get update_app_text_1 => 'Voczilla қолданбасының жаңа нұсқасы айтарлықтай жақсартулармен, жаңа мүмкіндіктермен және қателерді түзетумен қол жетімді.';
 
   @override
   String get update_app_text_2 => 'Соңғы жаңалықтарды жіберіп алмаңыз!';

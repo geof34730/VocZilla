@@ -12,6 +12,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get app_release_note => 'Deployment of the first version of VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'The list sharing feature will be available very soon!';
+
+  @override
+  String get information => 'Information';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -426,7 +432,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'List deleted successfully.';
 
   @override
-  String get update_app_text_1 => 'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience.';
+  String get update_app_text_1 => 'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience';
 
   @override
   String get update_app_text_2 => 'Don\'t miss out on the latest news!';

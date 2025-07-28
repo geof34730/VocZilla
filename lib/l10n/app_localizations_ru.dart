@@ -12,6 +12,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get app_release_note => 'Развертывание первой версии VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Функция обмена списками станет доступна совсем скоро!';
+
+  @override
+  String get information => 'Информация';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -279,7 +285,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get email_validation_msg_email_send => 'На ваш адрес электронной почты было отправлено письмо с подтверждением.';
 
   @override
-  String get email_validation_instruction => 'Проверьте свой почтовый ящик и следуйте инструкциям для подтверждения адреса электронной почты. Это позволит нам подтвердить вашу регистрацию и предоставит вам доступ ко всем функциям нашего сервиса.';
+  String get email_validation_instruction => 'Проверьте свой почтовый ящик и следуйте инструкциям для подтверждения адреса электронной почты. Это позволит нам подтвердить вашу регистрацию и предоставить вам доступ ко всем функциям нашего сервиса.';
 
   @override
   String get email_validation_help => 'Если вы не видите письмо в своем почтовом ящике, проверьте папку со спамом или нежелательной почтой.';
@@ -396,7 +402,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get firebase_error_message_default => 'Произошла неизвестная ошибка.';
 
   @override
-  String get firebase_error_message_invalid_email => 'Адрес электронной почты неверен.';
+  String get firebase_error_message_invalid_email => 'Адрес электронной почты указан неверно.';
 
   @override
   String get firebase_error_message_user_disabled => 'Эта учетная запись пользователя отключена.';

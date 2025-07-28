@@ -1,5 +1,7 @@
 {
     "app_release_note": "פריסת הגרסה הראשונה של VocZilla",
+    "share_list_perso_alert_disponible": "תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!",
+    "information": "מֵידָע",
     "app_title": "ווקסילה",
     "app_subtitle": "אוצר מילים באנגלית",
     "app_description": "VocZilla היא האפליקציה המושלמת להרחבת אוצר המילים שלכם באנגלית, לא משנה מה הרמה שלכם. גלו אלפי מילים המסווגות לפי נושא, שחקו בחידונים מהנים, עקבו אחר ההתקדמות שלכם ואתגרו את חבריכם!",
@@ -19,7 +21,7 @@
     "liste_title": "רְשִׁימָה",
     "tester_title": "הַעֲרָכָה",
     "apprendre_title": "לִלמוֹד",
-    "language_locale": "Hébreu",
+    "language_locale": "Hebrew",
     "language_anglais": "אַנגְלִית",
     "search": "לחקור",
     "audios": "קבצי אודיו",

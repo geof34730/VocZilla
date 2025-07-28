@@ -1,5 +1,7 @@
 {
     "app_release_note": "Розгортання першої версії VocZilla",
+    "share_list_perso_alert_disponible": "Функція спільного доступу до списку буде доступна дуже скоро!",
+    "information": "Інформація",
     "app_title": "VocZilla",
     "app_subtitle": "Англійська лексика",
     "app_description": "VocZilla – ідеальний додаток для розширення вашого словникового запасу англійської мови, незалежно від вашого рівня. Відкрийте для себе тисячі слів, розподілених за темами, грайте у цікаві вікторини, відстежуйте свій прогрес і кидайте виклик друзям!",
@@ -129,7 +131,7 @@
     "firebase_error_message_too_many_requests": "Забагато запитів. Спробуйте пізніше.",
     "firebase_error_message_default": "Сталася невідома помилка.",
     "firebase_error_message_invalid_email": "Адреса електронної пошти має неправильний формат.",
-    "firebase_error_message_user_disabled": "Цей обліковий запис користувача вимкнено.",
+    "firebase_error_message_user_disabled": "Цей обліковий запис користувача було вимкнено.",
     "firebase_error_message_invalid_credential": "Електронна пошта або пароль неправильні.",
     "firebase_error_message_email_already_in_use": "Ця адреса електронної пошти вже використовується іншим обліковим записом.",
     "firebase_error_message_operation_not_allowed": "Ця операція не дозволена.",

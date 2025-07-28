@@ -1,5 +1,7 @@
 {
     "app_release_note": "Nasazení první verze VocZilly",
+    "share_list_perso_alert_disponible": "Funkce sdílení seznamů bude k dispozici velmi brzy!",
+    "information": "Informace",
     "app_title": "VocZilla",
     "app_subtitle": "Anglická slovní zásoba",
     "app_description": "VocZilla je perfektní aplikace pro rozšíření vaší anglické slovní zásoby bez ohledu na vaši úroveň. Objevte tisíce slovíček rozdělených podle témat, hrajte zábavné kvízy, sledujte svůj pokrok a vyzvěte své přátele!",
@@ -19,7 +21,7 @@
     "liste_title": "Seznam",
     "tester_title": "Hodnocení",
     "apprendre_title": "Učit se",
-    "language_locale": "Tchèque",
+    "language_locale": "Czech",
     "language_anglais": "angličtina",
     "search": "Prozkoumat",
     "audios": "Audia",

@@ -12,6 +12,12 @@ class AppLocalizationsSi extends AppLocalizations {
   String get app_release_note => 'VocZilla හි පළමු අනුවාදය යෙදවීම';
 
   @override
+  String get share_list_perso_alert_disponible => 'ලැයිස්තු බෙදාගැනීමේ විශේෂාංගය ඉතා ඉක්මනින් ලබා ගත හැකි වනු ඇත!';
+
+  @override
+  String get information => 'ස්ථානය යොමුව';
+
+  @override
   String get app_title => 'වොක්සිල්ලා';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get apprendre_title => 'ඉගෙන ගන්න';
 
   @override
-  String get language_locale => 'Cinghalais';
+  String get language_locale => 'Sinhala';
 
   @override
   String get language_anglais => 'ඉංග්‍රීසි';
@@ -396,7 +402,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get firebase_error_message_default => 'නොදන්නා දෝෂයක් සිදුවී ඇත.';
 
   @override
-  String get firebase_error_message_invalid_email => 'විද්‍යුත් තැපැල් ලිපිනය විකෘති වී ඇත.';
+  String get firebase_error_message_invalid_email => 'විද්‍යුත් තැපැල් ලිපිනය වැරදියි.';
 
   @override
   String get firebase_error_message_user_disabled => 'මෙම පරිශීලක ගිණුම අක්‍රිය කර ඇත.';
@@ -477,7 +483,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get card_home_share => 'බෙදාගත්තා';
 
   @override
-  String get card_home_mot => 'විරුද්ධව';
+  String get card_home_mot => 'එරෙහිව';
 
   @override
   String get card_home_reessayer => 'නැවත උත්සාහ කරන්න';

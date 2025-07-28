@@ -12,6 +12,12 @@ class AppLocalizationsPa extends AppLocalizations {
   String get app_release_note => 'VocZilla ਦੇ ਪਹਿਲੇ ਸੰਸਕਰਣ ਦੀ ਤੈਨਾਤੀ';
 
   @override
+  String get share_list_perso_alert_disponible => 'ਸੂਚੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਹੁਤ ਜਲਦੀ ਉਪਲਬਧ ਹੋਵੇਗੀ!';
+
+  @override
+  String get information => 'ਜਾਣਕਾਰੀ';
+
+  @override
   String get app_title => 'ਵੋਜ਼ਿਲਾ';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get apprendre_title => 'ਸਿੱਖੋ';
 
   @override
-  String get language_locale => 'Panjabi (Gurmukhi)';
+  String get language_locale => 'Punjabi (Gurmukhi)';
 
   @override
   String get language_anglais => 'ਅੰਗਰੇਜ਼ੀ';
@@ -255,7 +261,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get login_avec_google => 'ਗੂਗਲ ਨਾਲ';
 
   @override
-  String get login_avec_facebook => 'ਫੇਸਬੁੱਕ ਨਾਲ';
+  String get login_avec_facebook => 'ਫੇਸਬੁੱਕ ਦੇ ਨਾਲ';
 
   @override
   String get login_avec_apple => 'ਐਪਲ ਦੇ ਨਾਲ';

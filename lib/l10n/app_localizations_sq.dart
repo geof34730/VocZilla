@@ -12,6 +12,12 @@ class AppLocalizationsSq extends AppLocalizations {
   String get app_release_note => 'Vendosja e versionit të parë të VocZilla-s';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funksioni i ndarjes së listës do të jetë i disponueshëm shumë shpejt!';
+
+  @override
+  String get information => 'Informacion';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -60,7 +66,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get statistiques_title => 'Statistikat';
 
   @override
-  String get liste_title => 'Listë';
+  String get liste_title => 'Lista';
 
   @override
   String get tester_title => 'Vlerësimi';
@@ -69,7 +75,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get apprendre_title => 'Mëso';
 
   @override
-  String get language_locale => 'Albanais';
+  String get language_locale => 'Albanian';
 
   @override
   String get language_anglais => 'Anglisht';

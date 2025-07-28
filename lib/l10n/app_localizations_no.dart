@@ -12,6 +12,12 @@ class AppLocalizationsNo extends AppLocalizations {
   String get app_release_note => 'Utrulling av den første versjonen av VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funksjonen for deling av lister vil være tilgjengelig veldig snart!';
+
+  @override
+  String get information => 'Informasjon';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -426,7 +432,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Listen er slettet.';
 
   @override
-  String get update_app_text_1 => 'En ny versjon av Voczilla er tilgjengelig med betydelige forbedringer, nye funksjoner og feilrettinger for en enda bedre opplevelse';
+  String get update_app_text_1 => 'En ny versjon av Voczilla er tilgjengelig med betydelige forbedringer, nye funksjoner og feilrettinger for en enda bedre opplevelse.';
 
   @override
   String get update_app_text_2 => 'Ikke gå glipp av de siste nyhetene!';
@@ -519,7 +525,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get login_entrer_confirmer_mot_de_passe => 'Vennligst skriv inn passordet ditt på nytt';
 
   @override
-  String get login_mots_de_passe_differents => 'Passordene stemmer ikke overens';
+  String get login_mots_de_passe_differents => 'Passordene samsvarer ikke';
 
   @override
   String get login_tous_champs_obligatoires => 'Vennligst fyll ut alle feltene';

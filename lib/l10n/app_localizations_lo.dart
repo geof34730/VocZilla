@@ -12,13 +12,19 @@ class AppLocalizationsLo extends AppLocalizations {
   String get app_release_note => 'ການນຳໃຊ້ VocZilla ລຸ້ນທຳອິດ';
 
   @override
+  String get share_list_perso_alert_disponible => 'ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!';
+
+  @override
+  String get information => 'ຂໍ້ມູນ';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
   String get app_subtitle => 'ຄຳສັບພາສາອັງກິດ';
 
   @override
-  String get app_description => 'VocZilla ເປັນ app ທີ່ສົມບູນແບບເພື່ອຂະຫຍາຍຄໍາສັບພາສາອັງກິດຂອງທ່ານ, ບໍ່ວ່າລະດັບຂອງທ່ານ. ຄົ້ນ​ພົບ​ຫຼາຍ​ພັນ​ຄໍາ​ສັບ​ຕ່າງໆ​ຈັດ​ປະ​ເພດ​ໂດຍ​ຫົວ​ຂໍ້​, ຫຼິ້ນ​ແບບ​ທົດ​ສອບ​ມ່ວນ​ຊື່ນ​, ຕິດ​ຕາມ​ຄວາມ​ຄືບ​ຫນ້າ​ຂອງ​ທ່ານ​, ແລະ​ທ້າ​ທາຍ​ຫມູ່​ເພື່ອນ​ຂອງ​ທ່ານ​!';
+  String get app_description => 'VocZilla ເປັນ app ທີ່ສົມບູນແບບເພື່ອຂະຫຍາຍຄໍາສັບພາສາອັງກິດຂອງທ່ານ, ບໍ່ວ່າລະດັບຂອງທ່ານ. ຄົ້ນ​ພົບ​ພັນ​ຄໍາ​ທີ່​ຈັດ​ປະ​ເພດ​ໂດຍ​ຫົວ​ຂໍ້​, ຫຼິ້ນ​ແບບ​ທົດ​ສອບ​ມ່ວນ​ຊື່ນ​, ຕິດ​ຕາມ​ຄວາມ​ຄືບ​ຫນ້າ​ຂອງ​ທ່ານ​, ແລະ​ທ້າ​ທາຍ​ຫມູ່​ເພື່ອນ​ຂອງ​ທ່ານ​!';
 
   @override
   String get app_short_description => 'ຮຽນຮູ້ ແລະທົບທວນຄຳສັບພາສາອັງກິດ!';
@@ -69,7 +75,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get apprendre_title => 'ຮຽນຮູ້';
 
   @override
-  String get language_locale => 'Laotien';
+  String get language_locale => 'Lao';
 
   @override
   String get language_anglais => 'ພາສາອັງກິດ';
@@ -180,7 +186,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get home_notlogged_accroche7 => 'ຮຽນຮູ້ຄໍາທີ່ເປັນປະໂຫຍດທີ່ສຸດກ່ອນ';
 
   @override
-  String get home_notlogged_accroche8 => 'ປັບປຸງການຈື່ຈຳໃຫ້ກ້າວໜ້າໄວ';
+  String get home_notlogged_accroche8 => 'ປັບຄວາມຊົງຈຳໃຫ້ເໝາະສົມເພື່ອກ້າວໄປໄວ';
 
   @override
   String get home_notlogged_accroche9 => 'ພ້ອມແລ້ວທີ່ຈະສອນພາສາຂອງ Shakespeare?';
@@ -399,7 +405,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get firebase_error_message_invalid_email => 'ທີ່ຢູ່ອີເມວບໍ່ຖືກຕ້ອງ.';
 
   @override
-  String get firebase_error_message_user_disabled => 'ບັນຊີຜູ້ໃຊ້ນີ້ຖືກປິດໃຊ້ງານ.';
+  String get firebase_error_message_user_disabled => 'ບັນຊີຜູ້ໃຊ້ນີ້ຖືກປິດການນຳໃຊ້ແລ້ວ.';
 
   @override
   String get firebase_error_message_invalid_credential => 'ອີເມວ ຫຼືລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ.';

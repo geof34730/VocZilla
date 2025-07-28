@@ -12,6 +12,12 @@ class AppLocalizationsHu extends AppLocalizations {
   String get app_release_note => 'A VocZilla első verziójának telepítése';
 
   @override
+  String get share_list_perso_alert_disponible => 'A listamegosztási funkció hamarosan elérhető lesz!';
+
+  @override
+  String get information => 'Információ';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get apprendre_title => 'Tanul';
 
   @override
-  String get language_locale => 'Hongrois';
+  String get language_locale => 'Hungarian';
 
   @override
   String get language_anglais => 'angol';
@@ -186,7 +192,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get home_notlogged_accroche9 => 'Készen állsz elsajátítani Shakespeare nyelvét?';
 
   @override
-  String get home_notlogged_button_go => 'Na, kezdődik!';
+  String get home_notlogged_button_go => 'Rajta, kezdjük!';
 
   @override
   String get freetrial_info1 => 'A \$daysFreeTrial ingyenes próbaidőszaka lejárt';

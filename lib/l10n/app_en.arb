@@ -1,5 +1,7 @@
 {
     "app_release_note": "Deployment of the first version of VocZilla",
+    "share_list_perso_alert_disponible": "The list sharing feature will be available very soon!",
+    "information": "Information",
     "app_title": "VocZilla",
     "app_subtitle": "English vocabulary",
     "app_description": "VocZilla is the perfect app to expand your English vocabulary, no matter your level. Discover thousands of words categorized by theme, play fun quizzes, track your progress, and challenge your friends!",
@@ -138,7 +140,7 @@
     "firebase_error_message_error_generic": "An unexpected error has occurred. Please try again.",
     "auth_success_update_profile": "Profile successfully updated!",
     "vocabulaire_success_delete_list": "List deleted successfully.",
-    "update_app_text_1": "A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience.",
+    "update_app_text_1": "A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience",
     "update_app_text_2": "Don't miss out on the latest news!",
     "update_app_text_3": "Click below to update now",
     "update_app_text_4": "Update VocZilla",

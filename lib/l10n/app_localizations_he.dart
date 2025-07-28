@@ -12,6 +12,12 @@ class AppLocalizationsHe extends AppLocalizations {
   String get app_release_note => 'פריסת הגרסה הראשונה של VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!';
+
+  @override
+  String get information => 'מֵידָע';
+
+  @override
   String get app_title => 'ווקסילה';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get apprendre_title => 'לִלמוֹד';
 
   @override
-  String get language_locale => 'Hébreu';
+  String get language_locale => 'Hebrew';
 
   @override
   String get language_anglais => 'אַנגְלִית';

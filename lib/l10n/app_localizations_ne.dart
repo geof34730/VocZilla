@@ -12,6 +12,12 @@ class AppLocalizationsNe extends AppLocalizations {
   String get app_release_note => 'VocZilla को पहिलो संस्करणको तैनाती';
 
   @override
+  String get share_list_perso_alert_disponible => 'सूची साझेदारी सुविधा चाँडै उपलब्ध हुनेछ!';
+
+  @override
+  String get information => 'जानकारी';
+
+  @override
   String get app_title => 'भोकजिला';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get apprendre_title => 'सिक्नुहोस्';
 
   @override
-  String get language_locale => 'Népalais';
+  String get language_locale => 'Nepali';
 
   @override
   String get language_anglais => 'अंग्रेजी';
@@ -156,13 +162,13 @@ class AppLocalizationsNe extends AppLocalizations {
   String get home_description_list_perso => 'आफ्नो रोजाइका शब्दहरू प्रभावकारी रूपमा सिक्न र समीक्षा गर्न आफ्नै शब्दावली सूचीहरू सिर्जना र अनुकूलित गर्नुहोस्।';
 
   @override
-  String get home_title_classement => 'TeamZilla वरीयता';
+  String get home_title_classement => 'TeamZilla रैंकिंग';
 
   @override
   String get home_notlogged_accroche1 => 'आफ्नो अंग्रेजी बढाउनुहोस्!';
 
   @override
-  String get home_notlogged_accroche2 => 'के तपाईं आफ्नो अंग्रेजी शब्दावली समृद्ध बनाउन चाहनुहुन्छ?';
+  String get home_notlogged_accroche2 => 'के तपाईं आफ्नो अंग्रेजी शब्दावलीलाई समृद्ध बनाउन चाहनुहुन्छ?';
 
   @override
   String get home_notlogged_accroche3 => 'पहुँच ';
@@ -180,7 +186,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get home_notlogged_accroche7 => 'पहिला सबैभन्दा उपयोगी शब्दहरू सिक्नुहोस्';
 
   @override
-  String get home_notlogged_accroche8 => 'द्रुत प्रगतिको लागि अनुकूलित स्मरणशक्ति';
+  String get home_notlogged_accroche8 => 'छिटो प्रगति गर्न अनुकूलित स्मरणशक्ति';
 
   @override
   String get home_notlogged_accroche9 => 'शेक्सपियरको भाषामा निपुण हुन तयार हुनुहुन्छ?';
@@ -360,7 +366,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get alert_message_email_verify_send => 'प्रमाणीकरण इमेल पठाइयो!';
 
   @override
-  String get alert_message_email_send_error => 'इमेल पठाउने क्रममा त्रुटि भयो।';
+  String get alert_message_email_send_error => 'इमेल पठाउँदा त्रुटि भयो।';
 
   @override
   String get auth_error_deconnect => 'लग आउट गर्दा एउटा त्रुटि भयो।';

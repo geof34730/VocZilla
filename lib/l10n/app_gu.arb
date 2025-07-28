@@ -1,5 +1,7 @@
 {
-    "app_release_note": "VocZilla ના પ્રથમ સંસ્કરણનું જમાવટ",
+    "app_release_note": "VocZilla ના પ્રથમ સંસ્કરણનું વિતરણ",
+    "share_list_perso_alert_disponible": "યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!",
+    "information": "માહિતી",
     "app_title": "વોકઝિલા",
     "app_subtitle": "અંગ્રેજી શબ્દભંડોળ",
     "app_description": "VocZilla એ તમારા અંગ્રેજી શબ્દભંડોળને વિસ્તૃત કરવા માટે એક સંપૂર્ણ એપ્લિકેશન છે, ભલે તમારું સ્તર ગમે તે હોય. થીમ દ્વારા વર્ગીકૃત હજારો શબ્દો શોધો, મનોરંજક ક્વિઝ રમો, તમારી પ્રગતિને ટ્રૅક કરો અને તમારા મિત્રોને પડકાર આપો!",
@@ -126,7 +128,7 @@
     "auth_error_google": "ગૂગલ લોગિનમાં એક અજાણી ભૂલ આવી.",
     "auth_error_apple": "એપલ લોગિનમાં એક અજાણી ભૂલ આવી.",
     "auth_error_echoue": "પ્રમાણીકરણ નિષ્ફળ ગયું, કૃપા કરીને ફરી પ્રયાસ કરો.",
-    "firebase_error_message_too_many_requests": "ઘણી બધી વિનંતીઓ છે. પછીથી ફરી પ્રયાસ કરો.",
+    "firebase_error_message_too_many_requests": "ઘણી બધી વિનંતીઓ. પછીથી ફરી પ્રયાસ કરો.",
     "firebase_error_message_default": "એક અજાણી ભૂલ આવી છે.",
     "firebase_error_message_invalid_email": "ઇમેઇલ સરનામું ખોટુ છે.",
     "firebase_error_message_user_disabled": "આ વપરાશકર્તા ખાતું અક્ષમ કરવામાં આવ્યું છે.",
@@ -138,7 +140,7 @@
     "firebase_error_message_error_generic": "એક અણધારી ભૂલ આવી છે. કૃપા કરીને ફરી પ્રયાસ કરો.",
     "auth_success_update_profile": "પ્રોફાઇલ સફળતાપૂર્વક અપડેટ થઈ!",
     "vocabulaire_success_delete_list": "સૂચિ સફળતાપૂર્વક કાઢી નાખવામાં આવી.",
-    "update_app_text_1": "વધુ સારા અનુભવ માટે Voczilla નું નવું વર્ઝન નોંધપાત્ર સુધારાઓ, નવી સુવિધાઓ અને બગ ફિક્સ સાથે ઉપલબ્ધ છે.",
+    "update_app_text_1": "વધુ સારા અનુભવ માટે Voczilla નું નવું સંસ્કરણ નોંધપાત્ર સુધારાઓ, નવી સુવિધાઓ અને બગ ફિક્સ સાથે ઉપલબ્ધ છે.",
     "update_app_text_2": "નવીનતમ સમાચાર ચૂકશો નહીં!",
     "update_app_text_3": "હમણાં અપડેટ કરવા માટે નીચે ક્લિક કરો",
     "update_app_text_4": "VocZilla અપડેટ કરો",
@@ -169,6 +171,6 @@
     "oui": "હા",
     "login_confirmer_mot_de_passe": "પાસવર્ડ કન્ફર્મ કરો",
     "login_entrer_confirmer_mot_de_passe": "કૃપા કરીને તમારો પાસવર્ડ ફરીથી દાખલ કરો.",
-    "login_mots_de_passe_differents": "પાસવર્ડ્સ મેળ ખાતા નથી.",
+    "login_mots_de_passe_differents": "પાસવર્ડ્સ મેળ ખાતા નથી",
     "login_tous_champs_obligatoires": "કૃપા કરીને બધા ફીલ્ડ ભરો."
 }

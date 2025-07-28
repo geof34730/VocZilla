@@ -1,5 +1,7 @@
 {
     "app_release_note": "VocZilla esimese versiooni juurutamine",
+    "share_list_perso_alert_disponible": "Loendi jagamise funktsioon on saadaval peagi!",
+    "information": "Teave",
     "app_title": "VocZilla",
     "app_subtitle": "Inglise keele sõnavara",
     "app_description": "VocZilla on ideaalne rakendus oma inglise keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!",
@@ -162,7 +164,7 @@
     "vocabulaire_user_error_add_list_perso": "Viga nimekirja lisamisel",
     "vocabulaire_user_error_update_list_perso": "Viga nimekirja värskendamisel",
     "vocabulaire_user_error_add_vocabulaire_list_perso": "Sõnavara lisamisel loendisse tekkis viga",
-    "vocabulaire_user_error_delete_vocabulaire_list": "Sõnavara loendist kustutamisel tekkis viga",
+    "vocabulaire_user_error_delete_vocabulaire_list": "Viga sõnavara loendist kustutamisel",
     "alert_dialogue_suppression_list_title": "Kustutamise kinnitus",
     "alert_dialogue_suppression_list_question": "Kas olete kindel, et soovite oma kohandatud loendi kustutada?",
     "non": "Mitte",

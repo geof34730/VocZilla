@@ -12,6 +12,12 @@ class AppLocalizationsGl extends AppLocalizations {
   String get app_release_note => 'Implementación da primeira versión de VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'A función para compartir listas estará dispoñible moi pronto!';
+
+  @override
+  String get information => 'Información';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get apprendre_title => 'Aprender';
 
   @override
-  String get language_locale => 'Galicien';
+  String get language_locale => 'Galician';
 
   @override
   String get language_anglais => 'Inglés';
@@ -186,7 +192,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get home_notlogged_accroche9 => 'Preparado/a para dominar a linguaxe de Shakespeare?';
 
   @override
-  String get home_notlogged_button_go => 'Aquí imos!';
+  String get home_notlogged_button_go => 'Aló imos!';
 
   @override
   String get freetrial_info1 => 'Rematou o teu período de proba gratuíta de \$daysFreeTrial';
@@ -456,10 +462,10 @@ class AppLocalizationsGl extends AppLocalizations {
   String get drawer_free_trial_days => 'días';
 
   @override
-  String get drawer_free_trial_restants => 'restante';
+  String get drawer_free_trial_restants => 'restantes';
 
   @override
-  String get drawer_free_trial_restant => 'restante';
+  String get drawer_free_trial_restant => 'restantes';
 
   @override
   String get erreur_de_chargement_du_profil => 'Erro ao cargar o perfil';

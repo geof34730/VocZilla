@@ -12,6 +12,12 @@ class AppLocalizationsNl extends AppLocalizations {
   String get app_release_note => 'Implementatie van de eerste versie van VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'De functie om lijsten te delen zal binnenkort beschikbaar zijn!';
+
+  @override
+  String get information => 'Informatie';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -132,7 +138,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get offline_title => 'Offline';
 
   @override
-  String get offline_description => 'U heeft geen internetverbinding. Maak verbinding met internet om verder te gaan.';
+  String get offline_description => 'Je hebt geen internetverbinding. Maak verbinding met internet om verder te gaan.';
 
   @override
   String get quizz_progression_title => 'Mijn voortgang op deze lijst';
@@ -153,7 +159,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get home_title_list_defined => 'Van klein monster tot Titan';
 
   @override
-  String get home_description_list_perso => 'Maak uw eigen woordenschatlijsten en pas ze aan, zodat u effectief de woorden van uw keuze kunt leren en herhalen.';
+  String get home_description_list_perso => 'Maak uw eigen woordenschatlijsten aan en pas ze aan, zodat u effectief de woorden van uw keuze kunt leren en herhalen.';
 
   @override
   String get home_title_classement => 'TeamZilla-ranglijst';
@@ -234,7 +240,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get login_nom => 'Naam';
 
   @override
-  String get login_entrer_nom => 'Voer uw naam in';
+  String get login_entrer_nom => 'Vul je naam in';
 
   @override
   String get login_pseudo => 'Pseudoniem';
@@ -318,7 +324,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Je bent weggegaan';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description5 => 'gratis proefversies';
+  String get widget_dialogHelper_showfreetrialdialog_description5 => 'gratis proefperiodes';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description6 => 'Laat je ervaring niet stoppen! Kies het abonnement dat bij je past en geniet ongestoord verder.';
@@ -426,7 +432,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Lijst succesvol verwijderd.';
 
   @override
-  String get update_app_text_1 => 'Er is een nieuwe versie van Voczilla beschikbaar met aanzienlijke verbeteringen, nieuwe functies en bugfixes voor een nog betere ervaring';
+  String get update_app_text_1 => 'Er is een nieuwe versie van Voczilla beschikbaar met aanzienlijke verbeteringen, nieuwe functies en bugfixes voor een nog betere ervaring.';
 
   @override
   String get update_app_text_2 => 'Mis het laatste nieuws niet!';

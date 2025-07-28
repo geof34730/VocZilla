@@ -12,6 +12,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get app_release_note => 'Triển khai phiên bản đầu tiên của VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Tính năng chia sẻ danh sách sẽ sớm có mặt!';
+
+  @override
+  String get information => 'Thông tin';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get apprendre_title => 'Học hỏi';
 
   @override
-  String get language_locale => 'Vietnamien';
+  String get language_locale => 'Vietnamese';
 
   @override
   String get language_anglais => 'Tiếng Anh';

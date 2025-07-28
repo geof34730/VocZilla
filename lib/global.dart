@@ -5,8 +5,8 @@ String titleApp="VocZilla";
 int titleAppCute1=3;
 String versionApp="1.0.0";
 bool debugMode= false;
-bool testScreenShot = true;
-int daysFreeTrial=150;
+bool testScreenShot = false;
+int daysFreeTrial=7;
 
 bool changeVocabulaireSinceVisiteHome = false;
 

@@ -12,6 +12,12 @@ class AppLocalizationsEu extends AppLocalizations {
   String get app_release_note => 'VocZillaren lehen bertsioaren hedapena';
 
   @override
+  String get share_list_perso_alert_disponible => 'Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!';
+
+  @override
+  String get information => 'Informazioa';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -180,7 +186,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get home_notlogged_accroche7 => 'Ikasi lehenengo hitz erabilgarrienak';
 
   @override
-  String get home_notlogged_accroche8 => 'Azkar aurrera egiteko memorizazio optimizatua';
+  String get home_notlogged_accroche8 => 'Memorizazio optimizatua azkar aurrera egiteko';
 
   @override
   String get home_notlogged_accroche9 => 'Prest Shakespeareren hizkuntza menperatzeko?';
@@ -435,7 +441,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get update_app_text_3 => 'Egin klik behean orain eguneratzeko';
 
   @override
-  String get update_app_text_4 => 'Eguneratu VocZilla';
+  String get update_app_text_4 => 'VocZilla eguneratu';
 
   @override
   String get update_app_text_5 => 'Eskerrik asko Voczilla komunitatearen parte izateagatik.';

@@ -12,6 +12,12 @@ class AppLocalizationsIs extends AppLocalizations {
   String get app_release_note => 'Útfærsla fyrstu útgáfunnar af VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'Aðgerðin til að deila listanum verður tiltæk mjög fljótlega!';
+
+  @override
+  String get information => 'Upplýsingar';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get apprendre_title => 'Læra';
 
   @override
-  String get language_locale => 'Islandais';
+  String get language_locale => 'Icelandic';
 
   @override
   String get language_anglais => 'Enska';
@@ -210,7 +216,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get abonnement_descriptif_mensuel => 'Frjáls eins og fuglinn: hætta við hvenær sem þú vilt.';
 
   @override
-  String get abonnement_descriptif_annuel => 'Njóttu upplifunarinnar til fulls og sparaðu peninga.';
+  String get abonnement_descriptif_annuel => 'Njóttu upplifunarinnar til fulls og sparaðu peninga á meðan þú ert með.';
 
   @override
   String get button_sabonner => 'Gerast áskrifandi';

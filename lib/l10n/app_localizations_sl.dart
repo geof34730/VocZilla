@@ -12,6 +12,12 @@ class AppLocalizationsSl extends AppLocalizations {
   String get app_release_note => 'Uvedba prve različice VocZille';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funkcija deljenja seznamov bo kmalu na voljo!';
+
+  @override
+  String get information => 'Informacije';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get apprendre_title => 'Uči se';
 
   @override
-  String get language_locale => 'Slovène';
+  String get language_locale => 'Slovenian';
 
   @override
   String get language_anglais => 'Angleščina';
@@ -87,7 +93,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get learn_view_carte => 'Kliknite na zemljevid, da si ogledate odgovor';
 
   @override
-  String get button_next => 'Apartma';
+  String get button_next => 'Suita';
 
   @override
   String get error_loading => 'Napaka pri nalaganju';
@@ -357,7 +363,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get anonymous_user => 'Anonimni uporabnik';
 
   @override
-  String get alert_message_email_verify_send => 'Potrditveno e-poštno sporočilo je bilo poslano!';
+  String get alert_message_email_verify_send => 'Potrditveno e-poštno sporočilo poslano!';
 
   @override
   String get alert_message_email_send_error => 'Napaka pri pošiljanju e-pošte.';
@@ -414,7 +420,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get firebase_error_message_weak_password => 'Geslo je prešibko.';
 
   @override
-  String get firebase_error_message_account_exists_with_different_credential => 'Račun z istim e-poštnim naslovom, vendar z drugačnimi poverilnicami, že obstaja.';
+  String get firebase_error_message_account_exists_with_different_credential => 'Račun z istim e-poštnim naslovom, vendar drugačnimi poverilnicami, že obstaja.';
 
   @override
   String get firebase_error_message_error_generic => 'Prišlo je do nepričakovane napake. Poskusite znova.';

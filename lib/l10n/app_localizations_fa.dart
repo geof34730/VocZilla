@@ -12,6 +12,12 @@ class AppLocalizationsFa extends AppLocalizations {
   String get app_release_note => 'استقرار اولین نسخه VocZilla';
 
   @override
+  String get share_list_perso_alert_disponible => 'قابلیت اشتراک‌گذاری لیست خیلی زود در دسترس قرار خواهد گرفت!';
+
+  @override
+  String get information => 'اطلاعات';
+
+  @override
   String get app_title => 'وُکزیلا';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get apprendre_title => 'یاد بگیرید';
 
   @override
-  String get language_locale => 'Persan';
+  String get language_locale => 'Persian';
 
   @override
   String get language_anglais => 'انگلیسی';
@@ -114,7 +120,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get pronunciation_description_action => 'برای صحبت کردن و بررسی تلفظ خود، میکروفون را فشار دهید.';
 
   @override
-  String get pronunciation_error1 => 'تشخیص گفتار مقداردهی اولیه نشد';
+  String get pronunciation_error1 => 'مقداردهی اولیه تشخیص گفتار انجام نشد';
 
   @override
   String get pronunciation_error2 => 'خطا در هنگام مقداردهی اولیه';
@@ -174,7 +180,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get home_notlogged_accroche5 => 'بر اساس میزان استفاده مرتب شده‌اند تا کلماتی که واقعاً مهم هستند را یاد بگیرید.';
 
   @override
-  String get home_notlogged_accroche6 => 'روش سریع و مؤثر';
+  String get home_notlogged_accroche6 => 'روش سریع و موثر';
 
   @override
   String get home_notlogged_accroche7 => 'ابتدا کلمات پرکاربرد را یاد بگیرید';
@@ -189,7 +195,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get home_notlogged_button_go => 'بفرمایید!';
 
   @override
-  String get freetrial_info1 => 'دوره آزمایشی رایگان \$daysFreeTrial شما به پایان رسیده است.';
+  String get freetrial_info1 => 'دوره آزمایشی رایگان \$daysFreeTrial شما به پایان رسیده است';
 
   @override
   String get freetrial_info2 => 'به ما بپیوندید و با عضویت‌های انحصاری ما، دنیایی از امکانات را برای خود باز کنید!';

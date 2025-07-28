@@ -1,5 +1,7 @@
 {
     "app_release_note": "Distribution av den första versionen av VocZilla",
+    "share_list_perso_alert_disponible": "Funktionen för att dela listor kommer att finnas tillgänglig mycket snart!",
+    "information": "Information",
     "app_title": "VocZilla",
     "app_subtitle": "Engelskt ordförråd",
     "app_description": "VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!",
@@ -31,7 +33,7 @@
     "no_vocabulary_items_found": "Inga ordförråd hittades",
     "pronunciation_title": "Uttal",
     "pronunciation_success": "Bravo!",
-    "pronunciation_error": "Hmm, det stämmer inte riktigt. Försök igen.",
+    "pronunciation_error": "Hmm, det stämmer inte helt. Försök igen.",
     "pronunciation_i_heard_you_say": "Jag hörde dig säga",
     "pronunciation_description_action": "Tryck på mikrofonen för att tala och kontrollera ditt uttal.",
     "pronunciation_error1": "Misslyckades med att initiera taligenkänning",

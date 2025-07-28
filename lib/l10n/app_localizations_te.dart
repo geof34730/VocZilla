@@ -12,6 +12,12 @@ class AppLocalizationsTe extends AppLocalizations {
   String get app_release_note => 'వోక్జిల్లా యొక్క మొదటి వెర్షన్ యొక్క విస్తరణ';
 
   @override
+  String get share_list_perso_alert_disponible => 'జాబితా భాగస్వామ్య ఫీచర్ అతి త్వరలో అందుబాటులోకి వస్తుంది!';
+
+  @override
+  String get information => 'సమాచారం';
+
+  @override
   String get app_title => 'వోక్జిల్లా';
 
   @override

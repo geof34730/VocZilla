@@ -241,6 +241,18 @@ abstract class AppLocalizations {
   /// **'Deployment of the first version of VocZilla'**
   String get app_release_note;
 
+  /// No description provided for @share_list_perso_alert_disponible.
+  ///
+  /// In en, this message translates to:
+  /// **'The list sharing feature will be available very soon!'**
+  String get share_list_perso_alert_disponible;
+
+  /// No description provided for @information.
+  ///
+  /// In en, this message translates to:
+  /// **'Information'**
+  String get information;
+
   /// No description provided for @app_title.
   ///
   /// In en, this message translates to:
@@ -1072,7 +1084,7 @@ abstract class AppLocalizations {
   /// No description provided for @update_app_text_1.
   ///
   /// In en, this message translates to:
-  /// **'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience.'**
+  /// **'A new version of Voczilla is available with significant improvements, new features and bug fixes for an even better experience'**
   String get update_app_text_1;
 
   /// No description provided for @update_app_text_2.

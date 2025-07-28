@@ -12,6 +12,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get app_release_note => 'VocZillaの最初のバージョンの展開';
 
   @override
+  String get share_list_perso_alert_disponible => 'リスト共有機能はまもなく利用可能になります。';
+
+  @override
+  String get information => '情報';
+
+  @override
   String get app_title => 'ヴォックジラ';
 
   @override
@@ -48,10 +54,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get change_language => '言語を変更する';
 
   @override
-  String get my_purchase => '私のサブスクリプション';
+  String get my_purchase => '私の購読';
 
   @override
-  String get dictation_title => '音声ディクテーション';
+  String get dictation_title => '音声入力';
 
   @override
   String get dictation_label_text_field => '聞いてテキストを入力する';
@@ -69,7 +75,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get apprendre_title => '学ぶ';
 
   @override
-  String get language_locale => 'Japonais';
+  String get language_locale => 'Japanese';
 
   @override
   String get language_anglais => '英語';
@@ -174,7 +180,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get home_notlogged_accroche5 => '使用頻度順に並べることで、本当に重要な単語を学ぶことができます。';
 
   @override
-  String get home_notlogged_accroche6 => '迅速かつ効果的な方法';
+  String get home_notlogged_accroche6 => '速くて効果的な方法';
 
   @override
   String get home_notlogged_accroche7 => '最も役立つ単語を最初に学ぶ';

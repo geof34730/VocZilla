@@ -1,5 +1,7 @@
 {
     "app_release_note": "Triển khai phiên bản đầu tiên của VocZilla",
+    "share_list_perso_alert_disponible": "Tính năng chia sẻ danh sách sẽ sớm có mặt!",
+    "information": "Thông tin",
     "app_title": "VocZilla",
     "app_subtitle": "Từ vựng tiếng Anh",
     "app_description": "VocZilla là ứng dụng hoàn hảo để mở rộng vốn từ vựng tiếng Anh của bạn, bất kể trình độ. Khám phá hàng ngàn từ vựng được phân loại theo chủ đề, chơi các bài kiểm tra thú vị, theo dõi tiến trình và thách thức bạn bè!",
@@ -19,7 +21,7 @@
     "liste_title": "Danh sách",
     "tester_title": "Sự đánh giá",
     "apprendre_title": "Học hỏi",
-    "language_locale": "Vietnamien",
+    "language_locale": "Vietnamese",
     "language_anglais": "Tiếng Anh",
     "search": "Để nghiên cứu",
     "audios": "Âm thanh",

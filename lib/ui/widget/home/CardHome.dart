@@ -296,7 +296,7 @@ class CardHome extends StatelessWidget {
                       iconContent: Icons.delete,
                       context: context,
                     ),
-                    ElevatedButtonCardHome(
+                    /*ElevatedButtonCardHome(
                       valueKey: 'buttonSharePerso${keyStringTest}',
                       colorIcon: Colors.blue,
                       onClickButton: () {
@@ -304,7 +304,34 @@ class CardHome extends StatelessWidget {
                       },
                       iconContent: Icons.share,
                       context: context,
+                    ),*/
+                    ElevatedButtonCardHome(
+                      valueKey: 'buttonSharePerso${keyStringTest}',
+                      colorIcon: Colors.blue,
+                      onClickButton: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext dialogContext) {
+                            return AlertDialog(
+                              title: Text(context.loc.information),
+                              content: Text(context.loc.share_list_perso_alert_disponible),
+                              actions: <Widget>[
+                                TextButton(
+                                  child: Text("OK"),
+                                  onPressed: () {
+                                    Navigator.of(dialogContext).pop();
+                                  },
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
+                      iconContent: Icons.share,
+                      context: context,
                     ),
+
+
                   ],
                 ),
               ],

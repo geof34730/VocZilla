@@ -12,6 +12,12 @@ class AppLocalizationsCs extends AppLocalizations {
   String get app_release_note => 'Nasazení první verze VocZilly';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funkce sdílení seznamů bude k dispozici velmi brzy!';
+
+  @override
+  String get information => 'Informace';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get apprendre_title => 'Učit se';
 
   @override
-  String get language_locale => 'Tchèque';
+  String get language_locale => 'Czech';
 
   @override
   String get language_anglais => 'angličtina';

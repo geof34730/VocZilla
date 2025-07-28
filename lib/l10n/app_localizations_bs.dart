@@ -12,6 +12,12 @@ class AppLocalizationsBs extends AppLocalizations {
   String get app_release_note => 'Implementacija prve verzije VocZille';
 
   @override
+  String get share_list_perso_alert_disponible => 'Funkcija dijeljenja liste bit će dostupna vrlo brzo!';
+
+  @override
+  String get information => 'Informacije';
+
+  @override
   String get app_title => 'VocZilla';
 
   @override
@@ -69,7 +75,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get apprendre_title => 'Uči';
 
   @override
-  String get language_locale => 'Bosniaque';
+  String get language_locale => 'Bosnian';
 
   @override
   String get language_anglais => 'Engleski';
@@ -315,7 +321,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'da biste otkrili sve funkcije naše aplikacije.';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Otišli ste';
+  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Otišao/la si';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'besplatne probne verzije';

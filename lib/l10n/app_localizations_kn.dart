@@ -12,6 +12,12 @@ class AppLocalizationsKn extends AppLocalizations {
   String get app_release_note => 'VocZilla ನ ಮೊದಲ ಆವೃತ್ತಿಯ ನಿಯೋಜನೆ';
 
   @override
+  String get share_list_perso_alert_disponible => 'ಪಟ್ಟಿ ಹಂಚಿಕೆ ವೈಶಿಷ್ಟ್ಯವು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಿರುತ್ತದೆ!';
+
+  @override
+  String get information => 'ಮಾಹಿತಿ';
+
+  @override
   String get app_title => 'ವೋಕ್‌ಜಿಲ್ಲಾ';
 
   @override

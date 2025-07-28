@@ -1,5 +1,7 @@
 {
     "app_release_note": "Utrulling av den første versjonen av VocZilla",
+    "share_list_perso_alert_disponible": "Funksjonen for deling av lister vil være tilgjengelig veldig snart!",
+    "information": "Informasjon",
     "app_title": "VocZilla",
     "app_subtitle": "Engelsk ordforråd",
     "app_description": "VocZilla er den perfekte appen for å utvide ditt engelske vokabular, uansett nivå. Oppdag tusenvis av ord kategorisert etter tema, spill morsomme quizer, følg med på fremgangen din og utfordre vennene dine!",
@@ -138,7 +140,7 @@
     "firebase_error_message_error_generic": "Det har oppstått en uventet feil. Prøv på nytt.",
     "auth_success_update_profile": "Profilen er oppdatert!",
     "vocabulaire_success_delete_list": "Listen er slettet.",
-    "update_app_text_1": "En ny versjon av Voczilla er tilgjengelig med betydelige forbedringer, nye funksjoner og feilrettinger for en enda bedre opplevelse",
+    "update_app_text_1": "En ny versjon av Voczilla er tilgjengelig med betydelige forbedringer, nye funksjoner og feilrettinger for en enda bedre opplevelse.",
     "update_app_text_2": "Ikke gå glipp av de siste nyhetene!",
     "update_app_text_3": "Klikk nedenfor for å oppdatere nå",
     "update_app_text_4": "Oppdater VocZilla",
@@ -169,6 +171,6 @@
     "oui": "Ja",
     "login_confirmer_mot_de_passe": "Bekreft passord",
     "login_entrer_confirmer_mot_de_passe": "Vennligst skriv inn passordet ditt på nytt",
-    "login_mots_de_passe_differents": "Passordene stemmer ikke overens",
+    "login_mots_de_passe_differents": "Passordene samsvarer ikke",
     "login_tous_champs_obligatoires": "Vennligst fyll ut alle feltene"
 }

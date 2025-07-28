@@ -12,6 +12,12 @@ class AppLocalizationsMr extends AppLocalizations {
   String get app_release_note => 'VocZilla च्या पहिल्या आवृत्तीची तैनाती';
 
   @override
+  String get share_list_perso_alert_disponible => 'यादी शेअरिंग वैशिष्ट्य लवकरच उपलब्ध होईल!';
+
+  @override
+  String get information => 'माहिती';
+
+  @override
   String get app_title => 'व्होकझिला';
 
   @override
@@ -270,7 +276,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get login_sinscrire => 'नोंदणी करा';
 
   @override
-  String get login_ou_inscrivez_vous_avec => 'किंवा येथे नोंदणी करा';
+  String get login_ou_inscrivez_vous_avec => 'किंवा नोंदणी करा';
 
   @override
   String get email_validation_merci_register => 'साइन अप केल्याबद्दल धन्यवाद!';
