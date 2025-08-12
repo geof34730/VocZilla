@@ -25,10 +25,10 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  //final TextEditingController emailController = TextEditingController(text: "voczilla.test2@flutter-now.com");
-  //final TextEditingController passwordController = TextEditingController(text: "Hefpccy%08%08");
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController(text: "voczilla.test2@flutter-now.com");
+  final TextEditingController passwordController = TextEditingController(text: "Hefpccy%08%08");
+  //final TextEditingController emailController = TextEditingController();
+  //final TextEditingController passwordController = TextEditingController();
 
   @override
   void dispose() {

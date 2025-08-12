@@ -30,24 +30,28 @@ platform :all do
     UI.message("🌟 Lancement de l'émulateur...")
     start_emulator_once(avd_name)
 
+
+ # "ios" => [
+         # 'iPad Pro (12.9-inch) (3rd generation)',
+         # 'iphone6_7_inch',
+         # 'ipad_12_9_inch'
+        #],
     # On recompile l'application une seule fois après le clean
     UI.message("📦 Construction de l'application...")
     sh("flutter build apk")
     {
-        "ios" => [
-          'iPad Pro (12.9-inch) (3rd generation)',
-          'iphone6_7_inch',
-          'ipad_12_9_inch'
-        ],
         "android" => [
-          'phoneScreenshots',
-          'sevenInchScreenshots',
-          'tenInchScreenshots',
-          'FeatureGraphic'
-        ]
+           'FeatureGraphic'
+        ],
+        "ios" => [
+           'iPad Pro (12.9-inch) (3rd generation)',
+           'iphone6_7_inch',
+           'ipad_12_9_inch'
+        ],
     }.each do |platform, folders|
       folders.each do |folder|
         run_screenshots_for_folder(folder, platform)
+          sh("flutter clean")
       end
       sh("flutter clean")
     end

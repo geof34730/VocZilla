@@ -10,6 +10,7 @@ import 'package:vobzilla/ui/screens/update_screen.dart';
 import 'core/utils/errorMessage.dart';
 import 'core/utils/feature_graphic_flag.dart';
 import 'data/models/user_firestore.dart';
+import 'global.dart';
 import 'logic/blocs/auth/auth_event.dart';
 import 'logic/blocs/notification/notification_bloc.dart';
 import 'logic/blocs/notification/notification_event.dart';
@@ -54,7 +55,10 @@ class AppRoute {
   static const String subscription = '/subscription';
   static const String updateScreen = '/update';
   static const String featureGraphic = '/featureGraphic';
-
+  static bool isCompteTestForRevisionStore() {
+    final firebaseUser = FirebaseAuth.instance.currentUser;
+    return firebaseUser?.email == emailTestRevisionStore;
+  }
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
    if (forFeatureGraphic && settings.name == AppRoute.home) {
@@ -122,6 +126,26 @@ class AppRoute {
                 }
               },
             ),
+            BlocListener<UserBloc, UserState>(
+              listener: (context, userState) {
+                Logger.Red.log("BlocListener<UserBloc, UserState>");
+                if (!isCompteTestForRevisionStore() && settings.name != subscription) {
+                  if (userState is UserFreeTrialPeriodAndNotSubscribed) {
+                    userRepository.showDialogueFreeTrialOnceByDay(context: context);
+                  }
+                  if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
+                    Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
+                    if (settings.name != subscription) {
+                      Navigator.pushReplacementNamed(
+                          context,
+                          subscription,
+                          arguments: {'endTrial': true}
+                      );
+                    }
+                  }
+                }
+              },
+            ),
             BlocListener<UpdateBloc, UpdateState>(
               listener: (context, updateState) {
                 if (updateState is UpdateAvailable) {
@@ -185,12 +209,15 @@ class AppRoute {
   }
 
   static Widget _getAuthenticatedPage(RouteSettings settings, BuildContext context) {
-    // ... (contenu de la fonction inchangé)
+    final userState = context.watch<UserBloc>().state;
     final uri = Uri.parse(settings.name ?? '');
     Logger.Blue.log("_getAuthenticatedPage settings.name: ${settings.name}");
-
-    if (uri.pathSegments.isEmpty && settings.name == '/') {
-      return Layout(child: HomeScreen());
+    if (!isCompteTestForRevisionStore() && settings.name != subscription) {
+      if (userState is UserInitial || userState is UserLoading ||
+          userState is UserError ||
+          userState is UserFreeTrialPeriodEndAndNotSubscribed) {
+        return Layout(child: Loading());
+      }
     }
 
     if (uri.pathSegments.isNotEmpty) {
@@ -208,7 +235,7 @@ class AppRoute {
           return Layout(titleScreen: context.loc.title_subscription, child: SubscriptionScreen());
         case home:
         case homeLogged:
-          return Layout(child: HomeScreen());
+          Layout(child: HomeScreen());
         case updateScreen:
           return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
         case '/vocabulary':
@@ -289,6 +316,7 @@ class AppRoute {
     }
     return Layout(child: HomeScreen());
   }
+
 
 
   static void _redirectTo(BuildContext context, RouteSettings settings, String targetRoute, {Object? arguments}) {

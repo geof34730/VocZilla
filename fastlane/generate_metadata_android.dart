@@ -6,11 +6,46 @@ import 'locale_mapper.dart';
 Future<int> getLastBuildNumber() async {
   final file = File('deploy-info.json');
   if (!await file.exists()) {
-    throw Exception('deploy-info.json introuvable');
+    throw Exception('Le fichier deploy-info.json est introuvable.');
   }
   final content = await file.readAsString();
   final jsonData = json.decode(content);
   return jsonData['lastBuildNumber'];
+}
+
+// 📝 Génère le fichier d'informations pour la révision Google Play
+// Les informations sont écrites directement dans cette fonction.
+Future<void> generateReviewInformation(String basePath) async {
+  // --- VOS INFORMATIONS DE TEST ICI ---
+  // ⚠️ ATTENTION : Remplacer les valeurs ci-dessous par vos propres informations de test.
+  // Assurez-vous que ce fichier n'est pas versionné dans un dépôt public.
+  const login = "voczilla.test2@flutter-now.com";
+  const password = "Hefpccy%08%08";
+  const notes = """
+1. Lancez l'application.
+2. Utilisez les identifiants ci-dessus pour vous connecter.
+3. Toutes les fonctionnalités sont disponibles sur ce compte de test.
+""";
+  // ------------------------------------
+
+  // On ne génère pas le fichier si les identifiants n'ont pas été modifiés.
+  if (login == "METTRE_VOTRE_LOGIN_ICI" || password == "METTRE_VOTRE_MOT_DE_PASSE_ICI") {
+    print('⚠️ Veuillez modifier les identifiants de test (login/password) dans generate_metadata_android.dart.');
+    print('   Le fichier review_information.txt n\'a pas été généré.');
+    return;
+  }
+
+  var reviewContent = 'Informations de connexion pour l\'équipe de révision :\n\n';
+  reviewContent += 'Login / Nom d\'utilisateur: $login\n';
+  reviewContent += 'Mot de passe: $password\n';
+
+  if (notes.trim().isNotEmpty) {
+    reviewContent += '\nInstructions supplémentaires :\n$notes';
+  }
+
+  final reviewFilePath = '$basePath/review_information.txt';
+  await File(reviewFilePath).writeAsString(reviewContent);
+  print('✅ Fichier review_information.txt généré.');
 }
 
 void main() async {
@@ -18,16 +53,17 @@ void main() async {
   final inputDir = Directory('$projectRoot/lib/l10n');
   final outputDir = Directory('$projectRoot/fastlane/metadata/android');
 
-  // ✅ Vérifie et crée le lien symbolique si nécessaire
-  String resolvedPath;
-  final expectedLinkTarget = '/Volumes/data/voczilla/metadata/android'; // 🔧 À adapter si besoin
+  // 🔧 CHEMIN CIBLE POUR LE LIEN SYMBOLIQUE - À adapter si besoin
+  const expectedLinkTarget = '/Volumes/data/voczilla/metadata/android';
 
+  // ✅ Vérifie et gère le lien symbolique vers le dossier de métadonnées
+  String resolvedPath;
   if (Link(outputDir.path).existsSync()) {
     try {
       resolvedPath = outputDir.resolveSymbolicLinksSync();
     } on FileSystemException {
       final linkTarget = Link(outputDir.path).targetSync();
-      print('⚠️ Lien cassé détecté vers : $linkTarget');
+      print('⚠️ Lien symbolique cassé détecté vers : $linkTarget');
       final resolved = Directory(linkTarget);
       if (!resolved.existsSync()) {
         print('📁 Création du dossier cible manquant : $linkTarget');
@@ -37,17 +73,20 @@ void main() async {
     }
   } else {
     print('🔗 Lien symbolique manquant. Création de $outputDir → $expectedLinkTarget');
-    Link(outputDir.path).createSync(expectedLinkTarget, recursive: true);
-    final resolved = Directory(expectedLinkTarget);
-    if (!resolved.existsSync()) {
-      print('📁 Création du dossier cible : $expectedLinkTarget');
-      resolved.createSync(recursive: true);
+    final targetDir = Directory(expectedLinkTarget);
+    if (!targetDir.existsSync()) {
+      print('📁 Création du dossier cible manquant : $expectedLinkTarget');
+      targetDir.createSync(recursive: true);
     }
-    resolvedPath = resolved.path;
+    Link(outputDir.path).createSync(expectedLinkTarget, recursive: true);
+    resolvedPath = targetDir.path;
   }
 
+  // ✨ Génère les informations pour l'équipe de révision
+  await generateReviewInformation(resolvedPath);
+
   if (!await inputDir.exists()) {
-    print('❌ Dossier lib/l10n introuvable.');
+    print('❌ Dossier d\'entrée lib/l10n introuvable.');
     exit(1);
   } else {
     print('✅ Dossier lib/l10n trouvé.');
@@ -84,20 +123,27 @@ void main() async {
   }
 }
 
+/// Écrit les fichiers de métadonnées pour une locale donnée.
 void writeMetadata(String basePath, String localePath, String title, String desc, String keywords, String shortDesc, String releasenote, int buildNumber) {
   final path = '$basePath/$localePath';
   Directory(path).createSync(recursive: true);
 
   File('$path/title.txt').writeAsStringSync(title.trim());
   File('$path/full_description.txt').writeAsStringSync(desc.trim());
+
+  // Crée le dossier changelogs et le fichier de note de version
   Directory('$path/changelogs').createSync(recursive: true);
   File('$path/changelogs/$buildNumber.txt').writeAsStringSync(releasenote.trim());
 
-  if (keywords.isNotEmpty) {
+  // N'écrit le fichier que si la valeur n'est pas vide ou le placeholder par défaut
+  if (keywords.isNotEmpty && keywords != 'keyword manquant') {
     File('$path/keywords.txt').writeAsStringSync(keywords.trim());
   }
 
-  if (shortDesc.isNotEmpty) {
+  if (shortDesc.isNotEmpty && shortDesc != 'short description manquante') {
     File('$path/short_description.txt').writeAsStringSync(shortDesc.trim());
   }
+
+  generateReviewInformation(path);
+
 }

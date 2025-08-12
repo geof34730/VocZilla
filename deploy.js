@@ -84,7 +84,7 @@ function getAppfileInfo(appfilePath) {
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
     execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
 
-           /* console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
+            console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
             execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
                 { stdio: "inherit" }
@@ -98,10 +98,10 @@ function getAppfileInfo(appfilePath) {
                 console.error(`❌ Erreur : Fichier de clé de service introuvable à ${serviceAccountPath}`);
                 process.exit(1);
             }
-*/
+
 
     try {
-                /*
+
         execSync(
             `fastlane supply \
             --aab build/app/outputs/bundle/release/app-release.aab \
@@ -114,7 +114,7 @@ function getAppfileInfo(appfilePath) {
             --skip_upload_screenshots true \
             --skip_upload_metadata false`,
             { stdio: "inherit" }
-        );*/
+        );
         console.log("\n✅ Déploiement Android terminé avec succès !");
     } catch (error) {
         console.error("\n❌ Échec du déploiement Android :", error.message);

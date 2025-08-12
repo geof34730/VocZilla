@@ -15,46 +15,46 @@ import '../../logic/blocs/user/user_state.dart';
 class SubscriptionScreen extends StatelessWidget {
   SubscriptionScreen({super.key});
 
+
+
+
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+    final endTrial = args != null && args['endTrial'] == true;
     context.read<PurchaseBloc>().add(LoadProducts());
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          BlocBuilder<UserBloc, UserState>(
-              builder: (context, state) {
-                if (state is UserFreeTrialPeriodEndAndNotSubscribed) {
-                  return Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 15, bottom: 0),
-                      child: Text(
-                        context.loc.freetrial_info1.replaceAll("\$daysFreeTrial", "$daysFreeTrial"),
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.red,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  );
-                }
-                // Retournez un SizedBox vide pour les autres états
-                return SizedBox();
-            }
-          ),
-          Center(child:Padding(
-            padding: const EdgeInsets.only(top: 15, bottom: 0),
-            child: Text(
-              context.loc.freetrial_info2,
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Colors.black87,
-              ),
+          if(endTrial)Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15, bottom: 0),
+              child: Text(
+                context.loc.freetrial_info1.replaceAll(
+                "\$daysFreeTrial", "$daysFreeTrial"),
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
               textAlign: TextAlign.center,
+              ),
             ),
-          )),
+          ),
+          Center(
+              child:Padding(
+                padding: const EdgeInsets.only(top: 15, bottom: 0),
+                child: Text(
+                  context.loc.freetrial_info2,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              )
+          ),
           BlocBuilder<PurchaseBloc, PurchaseState>(
             builder: (context, state) {
               if (state is ProductsLoaded) {
