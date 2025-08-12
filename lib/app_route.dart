@@ -1,4 +1,5 @@
 // lib/app_route.dart
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -187,6 +188,13 @@ class AppRoute {
 
   static Widget _getUnauthenticatedPage(RouteSettings settings, BuildContext context) {
     Logger.Blue.log("_getUnauthenticatedPage settings.name: ${settings.name}");
+    final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+    analytics.logEvent(
+      name: 'screen',
+      parameters: {'screen': settings.name ?? ''},
+    );
+
+
     switch (settings.name) {
       case home:
         return HomeLogoutScreen();
