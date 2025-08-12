@@ -155,16 +155,29 @@ void writeMetadata(
 }
 
 String truncateKeywords(String input) {
-  final parts = input.split(',').map((s) => s.trim()).toList();
+  // ✅ Utilise une RegExp pour séparer par la virgule standard (,) ou arabe (،)
+  final parts = input
+      .split(RegExp(r'[,،]'))
+      .map((s) => s.trim())
+      .where((s) => s.isNotEmpty) // Évite les mots-clés vides
+      .toList();
+
   List<String> selected = [];
   int totalLength = 0;
+
   for (final keyword in parts) {
-    final length = keyword.length + (selected.isNotEmpty ? 2 : 0);
-    if (totalLength + length > 100) break;
+    // On ajoute 2 pour la virgule et l'espace (ex: "mot1, mot2")
+    final lengthWithSeparator = keyword.length + (selected.isNotEmpty ? 2 : 0);
+
+    if (totalLength + lengthWithSeparator > 100) {
+      break; // Arrêt si on dépasse la limite de 100 caractères
+    }
+
     selected.add(keyword);
-    totalLength += length;
+    totalLength += lengthWithSeparator;
   }
 
+  // ✅ Rejoint toujours avec une virgule standard, comme l'exige l'App Store.
   return selected.join(', ');
 }
 
