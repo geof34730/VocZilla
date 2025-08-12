@@ -30,6 +30,9 @@ class AppLocalizationsUr extends AppLocalizations {
   String get app_short_description => 'انگریزی الفاظ سیکھیں اور اس کا جائزہ لیں!';
 
   @override
+  String get app_promotion_ios => 'آسانی سے بولنے اور سمجھنے کے لیے اپنی انگریزی الفاظ کو 5,600 ضروری الفاظ کے ساتھ مزیدار بنائیں۔';
+
+  @override
   String get app_keywords => 'الفاظ، سیکھنا، انگریزی، الفاظ، زبان، ڈکٹیشن، تلفظ، کوئز، میموری، سیکھنا، آسان، سننا';
 
   @override
@@ -57,7 +60,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get my_purchase => 'میری رکنیت';
 
   @override
-  String get dictation_title => 'وائس ڈکٹیشن';
+  String get dictation_title => 'صوتی ڈکٹیشن';
 
   @override
   String get dictation_label_text_field => 'سنیں اور متن ٹائپ کریں۔';
@@ -150,7 +153,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get quizz_saisie_in => 'ترجمہ درج کریں۔';
 
   @override
-  String get home_title_progresse => 'میری ٹائٹن پروگریس';
+  String get home_title_progresse => 'میرا ٹائٹن ترقی';
 
   @override
   String get home_title_my_list_perso => 'میری ذاتی فہرستیں۔';
@@ -354,7 +357,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get title_subscription => 'ہماری سبسکرپشنز';
 
   @override
-  String get by_themes => 'موضوعات پر';
+  String get by_themes => 'موضوعات کے برابر';
 
   @override
   String get no_vocabulary_in_my_list => 'اس فہرست میں آپ کے پاس کوئی ذخیرہ الفاظ نہیں ہے۔ فہرست میں ترمیم کرکے کچھ شامل کریں۔';
@@ -432,7 +435,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'فہرست کامیابی کے ساتھ حذف کر دی گئی۔';
 
   @override
-  String get update_app_text_1 => 'Voczilla کا ایک نیا ورژن ایک اور بھی بہتر تجربے کے لیے نمایاں بہتریوں، نئی خصوصیات اور بگ فکسز کے ساتھ دستیاب ہے۔';
+  String get update_app_text_1 => 'Voczilla کا ایک نیا ورژن ایک اور بھی بہتر تجربہ کے لیے نمایاں بہتریوں، نئی خصوصیات اور بگ فکسز کے ساتھ دستیاب ہے۔';
 
   @override
   String get update_app_text_2 => 'تازہ ترین خبروں سے محروم نہ ہوں!';

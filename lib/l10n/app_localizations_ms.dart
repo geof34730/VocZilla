@@ -30,6 +30,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get app_short_description => 'Belajar dan semak perbendaharaan kata bahasa Inggeris!';
 
   @override
+  String get app_promotion_ios => 'Perkaya perbendaharaan kata bahasa Inggeris anda dengan 5,600 perkataan penting untuk pertuturan dan pemahaman yang mudah.';
+
+  @override
   String get app_keywords => 'perbendaharaan kata, pembelajaran, bahasa Inggeris, perkataan, bahasa, imlak, sebutan, kuiz, ingatan, belajar, mudah, mendengar';
 
   @override
@@ -477,10 +480,10 @@ class AppLocalizationsMs extends AppLocalizations {
   String get card_home_user_day => 'hari';
 
   @override
-  String get card_home_user_liste_perso => 'senarai (s) Hilang';
+  String get card_home_user_liste_perso => 'senarai Hilang';
 
   @override
-  String get card_home_share => 'dikongsi';
+  String get card_home_share => 'dikongsi bersama';
 
   @override
   String get card_home_mot => 'terhadap';

@@ -9,7 +9,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla ના પ્રથમ સંસ્કરણનું વિતરણ';
+  String get app_release_note => 'VocZilla ના પ્રથમ સંસ્કરણનું જમાવટ';
 
   @override
   String get share_list_perso_alert_disponible => 'યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!';
@@ -28,6 +28,9 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get app_short_description => 'અંગ્રેજી શબ્દભંડોળ શીખો અને તેની સમીક્ષા કરો!';
+
+  @override
+  String get app_promotion_ios => 'સરળતાથી બોલવા અને સમજવા માટે 5,600 આવશ્યક શબ્દોથી તમારા અંગ્રેજી શબ્દભંડોળને સમૃદ્ધ બનાવો.';
 
   @override
   String get app_keywords => 'શબ્દભંડોળ, શિક્ષણ, અંગ્રેજી, શબ્દો, ભાષા, શ્રુતલેખન, ઉચ્ચારણ, ક્વિઝ, મેમરી, શીખો, સરળ, શ્રવણ';
@@ -162,7 +165,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get home_description_list_perso => 'તમારી પસંદગીના શબ્દો અસરકારક રીતે શીખવા અને સમીક્ષા કરવા માટે તમારી પોતાની શબ્દભંડોળ યાદીઓ બનાવો અને કસ્ટમાઇઝ કરો.';
 
   @override
-  String get home_title_classement => 'ટીમઝિલા રેન્કિંગ';
+  String get home_title_classement => 'ટીમઝિલા રેન્કિંગ્સ';
 
   @override
   String get home_notlogged_accroche1 => 'તમારા અંગ્રેજીને બુસ્ટ કરો!';
@@ -189,7 +192,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get home_notlogged_accroche8 => 'ઝડપથી પ્રગતિ કરવા માટે ઑપ્ટિમાઇઝ કરેલ યાદશક્તિ';
 
   @override
-  String get home_notlogged_accroche9 => 'શેક્સપિયરની ભાષામાં નિપુણતા મેળવવા માટે તૈયાર છો?';
+  String get home_notlogged_accroche9 => 'શેક્સપિયરની ભાષા શીખવા માટે તૈયાર છો?';
 
   @override
   String get home_notlogged_button_go => 'અહીં આપણે જઈએ છીએ!';
@@ -498,7 +501,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'સૂચિ ઉમેરવામાં ભૂલ';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'સૂચિ અપડેટ કરવામાં ભૂલ આવી';
+  String get vocabulaire_user_error_update_list_perso => 'સૂચિ અપડેટ કરવામાં ભૂલ';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'યાદીમાં શબ્દભંડોળ ઉમેરવામાં ભૂલ';
@@ -525,7 +528,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get login_entrer_confirmer_mot_de_passe => 'કૃપા કરીને તમારો પાસવર્ડ ફરીથી દાખલ કરો.';
 
   @override
-  String get login_mots_de_passe_differents => 'પાસવર્ડ્સ મેળ ખાતા નથી';
+  String get login_mots_de_passe_differents => 'પાસવર્ડ્સ મેળ ખાતા નથી.';
 
   @override
   String get login_tous_champs_obligatoires => 'કૃપા કરીને બધા ફીલ્ડ ભરો.';

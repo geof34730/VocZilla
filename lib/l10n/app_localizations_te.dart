@@ -30,6 +30,9 @@ class AppLocalizationsTe extends AppLocalizations {
   String get app_short_description => 'ఆంగ్ల పదజాలం నేర్చుకోండి మరియు సమీక్షించండి!';
 
   @override
+  String get app_promotion_ios => 'సులభంగా మాట్లాడటం మరియు అర్థం చేసుకోవడానికి 5,600 ముఖ్యమైన పదాలతో మీ ఆంగ్ల పదజాలాన్ని మెరుగుపరచుకోండి.';
+
+  @override
   String get app_keywords => 'పదజాలం, నేర్చుకోవడం, ఇంగ్లీష్, పదాలు, భాష, డిక్టేషన్, ఉచ్చారణ, క్విజ్, జ్ఞాపకశక్తి, నేర్చుకోండి, సులభం, వినడం';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get home_description_list_perso => 'మీకు నచ్చిన పదాలను సమర్థవంతంగా నేర్చుకోవడానికి మరియు సమీక్షించడానికి మీ స్వంత పదజాల జాబితాలను సృష్టించండి మరియు అనుకూలీకరించండి.';
 
   @override
-  String get home_title_classement => 'టీమ్‌జిల్లా ర్యాంకింగ్';
+  String get home_title_classement => 'టీమ్‌జిల్లా ర్యాంకింగ్స్';
 
   @override
   String get home_notlogged_accroche1 => 'మీ ఇంగ్లీషును పెంచుకోండి!';
@@ -498,7 +501,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'జాబితాను జోడించడంలో లోపం ఏర్పడింది';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'జాబితాను నవీకరించడంలో లోపం ఏర్పడింది.';
+  String get vocabulaire_user_error_update_list_perso => 'జాబితాను నవీకరించడంలో లోపం ఏర్పడింది';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'జాబితాకు పదజాలం జోడించడంలో లోపం ఏర్పడింది.';

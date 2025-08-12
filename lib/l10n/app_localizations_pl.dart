@@ -30,6 +30,9 @@ class AppLocalizationsPl extends AppLocalizations {
   String get app_short_description => 'Poznaj i powtórz angielskie słownictwo!';
 
   @override
+  String get app_promotion_ios => 'Wzbogać swoje słownictwo w języku angielskim o 5600 niezbędnych słów, które ułatwią Ci mówienie i zrozumienie.';
+
+  @override
   String get app_keywords => 'słownictwo, nauka, angielski, słowa, język, dyktando, wymowa, quiz, pamięć, nauka, łatwy, słuchanie';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get quizz_saisie_in => 'Wprowadź tłumaczenie';
 
   @override
-  String get home_title_progresse => 'Mój postęp Titana';
+  String get home_title_progresse => 'Moja progresja Tytana';
 
   @override
   String get home_title_my_list_perso => 'Moje osobiste listy';
@@ -162,7 +165,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get home_description_list_perso => 'Twórz i dostosowuj własne listy słówek, aby skutecznie uczyć się i powtarzać wybrane przez siebie słowa.';
 
   @override
-  String get home_title_classement => 'Ranking TeamZilla';
+  String get home_title_classement => 'Rankingi TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Podszlifuj swój angielski!';

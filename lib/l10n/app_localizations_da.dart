@@ -30,6 +30,9 @@ class AppLocalizationsDa extends AppLocalizations {
   String get app_short_description => 'Lær og gennemgå engelsk ordforråd!';
 
   @override
+  String get app_promotion_ios => 'Berig dit engelske ordforråd med 5.600 essentielle ord, der gør det nemt at tale og forstå.';
+
+  @override
   String get app_keywords => 'ordforråd, læring, engelsk, ord, sprog, diktat, udtale, quiz, hukommelse, lær, let, lytning';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get quizz_saisie_in => 'Indtast oversættelsen i';
 
   @override
-  String get home_title_progresse => 'Mine Titan-fremskridt';
+  String get home_title_progresse => 'Min Titan-progression';
 
   @override
   String get home_title_my_list_perso => 'Mine personlige lister';
@@ -162,7 +165,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get home_description_list_perso => 'Opret og tilpas dine egne ordforrådslister for effektivt at lære og repetere de ord, du ønsker.';
 
   @override
-  String get home_title_classement => 'TeamZilla-rangering';
+  String get home_title_classement => 'TeamZilla-ranglister';
 
   @override
   String get home_notlogged_accroche1 => 'Styrk dit engelsk!';
@@ -384,7 +387,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get auth_error_update_profil => 'Fejl ved opdatering af profil.';
 
   @override
-  String get auth_error_facebook => 'Der opstod en ukendt fejl under login på Facebook.';
+  String get auth_error_facebook => 'Der opstod en ukendt fejl under Facebook-login.';
 
   @override
   String get auth_error_google => 'Der opstod en ukendt fejl med Google-login.';
@@ -498,7 +501,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Fejl ved tilføjelse af liste';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Fejl under opdatering af listen';
+  String get vocabulaire_user_error_update_list_perso => 'Der opstod en fejl ved opdatering af listen.';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Fejl ved tilføjelse af ordforråd til listen';

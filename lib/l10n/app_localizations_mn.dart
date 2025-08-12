@@ -30,6 +30,9 @@ class AppLocalizationsMn extends AppLocalizations {
   String get app_short_description => 'Англи хэлний үгсийн санг сурч, хянана уу!';
 
   @override
+  String get app_promotion_ios => 'Англи хэлний үгсийн санг хялбархан ярьж, ойлгоход шаардлагатай 5600 үгээр баяжуулаарай.';
+
+  @override
   String get app_keywords => 'үгсийн сан, сурах, англи хэл, үг, хэл, диктант, дуудлага, шалгалт, санах ой, сурах, хялбар, сонсох';
 
   @override
@@ -318,7 +321,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_days => 'өдрүүд';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description3 => 'манай програмын бүх онцлогийг олж мэдэх.';
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'Манай програмын бүх шинж чанарыг олж мэдэх.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Та явлаа';
@@ -384,7 +387,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get auth_error_update_profil => 'Профайлыг шинэчлэхэд алдаа гарлаа.';
 
   @override
-  String get auth_error_facebook => 'Facebook-т нэвтрэх үед үл мэдэгдэх алдаа гарлаа.';
+  String get auth_error_facebook => 'Facebook-т нэвтрэхэд үл мэдэгдэх алдаа гарлаа.';
 
   @override
   String get auth_error_google => 'Google-д нэвтрэхэд үл мэдэгдэх алдаа гарлаа.';
@@ -393,7 +396,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get auth_error_apple => 'Apple-д нэвтрэх үед үл мэдэгдэх алдаа гарлаа.';
 
   @override
-  String get auth_error_echoue => 'Баталгаажуулалт амжилтгүй болсон тул дахин оролдоно уу';
+  String get auth_error_echoue => 'Баталгаажуулалт амжилтгүй боллоо, дахин оролдоно уу';
 
   @override
   String get firebase_error_message_too_many_requests => 'Хэт олон хүсэлт. Дараа дахин оролдоно уу.';

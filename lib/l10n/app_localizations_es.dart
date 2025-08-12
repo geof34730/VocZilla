@@ -30,6 +30,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get app_short_description => '¡Aprende y repasa vocabulario en inglés!';
 
   @override
+  String get app_promotion_ios => 'Enriquece tu vocabulario en inglés con 5.600 palabras esenciales para hablar y comprender fácilmente.';
+
+  @override
   String get app_keywords => 'vocabulario, aprendizaje, inglés, palabras, idioma, dictado, pronunciación, cuestionario, memoria, aprender, fácil, escuchar';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get quizz_saisie_in => 'Introduzca la traducción en';
 
   @override
-  String get home_title_progresse => 'Mi progreso en Titan';
+  String get home_title_progresse => 'Mi progresión de Titán';
 
   @override
   String get home_title_my_list_perso => 'Mis listas personales';

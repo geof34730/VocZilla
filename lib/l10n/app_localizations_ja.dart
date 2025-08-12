@@ -30,6 +30,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get app_short_description => '英語の語彙を学んで復習しましょう！';
 
   @override
+  String get app_promotion_ios => '簡単に話したり理解したりできるように、5,600 語の必須単語で英語の語彙を充実させます。';
+
+  @override
   String get app_keywords => '語彙、学習、英語、単語、言語、ディクテーション、発音、クイズ、記憶、学習、簡単、リスニング';
 
   @override
@@ -54,7 +57,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get change_language => '言語を変更する';
 
   @override
-  String get my_purchase => '私の購読';
+  String get my_purchase => '私のサブスクリプション';
 
   @override
   String get dictation_title => '音声入力';
@@ -150,7 +153,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get quizz_saisie_in => '翻訳を入力してください';
 
   @override
-  String get home_title_progresse => '私のタイタンの進捗状況';
+  String get home_title_progresse => '私のタイタンの進行';
 
   @override
   String get home_title_my_list_perso => '私の個人リスト';
@@ -180,7 +183,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get home_notlogged_accroche5 => '使用頻度順に並べることで、本当に重要な単語を学ぶことができます。';
 
   @override
-  String get home_notlogged_accroche6 => '速くて効果的な方法';
+  String get home_notlogged_accroche6 => '迅速かつ効果的な方法';
 
   @override
   String get home_notlogged_accroche7 => '最も役立つ単語を最初に学ぶ';

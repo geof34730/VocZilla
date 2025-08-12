@@ -30,6 +30,9 @@ class AppLocalizationsHr extends AppLocalizations {
   String get app_short_description => 'Naučite i ponovite engleski vokabular!';
 
   @override
+  String get app_promotion_ios => 'Obogatite svoj engleski vokabular s 5600 bitnih riječi za lak govor i razumijevanje.';
+
+  @override
   String get app_keywords => 'vokabular, učenje, engleski, riječi, jezik, diktat, izgovor, kviz, pamćenje, učiti, lako, slušanje';
 
   @override
@@ -216,7 +219,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get abonnement_descriptif_mensuel => 'Slobodan kao ptica: otkažite kad god želite.';
 
   @override
-  String get abonnement_descriptif_annuel => 'Uživajte u svom iskustvu u potpunosti, a istovremeno uštedite novac.';
+  String get abonnement_descriptif_annuel => 'Uživajte u svom iskustvu u potpunosti uz uštedu novca.';
 
   @override
   String get button_sabonner => 'Pretplatite se';

@@ -30,6 +30,9 @@ class AppLocalizationsSi extends AppLocalizations {
   String get app_short_description => 'ඉංග්‍රීසි වචන මාලාව ඉගෙන ගෙන සමාලෝචනය කරන්න!';
 
   @override
+  String get app_promotion_ios => 'පහසුවෙන් කතා කිරීමට සහ තේරුම් ගැනීමට අත්‍යවශ්‍ය වචන 5,600 කින් ඔබේ ඉංග්‍රීසි වචන මාලාව පොහොසත් කරන්න.';
+
+  @override
   String get app_keywords => 'වචන මාලාව, ඉගෙනීම, ඉංග්‍රීසි, වචන, භාෂාව, අනුලේඛනය, උච්චාරණය, ප්‍රශ්නාවලිය, මතකය, ඉගෙනීම, පහසු, සවන්දීම';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get home_description_list_perso => 'ඔබ කැමති වචන ඵලදායී ලෙස ඉගෙන ගැනීමට සහ සමාලෝචනය කිරීමට ඔබේම වචන මාලා ලැයිස්තු සාදන්න සහ අභිරුචිකරණය කරන්න.';
 
   @override
-  String get home_title_classement => 'TeamZilla ශ්‍රේණිගත කිරීම';
+  String get home_title_classement => 'TeamZilla ශ්‍රේණිගත කිරීම්';
 
   @override
   String get home_notlogged_accroche1 => 'ඔබේ ඉංග්‍රීසි දැනුම වැඩි දියුණු කරගන්න!';
@@ -483,7 +486,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get card_home_share => 'බෙදාගත්තා';
 
   @override
-  String get card_home_mot => 'එරෙහිව';
+  String get card_home_mot => 'විරුද්ධව';
 
   @override
   String get card_home_reessayer => 'නැවත උත්සාහ කරන්න';

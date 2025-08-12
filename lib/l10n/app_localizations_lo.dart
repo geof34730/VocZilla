@@ -30,6 +30,9 @@ class AppLocalizationsLo extends AppLocalizations {
   String get app_short_description => 'ຮຽນຮູ້ ແລະທົບທວນຄຳສັບພາສາອັງກິດ!';
 
   @override
+  String get app_promotion_ios => 'ເພີ່ມຄໍາສັບພາສາອັງກິດຂອງທ່ານດ້ວຍ 5,600 ຄໍາສໍາຄັນສໍາລັບການເວົ້າແລະຄວາມເຂົ້າໃຈງ່າຍ.';
+
+  @override
   String get app_keywords => 'ຄໍາ​ສັບ​ຕ່າງໆ​, ການ​ຮຽນ​ຮູ້​, ພາ​ສາ​ອັງ​ກິດ​, ຄໍາ​ສັບ​ຕ່າງໆ​, ພາ​ສາ​, dictation​, ການ​ອອກ​ສຽງ​, ແບບ​ທົດ​ສອບ​, ຄວາມ​ຊົງ​ຈໍາ​, ຮຽນ​ຮູ້​, ງ່າຍ​, ການ​ຟັງ';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get quizz_saisie_in => 'ໃສ່ຄຳແປໃນ';
 
   @override
-  String get home_title_progresse => 'ຄວາມຄືບຫນ້າ Titan ຂອງຂ້ອຍ';
+  String get home_title_progresse => 'ຄວາມກ້າວຫນ້າ Titan ຂອງຂ້ອຍ';
 
   @override
   String get home_title_my_list_perso => 'ລາຍຊື່ສ່ວນຕົວຂອງຂ້ອຍ';
@@ -405,7 +408,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get firebase_error_message_invalid_email => 'ທີ່ຢູ່ອີເມວບໍ່ຖືກຕ້ອງ.';
 
   @override
-  String get firebase_error_message_user_disabled => 'ບັນຊີຜູ້ໃຊ້ນີ້ຖືກປິດການນຳໃຊ້ແລ້ວ.';
+  String get firebase_error_message_user_disabled => 'ບັນຊີຜູ້ໃຊ້ນີ້ຖືກປິດໃຊ້ງານ.';
 
   @override
   String get firebase_error_message_invalid_credential => 'ອີເມວ ຫຼືລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ.';

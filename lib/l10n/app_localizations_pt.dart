@@ -30,6 +30,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get app_short_description => 'Aprenda e revise o vocabulário em inglês!';
 
   @override
+  String get app_promotion_ios => 'Enriqueça seu vocabulário de inglês com 5.600 palavras essenciais para facilitar a fala e a compreensão.';
+
+  @override
   String get app_keywords => 'vocabulário, aprendizagem, inglês, palavras, idioma, ditado, pronúncia, teste, memória, aprender, fácil, ouvir';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get quizz_saisie_in => 'Digite a tradução em';
 
   @override
-  String get home_title_progresse => 'Meu Progresso Titan';
+  String get home_title_progresse => 'Minha Progressão Titã';
 
   @override
   String get home_title_my_list_perso => 'Minhas listas pessoais';
@@ -162,7 +165,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get home_description_list_perso => 'Crie e personalize suas próprias listas de vocabulário para aprender e revisar com eficiência as palavras de sua escolha.';
 
   @override
-  String get home_title_classement => 'Classificação do TeamZilla';
+  String get home_title_classement => 'Classificações do TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Melhore seu inglês!';

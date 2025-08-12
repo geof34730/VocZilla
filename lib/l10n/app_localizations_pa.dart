@@ -30,6 +30,9 @@ class AppLocalizationsPa extends AppLocalizations {
   String get app_short_description => 'ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦਾਵਲੀ ਸਿੱਖੋ ਅਤੇ ਸਮੀਖਿਆ ਕਰੋ!';
 
   @override
+  String get app_promotion_ios => 'ਆਸਾਨੀ ਨਾਲ ਬੋਲਣ ਅਤੇ ਸਮਝਣ ਲਈ 5,600 ਜ਼ਰੂਰੀ ਸ਼ਬਦਾਂ ਨਾਲ ਆਪਣੀ ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦਾਵਲੀ ਨੂੰ ਅਮੀਰ ਬਣਾਓ।';
+
+  @override
   String get app_keywords => 'ਸ਼ਬਦਾਵਲੀ, ਸਿੱਖਣਾ, ਅੰਗਰੇਜ਼ੀ, ਸ਼ਬਦ, ਭਾਸ਼ਾ, ਡਿਕਟੇਸ਼ਨ, ਉਚਾਰਨ, ਕਵਿਜ਼, ਯਾਦਦਾਸ਼ਤ, ਸਿੱਖੋ, ਆਸਾਨ, ਸੁਣਨਾ';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get home_description_list_perso => 'ਆਪਣੀ ਪਸੰਦ ਦੇ ਸ਼ਬਦਾਂ ਨੂੰ ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਢੰਗ ਨਾਲ ਸਿੱਖਣ ਅਤੇ ਸਮੀਖਿਆ ਕਰਨ ਲਈ ਆਪਣੀਆਂ ਖੁਦ ਦੀਆਂ ਸ਼ਬਦਾਵਲੀ ਸੂਚੀਆਂ ਬਣਾਓ ਅਤੇ ਅਨੁਕੂਲਿਤ ਕਰੋ।';
 
   @override
-  String get home_title_classement => 'ਟੀਮਜ਼ਿਲਾ ਰੈਂਕਿੰਗ';
+  String get home_title_classement => 'ਟੀਮਜ਼ਿਲਾ ਰੈਂਕਿੰਗਜ਼';
 
   @override
   String get home_notlogged_accroche1 => 'ਆਪਣੀ ਅੰਗਰੇਜ਼ੀ ਵਧਾਓ!';
@@ -498,7 +501,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'ਸੂਚੀ ਜੋੜਨ ਵਿੱਚ ਗੜਬੜ ਹੋਈ';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'ਸੂਚੀ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਗੜਬੜ ਹੋਈ';
+  String get vocabulaire_user_error_update_list_perso => 'ਸੂਚੀ ਅੱਪਡੇਟ ਕਰਨ ਵੇਲੇ ਗੜਬੜ ਹੋਈ';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'ਸੂਚੀ ਵਿੱਚ ਸ਼ਬਦਾਵਲੀ ਜੋੜਨ ਵਿੱਚ ਗਲਤੀ';

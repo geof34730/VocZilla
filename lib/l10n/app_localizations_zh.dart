@@ -30,6 +30,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
+  String get app_promotion_ios => '使用 5,600 个基本单词丰富您的英语词汇量，以便于说话和理解。';
+
+  @override
   String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 轻松, 听力';
 
   @override
@@ -102,7 +105,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unknown_error => '未知错误';
 
   @override
-  String get no_vocabulary_items_found => '未找到任何词汇';
+  String get no_vocabulary_items_found => '未找到任何词汇条目';
 
   @override
   String get pronunciation_title => '发音';
@@ -150,7 +153,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get quizz_saisie_in => '输入翻译';
 
   @override
-  String get home_title_progresse => '我的泰坦进度';
+  String get home_title_progresse => '我的泰坦进程';
 
   @override
   String get home_title_my_list_perso => '我的个人清单';
@@ -291,7 +294,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get email_validation_help => '如果您在收件箱中没有看到该电子邮件，请考虑检查您的垃圾邮件或垃圾文件夹。';
 
   @override
-  String get email_validation_merci_register2 => '感谢您的信任！';
+  String get email_validation_merci_register2 => '谢谢您的信任！';
 
   @override
   String get send_mail => '收到新的验证邮件';
@@ -432,7 +435,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get vocabulaire_success_delete_list => '列表删除成功。';
 
   @override
-  String get update_app_text_1 => 'Voczilla 的新版本现已推出，它具有重大改进、新功能和错误修复，可提供更好的体验';
+  String get update_app_text_1 => 'Voczilla 的新版本现已推出，其中包含重大改进、新功能和错误修复，可提供更好的体验';
 
   @override
   String get update_app_text_2 => '不要错过最新消息！';

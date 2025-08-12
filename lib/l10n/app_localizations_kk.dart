@@ -30,6 +30,9 @@ class AppLocalizationsKk extends AppLocalizations {
   String get app_short_description => 'Ағылшын тілінің сөздік қорын үйреніңіз және қайталаңыз!';
 
   @override
+  String get app_promotion_ios => 'Оңай сөйлеу және түсіну үшін ағылшын тіліндегі сөздік қорыңызды 5600 маңызды сөзбен байытыңыз.';
+
+  @override
   String get app_keywords => 'сөздік, үйрену, ағылшын тілі, сөздер, тіл, диктант, айтылу, викторина, есте сақтау, үйрену, оңай, тыңдау';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get home_description_list_perso => 'Таңдаған сөздерді тиімді үйрену және қарап шығу үшін өзіңіздің сөздік тізімдеріңізді жасаңыз және реттеңіз.';
 
   @override
-  String get home_title_classement => 'TeamZilla рейтингі';
+  String get home_title_classement => 'TeamZilla рейтингтері';
 
   @override
   String get home_notlogged_accroche1 => 'Ағылшын тілін шыңдаңыз!';
@@ -189,7 +192,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get home_notlogged_accroche8 => 'Жылдам өту үшін оңтайландырылған есте сақтау';
 
   @override
-  String get home_notlogged_accroche9 => 'Шекспирдің тілін меңгеруге дайынсыз ба?';
+  String get home_notlogged_accroche9 => 'Шекспир тілін меңгеруге дайынсыз ба?';
 
   @override
   String get home_notlogged_button_go => 'Мінеки біз!';
@@ -432,7 +435,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Тізім сәтті жойылды.';
 
   @override
-  String get update_app_text_1 => 'Voczilla қолданбасының жаңа нұсқасы айтарлықтай жақсартулармен, жаңа мүмкіндіктермен және қателерді түзетумен қол жетімді.';
+  String get update_app_text_1 => 'Voczilla қолданбасының жаңа нұсқасы айтарлықтай жақсартулармен, жаңа мүмкіндіктермен және қателерді түзетумен қол жетімді';
 
   @override
   String get update_app_text_2 => 'Соңғы жаңалықтарды жіберіп алмаңыз!';

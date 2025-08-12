@@ -30,6 +30,9 @@ class AppLocalizationsBe extends AppLocalizations {
   String get app_short_description => 'Вывучайце і паўтарайце англійскую лексіку!';
 
   @override
+  String get app_promotion_ios => 'Папаўніце свой англійскі слоўнікавы запас 5600 важнымі словамі для лёгкага маўлення і разумення.';
+
+  @override
   String get app_keywords => 'слоўнікавы запас, навучанне, англійская мова, словы, мова, дыктоўка, вымаўленне, віктарына, памяць, вучыцца, лёгка, аўдзіраванне';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get quizz_saisie_in => 'Увядзіце пераклад у';
 
   @override
-  String get home_title_progresse => 'Мой прагрэс Тытана';
+  String get home_title_progresse => 'Мая прагрэсія Тытана';
 
   @override
   String get home_title_my_list_perso => 'Мае асабістыя спісы';
@@ -162,7 +165,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get home_description_list_perso => 'Стварайце і наладжвайце ўласныя спісы слоўнікавага запасу, каб эфектыўна вывучаць і паўтараць выбраныя вамі словы.';
 
   @override
-  String get home_title_classement => 'Рэйтынг TeamZilla';
+  String get home_title_classement => 'Рэйтынгі TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Палепшыце сваю англійскую мову!';
@@ -321,7 +324,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'каб адкрыць для сябе ўсе магчымасці нашага прыкладання.';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Ты сышоў';
+  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Ты сышоў/з\'ехала';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'бясплатныя пробныя версіі';
@@ -495,7 +498,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get vocabulaire_user_error_user_data_not_found => 'Памылка загрузкі дадзеных карыстальніка';
 
   @override
-  String get vocabulaire_user_error_add_list_perso => 'Памылка пры даданні спісу';
+  String get vocabulaire_user_error_add_list_perso => 'Памылка дадання спісу';
 
   @override
   String get vocabulaire_user_error_update_list_perso => 'Памылка абнаўлення спісу';

@@ -30,6 +30,9 @@ class AppLocalizationsFa extends AppLocalizations {
   String get app_short_description => 'یادگیری و مرور واژگان انگلیسی!';
 
   @override
+  String get app_promotion_ios => 'دایره لغات انگلیسی خود را با ۵۶۰۰ کلمه ضروری برای صحبت کردن و فهمیدن آسان، غنی کنید.';
+
+  @override
   String get app_keywords => 'واژگان، یادگیری، انگلیسی، کلمات، زبان، دیکته، تلفظ، آزمون، حافظه، یادگیری، آسان، گوش دادن';
 
   @override
@@ -120,7 +123,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get pronunciation_description_action => 'برای صحبت کردن و بررسی تلفظ خود، میکروفون را فشار دهید.';
 
   @override
-  String get pronunciation_error1 => 'مقداردهی اولیه تشخیص گفتار انجام نشد';
+  String get pronunciation_error1 => 'تشخیص گفتار مقداردهی اولیه نشد';
 
   @override
   String get pronunciation_error2 => 'خطا در هنگام مقداردهی اولیه';
@@ -162,7 +165,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get home_description_list_perso => 'فهرست واژگان خودتان را ایجاد و سفارشی کنید تا کلمات مورد نظرتان را به طور مؤثر یاد بگیرید و مرور کنید.';
 
   @override
-  String get home_title_classement => 'رتبه‌بندی تیم‌زیلا';
+  String get home_title_classement => 'رتبه‌بندی‌های تیم‌زیلا';
 
   @override
   String get home_notlogged_accroche1 => 'انگلیسی خود را تقویت کنید!';
@@ -195,7 +198,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get home_notlogged_button_go => 'بفرمایید!';
 
   @override
-  String get freetrial_info1 => 'دوره آزمایشی رایگان \$daysFreeTrial شما به پایان رسیده است';
+  String get freetrial_info1 => 'دوره آزمایشی رایگان \$daysFreeTrial شما به پایان رسیده است.';
 
   @override
   String get freetrial_info2 => 'به ما بپیوندید و با عضویت‌های انحصاری ما، دنیایی از امکانات را برای خود باز کنید!';

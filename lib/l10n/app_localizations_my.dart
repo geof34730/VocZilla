@@ -24,10 +24,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get app_subtitle => 'အင်္ဂလိပ်ဝေါဟာရ';
 
   @override
-  String get app_description => 'VocZilla သည် သင်၏အင်္ဂလိပ်ဝေါဟာရကို ချဲ့ထွင်ရန် ပြီးပြည့်စုံသောအက်ပ်ဖြစ်သည်။ အပြင်အဆင်အလိုက် အမျိုးအစားခွဲထားသော စကားလုံးထောင်ပေါင်းများစွာကို ရှာဖွေပါ၊ ပျော်ရွှင်စရာ ပဟေဋ္ဌိများကို ကစားပါ၊ သင့်တိုးတက်မှုကို ခြေရာခံကာ သင့်သူငယ်ချင်းများကို စိန်ခေါ်ပါ။';
+  String get app_description => 'VocZilla သည် သင်၏အင်္ဂလိပ်ဝေါဟာရကို ချဲ့ထွင်ရန် အကောင်းဆုံးအက်ပ်ဖြစ်သည်။ အပြင်အဆင်အလိုက် အမျိုးအစားခွဲထားသော စကားလုံးထောင်ပေါင်းများစွာကို ရှာဖွေပါ၊ ပျော်ရွှင်စရာ ပဟေဋ္ဌိများကို ကစားပါ၊ သင့်တိုးတက်မှုကို ခြေရာခံကာ သင့်သူငယ်ချင်းများကို စိန်ခေါ်လိုက်ပါ။';
 
   @override
   String get app_short_description => 'အင်္ဂလိပ်ဝေါဟာရကို လေ့လာပြီး ပြန်လည်သုံးသပ်ပါ။';
+
+  @override
+  String get app_promotion_ios => 'လွယ်ကူစွာပြောနိုင်ပြီး နားလည်နိုင်စေရန်အတွက် မရှိမဖြစ်လိုအပ်သော စကားလုံး 5,600 ဖြင့် သင်၏ အင်္ဂလိပ်ဝေါဟာရကို ကြွယ်ဝစေပါသည်။';
 
   @override
   String get app_keywords => 'ဝေါဟာရ၊ သင်ယူမှု၊ အင်္ဂလိပ်၊ စကားလုံးများ၊ ဘာသာစကား၊ သတ်ပုံ၊ အသံထွက်၊ ပဟေဠိ၊ မှတ်ဉာဏ်၊ လေ့လာရန်၊ လွယ်ကူသော၊ နားထောင်ခြင်း';
@@ -129,7 +132,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get pronunciation_error3 => 'နားထောင်ခြင်းစတင်ရာတွင် အမှားအယွင်းရှိသည်။';
 
   @override
-  String get pronunciation_error4 => 'အသံအသိအမှတ်ပြုမှု အဆင်သင့်မဖြစ်သေးပါ။';
+  String get pronunciation_error4 => 'အသံအသိအမှတ်ပြုခြင်း အဆင်သင့်မဖြစ်သေးပါ။';
 
   @override
   String get pronunciation_error5 => 'မိုက်ခရိုဖုန်းခွင့်ပြုချက်ကို ငြင်းဆိုထားသည်။';
@@ -162,7 +165,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get home_description_list_perso => 'ထိထိရောက်ရောက်လေ့လာရန်နှင့် သင်နှစ်သက်ရာစကားလုံးများကို ပြန်လည်သုံးသပ်ရန်အတွက် သင့်ကိုယ်ပိုင်ဝေါဟာရစာရင်းများကို ဖန်တီးပြီး စိတ်ကြိုက်ပြင်ဆင်ပါ။';
 
   @override
-  String get home_title_classement => 'TeamZilla အဆင့်သတ်မှတ်ချက်';
+  String get home_title_classement => 'TeamZilla အဆင့်များ';
 
   @override
   String get home_notlogged_accroche1 => 'သင်၏အင်္ဂလိပ်စာကိုမြှင့်တင်ပါ။';
@@ -432,7 +435,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'စာရင်းကို အောင်မြင်စွာ ဖျက်လိုက်ပါပြီ။';
 
   @override
-  String get update_app_text_1 => 'ပိုမိုကောင်းမွန်သောအတွေ့အကြုံအတွက် Voczilla ဗားရှင်းအသစ်ကို သိသာထင်ရှားသောတိုးတက်မှုများ၊ လုပ်ဆောင်ချက်အသစ်များနှင့် ချွတ်ယွင်းချက်ပြင်ဆင်မှုများနှင့်အတူ ရရှိနိုင်ပါသည်။';
+  String get update_app_text_1 => 'ပိုမိုကောင်းမွန်သောအတွေ့အကြုံအတွက် Voczilla ဗားရှင်းအသစ်ကို သိသာထင်ရှားသောတိုးတက်မှုများ၊ ဝန်ဆောင်မှုအသစ်များနှင့် ချွတ်ယွင်းချက်ပြင်ဆင်မှုများနှင့်အတူ ရရှိနိုင်ပါသည်။';
 
   @override
   String get update_app_text_2 => 'နောက်ဆုံးရသတင်းများကို လက်မလွတ်စေနှင့်။';
@@ -498,7 +501,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'စာရင်းထည့်ရာတွင် အမှားအယွင်းရှိသည်။';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'စာရင်းကို အပ်ဒိတ်လုပ်ရာတွင် အမှားအယွင်းရှိသည်။';
+  String get vocabulaire_user_error_update_list_perso => 'စာရင်းကို အပ်ဒိတ်လုပ်ရာတွင် အမှားအယွင်းရှိနေသည်။';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'စာရင်းသို့ ဝေါဟာရထည့်ရာတွင် အမှားအယွင်းရှိသည်။';

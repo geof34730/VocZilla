@@ -30,6 +30,9 @@ class AppLocalizationsOr extends AppLocalizations {
   String get app_short_description => 'ଇଂରାଜୀ ଶବ୍ଦାବଳୀ ଶିଖନ୍ତୁ ଏବଂ ସମୀକ୍ଷା କରନ୍ତୁ!';
 
   @override
+  String get app_promotion_ios => 'ସହଜରେ କହିବା ଏବଂ ବୁଝିବା ପାଇଁ 5,600ଟି ଜରୁରୀ ଶବ୍ଦ ସହିତ ଆପଣଙ୍କର ଇଂରାଜୀ ଶବ୍ଦକୋଷକୁ ସମୃଦ୍ଧ କରନ୍ତୁ।';
+
+  @override
   String get app_keywords => 'ଶବ୍ଦାବଳୀ, ଶିକ୍ଷା, ଇଂରାଜୀ, ଶବ୍ଦ, ଭାଷା, ଶ୍ରୁତଲେଖା, ଉଚ୍ଚାରଣ, ପ୍ରଶ୍ନୋତ୍ତର, ସ୍ମୃତି, ଶିଖନ୍ତୁ, ସହଜ, ଶୁଣିବା';
 
   @override
@@ -132,7 +135,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get pronunciation_error4 => 'ସ୍ୱର ଚିହ୍ନଟକରଣ ପ୍ରସ୍ତୁତ ନୁହେଁ।';
 
   @override
-  String get pronunciation_error5 => 'ମାଇକ୍ରୋଫୋନ୍ ଅନୁମତି ପ୍ରତ୍ୟାଖ୍ୟାନ କରାଯାଇଛି';
+  String get pronunciation_error5 => 'ମାଇକ୍ରୋଫୋନ୍ ଅନୁମତି ଅସ୍ୱୀକାର କରାଯାଇଛି';
 
   @override
   String get offline_title => 'ଅଫଲାଇନ୍';
@@ -150,7 +153,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get quizz_saisie_in => 'ଅନୁବାଦଟି ଏଥିରେ ଲେଖନ୍ତୁ';
 
   @override
-  String get home_title_progresse => 'ମୋର ଟାଇଟାନ୍ ପ୍ରୋଗ୍ରେସ୍';
+  String get home_title_progresse => 'ମୋର ଟାଇଟାନ୍ ପ୍ରଗତି';
 
   @override
   String get home_title_my_list_perso => 'ମୋର ବ୍ୟକ୍ତିଗତ ତାଲିକାଗୁଡ଼ିକ';
@@ -162,7 +165,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get home_description_list_perso => 'ଆପଣଙ୍କ ପସନ୍ଦର ଶବ୍ଦଗୁଡ଼ିକୁ ପ୍ରଭାବଶାଳୀ ଭାବରେ ଶିଖିବା ଏବଂ ସମୀକ୍ଷା କରିବା ପାଇଁ ଆପଣଙ୍କର ନିଜସ୍ୱ ଶବ୍ଦାବଳୀ ତାଲିକା ତିଆରି ଏବଂ କଷ୍ଟମାଇଜ୍ କରନ୍ତୁ।';
 
   @override
-  String get home_title_classement => 'ଟିମ୍‌ଜିଲା ରାଙ୍କିଙ୍ଗ୍';
+  String get home_title_classement => 'ଟିମ୍‌ଜିଲା ରାଙ୍କିଙ୍ଗ୍‌';
 
   @override
   String get home_notlogged_accroche1 => 'ତୁମର ଇଂରାଜୀକୁ ବଢ଼ାଅ!';
@@ -387,7 +390,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get auth_error_facebook => 'ଫେସବୁକ୍ ଲଗଇନ୍ ସମୟରେ ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି।';
 
   @override
-  String get auth_error_google => 'Google ଲଗଇନ୍‌ରେ ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି।';
+  String get auth_error_google => 'Google ଲଗଇନ୍ ସମୟରେ ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି।';
 
   @override
   String get auth_error_apple => 'Apple ଲଗଇନ୍ ସହିତ ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି।';

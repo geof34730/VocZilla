@@ -30,6 +30,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get app_short_description => 'Learn and review English vocabulary!';
 
   @override
+  String get app_promotion_ios => 'Enrich your English vocabulary with 5,600 essential words for easy speaking and understanding.';
+
+  @override
   String get app_keywords => 'vocabulary, learning, english, words, language, dictation, pronunciation, quiz, memory, learn, easy, listening';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get quizz_saisie_in => 'Enter the translation in';
 
   @override
-  String get home_title_progresse => 'My Titan Progress';
+  String get home_title_progresse => 'My Titan Progression';
 
   @override
   String get home_title_my_list_perso => 'My personal lists';
@@ -162,7 +165,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get home_description_list_perso => 'Create and customize your own vocabulary lists to effectively learn and review the words of your choice.';
 
   @override
-  String get home_title_classement => 'TeamZilla Ranking';
+  String get home_title_classement => 'TeamZilla Rankings';
 
   @override
   String get home_notlogged_accroche1 => 'Boost your English!';
@@ -498,7 +501,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Error adding list';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Error updating the list';
+  String get vocabulaire_user_error_update_list_perso => 'Error updating list';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Error adding vocabulary to list';

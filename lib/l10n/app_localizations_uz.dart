@@ -30,6 +30,9 @@ class AppLocalizationsUz extends AppLocalizations {
   String get app_short_description => 'Ingliz tili lug\'atini o\'rganing va ko\'rib chiqing!';
 
   @override
+  String get app_promotion_ios => 'Oson gapirish va tushunish uchun ingliz tilidagi lug\'atingizni 5600 ta muhim so\'z bilan boyiting.';
+
+  @override
   String get app_keywords => 'lug\'at, o\'rganish, ingliz tili, so\'zlar, til, diktant, talaffuz, viktorina, xotira, o\'rganish, oson, tinglash';
 
   @override

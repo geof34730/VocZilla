@@ -12,7 +12,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get app_release_note => 'Distribuzione della prima versione di VocZilla';
 
   @override
-  String get share_list_perso_alert_disponible => 'La funzionalità di condivisione delle liste sarà disponibile molto presto!';
+  String get share_list_perso_alert_disponible => 'La funzionalità di condivisione degli elenchi sarà disponibile molto presto!';
 
   @override
   String get information => 'Informazioni';
@@ -24,10 +24,13 @@ class AppLocalizationsIt extends AppLocalizations {
   String get app_subtitle => 'vocabolario inglese';
 
   @override
-  String get app_description => 'VocZilla è l\'app perfetta per ampliare il tuo vocabolario inglese, a prescindere dal tuo livello. Scopri migliaia di parole suddivise per tema, gioca a divertenti quiz, monitora i tuoi progressi e sfida i tuoi amici!';
+  String get app_description => 'VocZilla è l\'app perfetta per ampliare il tuo vocabolario inglese, indipendentemente dal tuo livello. Scopri migliaia di parole suddivise per tema, gioca a divertenti quiz, monitora i tuoi progressi e sfida i tuoi amici!';
 
   @override
   String get app_short_description => 'Impara e ripassa il vocabolario inglese!';
+
+  @override
+  String get app_promotion_ios => 'Arricchisci il tuo vocabolario inglese con 5.600 parole essenziali per parlare e capire facilmente.';
 
   @override
   String get app_keywords => 'vocabolario, apprendimento, inglese, parole, lingua, dettato, pronuncia, quiz, memoria, imparare, facile, ascolto';
@@ -138,7 +141,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get offline_title => 'Fuori linea';
 
   @override
-  String get offline_description => 'Non hai una connessione internet. Connettiti a internet per continuare.';
+  String get offline_description => 'Non hai una connessione Internet. Connettiti a Internet per continuare.';
 
   @override
   String get quizz_progression_title => 'I miei progressi in questa lista';
@@ -150,7 +153,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get quizz_saisie_in => 'Inserisci la traduzione in';
 
   @override
-  String get home_title_progresse => 'Il mio progresso da Titano';
+  String get home_title_progresse => 'La mia progressione da Titano';
 
   @override
   String get home_title_my_list_perso => 'Le mie liste personali';
@@ -162,7 +165,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get home_description_list_perso => 'Crea e personalizza i tuoi elenchi di vocaboli per imparare e ripassare in modo efficace le parole che preferisci.';
 
   @override
-  String get home_title_classement => 'Classifica TeamZilla';
+  String get home_title_classement => 'Classifiche TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Migliora il tuo inglese!';
@@ -195,7 +198,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get home_notlogged_button_go => 'Eccoci qui!';
 
   @override
-  String get freetrial_info1 => 'Il tuo periodo di prova gratuito di \$daysFreeTrial è terminato';
+  String get freetrial_info1 => 'Il tuo periodo di prova gratuito \$daysFreeTrial è terminato';
 
   @override
   String get freetrial_info2 => 'Unisciti a noi e scopri un mondo di possibilità con le nostre esclusive iscrizioni!';
@@ -213,7 +216,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get abonnement_annuel => 'Abbonamento annuale';
 
   @override
-  String get abonnement_descriptif_mensuel => 'Libero come un uccello: puoi annullare quando vuoi.';
+  String get abonnement_descriptif_mensuel => 'Libero come un uccello: disdici quando vuoi.';
 
   @override
   String get abonnement_descriptif_annuel => 'Goditi al massimo la tua esperienza risparmiando.';
@@ -288,7 +291,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get email_validation_instruction => 'Controlla la tua casella di posta e segui le istruzioni per convalidare il tuo indirizzo email. Questo ci permetterà di confermare la tua registrazione e di darti accesso a tutte le funzionalità del nostro servizio.';
 
   @override
-  String get email_validation_help => 'Se non trovi l\'email nella posta in arrivo, controlla la cartella spam o posta indesiderata.';
+  String get email_validation_help => 'Se non vedi l\'e-mail nella posta in arrivo, controlla la cartella spam o posta indesiderata.';
 
   @override
   String get email_validation_merci_register2 => 'Grazie per la vostra fiducia!';
@@ -357,7 +360,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get by_themes => 'Temi parziali';
 
   @override
-  String get no_vocabulary_in_my_list => 'Non hai alcun vocabolario in questa lista. Aggiungine un po\' modificandola.';
+  String get no_vocabulary_in_my_list => 'Non hai alcun vocabolario in questa lista. Aggiungine un po\' modificando la lista.';
 
   @override
   String get anonymous_user => 'Utente anonimo';
@@ -390,10 +393,10 @@ class AppLocalizationsIt extends AppLocalizations {
   String get auth_error_google => 'Si è verificato un errore sconosciuto durante l\'accesso a Google.';
 
   @override
-  String get auth_error_apple => 'Si è verificato un errore sconosciuto durante l\'accesso Apple.';
+  String get auth_error_apple => 'Si è verificato un errore sconosciuto durante l\'accesso ad Apple.';
 
   @override
-  String get auth_error_echoue => 'Autenticazione non riuscita, riprovare';
+  String get auth_error_echoue => 'Autenticazione fallita, riprovare';
 
   @override
   String get firebase_error_message_too_many_requests => 'Troppe richieste. Riprova più tardi.';
@@ -408,7 +411,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get firebase_error_message_user_disabled => 'Questo account utente è stato disabilitato.';
 
   @override
-  String get firebase_error_message_invalid_credential => 'L\'indirizzo email o la password non sono corretti.';
+  String get firebase_error_message_invalid_credential => 'L\'email o la password non sono corrette.';
 
   @override
   String get firebase_error_message_email_already_in_use => 'L\'indirizzo email è già utilizzato da un altro account.';
@@ -438,13 +441,13 @@ class AppLocalizationsIt extends AppLocalizations {
   String get update_app_text_2 => 'Non perderti le ultime novità!';
 
   @override
-  String get update_app_text_3 => 'Fai clic qui sotto per aggiornare ora';
+  String get update_app_text_3 => 'Clicca qui sotto per aggiornare subito';
 
   @override
   String get update_app_text_4 => 'Aggiorna VocZilla';
 
   @override
-  String get update_app_text_5 => 'Grazie per essere parte della comunità Voczilla';
+  String get update_app_text_5 => 'Grazie per far parte della comunità Voczilla';
 
   @override
   String get drawer_my_profil => 'Il mio profilo';
@@ -510,7 +513,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get alert_dialogue_suppression_list_title => 'Conferma di eliminazione';
 
   @override
-  String get alert_dialogue_suppression_list_question => 'Vuoi davvero eliminare il tuo elenco personalizzato?';
+  String get alert_dialogue_suppression_list_question => 'Sei sicuro di voler eliminare il tuo elenco personalizzato?';
 
   @override
   String get non => 'Non';
@@ -522,7 +525,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get login_confirmer_mot_de_passe => 'Conferma password';
 
   @override
-  String get login_entrer_confirmer_mot_de_passe => 'Inserisci nuovamente la password';
+  String get login_entrer_confirmer_mot_de_passe => 'Inserisci nuovamente la tua password';
 
   @override
   String get login_mots_de_passe_differents => 'Le password non corrispondono';

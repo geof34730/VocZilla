@@ -30,6 +30,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get app_short_description => 'Leer en herhaal Engelse woordenschat!';
 
   @override
+  String get app_promotion_ios => 'Verrijk uw Engelse woordenschat met 5.600 essentiële woorden voor eenvoudig spreken en begrijpen.';
+
+  @override
   String get app_keywords => 'woordenschat, leren, Engels, woorden, taal, dictee, uitspraak, quiz, geheugen, leren, gemakkelijk, luisteren';
 
   @override
@@ -108,7 +111,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get pronunciation_title => 'Uitspraak';
 
   @override
-  String get pronunciation_success => 'Goed gedaan!';
+  String get pronunciation_success => 'Bravo!';
 
   @override
   String get pronunciation_error => 'Hmm, dat klopt niet helemaal. Probeer het nog eens.';
@@ -138,7 +141,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get offline_title => 'Offline';
 
   @override
-  String get offline_description => 'Je hebt geen internetverbinding. Maak verbinding met internet om verder te gaan.';
+  String get offline_description => 'U heeft geen internetverbinding. Maak verbinding met internet om verder te gaan.';
 
   @override
   String get quizz_progression_title => 'Mijn voortgang op deze lijst';
@@ -150,7 +153,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get quizz_saisie_in => 'Voer de vertaling in';
 
   @override
-  String get home_title_progresse => 'Mijn Titan-voortgang';
+  String get home_title_progresse => 'Mijn Titan-progressie';
 
   @override
   String get home_title_my_list_perso => 'Mijn persoonlijke lijsten';
@@ -159,10 +162,10 @@ class AppLocalizationsNl extends AppLocalizations {
   String get home_title_list_defined => 'Van klein monster tot Titan';
 
   @override
-  String get home_description_list_perso => 'Maak uw eigen woordenschatlijsten aan en pas ze aan, zodat u effectief de woorden van uw keuze kunt leren en herhalen.';
+  String get home_description_list_perso => 'Maak en personaliseer uw eigen woordenschatlijsten om effectief de woorden van uw keuze te leren en te herhalen.';
 
   @override
-  String get home_title_classement => 'TeamZilla-ranglijst';
+  String get home_title_classement => 'TeamZilla-ranglijsten';
 
   @override
   String get home_notlogged_accroche1 => 'Verbeter je Engels!';
@@ -240,7 +243,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get login_nom => 'Naam';
 
   @override
-  String get login_entrer_nom => 'Vul je naam in';
+  String get login_entrer_nom => 'Voer uw naam in';
 
   @override
   String get login_pseudo => 'Pseudoniem';
@@ -285,13 +288,13 @@ class AppLocalizationsNl extends AppLocalizations {
   String get email_validation_msg_email_send => 'Er is een verificatie-e-mail naar uw e-mailadres verzonden';
 
   @override
-  String get email_validation_instruction => 'Controleer uw inbox en volg de instructies om uw e-mailadres te valideren. Zo kunnen we uw registratie bevestigen en krijgt u toegang tot alle functies van onze service.';
+  String get email_validation_instruction => 'Controleer uw inbox en volg de instructies om uw e-mailadres te valideren. Dit stelt ons in staat uw registratie te bevestigen en u toegang te geven tot alle functies van onze service.';
 
   @override
   String get email_validation_help => 'Als u de e-mail niet in uw inbox ziet, controleer dan uw spam- of ongewenste e-mailmap.';
 
   @override
-  String get email_validation_merci_register2 => 'Dank u voor uw vertrouwen!';
+  String get email_validation_merci_register2 => 'Bedankt voor uw vertrouwen!';
 
   @override
   String get send_mail => 'Ontvang een nieuwe verificatie-e-mail';
@@ -324,7 +327,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Je bent weggegaan';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description5 => 'gratis proefperiodes';
+  String get widget_dialogHelper_showfreetrialdialog_description5 => 'gratis proefversies';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description6 => 'Laat je ervaring niet stoppen! Kies het abonnement dat bij je past en geniet ongestoord verder.';
@@ -378,13 +381,13 @@ class AppLocalizationsNl extends AppLocalizations {
   String get auth_error_register_unknown => 'Er is een onbekende fout opgetreden tijdens de registratie.';
 
   @override
-  String get auth_error_create_user => 'Aanmaken gebruiker mislukt.';
+  String get auth_error_create_user => 'Het aanmaken van de gebruiker is mislukt.';
 
   @override
   String get auth_error_update_profil => 'Fout bij het bijwerken van het profiel.';
 
   @override
-  String get auth_error_facebook => 'Er is een onbekende fout opgetreden bij het inloggen met Facebook.';
+  String get auth_error_facebook => 'Er is een onbekende fout opgetreden bij het inloggen op Facebook.';
 
   @override
   String get auth_error_google => 'Er is een onbekende fout opgetreden bij het inloggen bij Google.';
@@ -432,7 +435,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Lijst succesvol verwijderd.';
 
   @override
-  String get update_app_text_1 => 'Er is een nieuwe versie van Voczilla beschikbaar met aanzienlijke verbeteringen, nieuwe functies en bugfixes voor een nog betere ervaring.';
+  String get update_app_text_1 => 'Er is een nieuwe versie van Voczilla beschikbaar met aanzienlijke verbeteringen, nieuwe functies en bugfixes voor een nog betere ervaring';
 
   @override
   String get update_app_text_2 => 'Mis het laatste nieuws niet!';
@@ -477,7 +480,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get card_home_user_day => 'dagen';
 
   @override
-  String get card_home_user_liste_perso => 'lijst(en) verloren';
+  String get card_home_user_liste_perso => 'lijst(en) Verloren';
 
   @override
   String get card_home_share => 'gedeeld';

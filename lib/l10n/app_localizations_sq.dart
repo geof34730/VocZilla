@@ -30,6 +30,9 @@ class AppLocalizationsSq extends AppLocalizations {
   String get app_short_description => 'Mësoni dhe rishikoni fjalorin në anglisht!';
 
   @override
+  String get app_promotion_ios => 'Pasuroni fjalorin tuaj në anglisht me 5,600 fjalë thelbësore për të folur dhe kuptuar lehtë.';
+
+  @override
   String get app_keywords => 'fjalor, mësim, anglisht, fjalë, gjuhë, diktim, shqiptim, kuiz, kujtesë, mëso, lehtë, dëgjim';
 
   @override
@@ -66,7 +69,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get statistiques_title => 'Statistikat';
 
   @override
-  String get liste_title => 'Lista';
+  String get liste_title => 'Listë';
 
   @override
   String get tester_title => 'Vlerësimi';
@@ -150,7 +153,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get quizz_saisie_in => 'Fut përkthimin në';
 
   @override
-  String get home_title_progresse => 'Progresi im në Titan';
+  String get home_title_progresse => 'Progresi im i Titanit';
 
   @override
   String get home_title_my_list_perso => 'Listat e mia personale';
@@ -162,7 +165,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get home_description_list_perso => 'Krijoni dhe personalizoni listat tuaja të fjalorit për të mësuar dhe rishikuar në mënyrë efektive fjalët e zgjedhjes suaj.';
 
   @override
-  String get home_title_classement => 'Renditja e TeamZilla-s';
+  String get home_title_classement => 'Renditja e TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Përmirësoni anglishten tuaj!';
@@ -498,7 +501,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Gabim gjatë shtimit të listës gjatë shtimit të saj.';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Gabim gjatë përditësimit të listës';
+  String get vocabulaire_user_error_update_list_perso => 'Gabim gjatë përditësimit të listës gjatë azhurnimit të saj.';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Gabim gjatë shtimit të fjalorit në listë';

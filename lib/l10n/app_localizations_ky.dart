@@ -24,10 +24,13 @@ class AppLocalizationsKy extends AppLocalizations {
   String get app_subtitle => 'Англисче лексика';
 
   @override
-  String get app_description => 'VocZilla - деңгээлиңизге карабастан, англисче лексикаңызды кеңейтүү үчүн эң сонун колдонмо. Темасы боюнча категорияланган миңдеген сөздөрдү табыңыз, кызыктуу викториналарды ойноңуз, прогрессиңизге көз салыңыз жана досторуңузду чакырыңыз!';
+  String get app_description => 'VocZilla - деңгээлиңизге карабастан, англисче лексикаңызды кеңейтүү үчүн эң сонун колдонмо. Темасы боюнча категорияланган миңдеген сөздөрдү таап, кызыктуу викториналарды ойноп, прогрессиңизге көз салып, досторуңузду чакырыңыз!';
 
   @override
   String get app_short_description => 'Англисче лексиканы үйрөнүңүз жана карап көрүңүз!';
+
+  @override
+  String get app_promotion_ios => 'Оңой сүйлөө жана түшүнүү үчүн англисче лексикаңызды 5600 маанилүү сөз менен байытыңыз.';
 
   @override
   String get app_keywords => 'лексика, үйрөнүү, англисче, сөздөр, тил, диктант, айтылуу, тест, эс тутум, үйрөнүү, жеңил, угуу';
@@ -150,7 +153,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get quizz_saisie_in => 'Котормосун киргизиңиз';
 
   @override
-  String get home_title_progresse => 'My Titan Progress';
+  String get home_title_progresse => 'My Titan Progression';
 
   @override
   String get home_title_my_list_perso => 'Менин жеке тизмелерим';
@@ -162,7 +165,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get home_description_list_perso => 'Сиз тандаган сөздөрдү натыйжалуу үйрөнүү жана карап чыгуу үчүн өзүңүздүн лексика тизмеңизди түзүп, ыңгайлаштырыңыз.';
 
   @override
-  String get home_title_classement => 'TeamZilla Ranking';
+  String get home_title_classement => 'TeamZilla Rankings';
 
   @override
   String get home_notlogged_accroche1 => 'Англис тилин өркүндөт!';
@@ -357,7 +360,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get by_themes => 'Пар темалар';
 
   @override
-  String get no_vocabulary_in_my_list => 'Бул тизмеде сиздин сөз байлыгыңыз жок. Тизмени түзөтүү менен бир аз кошуңуз.';
+  String get no_vocabulary_in_my_list => 'Бул тизмеде сиздин сөз байлыгыңыз жок. Тизмени түзөтүү менен айрымдарын кошуңуз.';
 
   @override
   String get anonymous_user => 'Анонимдүү колдонуучу';
@@ -414,7 +417,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get firebase_error_message_email_already_in_use => 'Электрондук почта дареги мурунтан эле башка каттоо эсеби тарабынан колдонулат.';
 
   @override
-  String get firebase_error_message_operation_not_allowed => 'Бул операцияга жол берилбейт.';
+  String get firebase_error_message_operation_not_allowed => 'Бул операцияга уруксат берилген эмес.';
 
   @override
   String get firebase_error_message_weak_password => 'Сырсөз өтө начар.';
@@ -429,10 +432,10 @@ class AppLocalizationsKy extends AppLocalizations {
   String get auth_success_update_profile => 'Профиль ийгиликтүү жаңыртылды!';
 
   @override
-  String get vocabulaire_success_delete_list => 'Тизме ийгиликтүү өчүрүлдү.';
+  String get vocabulaire_success_delete_list => 'Тизме ийгиликтүү жок кылынды.';
 
   @override
-  String get update_app_text_1 => 'Voczilla жаңы версиясы олуттуу жакшыртуулар, жаңы функциялар жана мүчүлүштүктөрдү оңдоолор менен жеткиликтүү';
+  String get update_app_text_1 => 'Voczilla\'нын жаңы версиясы олуттуу жакшыртуулар, жаңы функциялар жана мүчүлүштүктөрдү оңдоолор менен жеткиликтүү';
 
   @override
   String get update_app_text_2 => 'Акыркы жаңылыктарды өткөрүп жибербеңиз!';
@@ -498,7 +501,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Тизме кошууда ката кетти';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Тизмени жаңыртуудагы ката';
+  String get vocabulaire_user_error_update_list_perso => 'Тизмени жаңыртуу катасы';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Тизмеге лексиканы кошууда ката кетти';

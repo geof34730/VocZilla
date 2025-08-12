@@ -30,6 +30,9 @@ class AppLocalizationsKn extends AppLocalizations {
   String get app_short_description => 'ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ವಿಮರ್ಶಿಸಿ!';
 
   @override
+  String get app_promotion_ios => 'ಸುಲಭವಾಗಿ ಮಾತನಾಡಲು ಮತ್ತು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು 5,600 ಅಗತ್ಯ ಪದಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ಉತ್ಕೃಷ್ಟಗೊಳಿಸಿ.';
+
+  @override
   String get app_keywords => 'ಶಬ್ದಕೋಶ, ಕಲಿಕೆ, ಇಂಗ್ಲಿಷ್, ಪದಗಳು, ಭಾಷೆ, ಉಕ್ತಲೇಖನ, ಉಚ್ಚಾರಣೆ, ರಸಪ್ರಶ್ನೆ, ಸ್ಮರಣೆ, ಕಲಿಯಿರಿ, ಸುಲಭ, ಆಲಿಸುವುದು';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get home_description_list_perso => 'ನಿಮ್ಮ ಆಯ್ಕೆಯ ಪದಗಳನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಕಲಿಯಲು ಮತ್ತು ಪರಿಶೀಲಿಸಲು ನಿಮ್ಮ ಸ್ವಂತ ಶಬ್ದಕೋಶ ಪಟ್ಟಿಗಳನ್ನು ರಚಿಸಿ ಮತ್ತು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ.';
 
   @override
-  String get home_title_classement => 'ಟೀಮ್‌ಜಿಲ್ಲಾ ಶ್ರೇಯಾಂಕ';
+  String get home_title_classement => 'ಟೀಮ್‌ಜಿಲ್ಲಾ ಶ್ರೇಯಾಂಕಗಳು';
 
   @override
   String get home_notlogged_accroche1 => 'ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಭಾಷೆಯನ್ನು ಹೆಚ್ಚಿಸಿಕೊಳ್ಳಿ!';
@@ -183,7 +186,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get home_notlogged_accroche6 => 'ವೇಗದ ಮತ್ತು ಪರಿಣಾಮಕಾರಿ ವಿಧಾನ';
 
   @override
-  String get home_notlogged_accroche7 => 'ಮೊದಲು ಹೆಚ್ಚು ಉಪಯುಕ್ತವಾದ ಪದಗಳನ್ನು ಕಲಿಯಿರಿ';
+  String get home_notlogged_accroche7 => 'ಮೊದಲು ಹೆಚ್ಚು ಉಪಯುಕ್ತವಾದ ಪದಗಳನ್ನು ಕಲಿಯಿರಿ.';
 
   @override
   String get home_notlogged_accroche8 => 'ವೇಗವಾಗಿ ಪ್ರಗತಿ ಸಾಧಿಸಲು ಆಪ್ಟಿಮೈಸ್ಡ್ ಕಂಠಪಾಠ';
@@ -501,7 +504,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get vocabulaire_user_error_update_list_perso => 'ಪಟ್ಟಿಯನ್ನು ನವೀಕರಿಸುವಲ್ಲಿ ದೋಷ';
 
   @override
-  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'ಪಟ್ಟಿಗೆ ಶಬ್ದಕೋಶ ಸೇರಿಸುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ.';
+  String get vocabulaire_user_error_add_vocabulaire_list_perso => 'ಪಟ್ಟಿಗೆ ಶಬ್ದಕೋಶ ಸೇರಿಸುವಾಗ ದೋಷ ಎದುರಾಗಿದೆ.';
 
   @override
   String get vocabulaire_user_error_delete_vocabulaire_list => 'ಪಟ್ಟಿಯಿಂದ ಶಬ್ದಕೋಶವನ್ನು ಅಳಿಸುವಲ್ಲಿ ದೋಷ';

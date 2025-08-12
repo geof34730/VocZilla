@@ -30,6 +30,9 @@ class AppLocalizationsSl extends AppLocalizations {
   String get app_short_description => 'Naučite se in ponovite angleški besednjak!';
 
   @override
+  String get app_promotion_ios => 'Obogatite svoj angleški besednjak s 5600 bistvenimi besedami za lažje govorjenje in razumevanje.';
+
+  @override
   String get app_keywords => 'besedišče, učenje, angleščina, besede, jezik, narekovanje, izgovorjava, kviz, spomin, učenje, enostavno, poslušanje';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get home_description_list_perso => 'Ustvarite in prilagodite svoje sezname besedišča, da se boste učinkovito učili in ponavljali besede po svoji izbiri.';
 
   @override
-  String get home_title_classement => 'Lestvica TeamZilla';
+  String get home_title_classement => 'Lestvice TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Izboljšajte svojo angleščino!';
@@ -288,7 +291,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get email_validation_instruction => 'Preverite svoj nabiralnik in sledite navodilom za potrditev svojega e-poštnega naslova. To nam bo omogočilo, da potrdimo vašo registracijo in vam omogočimo dostop do vseh funkcij naše storitve.';
 
   @override
-  String get email_validation_help => 'Če e-poštnega sporočila ne vidite v mapi »Prejeto«, preverite mapo z neželeno pošto.';
+  String get email_validation_help => 'Če e-poštnega sporočila ne vidite v mapi »Prejeto«, razmislite o preverjanju mape z neželeno pošto.';
 
   @override
   String get email_validation_merci_register2 => 'Hvala za vaše zaupanje!';
@@ -363,7 +366,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get anonymous_user => 'Anonimni uporabnik';
 
   @override
-  String get alert_message_email_verify_send => 'Potrditveno e-poštno sporočilo poslano!';
+  String get alert_message_email_verify_send => 'Potrditveno e-poštno sporočilo je bilo poslano!';
 
   @override
   String get alert_message_email_send_error => 'Napaka pri pošiljanju e-pošte.';
@@ -420,7 +423,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get firebase_error_message_weak_password => 'Geslo je prešibko.';
 
   @override
-  String get firebase_error_message_account_exists_with_different_credential => 'Račun z istim e-poštnim naslovom, vendar drugačnimi poverilnicami, že obstaja.';
+  String get firebase_error_message_account_exists_with_different_credential => 'Račun z istim e-poštnim naslovom, vendar z drugačnimi poverilnicami, že obstaja.';
 
   @override
   String get firebase_error_message_error_generic => 'Prišlo je do nepričakovane napake. Poskusite znova.';

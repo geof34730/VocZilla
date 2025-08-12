@@ -30,6 +30,9 @@ class AppLocalizationsNe extends AppLocalizations {
   String get app_short_description => 'अंग्रेजी शब्दावली सिक्नुहोस् र समीक्षा गर्नुहोस्!';
 
   @override
+  String get app_promotion_ios => 'सजिलै बोल्न र बुझ्नको लागि ५,६०० आवश्यक शब्दहरूले आफ्नो अंग्रेजी शब्दावलीलाई समृद्ध बनाउनुहोस्।';
+
+  @override
   String get app_keywords => 'शब्दावली, सिक्ने, अंग्रेजी, शब्दहरू, भाषा, श्रुतलेखन, उच्चारण, क्विज, स्मृति, सिक्ने, सजिलो, सुन्ने';
 
   @override
@@ -162,13 +165,13 @@ class AppLocalizationsNe extends AppLocalizations {
   String get home_description_list_perso => 'आफ्नो रोजाइका शब्दहरू प्रभावकारी रूपमा सिक्न र समीक्षा गर्न आफ्नै शब्दावली सूचीहरू सिर्जना र अनुकूलित गर्नुहोस्।';
 
   @override
-  String get home_title_classement => 'TeamZilla रैंकिंग';
+  String get home_title_classement => 'TeamZilla वरीयता';
 
   @override
   String get home_notlogged_accroche1 => 'आफ्नो अंग्रेजी बढाउनुहोस्!';
 
   @override
-  String get home_notlogged_accroche2 => 'के तपाईं आफ्नो अंग्रेजी शब्दावलीलाई समृद्ध बनाउन चाहनुहुन्छ?';
+  String get home_notlogged_accroche2 => 'के तपाईं आफ्नो अंग्रेजी शब्दावली समृद्ध बनाउन चाहनुहुन्छ?';
 
   @override
   String get home_notlogged_accroche3 => 'पहुँच ';

@@ -30,6 +30,9 @@ class AppLocalizationsGl extends AppLocalizations {
   String get app_short_description => 'Aprende e repasa vocabulario inglés!';
 
   @override
+  String get app_promotion_ios => 'Enriquece o teu vocabulario inglés con 5.600 palabras esenciais para falar e comprender facilmente.';
+
+  @override
   String get app_keywords => 'vocabulario, aprendizaxe, inglés, palabras, lingua, ditado, pronuncia, cuestionario, memoria, aprender, fácil, escoita';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get quizz_saisie_in => 'Introduza a tradución en';
 
   @override
-  String get home_title_progresse => 'O meu progreso en Titán';
+  String get home_title_progresse => 'A miña progresión de titán';
 
   @override
   String get home_title_my_list_perso => 'As miñas listas persoais';
@@ -162,7 +165,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get home_description_list_perso => 'Crea e personaliza as túas propias listas de vocabulario para aprender e repasar de forma eficaz as palabras que escolliches.';
 
   @override
-  String get home_title_classement => 'Clasificación de TeamZilla';
+  String get home_title_classement => 'Clasificacións de TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Mellora o teu inglés!';
@@ -462,10 +465,10 @@ class AppLocalizationsGl extends AppLocalizations {
   String get drawer_free_trial_days => 'días';
 
   @override
-  String get drawer_free_trial_restants => 'restantes';
+  String get drawer_free_trial_restants => 'restante';
 
   @override
-  String get drawer_free_trial_restant => 'restantes';
+  String get drawer_free_trial_restant => 'restante';
 
   @override
   String get erreur_de_chargement_du_profil => 'Erro ao cargar o perfil';

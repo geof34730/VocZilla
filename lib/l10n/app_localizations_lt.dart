@@ -30,6 +30,9 @@ class AppLocalizationsLt extends AppLocalizations {
   String get app_short_description => 'Mokykitės ir kartokite anglų kalbos žodyną!';
 
   @override
+  String get app_promotion_ios => 'Praturtinkite savo anglų kalbos žodyną 5600 esminių žodžių, kad būtų lengva kalbėti ir suprasti.';
+
+  @override
   String get app_keywords => 'žodynas, mokymasis, anglų kalba, žodžiai, kalba, diktavimas, tarimas, viktorina, atmintis, mokytis, lengva, klausymasis';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get quizz_saisie_in => 'Įveskite vertimą';
 
   @override
-  String get home_title_progresse => 'Mano Titano progresas';
+  String get home_title_progresse => 'Mano titano progresija';
 
   @override
   String get home_title_my_list_perso => 'Mano asmeniniai sąrašai';
@@ -162,7 +165,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get home_description_list_perso => 'Kurkite ir tinkinkite savo žodynų sąrašus, kad galėtumėte efektyviai išmokti ir kartoti pasirinktus žodžius.';
 
   @override
-  String get home_title_classement => '„TeamZilla“ reitingas';
+  String get home_title_classement => '„TeamZilla“ reitingai';
 
   @override
   String get home_notlogged_accroche1 => 'Patobulinkite savo anglų kalbos žinias!';
@@ -432,7 +435,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Sąrašas sėkmingai ištrintas.';
 
   @override
-  String get update_app_text_1 => 'Nauja „Voczilla“ versija išleista su reikšmingais patobulinimais, naujomis funkcijomis ir klaidų ištaisymais, kad patirtis būtų dar geresnė.';
+  String get update_app_text_1 => 'Nauja „Voczilla“ versija prieinama su reikšmingais patobulinimais, naujomis funkcijomis ir klaidų ištaisymais, kad patirtis būtų dar geresnė.';
 
   @override
   String get update_app_text_2 => 'Nepraleiskite naujausių naujienų!';

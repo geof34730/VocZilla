@@ -30,6 +30,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get app_short_description => 'Tanulj és ismételd át az angol szókincset!';
 
   @override
+  String get app_promotion_ios => 'Gazdagítsd angol szókincsedet 5600 alapvető szóval a könnyű beszéd és megértés érdekében.';
+
+  @override
   String get app_keywords => 'szókincs, tanulás, angol, szavak, nyelv, diktálás, kiejtés, kvíz, memória, tanulás, könnyű, hallgatás';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get quizz_saisie_in => 'Írd be a fordítást';
 
   @override
-  String get home_title_progresse => 'Az én titáni fejlődésem';
+  String get home_title_progresse => 'Az én titán progresszióm';
 
   @override
   String get home_title_my_list_perso => 'Személyes listáim';

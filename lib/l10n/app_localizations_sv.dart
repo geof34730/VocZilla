@@ -30,6 +30,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get app_short_description => 'Lär dig och repetera engelska ord!';
 
   @override
+  String get app_promotion_ios => 'Berika ditt engelska ordförråd med 5 600 viktiga ord för enkel talförståelse.';
+
+  @override
   String get app_keywords => 'ordförråd, lärande, engelska, ord, språk, diktering, uttal, frågesport, minne, lära sig, enkelt, lyssnande';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get quizz_saisie_in => 'Ange översättningen i';
 
   @override
-  String get home_title_progresse => 'Mina Titan-framsteg';
+  String get home_title_progresse => 'Min Titan-progression';
 
   @override
   String get home_title_my_list_perso => 'Mina personliga listor';
@@ -162,7 +165,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get home_description_list_perso => 'Skapa och anpassa dina egna ordförrådslistor för att effektivt lära dig och repetera de ord du valt.';
 
   @override
-  String get home_title_classement => 'TeamZilla-rankning';
+  String get home_title_classement => 'TeamZilla-rankningar';
 
   @override
   String get home_notlogged_accroche1 => 'Förbättra din engelska!';

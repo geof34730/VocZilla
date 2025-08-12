@@ -27,7 +27,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get app_description => 'VocZilla er hið fullkomna app til að auka enskuorðaforða þinn, óháð því hvaða færni þú ert á. Uppgötvaðu þúsundir orða flokkaðar eftir þema, spilaðu skemmtilegar spurningakeppnir, fylgstu með framförum þínum og skoraðu á vini þína!';
 
   @override
-  String get app_short_description => 'Lærðu og rifja upp enskt orðaforða!';
+  String get app_short_description => 'Lærðu og rifja upp ensku orðaforða!';
+
+  @override
+  String get app_promotion_ios => 'Auðgaðu enskuorðaforða þinn með 5.600 nauðsynlegum orðum sem auðvelda þér að tala og skilja enskuna.';
 
   @override
   String get app_keywords => 'orðaforði, nám, enska, orð, tungumál, upplestur, framburður, próf, minni, læra, auðvelt, hlustun';
@@ -498,7 +501,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Villa við að bæta við lista';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Villa við að uppfæra listann';
+  String get vocabulaire_user_error_update_list_perso => 'Villa við að uppfæra lista';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Villa við að bæta orðaforða við listann';

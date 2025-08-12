@@ -30,6 +30,9 @@ class AppLocalizationsBg extends AppLocalizations {
   String get app_short_description => 'Научете и преговорете английския речник!';
 
   @override
+  String get app_promotion_ios => 'Обогатете английския си речник с 5600 основни думи за лесно говорене и разбиране.';
+
+  @override
   String get app_keywords => 'речник, учене, английски, думи, език, диктовка, произношение, викторина, памет, учене, лесно, слушане';
 
   @override
@@ -81,7 +84,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get language_anglais => 'английски';
 
   @override
-  String get search => 'Да проуча';
+  String get search => 'Да се проучи';
 
   @override
   String get audios => 'Аудио файлове';
@@ -150,7 +153,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get quizz_saisie_in => 'Въведете превода в';
 
   @override
-  String get home_title_progresse => 'Моят напредък на Титаните';
+  String get home_title_progresse => 'Моята прогресия на титаните';
 
   @override
   String get home_title_my_list_perso => 'Моите лични списъци';
@@ -162,7 +165,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get home_description_list_perso => 'Създавайте и персонализирайте свои собствени списъци с речник, за да учите и преглеждате ефективно думите по ваш избор.';
 
   @override
-  String get home_title_classement => 'Класация на TeamZilla';
+  String get home_title_classement => 'Класации на TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Подобрете английския си!';
@@ -219,7 +222,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get abonnement_descriptif_annuel => 'Насладете се максимално на преживяването си, като същевременно спестите пари.';
 
   @override
-  String get button_sabonner => 'Абонирайте се';
+  String get button_sabonner => 'Абониране';
 
   @override
   String get login_se_connecter => 'Вход';
@@ -369,7 +372,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get alert_message_email_send_error => 'Грешка при изпращане на имейл.';
 
   @override
-  String get auth_error_deconnect => 'Възникна грешка при излизане от системата.';
+  String get auth_error_deconnect => 'Възникна грешка при излизане.';
 
   @override
   String get auth_error_connect => 'Възникна неизвестна грешка при свързване.';
@@ -498,7 +501,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Грешка при добавяне на списъка';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Грешка при актуализирането на списъка';
+  String get vocabulaire_user_error_update_list_perso => 'Грешка при актуализиране на списъка';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Грешка при добавяне на речник към списъка';

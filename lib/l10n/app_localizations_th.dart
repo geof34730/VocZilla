@@ -30,6 +30,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get app_short_description => 'เรียนรู้และทบทวนคำศัพท์ภาษาอังกฤษ!';
 
   @override
+  String get app_promotion_ios => 'เสริมสร้างคำศัพท์ภาษาอังกฤษของคุณด้วยคำศัพท์สำคัญ 5,600 คำเพื่อการพูดและความเข้าใจที่ง่ายดาย';
+
+  @override
   String get app_keywords => 'คำศัพท์, การเรียนรู้, ภาษาอังกฤษ, คำ, ภาษา, การบอกตามคำบอก, การออกเสียง, แบบทดสอบ, ความจำ, เรียนรู้, ง่าย, การฟัง';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get quizz_saisie_in => 'ป้อนคำแปลลงใน';
 
   @override
-  String get home_title_progresse => 'ความคืบหน้าไททันของฉัน';
+  String get home_title_progresse => 'ความก้าวหน้าของไททันของฉัน';
 
   @override
   String get home_title_my_list_perso => 'รายการส่วนตัวของฉัน';
@@ -162,7 +165,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get home_description_list_perso => 'สร้างและปรับแต่งรายการคำศัพท์ของคุณเองเพื่อเรียนรู้และทบทวนคำศัพท์ที่คุณเลือกได้อย่างมีประสิทธิภาพ';
 
   @override
-  String get home_title_classement => 'การจัดอันดับ TeamZilla';
+  String get home_title_classement => 'อันดับ TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'เสริมทักษะภาษาอังกฤษของคุณ!';
@@ -498,7 +501,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'เกิดข้อผิดพลาดในการเพิ่มรายการ';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'เกิดข้อผิดพลาดในการอัปเดตรายการ';
+  String get vocabulaire_user_error_update_list_perso => 'เกิดข้อผิดพลาดในการอัพเดตรายการ';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'เกิดข้อผิดพลาดในการเพิ่มคำศัพท์ลงในรายการ';

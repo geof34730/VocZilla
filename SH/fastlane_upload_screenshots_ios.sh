@@ -42,7 +42,7 @@ fastlane deliver \
   --platform "$PLATFORM" \
   --screenshots_path "$SCREENSHOT_DIR" \
   --skip_binary_upload true \
-  --skip_metadata true \
+  --skip_metadata false \
   --overwrite_screenshots false \
   --run_precheck_before_submit false \
   --ignore_language_directory_validation true \

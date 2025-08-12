@@ -24,10 +24,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get app_subtitle => '영어 어휘';
 
   @override
-  String get app_description => 'VocZilla는 레벨에 관계없이 영어 어휘력을 향상하는 데 완벽한 앱입니다. 주제별로 분류된 수천 개의 단어를 찾아보고, 재미있는 퀴즈를 풀고, 학습 진도를 확인하고, 친구들과 실력을 겨뤄보세요!';
+  String get app_description => 'VocZilla는 레벨에 관계없이 영어 어휘력을 향상시키는 데 완벽한 앱입니다. 주제별로 분류된 수천 개의 단어를 찾아보고, 재미있는 퀴즈를 풀고, 학습 진도를 확인하고, 친구들과 실력을 겨뤄보세요!';
 
   @override
   String get app_short_description => '영어 어휘를 배우고 복습하세요!';
+
+  @override
+  String get app_promotion_ios => '쉽게 말하고 이해하는 데 필요한 5,600개의 필수 단어로 영어 어휘력을 키우세요.';
 
   @override
   String get app_keywords => '어휘, 학습, 영어, 단어, 언어, 받아쓰기, 발음, 퀴즈, 기억력, 학습, 쉬움, 듣기';
@@ -150,7 +153,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get quizz_saisie_in => '번역을 입력하세요';
 
   @override
-  String get home_title_progresse => '나의 타이탄 진행 상황';
+  String get home_title_progresse => '나의 타이탄 진행';
 
   @override
   String get home_title_my_list_perso => '내 개인 목록';
@@ -417,7 +420,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get firebase_error_message_operation_not_allowed => '이 작업은 허용되지 않습니다.';
 
   @override
-  String get firebase_error_message_weak_password => '비밀번호가 너무 약해요.';
+  String get firebase_error_message_weak_password => '비밀번호가 너무 약합니다.';
 
   @override
   String get firebase_error_message_account_exists_with_different_credential => '동일한 이메일 주소이지만 다른 자격 증명을 사용하는 계정이 이미 존재합니다.';
@@ -492,13 +495,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get vocabulaire_user_error_delete_list => '목록 삭제 오류';
 
   @override
-  String get vocabulaire_user_error_user_data_not_found => '사용자 데이터 로딩 중 오류 발생';
+  String get vocabulaire_user_error_user_data_not_found => '사용자 데이터 로딩 중 오류가 발생했습니다.';
 
   @override
   String get vocabulaire_user_error_add_list_perso => '목록 추가 중 오류 발생';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => '목록 업데이트 중 오류가 발생했습니다.';
+  String get vocabulaire_user_error_update_list_perso => '목록 업데이트 중 오류 발생';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => '목록에 어휘를 추가하는 중 오류가 발생했습니다.';

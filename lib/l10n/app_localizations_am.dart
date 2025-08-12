@@ -30,6 +30,9 @@ class AppLocalizationsAm extends AppLocalizations {
   String get app_short_description => 'የእንግሊዝኛ ቃላትን ይማሩ እና ይገምግሙ!';
 
   @override
+  String get app_promotion_ios => 'በቀላሉ ለመናገር እና ለመረዳት የእንግሊዝኛ ቃላትን በ5,600 አስፈላጊ ቃላት ያበልጽጉ።';
+
+  @override
   String get app_keywords => 'መዝገበ ቃላት፣ መማር፣ እንግሊዘኛ፣ ቃላት፣ ቋንቋ፣ መዝገበ ቃላት፣ አነባበብ፣ ጥያቄ፣ ትውስታ፣ መማር፣ ቀላል፣ ማዳመጥ';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get quizz_saisie_in => 'ትርጉሙን አስገባ';
 
   @override
-  String get home_title_progresse => 'የእኔ ታይታን እድገት';
+  String get home_title_progresse => 'የእኔ ታይታን ግስጋሴ';
 
   @override
   String get home_title_my_list_perso => 'የእኔ የግል ዝርዝሮች';
@@ -162,7 +165,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get home_description_list_perso => 'የመረጡትን ቃላት በብቃት ለመማር እና ለመገምገም የራስዎን የቃላት ዝርዝር ይፍጠሩ እና ያብጁ።';
 
   @override
-  String get home_title_classement => 'የቡድንዚላ ደረጃ አሰጣጥ';
+  String get home_title_classement => 'የቡድንዚላ ደረጃዎች';
 
   @override
   String get home_notlogged_accroche1 => 'እንግሊዝኛዎን ያሳድጉ!';
@@ -285,7 +288,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get email_validation_msg_email_send => 'የማረጋገጫ ኢሜይል ወደ ኢሜል አድራሻዎ ተልኳል።';
 
   @override
-  String get email_validation_instruction => 'እባክዎ የኢሜል አድራሻዎን ለማረጋገጥ የገቢ መልእክት ሳጥንዎን ያረጋግጡ እና መመሪያዎቹን ይከተሉ። ይህ ምዝገባዎን እንድናረጋግጥ እና ሁሉንም የአገልግሎታችን ባህሪያትን እንዲያገኙ ያስችሎታል።';
+  String get email_validation_instruction => 'እባክዎ የኢሜል አድራሻዎን ለማረጋገጥ የገቢ መልእክት ሳጥንዎን ያረጋግጡ እና መመሪያዎቹን ይከተሉ። ይህ የእርስዎን ምዝገባ እንድናረጋግጥ ያስችለናል እና ሁሉንም የአገልግሎታችን ባህሪያት መዳረሻ ይሰጥዎታል።';
 
   @override
   String get email_validation_help => 'በገቢ መልእክት ሳጥንዎ ውስጥ ኢሜይሉን ካላዩ፣ የእርስዎን አይፈለጌ መልእክት ወይም የቆሻሻ መጣያ አቃፊ መፈተሽ ያስቡበት።';

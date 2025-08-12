@@ -30,6 +30,9 @@ class AppLocalizationsNo extends AppLocalizations {
   String get app_short_description => 'Lær og repeter engelsk vokabular!';
 
   @override
+  String get app_promotion_ios => 'Berik ditt engelske ordforråd med 5600 viktige ord for enkel tale og forståelse.';
+
+  @override
   String get app_keywords => 'vokabular, læring, engelsk, ord, språk, diktering, uttale, quiz, hukommelse, lær, lett, lytting';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get quizz_saisie_in => 'Skriv inn oversettelsen i';
 
   @override
-  String get home_title_progresse => 'Min Titan-fremgang';
+  String get home_title_progresse => 'Min Titan-progresjon';
 
   @override
   String get home_title_my_list_perso => 'Mine personlige lister';
@@ -162,7 +165,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get home_description_list_perso => 'Lag og tilpass dine egne vokabularlister for å effektivt lære og repetere ordene du ønsker.';
 
   @override
-  String get home_title_classement => 'TeamZilla-rangering';
+  String get home_title_classement => 'TeamZilla-rangeringer';
 
   @override
   String get home_notlogged_accroche1 => 'Styrk engelskkunnskapene dine!';
@@ -336,7 +339,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get widget_congratulation_bravo => 'Bravo';
 
   @override
-  String get widget_congratulation_message => 'du er ferdig med å lære deg denne listen';
+  String get widget_congratulation_message => 'du er ferdig med å lære denne listen';
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice1 => 'Å lære';
@@ -432,7 +435,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Listen er slettet.';
 
   @override
-  String get update_app_text_1 => 'En ny versjon av Voczilla er tilgjengelig med betydelige forbedringer, nye funksjoner og feilrettinger for en enda bedre opplevelse.';
+  String get update_app_text_1 => 'En ny versjon av Voczilla er tilgjengelig med betydelige forbedringer, nye funksjoner og feilrettinger for en enda bedre opplevelse';
 
   @override
   String get update_app_text_2 => 'Ikke gå glipp av de siste nyhetene!';
@@ -498,7 +501,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Feil ved tillegging av liste';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Feil under oppdatering av listen';
+  String get vocabulaire_user_error_update_list_perso => 'Feil ved oppdatering av listen';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Feil ved å legge til vokabular i listen';
@@ -525,7 +528,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get login_entrer_confirmer_mot_de_passe => 'Vennligst skriv inn passordet ditt på nytt';
 
   @override
-  String get login_mots_de_passe_differents => 'Passordene samsvarer ikke';
+  String get login_mots_de_passe_differents => 'Passordene stemmer ikke overens';
 
   @override
   String get login_tous_champs_obligatoires => 'Vennligst fyll ut alle feltene';

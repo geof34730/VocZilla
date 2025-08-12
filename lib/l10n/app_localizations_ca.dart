@@ -30,6 +30,9 @@ class AppLocalizationsCa extends AppLocalizations {
   String get app_short_description => 'Aprèn i repassa el vocabulari anglès!';
 
   @override
+  String get app_promotion_ios => 'Enriqueix el teu vocabulari anglès amb 5.600 paraules essencials per parlar i entendre fàcilment.';
+
+  @override
   String get app_keywords => 'vocabulari, aprenentatge, anglès, paraules, idioma, dictat, pronunciació, qüestionari, memòria, aprendre, fàcil, escoltar';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get quizz_saisie_in => 'Introdueix la traducció a';
 
   @override
-  String get home_title_progresse => 'El meu progrés en Titan';
+  String get home_title_progresse => 'La meva progressió de Titan';
 
   @override
   String get home_title_my_list_perso => 'Les meves llistes personals';
@@ -162,7 +165,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get home_description_list_perso => 'Crea i personalitza les teves pròpies llistes de vocabulari per aprendre i repassar de manera eficaç les paraules que triïs.';
 
   @override
-  String get home_title_classement => 'Rànquing de TeamZilla';
+  String get home_title_classement => 'Rànquings de TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Millora el teu anglès!';
@@ -498,7 +501,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'S\'ha produït un error en afegir la llista';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Error en actualitzar la llista';
+  String get vocabulaire_user_error_update_list_perso => 'S\'ha produït un error en actualitzar la llista';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'S\'ha produït un error en afegir vocabulari a la llista';

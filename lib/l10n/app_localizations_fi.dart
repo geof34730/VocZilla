@@ -30,6 +30,9 @@ class AppLocalizationsFi extends AppLocalizations {
   String get app_short_description => 'Opi ja kertaa englannin sanastoa!';
 
   @override
+  String get app_promotion_ios => 'Rikasta englannin sanastoasi 5 600 olennaisella sanalla helppoa puhumista ja ymmärtämistä varten.';
+
+  @override
   String get app_keywords => 'sanasto, oppiminen, englanti, sanat, kieli, sanelu, ääntäminen, tietokilpailu, muisti, oppia, helppo, kuunteleminen';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get quizz_saisie_in => 'Syötä käännös sisään';
 
   @override
-  String get home_title_progresse => 'Titaanien edistymiseni';
+  String get home_title_progresse => 'Minun titaanien etenemiseni';
 
   @override
   String get home_title_my_list_perso => 'Omat henkilökohtaiset listani';
@@ -162,7 +165,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get home_description_list_perso => 'Luo ja mukauta omia sanastolistojasi oppiaksesi ja kertaaksesi valitsemiasi sanoja tehokkaasti.';
 
   @override
-  String get home_title_classement => 'TeamZilla-ranking';
+  String get home_title_classement => 'TeamZilla-rankingit';
 
   @override
   String get home_notlogged_accroche1 => 'Paranna englantiasi!';
@@ -498,7 +501,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Virhe listan lisäämisessä';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Virhe listan päivittämisessä';
+  String get vocabulaire_user_error_update_list_perso => 'Virhe luettelon päivittämisessä';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Sanaston lisääminen luetteloon epäonnistui';

@@ -30,6 +30,9 @@ class AppLocalizationsEt extends AppLocalizations {
   String get app_short_description => 'Õpi ja korda inglise keele sõnavara!';
 
   @override
+  String get app_promotion_ios => 'Rikasta oma inglise keele sõnavara 5600 olulise sõnaga, et hõlbustada rääkimist ja arusaamist.';
+
+  @override
   String get app_keywords => 'sõnavara, õppimine, inglise keel, sõnad, keel, dikteerimine, hääldus, viktoriin, mälu, õppimine, lihtne, kuulamine';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get quizz_saisie_in => 'Sisestage tõlge';
 
   @override
-  String get home_title_progresse => 'Minu Titani edusammud';
+  String get home_title_progresse => 'Minu Titani progressioon';
 
   @override
   String get home_title_my_list_perso => 'Minu isiklikud nimekirjad';
@@ -162,10 +165,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get home_description_list_perso => 'Loo ja kohanda oma sõnavaraloendeid, et valitud sõnu tõhusalt õppida ja üle vaadata.';
 
   @override
-  String get home_title_classement => 'TeamZilla edetabel';
+  String get home_title_classement => 'TeamZilla edetabelid';
 
   @override
-  String get home_notlogged_accroche1 => 'Täiusta oma inglise keelt!';
+  String get home_notlogged_accroche1 => 'Tõsta oma inglise keelt!';
 
   @override
   String get home_notlogged_accroche2 => 'Kas soovite oma inglise keele sõnavara rikastada?';
@@ -504,7 +507,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Sõnavara lisamisel loendisse tekkis viga';
 
   @override
-  String get vocabulaire_user_error_delete_vocabulaire_list => 'Viga sõnavara loendist kustutamisel';
+  String get vocabulaire_user_error_delete_vocabulaire_list => 'Sõnavara loendist kustutamisel tekkis viga';
 
   @override
   String get alert_dialogue_suppression_list_title => 'Kustutamise kinnitus';

@@ -30,6 +30,9 @@ class AppLocalizationsMl extends AppLocalizations {
   String get app_short_description => 'ഇംഗ്ലീഷ് പദാവലി പഠിക്കുകയും അവലോകനം ചെയ്യുകയും ചെയ്യുക!';
 
   @override
+  String get app_promotion_ios => 'എളുപ്പത്തിൽ സംസാരിക്കാനും മനസ്സിലാക്കാനും 5,600 അവശ്യ വാക്കുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ ഇംഗ്ലീഷ് പദാവലി സമ്പന്നമാക്കുക.';
+
+  @override
   String get app_keywords => 'പദാവലി, പഠനം, ഇംഗ്ലീഷ്, വാക്കുകൾ, ഭാഷ, കേട്ടെഴുതൽ, ഉച്ചാരണം, ക്വിസ്, മെമ്മറി, പഠിക്കുക, എളുപ്പമാണ്, കേൾക്കൽ';
 
   @override
@@ -123,7 +126,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get pronunciation_error1 => 'സംഭാഷണ തിരിച്ചറിയൽ ആരംഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു';
 
   @override
-  String get pronunciation_error2 => 'ഇനിഷ്യലൈസ് ചെയ്യുമ്പോള്‍ പിശക്';
+  String get pronunciation_error2 => 'ഇനിഷ്യലൈസ് ചെയ്യുന്നതിനിടെ പിശക്';
 
   @override
   String get pronunciation_error3 => 'കേൾക്കൽ ആരംഭിക്കുന്നതിൽ പിശക്';
@@ -162,7 +165,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get home_description_list_perso => 'നിങ്ങൾക്ക് ഇഷ്ടമുള്ള വാക്കുകൾ ഫലപ്രദമായി പഠിക്കാനും അവലോകനം ചെയ്യാനും നിങ്ങളുടെ സ്വന്തം പദാവലി ലിസ്റ്റുകൾ സൃഷ്ടിക്കുകയും ഇഷ്ടാനുസൃതമാക്കുകയും ചെയ്യുക.';
 
   @override
-  String get home_title_classement => 'ടീംസില്ല റാങ്കിംഗ്';
+  String get home_title_classement => 'ടീംസില്ല റാങ്കിംഗുകൾ';
 
   @override
   String get home_notlogged_accroche1 => 'നിങ്ങളുടെ ഇംഗ്ലീഷ് പരിജ്ഞാനം വർദ്ധിപ്പിക്കൂ!';

@@ -30,6 +30,9 @@ class AppLocalizationsEl extends AppLocalizations {
   String get app_short_description => 'Μάθετε και επανεξετάστε το αγγλικό λεξιλόγιο!';
 
   @override
+  String get app_promotion_ios => 'Εμπλουτίστε το αγγλικό λεξιλόγιό σας με 5.600 βασικές λέξεις για εύκολη ομιλία και κατανόηση.';
+
+  @override
   String get app_keywords => 'λεξιλόγιο, μάθηση, αγγλικά, λέξεις, γλώσσα, υπαγόρευση, προφορά, κουίζ, μνήμη, μάθηση, εύκολο, ακρόαση';
 
   @override
@@ -126,7 +129,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get pronunciation_error2 => 'Σφάλμα κατά την αρχικοποίηση';
 
   @override
-  String get pronunciation_error3 => 'Σφάλμα έναρξης ακρόασης';
+  String get pronunciation_error3 => 'Σφάλμα κατά την έναρξη της ακρόασης';
 
   @override
   String get pronunciation_error4 => 'Η αναγνώριση φωνής δεν είναι έτοιμη.';
@@ -150,7 +153,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get quizz_saisie_in => 'Εισαγάγετε τη μετάφραση σε';
 
   @override
-  String get home_title_progresse => 'Η Πρόοδός μου στον Τιτάνα';
+  String get home_title_progresse => 'Η Πρόοδός μου στους Τιτάνες';
 
   @override
   String get home_title_my_list_perso => 'Οι προσωπικές μου λίστες';
@@ -162,7 +165,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get home_description_list_perso => 'Δημιουργήστε και προσαρμόστε τις δικές σας λίστες λεξιλογίου για να μαθαίνετε και να επανεξετάζετε αποτελεσματικά τις λέξεις της επιλογής σας.';
 
   @override
-  String get home_title_classement => 'Κατάταξη TeamZilla';
+  String get home_title_classement => 'Κατατάξεις TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Βελτιώστε τα Αγγλικά σας!';
@@ -498,7 +501,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Σφάλμα κατά την προσθήκη λίστας κατά την προσθήκη της λίστας';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Σφάλμα κατά την ενημέρωση της λίστας';
+  String get vocabulaire_user_error_update_list_perso => 'Σφάλμα ενημέρωσης λίστας κατά την ενημέρωση της λίστας';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Σφάλμα κατά την προσθήκη λεξιλογίου στη λίστα';

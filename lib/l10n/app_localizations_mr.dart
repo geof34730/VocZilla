@@ -30,6 +30,9 @@ class AppLocalizationsMr extends AppLocalizations {
   String get app_short_description => 'इंग्रजी शब्दसंग्रह शिका आणि त्याचे पुनरावलोकन करा!';
 
   @override
+  String get app_promotion_ios => 'सहज बोलण्यासाठी आणि समजण्यासाठी ५,६०० आवश्यक शब्दांनी तुमचा इंग्रजी शब्दसंग्रह समृद्ध करा.';
+
+  @override
   String get app_keywords => 'शब्दसंग्रह, शिक्षण, इंग्रजी, शब्द, भाषा, श्रुतलेखन, उच्चार, क्विझ, स्मृती, शिका, सोपे, ऐकणे';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get quizz_saisie_in => 'भाषांतर प्रविष्ट करा';
 
   @override
-  String get home_title_progresse => 'माझी टायटन प्रगती';
+  String get home_title_progresse => 'माझे टायटन प्रोग्रेसन';
 
   @override
   String get home_title_my_list_perso => 'माझ्या वैयक्तिक याद्या';
@@ -162,7 +165,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get home_description_list_perso => 'तुमच्या आवडीचे शब्द प्रभावीपणे शिकण्यासाठी आणि त्यांचे पुनरावलोकन करण्यासाठी तुमच्या स्वतःच्या शब्दसंग्रह सूची तयार करा आणि सानुकूलित करा.';
 
   @override
-  String get home_title_classement => 'टीमझिला रँकिंग';
+  String get home_title_classement => 'टीमझिला रँकिंग्ज';
 
   @override
   String get home_notlogged_accroche1 => 'तुमचे इंग्रजी वाढवा!';

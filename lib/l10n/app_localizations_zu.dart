@@ -30,6 +30,9 @@ class AppLocalizationsZu extends AppLocalizations {
   String get app_short_description => 'Funda futhi ubuyekeze silulumagama English!';
 
   @override
+  String get app_promotion_ios => 'Thuthukisa isilulumagama sakho sesiNgisi ngamagama angu-5,600 abalulekile ukuze ukhulume kalula nokuqonda.';
+
+  @override
   String get app_keywords => 'silulumagama, ukufunda, isiNgisi, amagama, ulimi, ukubizela, ukubiza amagama, imibuzo, inkumbulo, funda, kulula, ukulalela';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get quizz_saisie_in => 'Faka ukuhumusha ku';
 
   @override
-  String get home_title_progresse => 'Intuthuko yami ye-Titan';
+  String get home_title_progresse => 'Ukuthuthuka Kwami kwe-Titan';
 
   @override
   String get home_title_my_list_perso => 'Uhlu lwami lomuntu siqu';
@@ -162,7 +165,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get home_description_list_perso => 'Dala futhi wenze ngokwezifiso uhlu lwakho lwamagama ukuze ufunde ngempumelelo futhi ubuyekeze amagama owakhethile.';
 
   @override
-  String get home_title_classement => 'I-TeamZilla Ranking';
+  String get home_title_classement => 'Izikhundla zeTeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Thuthukisa isiNgisi sakho!';
@@ -411,7 +414,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get firebase_error_message_invalid_credential => 'I-imeyili noma iphasiwedi ayilungile.';
 
   @override
-  String get firebase_error_message_email_already_in_use => 'Ikheli le-imeyili selivele lisetshenziswa enye i-akhawunti.';
+  String get firebase_error_message_email_already_in_use => 'Ikheli le-imeyili selivele lisetshenziswe enye i-akhawunti.';
 
   @override
   String get firebase_error_message_operation_not_allowed => 'Lokhu kusebenza akuvunyelwe.';
@@ -507,7 +510,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get vocabulaire_user_error_delete_vocabulaire_list => 'Iphutha lokususa amagama ohlwini';
 
   @override
-  String get alert_dialogue_suppression_list_title => 'Ukuqinisekiswa kokususwa';
+  String get alert_dialogue_suppression_list_title => 'Ukuqinisekisa ukusula';
 
   @override
   String get alert_dialogue_suppression_list_question => 'Ingabe uqinisekile ukuthi ufuna ukususa uhlu lwakho lwangokwezifiso?';

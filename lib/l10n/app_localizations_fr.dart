@@ -30,6 +30,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get app_short_description => 'Apprends et révise du vocabulaire anglais !';
 
   @override
+  String get app_promotion_ios => 'Enrichis ton vocabulaire anglais grâce aux 5 600 mots essentiels pour parler et comprendre facilement.';
+
+  @override
   String get app_keywords => 'vocabulaire, apprentissage, anglais, mots, langue, dictée, prononciation, quiz, mémoire, apprendre, facile, écoute';
 
   @override

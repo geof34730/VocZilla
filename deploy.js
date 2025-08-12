@@ -121,7 +121,6 @@ function getAppfileInfo(appfilePath) {
         process.exit(1);
     }
 
-
     console.log("\n✅ Déploiement Android terminé avec succès !");
 
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);

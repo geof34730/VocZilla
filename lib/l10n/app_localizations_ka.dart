@@ -30,6 +30,9 @@ class AppLocalizationsKa extends AppLocalizations {
   String get app_short_description => 'ისწავლეთ და გაიმეორეთ ინგლისური ლექსიკა!';
 
   @override
+  String get app_promotion_ios => 'გაამდიდრეთ თქვენი ინგლისური ლექსიკა 5,600 აუცილებელი სიტყვით, რათა მარტივად ისაუბროთ და გაიგოთ.';
+
+  @override
   String get app_keywords => 'ლექსიკა, სწავლა, ინგლისური, სიტყვები, ენა, დიქტატი, გამოთქმა, ვიქტორინა, მეხსიერება, სწავლა, მარტივი, მოსმენა';
 
   @override

@@ -30,6 +30,9 @@ class AppLocalizationsHy extends AppLocalizations {
   String get app_short_description => 'Սովորեք և վերանայեք անգլերեն բառապաշարը։';
 
   @override
+  String get app_promotion_ios => 'Հարստացրեք ձեր անգլերեն բառապաշարը 5,600 կարևոր բառերով՝ հեշտ խոսելու և հասկանալու համար։';
+
+  @override
   String get app_keywords => 'բառապաշար, ուսուցում, անգլերեն, բառեր, լեզու, թելադրություն, արտասանություն, վիկտորինա, հիշողություն, սովորել, հեշտ, լսել';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get quizz_saisie_in => 'Մուտքագրեք թարգմանությունը';
 
   @override
-  String get home_title_progresse => 'Իմ Տիտանի առաջընթացը';
+  String get home_title_progresse => 'Իմ Տիտանների առաջընթացը';
 
   @override
   String get home_title_my_list_perso => 'Իմ անձնական ցուցակները';
@@ -162,7 +165,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get home_description_list_perso => 'Ստեղծեք և հարմարեցրեք ձեր սեփական բառապաշարի ցանկերը՝ ձեր ընտրած բառերը արդյունավետորեն սովորելու և վերանայելու համար։';
 
   @override
-  String get home_title_classement => 'TeamZilla-ի վարկանիշը';
+  String get home_title_classement => 'TeamZilla-ի վարկանիշային աղյուսակը';
 
   @override
   String get home_notlogged_accroche1 => 'Բարձրացրեք ձեր անգլերենի մակարդակը!';
@@ -498,7 +501,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Սխալ առաջացավ ցուցակը ավելացնելիս։';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Սխալ՝ ցուցակը թարմացնելիս';
+  String get vocabulaire_user_error_update_list_perso => 'Սխալ առաջացավ ցուցակը թարմացնելիս։';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Սխալ՝ բառապաշարը ցանկին ավելացնելիս։';

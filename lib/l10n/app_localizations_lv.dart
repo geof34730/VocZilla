@@ -30,6 +30,9 @@ class AppLocalizationsLv extends AppLocalizations {
   String get app_short_description => 'Mācies un atkārtoj angļu valodas vārdu krājumu!';
 
   @override
+  String get app_promotion_ios => 'Bagātiniet savu angļu valodas vārdu krājumu ar 5600 svarīgiem vārdiem, lai atvieglotu runāšanu un izpratni.';
+
+  @override
   String get app_keywords => 'vārdu krājums, mācīšanās, angļu valoda, vārdi, valoda, diktāts, izruna, viktorīna, atmiņa, mācīties, viegli, klausīšanās';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get quizz_saisie_in => 'Ievadiet tulkojumu';
 
   @override
-  String get home_title_progresse => 'Mana Titāna Progress';
+  String get home_title_progresse => 'Mana Titāna Progresija';
 
   @override
   String get home_title_my_list_perso => 'Mani personīgie saraksti';
@@ -162,7 +165,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get home_description_list_perso => 'Izveidojiet un pielāgojiet savus vārdu krājuma sarakstus, lai efektīvi apgūtu un atkārtotu izvēlētos vārdus.';
 
   @override
-  String get home_title_classement => 'TeamZilla rangs';
+  String get home_title_classement => 'TeamZilla reitingi';
 
   @override
   String get home_notlogged_accroche1 => 'Uzlabojiet savu angļu valodas prasmi!';
@@ -276,7 +279,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get login_sinscrire => 'Reģistrēties';
 
   @override
-  String get login_ou_inscrivez_vous_avec => 'Vai reģistrējieties ar';
+  String get login_ou_inscrivez_vous_avec => 'Vai reģistrējieties vietnē';
 
   @override
   String get email_validation_merci_register => 'Paldies par reģistrēšanos!';
@@ -366,7 +369,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get alert_message_email_verify_send => 'Verifikācijas e-pasts nosūtīts!';
 
   @override
-  String get alert_message_email_send_error => 'Kļūda, sūtot e-pastu.';
+  String get alert_message_email_send_error => 'Kļūda, nosūtot e-pastu.';
 
   @override
   String get auth_error_deconnect => 'Izrakstoties, radās kļūda.';
@@ -498,7 +501,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Kļūda, pievienojot sarakstu';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Kļūda, atjauninot sarakstu';
+  String get vocabulaire_user_error_update_list_perso => 'Kļūda atjauninot sarakstu';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Kļūda, pievienojot vārdu krājumu sarakstam';

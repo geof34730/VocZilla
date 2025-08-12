@@ -277,6 +277,12 @@ abstract class AppLocalizations {
   /// **'Learn and review English vocabulary!'**
   String get app_short_description;
 
+  /// No description provided for @app_promotion_ios.
+  ///
+  /// In en, this message translates to:
+  /// **'Enrich your English vocabulary with 5,600 essential words for easy speaking and understanding.'**
+  String get app_promotion_ios;
+
   /// No description provided for @app_keywords.
   ///
   /// In en, this message translates to:
@@ -520,7 +526,7 @@ abstract class AppLocalizations {
   /// No description provided for @home_title_progresse.
   ///
   /// In en, this message translates to:
-  /// **'My Titan Progress'**
+  /// **'My Titan Progression'**
   String get home_title_progresse;
 
   /// No description provided for @home_title_my_list_perso.
@@ -544,7 +550,7 @@ abstract class AppLocalizations {
   /// No description provided for @home_title_classement.
   ///
   /// In en, this message translates to:
-  /// **'TeamZilla Ranking'**
+  /// **'TeamZilla Rankings'**
   String get home_title_classement;
 
   /// No description provided for @home_notlogged_accroche1.
@@ -1216,7 +1222,7 @@ abstract class AppLocalizations {
   /// No description provided for @vocabulaire_user_error_update_list_perso.
   ///
   /// In en, this message translates to:
-  /// **'Error updating the list'**
+  /// **'Error updating list'**
   String get vocabulaire_user_error_update_list_perso;
 
   /// No description provided for @vocabulaire_user_error_add_vocabulaire_list_perso.

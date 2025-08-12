@@ -30,6 +30,9 @@ class AppLocalizationsAz extends AppLocalizations {
   String get app_short_description => 'İngilis dili lüğətini öyrənin və nəzərdən keçirin!';
 
   @override
+  String get app_promotion_ios => 'Asan danışmaq və başa düşmək üçün ingilis dili lüğətinizi 5600 əsas sözlə zənginləşdirin.';
+
+  @override
   String get app_keywords => 'lüğət, öyrənmə, ingilis dili, sözlər, dil, diktə, tələffüz, viktorina, yaddaş, öyrənmək, asan, dinləmə';
 
   @override
@@ -48,7 +51,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get app_feature_graphic_FeatureItem4 => 'Fərdiləşdirilmiş və paylaşıla bilən siyahılar';
 
   @override
-  String get hello => 'Sabahiniz xeyir!';
+  String get hello => 'sabahiniz xeyir!';
 
   @override
   String get change_language => 'Dili dəyişdirin';
@@ -162,7 +165,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get home_description_list_perso => 'Seçdiyiniz sözləri effektiv şəkildə öyrənmək və nəzərdən keçirmək üçün öz lüğət siyahılarınızı yaradın və fərdiləşdirin.';
 
   @override
-  String get home_title_classement => 'TeamZilla Sıralaması';
+  String get home_title_classement => 'TeamZilla Reytinqləri';
 
   @override
   String get home_notlogged_accroche1 => 'İngilis dilinizi gücləndirin!';
@@ -186,7 +189,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get home_notlogged_accroche7 => 'Əvvəlcə ən faydalı sözləri öyrənin';
 
   @override
-  String get home_notlogged_accroche8 => 'Sürətli irəliləyiş üçün optimallaşdırılmış yaddaş';
+  String get home_notlogged_accroche8 => 'Sürətlə inkişaf etmək üçün optimallaşdırılmış yaddaş';
 
   @override
   String get home_notlogged_accroche9 => 'Şekspirin dilini mənimsəməyə hazırsınız?';
@@ -252,7 +255,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get login_mot_de_passe => 'parol';
 
   @override
-  String get login_entrer_mot_de_passe => 'Şifrənizi daxil edin';
+  String get login_entrer_mot_de_passe => 'Parolunuzu daxil edin';
 
   @override
   String get login_ou_connecter_vous_avec => 'Və ya əlaqə saxlayın';
@@ -336,7 +339,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get widget_congratulation_bravo => 'Bravo';
 
   @override
-  String get widget_congratulation_message => 'bu Siyahını öyrənməyi tamamladınız';
+  String get widget_congratulation_message => 'bu Siyahını öyrənməyi bitirdiniz';
 
   @override
   String get widget_radiochoicevocabularylearnedornot_choice1 => 'Öyrənmək üçün';
@@ -432,7 +435,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'Siyahı uğurla silindi.';
 
   @override
-  String get update_app_text_1 => 'Voczilla-nın yeni versiyası daha yaxşı təcrübə üçün əhəmiyyətli təkmilləşdirmələr, yeni xüsusiyyətlər və səhv düzəlişləri ilə mövcuddur.';
+  String get update_app_text_1 => 'Daha yaxşı təcrübə üçün əhəmiyyətli təkmilləşdirmələr, yeni funksiyalar və səhv düzəlişləri ilə Voczilla-nın yeni versiyası mövcuddur';
 
   @override
   String get update_app_text_2 => 'Ən son xəbərləri qaçırmayın!';

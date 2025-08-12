@@ -30,6 +30,9 @@ class AppLocalizationsRu extends AppLocalizations {
   String get app_short_description => 'Изучайте и повторяйте английскую лексику!';
 
   @override
+  String get app_promotion_ios => 'Обогатите свой словарный запас английского языка 5600 необходимыми словами для легкого общения и понимания.';
+
+  @override
   String get app_keywords => 'словарный запас, изучение, английский, слова, язык, диктант, произношение, тест, память, изучать, легко, аудирование';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get quizz_saisie_in => 'Введите перевод на';
 
   @override
-  String get home_title_progresse => 'Мой Титан Прогресс';
+  String get home_title_progresse => 'Мой прогресс Титана';
 
   @override
   String get home_title_my_list_perso => 'Мои личные списки';
@@ -162,7 +165,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get home_description_list_perso => 'Создавайте и настраивайте собственные списки слов, чтобы эффективно изучать и повторять слова по вашему выбору.';
 
   @override
-  String get home_title_classement => 'Рейтинг TeamZilla';
+  String get home_title_classement => 'Рейтинги TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Повышайте свой уровень английского!';
@@ -402,7 +405,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get firebase_error_message_default => 'Произошла неизвестная ошибка.';
 
   @override
-  String get firebase_error_message_invalid_email => 'Адрес электронной почты указан неверно.';
+  String get firebase_error_message_invalid_email => 'Адрес электронной почты неверен.';
 
   @override
   String get firebase_error_message_user_disabled => 'Эта учетная запись пользователя отключена.';

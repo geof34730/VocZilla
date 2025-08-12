@@ -30,6 +30,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get app_short_description => 'İngilizce kelime bilgisini öğrenin ve tekrar edin!';
 
   @override
+  String get app_promotion_ios => 'Kolay konuşma ve anlama için 5.600 temel kelimeyle İngilizce kelime dağarcığınızı zenginleştirin.';
+
+  @override
   String get app_keywords => 'kelime bilgisi, öğrenme, ingilizce, kelimeler, dil, dikte, telaffuz, sınav, hafıza, öğrenme, kolay, dinleme';
 
   @override
@@ -57,7 +60,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get my_purchase => 'Aboneliğim';
 
   @override
-  String get dictation_title => 'Sesli dikte';
+  String get dictation_title => 'Ses diktesi';
 
   @override
   String get dictation_label_text_field => 'Dinleyin ve metni yazın';
@@ -150,7 +153,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get quizz_saisie_in => 'Çeviriyi girin';
 
   @override
-  String get home_title_progresse => 'Titan İlerlemem';
+  String get home_title_progresse => 'Titan Gelişimim';
 
   @override
   String get home_title_my_list_perso => 'Kişisel listelerim';
@@ -162,7 +165,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get home_description_list_perso => 'Seçtiğiniz kelimeleri etkili bir şekilde öğrenmek ve tekrar etmek için kendi kelime listelerinizi oluşturun ve özelleştirin.';
 
   @override
-  String get home_title_classement => 'TeamZilla Sıralaması';
+  String get home_title_classement => 'TeamZilla Sıralamaları';
 
   @override
   String get home_notlogged_accroche1 => 'İngilizcenizi geliştirin!';

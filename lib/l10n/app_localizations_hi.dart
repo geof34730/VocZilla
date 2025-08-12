@@ -30,6 +30,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get app_short_description => 'अंग्रेजी शब्दावली सीखें और उसकी समीक्षा करें!';
 
   @override
+  String get app_promotion_ios => 'आसानी से बोलने और समझने के लिए 5,600 आवश्यक शब्दों के साथ अपनी अंग्रेजी शब्दावली को समृद्ध करें।';
+
+  @override
   String get app_keywords => 'शब्दावली, सीखना, अंग्रेज़ी, शब्द, भाषा, श्रुतलेख, उच्चारण, प्रश्नोत्तरी, स्मृति, सीखना, आसान, सुनना';
 
   @override
@@ -432,7 +435,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get vocabulaire_success_delete_list => 'सूची सफलतापूर्वक हटा दी गई.';
 
   @override
-  String get update_app_text_1 => 'वोक्ज़िला का एक नया संस्करण महत्वपूर्ण सुधारों, नई सुविधाओं और बग फिक्स के साथ उपलब्ध है ताकि अनुभव और भी बेहतर हो सके';
+  String get update_app_text_1 => 'वोकज़िला का एक नया संस्करण महत्वपूर्ण सुधारों, नई सुविधाओं और बग फिक्स के साथ उपलब्ध है ताकि अनुभव और भी बेहतर हो सके';
 
   @override
   String get update_app_text_2 => 'नवीनतम समाचारों से वंचित न रहें!';

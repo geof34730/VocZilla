@@ -30,6 +30,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get app_short_description => 'ইংরেজি শব্দভান্ডার শিখুন এবং পর্যালোচনা করুন!';
 
   @override
+  String get app_promotion_ios => 'সহজে কথা বলা এবং বোঝার জন্য ৫,৬০০টি প্রয়োজনীয় শব্দ দিয়ে আপনার ইংরেজি শব্দভাণ্ডার সমৃদ্ধ করুন।';
+
+  @override
   String get app_keywords => 'শব্দভান্ডার, শেখা, ইংরেজি, শব্দ, ভাষা, শ্রুতিলিপি, উচ্চারণ, কুইজ, স্মৃতি, শেখা, সহজ, শোনা';
 
   @override

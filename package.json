@@ -8,10 +8,11 @@
     "fastlaneauth": "SH/fastlane-auth.sh",
     "fastlaneUploadScreenshotsIos": "SH/fastlane_upload_screenshots_ios.sh",
     "fastlaneUploadScreenshotsAndroid": "SH/fastlane_upload_screenshots_android.sh",
-    "fastlaneVerifyUploaded" : "SH/fastlane_verify_uploaded_screenshots.sh",
+    "fastlaneUploadMetaDataIos": "SH/fastlane_upload_metadata_ios.sh",
+    "fastlaneVerifyUploaded" : "SH/fastlane_upload_metadata_ios.sh",
     "fastlaneViewMetadataScreenshotsIos" : "./SH/fastlane-view-meta-ios.sh",
     "fastlaneViewMetadataScreenshotsAndroid" : "./SH/fastlane-view-meta-android.sh",
-    "fastlaneSownloadScreenshotsIos" : "SH/fastlane_verify_screenshots_server.sh"
+    "fastlaneDownloadScreenshotsIos" : "SH/fastlane_verify_screenshots_server.sh"
   },
   "dependencies": {
     "dotenv": "^16.5.0",

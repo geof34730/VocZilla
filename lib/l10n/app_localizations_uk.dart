@@ -30,6 +30,9 @@ class AppLocalizationsUk extends AppLocalizations {
   String get app_short_description => 'Вивчайте та повторюйте англійську лексику!';
 
   @override
+  String get app_promotion_ios => 'Збагатьте свій англійський словниковий запас 5600 важливими словами для легкого мовлення та розуміння.';
+
+  @override
   String get app_keywords => 'словниковий запас, навчання, англійська, слова, мова, диктант, вимова, вікторина, пам\'ять, вчитися, легко, аудіювання';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get home_description_list_perso => 'Створюйте та налаштовуйте власні списки словникового запасу, щоб ефективно вивчати та повторювати вибрані слова.';
 
   @override
-  String get home_title_classement => 'Рейтинг TeamZilla';
+  String get home_title_classement => 'Рейтинги TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Підвищте свою англійську!';
@@ -255,7 +258,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get login_entrer_mot_de_passe => 'Введіть свій пароль';
 
   @override
-  String get login_ou_connecter_vous_avec => 'Або зв’яжіться з';
+  String get login_ou_connecter_vous_avec => 'Або зв\'яжіться з';
 
   @override
   String get login_avec_google => 'З Google';
@@ -318,7 +321,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_days => 'дні';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб ознайомитися з усіма функціями нашого застосунку.';
+  String get widget_dialogHelper_showfreetrialdialog_description3 => 'щоб відкрити для себе всі можливості нашого застосунку.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description4 => 'Ви пішли';

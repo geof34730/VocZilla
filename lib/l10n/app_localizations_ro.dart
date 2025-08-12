@@ -30,6 +30,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get app_short_description => 'Învață și recapitulează vocabularul englezesc!';
 
   @override
+  String get app_promotion_ios => 'Îmbogățiți-vă vocabularul englez cu 5.600 de cuvinte esențiale pentru o vorbire și o înțelegere ușoară.';
+
+  @override
   String get app_keywords => 'vocabular, învățare, engleză, cuvinte, limbă, dictare, pronunție, test, memorie, învățare, ușor, ascultare';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get quizz_saisie_in => 'Introduceți traducerea în';
 
   @override
-  String get home_title_progresse => 'Progresul meu pe Titan';
+  String get home_title_progresse => 'Progresia mea de Titan';
 
   @override
   String get home_title_my_list_perso => 'Listele mele personale';
@@ -162,7 +165,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get home_description_list_perso => 'Creează și personalizează-ți propriile liste de vocabular pentru a învăța și a recapitula eficient cuvintele alese.';
 
   @override
-  String get home_title_classement => 'Clasamentul TeamZilla';
+  String get home_title_classement => 'Clasamente TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Îmbunătățește-ți engleza!';

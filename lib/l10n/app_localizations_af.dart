@@ -30,6 +30,9 @@ class AppLocalizationsAf extends AppLocalizations {
   String get app_short_description => 'Leer en hersien Engelse woordeskat!';
 
   @override
+  String get app_promotion_ios => 'Verryk jou Engelse woordeskat met 5 600 noodsaaklike woorde vir maklike praat en begrip.';
+
+  @override
   String get app_keywords => 'woordeskat, leer, Engels, woorde, taal, diktee, uitspraak, vasvra, geheue, leer, maklik, luister';
 
   @override
@@ -498,7 +501,7 @@ class AppLocalizationsAf extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Fout byvoeging van lys';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Fout tydens opdatering van lys';
+  String get vocabulaire_user_error_update_list_perso => 'Fout met die opdatering van die lys';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Fout by die byvoeging van woordeskat by lys';

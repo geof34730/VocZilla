@@ -30,6 +30,9 @@ class AppLocalizationsAs extends AppLocalizations {
   String get app_short_description => 'ইংৰাজী শব্দভাণ্ডাৰ শিকিব আৰু পৰ্যালোচনা কৰক!';
 
   @override
+  String get app_promotion_ios => 'সহজভাৱে ক’ব পৰা আৰু বুজিব পৰাকৈ ৫,৬০০টা প্ৰয়োজনীয় শব্দৰে আপোনাৰ ইংৰাজী শব্দভাণ্ডাৰ সমৃদ্ধ কৰক।';
+
+  @override
   String get app_keywords => 'শব্দভাণ্ডাৰ, শিক্ষণ, ইংৰাজী, শব্দ, ভাষা, অভিধান, উচ্চাৰণ, কুইজ, স্মৃতিশক্তি, শিকিব, সহজ, শুনা';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get quizz_saisie_in => 'অনুবাদটো ইন কৰক';
 
   @override
-  String get home_title_progresse => 'মোৰ টাইটান প্ৰগ্ৰেছ';
+  String get home_title_progresse => 'মোৰ টাইটান প্ৰগ্ৰেছন';
 
   @override
   String get home_title_my_list_perso => 'মোৰ ব্যক্তিগত তালিকাবোৰ';
@@ -162,7 +165,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get home_description_list_perso => 'আপোনাৰ পছন্দৰ শব্দসমূহ ফলপ্ৰসূভাৱে শিকিবলৈ আৰু পৰ্যালোচনা কৰিবলৈ আপোনাৰ নিজৰ শব্দভাণ্ডাৰৰ তালিকা সৃষ্টি আৰু কাষ্টমাইজ কৰক।';
 
   @override
-  String get home_title_classement => 'TeamZilla ৰেংকিং';
+  String get home_title_classement => 'TeamZilla ৰেংকিংছ';
 
   @override
   String get home_notlogged_accroche1 => 'আপোনাৰ ইংৰাজী বুষ্ট কৰক!';
@@ -498,7 +501,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'তালিকা যোগ কৰাত ত্ৰুটি';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'তালিকাখন আপডেট কৰাত ত্ৰুটি';
+  String get vocabulaire_user_error_update_list_perso => 'তালিকা আপডেট কৰাত ত্ৰুটি';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'তালিকাত শব্দভাণ্ডাৰ যোগ কৰাত ত্ৰুটি';

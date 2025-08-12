@@ -30,6 +30,9 @@ class AppLocalizationsSk extends AppLocalizations {
   String get app_short_description => 'Učte sa a opakujte anglickú slovnú zásobu!';
 
   @override
+  String get app_promotion_ios => 'Obohaťte si svoju anglickú slovnú zásobu o 5 600 základných slov pre ľahkú komunikáciu a porozumenie.';
+
+  @override
   String get app_keywords => 'slovná zásoba, učenie, angličtina, slová, jazyk, diktát, výslovnosť, kvíz, pamäť, učiť sa, jednoduché, počúvanie';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get quizz_saisie_in => 'Zadajte preklad do';
 
   @override
-  String get home_title_progresse => 'Môj pokrok Titana';
+  String get home_title_progresse => 'Môj postup Titana';
 
   @override
   String get home_title_my_list_perso => 'Moje osobné zoznamy';
@@ -162,7 +165,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get home_description_list_perso => 'Vytvorte si a prispôsobte si vlastné zoznamy slovnej zásoby, aby ste sa efektívne učili a opakovali slová podľa vlastného výberu.';
 
   @override
-  String get home_title_classement => 'Poradie TeamZilla';
+  String get home_title_classement => 'Rebríčky TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Zlepšite si svoju angličtinu!';

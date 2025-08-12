@@ -30,6 +30,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get app_short_description => 'Jifunze na uhakiki msamiati wa Kiingereza!';
 
   @override
+  String get app_promotion_ios => 'Boresha msamiati wako wa Kiingereza kwa maneno 5,600 muhimu kwa kuzungumza na kuelewa kwa urahisi.';
+
+  @override
   String get app_keywords => 'msamiati, kujifunza, Kiingereza, maneno, lugha, imla, matamshi, chemsha bongo, kumbukumbu, jifunze, rahisi, kusikiliza';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get quizz_saisie_in => 'Ingiza tafsiri katika';
 
   @override
-  String get home_title_progresse => 'Maendeleo yangu ya Titan';
+  String get home_title_progresse => 'Maendeleo Yangu ya Titan';
 
   @override
   String get home_title_my_list_perso => 'Orodha zangu za kibinafsi';
@@ -162,13 +165,13 @@ class AppLocalizationsSw extends AppLocalizations {
   String get home_description_list_perso => 'Unda na ubinafsishe orodha zako za msamiati ili kujifunza na kukagua maneno unayochagua.';
 
   @override
-  String get home_title_classement => 'Nafasi ya TeamZilla';
+  String get home_title_classement => 'Nafasi za TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Boresha Kiingereza chako!';
 
   @override
-  String get home_notlogged_accroche2 => 'Je! unataka kuboresha msamiati wako wa Kiingereza?';
+  String get home_notlogged_accroche2 => 'Je, unataka kuboresha msamiati wako wa Kiingereza?';
 
   @override
   String get home_notlogged_accroche3 => 'Ufikiaji wa ';

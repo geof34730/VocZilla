@@ -30,6 +30,9 @@ class AppLocalizationsHe extends AppLocalizations {
   String get app_short_description => 'למד וחזור על אוצר מילים באנגלית!';
 
   @override
+  String get app_promotion_ios => 'העשירו את אוצר המילים שלכם באנגלית עם 5,600 מילים חיוניות לדיבור והבנה קלים.';
+
+  @override
   String get app_keywords => 'אוצר מילים, למידה, אנגלית, מילים, שפה, הכתבה, הגייה, חידון, זיכרון, למידה, קל, האזנה';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get home_description_list_perso => 'צור והתאם אישית רשימות אוצר מילים משלך כדי ללמוד ולסקור ביעילות את המילים שבחרת.';
 
   @override
-  String get home_title_classement => 'דירוג TeamZilla';
+  String get home_title_classement => 'דירוגי TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'שפרו את האנגלית שלכם!';

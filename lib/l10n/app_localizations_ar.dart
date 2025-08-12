@@ -21,13 +21,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get app_title => 'فوكزيلا';
 
   @override
-  String get app_subtitle => 'المفردات الإنجليزية';
+  String get app_subtitle => 'المفردات الانجليزية';
 
   @override
   String get app_description => 'فوكزيلا هو التطبيق الأمثل لإثراء مفرداتك الإنجليزية، مهما كان مستواك. اكتشف آلاف الكلمات المصنفة حسب الموضوع، وشارك في اختبارات ممتعة، وتابع تقدمك، وتحدَّ أصدقاءك!';
 
   @override
-  String get app_short_description => 'تعلم ومراجعة المفردات الإنجليزية!';
+  String get app_short_description => 'تعلم وراجع المفردات الإنجليزية!';
+
+  @override
+  String get app_promotion_ios => 'قم بإثراء مفرداتك الإنجليزية بـ 5600 كلمة أساسية لتسهيل التحدث والفهم.';
 
   @override
   String get app_keywords => 'المفردات، التعلم، الإنجليزية، الكلمات، اللغة، الإملاء، النطق، الاختبار، الذاكرة، التعلم، سهل، الاستماع';
@@ -108,10 +111,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get pronunciation_title => 'نطق';
 
   @override
-  String get pronunciation_success => 'برافو!';
+  String get pronunciation_success => 'برافو !';
 
   @override
-  String get pronunciation_error => 'ممم، هذا ليس صحيحًا تمامًا. حاول مرة أخرى.';
+  String get pronunciation_error => 'همم، هذا ليس صحيحًا تمامًا. حاول مرة أخرى.';
 
   @override
   String get pronunciation_i_heard_you_say => 'لقد سمعتك تقول';
@@ -162,7 +165,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get home_description_list_perso => 'قم بإنشاء قوائم المفردات الخاصة بك وتخصيصها لتتمكن من تعلم ومراجعة الكلمات التي تختارها بشكل فعال.';
 
   @override
-  String get home_title_classement => 'تصنيف TeamZilla';
+  String get home_title_classement => 'تصنيفات TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'عزز لغتك الإنجليزية!';
@@ -312,7 +315,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'استفد من فترة التجربة المجانية!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'مرحبًا بك! أنت تستمتع حاليًا بفترة تجريبية مجانية';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'مرحبًا! أنت تستمتع حاليًا بفترة تجريبية مجانية';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'أيام';

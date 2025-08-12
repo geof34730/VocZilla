@@ -30,6 +30,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get app_short_description => 'Học và ôn tập từ vựng tiếng Anh!';
 
   @override
+  String get app_promotion_ios => 'Làm giàu vốn từ vựng tiếng Anh của bạn với 5.600 từ vựng thiết yếu để nói và hiểu dễ dàng.';
+
+  @override
   String get app_keywords => 'từ vựng, học tập, tiếng Anh, từ ngữ, ngôn ngữ, chính tả, phát âm, câu đố, trí nhớ, học, dễ, nghe';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get home_description_list_perso => 'Tạo và tùy chỉnh danh sách từ vựng của riêng bạn để học và ôn tập hiệu quả các từ bạn chọn.';
 
   @override
-  String get home_title_classement => 'Xếp hạng TeamZilla';
+  String get home_title_classement => 'Bảng xếp hạng TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'Nâng cao tiếng Anh của bạn!';

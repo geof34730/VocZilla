@@ -30,6 +30,9 @@ class AppLocalizationsEu extends AppLocalizations {
   String get app_short_description => 'Ikasi eta berrikusi ingelesezko hiztegia!';
 
   @override
+  String get app_promotion_ios => 'Aberastu zure ingeles hiztegia 5.600 hitz esentzialekin, erraz hitz egiteko eta ulertzeko.';
+
+  @override
   String get app_keywords => 'hiztegia, ikaskuntza, ingelesa, hitzak, hizkuntza, diktaketa, ahoskera, galdetegia, memoria, ikasi, erraza, entzutea';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get home_description_list_perso => 'Sortu eta pertsonalizatu zure hiztegi zerrendak, aukeratzen dituzun hitzak modu eraginkorrean ikasi eta berrikusteko.';
 
   @override
-  String get home_title_classement => 'TeamZilla Sailkapena';
+  String get home_title_classement => 'TeamZilla Sailkapenak';
 
   @override
   String get home_notlogged_accroche1 => 'Hobetu zure ingelesa!';
@@ -186,7 +189,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get home_notlogged_accroche7 => 'Ikasi lehenengo hitz erabilgarrienak';
 
   @override
-  String get home_notlogged_accroche8 => 'Memorizazio optimizatua azkar aurrera egiteko';
+  String get home_notlogged_accroche8 => 'Azkar aurrera egiteko memorizazio optimizatua';
 
   @override
   String get home_notlogged_accroche9 => 'Prest Shakespeareren hizkuntza menperatzeko?';

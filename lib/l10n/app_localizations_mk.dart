@@ -30,6 +30,9 @@ class AppLocalizationsMk extends AppLocalizations {
   String get app_short_description => 'Научете и прегледајте го англискиот речник!';
 
   @override
+  String get app_promotion_ios => 'Збогатете го вашиот англиски речник со 5.600 основни зборови за лесно зборување и разбирање.';
+
+  @override
   String get app_keywords => 'вокабулар, учење, англиски, зборови, јазик, диктат, изговор, квиз, меморија, учење, лесно, слушање';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get quizz_saisie_in => 'Внесете го преводот во';
 
   @override
-  String get home_title_progresse => 'Мојот напредок во Титан';
+  String get home_title_progresse => 'Мојата прогресија на Титан';
 
   @override
   String get home_title_my_list_perso => 'Моите лични листи';

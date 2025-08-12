@@ -30,6 +30,9 @@ class AppLocalizationsKm extends AppLocalizations {
   String get app_short_description => 'រៀននិងពិនិត្យវាក្យសព្ទភាសាអង់គ្លេស!';
 
   @override
+  String get app_promotion_ios => 'បង្កើនវាក្យសព្ទភាសាអង់គ្លេសរបស់អ្នកជាមួយនឹងពាក្យសំខាន់ៗចំនួន 5,600 សម្រាប់ងាយស្រួលនិយាយ និងយល់។';
+
+  @override
   String get app_keywords => 'វាក្យសព្ទ, ការរៀន, ភាសាអង់គ្លេស, ពាក្យ, ភាសា, ការសរសេរតាមអាន, ការបញ្ចេញសំឡេង, សំណួរ, ការចងចាំ, រៀន, ងាយស្រួល, ស្តាប់';
 
   @override
@@ -162,7 +165,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get home_description_list_perso => 'បង្កើត និងកែសម្រួលបញ្ជីវាក្យសព្ទផ្ទាល់ខ្លួនរបស់អ្នក ដើម្បីរៀន និងពិនិត្យពាក្យដែលអ្នកជ្រើសរើសប្រកបដោយប្រសិទ្ធភាព។';
 
   @override
-  String get home_title_classement => 'ចំណាត់ថ្នាក់ក្រុម TeamZilla';
+  String get home_title_classement => 'ចំណាត់ថ្នាក់ TeamZilla';
 
   @override
   String get home_notlogged_accroche1 => 'បង្កើនភាសាអង់គ្លេសរបស់អ្នក!';

@@ -30,6 +30,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get app_short_description => 'Lernen und wiederholen Sie den englischen Wortschatz!';
 
   @override
+  String get app_promotion_ios => 'Bereichern Sie Ihren englischen Wortschatz mit 5.600 wichtigen Wörtern für einfaches Sprechen und Verstehen.';
+
+  @override
   String get app_keywords => 'Wortschatz, Lernen, Englisch, Wörter, Sprache, Diktat, Aussprache, Quiz, Gedächtnis, Lernen, einfach, Zuhören';
 
   @override
@@ -45,7 +48,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get app_feature_graphic_FeatureItem3 => 'Verfolgen Sie Ihren Fortschritt in Echtzeit';
 
   @override
-  String get app_feature_graphic_FeatureItem4 => 'Personalisierte und gemeinsam nutzbare Listen';
+  String get app_feature_graphic_FeatureItem4 => 'Personalisierte und teilbare Listen';
 
   @override
   String get hello => 'Guten Morgen !';
@@ -111,7 +114,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get pronunciation_success => 'Bravo!';
 
   @override
-  String get pronunciation_error => 'Hmm, das stimmt nicht ganz. Versuchen Sie es noch einmal.';
+  String get pronunciation_error => 'Hmm, das ist nicht ganz richtig. Versuchen Sie es noch einmal.';
 
   @override
   String get pronunciation_i_heard_you_say => 'Ich habe dich sagen hören';
@@ -138,7 +141,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get offline_title => 'Offline';
 
   @override
-  String get offline_description => 'Sie verfügen nicht über eine Internetverbindung. Bitte stellen Sie eine Verbindung zum Internet her, um fortzufahren.';
+  String get offline_description => 'Sie haben keine Internetverbindung. Bitte stellen Sie eine Verbindung zum Internet her, um fortzufahren.';
 
   @override
   String get quizz_progression_title => 'Mein Fortschritt auf dieser Liste';
@@ -177,7 +180,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get home_notlogged_accroche4 => '5.600 wichtige Wörter';
 
   @override
-  String get home_notlogged_accroche5 => 'sortiert nach Nutzungshäufigkeit, um die Wörter zu lernen, die wirklich wichtig sind.';
+  String get home_notlogged_accroche5 => 'sortiert nach Verwendungshäufigkeit, um die Wörter zu lernen, die wirklich wichtig sind.';
 
   @override
   String get home_notlogged_accroche6 => 'Schnelle und effektive Methode';
@@ -189,7 +192,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get home_notlogged_accroche8 => 'Optimiertes Auswendiglernen für schnelle Fortschritte';
 
   @override
-  String get home_notlogged_accroche9 => 'Bereit, die Sprache Shakespeares zu meistern?';
+  String get home_notlogged_accroche9 => 'Sind Sie bereit, die Sprache Shakespeares zu meistern?';
 
   @override
   String get home_notlogged_button_go => 'Auf geht\'s!';
@@ -285,7 +288,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get email_validation_msg_email_send => 'Eine Bestätigungs-E-Mail wurde an Ihre E-Mail-Adresse gesendet';
 
   @override
-  String get email_validation_instruction => 'Bitte überprüfen Sie Ihren Posteingang und folgen Sie den Anweisungen zur Bestätigung Ihrer E-Mail-Adresse. So können wir Ihre Registrierung bestätigen und Ihnen Zugriff auf alle Funktionen unseres Dienstes gewähren.';
+  String get email_validation_instruction => 'Bitte überprüfen Sie Ihren Posteingang und folgen Sie den Anweisungen zur Bestätigung Ihrer E-Mail-Adresse. Dadurch können wir Ihre Registrierung bestätigen und Ihnen Zugriff auf alle Funktionen unseres Dienstes gewähren.';
 
   @override
   String get email_validation_help => 'Wenn Sie die E-Mail nicht in Ihrem Posteingang sehen, überprüfen Sie Ihren Spam- oder Junk-Ordner.';
@@ -312,7 +315,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description1 => 'Nutzen Sie Ihre kostenlose Testphase!';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Herzlich willkommen! Sie nutzen derzeit eine kostenlose Testphase von';
+  String get widget_dialogHelper_showfreetrialdialog_description2 => 'Herzlich willkommen! Sie genießen derzeit eine kostenlose Testphase von';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_days => 'Tage';
@@ -327,7 +330,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'kostenlose Testversionen';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Lassen Sie Ihr Erlebnis nicht enden! Wählen Sie das Abonnement, das zu Ihnen passt, und genießen Sie ohne Unterbrechung weiter.';
+  String get widget_dialogHelper_showfreetrialdialog_description6 => 'Lassen Sie Ihr Erlebnis nicht enden! Wählen Sie das für Sie passende Abonnement und genießen Sie ohne Unterbrechung weiter.';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_later => 'Später';
@@ -357,7 +360,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get by_themes => 'Par-Themen';
 
   @override
-  String get no_vocabulary_in_my_list => 'Diese Liste enthält keine Vokabeln. Fügen Sie welche hinzu, indem Sie die Liste bearbeiten.';
+  String get no_vocabulary_in_my_list => 'Sie haben in dieser Liste keine Vokabeln. Fügen Sie welche hinzu, indem Sie die Liste bearbeiten.';
 
   @override
   String get anonymous_user => 'Anonymer Benutzer';
@@ -396,7 +399,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get auth_error_echoue => 'Authentifizierung fehlgeschlagen, bitte versuchen Sie es erneut';
 
   @override
-  String get firebase_error_message_too_many_requests => 'Zu viele Anfragen. Versuchen Sie es später erneut.';
+  String get firebase_error_message_too_many_requests => 'Zu viele Anfragen. Versuchen Sie es später noch einmal.';
 
   @override
   String get firebase_error_message_default => 'Ein unbekannter Fehler ist aufgetreten.';
@@ -408,7 +411,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get firebase_error_message_user_disabled => 'Dieses Benutzerkonto wurde deaktiviert.';
 
   @override
-  String get firebase_error_message_invalid_credential => 'Die E-Mail oder das Passwort ist falsch.';
+  String get firebase_error_message_invalid_credential => 'Die E-Mail-Adresse oder das Passwort ist falsch.';
 
   @override
   String get firebase_error_message_email_already_in_use => 'Die E-Mail-Adresse wird bereits von einem anderen Konto verwendet.';

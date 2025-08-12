@@ -30,6 +30,9 @@ class AppLocalizationsBs extends AppLocalizations {
   String get app_short_description => 'Naučite i ponovite engleski vokabular!';
 
   @override
+  String get app_promotion_ios => 'Obogatite svoj engleski vokabular sa 5.600 ključnih riječi za lak govor i razumijevanje.';
+
+  @override
   String get app_keywords => 'vokabular, učenje, engleski, riječi, jezik, diktiranje, izgovor, kviz, pamćenje, učiti, lako, slušanje';
 
   @override
@@ -321,7 +324,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get widget_dialogHelper_showfreetrialdialog_description3 => 'da biste otkrili sve funkcije naše aplikacije.';
 
   @override
-  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Otišao/la si';
+  String get widget_dialogHelper_showfreetrialdialog_description4 => 'Otišli ste';
 
   @override
   String get widget_dialogHelper_showfreetrialdialog_description5 => 'besplatne probne verzije';
@@ -498,7 +501,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get vocabulaire_user_error_add_list_perso => 'Greška pri dodavanju liste';
 
   @override
-  String get vocabulaire_user_error_update_list_perso => 'Greška prilikom ažuriranja liste';
+  String get vocabulaire_user_error_update_list_perso => 'Greška pri ažuriranju liste';
 
   @override
   String get vocabulaire_user_error_add_vocabulaire_list_perso => 'Greška pri dodavanju vokabulara na listu';
