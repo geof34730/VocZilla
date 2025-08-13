@@ -10,9 +10,13 @@ import '../../core/utils/crypt.dart';
 import '../../core/utils/logger.dart';
 
 class AuthService {
+
+
+
+
+
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
-
   Future<UserCredential> signUpWithEmail(
       {required String email,
         required String password,

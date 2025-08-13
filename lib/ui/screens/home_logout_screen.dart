@@ -9,6 +9,8 @@ import '../backgroundBlueLinear.dart';
 
 class HomeLogoutScreen extends StatelessWidget {
   const HomeLogoutScreen({super.key});
+
+
   @override
   Widget build(BuildContext context) {
     final codelang = Localizations.localeOf(context).languageCode;
