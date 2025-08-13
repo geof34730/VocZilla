@@ -35,9 +35,10 @@ void main({bool shootScreenShot = false,String? localForce=null}) async {
   if (!shootScreenShot) {
     final notificationService = NotificationService();
     await notificationService.initialize();
-
-    final messagingService = FirebaseMessagingService();
-    await messagingService.configure();
+    if(!Platform.isMacOS) {
+      final messagingService = FirebaseMessagingService();
+      await messagingService.configure();
+    }
   }
 
   final vocabulaireUserRepository = VocabulaireUserRepository();

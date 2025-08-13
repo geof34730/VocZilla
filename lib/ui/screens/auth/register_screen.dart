@@ -1,4 +1,7 @@
 // lib/ui/screens/auth/register_screen.dart
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -176,6 +179,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           context.read<AuthBloc>().add(GoogleSignInRequested());
                         },
                       ),
+                      SizedBox(height: 10),
                       SignInButton(
                         elevation: 5,
                         text: context.loc.login_avec_facebook,
@@ -184,6 +188,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           context.read<AuthBloc>().add(FacebookSignInRequested());
                         },
                       ),
+                      SizedBox(height: 10),
+                      if (!kIsWeb && (Platform.isIOS || Platform.isMacOS ))
                       SignInButton(
                         elevation: 5,
                         text: context.loc.login_avec_apple,

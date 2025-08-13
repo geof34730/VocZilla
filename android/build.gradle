@@ -8,6 +8,9 @@ buildscript {
     }
 
     dependencies {
+        // START: FlutterFire Configuration
+        classpath 'com.google.gms:google-services:4.3.10'
+        // END: FlutterFire Configuration
         // Définit la version du plugin Android pour Gradle (AGP).
         // La version 8.4.0 est compatible avec Gradle 8.6 et le SDK 35.
         classpath 'com.android.tools.build:gradle:8.4.2'

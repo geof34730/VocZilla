@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 import '../../core/utils/logger.dart';
@@ -18,7 +20,13 @@ class FirebaseMessagingService {
 
     Logger.Green.log('User granted permission: ${settings.authorizationStatus}');
 
-    _messaging.getToken().then((value) => Logger.Yellow.log("FirebaseMessaging.instance.getToken : $value"));
+    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
+      if (Platform.isMacOS) {
+        await _messaging.getAPNSToken();
+      }
+      final token = await _messaging.getToken();
+      Logger.Yellow.log("FirebaseMessaging.instance.getToken : $token");
+    }
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       Logger.Yellow.log('Got a message whilst in the foreground!');

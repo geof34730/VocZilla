@@ -25,15 +25,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -58,7 +52,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyACEQiRIO3D6RhTcl5NGzn_ugpWSHbYPt4',
-    appId: '1:275313479574:android:0eba575c3cd76f81f097b7',
+    appId: '1:275313479574:android:3bd69b3ea9bbb8f3f097b7',
     messagingSenderId: '275313479574',
     projectId: 'voczilla-d2d79',
     storageBucket: 'voczilla-d2d79.firebasestorage.app',
@@ -70,6 +64,30 @@ class DefaultFirebaseOptions {
     messagingSenderId: '275313479574',
     projectId: 'voczilla-d2d79',
     storageBucket: 'voczilla-d2d79.firebasestorage.app',
+    androidClientId: '275313479574-n7og0bhk14ib7j43gipmkpe6r9bvuj4p.apps.googleusercontent.com',
+    iosClientId: '275313479574-kprstmafer4av3da9lsu3dh7insd2v7m.apps.googleusercontent.com',
     iosBundleId: 'com.geoffreypetain.voczilla.voczilla',
   );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyDmBYGY_ZvuMQdezn1LXtdroeUucIefG3U',
+    appId: '1:275313479574:ios:35a45c028faef827f097b7',
+    messagingSenderId: '275313479574',
+    projectId: 'voczilla-d2d79',
+    storageBucket: 'voczilla-d2d79.firebasestorage.app',
+    androidClientId: '275313479574-n7og0bhk14ib7j43gipmkpe6r9bvuj4p.apps.googleusercontent.com',
+    iosClientId: '275313479574-lsdoe1bc971qptt77hdgtudperq53m8i.apps.googleusercontent.com',
+    iosBundleId: 'com.geoffreypetain.voczilla.vobzilla',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyCXEzRjGdPpM9SeehcCEHp5G1_JRVYcblc',
+    appId: '1:275313479574:web:8e9f6749a05ce00ff097b7',
+    messagingSenderId: '275313479574',
+    projectId: 'voczilla-d2d79',
+    authDomain: 'voczilla-d2d79.firebaseapp.com',
+    storageBucket: 'voczilla-d2d79.firebasestorage.app',
+    measurementId: 'G-MS1ZXRCZBZ',
+  );
+
 }

@@ -113,6 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                       ),
                     ),
+                    SizedBox(height: 10,),
                     Opacity(
                       opacity:  1.0,
                       child: SignInButton(
@@ -124,7 +125,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                       ),
                     ),
-                    if (!kIsWeb && Platform.isIOS)
+                    SizedBox(height: 10,),
+                    if (!kIsWeb && (Platform.isIOS || Platform.isMacOS ))
                       Opacity(
                         opacity:  1.0,
                         child: SignInButton(
