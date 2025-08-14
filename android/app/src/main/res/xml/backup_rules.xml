@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+    Cette ligne demande à Android de sauvegarder le fichier de préférences
+    chiffrées utilisé par flutter_secure_storage. C'est ici que votre
+    'persistent_uid' est stocké.
+    -->
+    <include domain="sharedpref" path="flutter_secure_storage_encrypted.xml"/>
+</full-backup-content>

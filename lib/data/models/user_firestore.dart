@@ -15,7 +15,7 @@ part 'user_firestore.g.dart';
 abstract class UserFirestore with _$UserFirestore {
   const factory UserFirestore({
     required String uid,
-    required String? pseudo,
+    @Default('Guest') String pseudo,
     @Default('') String photoURL,
     @Default('') String imageAvatar,
     @Default([]) List<String> fcmTokens,
@@ -67,24 +67,12 @@ abstract class UserFirestore with _$UserFirestore {
       }
     }
 
-    // --- MODIFICATION PRINCIPALE ICI ---
-    // On détermine si l'email doit être considéré comme vérifié.
-    final providerId = userCredential.credential?.providerId ?? user.providerData.first.providerId;
-    final bool isSocialProvider = providerId == 'google.com' ||
-        providerId == 'facebook.com' ||
-        providerId == 'apple.com';
-
-    // Si c'est un fournisseur social, on considère l'email comme vérifié.
-    // Sinon, on se fie à la valeur de Firebase (pour l'inscription par email).
-    final bool isVerified = isSocialProvider ? true : user.emailVerified;
-    // --- FIN DE LA MODIFICATION ---
-
 
     // Les champs lastName, firstName, et pseudo sont initialisés comme des chaînes vides.
     // L'utilisateur sera invité à les remplir plus tard.
     return UserFirestore(
       uid: user.uid,
-      pseudo: '', // Initialisé comme vide
+      pseudo: 'Guest', // Initialisé comme vide
       imageAvatar: imageAvatarBase64,
       photoURL: finalPhotoUrl,
       createdAt: user.metadata.creationTime ?? DateTime.now(),
@@ -92,17 +80,7 @@ abstract class UserFirestore with _$UserFirestore {
     );
   }
 
-  static Future<UserFirestore> fromSignUp({
-    required User user,
-    required String pseudo,
-  }) async {
-    return UserFirestore(
-      uid: user.uid,
-      pseudo: pseudo,
-      createdAt: DateTime.now(),
-      fcmTokens: await FcmRepository().getListFcmToken(),
-    );
-  }
+
 
 }
 

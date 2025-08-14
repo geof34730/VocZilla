@@ -5,7 +5,10 @@
     <application
         android:label="voczilla"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:backupAgent="android.app.backup.FullBackupAgent"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules">
         <activity
             android:name=".MainActivity"
             android:exported="true"

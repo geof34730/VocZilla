@@ -4,19 +4,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/ui/featureGraphic.dart';
-import 'package:vobzilla/ui/screens/auth/login_screen.dart';
-
 import 'package:vobzilla/ui/screens/personalisation/step2.dart';
 import 'package:vobzilla/ui/screens/update_screen.dart';
-
-import 'core/utils/errorMessage.dart';
 import 'core/utils/feature_graphic_flag.dart';
-import 'data/models/user_firestore.dart';
 import 'global.dart';
-import 'logic/blocs/auth/auth_event.dart';
-import 'logic/blocs/notification/notification_bloc.dart';
-import 'logic/blocs/notification/notification_event.dart';
-import 'logic/blocs/user/user_event.dart';
 import 'logic/check_connectivity.dart';
 import 'core/utils/logger.dart';
 import 'logic/blocs/update/update_state.dart';
@@ -152,11 +143,6 @@ class AppRoute {
     switch (settings.name) {
       case home:
         return HomeLogoutScreen();
-      case login:
-        return Layout(
-          logged: false,
-          child: LoginScreen(),
-        );
       case featureGraphic:
         return FeatureGraphic();
       case updateScreen:

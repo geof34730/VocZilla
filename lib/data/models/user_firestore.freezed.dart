@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UserFirestore {
   String get uid;
-  String? get pseudo;
+  String get pseudo;
   String get photoURL;
   String get imageAvatar;
   List<String> get fcmTokens;
@@ -67,7 +67,7 @@ abstract mixin class $UserFirestoreCopyWith<$Res> {
   @useResult
   $Res call(
       {String uid,
-      String? pseudo,
+      String pseudo,
       String photoURL,
       String imageAvatar,
       List<String> fcmTokens,
@@ -88,7 +88,7 @@ class _$UserFirestoreCopyWithImpl<$Res>
   @override
   $Res call({
     Object? uid = null,
-    Object? pseudo = freezed,
+    Object? pseudo = null,
     Object? photoURL = null,
     Object? imageAvatar = null,
     Object? fcmTokens = null,
@@ -99,10 +99,10 @@ class _$UserFirestoreCopyWithImpl<$Res>
           ? _self.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String,
-      pseudo: freezed == pseudo
+      pseudo: null == pseudo
           ? _self.pseudo
           : pseudo // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       photoURL: null == photoURL
           ? _self.photoURL
           : photoURL // ignore: cast_nullable_to_non_nullable
@@ -216,7 +216,7 @@ extension UserFirestorePatterns on UserFirestore {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String uid, String? pseudo, String photoURL,
+    TResult Function(String uid, String pseudo, String photoURL,
             String imageAvatar, List<String> fcmTokens, DateTime? createdAt)?
         $default, {
     required TResult orElse(),
@@ -246,7 +246,7 @@ extension UserFirestorePatterns on UserFirestore {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String uid, String? pseudo, String photoURL,
+    TResult Function(String uid, String pseudo, String photoURL,
             String imageAvatar, List<String> fcmTokens, DateTime? createdAt)
         $default,
   ) {
@@ -274,7 +274,7 @@ extension UserFirestorePatterns on UserFirestore {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String uid, String? pseudo, String photoURL,
+    TResult? Function(String uid, String pseudo, String photoURL,
             String imageAvatar, List<String> fcmTokens, DateTime? createdAt)?
         $default,
   ) {
@@ -294,7 +294,7 @@ extension UserFirestorePatterns on UserFirestore {
 class _UserFirestore implements UserFirestore {
   const _UserFirestore(
       {required this.uid,
-      required this.pseudo,
+      this.pseudo = 'Guest',
       this.photoURL = '',
       this.imageAvatar = '',
       final List<String> fcmTokens = const [],
@@ -306,7 +306,8 @@ class _UserFirestore implements UserFirestore {
   @override
   final String uid;
   @override
-  final String? pseudo;
+  @JsonKey()
+  final String pseudo;
   @override
   @JsonKey()
   final String photoURL;
@@ -378,7 +379,7 @@ abstract mixin class _$UserFirestoreCopyWith<$Res>
   @useResult
   $Res call(
       {String uid,
-      String? pseudo,
+      String pseudo,
       String photoURL,
       String imageAvatar,
       List<String> fcmTokens,
@@ -399,7 +400,7 @@ class __$UserFirestoreCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   $Res call({
     Object? uid = null,
-    Object? pseudo = freezed,
+    Object? pseudo = null,
     Object? photoURL = null,
     Object? imageAvatar = null,
     Object? fcmTokens = null,
@@ -410,10 +411,10 @@ class __$UserFirestoreCopyWithImpl<$Res>
           ? _self.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String,
-      pseudo: freezed == pseudo
+      pseudo: null == pseudo
           ? _self.pseudo
           : pseudo // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       photoURL: null == photoURL
           ? _self.photoURL
           : photoURL // ignore: cast_nullable_to_non_nullable

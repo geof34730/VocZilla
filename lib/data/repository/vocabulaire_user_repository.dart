@@ -45,15 +45,9 @@ class VocabulaireUserRepository {
   }
 
   Future<VocabulaireUser?> getVocabulaireUserData() async {
-
-
-
-    Logger.Green.log("getVocabulaireUserData 222");
+   Logger.Green.log("getVocabulaireUserData 222");
     try {
       var userDataJson = await localStorageService.getUserData();
-
-
-
       Logger.Blue.log("getVocabulaireUserData') userData: $userDataJson");
       if (userDataJson != null) {
         return VocabulaireUser.fromJson(userDataJson);

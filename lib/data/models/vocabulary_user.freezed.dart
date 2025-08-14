@@ -15,11 +15,11 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$VocabulaireUser {
   @JsonKey(name: "ListPerso")
-  List<ListPerso> get listPerso;
+  List<ListPerso> get listPerso; // MODIFIÉ
   @JsonKey(name: "ListTheme")
-  List<ListTheme> get listTheme;
+  List<ListTheme> get listTheme; // MODIFIÉ
   @JsonKey(name: "ListGuidVocabularyLearned")
-  List<String> get listGuidVocabularyLearned;
+  List<String> get listGuidVocabularyLearned; // MODIFIÉ
   @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
   int get countVocabulaireAll;
 
@@ -301,10 +301,10 @@ extension VocabulaireUserPatterns on VocabulaireUser {
 @JsonSerializable()
 class _VocabulaireUser implements VocabulaireUser {
   const _VocabulaireUser(
-      {@JsonKey(name: "ListPerso") required final List<ListPerso> listPerso,
-      @JsonKey(name: "ListTheme") required final List<ListTheme> listTheme,
+      {@JsonKey(name: "ListPerso") final List<ListPerso> listPerso = const [],
+      @JsonKey(name: "ListTheme") final List<ListTheme> listTheme = const [],
       @JsonKey(name: "ListGuidVocabularyLearned")
-      required final List<String> listGuidVocabularyLearned,
+      final List<String> listGuidVocabularyLearned = const [],
       @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
       required this.countVocabulaireAll})
       : _listPerso = listPerso,
@@ -322,7 +322,9 @@ class _VocabulaireUser implements VocabulaireUser {
     return EqualUnmodifiableListView(_listPerso);
   }
 
+// MODIFIÉ
   final List<ListTheme> _listTheme;
+// MODIFIÉ
   @override
   @JsonKey(name: "ListTheme")
   List<ListTheme> get listTheme {
@@ -331,7 +333,9 @@ class _VocabulaireUser implements VocabulaireUser {
     return EqualUnmodifiableListView(_listTheme);
   }
 
+// MODIFIÉ
   final List<String> _listGuidVocabularyLearned;
+// MODIFIÉ
   @override
   @JsonKey(name: "ListGuidVocabularyLearned")
   List<String> get listGuidVocabularyLearned {
@@ -341,6 +345,7 @@ class _VocabulaireUser implements VocabulaireUser {
     return EqualUnmodifiableListView(_listGuidVocabularyLearned);
   }
 
+// MODIFIÉ
   @override
   @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
   final int countVocabulaireAll;
@@ -455,7 +460,7 @@ mixin _$ListPerso {
   @JsonKey(name: "color")
   int get color;
   @JsonKey(name: "listGuidVocabulary")
-  List<String> get listGuidVocabulary;
+  List<String> get listGuidVocabulary; // C'était déjà correct, parfait !
   @JsonKey(name: "isListShare")
   bool get isListShare;
   @JsonKey(name: "ownListShare")
@@ -817,6 +822,7 @@ class _ListPerso implements ListPerso {
     return EqualUnmodifiableListView(_listGuidVocabulary);
   }
 
+// C'était déjà correct, parfait !
   @override
   @JsonKey(name: "isListShare")
   final bool isListShare;
@@ -954,7 +960,7 @@ mixin _$ListTheme {
   @JsonKey(name: "guid")
   String get guid;
   @JsonKey(name: "title")
-  Map<String, String> get title; // Change to Map<String, String>
+  Map<String, String> get title;
   @JsonKey(name: "listGuidVocabulary")
   List<String> get listGuidVocabulary;
 
@@ -1216,7 +1222,7 @@ class _ListTheme implements ListTheme {
       {@JsonKey(name: "guid") required this.guid,
       @JsonKey(name: "title") required final Map<String, String> title,
       @JsonKey(name: "listGuidVocabulary")
-      required final List<String> listGuidVocabulary})
+      final List<String> listGuidVocabulary = const []})
       : _title = title,
         _listGuidVocabulary = listGuidVocabulary;
   factory _ListTheme.fromJson(Map<String, dynamic> json) =>
@@ -1234,9 +1240,7 @@ class _ListTheme implements ListTheme {
     return EqualUnmodifiableMapView(_title);
   }
 
-// Change to Map<String, String>
   final List<String> _listGuidVocabulary;
-// Change to Map<String, String>
   @override
   @JsonKey(name: "listGuidVocabulary")
   List<String> get listGuidVocabulary {

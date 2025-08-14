@@ -9,11 +9,14 @@ part 'vocabulary_user.g.dart';
 abstract class VocabulaireUser with _$VocabulaireUser {
   const factory VocabulaireUser({
     @JsonKey(name: "ListPerso")
-    required List<ListPerso> listPerso,
+    @Default([]) List<ListPerso> listPerso, // MODIFIÉ
+
     @JsonKey(name: "ListTheme")
-    required List<ListTheme> listTheme,
+    @Default([]) List<ListTheme> listTheme, // MODIFIÉ
+
     @JsonKey(name: "ListGuidVocabularyLearned")
-    required List<String> listGuidVocabularyLearned,
+    @Default([]) List<String> listGuidVocabularyLearned, // MODIFIÉ
+
     @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
     required int countVocabulaireAll,
   }) = _VocabulaireUser;
@@ -31,7 +34,7 @@ abstract class ListPerso with _$ListPerso {
     @JsonKey(name: "color")
     required int color,
     @JsonKey(name: "listGuidVocabulary")
-    @Default(<String>[]) List<String> listGuidVocabulary,
+    @Default(<String>[]) List<String> listGuidVocabulary, // C'était déjà correct, parfait !
     @JsonKey(name: "isListShare")
     @Default(true) bool isListShare,
     @JsonKey(name: "ownListShare")
@@ -50,9 +53,9 @@ abstract class ListTheme with _$ListTheme {
     @JsonKey(name: "guid")
     required String guid,
     @JsonKey(name: "title")
-    required Map<String, String> title, // Change to Map<String, String>
+    required Map<String, String> title,
     @JsonKey(name: "listGuidVocabulary")
-    required List<String> listGuidVocabulary,
+    @Default([]) List<String> listGuidVocabulary, // MODIFIÉ
   }) = _ListTheme;
 
   factory ListTheme.fromJson(Map<String, dynamic> json) => _$ListThemeFromJson(json);

@@ -21,7 +21,6 @@ class DataUserRepository {
     if (user != null) {
       await _localStorageService.saveUser(user);
     }
-
     return user;
   }
 
@@ -46,8 +45,6 @@ class DataUserRepository {
     // Met à jour dans Firestore
     await _dataUserService.updateProfilInFirestore(
       uid: uid,
-      firstName: firstName,
-      lastName: lastName,
       pseudo: pseudo,
       imageAvatar:imageAvatar
     );

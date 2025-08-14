@@ -8,16 +8,19 @@ part of 'vocabulary_user.dart';
 
 _VocabulaireUser _$VocabulaireUserFromJson(Map<String, dynamic> json) =>
     _VocabulaireUser(
-      listPerso: (json['ListPerso'] as List<dynamic>)
-          .map((e) => ListPerso.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      listTheme: (json['ListTheme'] as List<dynamic>)
-          .map((e) => ListTheme.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      listPerso: (json['ListPerso'] as List<dynamic>?)
+              ?.map((e) => ListPerso.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      listTheme: (json['ListTheme'] as List<dynamic>?)
+              ?.map((e) => ListTheme.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
       listGuidVocabularyLearned:
-          (json['ListGuidVocabularyLearned'] as List<dynamic>)
-              .map((e) => e as String)
-              .toList(),
+          (json['ListGuidVocabularyLearned'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
       countVocabulaireAll: (json['CountVocabulaireAll'] as num?)?.toInt() ?? 0,
     );
 
@@ -56,9 +59,10 @@ Map<String, dynamic> _$ListPersoToJson(_ListPerso instance) =>
 _ListTheme _$ListThemeFromJson(Map<String, dynamic> json) => _ListTheme(
       guid: json['guid'] as String,
       title: Map<String, String>.from(json['title'] as Map),
-      listGuidVocabulary: (json['listGuidVocabulary'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
+      listGuidVocabulary: (json['listGuidVocabulary'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$ListThemeToJson(_ListTheme instance) =>

@@ -122,7 +122,7 @@ function getAppfileInfo(appfilePath) {
     }
 
     console.log("\n✅ Déploiement Android terminé avec succès !");
-
+/*
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -211,6 +211,7 @@ function getAppfileInfo(appfilePath) {
         console.error("❌ Erreur lors des opérations Git :", error);
     }
     console.log("\n✅ Opérations Git terminées avec succès !");
+    */
 
 })();
 

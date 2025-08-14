@@ -6,6 +6,7 @@ import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/models/user_firestore.dart';
 import '../../../data/repository/data_user_repository.dart';
+import '../../../data/repository/fcm_repository.dart';
 import '../../../data/services/localstorage_service.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
@@ -56,51 +57,57 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
-  /// Gère la logique lorsqu'un utilisateur se connecte avec succès via Firebase.
-  /// Cette méthode récupère le profil correspondant depuis Firestore,
-  /// et en crée un s'il n'existe pas.
+
   Future<void> _onAuthLoggedIn(AuthLoggedIn event, Emitter<AuthState> emit) async {
-    // Optionnel mais recommandé : émettre un état de chargement pendant la récupération du profil.
     emit(AuthLoading());
     try {
       final firebaseUser = event.user;
       Logger.Pink.log("AuthBloc: Événement AuthLoggedIn reçu pour l'UID ${firebaseUser.uid}.");
-
-      // 1. Tenter de récupérer le profil utilisateur depuis Firestore.
       UserFirestore? userProfile = await _dataUserRepository.getUser(firebaseUser.uid);
-
-      // 2. Si aucun profil n'existe, c'est un nouvel utilisateur (comme notre invité).
-      //    Il faut créer un document de profil par défaut pour lui.
       if (userProfile == null) {
-        Logger.Pink.log("AuthBloc: Aucun profil dans Firestore. Création d'un nouveau profil par défaut.");
+        // Le profil n'existe pas dans Firestore. C'est une VRAIE première connexion pour cet UID.
+        Logger.Pink.log("AuthBloc: Aucun profil dans Firestore. Création d'un nouveau profil COMPLET.");
 
-        // Créer un nouvel objet UserFirestore à partir des données de l'utilisateur Firebase.
-        // Assurez-vous que votre modèle UserFirestore a un constructeur qui peut gérer cela.
+        // 1. Récupérer le token FCM pour l'inclure dès la création.
+        final fcmTokens = await FcmRepository().getListFcmToken();
+
+        // 2. Créer un profil COMPLET en utilisant les valeurs par défaut de votre modèle.
+        Logger.Pink.log('Créer un profil COMPLET en utilisant les valeurs par défaut de votre modèle');
         userProfile = UserFirestore(
           uid: firebaseUser.uid,
-          pseudo: firebaseUser.displayName ?? "", // Sera null pour les utilisateurs anonymes
-          photoURL: firebaseUser.photoURL ?? "",
-          createdAt: firebaseUser.metadata.creationTime
+          photoURL: firebaseUser.photoURL ?? '',
+          imageAvatar: '', // Pas d'avatar pour un nouvel invité.
+          createdAt: firebaseUser.metadata.creationTime ?? DateTime.now(),
+          fcmTokens: fcmTokens, // On inclut le token FCM !
         );
-
-        // Sauvegarder le nouveau profil dans Firestore
+        Logger.Pink.log('userProfile : $userProfile');
+        // 3. Sauvegarder ce nouveau profil complet.
         await _dataUserRepository.saveUser(userProfile);
-        Logger.Pink.log("AuthBloc: Nouveau profil sauvegardé dans Firestore pour l'UID ${firebaseUser.uid}.");
-      }
+        Logger.Pink.log("AuthBloc: Nouveau profil COMPLET sauvegardé pour l'UID ${firebaseUser.uid}.");
 
-      // 3. Maintenant que nous avons un userProfile valide, émettre l'état authentifié.
-      //    L'interface utilisateur écoutera ce changement d'état et naviguera vers l'écran d'accueil.
+      } else {
+        // Le profil existe déjà. C'est une reconnexion (ex: après réinstallation).
+        Logger.Pink.log("Le profil existe déjà. C'est une reconnexion (ex: après réinstallation)");
+        // BONNE PRATIQUE : Mettre à jour le token FCM au cas où il aurait changé.
+        Logger.Pink.log("AuthBloc: Profil utilisateur trouvé. Vérification du token FCM.");
+        final currentToken = await FcmRepository().geToken();
+        if (currentToken != null && !userProfile.fcmTokens.contains(currentToken)) {
+          final updatedTokens = List<String>.from(userProfile.fcmTokens)..add(currentToken);
+          userProfile = userProfile.copyWith(fcmTokens: updatedTokens);
+          // `saveUser` doit utiliser `merge: true` pour ne pas écraser les autres données.
+          await _dataUserRepository.saveUser(userProfile);
+          Logger.Pink.log("AuthBloc: Token FCM mis à jour pour l'UID ${firebaseUser.uid}.");
+        }
+      }
+      // --- FIN DE LA CORRECTION ---
       emit(AuthAuthenticated(userProfile));
       Logger.Pink.log("AuthBloc: Émission de AuthAuthenticated avec le profil utilisateur.");
-
     } catch (e, stackTrace) {
       Logger.Pink.log("AuthBloc: ERREUR CRITIQUE durant AuthLoggedIn: $e\n$stackTrace");
-      // Informer l'UI que quelque chose s'est mal passé lors de la récupération du profil.
       emit(AuthError(message: "auth_error_profile_fetch_failed"));
     }
   }
 
-  /// Gestionnaire pour la déconnexion.
   Future<void> _onAuthLoggedOut(AuthLoggedOut event, Emitter<AuthState> emit) async {
     emit(AuthLoading());
     try {
@@ -111,6 +118,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthError(message: "auth_error_deconnect"));
     }
   }
+
+
   Future<void> _onSignOutRequested( SignOutRequested event, Emitter<AuthState> emit) async {
     try {
       await _authRepository.signOut();

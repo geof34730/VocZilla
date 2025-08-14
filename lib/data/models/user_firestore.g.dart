@@ -9,7 +9,7 @@ part of 'user_firestore.dart';
 _UserFirestore _$UserFirestoreFromJson(Map<String, dynamic> json) =>
     _UserFirestore(
       uid: json['uid'] as String,
-      pseudo: json['pseudo'] as String?,
+      pseudo: json['pseudo'] as String? ?? 'Guest',
       photoURL: json['photoURL'] as String? ?? '',
       imageAvatar: json['imageAvatar'] as String? ?? '',
       fcmTokens: (json['fcmTokens'] as List<dynamic>?)
