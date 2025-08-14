@@ -15,12 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UserFirestore {
   String get uid;
-  String get email;
-  String get lastName;
-  String get firstName;
-  String get pseudo;
-  String get providerId;
-  bool get isEmailVerified;
+  String? get pseudo;
   String get photoURL;
   String get imageAvatar;
   List<String> get fcmTokens;
@@ -43,16 +38,7 @@ mixin _$UserFirestore {
         (other.runtimeType == runtimeType &&
             other is UserFirestore &&
             (identical(other.uid, uid) || other.uid == uid) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName) &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
             (identical(other.pseudo, pseudo) || other.pseudo == pseudo) &&
-            (identical(other.providerId, providerId) ||
-                other.providerId == providerId) &&
-            (identical(other.isEmailVerified, isEmailVerified) ||
-                other.isEmailVerified == isEmailVerified) &&
             (identical(other.photoURL, photoURL) ||
                 other.photoURL == photoURL) &&
             (identical(other.imageAvatar, imageAvatar) ||
@@ -64,23 +50,12 @@ mixin _$UserFirestore {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      uid,
-      email,
-      lastName,
-      firstName,
-      pseudo,
-      providerId,
-      isEmailVerified,
-      photoURL,
-      imageAvatar,
-      const DeepCollectionEquality().hash(fcmTokens),
-      createdAt);
+  int get hashCode => Object.hash(runtimeType, uid, pseudo, photoURL,
+      imageAvatar, const DeepCollectionEquality().hash(fcmTokens), createdAt);
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, lastName: $lastName, firstName: $firstName, pseudo: $pseudo, providerId: $providerId, isEmailVerified: $isEmailVerified, photoURL: $photoURL, imageAvatar: $imageAvatar, fcmTokens: $fcmTokens, createdAt: $createdAt)';
+    return 'UserFirestore(uid: $uid, pseudo: $pseudo, photoURL: $photoURL, imageAvatar: $imageAvatar, fcmTokens: $fcmTokens, createdAt: $createdAt)';
   }
 }
 
@@ -92,12 +67,7 @@ abstract mixin class $UserFirestoreCopyWith<$Res> {
   @useResult
   $Res call(
       {String uid,
-      String email,
-      String lastName,
-      String firstName,
-      String pseudo,
-      String providerId,
-      bool isEmailVerified,
+      String? pseudo,
       String photoURL,
       String imageAvatar,
       List<String> fcmTokens,
@@ -118,12 +88,7 @@ class _$UserFirestoreCopyWithImpl<$Res>
   @override
   $Res call({
     Object? uid = null,
-    Object? email = null,
-    Object? lastName = null,
-    Object? firstName = null,
-    Object? pseudo = null,
-    Object? providerId = null,
-    Object? isEmailVerified = null,
+    Object? pseudo = freezed,
     Object? photoURL = null,
     Object? imageAvatar = null,
     Object? fcmTokens = null,
@@ -134,30 +99,10 @@ class _$UserFirestoreCopyWithImpl<$Res>
           ? _self.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String,
-      email: null == email
-          ? _self.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastName: null == lastName
-          ? _self.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String,
-      firstName: null == firstName
-          ? _self.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
-      pseudo: null == pseudo
+      pseudo: freezed == pseudo
           ? _self.pseudo
           : pseudo // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerId: null == providerId
-          ? _self.providerId
-          : providerId // ignore: cast_nullable_to_non_nullable
-              as String,
-      isEmailVerified: null == isEmailVerified
-          ? _self.isEmailVerified
-          : isEmailVerified // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as String?,
       photoURL: null == photoURL
           ? _self.photoURL
           : photoURL // ignore: cast_nullable_to_non_nullable
@@ -271,36 +216,16 @@ extension UserFirestorePatterns on UserFirestore {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String uid,
-            String email,
-            String lastName,
-            String firstName,
-            String pseudo,
-            String providerId,
-            bool isEmailVerified,
-            String photoURL,
-            String imageAvatar,
-            List<String> fcmTokens,
-            DateTime? createdAt)?
+    TResult Function(String uid, String? pseudo, String photoURL,
+            String imageAvatar, List<String> fcmTokens, DateTime? createdAt)?
         $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
       case _UserFirestore() when $default != null:
-        return $default(
-            _that.uid,
-            _that.email,
-            _that.lastName,
-            _that.firstName,
-            _that.pseudo,
-            _that.providerId,
-            _that.isEmailVerified,
-            _that.photoURL,
-            _that.imageAvatar,
-            _that.fcmTokens,
-            _that.createdAt);
+        return $default(_that.uid, _that.pseudo, _that.photoURL,
+            _that.imageAvatar, _that.fcmTokens, _that.createdAt);
       case _:
         return orElse();
     }
@@ -321,35 +246,15 @@ extension UserFirestorePatterns on UserFirestore {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(
-            String uid,
-            String email,
-            String lastName,
-            String firstName,
-            String pseudo,
-            String providerId,
-            bool isEmailVerified,
-            String photoURL,
-            String imageAvatar,
-            List<String> fcmTokens,
-            DateTime? createdAt)
+    TResult Function(String uid, String? pseudo, String photoURL,
+            String imageAvatar, List<String> fcmTokens, DateTime? createdAt)
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _UserFirestore():
-        return $default(
-            _that.uid,
-            _that.email,
-            _that.lastName,
-            _that.firstName,
-            _that.pseudo,
-            _that.providerId,
-            _that.isEmailVerified,
-            _that.photoURL,
-            _that.imageAvatar,
-            _that.fcmTokens,
-            _that.createdAt);
+        return $default(_that.uid, _that.pseudo, _that.photoURL,
+            _that.imageAvatar, _that.fcmTokens, _that.createdAt);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -369,35 +274,15 @@ extension UserFirestorePatterns on UserFirestore {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String uid,
-            String email,
-            String lastName,
-            String firstName,
-            String pseudo,
-            String providerId,
-            bool isEmailVerified,
-            String photoURL,
-            String imageAvatar,
-            List<String> fcmTokens,
-            DateTime? createdAt)?
+    TResult? Function(String uid, String? pseudo, String photoURL,
+            String imageAvatar, List<String> fcmTokens, DateTime? createdAt)?
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _UserFirestore() when $default != null:
-        return $default(
-            _that.uid,
-            _that.email,
-            _that.lastName,
-            _that.firstName,
-            _that.pseudo,
-            _that.providerId,
-            _that.isEmailVerified,
-            _that.photoURL,
-            _that.imageAvatar,
-            _that.fcmTokens,
-            _that.createdAt);
+        return $default(_that.uid, _that.pseudo, _that.photoURL,
+            _that.imageAvatar, _that.fcmTokens, _that.createdAt);
       case _:
         return null;
     }
@@ -409,12 +294,7 @@ extension UserFirestorePatterns on UserFirestore {
 class _UserFirestore implements UserFirestore {
   const _UserFirestore(
       {required this.uid,
-      required this.email,
-      required this.lastName,
-      required this.firstName,
       required this.pseudo,
-      required this.providerId,
-      required this.isEmailVerified,
       this.photoURL = '',
       this.imageAvatar = '',
       final List<String> fcmTokens = const [],
@@ -426,17 +306,7 @@ class _UserFirestore implements UserFirestore {
   @override
   final String uid;
   @override
-  final String email;
-  @override
-  final String lastName;
-  @override
-  final String firstName;
-  @override
-  final String pseudo;
-  @override
-  final String providerId;
-  @override
-  final bool isEmailVerified;
+  final String? pseudo;
   @override
   @JsonKey()
   final String photoURL;
@@ -476,16 +346,7 @@ class _UserFirestore implements UserFirestore {
         (other.runtimeType == runtimeType &&
             other is _UserFirestore &&
             (identical(other.uid, uid) || other.uid == uid) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName) &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
             (identical(other.pseudo, pseudo) || other.pseudo == pseudo) &&
-            (identical(other.providerId, providerId) ||
-                other.providerId == providerId) &&
-            (identical(other.isEmailVerified, isEmailVerified) ||
-                other.isEmailVerified == isEmailVerified) &&
             (identical(other.photoURL, photoURL) ||
                 other.photoURL == photoURL) &&
             (identical(other.imageAvatar, imageAvatar) ||
@@ -498,23 +359,12 @@ class _UserFirestore implements UserFirestore {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      uid,
-      email,
-      lastName,
-      firstName,
-      pseudo,
-      providerId,
-      isEmailVerified,
-      photoURL,
-      imageAvatar,
-      const DeepCollectionEquality().hash(_fcmTokens),
-      createdAt);
+  int get hashCode => Object.hash(runtimeType, uid, pseudo, photoURL,
+      imageAvatar, const DeepCollectionEquality().hash(_fcmTokens), createdAt);
 
   @override
   String toString() {
-    return 'UserFirestore(uid: $uid, email: $email, lastName: $lastName, firstName: $firstName, pseudo: $pseudo, providerId: $providerId, isEmailVerified: $isEmailVerified, photoURL: $photoURL, imageAvatar: $imageAvatar, fcmTokens: $fcmTokens, createdAt: $createdAt)';
+    return 'UserFirestore(uid: $uid, pseudo: $pseudo, photoURL: $photoURL, imageAvatar: $imageAvatar, fcmTokens: $fcmTokens, createdAt: $createdAt)';
   }
 }
 
@@ -528,12 +378,7 @@ abstract mixin class _$UserFirestoreCopyWith<$Res>
   @useResult
   $Res call(
       {String uid,
-      String email,
-      String lastName,
-      String firstName,
-      String pseudo,
-      String providerId,
-      bool isEmailVerified,
+      String? pseudo,
       String photoURL,
       String imageAvatar,
       List<String> fcmTokens,
@@ -554,12 +399,7 @@ class __$UserFirestoreCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   $Res call({
     Object? uid = null,
-    Object? email = null,
-    Object? lastName = null,
-    Object? firstName = null,
-    Object? pseudo = null,
-    Object? providerId = null,
-    Object? isEmailVerified = null,
+    Object? pseudo = freezed,
     Object? photoURL = null,
     Object? imageAvatar = null,
     Object? fcmTokens = null,
@@ -570,30 +410,10 @@ class __$UserFirestoreCopyWithImpl<$Res>
           ? _self.uid
           : uid // ignore: cast_nullable_to_non_nullable
               as String,
-      email: null == email
-          ? _self.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastName: null == lastName
-          ? _self.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String,
-      firstName: null == firstName
-          ? _self.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
-      pseudo: null == pseudo
+      pseudo: freezed == pseudo
           ? _self.pseudo
           : pseudo // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerId: null == providerId
-          ? _self.providerId
-          : providerId // ignore: cast_nullable_to_non_nullable
-              as String,
-      isEmailVerified: null == isEmailVerified
-          ? _self.isEmailVerified
-          : isEmailVerified // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as String?,
       photoURL: null == photoURL
           ? _self.photoURL
           : photoURL // ignore: cast_nullable_to_non_nullable

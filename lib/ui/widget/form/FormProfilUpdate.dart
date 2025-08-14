@@ -41,9 +41,7 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
 
   void _initializeControllers(UserFirestore userProfile) {
     if (!_controllersInitialized) {
-      firstNameController.text = userProfile.firstName;
-      lastNameController.text = userProfile.lastName;
-      pseudoController.text = userProfile.pseudo;
+      pseudoController.text = userProfile.pseudo ?? '';
       _controllersInitialized = true;
     }
   }

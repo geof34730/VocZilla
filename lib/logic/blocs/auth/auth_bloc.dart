@@ -7,11 +7,8 @@ import '../../../core/utils/logger.dart';
 import '../../../data/models/user_firestore.dart';
 import '../../../data/repository/data_user_repository.dart';
 import '../../../data/services/localstorage_service.dart';
-import '../notification/notification_event.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
-
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository _authRepository;
@@ -24,132 +21,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         _dataUserRepository = dataUserRepository,
         super(AuthInitial()) {
     on<AppStarted>(_onAppStarted);
-    on<SignUpRequested>(_onSignUpRequested);
-    on<SignInRequested>(_onSignInRequested);
-    on<GoogleSignInRequested>(_onGoogleSignInRequested);
-    on<FacebookSignInRequested>(_onFacebookSignInRequested);
-    on<AppleSignInRequested>(_onAppleSignInRequested);
+    on<AuthLoggedIn>(_onAuthLoggedIn);
+    on<AuthLoggedOut>(_onAuthLoggedOut);
     on<SignOutRequested>(_onSignOutRequested);
-    on<UpdateUserProfilEvent>(_onUpdateUserProfilEvent);
-    on<EmailVerifiedEvent>(_onUserEmailVerified);
-    on<AuthErrorCleared>(_onAuthErrorCleared);
   }
 
-  Future<void> _onSignUpRequested(SignUpRequested event, Emitter<AuthState> emit) async {
-    emit(AuthLoading());
-    try {
-      final userCredential = await _authRepository.signUpWithEmail(
-        email: event.email,
-        password: event.password,
-        firstName: event.firstName,
-        lastName: event.lastName,
-        pseudo: event.pseudo,
-      );
-
-      final user = userCredential.user;
-      if (user != null) {
-        // 2. Crée l'objet UserFirestore avec TOUTES les informations de l'événement.
-        final newUserProfile = await UserFirestore.fromSignUp(
-          user: user,
-          email: event.email,
-          firstName: event.firstName,
-          lastName: event.lastName,
-          pseudo: event.pseudo,
-        );
-        // 3. Sauvegarde le nouveau profil complet dans Firestore.
-        await _dataUserRepository.saveUser(newUserProfile);
-        // 4. Émet l'état authentifié avec le profil qui vient d'être créé.
-        emit(AuthAuthenticated(newUserProfile));
-      } else {
-        emit(AuthError(message: "auth_error_create_user"));
-      }
-    } on FirebaseAuthException catch (e) {
-      await _handleAuthException(e, emit);
-    } catch (e) {
-      emit(AuthError(message: "auth_error_register_unknown"));
-    }
-  }
-
-  Future<void> _onSignInRequested(SignInRequested event, Emitter<AuthState> emit) async {
-    emit(AuthLoading());
-    try {
-      final userCredential = await _authRepository.signInWithEmail(
-        email: event.email,
-        password: event.password,
-      );
-      await _handleAuthenticationSuccess(userCredential, emit);
-    } on FirebaseAuthException catch (e) {
-      await _handleAuthException(e, emit);
-    } catch (e) {
-      emit(AuthError(message: "auth_error_connect"));
-    }
-  }
-
-  Future<void> _onAuthErrorCleared(AuthErrorCleared event, Emitter<AuthState> emit,) async {
-    emit(AuthUnauthenticated());
-  }
-
-  Future<void> _onUserEmailVerified( EmailVerifiedEvent event,Emitter<AuthState> emit,) async {
-    final currentState = state;
-    // On agit uniquement si l'utilisateur est authentifié
-    if (currentState is AuthAuthenticated) {
-      // Si l'email est déjà marqué comme vérifié, on ne fait rien
-      if (currentState.userProfile.isEmailVerified) return;
-
-      // On crée une copie du profil avec le statut de vérification mis à jour
-      final updatedProfile = currentState.userProfile.copyWith(
-        isEmailVerified: true,
-      );
-
-      try {
-        await _dataUserRepository.saveUser(updatedProfile);
-        emit(AuthAuthenticated(updatedProfile));
-      } catch (e) {
-        Logger.Red.log("Erreur lors de la mise à jour du profil après vérification: $e");
-        emit(AuthError(message: "auth_error_update_profil"));
-        }
-
-    }
-  }
-
-  Future<void> _onGoogleSignInRequested(GoogleSignInRequested event, Emitter<AuthState> emit) async {
-    emit(AuthLoading());
-    try {
-      final userCredential = await _authRepository.signInWithGoogle();
-      await _handleAuthenticationSuccess(userCredential, emit);
-    } on FirebaseAuthException catch (e) {
-      // NOUVEAU : Appel du gestionnaire d'erreur centralisé
-      await _handleAuthException(e, emit);
-    } catch (e) {
-      emit(AuthError(message: "auth_error_google"));
-      }
-  }
-
-  Future<void> _onFacebookSignInRequested(FacebookSignInRequested event, Emitter<AuthState> emit) async {
-    emit(AuthLoading());
-    try {
-      final userCredential = await _authRepository.signInWithFacebook();
-      await _handleAuthenticationSuccess(userCredential, emit);
-    } on FirebaseAuthException catch (e) {
-      // NOUVEAU : Appel du gestionnaire d'erreur centralisé
-      await _handleAuthException(e, emit);
-    } catch (e) {
-      emit(AuthError(message: "auth_error_facebook"));
-    }
-  }
-
-  Future<void> _onAppleSignInRequested( AppleSignInRequested event, Emitter<AuthState> emit) async {
-    emit(AuthLoading());
-    try {
-      final userCredential = await _authRepository.signInWithApple();
-      await _handleAuthenticationSuccess(userCredential, emit);
-    } on FirebaseAuthException catch (e) {
-      // NOUVEAU : Appel du gestionnaire d'erreur centralisé
-      await _handleAuthException(e, emit);
-    } catch (e) {
-      emit(AuthError( message: "auth_error_apple"));
-    }
-  }
 
 
   Future<void> _onAppStarted(AppStarted event, Emitter<AuthState> emit) async {
@@ -180,6 +56,61 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
+  /// Gère la logique lorsqu'un utilisateur se connecte avec succès via Firebase.
+  /// Cette méthode récupère le profil correspondant depuis Firestore,
+  /// et en crée un s'il n'existe pas.
+  Future<void> _onAuthLoggedIn(AuthLoggedIn event, Emitter<AuthState> emit) async {
+    // Optionnel mais recommandé : émettre un état de chargement pendant la récupération du profil.
+    emit(AuthLoading());
+    try {
+      final firebaseUser = event.user;
+      Logger.Pink.log("AuthBloc: Événement AuthLoggedIn reçu pour l'UID ${firebaseUser.uid}.");
+
+      // 1. Tenter de récupérer le profil utilisateur depuis Firestore.
+      UserFirestore? userProfile = await _dataUserRepository.getUser(firebaseUser.uid);
+
+      // 2. Si aucun profil n'existe, c'est un nouvel utilisateur (comme notre invité).
+      //    Il faut créer un document de profil par défaut pour lui.
+      if (userProfile == null) {
+        Logger.Pink.log("AuthBloc: Aucun profil dans Firestore. Création d'un nouveau profil par défaut.");
+
+        // Créer un nouvel objet UserFirestore à partir des données de l'utilisateur Firebase.
+        // Assurez-vous que votre modèle UserFirestore a un constructeur qui peut gérer cela.
+        userProfile = UserFirestore(
+          uid: firebaseUser.uid,
+          pseudo: firebaseUser.displayName ?? "", // Sera null pour les utilisateurs anonymes
+          photoURL: firebaseUser.photoURL ?? "",
+          createdAt: firebaseUser.metadata.creationTime
+        );
+
+        // Sauvegarder le nouveau profil dans Firestore
+        await _dataUserRepository.saveUser(userProfile);
+        Logger.Pink.log("AuthBloc: Nouveau profil sauvegardé dans Firestore pour l'UID ${firebaseUser.uid}.");
+      }
+
+      // 3. Maintenant que nous avons un userProfile valide, émettre l'état authentifié.
+      //    L'interface utilisateur écoutera ce changement d'état et naviguera vers l'écran d'accueil.
+      emit(AuthAuthenticated(userProfile));
+      Logger.Pink.log("AuthBloc: Émission de AuthAuthenticated avec le profil utilisateur.");
+
+    } catch (e, stackTrace) {
+      Logger.Pink.log("AuthBloc: ERREUR CRITIQUE durant AuthLoggedIn: $e\n$stackTrace");
+      // Informer l'UI que quelque chose s'est mal passé lors de la récupération du profil.
+      emit(AuthError(message: "auth_error_profile_fetch_failed"));
+    }
+  }
+
+  /// Gestionnaire pour la déconnexion.
+  Future<void> _onAuthLoggedOut(AuthLoggedOut event, Emitter<AuthState> emit) async {
+    emit(AuthLoading());
+    try {
+      await _authRepository.signOut();
+      emit(AuthUnauthenticated());
+    } catch (e) {
+      // Gérer l'erreur de déconnexion si nécessaire
+      emit(AuthError(message: "auth_error_deconnect"));
+    }
+  }
   Future<void> _onSignOutRequested( SignOutRequested event, Emitter<AuthState> emit) async {
     try {
       await _authRepository.signOut();
@@ -189,31 +120,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthError(message: 'auth-error-deconnect'));
     }
   }
-
-  Future<void> _onUpdateUserProfilEvent(UpdateUserProfilEvent event, Emitter<AuthState> emit) async {
-    if (state is AuthAuthenticated) {
-      final currentProfile = (state as AuthAuthenticated).userProfile;
-      try {
-        await _dataUserRepository.updateProfilUserFirestore(
-          firstName: event.firstName,
-          lastName: event.lastName,
-          pseudo: event.pseudo,
-          imageAvatar: event.imageAvatar
-        );
-        final updatedProfile =  await _dataUserRepository.getUser(currentProfile.uid);
-        if (updatedProfile != null) {
-          emit(AuthSuccess(message: "[SuccessBloc/auth_success_update_profile]"));
-          emit(AuthProfileUpdated(updatedProfile));
-        } else {
-          emit(AuthError(message: 'auth_error_update_profil'));
-          throw Exception("Impossible de récupérer le profil mis à jour.");
-        }
-      } catch (e) {
-        emit(AuthError(message: 'auth_error_update_profil'));
-      }
-    }
-  }
-
   Future<void> _handleAuthenticationSuccess(UserCredential? userCredential, Emitter<AuthState> emit) async {
     if (userCredential?.user != null) {
       UserFirestore? userProfile =
@@ -228,7 +134,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
-  Future<void> _handleAuthException(FirebaseAuthException e, Emitter<AuthState> emit) async {
-    emit(AuthError(message: e.toString()));
-  }
+
+
+
+
 }

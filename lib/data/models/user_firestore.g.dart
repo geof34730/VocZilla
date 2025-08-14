@@ -9,12 +9,7 @@ part of 'user_firestore.dart';
 _UserFirestore _$UserFirestoreFromJson(Map<String, dynamic> json) =>
     _UserFirestore(
       uid: json['uid'] as String,
-      email: json['email'] as String,
-      lastName: json['lastName'] as String,
-      firstName: json['firstName'] as String,
-      pseudo: json['pseudo'] as String,
-      providerId: json['providerId'] as String,
-      isEmailVerified: json['isEmailVerified'] as bool,
+      pseudo: json['pseudo'] as String?,
       photoURL: json['photoURL'] as String? ?? '',
       imageAvatar: json['imageAvatar'] as String? ?? '',
       fcmTokens: (json['fcmTokens'] as List<dynamic>?)
@@ -29,12 +24,7 @@ _UserFirestore _$UserFirestoreFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$UserFirestoreToJson(_UserFirestore instance) =>
     <String, dynamic>{
       'uid': instance.uid,
-      'email': instance.email,
-      'lastName': instance.lastName,
-      'firstName': instance.firstName,
       'pseudo': instance.pseudo,
-      'providerId': instance.providerId,
-      'isEmailVerified': instance.isEmailVerified,
       'photoURL': instance.photoURL,
       'imageAvatar': instance.imageAvatar,
       'fcmTokens': instance.fcmTokens,

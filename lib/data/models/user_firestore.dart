@@ -15,12 +15,7 @@ part 'user_firestore.g.dart';
 abstract class UserFirestore with _$UserFirestore {
   const factory UserFirestore({
     required String uid,
-    required String email,
-    required String lastName,
-    required String firstName,
-    required String pseudo,
-    required String providerId,
-    required bool isEmailVerified,
+    required String? pseudo,
     @Default('') String photoURL,
     @Default('') String imageAvatar,
     @Default([]) List<String> fcmTokens,
@@ -89,35 +84,21 @@ abstract class UserFirestore with _$UserFirestore {
     // L'utilisateur sera invité à les remplir plus tard.
     return UserFirestore(
       uid: user.uid,
-      email: user.email ?? '',
-      lastName: '', // Initialisé comme vide
-      firstName: '', // Initialisé comme vide
       pseudo: '', // Initialisé comme vide
       imageAvatar: imageAvatarBase64,
       photoURL: finalPhotoUrl,
-      isEmailVerified: isVerified, // On utilise notre nouvelle variable
       createdAt: user.metadata.creationTime ?? DateTime.now(),
-      providerId: providerId,
       fcmTokens: await FcmRepository().getListFcmToken(),
     );
   }
 
   static Future<UserFirestore> fromSignUp({
     required User user,
-    required String email,
-    required String firstName,
-    required String lastName,
     required String pseudo,
   }) async {
     return UserFirestore(
       uid: user.uid,
-      email: email,
-      firstName: firstName,
-      lastName: lastName,
       pseudo: pseudo,
-      isEmailVerified: user.emailVerified,
-      providerId: 'password',
-      // La logique est maintenant GÉRÉE PAR LE MODÈLE, comme vous le vouliez !
       createdAt: DateTime.now(),
       fcmTokens: await FcmRepository().getListFcmToken(),
     );
@@ -125,9 +106,4 @@ abstract class UserFirestore with _$UserFirestore {
 
 }
 
-// Cette extension ajoute le getter d'aide sans modifier le modèle de base.
-extension UserFirestoreHelpers on UserFirestore {
-  /// Vérifie si le profil de l'utilisateur est incomplet (nom, prénom ou pseudo manquant).
-  bool get isProfileIncomplete =>
-      lastName.isEmpty || firstName.isEmpty || pseudo.isEmpty;
-}
+

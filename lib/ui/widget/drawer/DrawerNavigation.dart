@@ -57,8 +57,7 @@ Widget _buildDrawerHeader(BuildContext context) {
         // If the user is authenticated, display their profile information.
         if (authState is AuthAuthenticated) {
           final userProfile = authState.userProfile;
-          final String displayName ="${userProfile.firstName} ${userProfile.lastName}".trim();
-          final String pseudo = userProfile.pseudo;
+          final String pseudo = userProfile.pseudo ?? '';
 
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -99,12 +98,7 @@ Widget _buildDrawerHeader(BuildContext context) {
                           style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                           overflow: TextOverflow.ellipsis,
                         ),
-                        if (displayName.isNotEmpty)
-                          Text(
-                            displayName,
-                            style: const TextStyle(fontSize: 12),
-                            overflow: TextOverflow.ellipsis,
-                          ),
+
                       ],
                     ),
                   ),

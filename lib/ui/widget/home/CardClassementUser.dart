@@ -26,7 +26,7 @@ class CardClassementUser extends StatelessWidget {
           // Use the user profile directly from the BLoC state.
           // This removes the need for the inefficient FutureBuilder.
           final userProfile = state.userProfile;
-          final String pseudo = userProfile.pseudo;
+          final String pseudo = userProfile.pseudo ?? '';
 
           return Card(
             color: Colors.deepPurple,

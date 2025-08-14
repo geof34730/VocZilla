@@ -16,10 +16,7 @@ class AuthLoading extends AuthState {}
 
 class AuthAuthenticated extends AuthState {
   final UserFirestore userProfile;
-
-  // 2. Supprimer le mot-clé 'const' car userProfile n'est pas une constante de compilation.
   AuthAuthenticated(this.userProfile);
-
   @override
   List<Object> get props => [userProfile];
 }

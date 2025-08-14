@@ -28,7 +28,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
           builder: (context, state) {
             if (state is AuthAuthenticated) {
               final userProfile = state.userProfile;
-              final String pseudo = userProfile.pseudo;
+              final String pseudo = userProfile.pseudo ?? '';
               return Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: GestureDetector(

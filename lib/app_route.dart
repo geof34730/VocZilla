@@ -4,7 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/ui/featureGraphic.dart';
-import 'package:vobzilla/ui/screens/auth/profile_update_screen_gafa.dart';
+import 'package:vobzilla/ui/screens/auth/login_screen.dart';
+
 import 'package:vobzilla/ui/screens/personalisation/step2.dart';
 import 'package:vobzilla/ui/screens/update_screen.dart';
 
@@ -29,10 +30,6 @@ import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
 import 'package:vobzilla/logic/blocs/purchase/purchase_bloc.dart';
 import 'package:vobzilla/logic/blocs/purchase/purchase_state.dart';
 import 'package:vobzilla/ui/layout.dart';
-import 'package:vobzilla/ui/screens/auth/login_screen.dart';
-import 'package:vobzilla/ui/screens/auth/profile_email_validation.dart';
-import 'package:vobzilla/ui/screens/auth/profile_update_screen.dart';
-import 'package:vobzilla/ui/screens/auth/register_screen.dart';
 import 'package:vobzilla/ui/screens/home_logout_screen.dart';
 import 'package:vobzilla/ui/screens/home_screen.dart';
 import 'package:vobzilla/ui/screens/subscription_screen.dart';
@@ -47,12 +44,9 @@ import 'logic/blocs/update/update_bloc.dart';
 
 class AppRoute {
   static const String home = '/';
-  static const String login = '/login';
-  static const String register = '/register';
   static const String homeLogged = '/home';
-  static const String verifiedEmail = '/verifiedemail';
+  static const String login = '/login';
   static const String updateProfile = '/updateprofile';
-  static const String updateProfileGafa = '/updateprofilegafa';
   static const String subscription = '/subscription';
   static const String updateScreen = '/update';
   static const String featureGraphic = '/featureGraphic';
@@ -81,49 +75,9 @@ class AppRoute {
                   final userProfile = authState.userProfile;
                   final firebaseUser = FirebaseAuth.instance.currentUser;
                   if (firebaseUser == null) {
-                   //_redirectTo(context, settings, login);
+                    //_redirectTo(context, settings, login);
                     return;
                   }
-                  if (userProfile.isProfileIncomplete && settings.name != updateProfileGafa) {
-                    _redirectTo(context, settings, updateProfileGafa);
-                  } else if (!firebaseUser.emailVerified &&
-                      settings.name != verifiedEmail &&
-                      !firebaseUser.providerData.any((info) =>
-                      info.providerId == 'facebook.com' ||
-                          info.providerId == 'google.com' ||
-                          info.providerId == 'apple.com')) {
-                    try {
-                      firebaseUser.sendEmailVerification();
-                    } catch (e) {
-                      if (context.mounted && e is FirebaseAuthException ) {
-                        context.read<NotificationBloc>().add(ShowNotification(
-                          message: getLocalizedErrorMessage(context, e.code),
-                          backgroundColor: Colors.orange,
-                        ));
-                      }
-                    }
-                    _redirectTo(context, settings, verifiedEmail);
-                  } else if (settings.name == login) {
-                    _redirectTo(context, settings, home);
-                  }
-                } else if (authState is AuthUnauthenticated) {
-                  if (settings.name != login && settings.name != register && settings.name != home) {
-                    _redirectTo(context, settings, login);
-                  }
-                }
-                if (authState is AuthError) {
-                  context.read<NotificationBloc>().add(ShowNotification(
-                    message: getLocalizedErrorMessage(context, authState.message),
-                    backgroundColor: Colors.red,
-                  ));
-                  context.read<AuthBloc>().add(AuthErrorCleared());
-                }
-                if (authState is AuthSuccess) {
-                  // Cette partie est correcte et continue de fonctionner pour la notification
-                  context.read<NotificationBloc>().add(ShowNotification(
-                    message: getLocalizedSuccessMessage(context, authState.message),
-                    backgroundColor: Colors.green,
-                  ));
                 }
               },
             ),
@@ -198,17 +152,13 @@ class AppRoute {
     switch (settings.name) {
       case home:
         return HomeLogoutScreen();
-      case featureGraphic:
-        return FeatureGraphic();
       case login:
-      // MODIFICATION : On extrait les arguments et on les passe à LoginScreen.
-        final args = settings.arguments as Map<String, dynamic>?;
         return Layout(
           logged: false,
           child: LoginScreen(),
         );
-      case register:
-        return Layout(logged: false, child: RegisterScreen());
+      case featureGraphic:
+        return FeatureGraphic();
       case updateScreen:
         return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
       default:
@@ -224,21 +174,13 @@ class AppRoute {
       if (userState is UserInitial || userState is UserLoading ||
           userState is UserError ||
           userState is UserFreeTrialPeriodEndAndNotSubscribed) {
-        return Layout(child: Loading());
+        //return Layout(child: Loading());
       }
     }
 
     if (uri.pathSegments.isNotEmpty) {
       final rootPath = '/${uri.pathSegments[0]}';
       switch (rootPath) {
-        case verifiedEmail:
-          return Layout(appBarNotLogged: true, logged: false, child: ProfileEmailValidation());
-        case updateProfile:
-          return Layout(appBarNotLogged: false, logged: true, child: ProfileUpdateScreen());
-        case login:
-          return Scaffold(body: Loading());
-        case updateProfileGafa:
-          return Layout(appBarNotLogged: true, logged: false, child: ProfileUpdateGafaScreen());
         case subscription:
           return Layout(titleScreen: context.loc.title_subscription, child: SubscriptionScreen());
         case home:
