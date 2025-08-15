@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/ui/featureGraphic.dart';
 import 'package:vobzilla/ui/screens/personalisation/step2.dart';
 import 'package:vobzilla/ui/screens/update_screen.dart';
+import 'package:vobzilla/ui/widget/auth/profile_update_screen.dart';
 import 'core/utils/feature_graphic_flag.dart';
 import 'global.dart';
 import 'logic/check_connectivity.dart';
@@ -41,6 +42,7 @@ class AppRoute {
   static const String subscription = '/subscription';
   static const String updateScreen = '/update';
   static const String featureGraphic = '/featureGraphic';
+
   static bool isCompteTestForRevisionStore() {
     final firebaseUser = FirebaseAuth.instance.currentUser;
     return firebaseUser?.email == emailTestRevisionStore;
@@ -167,6 +169,8 @@ class AppRoute {
     if (uri.pathSegments.isNotEmpty) {
       final rootPath = '/${uri.pathSegments[0]}';
       switch (rootPath) {
+        case updateProfile:
+          return Layout(appBarNotLogged: false, logged: true, child: ProfileUpdateScreen());
         case subscription:
           return Layout(titleScreen: context.loc.title_subscription, child: SubscriptionScreen());
         case home:

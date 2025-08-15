@@ -25,6 +25,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<AuthLoggedIn>(_onAuthLoggedIn);
     on<AuthLoggedOut>(_onAuthLoggedOut);
     on<SignOutRequested>(_onSignOutRequested);
+    on<UpdateUserProfilEvent>(_onUpdateUserProfilEvent);
   }
 
 
@@ -54,6 +55,49 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       Logger.Pink.log("AuthBloc: CRITICAL ERROR during AppStarted: $e , $stackTrace");
       // On peut émettre un état d'erreur pour que l'UI puisse réagir
       emit(AuthError(message: "init_failed"));
+    }
+  }
+  Future<void> _onUpdateUserProfilEvent(
+      UpdateUserProfilEvent event,
+      Emitter<AuthState> emit,
+      ) async {
+    // Il est crucial de s'assurer que nous mettons à jour le profil de l'utilisateur actuellement connecté.
+    final currentState = state;
+    if (currentState is AuthAuthenticated) {
+      try {
+        // Optionnel : émettre un état de chargement pour l'UI
+        // emit(AuthLoading()); // Attention, cela pourrait faire disparaître le formulaire.
+        // Une meilleure approche serait d'avoir un état de chargement spécifique pour la mise à jour.
+
+        Logger.Pink.log("AuthBloc: Mise à jour du profil pour l'UID ${currentState.userProfile.uid}...");
+
+        // Créez une copie du profil actuel avec les nouvelles données
+        final updatedProfile = currentState.userProfile.copyWith(
+          pseudo: event.pseudo,
+          // Si un nouvel avatar est fourni, on le prend, sinon on garde l'ancien.
+          imageAvatar: event.imageAvatar ?? currentState.userProfile.imageAvatar,
+        );
+
+        // Sauvegardez le profil mis à jour dans Firestore
+        await _dataUserRepository.saveUser(updatedProfile);
+
+        // Mettez également à jour le profil dans le stockage local
+        await LocalStorageService().saveUser(updatedProfile);
+
+        Logger.Pink.log("AuthBloc: Profil mis à jour avec succès. Émission de AuthAuthenticated.");
+
+        // Émettez l'état authentifié avec le profil mis à jour pour que toute l'application soit synchronisée.
+        emit(AuthAuthenticated(updatedProfile));
+
+      } catch (e, stackTrace) {
+        Logger.Pink.log("AuthBloc: ERREUR lors de la mise à jour du profil: $e\n$stackTrace");
+        emit(AuthError(message: "profile_update_failed"));
+      }
+    } else {
+      // Ce cas ne devrait pas arriver si l'utilisateur est sur la page de profil,
+      // mais c'est une bonne pratique de le gérer.
+      Logger.Pink.log("AuthBloc: Tentative de mise à jour du profil sans être authentifié.");
+      emit(AuthError(message: "user_not_authenticated"));
     }
   }
 

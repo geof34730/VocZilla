@@ -32,8 +32,6 @@ class DataUserRepository {
 
   /// Met à jour le profil de l'utilisateur sur Firestore et rafraîchit le cache local.
   Future<void> updateProfilUserFirestore({
-    required String firstName,
-    required String lastName,
     required String pseudo,
     String? imageAvatar,
   }) async {

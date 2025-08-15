@@ -11,10 +11,7 @@ abstract class AuthEvent extends Equatable {
   List<Object?> get props => [];
 }
 
-
-
 class AppStarted extends AuthEvent {}
-
 
 class AuthLoggedIn extends AuthEvent {
   final User user;
@@ -23,10 +20,10 @@ class AuthLoggedIn extends AuthEvent {
   List<Object?> get props => [user];
 }
 
-
 class AuthLoggedOut extends AuthEvent {
   const AuthLoggedOut();
 }
+
 class SignOutRequested extends AuthEvent {}
 
 class AuthErrorCleared extends AuthEvent {}
@@ -41,20 +38,17 @@ class UpdateUserEvent extends AuthEvent {
 }
 
 class UpdateUserProfilEvent extends AuthEvent {
-  final String lastName;
-  final String firstName;
   final String pseudo;
   final String? imageAvatar;
 
   const UpdateUserProfilEvent({
-    required this.lastName,
-    required this.firstName,
     required this.pseudo,
     this.imageAvatar,
   });
 
   @override
-  List<Object> get props => [lastName, firstName, pseudo];
+  // Add imageAvatar to the props list for correct equality checks.
+  List<Object?> get props => [pseudo, imageAvatar];
 }
 
 

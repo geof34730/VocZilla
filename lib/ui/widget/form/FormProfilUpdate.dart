@@ -196,23 +196,12 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
                       labelText: context.loc.login_pseudo,
                       hintText: context.loc.login_entrer_pseudo,
                     ),
-                    CustomTextField(
-                      controller: firstNameController,
-                      labelText: context.loc.login_prenom,
-                      hintText: context.loc.login_entrer_prenom,
-                    ),
-                    CustomTextField(
-                      controller: lastNameController,
-                      labelText: context.loc.login_nom,
-                      hintText: context.loc.login_entrer_nom,
-                    ),
+
                     const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
                         context.read<AuthBloc>().add(
                           UpdateUserProfilEvent(
-                            firstName: firstNameController.text,
-                            lastName: lastNameController.text,
                             pseudo: pseudoController.text,
                             imageAvatar: _newImageAvatarBase64,
                           ),
