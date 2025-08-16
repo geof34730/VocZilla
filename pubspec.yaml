@@ -20,7 +20,6 @@ version: 2.0.1+1
 
 environment:
   sdk: ^3.6.0
-
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -72,7 +71,7 @@ dependencies:
   #flip_card: ^0.7.0
   flip_card:
     path: lib/packagesLocale/flip_card
-  speech_to_text: ^7.0.0
+  speech_to_text: ^7.3.0
   permission_handler: ^12.0.0+1
   connectivity_plus: ^6.1.4
   in_app_update: ^4.2.3

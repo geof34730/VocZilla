@@ -1725,7 +1725,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: 3b26e2cee503815e01c3701236b020aa9b576f09
   FirebaseMessagingInterop: 63e504b147a7206cfe64cbe2f40c2ddd009945bd
   FirebaseSharedSwift: e17c654ef1f1a616b0b33054e663ad1035c8fd40
-  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   flutter_facebook_auth: d97dc09216aebd99d7ac52360186a630f67bdf18
   flutter_local_notifications: a5a732f069baa862e728d839dd2ebb904737effb
   flutter_secure_storage: 1ed9476fba7e7a782b22888f956cce43e2c62f13
@@ -1753,6 +1753,6 @@ SPEC CHECKSUMS:
   speech_to_text: 3b313d98516d3d0406cea424782ec25470c59d19
   url_launcher_ios: 694010445543906933d732453a59da0a173ae33d
 
-PODFILE CHECKSUM: f393a3e970b6bcad3ccd24fdc079653b90c459b1
+PODFILE CHECKSUM: 49c063e0f1fb01638c2bd136a55fa742b4823980
 
 COCOAPODS: 1.16.2

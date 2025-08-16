@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/core/utils/logger.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
@@ -20,24 +21,31 @@ class PronunciationScreen extends StatefulWidget {
   _PronunciationScreenState createState() => _PronunciationScreenState();
 }
 
-class _PronunciationScreenState extends State<PronunciationScreen> with SingleTickerProviderStateMixin {
+class _PronunciationScreenState extends State<PronunciationScreen>
+    with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   final SpeechToText _speechToText = SpeechToText();
   bool _speechEnabled = false;
   String _lastWords = '';
   bool isRecording = false;
+
   late AnimationController _animationController;
   late List<double> _barHeights;
   Timer? _barUpdateTimer;
+
+  // NEW: timer pour l’affichage différé de l’erreur
+  Timer? _errorDelayTimer;
+
   bool isCorrect = false;
   late bool refrechRandom = true;
-  int randomItemData =0;
+  int randomItemData = 0;
   String vocabularyEnSelected = "";
   bool viewResulte = false;
 
   @override
   void initState() {
     super.initState();
-    _checkPermissions();
+    _initSpeech();
+    WidgetsBinding.instance.addObserver(this);
     _barHeights = List.generate(10, (index) => 10);
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 600),
@@ -47,41 +55,50 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _animationController.dispose();
     _barUpdateTimer?.cancel();
+    _errorDelayTimer?.cancel(); // cleanup
     super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      _initSpeech();
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
-        builder: (context, state) {
-      if (state is VocabulairesLoading) {
-        return Center(child: CircularProgressIndicator());
-      } else if (state is VocabulairesLoaded) {
-        if (state.data.vocabulaireList.isEmpty) {
-          return Center(child: Text(context.loc.no_vocabulary_items_found));
-        }
-        final List<dynamic> data = state.data.vocabulaireList;
-        if (data.isEmpty) {
-          return Center(child: Text(context.loc.no_vocabulary_items_found));
-        }
-        if (refrechRandom) {
-          refrechRandom = false;
-          Random random = new Random();
-          randomItemData = random.nextInt(data.length);
-          vocabularyEnSelected= data[randomItemData]['EN'];
-        }
-        return Column(
-            key: ValueKey('screenPrononciation'),
+      builder: (context, state) {
+        if (state is VocabulairesLoading) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (state is VocabulairesLoaded) {
+          if (state.data.vocabulaireList.isEmpty) {
+            return Center(child: Text(context.loc.no_vocabulary_items_found));
+          }
+          final List<dynamic> data = state.data.vocabulaireList;
+          if (data.isEmpty) {
+            return Center(child: Text(context.loc.no_vocabulary_items_found));
+          }
+          if (refrechRandom) {
+            refrechRandom = false;
+            Random random = Random();
+            randomItemData = random.nextInt(data.length);
+            vocabularyEnSelected = data[randomItemData]['EN'];
+          }
+          return Column(
+            key: const ValueKey('screenPrononciation'),
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 20, width: double.infinity),
-               Text(
+              Text(
                 context.loc.pronunciation_description_action,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   color: Colors.black87,
                   fontWeight: FontWeight.bold,
@@ -93,15 +110,14 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      spacing: 0,
-                      textBaseline: TextBaseline.alphabetic,
-                      children: [
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: [
                       Text(
                         data[randomItemData]['EN'],
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 40,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -111,32 +127,31 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
                       Text(
                         "(${data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)]})",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14,
                           color: Colors.black,
                           height: 1.2,
                         ),
                       ),
-                    ]
+                    ],
                   ),
+                  // Play désactivé en enregistrement
                   Padding(
-                    padding: const EdgeInsets.only(left: 10,top:0),
-                    child:PlaySoond(
-                      guidVocabulaire: data[randomItemData]['GUID'],
-                      buttonColor: Colors.green,
-                      sizeButton: 20,
-                      iconData: Icons.play_arrow,
-                      /*onpressedActionSup: () {
-                        setState(() {
-                          _stopListening();
-                          _stopAnimation();
-                          isRecording = false;
-                          viewResulte = false;
-                        });
-                      },*/
-                    ).buttonPlay(),
-                  )
-                ]
+                    padding: const EdgeInsets.only(left: 10, top: 0),
+                    child: IgnorePointer(
+                      ignoring: isRecording,
+                      child: Opacity(
+                        opacity: isRecording ? 0.4 : 1.0,
+                        child: PlaySoond(
+                          guidVocabulaire: data[randomItemData]['GUID'],
+                          buttonColor: Colors.green,
+                          sizeButton: 20,
+                          iconData: Icons.play_arrow,
+                        ).buttonPlay(),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 20),
               GestureDetector(
@@ -182,7 +197,7 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: isRecording ? Colors.red : Colors.green,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black26,
                               blurRadius: 10,
@@ -204,105 +219,88 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
                             );
                           }).toList(),
                         )
-                            : Icon(
+                            : const Icon(
                           Icons.mic_off,
                           size: 60,
                           color: Colors.white,
                         ),
                       ),
-                      Container()
+                      Container(),
                     ],
                   ),
                 ),
               ),
-
-                Column(
-                  children: [
-                    const SizedBox(height: 20),
-                    if(isRecording || viewResulte)...[
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            const Icon(Icons.hearing, color: Colors.blueGrey),
-                            const SizedBox(width: 8),
-                            Text(
-                              '${context.loc.pronunciation_i_heard_you_say}:',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.black87,
-                                fontStyle: FontStyle.italic,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 8),
+              Column(
+                children: [
+                  const SizedBox(height: 20),
+                  if (isRecording || viewResulte) ...[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        const Icon(Icons.hearing, color: Colors.blueGrey),
+                        const SizedBox(width: 8),
                         Text(
-                          _lastWords,
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: isRecording ? Colors.black54: isCorrect ? Colors.green : Colors.red,
+                          '${context.loc.pronunciation_i_heard_you_say}:',
+                          style: const TextStyle(
+                            fontSize: 16,
+                            color: Colors.black87,
+                            fontStyle: FontStyle.italic,
                           ),
                         ),
-                    ],
-                    const SizedBox(height: 12),
-                    if(viewResulte)...[
-                        Text(
-                          isCorrect ? '✅ ${context.loc.pronunciation_success}' : '❌ ${context.loc.pronunciation_error}',
-                          style: TextStyle(
-                            fontSize: isCorrect ? 40 : 20,
-                            color: isCorrect ? Colors.green : Colors.red,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20),
-                          child: ElevatedButton(
-                            onPressed: () {
-                              next();
-                            },
-                            child: Text(context.loc.button_next),
-                          ),
-                        ),
-                    ]
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      _lastWords,
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: isRecording ? Colors.black54 : (isCorrect ? Colors.green : Colors.red),
+                      ),
+                    ),
                   ],
-                )
-              ]
-
+                  const SizedBox(height: 12),
+                  if (viewResulte) ...[
+                    Text(
+                      isCorrect ? '✅ ${context.loc.pronunciation_success}' : '❌ ${context.loc.pronunciation_error}',
+                      style: TextStyle(
+                        fontSize: isCorrect ? 40 : 20,
+                        color: isCorrect ? Colors.green : Colors.red,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          next();
+                        },
+                        child: Text(context.loc.button_next),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ],
           );
-
-          } else if (state is VocabulairesError) {
+        } else if (state is VocabulairesError) {
           return Center(child: Text(context.loc.error_loading));
-          } else {
+        } else {
           return Center(child: Text(context.loc.unknown_error)); // fallback
-          }
-        },
+        }
+      },
     );
   }
-
 
   next() {
     Navigator.pushReplacementNamed(context, '/vocabulary/pronunciation');
   }
 
-
-  void _toggleRecording() {
-   if(isRecording){
-      _stopListening();
-      _stopAnimation();
-   }
-   else {
-     _startListening();
-     _startAnimation();
-   }
-    setState(() {
-      isRecording = _speechToText.isNotListening;
-    });
-  }
-
+  // Helpers animation
   void _startAnimation() {
     _animationController.repeat(reverse: true);
-    _barUpdateTimer = Timer.periodic(Duration(milliseconds: 200), (_) {
+    _barUpdateTimer = Timer.periodic(const Duration(milliseconds: 200), (_) {
+      if (!mounted) return;
       setState(() {
         _barHeights = List.generate(10, (index) => Random().nextDouble() * 40 + 10);
       });
@@ -315,18 +313,82 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
     _barUpdateTimer?.cancel();
   }
 
-  void _checkPermissions() async {
-    var status = await Permission.microphone.request();
-    if (status.isGranted) {
-      _initSpeech();
+  // NEW: gestion de l’erreur différée
+  void _scheduleDeferredErrorDisplay() {
+    _errorDelayTimer?.cancel();
+    _errorDelayTimer = Timer(const Duration(seconds: 2), () {
+      if (!mounted) return;
+      // n’affiche l’erreur que si rien n’a changé: pas d’enregistrement en cours et aucun résultat déjà affiché
+      if (!isRecording && !viewResulte) {
+        setState(() {
+          viewResulte = true;
+          isCorrect = false;
+        });
+      }
+    });
+  }
+
+  void _cancelDeferredErrorDisplay() {
+    _errorDelayTimer?.cancel();
+    _errorDelayTimer = null;
+  }
+
+  // ---- RESET de l'état d'enregistrement/affichage/anim ----
+  void _resetRecordingState() {
+    _cancelDeferredErrorDisplay();
+    _lastWords = '';
+    isCorrect = false;
+    viewResulte = false;
+    _animationController.reset();
+    _barHeights = List.generate(10, (_) => 10);
+    setState(() {});
+  }
+
+  void _toggleRecording() {
+    if (isRecording) {
+      _stopListening();
     } else {
-      Logger.Red.log(context.loc.pronunciation_error5);
+      _startListening();
+    }
+    setState(() {
+      isRecording = _speechToText.isListening;
+    });
+  }
+
+  // ---- INIT avec listeners de statut/erreur ----
+  void _onSpeechStatus(String status) {
+    Logger.Yellow.log("Speech status: $status");
+    _cancelDeferredErrorDisplay(); // tout changement annule l’erreur différée
+    if (status == 'notListening') {
+      _stopAnimation();
+      if (mounted) {
+        setState(() {
+          isRecording = false;
+        });
+      }
     }
   }
 
-  void _initSpeech() async {
+  void _onSpeechError(SpeechRecognitionError error) {
+    Logger.Red.log("Speech error: ${error.errorMsg} (${error.permanent})");
+    _stopAnimation();
+    _cancelDeferredErrorDisplay();
+    if (mounted) {
+      setState(() {
+        isRecording = false;
+        // NE PAS afficher tout de suite -> on programme l’affichage dans 2s
+        // viewResulte reste false pour l’instant
+      });
+    }
+    _scheduleDeferredErrorDisplay();
+  }
+
+  Future<void> _initSpeech() async {
     try {
-      _speechEnabled = await _speechToText.initialize();
+      _speechEnabled = await _speechToText.initialize(
+        onStatus: _onSpeechStatus,
+        onError: _onSpeechError,
+      );
       Logger.Yellow.log("_initSpeech: $_speechEnabled");
       if (!_speechEnabled) {
         Logger.Red.log(context.loc.pronunciation_error1);
@@ -334,48 +396,75 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
     } catch (e) {
       Logger.Red.log('${context.loc.pronunciation_error2} : $e');
       _speechEnabled = false;
+      // ici, on ne déclenche pas l’affichage d’erreur différé pour ne pas spammer au boot
     }
-   // setState(() {});
   }
-
-
-
 
   void _startListening() async {
     Logger.Yellow.log("_startListening");
     if (_speechEnabled) {
       Logger.Yellow.log("_speechEnabled: $_speechEnabled");
       try {
+        await _speechToText.cancel();
+        _resetRecordingState();
+        _cancelDeferredErrorDisplay();
+
         await _speechToText.listen(
           onResult: _onSpeechResult,
-          listenFor: Duration(seconds: 10), // Set a timeout for listening
-          localeId: 'en_US', // Specify the locale if needed
+          listenFor: const Duration(seconds: 3),
+          localeId: 'en_US',
           listenOptions: SpeechListenOptions(
             partialResults: true,
             onDevice: true,
-            // Use on-device recognition if available
-          )
-          // cancelOnError: true, // If deprecated, handle errors manually
+          ),
         );
+
         setState(() {
           viewResulte = false;
           isRecording = true;
         });
+        _startAnimation();
       } catch (e) {
         Logger.Red.log('${context.loc.pronunciation_error3} : $e');
+        _stopAnimation();
+        setState(() {
+          isRecording = false;
+          // pas d’affichage immédiat de l’erreur
+        });
+        _scheduleDeferredErrorDisplay();
       }
     } else {
       Logger.Red.log(context.loc.pronunciation_error4);
+      // si on n’est pas prêt à écouter, on propose l’erreur après 2s
+      _scheduleDeferredErrorDisplay();
     }
   }
 
-
+  // ✅ Succès immédiat si le partiel matche, sinon on attend la fin
   void _onSpeechResult(SpeechRecognitionResult result) {
-    //Logger.Yellow.log('Résultat de la reconnaissance vocale : ${result.recognizedWords} $isRecording ${result.finalResult}');
+    _cancelDeferredErrorDisplay(); // un résultat est arrivé, donc l’erreur différée n’est plus pertinente
+
+    final normalized = replaceNumbersWithWords(result.recognizedWords);
+    final nowCorrect = normalized.toLowerCase().trim() == vocabularyEnSelected.toLowerCase().trim();
+
     setState(() {
-      _lastWords = replaceNumbersWithWords(result.recognizedWords);
-      if (result.finalResult) {
-        isCorrect = _lastWords.toLowerCase() == vocabularyEnSelected.toLowerCase();
+      _lastWords = normalized;
+
+      // debug
+      // ignore: avoid_print
+      print("***************** $_lastWords");
+      // ignore: avoid_print
+      print("***************** *${_lastWords.toLowerCase()}* == *${vocabularyEnSelected.toLowerCase()}* ");
+
+      if (nowCorrect) {
+        isCorrect = true;
+        _stopListening();   // stop micro
+        _stopAnimation();   // stop anim
+        isRecording = false;
+        viewResulte = true; // ✅ immédiat
+      } else if (result.finalResult) {
+        // Fin d’écoute et ce n’est pas correct -> affiche ❌
+        isCorrect = false;
         _stopListening();
         _stopAnimation();
         isRecording = false;
@@ -383,6 +472,7 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
       }
     });
   }
+
   String replaceNumbersWithWords(String input) {
     final Map<String, String> numberWords = {
       '0': 'zero',
@@ -410,26 +500,26 @@ class _PronunciationScreenState extends State<PronunciationScreen> with SingleTi
       '30': 'thirty',
       '50': 'fifty',
       '100': 'one hundred',
-      // Ajoute plus si nécessaire
     };
 
     final regex = RegExp(r'\b\d+\b');
     return input.replaceAllMapped(regex, (match) {
       final word = numberWords[match.group(0)];
-      return word ?? match.group(0)!; // Laisse tel quel si non trouvé
+      return word ?? match.group(0)!;
     });
   }
 
   void _stopListening() async {
     Logger.Yellow.log("_stopListening");
-    await _speechToText.stop();
+    try {
+      await _speechToText.stop();
+    } catch (_) {}
+    _stopAnimation();
+    _cancelDeferredErrorDisplay(); // un stop manuel annule l’erreur différée
     setState(() {
-      isRecording=false;
+      isRecording = false;
     });
   }
-
-
-
 }
 
 class RippleCircle extends StatelessWidget {

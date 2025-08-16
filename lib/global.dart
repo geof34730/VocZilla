@@ -1,7 +1,7 @@
 String titleApp="VocZilla";
 int titleAppCute1=3;
 String versionApp="1.0.0";
-bool debugMode= false;
+bool debugMode= true;
 bool testScreenShot = false;
 int daysFreeTrial=7;
 String emailTestRevisionStore="voczilla.test2@flutter-now.com";
