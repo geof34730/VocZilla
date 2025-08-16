@@ -9,7 +9,7 @@ class AppLocalizationsHu extends AppLocalizations {
   AppLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get app_release_note => 'A VocZilla első verziójának telepítése';
+  String get app_release_note => 'Új verzió: egyszerűsített használat az anonim azonosításnak köszönhetően, fiók vagy regisztráció nélkül, az alkalmazásengedélyek minden nyelvre lefordítva.';
 
   @override
   String get share_list_perso_alert_disponible => 'A listamegosztási funkció hamarosan elérhető lesz!';

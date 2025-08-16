@@ -9,7 +9,7 @@ class AppLocalizationsUr extends AppLocalizations {
   AppLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla کے پہلے ورژن کی تعیناتی۔';
+  String get app_release_note => 'نیا ورژن: گمنام شناخت کی بدولت آسان استعمال، اکاؤنٹ یا رجسٹریشن کے بغیر، تمام زبانوں میں ایپ کی اجازتوں کا ترجمہ۔';
 
   @override
   String get share_list_perso_alert_disponible => 'لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!';

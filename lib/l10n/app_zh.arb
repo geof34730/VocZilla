@@ -1,5 +1,5 @@
 {
-    "app_release_note": "部署 VocZilla 的第一个版本",
+    "app_release_note": "新版本：通过匿名识别简化了使用，无需帐户或注册，将应用程序权限翻译成所有语言。",
     "share_list_perso_alert_disponible": "列表共享功能即将推出！",
     "information": "信息",
     "app_title": "VocZilla",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "确认密码",
     "login_entrer_confirmer_mot_de_passe": "请重新输入您的密码",
     "login_mots_de_passe_differents": "密码不匹配",
-    "login_tous_champs_obligatoires": "请填写所有字段"
+    "login_tous_champs_obligatoires": "请填写所有字段",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

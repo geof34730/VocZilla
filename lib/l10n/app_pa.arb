@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla ਦੇ ਪਹਿਲੇ ਸੰਸਕਰਣ ਦੀ ਤੈਨਾਤੀ",
+    "app_release_note": "ਨਵਾਂ ਸੰਸਕਰਣ: ਗੁਮਨਾਮ ਪਛਾਣ, ਖਾਤੇ ਜਾਂ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਤੋਂ ਬਿਨਾਂ, ਐਪ ਅਨੁਮਤੀਆਂ ਦਾ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰਕੇ ਸਰਲ ਵਰਤੋਂ।",
     "share_list_perso_alert_disponible": "ਸੂਚੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਹੁਤ ਜਲਦੀ ਉਪਲਬਧ ਹੋਵੇਗੀ!",
     "information": "ਜਾਣਕਾਰੀ",
     "app_title": "ਵੋਜ਼ਿਲਾ",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "ਪਾਸਵਰਡ ਪੱਕਾ ਕਰੋ",
     "login_entrer_confirmer_mot_de_passe": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਪਾਸਵਰਡ ਦੁਬਾਰਾ ਦਰਜ ਕਰੋ।",
     "login_mots_de_passe_differents": "ਪਾਸਵਰਡ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ",
-    "login_tous_champs_obligatoires": "ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੇ ਖੇਤਰ ਭਰੋ।"
+    "login_tous_champs_obligatoires": "ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੇ ਖੇਤਰ ਭਰੋ।",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

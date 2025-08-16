@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Implementación da primeira versión de VocZilla",
+    "app_release_note": "Nova versión: uso simplificado grazas á identificación anónima, sen conta nin rexistro, tradución dos permisos da aplicación a todos os idiomas.",
     "share_list_perso_alert_disponible": "A función para compartir listas estará dispoñible moi pronto!",
     "information": "Información",
     "app_title": "VocZilla",
@@ -173,5 +173,47 @@
     "login_confirmer_mot_de_passe": "Confirmar contrasinal",
     "login_entrer_confirmer_mot_de_passe": "Volva introducir o seu contrasinal",
     "login_mots_de_passe_differents": "Os contrasinais non coinciden",
-    "login_tous_champs_obligatoires": "Por favor, encha todos os campos"
+    "login_tous_champs_obligatoires": "Por favor, encha todos os campos",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@audios": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@quizz_en": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@non": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

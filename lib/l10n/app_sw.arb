@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Usambazaji wa toleo la kwanza la VocZilla",
+    "app_release_note": "Toleo jipya: matumizi yaliyorahisishwa kutokana na utambulisho usiojulikana, bila akaunti au usajili, tafsiri ya ruhusa za programu katika lugha zote.",
     "share_list_perso_alert_disponible": "Kipengele cha kushiriki orodha kitapatikana hivi karibuni!",
     "information": "Habari",
     "app_title": "VocZilla",
@@ -173,5 +173,29 @@
     "login_confirmer_mot_de_passe": "Thibitisha nenosiri",
     "login_entrer_confirmer_mot_de_passe": "Tafadhali ingiza tena nenosiri lako",
     "login_mots_de_passe_differents": "Manenosiri hayalingani",
-    "login_tous_champs_obligatoires": "Tafadhali jaza sehemu zote"
+    "login_tous_champs_obligatoires": "Tafadhali jaza sehemu zote",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

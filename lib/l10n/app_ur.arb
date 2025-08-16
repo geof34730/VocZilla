@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla کے پہلے ورژن کی تعیناتی۔",
+    "app_release_note": "نیا ورژن: گمنام شناخت کی بدولت آسان استعمال، اکاؤنٹ یا رجسٹریشن کے بغیر، تمام زبانوں میں ایپ کی اجازتوں کا ترجمہ۔",
     "share_list_perso_alert_disponible": "لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!",
     "information": "معلومات",
     "app_title": "ووک زیلا",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "پاس ورڈ کی تصدیق کریں۔",
     "login_entrer_confirmer_mot_de_passe": "براہ کرم اپنا پاس ورڈ دوبارہ درج کریں۔",
     "login_mots_de_passe_differents": "پاس ورڈز مماثل نہیں ہیں۔",
-    "login_tous_champs_obligatoires": "براہ کرم تمام فیلڈز کو پُر کریں۔"
+    "login_tous_champs_obligatoires": "براہ کرم تمام فیلڈز کو پُر کریں۔",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

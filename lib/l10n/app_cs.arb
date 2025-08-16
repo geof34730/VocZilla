@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Nasazení první verze VocZilly",
+    "app_release_note": "Nová verze: zjednodušené používání díky anonymní identifikaci, bez účtu nebo registrace, překlad oprávnění aplikace do všech jazyků.",
     "share_list_perso_alert_disponible": "Funkce sdílení seznamů bude k dispozici velmi brzy!",
     "information": "Informace",
     "app_title": "VocZilla",
@@ -173,5 +173,23 @@
     "login_confirmer_mot_de_passe": "Potvrzení hesla",
     "login_entrer_confirmer_mot_de_passe": "Zadejte prosím znovu své heslo",
     "login_mots_de_passe_differents": "Hesla se neshodují",
-    "login_tous_champs_obligatoires": "Vyplňte prosím všechna pole"
+    "login_tous_champs_obligatoires": "Vyplňte prosím všechna pole",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

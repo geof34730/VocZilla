@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla биринчи версиясын жайылтуу",
+    "app_release_note": "Жаңы версия: эсепсиз же каттоосуз, анонимдүү идентификациянын аркасында жөнөкөйлөштүрүлгөн колдонуу, колдонмонун уруксаттарын бардык тилдерге которуу.",
     "share_list_perso_alert_disponible": "Тизме менен бөлүшүү функциясы жакында жеткиликтүү болот!",
     "information": "Маалымат",
     "app_title": "VocZilla",
@@ -173,5 +173,29 @@
     "login_confirmer_mot_de_passe": "Сырсөздү ыраста",
     "login_entrer_confirmer_mot_de_passe": "Сырсөзүңүздү кайра киргизиңиз",
     "login_mots_de_passe_differents": "Сырсөздөр дал келбейт",
-    "login_tous_champs_obligatoires": "Сураныч, бардык талааларды толтуруңуз"
+    "login_tous_champs_obligatoires": "Сураныч, бардык талааларды толтуруңуз",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@login_email": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

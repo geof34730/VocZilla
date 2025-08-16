@@ -9,7 +9,7 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla 첫 번째 버전 배포';
+  String get app_release_note => '새로운 버전: 계정이나 등록 없이 익명으로 식별하여 사용이 간편해졌으며, 앱 권한이 모든 언어로 번역되었습니다.';
 
   @override
   String get share_list_perso_alert_disponible => '목록 공유 기능이 곧 출시됩니다!';
@@ -18,7 +18,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get information => '정보';
 
   @override
-  String get app_title => 'VocZilla';
+  String get app_title => '보크질라';
 
   @override
   String get app_subtitle => '영어 어휘';

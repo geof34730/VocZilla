@@ -9,7 +9,7 @@ class AppLocalizationsIs extends AppLocalizations {
   AppLocalizationsIs([String locale = 'is']) : super(locale);
 
   @override
-  String get app_release_note => 'Útfærsla fyrstu útgáfunnar af VocZilla';
+  String get app_release_note => 'Ný útgáfa: einfölduð notkun þökk sé nafnlausri auðkenningu, án aðgangs eða skráningar, þýðing á forritsheimildum á öll tungumál.';
 
   @override
   String get share_list_perso_alert_disponible => 'Aðgerðin til að deila listanum verður tiltæk mjög fljótlega!';

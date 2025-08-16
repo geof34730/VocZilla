@@ -1,5 +1,5 @@
 {
-    "app_release_note": "פריסת הגרסה הראשונה של VocZilla",
+    "app_release_note": "גרסה חדשה: שימוש פשוט יותר הודות לזיהוי אנונימי, ללא חשבון או רישום, תרגום הרשאות האפליקציה לכל השפות.",
     "share_list_perso_alert_disponible": "תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!",
     "information": "מֵידָע",
     "app_title": "ווקסילה",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "אשר סיסמה",
     "login_entrer_confirmer_mot_de_passe": "אנא הזן שוב את הסיסמה שלך",
     "login_mots_de_passe_differents": "הסיסמאות אינן תואמות",
-    "login_tous_champs_obligatoires": "אנא מלאו את כל השדות"
+    "login_tous_champs_obligatoires": "אנא מלאו את כל השדות",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

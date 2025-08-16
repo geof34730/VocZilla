@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Implementering af den første version af VocZilla",
+    "app_release_note": "Ny version: forenklet brug takket være anonym identifikation, uden konto eller registrering, oversættelse af apptilladelserne til alle sprog.",
     "share_list_perso_alert_disponible": "Funktionen til deling af lister vil være tilgængelig meget snart!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -173,5 +173,41 @@
     "login_confirmer_mot_de_passe": "Bekræft adgangskode",
     "login_entrer_confirmer_mot_de_passe": "Indtast venligst din adgangskode igen",
     "login_mots_de_passe_differents": "Adgangskoderne stemmer ikke overens",
-    "login_tous_champs_obligatoires": "Udfyld venligst alle felter"
+    "login_tous_champs_obligatoires": "Udfyld venligst alle felter",
+    "@information": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@liste_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

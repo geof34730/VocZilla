@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla-ს პირველი ვერსიის განლაგება",
+    "app_release_note": "ახალი ვერსია: გამარტივებული გამოყენება ანონიმური იდენტიფიკაციის წყალობით, ანგარიშის ან რეგისტრაციის გარეშე, აპლიკაციის ნებართვების ყველა ენაზე თარგმნა.",
     "share_list_perso_alert_disponible": "სიის გაზიარების ფუნქცია ძალიან მალე იქნება ხელმისაწვდომი!",
     "information": "ინფორმაცია",
     "app_title": "ვოკზილა",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "დაადასტურეთ პაროლი",
     "login_entrer_confirmer_mot_de_passe": "გთხოვთ, ხელახლა შეიყვანოთ თქვენი პაროლი",
     "login_mots_de_passe_differents": "პაროლები არ ემთხვევა",
-    "login_tous_champs_obligatoires": "გთხოვთ, შეავსოთ ყველა ველი"
+    "login_tous_champs_obligatoires": "გთხოვთ, შეავსოთ ყველა ველი",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

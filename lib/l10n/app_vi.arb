@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Triển khai phiên bản đầu tiên của VocZilla",
+    "app_release_note": "Phiên bản mới: sử dụng đơn giản hơn nhờ tính năng nhận dạng ẩn danh, không cần tài khoản hoặc đăng ký, dịch quyền ứng dụng sang mọi ngôn ngữ.",
     "share_list_perso_alert_disponible": "Tính năng chia sẻ danh sách sẽ sớm có mặt!",
     "information": "Thông tin",
     "app_title": "VocZilla",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "Xác nhận mật khẩu",
     "login_entrer_confirmer_mot_de_passe": "Vui lòng nhập lại mật khẩu của bạn",
     "login_mots_de_passe_differents": "Mật khẩu không khớp",
-    "login_tous_champs_obligatoires": "Vui lòng điền vào tất cả các trường"
+    "login_tous_champs_obligatoires": "Vui lòng điền vào tất cả các trường",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

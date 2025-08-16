@@ -9,7 +9,7 @@ class AppLocalizationsMl extends AppLocalizations {
   AppLocalizationsMl([String locale = 'ml']) : super(locale);
 
   @override
-  String get app_release_note => 'വോക്‌സില്ലയുടെ ആദ്യ പതിപ്പിന്റെ വിന്യാസം';
+  String get app_release_note => 'പുതിയ പതിപ്പ്: അക്കൗണ്ടോ രജിസ്ട്രേഷനോ ഇല്ലാതെ അജ്ഞാത തിരിച്ചറിയൽ, ആപ്പ് അനുമതികൾ എല്ലാ ഭാഷകളിലേക്കും വിവർത്തനം ചെയ്യൽ എന്നിവയിലൂടെ ലളിതമാക്കിയ ഉപയോഗം.';
 
   @override
   String get share_list_perso_alert_disponible => 'ലിസ്റ്റ് പങ്കിടൽ സവിശേഷത വളരെ വേഗം ലഭ്യമാകും!';

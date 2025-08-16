@@ -9,7 +9,7 @@ class AppLocalizationsZu extends AppLocalizations {
   AppLocalizationsZu([String locale = 'zu']) : super(locale);
 
   @override
-  String get app_release_note => 'Ukuthunyelwa kwenguqulo yokuqala ye-VocZilla';
+  String get app_release_note => 'Inguqulo entsha: ukusetshenziswa okulula ngenxa yokuhlonza okungaziwa, ngaphandle kwe-akhawunti noma ukubhaliswa, ukuhunyushwa kwezimvume zohlelo lokusebenza kuzo zonke izilimi.';
 
   @override
   String get share_list_perso_alert_disponible => 'Isici sokwabelana ngohlu sizotholakala maduze!';

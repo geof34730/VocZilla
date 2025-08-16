@@ -47,7 +47,6 @@ Drawer DrawerNavigation({
     ),
   );
 }
-
 /// Builds the header of the drawer, displaying user information.
 Widget _buildDrawerHeader(BuildContext context) {
   return DrawerHeader(
@@ -57,7 +56,111 @@ Widget _buildDrawerHeader(BuildContext context) {
         // If the user is authenticated, display their profile information.
         if (authState is AuthAuthenticated) {
           final userProfile = authState.userProfile;
-          final String pseudo = userProfile.pseudo ?? '';
+          final String pseudo = userProfile.pseudo;
+
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  // Display the user's avatar or a default one.
+                  userProfile.imageAvatar.isNotEmpty
+                      ? ClipOval(
+                        child: Image.memory(
+                          base64Decode(userProfile.imageAvatar),
+                          width: 60,
+                          height: 60,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Avatar(
+                              radius: 30,
+                              name: GetValidName(pseudo),
+                              fontsize: 30,
+                            );
+                          },
+                        ),
+                      )
+                      : Avatar(
+                    radius: 30,
+                    name: GetValidName(pseudo),
+                    fontsize: 30,
+                  ),
+                  const SizedBox(width: 12),
+                  // Display pseudo and full name.
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.min, // largeur minimum
+                          children: [
+                            Flexible(
+                              child: Text(
+                                pseudo,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                            Padding(
+                             padding: EdgeInsets.only(left:5),
+                            child:ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                padding: const EdgeInsets.all(4),
+                                minimumSize: const Size(0, 0),
+                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+
+                                elevation: 0,
+                              ),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.pushNamed(context, AppRoute.updateProfile);
+                              },
+                              child: const Icon(
+                                Icons.edit,
+                                size: 22,
+                              ),
+                            ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+
+
+                ],
+              ),
+              const Spacer(),
+              // Language selection dropdown.
+              Center(
+                child: _buildLanguageDropdown(context),
+              ),
+            ],
+          );
+        }
+        // Show a loading indicator while the auth state is being determined.
+        return const Center(child: CircularProgressIndicator());
+      },
+    ),
+  );
+}
+
+
+
+/// Builds the header of the drawer, displaying user information.
+/*Widget _buildDrawerHeader(BuildContext context) {
+  return DrawerHeader(
+    decoration: BoxDecoration(color: Colors.cyan[200]),
+    child: BlocBuilder<AuthBloc, AuthState>(
+      builder: (context, authState) {
+        // If the user is authenticated, display their profile information.
+        if (authState is AuthAuthenticated) {
+          final userProfile = authState.userProfile;
+          final String pseudo = userProfile.pseudo;
 
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -99,6 +202,7 @@ Widget _buildDrawerHeader(BuildContext context) {
                           overflow: TextOverflow.ellipsis,
                         ),
 
+
                       ],
                     ),
                   ),
@@ -117,7 +221,7 @@ Widget _buildDrawerHeader(BuildContext context) {
       },
     ),
   );
-}
+}*/
 
 
 Widget _buildLanguageDropdown(BuildContext context) {

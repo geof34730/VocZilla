@@ -1,5 +1,5 @@
 {
-    "app_release_note": "वोकज़िला के पहले संस्करण की तैनाती",
+    "app_release_note": "नया संस्करण: अनाम पहचान, बिना खाते या पंजीकरण के, सभी भाषाओं में ऐप अनुमतियों के अनुवाद के कारण सरलीकृत उपयोग।",
     "share_list_perso_alert_disponible": "सूची साझा करने की सुविधा बहुत जल्द उपलब्ध होगी!",
     "information": "जानकारी",
     "app_title": "वोकज़िला",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "पासवर्ड की पुष्टि कीजिये",
     "login_entrer_confirmer_mot_de_passe": "कृपया अपना पासवर्ड पुनः दर्ज करें",
     "login_mots_de_passe_differents": "सांकेतिक शब्द मेल नहीं खाते",
-    "login_tous_champs_obligatoires": "कृपया सभी स्थानों को भरें"
+    "login_tous_champs_obligatoires": "कृपया सभी स्थानों को भरें",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

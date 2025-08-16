@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Implementacija prve verzije VocZille",
+    "app_release_note": "Nova verzija: pojednostavljeno korištenje zahvaljujući anonimnoj identifikaciji, bez računa ili registracije, prijevod dopuštenja aplikacije na sve jezike.",
     "share_list_perso_alert_disponible": "Funkcija dijeljenja popisa bit će dostupna vrlo brzo!",
     "information": "Informacija",
     "app_title": "VocZilla",
@@ -173,5 +173,23 @@
     "login_confirmer_mot_de_passe": "Potvrdite lozinku",
     "login_entrer_confirmer_mot_de_passe": "Molimo vas da ponovno unesete svoju lozinku",
     "login_mots_de_passe_differents": "Lozinke se ne podudaraju",
-    "login_tous_champs_obligatoires": "Molimo ispunite sva polja"
+    "login_tous_champs_obligatoires": "Molimo ispunite sva polja",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

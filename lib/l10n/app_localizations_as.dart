@@ -9,7 +9,7 @@ class AppLocalizationsAs extends AppLocalizations {
   AppLocalizationsAs([String locale = 'as']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla ৰ প্ৰথম সংস্কৰণৰ মোতায়েন';
+  String get app_release_note => 'নতুন সংস্কৰণ: বেনামী চিনাক্তকৰণৰ বাবে ধন্যবাদ, একাউণ্ট বা পঞ্জীয়ন অবিহনে, এপৰ অনুমতিসমূহৰ সকলো ভাষালৈ অনুবাদ।';
 
   @override
   String get share_list_perso_alert_disponible => 'অতি সোনকালে উপলব্ধ হ’ব তালিকা শ্বেয়াৰিং বৈশিষ্ট্য!';

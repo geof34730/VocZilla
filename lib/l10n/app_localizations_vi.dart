@@ -9,7 +9,7 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get app_release_note => 'Triển khai phiên bản đầu tiên của VocZilla';
+  String get app_release_note => 'Phiên bản mới: sử dụng đơn giản hơn nhờ tính năng nhận dạng ẩn danh, không cần tài khoản hoặc đăng ký, dịch quyền ứng dụng sang mọi ngôn ngữ.';
 
   @override
   String get share_list_perso_alert_disponible => 'Tính năng chia sẻ danh sách sẽ sớm có mặt!';

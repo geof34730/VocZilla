@@ -9,7 +9,7 @@ class AppLocalizationsKa extends AppLocalizations {
   AppLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla-ს პირველი ვერსიის განლაგება';
+  String get app_release_note => 'ახალი ვერსია: გამარტივებული გამოყენება ანონიმური იდენტიფიკაციის წყალობით, ანგარიშის ან რეგისტრაციის გარეშე, აპლიკაციის ნებართვების ყველა ენაზე თარგმნა.';
 
   @override
   String get share_list_perso_alert_disponible => 'სიის გაზიარების ფუნქცია ძალიან მალე იქნება ხელმისაწვდომი!';

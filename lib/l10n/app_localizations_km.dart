@@ -9,7 +9,7 @@ class AppLocalizationsKm extends AppLocalizations {
   AppLocalizationsKm([String locale = 'km']) : super(locale);
 
   @override
-  String get app_release_note => 'ការដាក់ពង្រាយកំណែដំបូងនៃ VocZilla';
+  String get app_release_note => 'កំណែថ្មី៖ ការប្រើប្រាស់យ៉ាងសាមញ្ញ ដោយសារការកំណត់អត្តសញ្ញាណអនាមិក ដោយគ្មានគណនី ឬការចុះឈ្មោះ ការបកប្រែការអនុញ្ញាតកម្មវិធីទៅជាភាសាទាំងអស់។';
 
   @override
   String get share_list_perso_alert_disponible => 'មុខងារចែករំលែកបញ្ជីនឹងមានក្នុងពេលឆាប់ៗនេះ!';

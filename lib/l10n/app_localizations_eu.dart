@@ -9,7 +9,7 @@ class AppLocalizationsEu extends AppLocalizations {
   AppLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZillaren lehen bertsioaren hedapena';
+  String get app_release_note => 'Bertsio berria: erabilera sinplifikatua identifikazio anonimoari esker, konturik edo erregistrorik gabe, aplikazioaren baimenak hizkuntza guztietara itzultzea.';
 
   @override
   String get share_list_perso_alert_disponible => 'Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!';

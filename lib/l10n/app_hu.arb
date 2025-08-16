@@ -1,5 +1,5 @@
 {
-    "app_release_note": "A VocZilla első verziójának telepítése",
+    "app_release_note": "Új verzió: egyszerűsített használat az anonim azonosításnak köszönhetően, fiók vagy regisztráció nélkül, az alkalmazásengedélyek minden nyelvre lefordítva.",
     "share_list_perso_alert_disponible": "A listamegosztási funkció hamarosan elérhető lesz!",
     "information": "Információ",
     "app_title": "VocZilla",
@@ -173,5 +173,23 @@
     "login_confirmer_mot_de_passe": "Jelszó megerősítése",
     "login_entrer_confirmer_mot_de_passe": "Kérjük, adja meg újra a jelszavát",
     "login_mots_de_passe_differents": "A jelszavak nem egyeznek",
-    "login_tous_champs_obligatoires": "Kérjük, töltse ki az összes mezőt"
+    "login_tous_champs_obligatoires": "Kérjük, töltse ki az összes mezőt",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@login_email": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

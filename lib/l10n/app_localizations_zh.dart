@@ -9,7 +9,7 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get app_release_note => '部署 VocZilla 的第一个版本';
+  String get app_release_note => '新版本：通过匿名识别简化了使用，无需帐户或注册，将应用程序权限翻译成所有语言。';
 
   @override
   String get share_list_perso_alert_disponible => '列表共享功能即将推出！';

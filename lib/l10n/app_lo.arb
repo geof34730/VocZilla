@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ການນຳໃຊ້ VocZilla ລຸ້ນທຳອິດ",
+    "app_release_note": "ເວີຊັນໃໝ່: ການນຳໃຊ້ແບບງ່າຍດາຍຍ້ອນການລະບຸຕົວຕົນແບບບໍ່ເປີດເຜີຍຊື່, ໂດຍບໍ່ມີບັນຊີ ຫຼື ການລົງທະບຽນ, ການແປການອະນຸຍາດແອັບເປັນທຸກພາສາ.",
     "share_list_perso_alert_disponible": "ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!",
     "information": "ຂໍ້ມູນ",
     "app_title": "VocZilla",
@@ -173,5 +173,29 @@
     "login_confirmer_mot_de_passe": "ຢືນຢັນລະຫັດຜ່ານ",
     "login_entrer_confirmer_mot_de_passe": "ກະລຸນາໃສ່ລະຫັດຜ່ານຂອງທ່ານຄືນໃໝ່",
     "login_mots_de_passe_differents": "ລະຫັດຜ່ານບໍ່ກົງກັນ",
-    "login_tous_champs_obligatoires": "ກະລຸນາຕື່ມຂໍ້ມູນໃສ່ໃນທຸກຊ່ອງ"
+    "login_tous_champs_obligatoires": "ກະລຸນາຕື່ມຂໍ້ມູນໃສ່ໃນທຸກຊ່ອງ",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@pronunciation_success": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

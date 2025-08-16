@@ -9,7 +9,7 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
-  String get app_release_note => 'Utrulling av den første versjonen av VocZilla';
+  String get app_release_note => 'Ny versjon: forenklet bruk takket være anonym identifikasjon, uten konto eller registrering, oversettelse av apptillatelsene til alle språk.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksjonen for deling av lister vil være tilgjengelig veldig snart!';

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Ontplooiing van die eerste weergawe van VocZilla",
+    "app_release_note": "Nuwe weergawe: vereenvoudigde gebruik danksy anonieme identifikasie, sonder rekening of registrasie, vertaling van die toepassing se toestemmings in alle tale.",
     "share_list_perso_alert_disponible": "Die lysdelingsfunksie sal binnekort beskikbaar wees!",
     "information": "Inligting",
     "app_title": "VocZilla",
@@ -173,5 +173,29 @@
     "login_confirmer_mot_de_passe": "Bevestig wagwoord",
     "login_entrer_confirmer_mot_de_passe": "Voer asseblief u wagwoord weer in",
     "login_mots_de_passe_differents": "Wagwoorde stem nie ooreen nie",
-    "login_tous_champs_obligatoires": "Vul asseblief alle velde in"
+    "login_tous_champs_obligatoires": "Vul asseblief alle velde in",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

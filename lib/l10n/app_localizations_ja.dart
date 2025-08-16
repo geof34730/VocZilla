@@ -9,7 +9,7 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZillaの最初のバージョンの展開';
+  String get app_release_note => '新バージョン: 匿名識別によりアカウントや登録が不要になり、アプリの権限がすべての言語に翻訳されるため、使用が簡素化されます。';
 
   @override
   String get share_list_perso_alert_disponible => 'リスト共有機能はまもなく利用可能になります。';

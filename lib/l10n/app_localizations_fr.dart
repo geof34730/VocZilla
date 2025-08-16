@@ -9,7 +9,7 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get app_release_note => 'Déploiement première version de VocZilla';
+  String get app_release_note => 'Nouvelle version : utilisation simplifiée grâce à une identification anonyme, sans compte ni inscription, traduction des autorisations de l\'app dans toutes les langues.';
 
   @override
   String get share_list_perso_alert_disponible => 'La fonctionnalité de partage de liste sera disponible très prochainement !';

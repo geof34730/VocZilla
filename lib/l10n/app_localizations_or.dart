@@ -9,7 +9,7 @@ class AppLocalizationsOr extends AppLocalizations {
   AppLocalizationsOr([String locale = 'or']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZillaର ପ୍ରଥମ ସଂସ୍କରଣର ନିୟୋଜନ';
+  String get app_release_note => 'ନୂତନ ସଂସ୍କରଣ: ବେନାମୀ ପରିଚୟ ପାଇଁ ସରଳୀକୃତ ବ୍ୟବହାର, ଆକାଉଣ୍ଟ କିମ୍ବା ପଞ୍ଜିକରଣ ବିନା, ଆପ୍ ଅନୁମତିର ସମସ୍ତ ଭାଷାରେ ଅନୁବାଦ।';
 
   @override
   String get share_list_perso_alert_disponible => 'ତାଲିକା ସେୟାରିଂ ବୈଶିଷ୍ଟ୍ୟ ଖୁବ୍ ଶୀଘ୍ର ଉପଲବ୍ଧ ହେବ!';

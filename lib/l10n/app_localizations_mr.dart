@@ -9,7 +9,7 @@ class AppLocalizationsMr extends AppLocalizations {
   AppLocalizationsMr([String locale = 'mr']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla च्या पहिल्या आवृत्तीची तैनाती';
+  String get app_release_note => 'नवीन आवृत्ती: अनामिक ओळख, खाते किंवा नोंदणीशिवाय, अ‍ॅप परवानग्यांचे सर्व भाषांमध्ये भाषांतर यामुळे वापर सुलभ केला आहे.';
 
   @override
   String get share_list_perso_alert_disponible => 'यादी शेअरिंग वैशिष्ट्य लवकरच उपलब्ध होईल!';

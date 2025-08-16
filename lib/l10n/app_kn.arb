@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla ನ ಮೊದಲ ಆವೃತ್ತಿಯ ನಿಯೋಜನೆ",
+    "app_release_note": "ಹೊಸ ಆವೃತ್ತಿ: ಖಾತೆ ಅಥವಾ ನೋಂದಣಿ ಇಲ್ಲದೆ ಅನಾಮಧೇಯ ಗುರುತಿಸುವಿಕೆ, ಅಪ್ಲಿಕೇಶನ್ ಅನುಮತಿಗಳನ್ನು ಎಲ್ಲಾ ಭಾಷೆಗಳಿಗೆ ಅನುವಾದಿಸುವುದರಿಂದ ಸರಳೀಕೃತ ಬಳಕೆ.",
     "share_list_perso_alert_disponible": "ಪಟ್ಟಿ ಹಂಚಿಕೆ ವೈಶಿಷ್ಟ್ಯವು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಿರುತ್ತದೆ!",
     "information": "ಮಾಹಿತಿ",
     "app_title": "ವೋಕ್‌ಜಿಲ್ಲಾ",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "ಪಾಸ್‌ವರ್ಡ್ ದೃಢೀಕರಿಸಿ",
     "login_entrer_confirmer_mot_de_passe": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಮರು ನಮೂದಿಸಿ.",
     "login_mots_de_passe_differents": "ಪಾಸ್‌ವರ್ಡ್‌ಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ.",
-    "login_tous_champs_obligatoires": "ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ."
+    "login_tous_champs_obligatoires": "ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ.",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

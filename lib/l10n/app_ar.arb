@@ -1,5 +1,5 @@
 {
-    "app_release_note": "نشر الإصدار الأول من VocZilla",
+    "app_release_note": "الإصدار الجديد: استخدام مبسط بفضل التعريف المجهول، دون حساب أو تسجيل، وترجمة أذونات التطبيق إلى جميع اللغات.",
     "share_list_perso_alert_disponible": "ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!",
     "information": "معلومة",
     "app_title": "فوكزيلا",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "تأكيد كلمة المرور",
     "login_entrer_confirmer_mot_de_passe": "الرجاء إعادة إدخال كلمة المرور الخاصة بك",
     "login_mots_de_passe_differents": "كلمات المرور غير متطابقة",
-    "login_tous_champs_obligatoires": "الرجاء ملء جميع الحقول"
+    "login_tous_champs_obligatoires": "الرجاء ملء جميع الحقول",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

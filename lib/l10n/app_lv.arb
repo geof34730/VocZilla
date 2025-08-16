@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Pirmās VocZilla versijas ieviešana",
+    "app_release_note": "Jauna versija: vienkāršota lietošana, pateicoties anonīmai identifikācijai, bez konta vai reģistrācijas, lietotnes atļauju tulkošana visās valodās.",
     "share_list_perso_alert_disponible": "Saraksta koplietošanas funkcija būs pieejama jau pavisam drīz!",
     "information": "Informācija",
     "app_title": "VocZilla",
@@ -173,5 +173,29 @@
     "login_confirmer_mot_de_passe": "Apstiprināt paroli",
     "login_entrer_confirmer_mot_de_passe": "Lūdzu, atkārtoti ievadiet savu paroli.",
     "login_mots_de_passe_differents": "Paroles nesakrīt",
-    "login_tous_champs_obligatoires": "Lūdzu, aizpildiet visus laukus"
+    "login_tous_champs_obligatoires": "Lūdzu, aizpildiet visus laukus",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

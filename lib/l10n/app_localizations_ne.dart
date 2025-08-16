@@ -9,7 +9,7 @@ class AppLocalizationsNe extends AppLocalizations {
   AppLocalizationsNe([String locale = 'ne']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla को पहिलो संस्करणको तैनाती';
+  String get app_release_note => 'नयाँ संस्करण: बेनामी पहिचानको लागि सरलीकृत प्रयोग, खाता वा दर्ता बिना, सबै भाषाहरूमा एप अनुमतिहरूको अनुवाद।';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझेदारी सुविधा चाँडै उपलब्ध हुनेछ!';

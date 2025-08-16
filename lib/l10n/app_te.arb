@@ -1,5 +1,5 @@
 {
-    "app_release_note": "వోక్జిల్లా యొక్క మొదటి వెర్షన్ యొక్క విస్తరణ",
+    "app_release_note": "కొత్త వెర్షన్: ఖాతా లేదా రిజిస్ట్రేషన్ లేకుండా అనామక గుర్తింపు, యాప్ అనుమతులను అన్ని భాషల్లోకి అనువదించడం ద్వారా సరళీకృత ఉపయోగం.",
     "share_list_perso_alert_disponible": "జాబితా భాగస్వామ్య ఫీచర్ అతి త్వరలో అందుబాటులోకి వస్తుంది!",
     "information": "సమాచారం",
     "app_title": "వోక్జిల్లా",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "పాస్‌వర్డ్‌ను నిర్ధారించండి",
     "login_entrer_confirmer_mot_de_passe": "దయచేసి మీ పాస్‌వర్డ్‌ను తిరిగి నమోదు చేయండి.",
     "login_mots_de_passe_differents": "పాస్‌వర్డ్‌లు సరిపోలడం లేదు.",
-    "login_tous_champs_obligatoires": "దయచేసి అన్ని ఫీల్డ్‌లను పూరించండి."
+    "login_tous_champs_obligatoires": "దయచేసి అన్ని ఫీల్డ్‌లను పూరించండి.",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

@@ -9,7 +9,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get app_release_note => 'వోక్జిల్లా యొక్క మొదటి వెర్షన్ యొక్క విస్తరణ';
+  String get app_release_note => 'కొత్త వెర్షన్: ఖాతా లేదా రిజిస్ట్రేషన్ లేకుండా అనామక గుర్తింపు, యాప్ అనుమతులను అన్ని భాషల్లోకి అనువదించడం ద్వారా సరళీకృత ఉపయోగం.';
 
   @override
   String get share_list_perso_alert_disponible => 'జాబితా భాగస్వామ్య ఫీచర్ అతి త్వరలో అందుబాటులోకి వస్తుంది!';

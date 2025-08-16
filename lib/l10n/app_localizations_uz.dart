@@ -9,7 +9,7 @@ class AppLocalizationsUz extends AppLocalizations {
   AppLocalizationsUz([String locale = 'uz']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla ning birinchi versiyasini o\'rnatish';
+  String get app_release_note => 'Yangi versiya: anonim identifikatsiya tufayli soddalashtirilgan foydalanish, hisobsiz yoki ro\'yxatdan o\'tmasdan, ilova ruxsatnomalarini barcha tillarga tarjima qilish.';
 
   @override
   String get share_list_perso_alert_disponible => 'Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!';

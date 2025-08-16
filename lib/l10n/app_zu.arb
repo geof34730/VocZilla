@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Ukuthunyelwa kwenguqulo yokuqala ye-VocZilla",
+    "app_release_note": "Inguqulo entsha: ukusetshenziswa okulula ngenxa yokuhlonza okungaziwa, ngaphandle kwe-akhawunti noma ukubhaliswa, ukuhunyushwa kwezimvume zohlelo lokusebenza kuzo zonke izilimi.",
     "share_list_perso_alert_disponible": "Isici sokwabelana ngohlu sizotholakala maduze!",
     "information": "Ulwazi",
     "app_title": "VocZilla",
@@ -173,5 +173,23 @@
     "login_confirmer_mot_de_passe": "Qinisekisa Iphasiwedi",
     "login_entrer_confirmer_mot_de_passe": "Sicela ufake kabusha iphasiwedi yakho",
     "login_mots_de_passe_differents": "Amagama-mfihlo awafani",
-    "login_tous_champs_obligatoires": "Sicela ugcwalise zonke izinkambu"
+    "login_tous_champs_obligatoires": "Sicela ugcwalise zonke izinkambu",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

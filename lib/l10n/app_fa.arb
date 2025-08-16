@@ -1,5 +1,5 @@
 {
-    "app_release_note": "استقرار اولین نسخه VocZilla",
+    "app_release_note": "نسخه جدید: استفاده ساده به لطف شناسایی ناشناس، بدون نیاز به حساب کاربری یا ثبت نام، ترجمه مجوزهای برنامه به همه زبان‌ها.",
     "share_list_perso_alert_disponible": "قابلیت اشتراک‌گذاری لیست خیلی زود در دسترس قرار خواهد گرفت!",
     "information": "اطلاعات",
     "app_title": "وُکزیلا",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "تأیید رمز عبور",
     "login_entrer_confirmer_mot_de_passe": "لطفا رمز عبور خود را دوباره وارد کنید",
     "login_mots_de_passe_differents": "رمزهای عبور مطابقت ندارند",
-    "login_tous_champs_obligatoires": "لطفا همه فیلدها را پر کنید"
+    "login_tous_champs_obligatoires": "لطفا همه فیلدها را پر کنید",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

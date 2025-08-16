@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla च्या पहिल्या आवृत्तीची तैनाती",
+    "app_release_note": "नवीन आवृत्ती: अनामिक ओळख, खाते किंवा नोंदणीशिवाय, अ‍ॅप परवानग्यांचे सर्व भाषांमध्ये भाषांतर यामुळे वापर सुलभ केला आहे.",
     "share_list_perso_alert_disponible": "यादी शेअरिंग वैशिष्ट्य लवकरच उपलब्ध होईल!",
     "information": "माहिती",
     "app_title": "व्होकझिला",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "पासवर्डची पुष्टी करा",
     "login_entrer_confirmer_mot_de_passe": "कृपया तुमचा पासवर्ड पुन्हा एंटर करा.",
     "login_mots_de_passe_differents": "पासवर्ड जुळत नाहीत.",
-    "login_tous_champs_obligatoires": "कृपया सर्व फील्ड भरा."
+    "login_tous_champs_obligatoires": "कृपया सर्व फील्ड भरा.",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla ના પ્રથમ સંસ્કરણનું જમાવટ",
+    "app_release_note": "નવું સંસ્કરણ: અનામી ઓળખ, એકાઉન્ટ અથવા નોંધણી વિના, એપ્લિકેશન પરવાનગીઓનો બધી ભાષાઓમાં અનુવાદ, સરળ ઉપયોગ.",
     "share_list_perso_alert_disponible": "યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!",
     "information": "માહિતી",
     "app_title": "વોકઝિલા",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "પાસવર્ડ કન્ફર્મ કરો",
     "login_entrer_confirmer_mot_de_passe": "કૃપા કરીને તમારો પાસવર્ડ ફરીથી દાખલ કરો.",
     "login_mots_de_passe_differents": "પાસવર્ડ્સ મેળ ખાતા નથી.",
-    "login_tous_champs_obligatoires": "કૃપા કરીને બધા ફીલ્ડ ભરો."
+    "login_tous_champs_obligatoires": "કૃપા કરીને બધા ફીલ્ડ ભરો.",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

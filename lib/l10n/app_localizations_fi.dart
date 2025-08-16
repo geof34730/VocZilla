@@ -9,7 +9,7 @@ class AppLocalizationsFi extends AppLocalizations {
   AppLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZillan ensimmäisen version käyttöönotto';
+  String get app_release_note => 'Uusi versio: yksinkertaistettu käyttö anonyymin tunnistuksen ansiosta, ilman tiliä tai rekisteröitymistä, sovelluksen käyttöoikeuksien käännös kaikille kielille.';
 
   @override
   String get share_list_perso_alert_disponible => 'Listan jakamisominaisuus on saatavilla pian!';

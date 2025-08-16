@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla को पहिलो संस्करणको तैनाती",
+    "app_release_note": "नयाँ संस्करण: बेनामी पहिचानको लागि सरलीकृत प्रयोग, खाता वा दर्ता बिना, सबै भाषाहरूमा एप अनुमतिहरूको अनुवाद।",
     "share_list_perso_alert_disponible": "सूची साझेदारी सुविधा चाँडै उपलब्ध हुनेछ!",
     "information": "जानकारी",
     "app_title": "भोकजिला",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "पासवर्ड पुष्टि गर्नुहोस्",
     "login_entrer_confirmer_mot_de_passe": "कृपया आफ्नो पासवर्ड पुन: प्रविष्ट गर्नुहोस्।",
     "login_mots_de_passe_differents": "पासवर्डहरू मेल खाँदैनन्।",
-    "login_tous_champs_obligatoires": "कृपया सबै क्षेत्रहरू भर्नुहोस्।"
+    "login_tous_champs_obligatoires": "कृपया सबै क्षेत्रहरू भर्नुहोस्।",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Implementació de la primera versió de VocZilla",
+    "app_release_note": "Nova versió: ús simplificat gràcies a la identificació anònima, sense compte ni registre, traducció dels permisos de l'aplicació a tots els idiomes.",
     "share_list_perso_alert_disponible": "La funció de compartir llistes estarà disponible molt aviat!",
     "information": "Informació",
     "app_title": "VocZilla",
@@ -173,5 +173,41 @@
     "login_confirmer_mot_de_passe": "Confirma la contrasenya",
     "login_entrer_confirmer_mot_de_passe": "Si us plau, torneu a introduir la vostra contrasenya",
     "login_mots_de_passe_differents": "Les contrasenyes no coincideixen",
-    "login_tous_champs_obligatoires": "Si us plau, ompliu tots els camps"
+    "login_tous_champs_obligatoires": "Si us plau, ompliu tots els camps",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@login_nom": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@drawer_free_trial_restant": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

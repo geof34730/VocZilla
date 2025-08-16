@@ -9,7 +9,7 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla\'nın ilk sürümünün dağıtımı';
+  String get app_release_note => 'Yeni versiyon: Anonim kimlik doğrulama, hesap veya kayıt gerektirmeme, uygulama izinlerinin tüm dillere çevrilmesi sayesinde basitleştirilmiş kullanım.';
 
   @override
   String get share_list_perso_alert_disponible => 'Liste paylaşım özelliği çok yakında kullanıma sunulacak!';

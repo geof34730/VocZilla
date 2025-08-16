@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla ৰ প্ৰথম সংস্কৰণৰ মোতায়েন",
+    "app_release_note": "নতুন সংস্কৰণ: বেনামী চিনাক্তকৰণৰ বাবে ধন্যবাদ, একাউণ্ট বা পঞ্জীয়ন অবিহনে, এপৰ অনুমতিসমূহৰ সকলো ভাষালৈ অনুবাদ।",
     "share_list_perso_alert_disponible": "অতি সোনকালে উপলব্ধ হ’ব তালিকা শ্বেয়াৰিং বৈশিষ্ট্য!",
     "information": "তথ্য",
     "app_title": "VocZilla",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "পাছৱৰ্ড নিশ্চিত কৰক",
     "login_entrer_confirmer_mot_de_passe": "অনুগ্ৰহ কৰি আপোনাৰ পাছৱৰ্ড পুনৰ প্ৰৱেশ কৰক",
     "login_mots_de_passe_differents": "পাছৱৰ্ডৰ মিল নাই",
-    "login_tous_champs_obligatoires": "সকলো ক্ষেত্ৰ পূৰণ কৰিবলৈ অনুৰোধ জনালোঁ"
+    "login_tous_champs_obligatoires": "সকলো ক্ষেত্ৰ পূৰণ কৰিবলৈ অনুৰোধ জনালোঁ",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

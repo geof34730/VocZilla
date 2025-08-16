@@ -9,7 +9,7 @@ class AppLocalizationsCa extends AppLocalizations {
   AppLocalizationsCa([String locale = 'ca']) : super(locale);
 
   @override
-  String get app_release_note => 'Implementació de la primera versió de VocZilla';
+  String get app_release_note => 'Nova versió: ús simplificat gràcies a la identificació anònima, sense compte ni registre, traducció dels permisos de l\'aplicació a tots els idiomes.';
 
   @override
   String get share_list_perso_alert_disponible => 'La funció de compartir llistes estarà disponible molt aviat!';

@@ -9,7 +9,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla ના પ્રથમ સંસ્કરણનું જમાવટ';
+  String get app_release_note => 'નવું સંસ્કરણ: અનામી ઓળખ, એકાઉન્ટ અથવા નોંધણી વિના, એપ્લિકેશન પરવાનગીઓનો બધી ભાષાઓમાં અનુવાદ, સરળ ઉપયોગ.';
 
   @override
   String get share_list_perso_alert_disponible => 'યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!';

@@ -9,7 +9,7 @@ class AppLocalizationsKn extends AppLocalizations {
   AppLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla ನ ಮೊದಲ ಆವೃತ್ತಿಯ ನಿಯೋಜನೆ';
+  String get app_release_note => 'ಹೊಸ ಆವೃತ್ತಿ: ಖಾತೆ ಅಥವಾ ನೋಂದಣಿ ಇಲ್ಲದೆ ಅನಾಮಧೇಯ ಗುರುತಿಸುವಿಕೆ, ಅಪ್ಲಿಕೇಶನ್ ಅನುಮತಿಗಳನ್ನು ಎಲ್ಲಾ ಭಾಷೆಗಳಿಗೆ ಅನುವಾದಿಸುವುದರಿಂದ ಸರಳೀಕೃತ ಬಳಕೆ.';
 
   @override
   String get share_list_perso_alert_disponible => 'ಪಟ್ಟಿ ಹಂಚಿಕೆ ವೈಶಿಷ್ಟ್ಯವು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಿರುತ್ತದೆ!';

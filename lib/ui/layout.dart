@@ -10,7 +10,7 @@ import 'package:vobzilla/ui/widget/appBar/AppBarLogged.dart';
 import 'package:vobzilla/ui/widget/appBar/AppBarNotLogged.dart';
 import 'package:vobzilla/ui/widget/bottomNavigationBar/BottomNavigationBarVocabulary.dart';
 
-import 'package:vobzilla/ui/widget/drawer/DrawerLocalisation.dart';
+
 import 'package:vobzilla/ui/widget/drawer/DrawerNavigation.dart';
 import 'package:vobzilla/ui/widget/elements/debug.dart';
 import 'package:vobzilla/ui/widget/home/TitleWidget.dart';
@@ -52,9 +52,7 @@ class Layout extends StatelessWidget {
       appBar: AuthAppBar(scaffoldKey: scaffoldKey, appBarNotLogged: appBarNotLogged),
       endDrawer: BlocBuilder<DrawerBloc, DrawerState>(
         builder: (context, state) {
-          if (state is LocalisationDrawerState) {
-            return DrawerLocalisation();
-          } else if (state is SettingsDrawerState) {
+         if (state is SettingsDrawerState) {
             return DrawerNavigation(context: context);
           }
           return Container(); // État par défaut ou vide

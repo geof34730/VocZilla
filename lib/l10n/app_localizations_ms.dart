@@ -9,7 +9,7 @@ class AppLocalizationsMs extends AppLocalizations {
   AppLocalizationsMs([String locale = 'ms']) : super(locale);
 
   @override
-  String get app_release_note => 'Penggunaan versi pertama VocZilla';
+  String get app_release_note => 'Versi baharu: penggunaan dipermudahkan terima kasih kepada pengenalan tanpa nama, tanpa akaun atau pendaftaran, terjemahan kebenaran apl ke dalam semua bahasa.';
 
   @override
   String get share_list_perso_alert_disponible => 'Ciri perkongsian senarai akan tersedia tidak lama lagi!';

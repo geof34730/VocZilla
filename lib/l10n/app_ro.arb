@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Implementarea primei versiuni de VocZilla",
+    "app_release_note": "Versiune nouă: utilizare simplificată datorită identificării anonime, fără cont sau înregistrare, traducerea permisiunilor aplicației în toate limbile.",
     "share_list_perso_alert_disponible": "Funcția de partajare a listei va fi disponibilă foarte curând!",
     "information": "Informaţii",
     "app_title": "VocZilla",
@@ -173,5 +173,29 @@
     "login_confirmer_mot_de_passe": "Confirmați parola",
     "login_entrer_confirmer_mot_de_passe": "Vă rugăm să reintroduceți parola",
     "login_mots_de_passe_differents": "Parolele nu se potrivesc",
-    "login_tous_champs_obligatoires": "Vă rugăm să completați toate câmpurile"
+    "login_tous_champs_obligatoires": "Vă rugăm să completați toate câmpurile",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@non": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "การปรับใช้ VocZilla เวอร์ชันแรก",
+    "app_release_note": "เวอร์ชันใหม่: ใช้งานง่ายขึ้นด้วยการระบุตัวตนแบบไม่เปิดเผยตัวตน ไม่ต้องใช้บัญชีหรือลงทะเบียน แปลสิทธิ์การใช้งานแอปเป็นทุกภาษา",
     "share_list_perso_alert_disponible": "ฟีเจอร์การแชร์รายการจะพร้อมใช้งานเร็วๆ นี้!",
     "information": "ข้อมูล",
     "app_title": "วอคซิลล่า",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "ยืนยันรหัสผ่าน",
     "login_entrer_confirmer_mot_de_passe": "กรุณากรอกรหัสผ่านอีกครั้ง",
     "login_mots_de_passe_differents": "รหัสผ่านไม่ตรงกัน",
-    "login_tous_champs_obligatoires": "กรุณากรอกข้อมูลให้ครบทุกช่อง"
+    "login_tous_champs_obligatoires": "กรุณากรอกข้อมูลให้ครบทุกช่อง",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

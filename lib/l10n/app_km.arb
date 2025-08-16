@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ការដាក់ពង្រាយកំណែដំបូងនៃ VocZilla",
+    "app_release_note": "កំណែថ្មី៖ ការប្រើប្រាស់យ៉ាងសាមញ្ញ ដោយសារការកំណត់អត្តសញ្ញាណអនាមិក ដោយគ្មានគណនី ឬការចុះឈ្មោះ ការបកប្រែការអនុញ្ញាតកម្មវិធីទៅជាភាសាទាំងអស់។",
     "share_list_perso_alert_disponible": "មុខងារចែករំលែកបញ្ជីនឹងមានក្នុងពេលឆាប់ៗនេះ!",
     "information": "ព័ត៌មាន",
     "app_title": "វ៉ុកហ្សីឡា",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "បញ្ជាក់ពាក្យសម្ងាត់",
     "login_entrer_confirmer_mot_de_passe": "សូមបញ្ចូលពាក្យសម្ងាត់របស់អ្នកឡើងវិញ",
     "login_mots_de_passe_differents": "ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ។",
-    "login_tous_champs_obligatoires": "សូមបំពេញគ្រប់វិស័យ"
+    "login_tous_champs_obligatoires": "សូមបំពេញគ្រប់វិស័យ",
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

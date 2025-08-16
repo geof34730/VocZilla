@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla-এর প্রথম সংস্করণের স্থাপনা",
+    "app_release_note": "নতুন সংস্করণ: বেনামী শনাক্তকরণের মাধ্যমে সরলীকৃত ব্যবহার, অ্যাকাউন্ট বা নিবন্ধন ছাড়াই, অ্যাপের অনুমতি সকল ভাষায় অনুবাদ করা হয়েছে।",
     "share_list_perso_alert_disponible": "তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!",
     "information": "তথ্য",
     "app_title": "VocZilla সম্পর্কে",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "পাসওয়ার্ড নিশ্চিত করুন",
     "login_entrer_confirmer_mot_de_passe": "অনুগ্রহ করে আপনার পাসওয়ার্ড পুনরায় লিখুন।",
     "login_mots_de_passe_differents": "পাসওয়ার্ড মিলছে না।",
-    "login_tous_champs_obligatoires": "অনুগ্রহ করে সমস্ত ক্ষেত্র পূরণ করুন।"
+    "login_tous_champs_obligatoires": "অনুগ্রহ করে সমস্ত ক্ষেত্র পূরণ করুন।",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

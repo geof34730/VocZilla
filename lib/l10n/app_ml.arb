@@ -1,5 +1,5 @@
 {
-    "app_release_note": "വോക്‌സില്ലയുടെ ആദ്യ പതിപ്പിന്റെ വിന്യാസം",
+    "app_release_note": "പുതിയ പതിപ്പ്: അക്കൗണ്ടോ രജിസ്ട്രേഷനോ ഇല്ലാതെ അജ്ഞാത തിരിച്ചറിയൽ, ആപ്പ് അനുമതികൾ എല്ലാ ഭാഷകളിലേക്കും വിവർത്തനം ചെയ്യൽ എന്നിവയിലൂടെ ലളിതമാക്കിയ ഉപയോഗം.",
     "share_list_perso_alert_disponible": "ലിസ്റ്റ് പങ്കിടൽ സവിശേഷത വളരെ വേഗം ലഭ്യമാകും!",
     "information": "വിവരങ്ങൾ",
     "app_title": "വോക്‌സില്ല",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "പാസ്വേഡ് സ്ഥിരീകരിക്കുക",
     "login_entrer_confirmer_mot_de_passe": "ദയവായി നിങ്ങളുടെ പാസ്‌വേഡ് വീണ്ടും നൽകുക.",
     "login_mots_de_passe_differents": "പാസ്‌വേഡുകൾ പൊരുത്തപ്പെടുന്നില്ല.",
-    "login_tous_champs_obligatoires": "ദയവായി എല്ലാ ഫീൽഡുകളും പൂരിപ്പിക്കുക."
+    "login_tous_champs_obligatoires": "ദയവായി എല്ലാ ഫീൽഡുകളും പൂരിപ്പിക്കുക.",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

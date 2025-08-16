@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Имплементација прве верзије VocZilla-е",
+    "app_release_note": "Нова верзија: поједностављена употреба захваљујући анонимној идентификацији, без налога или регистрације, превод дозвола апликације на све језике.",
     "share_list_perso_alert_disponible": "Функција дељења листе биће доступна ускоро!",
     "information": "Информације",
     "app_title": "ВокЗила",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "Потврдите лозинку",
     "login_entrer_confirmer_mot_de_passe": "Молимо вас да поново унесете лозинку",
     "login_mots_de_passe_differents": "Лозинке се не подударају",
-    "login_tous_champs_obligatoires": "Молимо вас да попуните сва поља"
+    "login_tous_champs_obligatoires": "Молимо вас да попуните сва поља",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

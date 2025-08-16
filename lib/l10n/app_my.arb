@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla ၏ပထမဗားရှင်းကိုဖြန့်ကျက်ခြင်း။",
+    "app_release_note": "ဗားရှင်းအသစ်- အကောင့် သို့မဟုတ် မှတ်ပုံတင်ခြင်းမရှိဘဲ၊ အက်ပ်ခွင့်ပြုချက်များကို ဘာသာစကားအားလုံးသို့ ဘာသာပြန်ဆိုခြင်းမပြုဘဲ အမည်မသိသက်သေခံခြင်း၏ ကျေးဇူးတင်စကားကြောင့် ရိုးရှင်းသောအသုံးပြုမှု။",
     "share_list_perso_alert_disponible": "စာရင်းမျှဝေခြင်းအင်္ဂါရပ်ကို မကြာမီ ရနိုင်ပါမည်။",
     "information": "သတင်းအချက်အလက်",
     "app_title": "VocZilla",
@@ -173,5 +173,29 @@
     "login_confirmer_mot_de_passe": "စကားဝှက်အတည်ပြုခြင်း",
     "login_entrer_confirmer_mot_de_passe": "သင့်စကားဝှက်ကို ပြန်ထည့်ပါ။",
     "login_mots_de_passe_differents": "စကားဝှက်များ မတိုက်ဆိုင်ပါ။",
-    "login_tous_champs_obligatoires": "ကွက်လပ်အားလုံးကို ဖြည့်ပါ။"
+    "login_tous_champs_obligatoires": "ကွက်လပ်အားလုံးကို ဖြည့်ပါ။",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@pronunciation_success": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

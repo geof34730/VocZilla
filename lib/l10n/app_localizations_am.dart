@@ -9,7 +9,7 @@ class AppLocalizationsAm extends AppLocalizations {
   AppLocalizationsAm([String locale = 'am']) : super(locale);
 
   @override
-  String get app_release_note => 'የ VocZilla የመጀመሪያ ስሪት መዘርጋት';
+  String get app_release_note => 'አዲስ ስሪት፡ የቀላል አጠቃቀም ምስጋና ይግባውና ስም-አልባ መታወቂያ፣ ያለ መለያ ወይም ምዝገባ፣ የመተግበሪያው ፈቃዶች ወደ ሁሉም ቋንቋዎች መተርጎም።';
 
   @override
   String get share_list_perso_alert_disponible => 'የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!';

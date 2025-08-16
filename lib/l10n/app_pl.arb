@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Wdrożenie pierwszej wersji VocZilli",
+    "app_release_note": "Nowa wersja: uproszczone korzystanie dzięki anonimowej identyfikacji, bez konta i rejestracji, tłumaczenie uprawnień aplikacji na wszystkie języki.",
     "share_list_perso_alert_disponible": "Funkcja udostępniania list będzie dostępna już wkrótce!",
     "information": "Informacja",
     "app_title": "VocZilla",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "Potwierdź hasło",
     "login_entrer_confirmer_mot_de_passe": "Proszę ponownie wpisać hasło",
     "login_mots_de_passe_differents": "Hasła nie pasują",
-    "login_tous_champs_obligatoires": "Proszę wypełnić wszystkie pola"
+    "login_tous_champs_obligatoires": "Proszę wypełnić wszystkie pola",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

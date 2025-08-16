@@ -1,5 +1,5 @@
 {
-    "app_release_note": "የ VocZilla የመጀመሪያ ስሪት መዘርጋት",
+    "app_release_note": "አዲስ ስሪት፡ የቀላል አጠቃቀም ምስጋና ይግባውና ስም-አልባ መታወቂያ፣ ያለ መለያ ወይም ምዝገባ፣ የመተግበሪያው ፈቃዶች ወደ ሁሉም ቋንቋዎች መተርጎም።",
     "share_list_perso_alert_disponible": "የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!",
     "information": "መረጃ",
     "app_title": "VocZilla",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "የይለፍ ቃል ያረጋግጡ",
     "login_entrer_confirmer_mot_de_passe": "እባክዎ የይለፍ ቃልዎን እንደገና ያስገቡ",
     "login_mots_de_passe_differents": "የይለፍ ቃሎች አይዛመዱም።",
-    "login_tous_champs_obligatoires": "እባክዎ ሁሉንም መስኮች ይሙሉ"
+    "login_tous_champs_obligatoires": "እባክዎ ሁሉንም መስኮች ይሙሉ",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

@@ -9,7 +9,7 @@ class AppLocalizationsAf extends AppLocalizations {
   AppLocalizationsAf([String locale = 'af']) : super(locale);
 
   @override
-  String get app_release_note => 'Ontplooiing van die eerste weergawe van VocZilla';
+  String get app_release_note => 'Nuwe weergawe: vereenvoudigde gebruik danksy anonieme identifikasie, sonder rekening of registrasie, vertaling van die toepassing se toestemmings in alle tale.';
 
   @override
   String get share_list_perso_alert_disponible => 'Die lysdelingsfunksie sal binnekort beskikbaar wees!';

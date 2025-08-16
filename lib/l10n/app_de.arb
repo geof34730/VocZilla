@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Bereitstellung der ersten Version von VocZilla",
+    "app_release_note": "Neue Version: Vereinfachte Nutzung dank anonymer Identifizierung, ohne Account oder Registrierung, Übersetzung der App-Berechtigungen in alle Sprachen.",
     "share_list_perso_alert_disponible": "Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -173,5 +173,47 @@
     "login_confirmer_mot_de_passe": "Passwort bestätigen",
     "login_entrer_confirmer_mot_de_passe": "Bitte geben Sie Ihr Passwort erneut ein",
     "login_mots_de_passe_differents": "Passwörter stimmen nicht überein",
-    "login_tous_champs_obligatoires": "Bitte füllen Sie alle Felder aus"
+    "login_tous_champs_obligatoires": "Bitte füllen Sie alle Felder aus",
+    "@information": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@liste_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@audios": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

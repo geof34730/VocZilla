@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Разгръщане на първата версия на VocZilla",
+    "app_release_note": "Нова версия: опростена употреба благодарение на анонимна идентификация, без акаунт или регистрация, превод на разрешенията на приложението на всички езици.",
     "share_list_perso_alert_disponible": "Функцията за споделяне на списъци ще бъде достъпна съвсем скоро!",
     "information": "Информация",
     "app_title": "VocZilla",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "Потвърдете паролата",
     "login_entrer_confirmer_mot_de_passe": "Моля, въведете отново паролата си",
     "login_mots_de_passe_differents": "Паролите не съвпадат",
-    "login_tous_champs_obligatoires": "Моля, попълнете всички полета"
+    "login_tous_champs_obligatoires": "Моля, попълнете всички полета",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

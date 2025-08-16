@@ -9,7 +9,7 @@ class AppLocalizationsSq extends AppLocalizations {
   AppLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
-  String get app_release_note => 'Vendosja e versionit të parë të VocZilla-s';
+  String get app_release_note => 'Version i ri: përdorim i thjeshtuar falë identifikimit anonim, pa llogari ose regjistrim, përkthim i lejeve të aplikacionit në të gjitha gjuhët.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksioni i ndarjes së listës do të jetë i disponueshëm shumë shpejt!';

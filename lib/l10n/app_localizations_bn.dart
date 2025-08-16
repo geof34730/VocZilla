@@ -9,7 +9,7 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla-এর প্রথম সংস্করণের স্থাপনা';
+  String get app_release_note => 'নতুন সংস্করণ: বেনামী শনাক্তকরণের মাধ্যমে সরলীকৃত ব্যবহার, অ্যাকাউন্ট বা নিবন্ধন ছাড়াই, অ্যাপের অনুমতি সকল ভাষায় অনুবাদ করা হয়েছে।';
 
   @override
   String get share_list_perso_alert_disponible => 'তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!';

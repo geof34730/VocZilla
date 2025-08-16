@@ -9,7 +9,7 @@ class AppLocalizationsTh extends AppLocalizations {
   AppLocalizationsTh([String locale = 'th']) : super(locale);
 
   @override
-  String get app_release_note => 'การปรับใช้ VocZilla เวอร์ชันแรก';
+  String get app_release_note => 'เวอร์ชันใหม่: ใช้งานง่ายขึ้นด้วยการระบุตัวตนแบบไม่เปิดเผยตัวตน ไม่ต้องใช้บัญชีหรือลงทะเบียน แปลสิทธิ์การใช้งานแอปเป็นทุกภาษา';
 
   @override
   String get share_list_perso_alert_disponible => 'ฟีเจอร์การแชร์รายการจะพร้อมใช้งานเร็วๆ นี้!';

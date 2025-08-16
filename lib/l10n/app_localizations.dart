@@ -238,7 +238,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_release_note.
   ///
   /// In en, this message translates to:
-  /// **'Deployment of the first version of VocZilla'**
+  /// **'New version: simplified use thanks to anonymous identification, without account or registration, translation of the app permissions into all languages.'**
   String get app_release_note;
 
   /// No description provided for @share_list_perso_alert_disponible.

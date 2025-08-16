@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Penggunaan versi pertama VocZilla",
+    "app_release_note": "Versi baharu: penggunaan dipermudahkan terima kasih kepada pengenalan tanpa nama, tanpa akaun atau pendaftaran, terjemahan kebenaran apl ke dalam semua bahasa.",
     "share_list_perso_alert_disponible": "Ciri perkongsian senarai akan tersedia tidak lama lagi!",
     "information": "Maklumat",
     "app_title": "VocZilla",
@@ -173,5 +173,35 @@
     "login_confirmer_mot_de_passe": "Sahkan kata laluan",
     "login_entrer_confirmer_mot_de_passe": "Sila masukkan semula kata laluan anda",
     "login_mots_de_passe_differents": "Kata laluan tidak sepadan",
-    "login_tous_champs_obligatoires": "Sila isi semua ruangan"
+    "login_tous_champs_obligatoires": "Sila isi semua ruangan",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@pronunciation_success": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

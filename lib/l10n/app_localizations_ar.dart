@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get app_release_note => 'نشر الإصدار الأول من VocZilla';
+  String get app_release_note => 'الإصدار الجديد: استخدام مبسط بفضل التعريف المجهول، دون حساب أو تسجيل، وترجمة أذونات التطبيق إلى جميع اللغات.';
 
   @override
   String get share_list_perso_alert_disponible => 'ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!';

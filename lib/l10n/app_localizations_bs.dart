@@ -9,7 +9,7 @@ class AppLocalizationsBs extends AppLocalizations {
   AppLocalizationsBs([String locale = 'bs']) : super(locale);
 
   @override
-  String get app_release_note => 'Implementacija prve verzije VocZille';
+  String get app_release_note => 'Nova verzija: pojednostavljeno korištenje zahvaljujući anonimnoj identifikaciji, bez računa ili registracije, prijevod dozvola aplikacije na sve jezike.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija dijeljenja liste bit će dostupna vrlo brzo!';

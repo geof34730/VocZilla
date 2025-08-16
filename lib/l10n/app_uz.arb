@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla ning birinchi versiyasini o'rnatish",
+    "app_release_note": "Yangi versiya: anonim identifikatsiya tufayli soddalashtirilgan foydalanish, hisobsiz yoki ro'yxatdan o'tmasdan, ilova ruxsatnomalarini barcha tillarga tarjima qilish.",
     "share_list_perso_alert_disponible": "Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!",
     "information": "Ma'lumot",
     "app_title": "VocZilla",
@@ -173,5 +173,35 @@
     "login_confirmer_mot_de_passe": "Parolni tasdiqlang",
     "login_entrer_confirmer_mot_de_passe": "Parolingizni qayta kiriting",
     "login_mots_de_passe_differents": "Parollar mos kelmaydi",
-    "login_tous_champs_obligatoires": "Iltimos, barcha maydonlarni toʻldiring"
+    "login_tous_champs_obligatoires": "Iltimos, barcha maydonlarni toʻldiring",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@pronunciation_success": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

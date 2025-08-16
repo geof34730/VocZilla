@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla-ի առաջին տարբերակի տեղակայումը",
+    "app_release_note": "Նոր տարբերակ՝ պարզեցված օգտագործում՝ անանուն նույնականացման շնորհիվ, առանց հաշվի կամ գրանցման, հավելվածի թույլտվությունների թարգմանություն բոլոր լեզուներով։",
     "share_list_perso_alert_disponible": "Ցուցակի համօգտագործման գործառույթը շատ շուտով հասանելի կլինի։",
     "information": "Տեղեկատվություն",
     "app_title": "VocZilla",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "Հաստատել գաղտնաբառը",
     "login_entrer_confirmer_mot_de_passe": "Խնդրում ենք կրկին մուտքագրել ձեր գաղտնաբառը",
     "login_mots_de_passe_differents": "Գաղտնաբառերը չեն համընկնում",
-    "login_tous_champs_obligatoires": "Խնդրում ենք լրացնել բոլոր դաշտերը"
+    "login_tous_champs_obligatoires": "Խնդրում ենք լրացնել բոլոր դաշտերը",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

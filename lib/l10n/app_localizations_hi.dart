@@ -9,7 +9,7 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get app_release_note => 'वोकज़िला के पहले संस्करण की तैनाती';
+  String get app_release_note => 'नया संस्करण: अनाम पहचान, बिना खाते या पंजीकरण के, सभी भाषाओं में ऐप अनुमतियों के अनुवाद के कारण सरलीकृत उपयोग।';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझा करने की सुविधा बहुत जल्द उपलब्ध होगी!';

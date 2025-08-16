@@ -9,7 +9,7 @@ class AppLocalizationsLo extends AppLocalizations {
   AppLocalizationsLo([String locale = 'lo']) : super(locale);
 
   @override
-  String get app_release_note => 'ການນຳໃຊ້ VocZilla ລຸ້ນທຳອິດ';
+  String get app_release_note => 'ເວີຊັນໃໝ່: ການນຳໃຊ້ແບບງ່າຍດາຍຍ້ອນການລະບຸຕົວຕົນແບບບໍ່ເປີດເຜີຍຊື່, ໂດຍບໍ່ມີບັນຊີ ຫຼື ການລົງທະບຽນ, ການແປການອະນຸຍາດແອັບເປັນທຸກພາສາ.';
 
   @override
   String get share_list_perso_alert_disponible => 'ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!';

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Ανάπτυξη της πρώτης έκδοσης του VocZilla",
+    "app_release_note": "Νέα έκδοση: απλοποιημένη χρήση χάρη στην ανώνυμη αναγνώριση, χωρίς λογαριασμό ή εγγραφή, μετάφραση των δικαιωμάτων εφαρμογής σε όλες τις γλώσσες.",
     "share_list_perso_alert_disponible": "Η λειτουργία κοινής χρήσης λίστας θα είναι διαθέσιμη πολύ σύντομα!",
     "information": "Πληροφορίες",
     "app_title": "VocZilla",
@@ -173,5 +173,17 @@
     "login_confirmer_mot_de_passe": "Επιβεβαίωση κωδικού πρόσβασης",
     "login_entrer_confirmer_mot_de_passe": "Παρακαλώ εισάγετε ξανά τον κωδικό πρόσβασής σας",
     "login_mots_de_passe_differents": "Οι κωδικοί πρόσβασης δεν ταιριάζουν",
-    "login_tous_champs_obligatoires": "Παρακαλώ συμπληρώστε όλα τα πεδία"
+    "login_tous_champs_obligatoires": "Παρακαλώ συμπληρώστε όλα τα πεδία",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

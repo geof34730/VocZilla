@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Despliegue de la primera versión de VocZilla",
+    "app_release_note": "Nueva versión: uso simplificado gracias a la identificación anónima, sin cuenta ni registro, traducción de los permisos de la aplicación a todos los idiomas.",
     "share_list_perso_alert_disponible": "¡La función para compartir listas estará disponible muy pronto!",
     "information": "Información",
     "app_title": "VocZilla",
@@ -173,5 +173,41 @@
     "login_confirmer_mot_de_passe": "Confirmar Contraseña",
     "login_entrer_confirmer_mot_de_passe": "Por favor, vuelva a introducir su contraseña",
     "login_mots_de_passe_differents": "Las contraseñas no coinciden",
-    "login_tous_champs_obligatoires": "Por favor, rellene todos los campos"
+    "login_tous_champs_obligatoires": "Por favor, rellene todos los campos",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@audios": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@quizz_en": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

@@ -9,7 +9,7 @@ class AppLocalizationsMn extends AppLocalizations {
   AppLocalizationsMn([String locale = 'mn']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla-ийн анхны хувилбарыг байршуулах';
+  String get app_release_note => 'Шинэ хувилбар: Бүртгэлгүй, бүртгэлгүй, нэрээ нууцалсан таних, програмын зөвшөөрлийг бүх хэл рүү орчуулснаар хялбаршуулсан хэрэглээ.';
 
   @override
   String get share_list_perso_alert_disponible => 'Жагсаалт хуваалцах онцлог тун удахгүй бэлэн болно!';

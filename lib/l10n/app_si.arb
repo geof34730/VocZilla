@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla හි පළමු අනුවාදය යෙදවීම",
+    "app_release_note": "නව අනුවාදය: ගිණුමක් හෝ ලියාපදිංචියක් නොමැතිව නිර්නාමික හඳුනාගැනීම්, යෙදුම් අවසරයන් සියලුම භාෂාවලට පරිවර්තනය කිරීම හේතුවෙන් සරල කළ භාවිතය.",
     "share_list_perso_alert_disponible": "ලැයිස්තු බෙදාගැනීමේ විශේෂාංගය ඉතා ඉක්මනින් ලබා ගත හැකි වනු ඇත!",
     "information": "ස්ථානය යොමුව",
     "app_title": "වොක්සිල්ලා",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "මුරපදය තහවුරු කරන්න",
     "login_entrer_confirmer_mot_de_passe": "කරුණාකර ඔබගේ මුරපදය නැවත ඇතුළත් කරන්න.",
     "login_mots_de_passe_differents": "මුරපද නොගැලපේ.",
-    "login_tous_champs_obligatoires": "කරුණාකර සියලුම ක්ෂේත්‍ර පුරවන්න."
+    "login_tous_champs_obligatoires": "කරුණාකර සියලුම ක්ෂේත්‍ර පුරවන්න.",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

@@ -9,7 +9,7 @@ class AppLocalizationsHr extends AppLocalizations {
   AppLocalizationsHr([String locale = 'hr']) : super(locale);
 
   @override
-  String get app_release_note => 'Implementacija prve verzije VocZille';
+  String get app_release_note => 'Nova verzija: pojednostavljeno korištenje zahvaljujući anonimnoj identifikaciji, bez računa ili registracije, prijevod dopuštenja aplikacije na sve jezike.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija dijeljenja popisa bit će dostupna vrlo brzo!';

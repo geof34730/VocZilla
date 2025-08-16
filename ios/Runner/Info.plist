@@ -1,96 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
+  <dict>
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
     <key>UIBackgroundModes</key>
     <array>
-     <string>fetch</string>
-     <string>remote-notification</string>
+      <string>fetch</string>
+      <string>remote-notification</string>
     </array>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>voczilla</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleShortVersionString</key>
-	<string>$(FLUTTER_BUILD_NAME)</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-    <string>Nous avons besoin d'accéder à votre galerie pour vous permettre de choisir une photo de profil.</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>voczilla</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(FLUTTER_BUILD_NAME)</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your gallery to allow you to choose a profile picture.</string>
     <key>NSCameraUsageDescription</key>
-    <string>Nous avons besoin d'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.</string>
-	<key>NSMicrophoneUsageDescription</key>
-    <string>Nous avons besoin du microphone pour permettre l’enregistrement audio dans certaines fonctionnalités.</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-    <string>Nous utilisons la reconnaissance vocale pour vous permettre d’interagir avec l’application à l’aide de votre voix.</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.275313479574-kprstmafer4av3da9lsu3dh7insd2v7m</string>
-				<string>fb2974439696045542</string>
-			</array>
-		</dict>
-	</array>
-	<key>CFBundleVersion</key>
-	<string>$(FLUTTER_BUILD_NUMBER)</string>
-	<key>FacebookAdvertiserIDCollectionEnabled</key>
-	<true/>
-	<key>FacebookAppID</key>
-	<string>2974439696045542</string>
-	<key>FacebookAutoLogAppEventsEnabled</key>
-	<true/>
-	<key>FacebookClientToken</key>
-	<string>23e0c771752afad704b6f2c26498c23d</string>
-	<key>FacebookDisplayName</key>
-	<string>VocZilla</string>
-	<key>FirebaseAppDelegateProxyEnabled</key>
-	<false/>
-	<key>GIDClientID</key>
-	<string>275313479574-kprstmafer4av3da9lsu3dh7insd2v7m.apps.googleusercontent.com</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbapi</string>
-		<string>fb-messenger-api</string>
-		<string>fbauth2</string>
-		<string>fbshareextension</string>
-	</array>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-</dict>
+    <string>We need access to your camera to allow you to take a new profile picture.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need the microphone to enable audio recording in some features.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>We use voice recognition to allow you to interact with the application using your voice.</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.275313479574-kprstmafer4av3da9lsu3dh7insd2v7m</string>
+          <string>fb2974439696045542</string>
+        </array>
+      </dict>
+    </array>
+    <key>CFBundleVersion</key>
+    <string>$(FLUTTER_BUILD_NUMBER)</string>
+    <key>FacebookAdvertiserIDCollectionEnabled</key>
+    <true/>
+    <key>FacebookAppID</key>
+    <string>2974439696045542</string>
+    <key>FacebookAutoLogAppEventsEnabled</key>
+    <true/>
+    <key>FacebookClientToken</key>
+    <string>23e0c771752afad704b6f2c26498c23d</string>
+    <key>FacebookDisplayName</key>
+    <string>VocZilla</string>
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <false/>
+    <key>GIDClientID</key>
+    <string>275313479574-kprstmafer4av3da9lsu3dh7insd2v7m.apps.googleusercontent.com</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbapi</string>
+      <string>fb-messenger-api</string>
+      <string>fbauth2</string>
+      <string>fbshareextension</string>
+    </array>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+  </dict>
 </plist>

@@ -9,7 +9,7 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get app_release_note => 'استقرار اولین نسخه VocZilla';
+  String get app_release_note => 'نسخه جدید: استفاده ساده به لطف شناسایی ناشناس، بدون نیاز به حساب کاربری یا ثبت نام، ترجمه مجوزهای برنامه به همه زبان‌ها.';
 
   @override
   String get share_list_perso_alert_disponible => 'قابلیت اشتراک‌گذاری لیست خیلی زود در دسترس قرار خواهد گرفت!';

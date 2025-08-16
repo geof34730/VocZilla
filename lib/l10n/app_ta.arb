@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZilla இன் முதல் பதிப்பின் பயன்பாடு",
+    "app_release_note": "புதிய பதிப்பு: கணக்கு அல்லது பதிவு இல்லாமல் அநாமதேய அடையாளம் காணல், பயன்பாட்டு அனுமதிகளை அனைத்து மொழிகளிலும் மொழிபெயர்த்தல் ஆகியவற்றால் எளிமைப்படுத்தப்பட்ட பயன்பாடு.",
     "share_list_perso_alert_disponible": "பட்டியல் பகிர்வு அம்சம் மிக விரைவில் கிடைக்கும்!",
     "information": "தகவல்",
     "app_title": "வோக்ஸில்லா",
@@ -173,5 +173,11 @@
     "login_confirmer_mot_de_passe": "கடவுச்சொல்லை உறுதிப்படுத்தவும்",
     "login_entrer_confirmer_mot_de_passe": "உங்கள் கடவுச்சொல்லை மீண்டும் உள்ளிடவும்.",
     "login_mots_de_passe_differents": "கடவுச்சொற்கள் பொருந்தவில்லை.",
-    "login_tous_champs_obligatoires": "தயவுசெய்து அனைத்து புலங்களையும் நிரப்பவும்."
+    "login_tous_champs_obligatoires": "தயவுசெய்து அனைத்து புலங்களையும் நிரப்பவும்.",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

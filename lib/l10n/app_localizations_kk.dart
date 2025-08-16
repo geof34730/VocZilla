@@ -9,7 +9,7 @@ class AppLocalizationsKk extends AppLocalizations {
   AppLocalizationsKk([String locale = 'kk']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla бірінші нұсқасын орналастыру';
+  String get app_release_note => 'Жаңа нұсқа: тіркелгісіз немесе тіркеусіз анонимді сәйкестендіру, қолданба рұқсаттарын барлық тілдерге аудару арқасында оңайлатылған пайдалану.';
 
   @override
   String get share_list_perso_alert_disponible => 'Тізіммен бөлісу мүмкіндігі жақын арада қолжетімді болады!';

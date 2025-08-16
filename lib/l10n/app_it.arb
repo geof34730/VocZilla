@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Distribuzione della prima versione di VocZilla",
+    "app_release_note": "Nuova versione: utilizzo semplificato grazie all'identificazione anonima, senza account o registrazione, traduzione delle autorizzazioni dell'app in tutte le lingue.",
     "share_list_perso_alert_disponible": "La funzionalità di condivisione degli elenchi sarà disponibile molto presto!",
     "information": "Informazioni",
     "app_title": "VocZilla",
@@ -173,5 +173,41 @@
     "login_confirmer_mot_de_passe": "Conferma password",
     "login_entrer_confirmer_mot_de_passe": "Inserisci nuovamente la tua password",
     "login_mots_de_passe_differents": "Le password non corrispondono",
-    "login_tous_champs_obligatoires": "Si prega di compilare tutti i campi"
+    "login_tous_champs_obligatoires": "Si prega di compilare tutti i campi",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@button_next": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@card_home_user_liste_perso": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@non": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }

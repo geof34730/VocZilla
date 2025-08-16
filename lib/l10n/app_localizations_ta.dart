@@ -9,7 +9,7 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla இன் முதல் பதிப்பின் பயன்பாடு';
+  String get app_release_note => 'புதிய பதிப்பு: கணக்கு அல்லது பதிவு இல்லாமல் அநாமதேய அடையாளம் காணல், பயன்பாட்டு அனுமதிகளை அனைத்து மொழிகளிலும் மொழிபெயர்த்தல் ஆகியவற்றால் எளிமைப்படுத்தப்பட்ட பயன்பாடு.';
 
   @override
   String get share_list_perso_alert_disponible => 'பட்டியல் பகிர்வு அம்சம் மிக விரைவில் கிடைக்கும்!';

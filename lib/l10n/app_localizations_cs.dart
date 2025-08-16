@@ -9,7 +9,7 @@ class AppLocalizationsCs extends AppLocalizations {
   AppLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get app_release_note => 'Nasazení první verze VocZilly';
+  String get app_release_note => 'Nová verze: zjednodušené používání díky anonymní identifikaci, bez účtu nebo registrace, překlad oprávnění aplikace do všech jazyků.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkce sdílení seznamů bude k dispozici velmi brzy!';

@@ -9,7 +9,7 @@ class AppLocalizationsSi extends AppLocalizations {
   AppLocalizationsSi([String locale = 'si']) : super(locale);
 
   @override
-  String get app_release_note => 'VocZilla හි පළමු අනුවාදය යෙදවීම';
+  String get app_release_note => 'නව අනුවාදය: ගිණුමක් හෝ ලියාපදිංචියක් නොමැතිව නිර්නාමික හඳුනාගැනීම්, යෙදුම් අවසරයන් සියලුම භාෂාවලට පරිවර්තනය කිරීම හේතුවෙන් සරල කළ භාවිතය.';
 
   @override
   String get share_list_perso_alert_disponible => 'ලැයිස්තු බෙදාගැනීමේ විශේෂාංගය ඉතා ඉක්මනින් ලබා ගත හැකි වනු ඇත!';

@@ -9,7 +9,7 @@ class AppLocalizationsSw extends AppLocalizations {
   AppLocalizationsSw([String locale = 'sw']) : super(locale);
 
   @override
-  String get app_release_note => 'Usambazaji wa toleo la kwanza la VocZilla';
+  String get app_release_note => 'Toleo jipya: matumizi yaliyorahisishwa kutokana na utambulisho usiojulikana, bila akaunti au usajili, tafsiri ya ruhusa za programu katika lugha zote.';
 
   @override
   String get share_list_perso_alert_disponible => 'Kipengele cha kushiriki orodha kitapatikana hivi karibuni!';

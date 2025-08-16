@@ -1,5 +1,5 @@
 {
-    "app_release_note": "VocZillan ensimmäisen version käyttöönotto",
+    "app_release_note": "Uusi versio: yksinkertaistettu käyttö anonyymin tunnistuksen ansiosta, ilman tiliä tai rekisteröitymistä, sovelluksen käyttöoikeuksien käännös kaikille kielille.",
     "share_list_perso_alert_disponible": "Listan jakamisominaisuus on saatavilla pian!",
     "information": "Tiedot",
     "app_title": "VocZilla",
@@ -173,5 +173,23 @@
     "login_confirmer_mot_de_passe": "Vahvista salasana",
     "login_entrer_confirmer_mot_de_passe": "Anna salasanasi uudelleen",
     "login_mots_de_passe_differents": "Salasanat eivät täsmää",
-    "login_tous_champs_obligatoires": "Täytä kaikki kentät"
+    "login_tous_champs_obligatoires": "Täytä kaikki kentät",
+    "@app_title": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@widget_congratulation_bravo": {
+        "autoTried": true,
+        "lastTryAt": "2025-08-16T07:20:14+00:00",
+        "autoTranslated": false,
+        "reason": "same_as_source"
+    },
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-16T08:19:35+00:00"
+    }
 }
