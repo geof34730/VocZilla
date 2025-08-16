@@ -37,7 +37,7 @@ if (LocalPropertiesVersionName == "" || LocalPropertiesKeysPassword == "" || Loc
 
 android {
     namespace = "com.geoffreypetain.voczilla.voczilla"
-    compileSdk = 35
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -56,7 +56,8 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = LocalPropertiesMinSdkVersion
-        targetSdk = 35
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 36
         versionCode LocalPropertiesVersionCode
         versionName LocalPropertiesVersionName
     }

@@ -83,7 +83,7 @@ function getAppfileInfo(appfilePath) {
     execSync(`fastlane all generate_metadata`, { stdio: "inherit" });
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
     execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
-
+/*
             console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
             execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -120,7 +120,7 @@ function getAppfileInfo(appfilePath) {
         console.error("\n❌ Échec du déploiement Android :", error.message);
         process.exit(1);
     }
-
+*/
     console.log("\n✅ Déploiement Android terminé avec succès !");
 
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
@@ -138,8 +138,6 @@ function getAppfileInfo(appfilePath) {
     }
     else{
         console.error("YES !!!!! La variable FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD est trouvé.");
-
-
     }
 
 
