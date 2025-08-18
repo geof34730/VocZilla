@@ -532,4 +532,22 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Vă rugăm să completați toate câmpurile';
+
+  @override
+  String get erreur_chargement_produits => 'Eroare la încărcarea produselor';
+
+  @override
+  String get reessayer => 'Încearcă din nou';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Avem nevoie de acces la galeria ta pentru a-ți permite să alegi o fotografie de profil.';
+
+  @override
+  String get nscamerausagedescription => 'Avem nevoie de acces la camera ta foto pentru a-ți permite să faci o nouă fotografie de profil.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Avem nevoie de microfon pentru a activa înregistrarea audio în anumite funcții.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Folosim recunoașterea vocală pentru a vă permite să interacționați cu aplicația folosind vocea.';
 }

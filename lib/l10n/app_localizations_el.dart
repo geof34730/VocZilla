@@ -532,4 +532,22 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Παρακαλώ συμπληρώστε όλα τα πεδία';
+
+  @override
+  String get erreur_chargement_produits => 'Σφάλμα φόρτωσης προϊόντων κατά τη φόρτωση προϊόντων';
+
+  @override
+  String get reessayer => 'Δοκιμάστε ξανά';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Χρειαζόμαστε πρόσβαση στη συλλογή σας για να σας επιτρέψουμε να επιλέξετε μια εικόνα προφίλ.';
+
+  @override
+  String get nscamerausagedescription => 'Χρειαζόμαστε πρόσβαση στην κάμερά σας για να μπορέσετε να τραβήξετε μια νέα φωτογραφία προφίλ.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Χρειαζόμαστε το μικρόφωνο για να ενεργοποιήσουμε την εγγραφή ήχου σε ορισμένες λειτουργίες.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Χρησιμοποιούμε φωνητική αναγνώριση για να σας επιτρέψουμε να αλληλεπιδράτε με την εφαρμογή χρησιμοποιώντας τη φωνή σας.';
 }

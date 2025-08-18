@@ -532,4 +532,22 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Калі ласка, запоўніце ўсе палі';
+
+  @override
+  String get erreur_chargement_produits => 'Памылка загрузкі тавараў';
+
+  @override
+  String get reessayer => 'Паспрабуйце яшчэ раз';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Нам патрэбен доступ да вашай галерэі, каб вы маглі выбраць фота профілю.';
+
+  @override
+  String get nscamerausagedescription => 'Нам патрэбен доступ да вашай камеры, каб вы маглі зрабіць новую фатаграфію профілю.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Нам патрэбен мікрафон, каб уключыць запіс гуку ў некаторых функцыях.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Мы выкарыстоўваем распазнаванне голасу, каб вы маглі ўзаемадзейнічаць з дадаткам з дапамогай голасу.';
 }

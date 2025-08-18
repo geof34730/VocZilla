@@ -532,4 +532,22 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'ଦୟାକରି ସମସ୍ତ କ୍ଷେତ୍ର ପୂରଣ କରନ୍ତୁ';
+
+  @override
+  String get erreur_chargement_produits => 'ଉତ୍ପାଦଗୁଡ଼ିକ ଲୋଡ୍ କରିବାରେ ତ୍ରୁଟି';
+
+  @override
+  String get reessayer => 'ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ';
+
+  @override
+  String get nsphotolibraryusagedescription => 'ଆପଣଙ୍କୁ ଏକ ପ୍ରୋଫାଇଲ୍ ଛବି ବାଛିବା ପାଇଁ ଆମକୁ ଆପଣଙ୍କର ଗ୍ୟାଲେରୀକୁ ଆକ୍ସେସ୍ ଆବଶ୍ୟକ।';
+
+  @override
+  String get nscamerausagedescription => 'ଆପଣଙ୍କୁ ଏକ ନୂତନ ପ୍ରୋଫାଇଲ୍ ଫଟୋ ଉଠାଇବା ପାଇଁ ଆମକୁ ଆପଣଙ୍କର କ୍ୟାମେରାର ଆକ୍ସେସ୍ ଆବଶ୍ୟକ।';
+
+  @override
+  String get nsmicrophoneusagedescription => 'କିଛି ବୈଶିଷ୍ଟ୍ୟରେ ଅଡିଓ ରେକର୍ଡିଂ ସକ୍ଷମ କରିବା ପାଇଁ ଆମକୁ ମାଇକ୍ରୋଫୋନ୍ ଆବଶ୍ୟକ।';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'ଆପଣଙ୍କ ସ୍ୱର ବ୍ୟବହାର କରି ଆପ୍ଲିକେସନ୍ ସହିତ ଇଣ୍ଟରାକ୍ଟ କରିବାକୁ ଅନୁମତି ଦେବା ପାଇଁ ଆମେ ସ୍ୱର ଚିହ୍ନଟକରଣ ବ୍ୟବହାର କରୁ।';
 }

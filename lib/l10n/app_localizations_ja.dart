@@ -532,4 +532,22 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'すべての項目にご記入ください';
+
+  @override
+  String get erreur_chargement_produits => '商品の読み込みエラー';
+
+  @override
+  String get reessayer => 'もう一度やり直してください';
+
+  @override
+  String get nsphotolibraryusagedescription => 'プロフィール写真を選択するには、ギャラリーにアクセスする必要があります。';
+
+  @override
+  String get nscamerausagedescription => '新しいプロフィール写真を撮影するには、カメラにアクセスする必要があります。';
+
+  @override
+  String get nsmicrophoneusagedescription => '一部の機能で音声録音を有効にするにはマイクが必要です。';
+
+  @override
+  String get nsspeechrecognitionusagedescription => '音声認識を使用すると、音声を使用してアプリケーションを操作できるようになります。';
 }

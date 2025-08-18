@@ -174,22 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Prosimo, ponovno vnesite geslo",
     "login_mots_de_passe_differents": "Gesli se ne ujemata",
     "login_tous_champs_obligatoires": "Prosimo, izpolnite vsa polja",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Napaka pri nalaganju izdelkov",
+    "reessayer": "Poskusi znova",
+    "nsphotolibraryusagedescription": "Potrebujemo dostop do vaše galerije, da si lahko izberete profilno sliko.",
+    "nscamerausagedescription": "Potrebujemo dostop do vašega fotoaparata, da vam omogočimo fotografiranje novega profila.",
+    "nsmicrophoneusagedescription": "Za omogočanje snemanja zvoka v nekaterih funkcijah potrebujemo mikrofon.",
+    "nsspeechrecognitionusagedescription": "Za interakcijo z aplikacijo uporabljamo prepoznavanje glasu."
 }

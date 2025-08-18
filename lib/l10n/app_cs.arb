@@ -174,22 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Zadejte prosím znovu své heslo",
     "login_mots_de_passe_differents": "Hesla se neshodují",
     "login_tous_champs_obligatoires": "Vyplňte prosím všechna pole",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Chyba při načítání produktů",
+    "reessayer": "Zkuste to znovu",
+    "nsphotolibraryusagedescription": "Potřebujeme přístup do vaší galerie, abyste si mohli vybrat profilový obrázek.",
+    "nscamerausagedescription": "Potřebujeme přístup k vašemu fotoaparátu, abyste si mohli pořídit novou profilovou fotku.",
+    "nsmicrophoneusagedescription": "Pro nahrávání zvuku v některých funkcích potřebujeme mikrofon.",
+    "nsspeechrecognitionusagedescription": "Používáme rozpoznávání hlasu, abychom vám umožnili interagovat s aplikací pomocí hlasu."
 }

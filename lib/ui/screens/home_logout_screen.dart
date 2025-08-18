@@ -164,6 +164,7 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
                 ),
                 const SizedBox(height: 15),
                 ElevatedButton(
+                  key: ValueKey('link_home_login'),
                   onPressed: _signInAsGuest,
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),

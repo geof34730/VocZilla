@@ -532,4 +532,22 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'कृपया सबै क्षेत्रहरू भर्नुहोस्।';
+
+  @override
+  String get erreur_chargement_produits => 'उत्पादनहरू लोड गर्दा त्रुटि भयो';
+
+  @override
+  String get reessayer => 'फेरि प्रयास गर्नुहोस्';
+
+  @override
+  String get nsphotolibraryusagedescription => 'तपाईंलाई प्रोफाइल तस्वीर छनौट गर्न अनुमति दिन हामीलाई तपाईंको ग्यालरीमा पहुँच चाहिन्छ।';
+
+  @override
+  String get nscamerausagedescription => 'तपाईंलाई नयाँ प्रोफाइल तस्वीर खिच्न अनुमति दिन हामीलाई तपाईंको क्यामेरामा पहुँच चाहिन्छ।';
+
+  @override
+  String get nsmicrophoneusagedescription => 'केही सुविधाहरूमा अडियो रेकर्डिङ सक्षम गर्न हामीलाई माइक्रोफोन चाहिन्छ।';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'हामी तपाईंको आवाज प्रयोग गरेर अनुप्रयोगसँग अन्तर्क्रिया गर्न अनुमति दिन आवाज पहिचान प्रयोग गर्छौं।';
 }

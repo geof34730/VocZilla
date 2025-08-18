@@ -174,16 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "እባክዎ የይለፍ ቃልዎን እንደገና ያስገቡ",
     "login_mots_de_passe_differents": "የይለፍ ቃሎች አይዛመዱም።",
     "login_tous_champs_obligatoires": "እባክዎ ሁሉንም መስኮች ይሙሉ",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "ምርቶችን መጫን ላይ ስህተት",
+    "reessayer": "እንደገና ይሞክሩ",
+    "nsphotolibraryusagedescription": "የመገለጫ ስዕል እንድትመርጡ ለመፍቀድ ወደ ጋለሪዎ መድረስ እንፈልጋለን።",
+    "nscamerausagedescription": "አዲስ የመገለጫ ፎቶ እንዲያነሱ ለማስቻል የካሜራዎን መዳረሻ እንፈልጋለን።",
+    "nsmicrophoneusagedescription": "በአንዳንድ ባህሪያት የድምጽ ቀረጻን ለማንቃት ማይክሮፎኑን እንፈልጋለን።",
+    "nsspeechrecognitionusagedescription": "ድምፅህን ተጠቅመህ ከመተግበሪያው ጋር እንድትገናኝ ለመፍቀድ የድምጽ ማወቂያ እንጠቀማለን።"
 }

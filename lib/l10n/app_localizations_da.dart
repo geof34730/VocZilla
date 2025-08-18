@@ -532,4 +532,22 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Udfyld venligst alle felter';
+
+  @override
+  String get erreur_chargement_produits => 'Fejl ved indlæsning af produkter';
+
+  @override
+  String get reessayer => 'Prøv igen';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Vi skal have adgang til dit galleri for at du kan vælge et profilbillede.';
+
+  @override
+  String get nscamerausagedescription => 'Vi skal bruge adgang til dit kamera, så du kan tage et nyt profilbillede.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Vi skal bruge mikrofonen for at aktivere lydoptagelse i nogle funktioner.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Vi bruger stemmegenkendelse, så du kan interagere med applikationen ved hjælp af din stemme.';
 }

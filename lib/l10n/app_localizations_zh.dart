@@ -532,4 +532,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => '请填写所有字段';
+
+  @override
+  String get erreur_chargement_produits => '加载产品时出错';
+
+  @override
+  String get reessayer => '再试一次';
+
+  @override
+  String get nsphotolibraryusagedescription => '我们需要访问您的图库，以便您选择个人资料图片。';
+
+  @override
+  String get nscamerausagedescription => '我们需要访问您的相机，以便您拍摄新的个人资料照片。';
+
+  @override
+  String get nsmicrophoneusagedescription => '我们需要麦克风来启用某些功能的录音。';
+
+  @override
+  String get nsspeechrecognitionusagedescription => '我们使用语音识别功能，让您可以使用语音与应用程序进行交互。';
 }

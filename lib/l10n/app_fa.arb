@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "لطفا رمز عبور خود را دوباره وارد کنید",
     "login_mots_de_passe_differents": "رمزهای عبور مطابقت ندارند",
     "login_tous_champs_obligatoires": "لطفا همه فیلدها را پر کنید",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "خطا در بارگیری محصولات",
+    "reessayer": "دوباره امتحان کنید",
+    "nsphotolibraryusagedescription": "برای انتخاب تصویر پروفایل، باید به گالری شما دسترسی داشته باشیم.",
+    "nscamerausagedescription": "برای اینکه بتوانیم عکس پروفایل جدید بگیریم، باید به دوربین شما دسترسی داشته باشیم.",
+    "nsmicrophoneusagedescription": "برای فعال کردن ضبط صدا در برخی از ویژگی‌ها به میکروفون نیاز داریم.",
+    "nsspeechrecognitionusagedescription": "ما از تشخیص صدا استفاده می‌کنیم تا به شما امکان دهیم با استفاده از صدای خود با برنامه تعامل داشته باشید."
 }

@@ -174,28 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Tafadhali ingiza tena nenosiri lako",
     "login_mots_de_passe_differents": "Manenosiri hayalingani",
     "login_tous_champs_obligatoires": "Tafadhali jaza sehemu zote",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@button_next": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Hitilafu katika kupakia bidhaa",
+    "reessayer": "Jaribu tena",
+    "nsphotolibraryusagedescription": "Tunahitaji kufikia ghala yako ili kukuruhusu kuchagua picha ya wasifu.",
+    "nscamerausagedescription": "Tunahitaji ufikiaji wa kamera yako ili kukuruhusu kupiga picha mpya ya wasifu.",
+    "nsmicrophoneusagedescription": "Tunahitaji maikrofoni ili kuwezesha kurekodi sauti katika baadhi ya vipengele.",
+    "nsspeechrecognitionusagedescription": "Tunatumia utambuzi wa sauti ili kukuruhusu kuingiliana na programu kwa kutumia sauti yako."
 }

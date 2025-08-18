@@ -1,13 +1,14 @@
-platform :all do
-  desc "📸 Générer les métadonnées et captures d'écran Android & iOS multilingues"
+# Fastfile
 
+platform :all do
+  desc "📸 Générer les métadonnées Android & iOS"
   lane :generate_metadata do
     project_root = File.expand_path("..", __dir__)
     dart_script_android = File.join(project_root, "fastlane/generate_metadata_android.dart")
-    dart_script_ios = File.join(project_root, "fastlane/generate_metadata_ios.dart")
+    dart_script_ios     = File.join(project_root, "fastlane/generate_metadata_ios.dart")
 
     UI.user_error!("❌ Script Dart android introuvable: #{dart_script_android}") unless File.exist?(dart_script_android)
-    UI.user_error!("❌ Script Dart iOS introuvable: #{dart_script_ios}") unless File.exist?(dart_script_ios)
+    UI.user_error!("❌ Script Dart iOS introuvable: #{dart_script_ios}")       unless File.exist?(dart_script_ios)
 
     UI.message("🧠 Génération des métadonnées Android...")
     Dir.chdir(project_root) { sh("dart '#{dart_script_android}'") }
@@ -16,194 +17,431 @@ platform :all do
     Dir.chdir(project_root) { sh("dart '#{dart_script_ios}'") }
   end
 
+  desc "📷 Screenshots Android + iOS (simulateur) — builds uniques, exécutions sans rebuild, cleanup disque"
   lane :screenshots do
-    avd_name = "emulator_tablet_10pouces_screenshots_voczilla"
+    avd_name     = "emulator_tablet_10pouces_screenshots_voczilla"
     project_root = File.expand_path("..", __dir__)
 
-    # On nettoie une seule fois au début pour être sûr de partir sur de bonnes bases
-    UI.message("🧹 Nettoyage initial du projet...")
-    sh("flutter clean")
+    # Nettoyage initial léger (n'efface pas les caches utiles)
+    UI.message("🧹 Nettoyage initial du projet (léger)...")
+    sh("git clean -xfd -e build -e ios/Pods -e android/.gradle || true")
 
-    # On génère les métadonnées (titres, descriptions, etc.)
+    # Métadonnées
     sh("fastlane all generate_metadata")
 
-    UI.message("🌟 Lancement de l'émulateur...")
+    # Android: démarrer et tuner l'émulateur
+    UI.message("🌟 Lancement de l'émulateur Android...")
     start_emulator_once(avd_name)
-
-
- # "ios" => [
-         # 'iPad Pro (12.9-inch) (3rd generation)',
-         # 'iphone6_7_inch',
-         # 'ipad_12_9_inch'
-        #],
-    # On recompile l'application une seule fois après le clean
-    UI.message("📦 Construction de l'application...")
-    sh("flutter build apk")
-    {
-        "android" => [
-           'FeatureGraphic'
-        ],
-        "ios" => [
-           'iPad Pro (12.9-inch) (3rd generation)',
-           'iphone6_7_inch',
-           'ipad_12_9_inch'
-        ],
-    }.each do |platform, folders|
-      folders.each do |folder|
-        run_screenshots_for_folder(folder, platform)
-          sh("flutter clean")
-      end
-      sh("flutter clean")
-    end
-
-    UI.message("🚩 Arrêt de l'émulateur...")
-    stop_emulator
-
-    UI.success("✅ Toutes les captures d'écran ont été générées avec succès !")
-  end
-
-  # Cette fonction est le pont entre Ruby (Fastlane) et Dart (votre logique de mappage).
-  # Elle est déjà correcte et garantit que la logique de locale_mapper.dart est respectée.
-  def get_normalized_locale(locale, platform)
-    project_root = File.expand_path("..", __dir__)
-    map_script = File.join(project_root, "fastlane/invoke_locale_mapper.dart")
-    UI.user_error!("❌ Script de mapping de locale introuvable: #{map_script}") unless File.exist?(map_script)
-
-    normalized = sh("dart \"#{map_script}\" #{platform} #{locale}", log: false).strip
-    return normalized.empty? ? nil : normalized
-  end
-
-  def run_screenshots_for_folder(dest_folder, platformStore)
-    project_root = File.expand_path("..", __dir__)
-    screenshots_dir = File.join(project_root, "test_driver/screenshots/")
     emulator_id = get_running_emulator_id
-    set_emulator_resolution(emulator_id, dest_folder)
+    tune_android_emulator_for_tests(emulator_id) if emulator_id
 
-    locales = extract_locales
-    UI.user_error!("❌ Aucune locale trouvée dans lib/l10n") if locales.empty?
+    # Android: build unique (debug) si absent
+    ensure_android_built_once!(:debug)
 
-    locales.each do |locale|
-      normalized_locale = get_normalized_locale(locale, platformStore)
-      if normalized_locale.nil?
-        UI.important("⚠️ Locale #{locale} non supportée pour #{platformStore}. Ignorée.")
-        next
-      end
+    # iOS: build simulateur unique si Runner.app absent
+    ensure_ios_simulator_built_once!
 
-      FileUtils.rm_rf(screenshots_dir)
-      FileUtils.mkdir_p(screenshots_dir)
-
-      UI.message("🌐 Prise des captures pour [#{dest_folder}] en [#{locale}]...")
-      is_feature = dest_folder == "FeatureGraphic"
-
-      begin
-        sh("caffeinate -s flutter drive \
-          --driver=test_driver/integration_test.dart \
-          --target=test_driver/app.dart \
-          -d #{emulator_id} \
-          --dart-define=LOCALE=#{locale} \
-          --dart-define=FOR_FEATURE_GRAPHIC=#{is_feature} \
-          --dart-define=PLATFORM='#{platformStore}' \
-          --dart-define=DESTFOLDER='#{dest_folder}' \
-          --screenshot=test_driver/screenshots")
-      rescue => e
-        UI.error("🚨 Erreur durant flutter drive pour #{locale}/#{dest_folder} : #{e}")
-        next
-      end
-
-      driver_files_to_delete = Dir[File.join(screenshots_dir, "driver*.png")]
-      FileUtils.rm(driver_files_to_delete) unless driver_files_to_delete.empty?
-
-      screenshots = Dir[File.join(screenshots_dir, "*.png")]
-
-      # 💅 AMÉLIORATION : Logique de chemin clarifiée
-      relative_metadata = if is_feature
-                            File.join(platformStore, normalized_locale, "images")
-                          elsif platformStore == "ios"
-                            File.join(platformStore, normalized_locale)
-                          else # android
-                            File.join(platformStore, normalized_locale, "images", dest_folder)
-                          end
-
-      dest_dir_project = File.join(project_root, "fastlane/metadata", relative_metadata)
-      dest_dir_symlink = File.join("/Volumes/data/voczilla/metadata", relative_metadata)
-
-      [dest_dir_project, dest_dir_symlink].each do |dest_dir|
-        UI.message("📁 Copie des captures vers : #{dest_dir}")
-        FileUtils.mkdir_p(dest_dir)
-        screenshots.empty? ? UI.important("Aucune capture pour #{locale}") : FileUtils.cp(screenshots, dest_dir)
-      end
-    end
-
-    reset_emulator_resolution(emulator_id)
-  end
-
-  def extract_locales
-    project_root = File.expand_path("..", __dir__)
-    arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
-    locales = arb_files.map { |f| f.match(/app_(.+)\.arb$/)&.captures&.first }.compact.uniq
-    UI.user_error!("❌ Aucune locale trouvée dans les fichiers ARB.") if locales.empty?
-    locales
-  end
-
-  def get_running_emulator_id
-    line = sh("adb devices", log: false).lines.find { |l| l.start_with?("emulator") && l.include?("device") }
-    line&.split("\t")&.first
-  end
-
-  def start_emulator_once(avd_name)
-    return if get_running_emulator_id
-
-    emulator_cmd = [
-      File.join(ENV['ANDROID_HOME'], "emulator", "emulator"),
-      "-avd", avd_name,
-      "-no-snapshot-load",
-      "-no-audio"
-    ]
-    Process.spawn(*emulator_cmd, [:out, :err] => "/dev/null")
-
-    UI.message("⌛ Attente de connexion ADB...")
-    24.times do
-      sleep(5)
-      break if get_running_emulator_id
-    end
-
-    UI.user_error!("❌ L'émulateur n'a pas démarré après 2 minutes.") unless get_running_emulator_id
-
-    UI.message("⚙️ Attente de boot complet Android...")
-    24.times do
-      boot_status = sh("adb shell getprop sys.boot_completed", log: false).strip
-      break if boot_status == "1"
-      sleep(2)
-    end
-  end
-
-  def stop_emulator
-    emulator_id = get_running_emulator_id
-    return unless emulator_id
-    sh("adb -s #{emulator_id} emu kill")
-    sleep(5)
-  end
-
-  def reset_emulator_resolution(emulator_id)
-    sh("adb -s #{emulator_id} shell wm size reset && adb -s #{emulator_id} shell wm density reset")
-  end
-
-  def set_emulator_resolution(emulator_id, dest_folder)
-    resolution_map = {
-      "phoneScreenshots" => ["1080x1920", "420"],
-      "sevenInchScreenshots" => ["800x1280", "213"],
-      "tenInchScreenshots" => ["1600x2560", "320"],
-      "FeatureGraphic" => ["1024x500", "160"],
-      "iphone6_7_inch" => ["1290x2796", "460"],
-      "ipad_12_9_inch" => ["2048x2732", "264"],
-      "iPad Pro (12.9-inch) (3rd generation)" => ["2048x2732", "264"]
+    # Boucle dossiers (pas de clean, --no-build + --use-application-binary)
+    targets = {
+      "ios" => [
+        "iphone6_7_inch",
+        "iPad Pro (12.9-inch) (3rd generation)",
+        "ipad_12_9_inch"
+      ],
+      "android" => [
+        "phoneScreenshots",
+        "sevenInchScreenshots",
+        "tenInchScreenshots",
+        "FeatureGraphic"
+      ]
     }
 
-    size, density = resolution_map[dest_folder] || [nil, nil]
-    if size && density
-      sh("adb -s #{emulator_id} shell wm size #{size} && adb -s #{emulator_id} shell wm density #{density}")
+    targets.each do |platform_name, folders|
+      folders.each do |folder|
+        run_screenshots_for_folder(folder, platform_name)
+      end
+    end
+
+    UI.message("🚩 Arrêt de l'émulateur Android...")
+    stop_emulator
+
+    # Nettoyage disque: sélectif/agressif selon espace libre
+    free = disk_free_gb(".")
+    aggressive = free < env_threshold_gb
+    UI.message("💾 Espace libre: #{free} GB (seuil: #{env_threshold_gb} GB) → cleanup #{aggressive ? "AGRESSIF" : "sélectif"}")
+    cleanup_builds(keep_ios_build: true, aggressive: aggressive)
+
+    UI.success("✅ Captures terminées. Builds réutilisés conservés, espace disque nettoyé.")
+  end
+
+  desc "🧽 Nettoyage manuel (conserve Runner.app simulateur)"
+  lane :cleanup_soft do
+    cleanup_builds(keep_ios_build: true, aggressive: false)
+  end
+
+  desc "🔥 Nettoyage agressif (supprime aussi le build iOS simulateur)"
+  lane :cleanup_hard do
+    cleanup_builds(keep_ios_build: false, aggressive: true)
+  end
+end
+
+# ============ Helpers partagés ============
+
+require "tmpdir"
+
+# ---- Disque ----
+def disk_free_gb(path=".")
+  out = sh(%Q{df -k "#{path}" | tail -1 | awk '{print $4}'}, log: false).strip.to_i
+  (out / 1024.0 / 1024.0).round(1)
+end
+
+def env_threshold_gb
+  # Ajustable via FASTLANE_DISK_THRESHOLD_GB=8
+  (ENV["FASTLANE_DISK_THRESHOLD_GB"] || "10").to_f
+end
+
+# ---- Chemins binaires (réutilisés par flutter drive) ----
+def ios_sim_runner_app_path
+  File.expand_path("../build/ios/iphonesimulator/Runner.app", __dir__)
+end
+
+def android_apk_debug_path
+  File.expand_path("../build/app/outputs/flutter-apk/app-debug.apk", __dir__)
+end
+
+def android_apk_release_path
+  File.expand_path("../build/app/outputs/flutter-apk/app-release.apk", __dir__)
+end
+
+# ---- Build unique iOS ----
+def ensure_ios_simulator_built_once!
+  app_path = ios_sim_runner_app_path
+  if File.exist?(app_path)
+    UI.message("🟢 Build iOS simulateur déjà présent: #{app_path} → on saute le build.")
+    return
+  end
+  UI.message("📦 Build iOS simulateur (première fois)...")
+  sh("flutter build ios --simulator --no-codesign")
+end
+
+# ---- Build unique Android (mode :debug ou :release) ----
+def ensure_android_built_once!(mode = :debug)
+  target_path = (mode == :release) ? android_apk_release_path : android_apk_debug_path
+  if File.exist?(target_path)
+    UI.message("🟢 Build Android déjà présent (#{mode}) → on saute le build.")
+    return
+  end
+  UI.message("📦 Build Android APK (#{mode})...")
+  if mode == :release
+    sh("flutter build apk --release")
+  else
+    sh("flutter build apk --debug")
+  end
+end
+
+# ----- Locale mapper bridge (Dart) -----
+def get_normalized_locale(locale, platform)
+  project_root = File.expand_path("..", __dir__)
+  map_script   = File.join(project_root, "fastlane/invoke_locale_mapper.dart")
+  UI.user_error!("❌ Script de mapping de locale introuvable: #{map_script}") unless File.exist?(map_script)
+
+  normalized = sh("dart \"#{map_script}\" #{platform} #{locale}", log: false).strip
+  return normalized.empty? ? nil : normalized
+end
+
+# ----- iOS Simulators helpers (idempotents) -----
+def udid_for_device(device_name)
+  cmd  = %Q{xcrun simctl list devices available | grep -F "#{device_name}" | head -n1 | sed -E 's/.*\\(([0-9A-Fa-f\\-]{36})\\).*/\\1/'}
+  udid = sh(cmd, log: false).strip
+  udid.empty? ? nil : udid
+end
+
+def sim_device_booted?(udid)
+  out = sh(%Q{xcrun simctl list devices | grep -F "#{udid}"}, log: false).strip rescue ""
+  out.include?("(Booted)")
+end
+
+def simulator_app_running?
+  system("pgrep -x Simulator >/dev/null 2>&1")
+end
+
+def ensure_simulator_app_open_for(udid)
+  return if simulator_app_running?
+  sh("open -a Simulator --args -CurrentDeviceUDID #{udid}")
+end
+
+def start_ios_simulator_once(device_name)
+  udid = udid_for_device(device_name)
+  UI.user_error!("❌ Simulateur iOS introuvable: #{device_name}") if udid.nil? || udid.empty?
+
+  if sim_device_booted?(udid)
+    UI.message("🟢 Simulateur déjà démarré: #{device_name} (#{udid})")
+    ensure_simulator_app_open_for(udid)
+    sh("xcrun simctl bootstatus #{udid} -b")
+    return udid
+  end
+
+  sh("xcrun simctl boot #{udid}")
+  ensure_simulator_app_open_for(udid)
+  sh("xcrun simctl bootstatus #{udid} -b")
+  udid
+end
+
+def shutdown_ios_simulator
+  booted_lines = sh(%q{xcrun simctl list devices | grep "(Booted)" | sed -E 's/.*\\(([0-9A-Fa-f\\-]{36})\\).*/\\1/'}, log: false).split("\n").map(&:strip)
+  booted_lines.each do |udid|
+    next if udid.empty?
+    sh("xcrun simctl shutdown #{udid}")
+  end
+end
+
+def ios_device_for_folder(folder)
+  map = {
+    "iphone6_7_inch"                        => "iPhone 15 Pro Max",
+    "ipad_12_9_inch"                        => "iPad Pro (12.9-inch) (6th generation)",
+    "iPad Pro (12.9-inch) (3rd generation)" => "iPad Pro (12.9-inch) (3rd generation)"
+  }
+  map[folder] || folder
+end
+
+# ----- Android emulator helpers (robustes) -----
+def get_running_emulator_id
+  out = sh("adb devices", log: false) rescue ""
+  line = out.lines.find { |l| l.start_with?("emulator-") && l.include?("\tdevice") }
+  line&.split("\t")&.first
+end
+
+def start_emulator_once(avd_name)
+  existing = get_running_emulator_id
+  if existing
+    UI.message("🟢 Émulateur déjà démarré: #{existing}")
+    ensure_android_booted(existing)
+    return
+  end
+
+  sh("adb start-server || true")
+
+  emulator_cmd = [
+    File.join(ENV['ANDROID_HOME'], "emulator", "emulator"),
+    "-avd", avd_name,
+    "-no-snapshot-load",
+    "-no-audio"
+  ]
+  Process.spawn(*emulator_cmd, [:out, :err] => "/dev/null")
+
+  UI.message("⌛ Attente de connexion ADB à l'émulateur...")
+  emulator_id = nil
+  48.times do
+    sleep(5)
+    emulator_id = get_running_emulator_id
+    break if emulator_id
+  end
+  UI.user_error!("❌ L'émulateur n'a pas été détecté par ADB.") unless emulator_id
+
+  ensure_android_booted(emulator_id)
+end
+
+def ensure_android_booted(emulator_id)
+  UI.message("⚙️ Attente de boot complet Android pour #{emulator_id}...")
+
+  sh("adb -s #{emulator_id} wait-for-device || true")
+
+  # désactive les animations (accélère les tests/captures)
+  begin
+    sh("adb -s #{emulator_id} shell settings put global animator_duration_scale 0 || true", log: false)
+    sh("adb -s #{emulator_id} shell settings put global transition_animation_scale 0 || true", log: false)
+    sh("adb -s #{emulator_id} shell settings put global window_animation_scale 0 || true", log: false)
+  rescue
+  end
+
+  # boucle d'attente tolérante
+  120.times do
+    boot_status = sh("adb -s #{emulator_id} shell getprop sys.boot_completed || true", log: false).strip
+    anim_state  = sh("adb -s #{emulator_id} shell getprop init.svc.bootanim || true", log: false).strip
+    ready = (boot_status == "1") || (anim_state == "stopped")
+    break if ready
+    sleep(2)
+  end
+
+  echo_ok = sh("adb -s #{emulator_id} shell echo ok || true", log: false).strip
+  UI.user_error!("❌ L'émulateur #{emulator_id} ne répond pas correctement.") unless echo_ok == "ok"
+end
+
+def stop_emulator
+  emulator_id = get_running_emulator_id
+  return unless emulator_id
+  sh("adb -s #{emulator_id} emu kill")
+  sleep(5)
+end
+
+def reset_emulator_resolution(emulator_id)
+  sh("adb -s #{emulator_id} shell wm size reset && adb -s #{emulator_id} shell wm density reset")
+end
+
+def set_emulator_resolution(emulator_id, dest_folder)
+  resolution_map = {
+    "phoneScreenshots"      => ["1080x1920", "420"],
+    "sevenInchScreenshots"  => ["800x1280",  "213"],
+    "tenInchScreenshots"    => ["1600x2560", "320"],
+    "FeatureGraphic"        => ["1024x500",  "160"],
+    # iOS entries ignorées côté Android
+    "iphone6_7_inch"                        => nil,
+    "ipad_12_9_inch"                        => nil,
+    "iPad Pro (12.9-inch) (3rd generation)" => nil
+  }
+
+  size, density = (resolution_map[dest_folder] || [nil, nil])
+  if size && density
+    sh("adb -s #{emulator_id} shell wm size #{size} && adb -s #{emulator_id} shell wm density #{density}")
+  elsif resolution_map.key?(dest_folder)
+    # no-op pour les clés non-Android
+  else
+    UI.error("Unsupported size: #{dest_folder}")
+  end
+end
+
+# 👉 Boost perfs tests/screenshots Android
+def tune_android_emulator_for_tests(emulator_id)
+  return unless emulator_id
+  UI.message("🚀 Optimisation de l'émulateur #{emulator_id} (désactivation des animations)...")
+  sh("adb -s #{emulator_id} shell settings put global animator_duration_scale 0 || true")
+  sh("adb -s #{emulator_id} shell settings put global transition_animation_scale 0 || true")
+  sh("adb -s #{emulator_id} shell settings put global window_animation_scale 0 || true")
+end
+
+# ----- Abstraction device -----
+def start_device_for_folder(platform_store, dest_folder, avd_name:)
+  if platform_store == "android"
+    start_emulator_once(avd_name)
+    get_running_emulator_id
+  else
+    device_name = ios_device_for_folder(dest_folder)
+    start_ios_simulator_once(device_name)
+  end
+end
+
+def set_device_resolution(platform_store, device_id, dest_folder)
+  set_emulator_resolution(device_id, dest_folder) if platform_store == "android"
+end
+
+def reset_device_resolution(platform_store, device_id)
+  reset_emulator_resolution(device_id) if platform_store == "android"
+end
+
+# ----- Locales -----
+def extract_locales
+  project_root = File.expand_path("..", __dir__)
+  arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
+  locales = arb_files.map { |f| f.match(/app_(.+)\.arb$/)&.captures&.first }.compact.uniq
+  UI.user_error!("❌ Aucune locale trouvée dans les fichiers ARB.") if locales.empty?
+  locales
+end
+
+# ----- Nettoyage espace disque (sélectif/agressif) -----
+def cleanup_builds(keep_ios_build:, aggressive:)
+  UI.message("🧽 Nettoyage (keep_ios_build=#{keep_ios_build}, aggressive=#{aggressive})")
+
+  # Android: purge large (rebuild debug rapide)
+  sh("rm -rf .dart_tool/ .gradle/ android/.gradle/ build/app || true")
+
+  if aggressive
+    # iOS agressif: purge complète
+    sh("rm -rf build/ios || true")
+    sh("rm -rf ~/Library/Developer/Xcode/DerivedData/* || true")
+  else
+    # iOS sélectif: garde Runner.app et purge le reste
+    app = ios_sim_runner_app_path
+    if keep_ios_build && File.exist?(app)
+      tmp = File.join(Dir.tmpdir, "Runner.app.backup.#{Time.now.to_i}")
+      FileUtils.mkdir_p(File.dirname(tmp))
+      FileUtils.mv(app, tmp)
+      sh("rm -rf build/ios || true")
+      sh("rm -rf ~/Library/Developer/Xcode/DerivedData/* || true")
+      FileUtils.mkdir_p(File.dirname(app))
+      FileUtils.mv(tmp, app)
+      UI.message("✅ Runner.app conservé (iOS simulateur)")
     else
-      UI.error("Unsupported size: #{dest_folder}")
+      sh("rm -rf build/ios || true")
+      sh("rm -rf ~/Library/Developer/Xcode/DerivedData/* || true")
     end
   end
+
+  # Simulateurs iOS obsolètes
+  sh("xcrun simctl delete unavailable || true")
+end
+
+# ----- Screenshots -----
+def run_screenshots_for_folder(dest_folder, platformStore)
+  project_root    = File.expand_path("..", __dir__)
+  screenshots_dir = File.join(project_root, "test_driver/screenshots/")
+
+  device_id = start_device_for_folder(platformStore, dest_folder, avd_name: "emulator_tablet_10pouces_screenshots_voczilla")
+  set_device_resolution(platformStore, device_id, dest_folder)
+
+  locales = extract_locales
+  UI.user_error!("❌ Aucune locale trouvée dans lib/l10n") if locales.empty?
+
+  # Binaire réutilisé par flutter drive (évite tout rebuild)
+  app_binary =
+    if platformStore == "android"
+      android_apk_debug_path
+    else
+      ios_sim_runner_app_path
+    end
+
+  locales.each do |locale|
+    normalized_locale = get_normalized_locale(locale, platformStore)
+    if normalized_locale.nil?
+      UI.important("⚠️ Locale #{locale} non supportée pour #{platformStore}. Ignorée.")
+      next
+    end
+
+    FileUtils.rm_rf(screenshots_dir)
+    FileUtils.mkdir_p(screenshots_dir)
+
+    UI.message("🌐 Prise des captures pour [#{platformStore}/#{dest_folder}] en [#{locale}]...")
+    is_feature = (platformStore == "android" && dest_folder == "FeatureGraphic")
+
+    begin
+      sh(%Q{caffeinate -s flutter drive \
+        --driver=test_driver/integration_test.dart \
+        --target=test_driver/app.dart \
+        --no-build \
+        --use-application-binary="#{app_binary}" \
+        -d #{device_id} \
+        --dart-define=LOCALE=#{locale} \
+        --dart-define=FOR_FEATURE_GRAPHIC=#{is_feature} \
+        --dart-define=PLATFORM='#{platformStore}' \
+        --dart-define=DESTFOLDER='#{dest_folder}' \
+        --screenshot=test_driver/screenshots})
+    rescue => e
+      UI.error("🚨 Erreur durant flutter drive pour #{platformStore}/#{locale}/#{dest_folder} : #{e}")
+      next
+    end
+
+    driver_files_to_delete = Dir[File.join(screenshots_dir, "driver*.png")]
+    FileUtils.rm(driver_files_to_delete) unless driver_files_to_delete.empty?
+
+    screenshots = Dir[File.join(screenshots_dir, "*.png")]
+
+    relative_metadata =
+      if is_feature
+        File.join(platformStore, normalized_locale, "images")
+      elsif platformStore == "ios"
+        File.join(platformStore, normalized_locale)
+      else
+        File.join(platformStore, normalized_locale, "images", dest_folder)
+      end
+
+    dest_dir_project = File.join(project_root, "fastlane/metadata", relative_metadata)
+    dest_dir_symlink = File.join("/Volumes/data/voczilla/metadata", relative_metadata)
+
+    [dest_dir_project, dest_dir_symlink].each do |dest_dir|
+      UI.message("📁 Copie des captures vers : #{dest_dir}")
+      FileUtils.mkdir_p(dest_dir)
+      screenshots.empty? ? UI.important("Aucune capture pour #{locale}") : FileUtils.cp(screenshots, dest_dir)
+    end
+  end
+
+  reset_device_resolution(platformStore, device_id)
 end

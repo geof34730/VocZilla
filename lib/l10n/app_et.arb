@@ -174,22 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Palun sisestage oma parool uuesti",
     "login_mots_de_passe_differents": "Paroolid ei ühti",
     "login_tous_champs_obligatoires": "Palun täitke kõik väljad",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Viga toodete laadimisel",
+    "reessayer": "Proovi uuesti",
+    "nsphotolibraryusagedescription": "Profiilipildi valimiseks vajame juurdepääsu teie galeriile.",
+    "nscamerausagedescription": "Uue profiilipildi tegemiseks vajame juurdepääsu teie kaamerale.",
+    "nsmicrophoneusagedescription": "Mõnes funktsioonis heli salvestamise lubamiseks vajame mikrofoni.",
+    "nsspeechrecognitionusagedescription": "Kasutame hääletuvastust, et saaksite rakendusega oma hääle abil suhelda."
 }

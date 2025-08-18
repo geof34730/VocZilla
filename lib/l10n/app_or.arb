@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "ଦୟାକରି ଆପଣଙ୍କର ପାସୱାର୍ଡ ପୁନଃ-ଲେଖନ୍ତୁ।",
     "login_mots_de_passe_differents": "ପାସୱାର୍ଡଗୁଡ଼ିକ ମେଳ ଖାଉନାହିଁ।",
     "login_tous_champs_obligatoires": "ଦୟାକରି ସମସ୍ତ କ୍ଷେତ୍ର ପୂରଣ କରନ୍ତୁ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "ଉତ୍ପାଦଗୁଡ଼ିକ ଲୋଡ୍ କରିବାରେ ତ୍ରୁଟି",
+    "reessayer": "ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ",
+    "nsphotolibraryusagedescription": "ଆପଣଙ୍କୁ ଏକ ପ୍ରୋଫାଇଲ୍ ଛବି ବାଛିବା ପାଇଁ ଆମକୁ ଆପଣଙ୍କର ଗ୍ୟାଲେରୀକୁ ଆକ୍ସେସ୍ ଆବଶ୍ୟକ।",
+    "nscamerausagedescription": "ଆପଣଙ୍କୁ ଏକ ନୂତନ ପ୍ରୋଫାଇଲ୍ ଫଟୋ ଉଠାଇବା ପାଇଁ ଆମକୁ ଆପଣଙ୍କର କ୍ୟାମେରାର ଆକ୍ସେସ୍ ଆବଶ୍ୟକ।",
+    "nsmicrophoneusagedescription": "କିଛି ବୈଶିଷ୍ଟ୍ୟରେ ଅଡିଓ ରେକର୍ଡିଂ ସକ୍ଷମ କରିବା ପାଇଁ ଆମକୁ ମାଇକ୍ରୋଫୋନ୍ ଆବଶ୍ୟକ।",
+    "nsspeechrecognitionusagedescription": "ଆପଣଙ୍କ ସ୍ୱର ବ୍ୟବହାର କରି ଆପ୍ଲିକେସନ୍ ସହିତ ଇଣ୍ଟରାକ୍ଟ କରିବାକୁ ଅନୁମତି ଦେବା ପାଇଁ ଆମେ ସ୍ୱର ଚିହ୍ନଟକରଣ ବ୍ୟବହାର କରୁ।"
 }

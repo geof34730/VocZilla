@@ -174,28 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Lütfen şifrenizi tekrar girin",
     "login_mots_de_passe_differents": "Şifreler eşleşmiyor",
     "login_tous_champs_obligatoires": "Lütfen tüm alanları doldurun",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@liste_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Ürünler yüklenirken hata oluştu",
+    "reessayer": "Tekrar deneyin",
+    "nsphotolibraryusagedescription": "Profil resminizi seçebilmeniz için galerinize erişmemiz gerekiyor.",
+    "nscamerausagedescription": "Yeni bir profil resmi çekebilmeniz için kameranıza erişmemiz gerekiyor.",
+    "nsmicrophoneusagedescription": "Bazı özelliklerde ses kaydı yapabilmek için mikrofona ihtiyacımız var.",
+    "nsspeechrecognitionusagedescription": "Uygulamayla sesinizi kullanarak etkileşime geçebilmenizi sağlamak için ses tanıma özelliğini kullanıyoruz."
 }

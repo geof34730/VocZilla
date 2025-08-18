@@ -532,4 +532,22 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Kérjük, töltse ki az összes mezőt';
+
+  @override
+  String get erreur_chargement_produits => 'Hiba a termékek betöltése során';
+
+  @override
+  String get reessayer => 'Próbáld újra';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Hozzáférés szükséges a galériádhoz, hogy profilképet választhass.';
+
+  @override
+  String get nscamerausagedescription => 'Hozzáférés szükséges a kamerádhoz, hogy új profilképet készíthess.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Bizonyos funkciókban a hangfelvétel engedélyezéséhez szükségünk van a mikrofonra.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Hangfelismerést használunk, hogy a hangoddal kommunikálhass az alkalmazással.';
 }

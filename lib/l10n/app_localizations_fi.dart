@@ -532,4 +532,22 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Täytä kaikki kentät';
+
+  @override
+  String get erreur_chargement_produits => 'Virhe tuotteiden lataamisessa';
+
+  @override
+  String get reessayer => 'Yritä uudelleen';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Tarvitsemme pääsyn galleriaasi, jotta voit valita profiilikuvan.';
+
+  @override
+  String get nscamerausagedescription => 'Tarvitsemme pääsyn kameraasi, jotta voit ottaa uuden profiilikuvan.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Tarvitsemme mikrofonin äänen tallentamiseen joissakin ominaisuuksissa.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Käytämme äänentunnistusta, jotta voit olla vuorovaikutuksessa sovelluksen kanssa äänelläsi.';
 }

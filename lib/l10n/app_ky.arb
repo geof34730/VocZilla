@@ -174,28 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Сырсөзүңүздү кайра киргизиңиз",
     "login_mots_de_passe_differents": "Сырсөздөр дал келбейт",
     "login_tous_champs_obligatoires": "Сураныч, бардык талааларды толтуруңуз",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@button_next": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@login_email": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Товарларды жүктөө катасы",
+    "reessayer": "Кайра аракет кыл",
+    "nsphotolibraryusagedescription": "Профиль сүрөтүн тандоого уруксат берүү үчүн галереяңызга кирүү мүмкүнчүлүгүбүз керек.",
+    "nscamerausagedescription": "Жаңы профиль сүрөтүн тартууга уруксат берүү үчүн камераңызга кирүү мүмкүнчүлүгү керек.",
+    "nsmicrophoneusagedescription": "Кээ бир функцияларда аудио жаздыруу үчүн микрофон керек.",
+    "nsspeechrecognitionusagedescription": "Үнүңүз аркылуу колдонмо менен иштешүүгө мүмкүнчүлүк берүү үчүн үн таанууну колдонобуз."
 }

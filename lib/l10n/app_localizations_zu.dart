@@ -532,4 +532,22 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Sicela ugcwalise zonke izinkambu';
+
+  @override
+  String get erreur_chargement_produits => 'Iphutha ekulayisheni imikhiqizo';
+
+  @override
+  String get reessayer => 'Zama futhi';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Sidinga ukufinyelela kugalari yakho ukuze sikuvumele ukuthi ukhethe isithombe sephrofayela.';
+
+  @override
+  String get nscamerausagedescription => 'Sidinga ukufinyelela kukhamera yakho ukuze sikuvumele ukuthi uthathe isithombe sephrofayela esisha.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Sidinga imakrofoni ukuze sikwazi ukurekhodwa komsindo kwezinye izici.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Sisebenzisa ukunakwa kwezwi ukukuvumela ukuthi uhlanganyele nohlelo lokusebenza usebenzisa izwi lakho.';
 }

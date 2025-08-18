@@ -532,4 +532,22 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'ကွက်လပ်အားလုံးကို ဖြည့်ပါ။';
+
+  @override
+  String get erreur_chargement_produits => 'ထုတ်ကုန်များကို တင်ရာတွင် အမှားအယွင်းရှိနေသည်။';
+
+  @override
+  String get reessayer => 'ထပ်ကြိုးစားပါ။';
+
+  @override
+  String get nsphotolibraryusagedescription => 'ပရိုဖိုင်ပုံတစ်ပုံကို ရွေးချယ်ခွင့်ပြုရန် ကျွန်ုပ်တို့သည် သင်၏ပြခန်းသို့ ဝင်ရောက်ခွင့် လိုအပ်ပါသည်။';
+
+  @override
+  String get nscamerausagedescription => 'ပရိုဖိုင်ပုံအသစ်ကို ရိုက်ခွင့်ပြုရန် ကျွန်ုပ်တို့သည် သင့်ကင်မရာသို့ ဝင်ရောက်ခွင့် လိုအပ်ပါသည်။';
+
+  @override
+  String get nsmicrophoneusagedescription => 'အချို့သောအင်္ဂါရပ်များတွင် အသံဖမ်းယူခြင်းကို ဖွင့်ရန် မိုက်ခရိုဖုန်း လိုအပ်ပါသည်။';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'သင့်အသံကို အသုံးပြု၍ အပလီကေးရှင်းနှင့် အပြန်အလှန် တုံ့ပြန်နိုင်စေရန် အသံအသိအမှတ်ပြုမှုကို ကျွန်ုပ်တို့ အသုံးပြုပါသည်။';
 }

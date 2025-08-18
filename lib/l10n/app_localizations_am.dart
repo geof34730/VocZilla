@@ -532,4 +532,22 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'እባክዎ ሁሉንም መስኮች ይሙሉ';
+
+  @override
+  String get erreur_chargement_produits => 'ምርቶችን መጫን ላይ ስህተት';
+
+  @override
+  String get reessayer => 'እንደገና ይሞክሩ';
+
+  @override
+  String get nsphotolibraryusagedescription => 'የመገለጫ ስዕል እንድትመርጡ ለመፍቀድ ወደ ጋለሪዎ መድረስ እንፈልጋለን።';
+
+  @override
+  String get nscamerausagedescription => 'አዲስ የመገለጫ ፎቶ እንዲያነሱ ለማስቻል የካሜራዎን መዳረሻ እንፈልጋለን።';
+
+  @override
+  String get nsmicrophoneusagedescription => 'በአንዳንድ ባህሪያት የድምጽ ቀረጻን ለማንቃት ማይክሮፎኑን እንፈልጋለን።';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'ድምፅህን ተጠቅመህ ከመተግበሪያው ጋር እንድትገናኝ ለመፍቀድ የድምጽ ማወቂያ እንጠቀማለን።';
 }

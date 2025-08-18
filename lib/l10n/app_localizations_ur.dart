@@ -532,4 +532,22 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'براہ کرم تمام فیلڈز کو پُر کریں۔';
+
+  @override
+  String get erreur_chargement_produits => 'پروڈکٹس لوڈ کرنے میں خرابی۔';
+
+  @override
+  String get reessayer => 'دوبارہ کوشش کریں۔';
+
+  @override
+  String get nsphotolibraryusagedescription => 'آپ کو پروفائل تصویر منتخب کرنے کی اجازت دینے کے لیے ہمیں آپ کی گیلری تک رسائی درکار ہے۔';
+
+  @override
+  String get nscamerausagedescription => 'آپ کو ایک نئی پروفائل تصویر لینے کی اجازت دینے کے لیے ہمیں آپ کے کیمرے تک رسائی درکار ہے۔';
+
+  @override
+  String get nsmicrophoneusagedescription => 'ہمیں کچھ خصوصیات میں آڈیو ریکارڈنگ کو فعال کرنے کے لیے مائیکروفون کی ضرورت ہے۔';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'ہم آپ کو اپنی آواز کا استعمال کرتے ہوئے ایپلیکیشن کے ساتھ تعامل کرنے کی اجازت دینے کے لیے آواز کی شناخت کا استعمال کرتے ہیں۔';
 }

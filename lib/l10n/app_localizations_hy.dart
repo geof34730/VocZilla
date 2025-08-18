@@ -532,4 +532,22 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Խնդրում ենք լրացնել բոլոր դաշտերը';
+
+  @override
+  String get erreur_chargement_produits => 'Սխալ առաջացավ ապրանքների բեռնման ժամանակ';
+
+  @override
+  String get reessayer => 'Փորձեք կրկին';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Մեզ անհրաժեշտ է մուտք գործել ձեր պատկերասրահ, որպեսզի կարողանաք ընտրել պրոֆիլի նկար։';
+
+  @override
+  String get nscamerausagedescription => 'Մեզ անհրաժեշտ է ձեր տեսախցիկին մուտք գործելու թույլտվություն, որպեսզի կարողանաք նոր պրոֆիլի նկար անել։';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Մեզ անհրաժեշտ է միկրոֆոն՝ որոշ գործառույթներում ձայնագրությունը միացնելու համար։';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Մենք օգտագործում ենք ձայնի ճանաչում, որպեսզի դուք կարողանաք փոխազդել ծրագրի հետ ձեր ձայնի միջոցով։';
 }

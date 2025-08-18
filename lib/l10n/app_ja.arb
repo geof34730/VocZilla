@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "パスワードを再入力してください",
     "login_mots_de_passe_differents": "パスワードが一致しません",
     "login_tous_champs_obligatoires": "すべての項目にご記入ください",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "商品の読み込みエラー",
+    "reessayer": "もう一度やり直してください",
+    "nsphotolibraryusagedescription": "プロフィール写真を選択するには、ギャラリーにアクセスする必要があります。",
+    "nscamerausagedescription": "新しいプロフィール写真を撮影するには、カメラにアクセスする必要があります。",
+    "nsmicrophoneusagedescription": "一部の機能で音声録音を有効にするにはマイクが必要です。",
+    "nsspeechrecognitionusagedescription": "音声認識を使用すると、音声を使用してアプリケーションを操作できるようになります。"
 }

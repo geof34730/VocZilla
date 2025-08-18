@@ -532,4 +532,22 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Сураныч, бардык талааларды толтуруңуз';
+
+  @override
+  String get erreur_chargement_produits => 'Товарларды жүктөө катасы';
+
+  @override
+  String get reessayer => 'Кайра аракет кыл';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Профиль сүрөтүн тандоого уруксат берүү үчүн галереяңызга кирүү мүмкүнчүлүгүбүз керек.';
+
+  @override
+  String get nscamerausagedescription => 'Жаңы профиль сүрөтүн тартууга уруксат берүү үчүн камераңызга кирүү мүмкүнчүлүгү керек.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Кээ бир функцияларда аудио жаздыруу үчүн микрофон керек.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Үнүңүз аркылуу колдонмо менен иштешүүгө мүмкүнчүлүк берүү үчүн үн таанууну колдонобуз.';
 }

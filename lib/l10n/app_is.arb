@@ -174,22 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Vinsamlegast sláðu inn lykilorðið þitt aftur",
     "login_mots_de_passe_differents": "Lykilorðin passa ekki saman",
     "login_tous_champs_obligatoires": "Vinsamlegast fylltu út alla reiti",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Villa í að hlaða vörum",
+    "reessayer": "Reyndu aftur",
+    "nsphotolibraryusagedescription": "Við þurfum aðgang að myndasafninu þínu til að leyfa þér að velja prófílmynd.",
+    "nscamerausagedescription": "Við þurfum aðgang að myndavélinni þinni til að leyfa þér að taka nýja prófílmynd.",
+    "nsmicrophoneusagedescription": "Við þurfum hljóðnemann til að virkja hljóðupptöku í sumum eiginleikum.",
+    "nsspeechrecognitionusagedescription": "Við notum raddgreiningu til að leyfa þér að hafa samskipti við forritið með röddinni þinni."
 }

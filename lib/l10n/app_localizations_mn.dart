@@ -532,4 +532,22 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Бүх талбарыг бөглөнө үү';
+
+  @override
+  String get erreur_chargement_produits => 'Бүтээгдэхүүнийг ачаалахад алдаа гарлаа';
+
+  @override
+  String get reessayer => 'Дахин оролдоно уу';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Танд профайлын зураг сонгох боломжийг олгохын тулд бид таны галерейд хандах хэрэгтэй.';
+
+  @override
+  String get nscamerausagedescription => 'Танд шинэ профайлын зураг авахыг зөвшөөрөхийн тулд бид таны камерт хандах шаардлагатай.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Зарим функцэд аудио бичлэг хийхийг идэвхжүүлэхийн тулд бидэнд микрофон хэрэгтэй.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Бид таны дуу хоолойг ашиглан программтай харилцах боломжийг олгохын тулд дуу хоолой таних системийг ашигладаг.';
 }

@@ -174,22 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Sicela ufake kabusha iphasiwedi yakho",
     "login_mots_de_passe_differents": "Amagama-mfihlo awafani",
     "login_tous_champs_obligatoires": "Sicela ugcwalise zonke izinkambu",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Iphutha ekulayisheni imikhiqizo",
+    "reessayer": "Zama futhi",
+    "nsphotolibraryusagedescription": "Sidinga ukufinyelela kugalari yakho ukuze sikuvumele ukuthi ukhethe isithombe sephrofayela.",
+    "nscamerausagedescription": "Sidinga ukufinyelela kukhamera yakho ukuze sikuvumele ukuthi uthathe isithombe sephrofayela esisha.",
+    "nsmicrophoneusagedescription": "Sidinga imakrofoni ukuze sikwazi ukurekhodwa komsindo kwezinye izici.",
+    "nsspeechrecognitionusagedescription": "Sisebenzisa ukunakwa kwezwi ukukuvumela ukuthi uhlanganyele nohlelo lokusebenza usebenzisa izwi lakho."
 }

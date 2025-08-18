@@ -32,6 +32,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
               return Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: GestureDetector(
+                  key: ValueKey('open_drawer_voczilla'),
                   onTap: () {
                     context.read<DrawerBloc>().add(OpenSettingsDrawer(context: context));
                     scaffoldKey.currentState!.openEndDrawer();
@@ -82,5 +83,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+
 }
 

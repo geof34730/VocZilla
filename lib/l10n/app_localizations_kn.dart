@@ -532,4 +532,22 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ.';
+
+  @override
+  String get erreur_chargement_produits => 'ಉತ್ಪನ್ನಗಳನ್ನು ಲೋಡ್ ಮಾಡುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ.';
+
+  @override
+  String get reessayer => 'ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ';
+
+  @override
+  String get nsphotolibraryusagedescription => 'ಪ್ರೊಫೈಲ್ ಚಿತ್ರವನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನಮಗೆ ನಿಮ್ಮ ಗ್ಯಾಲರಿಗೆ ಪ್ರವೇಶದ ಅಗತ್ಯವಿದೆ.';
+
+  @override
+  String get nscamerausagedescription => 'ಹೊಸ ಪ್ರೊಫೈಲ್ ಚಿತ್ರವನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ನಿಮಗೆ ಅನುಮತಿಸಲು ನಮಗೆ ನಿಮ್ಮ ಕ್ಯಾಮೆರಾಗೆ ಪ್ರವೇಶ ಅಗತ್ಯವಿದೆ.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳಲ್ಲಿ ಆಡಿಯೊ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ನಮಗೆ ಮೈಕ್ರೊಫೋನ್ ಅಗತ್ಯವಿದೆ.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'ನಿಮ್ಮ ಧ್ವನಿಯನ್ನು ಬಳಸಿಕೊಂಡು ಅಪ್ಲಿಕೇಶನ್‌ನೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಲು ನಾವು ಧ್ವನಿ ಗುರುತಿಸುವಿಕೆಯನ್ನು ಬಳಸುತ್ತೇವೆ.';
 }

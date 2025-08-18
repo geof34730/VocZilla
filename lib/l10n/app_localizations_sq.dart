@@ -532,4 +532,22 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Ju lutemi plotësoni të gjitha fushat';
+
+  @override
+  String get erreur_chargement_produits => 'Gabim gjatë ngarkimit të produkteve ....';
+
+  @override
+  String get reessayer => 'Provo përsëri';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Na duhet qasje në galerinë tënde për të të lejuar të zgjedhësh një fotografi profili.';
+
+  @override
+  String get nscamerausagedescription => 'Na duhet qasje në kamerën tënde për të të lejuar të bësh një fotografi të re profili.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Na duhet mikrofoni për të aktivizuar regjistrimin audio në disa veçori.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Ne përdorim njohjen e zërit për t\'ju lejuar të bashkëveproni me aplikacionin duke përdorur zërin tuaj.';
 }

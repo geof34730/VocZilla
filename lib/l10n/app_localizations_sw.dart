@@ -532,4 +532,22 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Tafadhali jaza sehemu zote';
+
+  @override
+  String get erreur_chargement_produits => 'Hitilafu katika kupakia bidhaa';
+
+  @override
+  String get reessayer => 'Jaribu tena';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Tunahitaji kufikia ghala yako ili kukuruhusu kuchagua picha ya wasifu.';
+
+  @override
+  String get nscamerausagedescription => 'Tunahitaji ufikiaji wa kamera yako ili kukuruhusu kupiga picha mpya ya wasifu.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Tunahitaji maikrofoni ili kuwezesha kurekodi sauti katika baadhi ya vipengele.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Tunatumia utambuzi wa sauti ili kukuruhusu kuingiliana na programu kwa kutumia sauti yako.';
 }

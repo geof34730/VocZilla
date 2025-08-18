@@ -532,4 +532,22 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Vänligen fyll i alla fält';
+
+  @override
+  String get erreur_chargement_produits => 'Fel vid laddning av produkter';
+
+  @override
+  String get reessayer => 'Försök igen';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Vi behöver åtkomst till ditt galleri för att du ska kunna välja en profilbild.';
+
+  @override
+  String get nscamerausagedescription => 'Vi behöver åtkomst till din kamera för att du ska kunna ta en ny profilbild.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Vi behöver mikrofonen för att aktivera ljudinspelning i vissa funktioner.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Vi använder röstigenkänning för att du ska kunna interagera med appen med hjälp av din röst.';
 }

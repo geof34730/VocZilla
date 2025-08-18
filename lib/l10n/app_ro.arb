@@ -174,28 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Vă rugăm să reintroduceți parola",
     "login_mots_de_passe_differents": "Parolele nu se potrivesc",
     "login_tous_champs_obligatoires": "Vă rugăm să completați toate câmpurile",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@non": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Eroare la încărcarea produselor",
+    "reessayer": "Încearcă din nou",
+    "nsphotolibraryusagedescription": "Avem nevoie de acces la galeria ta pentru a-ți permite să alegi o fotografie de profil.",
+    "nscamerausagedescription": "Avem nevoie de acces la camera ta foto pentru a-ți permite să faci o nouă fotografie de profil.",
+    "nsmicrophoneusagedescription": "Avem nevoie de microfon pentru a activa înregistrarea audio în anumite funcții.",
+    "nsspeechrecognitionusagedescription": "Folosim recunoașterea vocală pentru a vă permite să interacționați cu aplicația folosind vocea."
 }

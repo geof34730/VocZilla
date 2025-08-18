@@ -81,7 +81,7 @@ class Layout extends StatelessWidget {
       bottomNavigationBar: (showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: itemSelected) : null,
       body:SingleChildScrollView(
           child:Padding(
-              padding: logged ? EdgeInsets.only(top: kToolbarHeight+15,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
+              padding: logged ? EdgeInsets.only(top: kToolbarHeight + MediaQuery.of(context).padding.top + 20,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
               child:Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -532,4 +532,22 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Vyplňte prosím všechna pole';
+
+  @override
+  String get erreur_chargement_produits => 'Chyba při načítání produktů';
+
+  @override
+  String get reessayer => 'Zkuste to znovu';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Potřebujeme přístup do vaší galerie, abyste si mohli vybrat profilový obrázek.';
+
+  @override
+  String get nscamerausagedescription => 'Potřebujeme přístup k vašemu fotoaparátu, abyste si mohli pořídit novou profilovou fotku.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Pro nahrávání zvuku v některých funkcích potřebujeme mikrofon.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Používáme rozpoznávání hlasu, abychom vám umožnili interagovat s aplikací pomocí hlasu.';
 }

@@ -249,7 +249,12 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
         }
       }
     } else {
-      return stockValueNoDescription(stockValue: stockValue).substring(0, stockValueNoDescription(stockValue: controllerValue).length) != stockValueNoDescription(stockValue: controllerValue);
+      String cleanControllerValue = stockValueNoDescription(stockValue: controllerValue);
+      String cleanStockValue = stockValueNoDescription(stockValue: stockValue);
+      if (cleanControllerValue.length > cleanStockValue.length) {
+        return true;
+      }
+      return cleanStockValue.substring(0, cleanControllerValue.length) != cleanControllerValue;
     }
     return false;
   }

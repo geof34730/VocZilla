@@ -9,6 +9,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'dart:math';
 import 'dart:async';
 
+import '../../../global.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
@@ -83,7 +84,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
           if (data.isEmpty) {
             return Center(child: Text(context.loc.no_vocabulary_items_found));
           }
-          if (refrechRandom) {
+          if (refrechRandom || randomItemData >= data.length) {
             refrechRandom = false;
             Random random = Random();
             randomItemData = random.nextInt(data.length);
@@ -233,7 +234,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
               Column(
                 children: [
                   const SizedBox(height: 20),
-                  if (isRecording || viewResulte) ...[
+                  if (isRecording || viewResulte  || testScreenShot) ...[
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.max,
@@ -252,21 +253,21 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      _lastWords,
+                       testScreenShot ? data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)] : _lastWords,
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: isRecording ? Colors.black54 : (isCorrect ? Colors.green : Colors.red),
+                        color: isRecording ? Colors.black54 : (isCorrect  || testScreenShot ? Colors.green : Colors.red),
                       ),
                     ),
                   ],
                   const SizedBox(height: 12),
-                  if (viewResulte) ...[
+                  if (viewResulte || testScreenShot) ...[
                     Text(
-                      isCorrect ? '✅ ${context.loc.pronunciation_success}' : '❌ ${context.loc.pronunciation_error}',
+                      isCorrect  || testScreenShot ? '✅ ${context.loc.pronunciation_success}' : '❌ ${context.loc.pronunciation_error}',
                       style: TextStyle(
                         fontSize: isCorrect ? 40 : 20,
-                        color: isCorrect ? Colors.green : Colors.red,
+                        color:  isCorrect  || testScreenShot ? Colors.green : Colors.red,
                       ),
                     ),
                     Padding(

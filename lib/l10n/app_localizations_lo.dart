@@ -532,4 +532,22 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'ກະລຸນາຕື່ມຂໍ້ມູນໃສ່ໃນທຸກຊ່ອງ';
+
+  @override
+  String get erreur_chargement_produits => 'ເກີດຄວາມຜິດພາດໃນການໂຫຼດຜະລິດຕະພັນ';
+
+  @override
+  String get reessayer => 'ລອງອີກຄັ້ງ';
+
+  @override
+  String get nsphotolibraryusagedescription => 'ພວກເຮົາຕ້ອງການເຂົ້າຫາຄັງຮູບຂອງເຈົ້າເພື່ອໃຫ້ເຈົ້າເລືອກຮູບໂປຣໄຟລ໌.';
+
+  @override
+  String get nscamerausagedescription => 'ພວກເຮົາຕ້ອງການການເຂົ້າເຖິງກ້ອງຖ່າຍຮູບຂອງທ່ານເພື່ອອະນຸຍາດໃຫ້ທ່ານຖ່າຍຮູບໂປຣໄຟລ໌ໃຫມ່.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'ພວກເຮົາຕ້ອງການໄມໂຄຣໂຟນເພື່ອເປີດໃຊ້ການບັນທຶກສຽງໃນບາງຄຸນສົມບັດ.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'ພວກເຮົາໃຊ້ການຮັບຮູ້ສຽງເພື່ອໃຫ້ທ່ານສາມາດໂຕ້ຕອບກັບແອັບພລິເຄຊັນໂດຍໃຊ້ສຽງຂອງເຈົ້າ.';
 }

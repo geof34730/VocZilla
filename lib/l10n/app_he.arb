@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "אנא הזן שוב את הסיסמה שלך",
     "login_mots_de_passe_differents": "הסיסמאות אינן תואמות",
     "login_tous_champs_obligatoires": "אנא מלאו את כל השדות",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "שגיאה בטעינת מוצרים",
+    "reessayer": "נסה שוב",
+    "nsphotolibraryusagedescription": "אנחנו צריכים גישה לגלריה שלך כדי לאפשר לך לבחור תמונת פרופיל.",
+    "nscamerausagedescription": "אנחנו צריכים גישה למצלמה שלך כדי שנוכל לצלם תמונת פרופיל חדשה.",
+    "nsmicrophoneusagedescription": "אנחנו צריכים את המיקרופון כדי לאפשר הקלטת שמע בתכונות מסוימות.",
+    "nsspeechrecognitionusagedescription": "אנו משתמשים בזיהוי קולי כדי לאפשר לך לתקשר עם האפליקציה באמצעות קולך."
 }

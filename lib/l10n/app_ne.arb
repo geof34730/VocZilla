@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "कृपया आफ्नो पासवर्ड पुन: प्रविष्ट गर्नुहोस्।",
     "login_mots_de_passe_differents": "पासवर्डहरू मेल खाँदैनन्।",
     "login_tous_champs_obligatoires": "कृपया सबै क्षेत्रहरू भर्नुहोस्।",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "उत्पादनहरू लोड गर्दा त्रुटि भयो",
+    "reessayer": "फेरि प्रयास गर्नुहोस्",
+    "nsphotolibraryusagedescription": "तपाईंलाई प्रोफाइल तस्वीर छनौट गर्न अनुमति दिन हामीलाई तपाईंको ग्यालरीमा पहुँच चाहिन्छ।",
+    "nscamerausagedescription": "तपाईंलाई नयाँ प्रोफाइल तस्वीर खिच्न अनुमति दिन हामीलाई तपाईंको क्यामेरामा पहुँच चाहिन्छ।",
+    "nsmicrophoneusagedescription": "केही सुविधाहरूमा अडियो रेकर्डिङ सक्षम गर्न हामीलाई माइक्रोफोन चाहिन्छ।",
+    "nsspeechrecognitionusagedescription": "हामी तपाईंको आवाज प्रयोग गरेर अनुप्रयोगसँग अन्तर्क्रिया गर्न अनुमति दिन आवाज पहिचान प्रयोग गर्छौं।"
 }

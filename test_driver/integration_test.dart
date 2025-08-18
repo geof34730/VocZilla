@@ -93,7 +93,7 @@ void main() {
     test(
       'check if the app starts',
           () async {
-        await Future.delayed(Duration(seconds: 5));
+        //await Future.delayed(Duration(seconds: 5));
 
         final forFeatureGraphicStr = await driver.requestData('getForFeatureGraphic');
         final forFeatureGraphic = forFeatureGraphicStr == 'true';
@@ -110,26 +110,12 @@ void main() {
         await driver.tap(find.byValueKey('link_home_login'));
 
 
-
-
-        await driver.waitFor(find.byValueKey('login_screen'));
-
-        await driver.waitFor(find.byValueKey('login_screen'));
-        await takeScreenshot(driver, getNameFile('login_screen'));
-
-        await driver.tap(find.byValueKey('login_field'));
-        await driver.enterText('voczilla.test2@flutter-now.com');
-        await driver.tap(find.byValueKey('password_field'));
-        await driver.enterText('Hefpccy%08%08');
-
-        await driver.waitFor(find.byValueKey('validate_login_button'));
-        await driver.tap(find.byValueKey('validate_login_button'));
-
         await driver.waitFor(find.byValueKey('home_logged'));
         await takeScreenshot(driver, getNameFile('homeperso'));
 
-
-        await driver.tap(find.byValueKey('button_create_list'));
+        print('find buttonAddList');
+        await driver.tap(find.byValueKey('buttonAddList'));
+        print('ok buttonAddList');
 
         await driver.waitFor(find.byValueKey('perso_list_step1'));
         await driver.tap(find.byValueKey('title_perso_field'));
@@ -169,6 +155,27 @@ void main() {
         await driver.tap(find.byValueKey('buttonQuizztop20'));
         await driver.waitFor(find.byValueKey('screenQuizz'));
         await takeScreenshot(driver, getNameFile('quizz'));
+
+        print('find open_drawer_voczilla');
+        await driver.tap(find.byValueKey('open_drawer_voczilla'));
+        print('ok open_drawer_voczilla');
+
+        print('find link_update_profile');
+        await driver.tap(find.byValueKey('link_update_profile'));
+        print('ok link_update_profile');
+        await driver.waitFor(find.byValueKey('screenUpdateProfil'));
+        await takeScreenshot(driver, getNameFile('screenUpdateProfil'));
+
+        print('find open_drawer_voczilla');
+        await driver.tap(find.byValueKey('open_drawer_voczilla'));
+        print('ok open_drawer_voczilla');
+
+        print('find link_subscription');
+        await driver.tap(find.byValueKey('link_subscription'));
+        print('ok link_subscription');
+
+        await driver.waitFor(find.byValueKey('screenUpdateProfilMensuel'));
+        await takeScreenshot(driver, getNameFile('screenUpdateProfilMensuel'));
 
         print('✅ Fin des screenshots');
       },

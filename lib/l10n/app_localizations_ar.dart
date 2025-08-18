@@ -532,4 +532,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'الرجاء ملء جميع الحقول';
+
+  @override
+  String get erreur_chargement_produits => 'خطأ في تحميل المنتجات';
+
+  @override
+  String get reessayer => 'حاول ثانية';
+
+  @override
+  String get nsphotolibraryusagedescription => 'نحن بحاجة إلى الوصول إلى معرض الصور الخاص بك للسماح لك باختيار صورة الملف الشخصي.';
+
+  @override
+  String get nscamerausagedescription => 'نحن بحاجة إلى الوصول إلى الكاميرا الخاصة بك للسماح لك بالتقاط صورة ملف تعريفي جديدة.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'نحن بحاجة إلى الميكروفون لتمكين التسجيل الصوتي في بعض الميزات.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'نحن نستخدم خاصية التعرف على الصوت للسماح لك بالتفاعل مع التطبيق باستخدام صوتك.';
 }

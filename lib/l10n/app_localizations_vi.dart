@@ -532,4 +532,22 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Vui lòng điền vào tất cả các trường';
+
+  @override
+  String get erreur_chargement_produits => 'Lỗi khi tải sản phẩm';
+
+  @override
+  String get reessayer => 'Thử lại';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Chúng tôi cần quyền truy cập vào thư viện ảnh của bạn để bạn có thể chọn ảnh đại diện.';
+
+  @override
+  String get nscamerausagedescription => 'Chúng tôi cần quyền truy cập vào máy ảnh của bạn để chụp ảnh đại diện mới.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Chúng ta cần micrô để có thể ghi âm ở một số tính năng.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Chúng tôi sử dụng công nghệ nhận dạng giọng nói để cho phép bạn tương tác với ứng dụng bằng giọng nói của mình.';
 }

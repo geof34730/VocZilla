@@ -532,4 +532,22 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'กรุณากรอกข้อมูลให้ครบทุกช่อง';
+
+  @override
+  String get erreur_chargement_produits => 'เกิดข้อผิดพลาดในการโหลดสินค้า';
+
+  @override
+  String get reessayer => 'ลองอีกครั้ง';
+
+  @override
+  String get nsphotolibraryusagedescription => 'เราจำเป็นต้องเข้าถึงแกลเลอรีของคุณเพื่อให้คุณสามารถเลือกภาพโปรไฟล์ได้';
+
+  @override
+  String get nscamerausagedescription => 'เราจำเป็นต้องเข้าถึงกล้องของคุณเพื่อให้คุณสามารถถ่ายรูปโปรไฟล์ใหม่ได้';
+
+  @override
+  String get nsmicrophoneusagedescription => 'เราจำเป็นต้องมีไมโครโฟนเพื่อให้สามารถบันทึกเสียงในฟีเจอร์บางอย่างได้';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'เราใช้การจดจำเสียงเพื่อให้คุณสามารถโต้ตอบกับแอปพลิเคชันโดยใช้เสียงของคุณ';
 }

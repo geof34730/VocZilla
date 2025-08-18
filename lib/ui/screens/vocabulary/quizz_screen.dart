@@ -8,6 +8,7 @@ import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
+import '../../../global.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 
@@ -149,7 +150,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                             AnimatedBuilder(
                               animation: buttonNotifier,
                               builder: (context, child) {
-                                return buttonNotifier.showButton
+                                return (buttonNotifier.showButton || testScreenShot)
                                     ? Padding(
                                   padding: const EdgeInsets.only(top: 20),
                                   child: ElevatedButton(

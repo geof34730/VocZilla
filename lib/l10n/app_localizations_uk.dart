@@ -532,4 +532,22 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Будь ласка, заповніть усі поля';
+
+  @override
+  String get erreur_chargement_produits => 'Помилка завантаження товарів';
+
+  @override
+  String get reessayer => 'Спробуйте ще раз';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Нам потрібен доступ до вашої галереї, щоб ви могли вибрати зображення профілю.';
+
+  @override
+  String get nscamerausagedescription => 'Нам потрібен доступ до вашої камери, щоб ви могли зробити нове фото профілю.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Нам потрібен мікрофон, щоб увімкнути запис аудіо в деяких функціях.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Ми використовуємо розпізнавання голосу, щоб ви могли взаємодіяти з додатком за допомогою голосу.';
 }

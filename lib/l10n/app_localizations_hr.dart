@@ -532,4 +532,22 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Molimo ispunite sva polja';
+
+  @override
+  String get erreur_chargement_produits => 'Pogreška pri učitavanju proizvoda';
+
+  @override
+  String get reessayer => 'Pokušajte ponovno';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Trebamo pristup vašoj galeriji kako biste mogli odabrati profilnu sliku.';
+
+  @override
+  String get nscamerausagedescription => 'Trebamo pristup vašoj kameri kako bismo vam omogućili snimanje nove profilne slike.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Mikrofon nam je potreban kako bismo omogućili snimanje zvuka u nekim značajkama.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Koristimo prepoznavanje glasa kako bismo vam omogućili interakciju s aplikacijom pomoću glasa.';
 }

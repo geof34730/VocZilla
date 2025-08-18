@@ -532,4 +532,22 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Пожалуйста, заполните все поля';
+
+  @override
+  String get erreur_chargement_produits => 'Ошибка загрузки продуктов';
+
+  @override
+  String get reessayer => 'Попробуйте еще раз';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Нам нужен доступ к вашей галерее, чтобы вы могли выбрать фотографию профиля.';
+
+  @override
+  String get nscamerausagedescription => 'Нам нужен доступ к вашей камере, чтобы вы могли сделать новую фотографию профиля.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Микрофон необходим для записи звука в некоторых функциях.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Мы используем функцию распознавания голоса, чтобы вы могли взаимодействовать с приложением с помощью голоса.';
 }

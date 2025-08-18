@@ -174,28 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Voer uw wachtwoord opnieuw in",
     "login_mots_de_passe_differents": "Wachtwoorden komen niet overeen",
     "login_tous_champs_obligatoires": "Vul alle velden in",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@button_next": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Fout bij het laden van producten",
+    "reessayer": "Probeer het opnieuw",
+    "nsphotolibraryusagedescription": "Wij hebben toegang tot uw galerij nodig zodat u een profielfoto kunt kiezen.",
+    "nscamerausagedescription": "Wij hebben toegang tot uw camera nodig zodat u een nieuwe profielfoto kunt maken.",
+    "nsmicrophoneusagedescription": "We hebben de microfoon nodig om audio-opnamen in bepaalde functies mogelijk te maken.",
+    "nsspeechrecognitionusagedescription": "Wij maken gebruik van spraakherkenning zodat u met uw stem kunt communiceren met de applicatie."
 }

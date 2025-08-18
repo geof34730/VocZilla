@@ -532,4 +532,22 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Palun täitke kõik väljad';
+
+  @override
+  String get erreur_chargement_produits => 'Viga toodete laadimisel';
+
+  @override
+  String get reessayer => 'Proovi uuesti';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Profiilipildi valimiseks vajame juurdepääsu teie galeriile.';
+
+  @override
+  String get nscamerausagedescription => 'Uue profiilipildi tegemiseks vajame juurdepääsu teie kaamerale.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Mõnes funktsioonis heli salvestamise lubamiseks vajame mikrofoni.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Kasutame hääletuvastust, et saaksite rakendusega oma hääle abil suhelda.';
 }

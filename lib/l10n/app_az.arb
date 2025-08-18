@@ -174,34 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Şifrənizi yenidən daxil edin",
     "login_mots_de_passe_differents": "Parollar uyğun gəlmir",
     "login_tous_champs_obligatoires": "Zəhmət olmasa bütün sahələri doldurun",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@button_next": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@pronunciation_success": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Məhsulları yükləmə xətası",
+    "reessayer": "Yenidən cəhd edin",
+    "nsphotolibraryusagedescription": "Sizə profil şəklini seçməyə icazə vermək üçün qalereyanıza daxil olmalıyıq.",
+    "nscamerausagedescription": "Yeni profil şəklini çəkməyə icazə vermək üçün kameranıza giriş tələb edirik.",
+    "nsmicrophoneusagedescription": "Bəzi funksiyalarda səs yazmağı aktivləşdirmək üçün mikrofona ehtiyacımız var.",
+    "nsspeechrecognitionusagedescription": "Səsinizdən istifadə edərək proqramla əlaqə saxlamağınız üçün səsin tanınmasından istifadə edirik."
 }

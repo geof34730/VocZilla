@@ -532,4 +532,22 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Zəhmət olmasa bütün sahələri doldurun';
+
+  @override
+  String get erreur_chargement_produits => 'Məhsulları yükləmə xətası';
+
+  @override
+  String get reessayer => 'Yenidən cəhd edin';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Sizə profil şəklini seçməyə icazə vermək üçün qalereyanıza daxil olmalıyıq.';
+
+  @override
+  String get nscamerausagedescription => 'Yeni profil şəklini çəkməyə icazə vermək üçün kameranıza giriş tələb edirik.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Bəzi funksiyalarda səs yazmağı aktivləşdirmək üçün mikrofona ehtiyacımız var.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Səsinizdən istifadə edərək proqramla əlaqə saxlamağınız üçün səsin tanınmasından istifadə edirik.';
 }

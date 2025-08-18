@@ -174,16 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Моля, въведете отново паролата си",
     "login_mots_de_passe_differents": "Паролите не съвпадат",
     "login_tous_champs_obligatoires": "Моля, попълнете всички полета",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Грешка при зареждане на продуктите",
+    "reessayer": "Опитай отново",
+    "nsphotolibraryusagedescription": "Нуждаем се от достъп до галерията ви, за да можете да изберете профилна снимка.",
+    "nscamerausagedescription": "Нуждаем се от достъп до камерата ви, за да можете да си направите нова профилна снимка.",
+    "nsmicrophoneusagedescription": "Нуждаем се от микрофон, за да активираме аудио запис в някои функции.",
+    "nsspeechrecognitionusagedescription": "Използваме гласово разпознаване, за да ви позволим да взаимодействате с приложението, използвайки гласа си."
 }

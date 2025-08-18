@@ -174,16 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Құпия сөзіңізді қайта енгізіңіз",
     "login_mots_de_passe_differents": "Құпия сөздер сәйкес келмейді",
     "login_tous_champs_obligatoires": "Барлық өрістерді толтырыңыз",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Өнімдерді жүктеу қатесі",
+    "reessayer": "Қайтадан байқап көріңіз",
+    "nsphotolibraryusagedescription": "Профиль суретін таңдауға мүмкіндік беру үшін бізге галереяға кіру рұқсаты қажет.",
+    "nscamerausagedescription": "Жаңа профиль суретін түсіруге мүмкіндік беру үшін камераңызға рұқсат қажет.",
+    "nsmicrophoneusagedescription": "Кейбір мүмкіндіктерде дыбыс жазуды қосу үшін бізге микрофон қажет.",
+    "nsspeechrecognitionusagedescription": "Даусыңызды пайдаланып қолданбамен әрекеттесуіңізге мүмкіндік беру үшін біз дауысты тану мүмкіндігін қолданамыз."
 }

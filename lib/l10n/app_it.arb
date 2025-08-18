@@ -174,40 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Inserisci nuovamente la tua password",
     "login_mots_de_passe_differents": "Le password non corrispondono",
     "login_tous_champs_obligatoires": "Si prega di compilare tutti i campi",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@button_next": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@card_home_user_liste_perso": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@non": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Errore durante il caricamento dei prodotti",
+    "reessayer": "Riprova",
+    "nsphotolibraryusagedescription": "Abbiamo bisogno di accedere alla tua galleria per consentirti di scegliere un'immagine del profilo.",
+    "nscamerausagedescription": "Abbiamo bisogno di accedere alla tua fotocamera per consentirti di scattare una nuova foto del profilo.",
+    "nsmicrophoneusagedescription": "Per abilitare la registrazione audio in alcune funzionalità è necessario il microfono.",
+    "nsspeechrecognitionusagedescription": "Utilizziamo il riconoscimento vocale per consentirti di interagire con l'applicazione tramite la tua voce."
 }

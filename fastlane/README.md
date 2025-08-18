@@ -21,7 +21,7 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane all generate_metadata
 ```
 
-📸 Générer les métadonnées et captures d'écran Android & iOS multilingues
+📸 Générer les métadonnées Android & iOS
 
 ### all screenshots
 
@@ -29,7 +29,23 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane all screenshots
 ```
 
+📷 Screenshots Android + iOS (simulateur) — builds uniques, exécutions sans rebuild, cleanup disque
 
+### all cleanup_soft
+
+```sh
+[bundle exec] fastlane all cleanup_soft
+```
+
+🧽 Nettoyage manuel (conserve Runner.app simulateur)
+
+### all cleanup_hard
+
+```sh
+[bundle exec] fastlane all cleanup_hard
+```
+
+🔥 Nettoyage agressif (supprime aussi le build iOS simulateur)
 
 ----
 

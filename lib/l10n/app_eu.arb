@@ -174,22 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Mesedez, idatzi berriro zure pasahitza",
     "login_mots_de_passe_differents": "Pasahitzak ez datoz bat",
     "login_tous_champs_obligatoires": "Mesedez, bete eremu guztiak",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Errorea produktuak kargatzean",
+    "reessayer": "Saiatu berriro",
+    "nsphotolibraryusagedescription": "Profil-argazki bat aukeratu ahal izateko, zure galeriarako sarbidea behar dugu.",
+    "nscamerausagedescription": "Profil-argazki berri bat atera ahal izateko, zure kamerarako sarbidea behar dugu.",
+    "nsmicrophoneusagedescription": "Mikrofonoa behar dugu funtzio batzuetan audioa grabatzeko aukera emateko.",
+    "nsspeechrecognitionusagedescription": "Ahots-ezagutza erabiltzen dugu aplikazioarekin zure ahotsa erabiliz elkarreragin ahal izateko."
 }

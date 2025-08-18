@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "කරුණාකර ඔබගේ මුරපදය නැවත ඇතුළත් කරන්න.",
     "login_mots_de_passe_differents": "මුරපද නොගැලපේ.",
     "login_tous_champs_obligatoires": "කරුණාකර සියලුම ක්ෂේත්‍ර පුරවන්න.",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "නිෂ්පාදන පූරණය කිරීමේ දෝෂයකි",
+    "reessayer": "නැවත උත්සාහ කරන්න",
+    "nsphotolibraryusagedescription": "ඔබට පැතිකඩ පින්තූරයක් තෝරා ගැනීමට ඉඩ දීම සඳහා අපට ඔබගේ ගැලරියට ප්‍රවේශය අවශ්‍ය වේ.",
+    "nscamerausagedescription": "ඔබට නව පැතිකඩ පින්තූරයක් ගැනීමට ඉඩ දීම සඳහා අපට ඔබගේ කැමරාවට ප්‍රවේශය අවශ්‍ය වේ.",
+    "nsmicrophoneusagedescription": "සමහර විශේෂාංගවල ශ්‍රව්‍ය පටිගත කිරීම සබල කිරීමට අපට මයික්‍රෆෝනය අවශ්‍ය වේ.",
+    "nsspeechrecognitionusagedescription": "ඔබගේ හඬ භාවිතයෙන් යෙදුම සමඟ අන්තර් ක්‍රියා කිරීමට ඉඩ සැලසීමට අපි හඬ හඳුනාගැනීම භාවිතා කරමු."
 }

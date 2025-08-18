@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "გთხოვთ, ხელახლა შეიყვანოთ თქვენი პაროლი",
     "login_mots_de_passe_differents": "პაროლები არ ემთხვევა",
     "login_tous_champs_obligatoires": "გთხოვთ, შეავსოთ ყველა ველი",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "პროდუქტების ჩატვირთვისას შეცდომა მოხდა. მოხდა პროდუქტების ჩატვირთვის შეცდომა.",
+    "reessayer": "ხელახლა სცადეთ",
+    "nsphotolibraryusagedescription": "პროფილის სურათის ასარჩევად, თქვენს გალერეაზე წვდომა გვჭირდება.",
+    "nscamerausagedescription": "პროფილის ახალი სურათის გადასაღებად, თქვენს კამერაზე წვდომა გვჭირდება.",
+    "nsmicrophoneusagedescription": "ზოგიერთ ფუნქციაში აუდიოჩანაწერის ჩასართავად მიკროფონი გვჭირდება.",
+    "nsspeechrecognitionusagedescription": "ჩვენ ვიყენებთ ხმის ამოცნობის ფუნქციას, რათა აპლიკაციასთან ხმოვანი სიგნალით ურთიერთქმედება შეძლოთ."
 }

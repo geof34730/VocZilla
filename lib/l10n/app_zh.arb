@@ -174,16 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "请重新输入您的密码",
     "login_mots_de_passe_differents": "密码不匹配",
     "login_tous_champs_obligatoires": "请填写所有字段",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "加载产品时出错",
+    "reessayer": "再试一次",
+    "nsphotolibraryusagedescription": "我们需要访问您的图库，以便您选择个人资料图片。",
+    "nscamerausagedescription": "我们需要访问您的相机，以便您拍摄新的个人资料照片。",
+    "nsmicrophoneusagedescription": "我们需要麦克风来启用某些功能的录音。",
+    "nsspeechrecognitionusagedescription": "我们使用语音识别功能，让您可以使用语音与应用程序进行交互。"
 }

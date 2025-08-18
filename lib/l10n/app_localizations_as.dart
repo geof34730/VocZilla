@@ -532,4 +532,22 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'সকলো ক্ষেত্ৰ পূৰণ কৰিবলৈ অনুৰোধ জনালোঁ';
+
+  @override
+  String get erreur_chargement_produits => 'পণ্যসমূহ লোড কৰাত ত্ৰুটি';
+
+  @override
+  String get reessayer => 'আকৌ এবাৰ চেষ্টা কৰক';
+
+  @override
+  String get nsphotolibraryusagedescription => 'আপোনাক এটা প্ৰফাইল ছবি বাছি ল\'বলৈ আমাক আপোনাৰ গেলেৰীলৈ প্ৰৱেশৰ প্ৰয়োজন।';
+
+  @override
+  String get nscamerausagedescription => 'আপোনাক নতুন প্ৰফাইল ছবি তুলিবলৈ আমাক আপোনাৰ কেমেৰাৰ প্ৰৱেশৰ প্ৰয়োজন।';
+
+  @override
+  String get nsmicrophoneusagedescription => 'কিছুমান বৈশিষ্ট্যত অডিঅ’ ৰেকৰ্ডিং সক্ষম কৰিবলৈ আমাক মাইক্ৰ’ফোনৰ প্ৰয়োজন।';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'আমি আপোনাৰ কণ্ঠস্বৰ ব্যৱহাৰ কৰি এপ্লিকেচনৰ সৈতে যোগাযোগ কৰিবলৈ অনুমতি দিবলৈ ভয়েচ চিনাক্তকৰণ ব্যৱহাৰ কৰো।';
 }

@@ -532,4 +532,22 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Prosimo, izpolnite vsa polja';
+
+  @override
+  String get erreur_chargement_produits => 'Napaka pri nalaganju izdelkov';
+
+  @override
+  String get reessayer => 'Poskusi znova';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Potrebujemo dostop do vaše galerije, da si lahko izberete profilno sliko.';
+
+  @override
+  String get nscamerausagedescription => 'Potrebujemo dostop do vašega fotoaparata, da vam omogočimo fotografiranje novega profila.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Za omogočanje snemanja zvoka v nekaterih funkcijah potrebujemo mikrofon.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Za interakcijo z aplikacijo uporabljamo prepoznavanje glasu.';
 }

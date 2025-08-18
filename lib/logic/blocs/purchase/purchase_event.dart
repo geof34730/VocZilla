@@ -1,34 +1,44 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/foundation.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 
-abstract class PurchaseEvent  extends Equatable {}
+@immutable
+abstract class PurchaseEvent extends Equatable {
+  const PurchaseEvent();
+  @override
+  List<Object?> get props => const [];
+}
 
 class LoadProducts extends PurchaseEvent {
-  @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  const LoadProducts();
 }
 
 class BuyProduct extends PurchaseEvent {
   final ProductDetails productDetails;
-
-  BuyProduct(this.productDetails);
+  const BuyProduct(this.productDetails);
 
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [productDetails.id];
 }
 
 class CheckActiveSubscriptions extends PurchaseEvent {
-  @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  const CheckActiveSubscriptions();
 }
 
-class PurchaseFailled extends PurchaseEvent {
-  PurchaseFailled(String s);
+class PurchaseFailed extends PurchaseEvent {
+  final String error;
+  const PurchaseFailed(this.error);
 
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [error];
+}
+
+/// Event interne : les updates viennent du purchaseStream du plugin.
+class PurchaseUpdated extends PurchaseEvent {
+  final List<PurchaseDetails> details;
+  const PurchaseUpdated(this.details);
+
+  @override
+  List<Object?> get props =>
+      [details.map((d) => d.purchaseID ?? d.productID).toList()];
 }

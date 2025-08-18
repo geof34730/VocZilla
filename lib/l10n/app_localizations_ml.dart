@@ -532,4 +532,22 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'ദയവായി എല്ലാ ഫീൽഡുകളും പൂരിപ്പിക്കുക.';
+
+  @override
+  String get erreur_chargement_produits => 'ഉൽപ്പന്നങ്ങൾ ലോഡ് ചെയ്യുന്നതിൽ പിശക്';
+
+  @override
+  String get reessayer => 'വീണ്ടും ശ്രമിക്കുക';
+
+  @override
+  String get nsphotolibraryusagedescription => 'ഒരു പ്രൊഫൈൽ ചിത്രം തിരഞ്ഞെടുക്കാൻ നിങ്ങളെ അനുവദിക്കുന്നതിന് ഞങ്ങൾക്ക് നിങ്ങളുടെ ഗാലറിയിലേക്ക് ആക്‌സസ് ആവശ്യമാണ്.';
+
+  @override
+  String get nscamerausagedescription => 'പുതിയൊരു പ്രൊഫൈൽ ചിത്രം എടുക്കാൻ നിങ്ങളെ അനുവദിക്കുന്നതിന് ഞങ്ങൾക്ക് നിങ്ങളുടെ ക്യാമറയിലേക്ക് ആക്‌സസ് ആവശ്യമാണ്.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'ചില ഫീച്ചറുകളിൽ ഓഡിയോ റെക്കോർഡിംഗ് പ്രവർത്തനക്ഷമമാക്കാൻ നമുക്ക് മൈക്രോഫോൺ ആവശ്യമാണ്.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'നിങ്ങളുടെ ശബ്‌ദം ഉപയോഗിച്ച് ആപ്ലിക്കേഷനുമായി സംവദിക്കാൻ നിങ്ങളെ അനുവദിക്കുന്നതിന് ഞങ്ങൾ ശബ്‌ദ തിരിച്ചറിയൽ ഉപയോഗിക്കുന്നു.';
 }

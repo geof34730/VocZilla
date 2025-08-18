@@ -174,28 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "သင့်စကားဝှက်ကို ပြန်ထည့်ပါ။",
     "login_mots_de_passe_differents": "စကားဝှက်များ မတိုက်ဆိုင်ပါ။",
     "login_tous_champs_obligatoires": "ကွက်လပ်အားလုံးကို ဖြည့်ပါ။",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@pronunciation_success": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "ထုတ်ကုန်များကို တင်ရာတွင် အမှားအယွင်းရှိနေသည်။",
+    "reessayer": "ထပ်ကြိုးစားပါ။",
+    "nsphotolibraryusagedescription": "ပရိုဖိုင်ပုံတစ်ပုံကို ရွေးချယ်ခွင့်ပြုရန် ကျွန်ုပ်တို့သည် သင်၏ပြခန်းသို့ ဝင်ရောက်ခွင့် လိုအပ်ပါသည်။",
+    "nscamerausagedescription": "ပရိုဖိုင်ပုံအသစ်ကို ရိုက်ခွင့်ပြုရန် ကျွန်ုပ်တို့သည် သင့်ကင်မရာသို့ ဝင်ရောက်ခွင့် လိုအပ်ပါသည်။",
+    "nsmicrophoneusagedescription": "အချို့သောအင်္ဂါရပ်များတွင် အသံဖမ်းယူခြင်းကို ဖွင့်ရန် မိုက်ခရိုဖုန်း လိုအပ်ပါသည်။",
+    "nsspeechrecognitionusagedescription": "သင့်အသံကို အသုံးပြု၍ အပလီကေးရှင်းနှင့် အပြန်အလှန် တုံ့ပြန်နိုင်စေရန် အသံအသိအမှတ်ပြုမှုကို ကျွန်ုပ်တို့ အသုံးပြုပါသည်။"
 }

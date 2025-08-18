@@ -532,4 +532,22 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'אנא מלאו את כל השדות';
+
+  @override
+  String get erreur_chargement_produits => 'שגיאה בטעינת מוצרים';
+
+  @override
+  String get reessayer => 'נסה שוב';
+
+  @override
+  String get nsphotolibraryusagedescription => 'אנחנו צריכים גישה לגלריה שלך כדי לאפשר לך לבחור תמונת פרופיל.';
+
+  @override
+  String get nscamerausagedescription => 'אנחנו צריכים גישה למצלמה שלך כדי שנוכל לצלם תמונת פרופיל חדשה.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'אנחנו צריכים את המיקרופון כדי לאפשר הקלטת שמע בתכונות מסוימות.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'אנו משתמשים בזיהוי קולי כדי לאפשר לך לתקשר עם האפליקציה באמצעות קולך.';
 }

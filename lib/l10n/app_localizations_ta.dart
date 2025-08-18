@@ -532,4 +532,22 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'தயவுசெய்து அனைத்து புலங்களையும் நிரப்பவும்.';
+
+  @override
+  String get erreur_chargement_produits => 'தயாரிப்புகளை ஏற்றுவதில் பிழை';
+
+  @override
+  String get reessayer => 'மீண்டும் முயற்சிக்கவும்';
+
+  @override
+  String get nsphotolibraryusagedescription => 'சுயவிவரப் படத்தைத் தேர்வுசெய்ய உங்களை அனுமதிக்க, உங்கள் கேலரியை அணுக எங்களுக்குத் தேவை.';
+
+  @override
+  String get nscamerausagedescription => 'புதிய சுயவிவரப் படத்தை எடுக்க உங்கள் கேமராவை அணுக எங்களுக்கு அனுமதி தேவை.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'சில அம்சங்களில் ஆடியோ பதிவை இயக்க மைக்ரோஃபோன் தேவை.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'உங்கள் குரலைப் பயன்படுத்தி பயன்பாட்டுடன் தொடர்பு கொள்ள உங்களை அனுமதிக்க, குரல் அங்கீகாரத்தைப் பயன்படுத்துகிறோம்.';
 }

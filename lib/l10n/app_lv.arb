@@ -174,28 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Lūdzu, atkārtoti ievadiet savu paroli.",
     "login_mots_de_passe_differents": "Paroles nesakrīt",
     "login_tous_champs_obligatoires": "Lūdzu, aizpildiet visus laukus",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@button_next": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Kļūda, ielādējot produktus",
+    "reessayer": "Mēģiniet vēlreiz",
+    "nsphotolibraryusagedescription": "Lai jūs varētu izvēlēties profila attēlu, mums ir nepieciešama piekļuve jūsu galerijai.",
+    "nscamerausagedescription": "Mums ir nepieciešama piekļuve jūsu kamerai, lai jūs varētu uzņemt jaunu profila attēlu.",
+    "nsmicrophoneusagedescription": "Lai dažās funkcijās iespējotu audio ierakstīšanu, mums ir nepieciešams mikrofons.",
+    "nsspeechrecognitionusagedescription": "Mēs izmantojam balss atpazīšanu, lai jūs varētu mijiedarboties ar lietotni, izmantojot balsi."
 }

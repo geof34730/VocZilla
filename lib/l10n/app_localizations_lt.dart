@@ -532,4 +532,22 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Prašome užpildyti visus laukus';
+
+  @override
+  String get erreur_chargement_produits => 'Įkeliant produktus įvyko klaida';
+
+  @override
+  String get reessayer => 'Bandykite dar kartą';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Mums reikia prieigos prie jūsų galerijos, kad galėtumėte pasirinkti profilio nuotrauką.';
+
+  @override
+  String get nscamerausagedescription => 'Mums reikia prieigos prie jūsų kameros, kad galėtumėte padaryti naują profilio nuotrauką.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Mums reikia mikrofono, kad kai kuriose funkcijose būtų galima įrašyti garsą.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Mes naudojame balso atpažinimo funkciją, kad galėtumėte sąveikauti su programa naudodami savo balsą.';
 }

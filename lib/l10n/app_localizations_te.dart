@@ -532,4 +532,22 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'దయచేసి అన్ని ఫీల్డ్‌లను పూరించండి.';
+
+  @override
+  String get erreur_chargement_produits => 'ఉత్పత్తులను లోడ్ చేయడంలో లోపం ఏర్పడింది';
+
+  @override
+  String get reessayer => 'మళ్ళీ ప్రయత్నించండి';
+
+  @override
+  String get nsphotolibraryusagedescription => 'మీరు ప్రొఫైల్ చిత్రాన్ని ఎంచుకోవడానికి మాకు మీ గ్యాలరీని యాక్సెస్ చేయాలి.';
+
+  @override
+  String get nscamerausagedescription => 'మీరు కొత్త ప్రొఫైల్ చిత్రాన్ని తీయడానికి మాకు మీ కెమెరా యాక్సెస్ అవసరం.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'కొన్ని ఫీచర్లలో ఆడియో రికార్డింగ్‌ను ప్రారంభించడానికి మనకు మైక్రోఫోన్ అవసరం.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'మీ వాయిస్‌ని ఉపయోగించి అప్లికేషన్‌తో సంభాషించడానికి మిమ్మల్ని అనుమతించడానికి మేము వాయిస్ గుర్తింపును ఉపయోగిస్తాము.';
 }

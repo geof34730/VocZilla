@@ -532,4 +532,22 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Veuillez remplir tous les champs';
+
+  @override
+  String get erreur_chargement_produits => 'Erreur lors du chargement des produits';
+
+  @override
+  String get reessayer => 'Réessayer';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Nous avons besoin d\'accéder à votre galerie pour vous permettre de choisir une photo de profil.';
+
+  @override
+  String get nscamerausagedescription => 'Nous avons besoin d\'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Nous avons besoin du microphone pour permettre l’enregistrement audio dans certaines fonctionnalités.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Nous utilisons la reconnaissance vocale pour vous permettre d’interagir avec l’application à l’aide de votre voix.';
 }

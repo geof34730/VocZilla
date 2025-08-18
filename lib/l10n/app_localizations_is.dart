@@ -532,4 +532,22 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Vinsamlegast fylltu út alla reiti';
+
+  @override
+  String get erreur_chargement_produits => 'Villa í að hlaða vörum';
+
+  @override
+  String get reessayer => 'Reyndu aftur';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Við þurfum aðgang að myndasafninu þínu til að leyfa þér að velja prófílmynd.';
+
+  @override
+  String get nscamerausagedescription => 'Við þurfum aðgang að myndavélinni þinni til að leyfa þér að taka nýja prófílmynd.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Við þurfum hljóðnemann til að virkja hljóðupptöku í sumum eiginleikum.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Við notum raddgreiningu til að leyfa þér að hafa samskipti við forritið með röddinni þinni.';
 }

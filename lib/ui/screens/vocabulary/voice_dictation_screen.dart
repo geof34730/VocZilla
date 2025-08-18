@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
+import '../../../global.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
@@ -38,7 +39,6 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
   void dispose() {
     customeTextZillaControllerDictation.dispose();
     buttonNotifier.dispose();
-    buttonNotifier.dispose();
     super.dispose();
   }
 
@@ -54,7 +54,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
           if (data.isEmpty) {
             return Center(child: Text(context.loc.no_vocabulary_items_found));
           }
-          if(refrechRandom){
+          if(refrechRandom || randomItemData >= data.length){
             refrechRandom=false;
             Random random = new Random();
             randomItemData = random.nextInt(data.length);
@@ -86,7 +86,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                 AnimatedBuilder(
                   animation: buttonNotifier,
                   builder: (context, child) {
-                    return buttonNotifier.showButton
+                    return (buttonNotifier.showButton || testScreenShot)
                         ?
                         Column(
                           children: [

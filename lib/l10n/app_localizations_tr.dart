@@ -532,4 +532,22 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Lütfen tüm alanları doldurun';
+
+  @override
+  String get erreur_chargement_produits => 'Ürünler yüklenirken hata oluştu';
+
+  @override
+  String get reessayer => 'Tekrar deneyin';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Profil resminizi seçebilmeniz için galerinize erişmemiz gerekiyor.';
+
+  @override
+  String get nscamerausagedescription => 'Yeni bir profil resmi çekebilmeniz için kameranıza erişmemiz gerekiyor.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Bazı özelliklerde ses kaydı yapabilmek için mikrofona ihtiyacımız var.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Uygulamayla sesinizi kullanarak etkileşime geçebilmenizi sağlamak için ses tanıma özelliğini kullanıyoruz.';
 }

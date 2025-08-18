@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "กรุณากรอกรหัสผ่านอีกครั้ง",
     "login_mots_de_passe_differents": "รหัสผ่านไม่ตรงกัน",
     "login_tous_champs_obligatoires": "กรุณากรอกข้อมูลให้ครบทุกช่อง",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "เกิดข้อผิดพลาดในการโหลดสินค้า",
+    "reessayer": "ลองอีกครั้ง",
+    "nsphotolibraryusagedescription": "เราจำเป็นต้องเข้าถึงแกลเลอรีของคุณเพื่อให้คุณสามารถเลือกภาพโปรไฟล์ได้",
+    "nscamerausagedescription": "เราจำเป็นต้องเข้าถึงกล้องของคุณเพื่อให้คุณสามารถถ่ายรูปโปรไฟล์ใหม่ได้",
+    "nsmicrophoneusagedescription": "เราจำเป็นต้องมีไมโครโฟนเพื่อให้สามารถบันทึกเสียงในฟีเจอร์บางอย่างได้",
+    "nsspeechrecognitionusagedescription": "เราใช้การจดจำเสียงเพื่อให้คุณสามารถโต้ตอบกับแอปพลิเคชันโดยใช้เสียงของคุณ"
 }

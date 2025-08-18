@@ -174,16 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Խնդրում ենք կրկին մուտքագրել ձեր գաղտնաբառը",
     "login_mots_de_passe_differents": "Գաղտնաբառերը չեն համընկնում",
     "login_tous_champs_obligatoires": "Խնդրում ենք լրացնել բոլոր դաշտերը",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Սխալ առաջացավ ապրանքների բեռնման ժամանակ",
+    "reessayer": "Փորձեք կրկին",
+    "nsphotolibraryusagedescription": "Մեզ անհրաժեշտ է մուտք գործել ձեր պատկերասրահ, որպեսզի կարողանաք ընտրել պրոֆիլի նկար։",
+    "nscamerausagedescription": "Մեզ անհրաժեշտ է ձեր տեսախցիկին մուտք գործելու թույլտվություն, որպեսզի կարողանաք նոր պրոֆիլի նկար անել։",
+    "nsmicrophoneusagedescription": "Մեզ անհրաժեշտ է միկրոֆոն՝ որոշ գործառույթներում ձայնագրությունը միացնելու համար։",
+    "nsspeechrecognitionusagedescription": "Մենք օգտագործում ենք ձայնի ճանաչում, որպեսզի դուք կարողանաք փոխազդել ծրագրի հետ ձեր ձայնի միջոցով։"
 }

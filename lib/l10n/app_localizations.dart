@@ -1284,6 +1284,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please fill in all fields'**
   String get login_tous_champs_obligatoires;
+
+  /// No description provided for @erreur_chargement_produits.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading products'**
+  String get erreur_chargement_produits;
+
+  /// No description provided for @reessayer.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get reessayer;
+
+  /// No description provided for @nsphotolibraryusagedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'We need access to your gallery to allow you to choose a profile picture.'**
+  String get nsphotolibraryusagedescription;
+
+  /// No description provided for @nscamerausagedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'We need access to your camera to allow you to take a new profile picture.'**
+  String get nscamerausagedescription;
+
+  /// No description provided for @nsmicrophoneusagedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'We need the microphone to enable audio recording in some features.'**
+  String get nsmicrophoneusagedescription;
+
+  /// No description provided for @nsspeechrecognitionusagedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'We use voice recognition to allow you to interact with the application using your voice.'**
+  String get nsspeechrecognitionusagedescription;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

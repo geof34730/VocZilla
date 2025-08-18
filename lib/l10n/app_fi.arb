@@ -174,22 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Anna salasanasi uudelleen",
     "login_mots_de_passe_differents": "Salasanat eivät täsmää",
     "login_tous_champs_obligatoires": "Täytä kaikki kentät",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Virhe tuotteiden lataamisessa",
+    "reessayer": "Yritä uudelleen",
+    "nsphotolibraryusagedescription": "Tarvitsemme pääsyn galleriaasi, jotta voit valita profiilikuvan.",
+    "nscamerausagedescription": "Tarvitsemme pääsyn kameraasi, jotta voit ottaa uuden profiilikuvan.",
+    "nsmicrophoneusagedescription": "Tarvitsemme mikrofonin äänen tallentamiseen joissakin ominaisuuksissa.",
+    "nsspeechrecognitionusagedescription": "Käytämme äänentunnistusta, jotta voit olla vuorovaikutuksessa sovelluksen kanssa äänelläsi."
 }

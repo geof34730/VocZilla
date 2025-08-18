@@ -532,4 +532,22 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'გთხოვთ, შეავსოთ ყველა ველი';
+
+  @override
+  String get erreur_chargement_produits => 'პროდუქტების ჩატვირთვისას შეცდომა მოხდა. მოხდა პროდუქტების ჩატვირთვის შეცდომა.';
+
+  @override
+  String get reessayer => 'ხელახლა სცადეთ';
+
+  @override
+  String get nsphotolibraryusagedescription => 'პროფილის სურათის ასარჩევად, თქვენს გალერეაზე წვდომა გვჭირდება.';
+
+  @override
+  String get nscamerausagedescription => 'პროფილის ახალი სურათის გადასაღებად, თქვენს კამერაზე წვდომა გვჭირდება.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'ზოგიერთ ფუნქციაში აუდიოჩანაწერის ჩასართავად მიკროფონი გვჭირდება.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'ჩვენ ვიყენებთ ხმის ამოცნობის ფუნქციას, რათა აპლიკაციასთან ხმოვანი სიგნალით ურთიერთქმედება შეძლოთ.';
 }

@@ -174,16 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Παρακαλώ εισάγετε ξανά τον κωδικό πρόσβασής σας",
     "login_mots_de_passe_differents": "Οι κωδικοί πρόσβασης δεν ταιριάζουν",
     "login_tous_champs_obligatoires": "Παρακαλώ συμπληρώστε όλα τα πεδία",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Σφάλμα φόρτωσης προϊόντων κατά τη φόρτωση προϊόντων",
+    "reessayer": "Δοκιμάστε ξανά",
+    "nsphotolibraryusagedescription": "Χρειαζόμαστε πρόσβαση στη συλλογή σας για να σας επιτρέψουμε να επιλέξετε μια εικόνα προφίλ.",
+    "nscamerausagedescription": "Χρειαζόμαστε πρόσβαση στην κάμερά σας για να μπορέσετε να τραβήξετε μια νέα φωτογραφία προφίλ.",
+    "nsmicrophoneusagedescription": "Χρειαζόμαστε το μικρόφωνο για να ενεργοποιήσουμε την εγγραφή ήχου σε ορισμένες λειτουργίες.",
+    "nsspeechrecognitionusagedescription": "Χρησιμοποιούμε φωνητική αναγνώριση για να σας επιτρέψουμε να αλληλεπιδράτε με την εφαρμογή χρησιμοποιώντας τη φωνή σας."
 }

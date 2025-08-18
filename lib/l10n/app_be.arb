@@ -174,16 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Калі ласка, увядзіце свой пароль яшчэ раз",
     "login_mots_de_passe_differents": "Паролі не супадаюць",
     "login_tous_champs_obligatoires": "Калі ласка, запоўніце ўсе палі",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Памылка загрузкі тавараў",
+    "reessayer": "Паспрабуйце яшчэ раз",
+    "nsphotolibraryusagedescription": "Нам патрэбен доступ да вашай галерэі, каб вы маглі выбраць фота профілю.",
+    "nscamerausagedescription": "Нам патрэбен доступ да вашай камеры, каб вы маглі зрабіць новую фатаграфію профілю.",
+    "nsmicrophoneusagedescription": "Нам патрэбен мікрафон, каб уключыць запіс гуку ў некаторых функцыях.",
+    "nsspeechrecognitionusagedescription": "Мы выкарыстоўваем распазнаванне голасу, каб вы маглі ўзаемадзейнічаць з дадаткам з дапамогай голасу."
 }

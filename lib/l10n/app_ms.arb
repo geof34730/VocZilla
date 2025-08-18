@@ -174,34 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Sila masukkan semula kata laluan anda",
     "login_mots_de_passe_differents": "Kata laluan tidak sepadan",
     "login_tous_champs_obligatoires": "Sila isi semua ruangan",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@button_next": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@pronunciation_success": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Ralat memuatkan produk",
+    "reessayer": "Cuba lagi",
+    "nsphotolibraryusagedescription": "Kami memerlukan akses kepada galeri anda untuk membolehkan anda memilih gambar profil.",
+    "nscamerausagedescription": "Kami memerlukan akses kepada kamera anda untuk membolehkan anda mengambil gambar profil baharu.",
+    "nsmicrophoneusagedescription": "Kami memerlukan mikrofon untuk mendayakan rakaman audio dalam beberapa ciri.",
+    "nsspeechrecognitionusagedescription": "Kami menggunakan pengecaman suara untuk membolehkan anda berinteraksi dengan aplikasi menggunakan suara anda."
 }

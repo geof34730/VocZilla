@@ -532,4 +532,22 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Lūdzu, aizpildiet visus laukus';
+
+  @override
+  String get erreur_chargement_produits => 'Kļūda, ielādējot produktus';
+
+  @override
+  String get reessayer => 'Mēģiniet vēlreiz';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Lai jūs varētu izvēlēties profila attēlu, mums ir nepieciešama piekļuve jūsu galerijai.';
+
+  @override
+  String get nscamerausagedescription => 'Mums ir nepieciešama piekļuve jūsu kamerai, lai jūs varētu uzņemt jaunu profila attēlu.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Lai dažās funkcijās iespējotu audio ierakstīšanu, mums ir nepieciešams mikrofons.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Mēs izmantojam balss atpazīšanu, lai jūs varētu mijiedarboties ar lietotni, izmantojot balsi.';
 }

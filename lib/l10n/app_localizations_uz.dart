@@ -532,4 +532,22 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Iltimos, barcha maydonlarni toʻldiring';
+
+  @override
+  String get erreur_chargement_produits => 'Mahsulotlarni yuklashda xatolik yuz berdi';
+
+  @override
+  String get reessayer => 'Qayta urinib ko\'ring';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Profil rasmini tanlashga ruxsat berish uchun galereyangizga kirishimiz kerak.';
+
+  @override
+  String get nscamerausagedescription => 'Yangi profil rasmini olishga ruxsat berish uchun kamerangizga kirishimiz kerak.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Ayrim funksiyalarda ovoz yozishni yoqish uchun bizga mikrofon kerak.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Ovoz yordamida ilova bilan muloqot qilish imkonini berish uchun biz ovozni tanishdan foydalanamiz.';
 }

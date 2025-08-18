@@ -2,10 +2,10 @@
 
 
     "app_release_note" : "Nouvelle version : utilisation simplifiée grâce à une identification anonyme, sans compte ni inscription, traduction des autorisations de l'app dans toutes les langues.",
-    "NSPhotoLibraryUsageDescription" : "Nous avons besoin d'accéder à votre galerie pour vous permettre de choisir une photo de profil.",
-    "NSCameraUsageDescription" : "Nous avons besoin d'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.",
-    "NSMicrophoneUsageDescription" : "Nous avons besoin du microphone pour permettre l’enregistrement audio dans certaines fonctionnalités.",
-    "NSSpeechRecognitionUsageDescription" : "Nous utilisons la reconnaissance vocale pour vous permettre d’interagir avec l’application à l’aide de votre voix.",
+    "nsphotolibraryusagedescription" : "Nous avons besoin d'accéder à votre galerie pour vous permettre de choisir une photo de profil.",
+    "nscamerausagedescription" : "Nous avons besoin d'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.",
+    "nsmicrophoneusagedescription" : "Nous avons besoin du microphone pour permettre l’enregistrement audio dans certaines fonctionnalités.",
+    "nsspeechrecognitionusagedescription" : "Nous utilisons la reconnaissance vocale pour vous permettre d’interagir avec l’application à l’aide de votre voix.",
     "share_list_perso_alert_disponible" : "La fonctionnalité de partage de liste sera disponible très prochainement !",
     "information" : "Information",
     "app_title": "VocZilla",
@@ -181,5 +181,7 @@
     "login_entrer_confirmer_mot_de_passe": "Entrez à nouveau votre mot de passe",
     "login_mots_de_passe_differents": "Les mots de passe ne correspondent pas",
     "login_tous_champs_obligatoires": "Veuillez remplir tous les champs",
-    "email_validation_merci_register" : "Merci de vous être inscrit !"
+    "email_validation_merci_register" : "Merci de vous être inscrit !",
+    "erreur_chargement_produits": "Erreur lors du chargement des produits",
+    "reessayer": "Réessayer"
 }

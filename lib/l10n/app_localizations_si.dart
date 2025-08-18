@@ -532,4 +532,22 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'කරුණාකර සියලුම ක්ෂේත්‍ර පුරවන්න.';
+
+  @override
+  String get erreur_chargement_produits => 'නිෂ්පාදන පූරණය කිරීමේ දෝෂයකි';
+
+  @override
+  String get reessayer => 'නැවත උත්සාහ කරන්න';
+
+  @override
+  String get nsphotolibraryusagedescription => 'ඔබට පැතිකඩ පින්තූරයක් තෝරා ගැනීමට ඉඩ දීම සඳහා අපට ඔබගේ ගැලරියට ප්‍රවේශය අවශ්‍ය වේ.';
+
+  @override
+  String get nscamerausagedescription => 'ඔබට නව පැතිකඩ පින්තූරයක් ගැනීමට ඉඩ දීම සඳහා අපට ඔබගේ කැමරාවට ප්‍රවේශය අවශ්‍ය වේ.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'සමහර විශේෂාංගවල ශ්‍රව්‍ය පටිගත කිරීම සබල කිරීමට අපට මයික්‍රෆෝනය අවශ්‍ය වේ.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'ඔබගේ හඬ භාවිතයෙන් යෙදුම සමඟ අන්තර් ක්‍රියා කිරීමට ඉඩ සැලසීමට අපි හඬ හඳුනාගැනීම භාවිතා කරමු.';
 }

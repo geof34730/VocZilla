@@ -532,4 +532,22 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'કૃપા કરીને બધા ફીલ્ડ ભરો.';
+
+  @override
+  String get erreur_chargement_produits => 'પ્રોડક્ટ લોડ કરવામાં ભૂલ આવી';
+
+  @override
+  String get reessayer => 'ફરી પ્રયાસ કરો';
+
+  @override
+  String get nsphotolibraryusagedescription => 'તમને પ્રોફાઇલ ચિત્ર પસંદ કરવાની મંજૂરી આપવા માટે અમને તમારી ગેલેરીની ઍક્સેસની જરૂર છે.';
+
+  @override
+  String get nscamerausagedescription => 'તમે નવો પ્રોફાઇલ ફોટો લઈ શકો તે માટે અમને તમારા કેમેરાની ઍક્સેસની જરૂર છે.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'કેટલીક સુવિધાઓમાં ઓડિયો રેકોર્ડિંગ સક્ષમ કરવા માટે અમને માઇક્રોફોનની જરૂર છે.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'અમે તમારા અવાજનો ઉપયોગ કરીને એપ્લિકેશન સાથે ક્રિયાપ્રતિક્રિયા કરવાની મંજૂરી આપવા માટે વૉઇસ ઓળખનો ઉપયોગ કરીએ છીએ.';
 }

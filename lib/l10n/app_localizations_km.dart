@@ -532,4 +532,22 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'សូមបំពេញគ្រប់វិស័យ';
+
+  @override
+  String get erreur_chargement_produits => 'កំហុសក្នុងការផ្ទុកផលិតផល';
+
+  @override
+  String get reessayer => 'ព្យាយាមម្តងទៀត';
+
+  @override
+  String get nsphotolibraryusagedescription => 'យើងត្រូវការចូលទៅកាន់វិចិត្រសាលរបស់អ្នក ដើម្បីអនុញ្ញាតឱ្យអ្នកជ្រើសរើសរូបភាពកម្រងព័ត៌មាន។';
+
+  @override
+  String get nscamerausagedescription => 'យើងត្រូវការចូលប្រើកាមេរ៉ារបស់អ្នក ដើម្បីអនុញ្ញាតឱ្យអ្នកថតរូបកម្រងព័ត៌មានថ្មី។';
+
+  @override
+  String get nsmicrophoneusagedescription => 'យើងត្រូវការមីក្រូហ្វូន ដើម្បីបើកការថតសំឡេងនៅក្នុងមុខងារមួយចំនួន។';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'យើងប្រើការសម្គាល់សំឡេង ដើម្បីអនុញ្ញាតឱ្យអ្នកធ្វើអន្តរកម្មជាមួយកម្មវិធីដោយប្រើសំឡេងរបស់អ្នក។';
 }

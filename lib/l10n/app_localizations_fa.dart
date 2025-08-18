@@ -532,4 +532,22 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'لطفا همه فیلدها را پر کنید';
+
+  @override
+  String get erreur_chargement_produits => 'خطا در بارگیری محصولات';
+
+  @override
+  String get reessayer => 'دوباره امتحان کنید';
+
+  @override
+  String get nsphotolibraryusagedescription => 'برای انتخاب تصویر پروفایل، باید به گالری شما دسترسی داشته باشیم.';
+
+  @override
+  String get nscamerausagedescription => 'برای اینکه بتوانیم عکس پروفایل جدید بگیریم، باید به دوربین شما دسترسی داشته باشیم.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'برای فعال کردن ضبط صدا در برخی از ویژگی‌ها به میکروفون نیاز داریم.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'ما از تشخیص صدا استفاده می‌کنیم تا به شما امکان دهیم با استفاده از صدای خود با برنامه تعامل داشته باشید.';
 }

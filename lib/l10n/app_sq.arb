@@ -174,28 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Ju lutemi, futni përsëri fjalëkalimin tuaj",
     "login_mots_de_passe_differents": "Fjalëkalimet nuk përputhen",
     "login_tous_champs_obligatoires": "Ju lutemi plotësoni të gjitha fushat",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@login_email": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@widget_congratulation_bravo": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Gabim gjatë ngarkimit të produkteve ....",
+    "reessayer": "Provo përsëri",
+    "nsphotolibraryusagedescription": "Na duhet qasje në galerinë tënde për të të lejuar të zgjedhësh një fotografi profili.",
+    "nscamerausagedescription": "Na duhet qasje në kamerën tënde për të të lejuar të bësh një fotografi të re profili.",
+    "nsmicrophoneusagedescription": "Na duhet mikrofoni për të aktivizuar regjistrimin audio në disa veçori.",
+    "nsspeechrecognitionusagedescription": "Ne përdorim njohjen e zërit për t'ju lejuar të bashkëveproni me aplikacionin duke përdorur zërin tuaj."
 }

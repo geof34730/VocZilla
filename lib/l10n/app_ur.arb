@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "براہ کرم اپنا پاس ورڈ دوبارہ درج کریں۔",
     "login_mots_de_passe_differents": "پاس ورڈز مماثل نہیں ہیں۔",
     "login_tous_champs_obligatoires": "براہ کرم تمام فیلڈز کو پُر کریں۔",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "پروڈکٹس لوڈ کرنے میں خرابی۔",
+    "reessayer": "دوبارہ کوشش کریں۔",
+    "nsphotolibraryusagedescription": "آپ کو پروفائل تصویر منتخب کرنے کی اجازت دینے کے لیے ہمیں آپ کی گیلری تک رسائی درکار ہے۔",
+    "nscamerausagedescription": "آپ کو ایک نئی پروفائل تصویر لینے کی اجازت دینے کے لیے ہمیں آپ کے کیمرے تک رسائی درکار ہے۔",
+    "nsmicrophoneusagedescription": "ہمیں کچھ خصوصیات میں آڈیو ریکارڈنگ کو فعال کرنے کے لیے مائیکروفون کی ضرورت ہے۔",
+    "nsspeechrecognitionusagedescription": "ہم آپ کو اپنی آواز کا استعمال کرتے ہوئے ایپلیکیشن کے ساتھ تعامل کرنے کی اجازت دینے کے لیے آواز کی شناخت کا استعمال کرتے ہیں۔"
 }

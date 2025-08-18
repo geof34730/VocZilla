@@ -1,6 +1,0 @@
-Informations de connexion pour l'équipe de révision :
-
-Instructions supplémentaires :
-1. Lancez l'application.
-2. Utilisez les identifiants ci-dessus pour vous connecter.
-3. Toutes les fonctionnalités sont disponibles sur ce compte de test.

@@ -532,4 +532,22 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Sila isi semua ruangan';
+
+  @override
+  String get erreur_chargement_produits => 'Ralat memuatkan produk';
+
+  @override
+  String get reessayer => 'Cuba lagi';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Kami memerlukan akses kepada galeri anda untuk membolehkan anda memilih gambar profil.';
+
+  @override
+  String get nscamerausagedescription => 'Kami memerlukan akses kepada kamera anda untuk membolehkan anda mengambil gambar profil baharu.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Kami memerlukan mikrofon untuk mendayakan rakaman audio dalam beberapa ciri.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Kami menggunakan pengecaman suara untuk membolehkan anda berinteraksi dengan aplikasi menggunakan suara anda.';
 }

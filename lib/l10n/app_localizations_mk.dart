@@ -532,4 +532,22 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Ве молиме пополнете ги сите полиња';
+
+  @override
+  String get erreur_chargement_produits => 'Грешка при вчитување на производите';
+
+  @override
+  String get reessayer => 'Обидете се повторно';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Ни треба пристап до вашата галерија за да можете да изберете слика на профил.';
+
+  @override
+  String get nscamerausagedescription => 'Ни треба пристап до вашата камера за да можете да направите нова слика на профилот.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Ни е потребен микрофонот за да овозможиме снимање аудио во некои функции.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Користиме препознавање на глас за да ви овозможиме да комуницирате со апликацијата користејќи го вашиот глас.';
 }

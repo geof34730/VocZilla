@@ -532,4 +532,22 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Барлық өрістерді толтырыңыз';
+
+  @override
+  String get erreur_chargement_produits => 'Өнімдерді жүктеу қатесі';
+
+  @override
+  String get reessayer => 'Қайтадан байқап көріңіз';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Профиль суретін таңдауға мүмкіндік беру үшін бізге галереяға кіру рұқсаты қажет.';
+
+  @override
+  String get nscamerausagedescription => 'Жаңа профиль суретін түсіруге мүмкіндік беру үшін камераңызға рұқсат қажет.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Кейбір мүмкіндіктерде дыбыс жазуды қосу үшін бізге микрофон қажет.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Даусыңызды пайдаланып қолданбамен әрекеттесуіңізге мүмкіндік беру үшін біз дауысты тану мүмкіндігін қолданамыз.';
 }

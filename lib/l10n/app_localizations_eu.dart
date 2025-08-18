@@ -532,4 +532,22 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Mesedez, bete eremu guztiak';
+
+  @override
+  String get erreur_chargement_produits => 'Errorea produktuak kargatzean';
+
+  @override
+  String get reessayer => 'Saiatu berriro';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Profil-argazki bat aukeratu ahal izateko, zure galeriarako sarbidea behar dugu.';
+
+  @override
+  String get nscamerausagedescription => 'Profil-argazki berri bat atera ahal izateko, zure kamerarako sarbidea behar dugu.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Mikrofonoa behar dugu funtzio batzuetan audioa grabatzeko aukera emateko.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Ahots-ezagutza erabiltzen dugu aplikazioarekin zure ahotsa erabiliz elkarreragin ahal izateko.';
 }

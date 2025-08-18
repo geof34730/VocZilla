@@ -174,16 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "Пожалуйста, введите ваш пароль еще раз.",
     "login_mots_de_passe_differents": "Пароли не совпадают",
     "login_tous_champs_obligatoires": "Пожалуйста, заполните все поля",
-    "@app_title": {
-        "autoTried": true,
-        "lastTryAt": "2025-08-16T07:20:14+00:00",
-        "autoTranslated": false,
-        "reason": "same_as_source"
-    },
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "Ошибка загрузки продуктов",
+    "reessayer": "Попробуйте еще раз",
+    "nsphotolibraryusagedescription": "Нам нужен доступ к вашей галерее, чтобы вы могли выбрать фотографию профиля.",
+    "nscamerausagedescription": "Нам нужен доступ к вашей камере, чтобы вы могли сделать новую фотографию профиля.",
+    "nsmicrophoneusagedescription": "Микрофон необходим для записи звука в некоторых функциях.",
+    "nsspeechrecognitionusagedescription": "Мы используем функцию распознавания голоса, чтобы вы могли взаимодействовать с приложением с помощью голоса."
 }

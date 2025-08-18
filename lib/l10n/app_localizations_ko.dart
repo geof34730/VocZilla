@@ -532,4 +532,22 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => '모든 항목을 작성해 주세요';
+
+  @override
+  String get erreur_chargement_produits => '제품 로딩 중 오류 발생';
+
+  @override
+  String get reessayer => '다시 시도하세요';
+
+  @override
+  String get nsphotolibraryusagedescription => '프로필 사진을 선택하려면 갤러리에 액세스해야 합니다.';
+
+  @override
+  String get nscamerausagedescription => '새로운 프로필 사진을 찍으려면 카메라에 접근해야 합니다.';
+
+  @override
+  String get nsmicrophoneusagedescription => '일부 기능에서 오디오 녹음을 하려면 마이크가 필요합니다.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => '음성 인식을 사용하면 음성으로 애플리케이션과 상호 작용할 수 있습니다.';
 }

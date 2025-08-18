@@ -532,4 +532,22 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get login_tous_champs_obligatoires => 'Vul asseblief alle velde in';
+
+  @override
+  String get erreur_chargement_produits => 'Fout by die laai van produkte';
+
+  @override
+  String get reessayer => 'Probeer weer';
+
+  @override
+  String get nsphotolibraryusagedescription => 'Ons benodig toegang tot jou galery sodat jy \'n profielfoto kan kies.';
+
+  @override
+  String get nscamerausagedescription => 'Ons benodig toegang tot jou kamera sodat jy \'n nuwe profielfoto kan neem.';
+
+  @override
+  String get nsmicrophoneusagedescription => 'Ons benodig die mikrofoon om klankopname in sommige funksies te aktiveer.';
+
+  @override
+  String get nsspeechrecognitionusagedescription => 'Ons gebruik stemherkenning om jou toe te laat om met die toepassing te kommunikeer deur jou stem te gebruik.';
 }

@@ -5,6 +5,7 @@ class VocZillaTile extends StatelessWidget {
   final String label;
   final Color color;
   final VoidCallback onTap;
+  final Key keyParam;
 
   const VocZillaTile({
     super.key,
@@ -12,6 +13,8 @@ class VocZillaTile extends StatelessWidget {
     required this.label,
     required this.color,
     required this.onTap,
+    required this.keyParam,
+
   });
 
   @override
@@ -19,6 +22,7 @@ class VocZillaTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
       child: InkWell(
+        key:keyParam,
         onTap: onTap,
         borderRadius: BorderRadius.circular(14),
         child: Container(

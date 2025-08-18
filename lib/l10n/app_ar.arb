@@ -174,10 +174,10 @@
     "login_entrer_confirmer_mot_de_passe": "الرجاء إعادة إدخال كلمة المرور الخاصة بك",
     "login_mots_de_passe_differents": "كلمات المرور غير متطابقة",
     "login_tous_champs_obligatoires": "الرجاء ملء جميع الحقول",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-16T08:19:35+00:00"
-    }
+    "erreur_chargement_produits": "خطأ في تحميل المنتجات",
+    "reessayer": "حاول ثانية",
+    "nsphotolibraryusagedescription": "نحن بحاجة إلى الوصول إلى معرض الصور الخاص بك للسماح لك باختيار صورة الملف الشخصي.",
+    "nscamerausagedescription": "نحن بحاجة إلى الوصول إلى الكاميرا الخاصة بك للسماح لك بالتقاط صورة ملف تعريفي جديدة.",
+    "nsmicrophoneusagedescription": "نحن بحاجة إلى الميكروفون لتمكين التسجيل الصوتي في بعض الميزات.",
+    "nsspeechrecognitionusagedescription": "نحن نستخدم خاصية التعرف على الصوت للسماح لك بالتفاعل مع التطبيق باستخدام صوتك."
 }
