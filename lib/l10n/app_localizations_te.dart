@@ -550,4 +550,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'మీ వాయిస్‌ని ఉపయోగించి అప్లికేషన్‌తో సంభాషించడానికి మిమ్మల్ని అనుమతించడానికి మేము వాయిస్ గుర్తింపును ఉపయోగిస్తాము.';
+
+  @override
+  String get your_position => 'మీ స్థానం';
 }

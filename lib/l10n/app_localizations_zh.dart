@@ -550,4 +550,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => '我们使用语音识别功能，让您可以使用语音与应用程序进行交互。';
+
+  @override
+  String get your_position => '您的职位';
 }

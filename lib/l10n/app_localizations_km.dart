@@ -550,4 +550,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'យើងប្រើការសម្គាល់សំឡេង ដើម្បីអនុញ្ញាតឱ្យអ្នកធ្វើអន្តរកម្មជាមួយកម្មវិធីដោយប្រើសំឡេងរបស់អ្នក។';
+
+  @override
+  String get your_position => 'ទីតាំងរបស់អ្នក។';
 }

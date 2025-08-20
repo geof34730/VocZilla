@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Potřebujeme přístup do vaší galerie, abyste si mohli vybrat profilový obrázek.",
     "nscamerausagedescription": "Potřebujeme přístup k vašemu fotoaparátu, abyste si mohli pořídit novou profilovou fotku.",
     "nsmicrophoneusagedescription": "Pro nahrávání zvuku v některých funkcích potřebujeme mikrofon.",
-    "nsspeechrecognitionusagedescription": "Používáme rozpoznávání hlasu, abychom vám umožnili interagovat s aplikací pomocí hlasu."
+    "nsspeechrecognitionusagedescription": "Používáme rozpoznávání hlasu, abychom vám umožnili interagovat s aplikací pomocí hlasu.",
+    "your_position": "Vaše pozice"
 }

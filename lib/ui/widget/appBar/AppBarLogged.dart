@@ -30,45 +30,47 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
               final userProfile = state.userProfile;
               final String pseudo = userProfile.pseudo ?? '';
               return Padding(
-                padding: const EdgeInsets.only(right: 15),
-                child: GestureDetector(
-                  key: ValueKey('open_drawer_voczilla'),
-                  onTap: () {
-                    context.read<DrawerBloc>().add(OpenSettingsDrawer(context: context));
-                    scaffoldKey.currentState!.openEndDrawer();
-                  },
-                  child: Stack(
-                    children: [
-                      userProfile.imageAvatar.isNotEmpty
-                          ? CircleAvatar(
-                        radius: 22,
-                        backgroundColor: Colors.blue.shade700,
-                        backgroundImage: MemoryImage(base64Decode(userProfile.imageAvatar)),
-                      )
-                          : Avatar(
-                        radius: 22,
-                        name: GetValidName(pseudo),
-                        fontsize: 28,
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Container(
-                          padding: const EdgeInsets.all(2),
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
+                padding: const EdgeInsets.only(right: 10,left:10),
+                    child:GestureDetector(
+                      key: ValueKey('open_drawer_voczilla'),
+                      onTap: () {
+                        context.read<DrawerBloc>().add(OpenSettingsDrawer(context: context));
+                        scaffoldKey.currentState!.openEndDrawer();
+                      },
+                      child: Stack(
+
+                        children: [
+                          userProfile.imageAvatar.isNotEmpty
+                              ? CircleAvatar(
+                                  radius: 22,
+                                  backgroundColor: Colors.blue.shade700,
+                                  backgroundImage: MemoryImage(base64Decode(userProfile.imageAvatar)),
+                                )
+                              : Avatar(
+                                radius: 22,
+                                name: GetValidName(pseudo),
+                                fontsize: 28,
+                              ),
+                          Positioned(
+                            bottom: 0,
+                            right: 0,
+                            child: Container(
+                              padding: const EdgeInsets.all(2),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(
+                                Icons.menu,
+                                size: 14,
+                                color: Colors.black87,
+                              ),
+                            ),
                           ),
-                          child: const Icon(
-                            Icons.menu,
-                            size: 14,
-                            color: Colors.black87,
-                          ),
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
+                    ),
+
               );
             }
 

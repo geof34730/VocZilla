@@ -550,4 +550,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Við notum raddgreiningu til að leyfa þér að hafa samskipti við forritið með röddinni þinni.';
+
+  @override
+  String get your_position => 'Staða þín';
 }

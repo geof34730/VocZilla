@@ -550,4 +550,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'तुमचा आवाज वापरून तुम्हाला अनुप्रयोगाशी संवाद साधण्याची परवानगी देण्यासाठी आम्ही आवाज ओळख वापरतो.';
+
+  @override
+  String get your_position => 'तुमचे स्थान';
 }

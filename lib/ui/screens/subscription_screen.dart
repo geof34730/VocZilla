@@ -123,6 +123,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> with WidgetsBin
         }
       },
       child: Column(
+        key:const ValueKey('screenSubscription'),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (endTrial)

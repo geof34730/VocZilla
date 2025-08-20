@@ -550,4 +550,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'നിങ്ങളുടെ ശബ്‌ദം ഉപയോഗിച്ച് ആപ്ലിക്കേഷനുമായി സംവദിക്കാൻ നിങ്ങളെ അനുവദിക്കുന്നതിന് ഞങ്ങൾ ശബ്‌ദ തിരിച്ചറിയൽ ഉപയോഗിക്കുന്നു.';
+
+  @override
+  String get your_position => 'നിങ്ങളുടെ സ്ഥാനം';
 }

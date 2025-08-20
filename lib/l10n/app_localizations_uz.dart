@@ -550,4 +550,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Ovoz yordamida ilova bilan muloqot qilish imkonini berish uchun biz ovozni tanishdan foydalanamiz.';
+
+  @override
+  String get your_position => 'Sizning pozitsiyangiz';
 }

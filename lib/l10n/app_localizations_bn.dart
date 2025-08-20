@@ -550,4 +550,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'আপনার ভয়েস ব্যবহার করে অ্যাপ্লিকেশনটির সাথে ইন্টারঅ্যাক্ট করার অনুমতি দেওয়ার জন্য আমরা ভয়েস রিকগনিশন ব্যবহার করি।';
+
+  @override
+  String get your_position => 'তোমার অবস্থান';
 }

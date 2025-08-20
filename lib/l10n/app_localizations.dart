@@ -1320,6 +1320,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'We use voice recognition to allow you to interact with the application using your voice.'**
   String get nsspeechrecognitionusagedescription;
+
+  /// No description provided for @your_position.
+  ///
+  /// In en, this message translates to:
+  /// **'Your position'**
+  String get your_position;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -550,4 +550,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Chúng tôi sử dụng công nghệ nhận dạng giọng nói để cho phép bạn tương tác với ứng dụng bằng giọng nói của mình.';
+
+  @override
+  String get your_position => 'Vị trí của bạn';
 }

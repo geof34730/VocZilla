@@ -550,4 +550,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'သင့်အသံကို အသုံးပြု၍ အပလီကေးရှင်းနှင့် အပြန်အလှန် တုံ့ပြန်နိုင်စေရန် အသံအသိအမှတ်ပြုမှုကို ကျွန်ုပ်တို့ အသုံးပြုပါသည်။';
+
+  @override
+  String get your_position => 'မင်းရဲ့ရာထူး';
 }

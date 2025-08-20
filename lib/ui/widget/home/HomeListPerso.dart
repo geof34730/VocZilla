@@ -17,7 +17,7 @@ import 'TitleWidget.dart';
 
 
 class HomelistPerso extends StatelessWidget {
-  int i =0;
+
   @override
   Widget build(BuildContext context) {
 
@@ -69,6 +69,7 @@ class HomelistPerso extends StatelessWidget {
                       itemWidth: itemWidthListPerso(context: context, nbList: 3),
                           children: data.listPerso.reversed.map((listPerso) {
                             i=i+1;
+                            print(i.toString());
                             return CardHome(
                               keyStringTest: i.toString(),
                               nbVocabulaire:listPerso.listGuidVocabulary.length,

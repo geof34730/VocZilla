@@ -2,6 +2,7 @@
 
 
     "app_release_note" : "Nouvelle version : utilisation simplifiée grâce à une identification anonyme, sans compte ni inscription, traduction des autorisations de l'app dans toutes les langues.",
+    "your_position":"Votre position",
     "nsphotolibraryusagedescription" : "Nous avons besoin d'accéder à votre galerie pour vous permettre de choisir une photo de profil.",
     "nscamerausagedescription" : "Nous avons besoin d'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.",
     "nsmicrophoneusagedescription" : "Nous avons besoin du microphone pour permettre l’enregistrement audio dans certaines fonctionnalités.",

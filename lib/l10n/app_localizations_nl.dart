@@ -550,4 +550,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Wij maken gebruik van spraakherkenning zodat u met uw stem kunt communiceren met de applicatie.';
+
+  @override
+  String get your_position => 'Jouw positie';
 }

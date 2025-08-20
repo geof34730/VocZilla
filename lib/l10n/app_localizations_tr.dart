@@ -550,4 +550,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Uygulamayla sesinizi kullanarak etkileşime geçebilmenizi sağlamak için ses tanıma özelliğini kullanıyoruz.';
+
+  @override
+  String get your_position => 'Pozisyonunuz';
 }

@@ -550,4 +550,7 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Използваме гласово разпознаване, за да ви позволим да взаимодействате с приложението, използвайки гласа си.';
+
+  @override
+  String get your_position => 'Вашата позиция';
 }

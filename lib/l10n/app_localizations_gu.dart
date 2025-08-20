@@ -550,4 +550,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'અમે તમારા અવાજનો ઉપયોગ કરીને એપ્લિકેશન સાથે ક્રિયાપ્રતિક્રિયા કરવાની મંજૂરી આપવા માટે વૉઇસ ઓળખનો ઉપયોગ કરીએ છીએ.';
+
+  @override
+  String get your_position => 'તમારી સ્થિતિ';
 }

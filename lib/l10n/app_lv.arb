@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Lai jūs varētu izvēlēties profila attēlu, mums ir nepieciešama piekļuve jūsu galerijai.",
     "nscamerausagedescription": "Mums ir nepieciešama piekļuve jūsu kamerai, lai jūs varētu uzņemt jaunu profila attēlu.",
     "nsmicrophoneusagedescription": "Lai dažās funkcijās iespējotu audio ierakstīšanu, mums ir nepieciešams mikrofons.",
-    "nsspeechrecognitionusagedescription": "Mēs izmantojam balss atpazīšanu, lai jūs varētu mijiedarboties ar lietotni, izmantojot balsi."
+    "nsspeechrecognitionusagedescription": "Mēs izmantojam balss atpazīšanu, lai jūs varētu mijiedarboties ar lietotni, izmantojot balsi.",
+    "your_position": "Jūsu pozīcija"
 }

@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "אנחנו צריכים גישה לגלריה שלך כדי לאפשר לך לבחור תמונת פרופיל.",
     "nscamerausagedescription": "אנחנו צריכים גישה למצלמה שלך כדי שנוכל לצלם תמונת פרופיל חדשה.",
     "nsmicrophoneusagedescription": "אנחנו צריכים את המיקרופון כדי לאפשר הקלטת שמע בתכונות מסוימות.",
-    "nsspeechrecognitionusagedescription": "אנו משתמשים בזיהוי קולי כדי לאפשר לך לתקשר עם האפליקציה באמצעות קולך."
+    "nsspeechrecognitionusagedescription": "אנו משתמשים בזיהוי קולי כדי לאפשר לך לתקשר עם האפליקציה באמצעות קולך.",
+    "your_position": "המיקום שלך"
 }

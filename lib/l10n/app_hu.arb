@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Hozzáférés szükséges a galériádhoz, hogy profilképet választhass.",
     "nscamerausagedescription": "Hozzáférés szükséges a kamerádhoz, hogy új profilképet készíthess.",
     "nsmicrophoneusagedescription": "Bizonyos funkciókban a hangfelvétel engedélyezéséhez szükségünk van a mikrofonra.",
-    "nsspeechrecognitionusagedescription": "Hangfelismerést használunk, hogy a hangoddal kommunikálhass az alkalmazással."
+    "nsspeechrecognitionusagedescription": "Hangfelismerést használunk, hogy a hangoddal kommunikálhass az alkalmazással.",
+    "your_position": "A pozíciód"
 }

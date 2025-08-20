@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Potreban nam je pristup vašoj galeriji kako biste mogli odabrati profilnu sliku.",
     "nscamerausagedescription": "Potreban nam je pristup vašoj kameri kako bismo vam omogućili da snimite novu profilnu sliku.",
     "nsmicrophoneusagedescription": "Potreban nam je mikrofon kako bismo omogućili snimanje zvuka u nekim funkcijama.",
-    "nsspeechrecognitionusagedescription": "Koristimo prepoznavanje glasa kako bismo vam omogućili interakciju s aplikacijom pomoću glasa."
+    "nsspeechrecognitionusagedescription": "Koristimo prepoznavanje glasa kako bismo vam omogućili interakciju s aplikacijom pomoću glasa.",
+    "your_position": "Vaša pozicija"
 }

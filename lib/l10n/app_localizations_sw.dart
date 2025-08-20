@@ -550,4 +550,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Tunatumia utambuzi wa sauti ili kukuruhusu kuingiliana na programu kwa kutumia sauti yako.';
+
+  @override
+  String get your_position => 'Nafasi yako';
 }

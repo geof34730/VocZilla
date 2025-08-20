@@ -550,4 +550,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Usamos o recoñecemento de voz para permitirche interactuar coa aplicación usando a túa voz.';
+
+  @override
+  String get your_position => 'A túa posición';
 }

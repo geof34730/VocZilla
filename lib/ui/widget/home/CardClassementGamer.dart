@@ -126,7 +126,9 @@ class CardClassementGamer extends StatelessWidget {
                 LayoutBuilder(builder: (context, constraints) {
                   return getLinearPercentIndicator(
                       percentage: percentage, // Pourcentage dynamique
-                      width: constraints.maxWidth);
+                      width: constraints.maxWidth,
+                      context:context
+                  );
                 })
               ],
             ),
@@ -135,7 +137,16 @@ class CardClassementGamer extends StatelessWidget {
   }
 
   // Le reste de votre code (getLinearPercentIndicator, getPositionLeftCursor) reste inchangé
-  dynamic getLinearPercentIndicator({required double percentage, required double width}) {
+  dynamic getLinearPercentIndicator({required double percentage, required double width, required BuildContext context}) {
+
+    const Set<String> _rtlLangs = {'ar', 'fa', 'he', 'ur'};
+
+    bool _isRtlFromAppLocale(BuildContext context) {
+      final code = Localizations.localeOf(context).languageCode.toLowerCase();
+      return _rtlLangs.contains(code);
+    }
+    final bool isRtl = _isRtlFromAppLocale(context);
+
     return Center(
         child: Stack(
           alignment: Alignment.center,
@@ -152,15 +163,21 @@ class CardClassementGamer extends StatelessWidget {
                   width: double.infinity,
                   lineHeight: 20.0,
                   segments: [
+                    if(isRtl)
+                     SegmentLinearIndicator(
+                        percent: 1.0 - max(0.08, percentage),
+                        color: Colors.orange,
+                      ),
                     SegmentLinearIndicator(
-                      percent: max(0.05, percentage),
+                      percent: max(0.08, percentage),
                       color: Colors.white,
                       enableStripes: true,
                     ),
-                    SegmentLinearIndicator(
-                      percent: 1.0 - max(0.05, percentage),
-                      color: Colors.orange,
-                    ),
+                    if(!isRtl)
+                      SegmentLinearIndicator(
+                        percent: 1.0 - max(0.08, percentage),
+                        color: Colors.orange,
+                      ),
                   ],
                   barRadius: const Radius.circular(5.0),
                 ),
@@ -205,8 +222,7 @@ class CardClassementGamer extends StatelessWidget {
         ));
   }
 
-  double getPositionLeftCursor(
-      {required double percentage, required double width}) {
+  double getPositionLeftCursor({required double percentage, required double width}) {
     double position = width * percentage - (percentage > 0.2 ? 120 : 40);
     return max(0, min(position, width - 140));
   }

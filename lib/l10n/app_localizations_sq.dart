@@ -550,4 +550,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Ne përdorim njohjen e zërit për t\'ju lejuar të bashkëveproni me aplikacionin duke përdorur zërin tuaj.';
+
+  @override
+  String get your_position => 'Pozicioni juaj';
 }

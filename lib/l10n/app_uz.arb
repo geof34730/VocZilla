@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Profil rasmini tanlashga ruxsat berish uchun galereyangizga kirishimiz kerak.",
     "nscamerausagedescription": "Yangi profil rasmini olishga ruxsat berish uchun kamerangizga kirishimiz kerak.",
     "nsmicrophoneusagedescription": "Ayrim funksiyalarda ovoz yozishni yoqish uchun bizga mikrofon kerak.",
-    "nsspeechrecognitionusagedescription": "Ovoz yordamida ilova bilan muloqot qilish imkonini berish uchun biz ovozni tanishdan foydalanamiz."
+    "nsspeechrecognitionusagedescription": "Ovoz yordamida ilova bilan muloqot qilish imkonini berish uchun biz ovozni tanishdan foydalanamiz.",
+    "your_position": "Sizning pozitsiyangiz"
 }

@@ -550,4 +550,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'ჩვენ ვიყენებთ ხმის ამოცნობის ფუნქციას, რათა აპლიკაციასთან ხმოვანი სიგნალით ურთიერთქმედება შეძლოთ.';
+
+  @override
+  String get your_position => 'თქვენი პოზიცია';
 }

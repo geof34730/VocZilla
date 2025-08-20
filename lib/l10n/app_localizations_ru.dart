@@ -550,4 +550,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Мы используем функцию распознавания голоса, чтобы вы могли взаимодействовать с приложением с помощью голоса.';
+
+  @override
+  String get your_position => 'Ваша позиция';
 }

@@ -550,4 +550,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Səsinizdən istifadə edərək proqramla əlaqə saxlamağınız üçün səsin tanınmasından istifadə edirik.';
+
+  @override
+  String get your_position => 'Sizin mövqeyiniz';
 }

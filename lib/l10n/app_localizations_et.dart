@@ -550,4 +550,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Kasutame hääletuvastust, et saaksite rakendusega oma hääle abil suhelda.';
+
+  @override
+  String get your_position => 'Teie positsioon';
 }

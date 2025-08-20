@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Vi behöver åtkomst till ditt galleri för att du ska kunna välja en profilbild.",
     "nscamerausagedescription": "Vi behöver åtkomst till din kamera för att du ska kunna ta en ny profilbild.",
     "nsmicrophoneusagedescription": "Vi behöver mikrofonen för att aktivera ljudinspelning i vissa funktioner.",
-    "nsspeechrecognitionusagedescription": "Vi använder röstigenkänning för att du ska kunna interagera med appen med hjälp av din röst."
+    "nsspeechrecognitionusagedescription": "Vi använder röstigenkänning för att du ska kunna interagera med appen med hjälp av din röst.",
+    "your_position": "Din position"
 }

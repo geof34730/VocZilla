@@ -550,4 +550,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Mes naudojame balso atpažinimo funkciją, kad galėtumėte sąveikauti su programa naudodami savo balsą.';
+
+  @override
+  String get your_position => 'Jūsų pozicija';
 }

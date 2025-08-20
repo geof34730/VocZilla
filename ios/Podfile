@@ -50,6 +50,13 @@ post_install do |installer|
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_MICROPHONE=1'
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_SPEECH_RECOGNITION=1'
 
+
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      # Forcer un standard C++ compatible gRPC
+      config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'gnu++17'
+      config.build_settings['CLANG_CXX_LIBRARY'] = 'libc++'
+
+
       # (Optionnel) désactive les autres pour réduire la taille si tu ne les utilises pas
       # config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_CAMERA=0'
       # config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_LOCATION=0'

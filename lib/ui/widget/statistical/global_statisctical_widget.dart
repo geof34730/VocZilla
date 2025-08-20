@@ -27,6 +27,8 @@ class GlobalStatisticalWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
       builder: (context, state) {
         if (state is VocabulaireUserLoaded) {
@@ -56,6 +58,7 @@ class GlobalStatisticalWidget extends StatelessWidget {
                     return _buildIndicator(
                       percentage: percentageProgression,
                       width: constraints.maxWidth,
+                      context: context
                     );
                   },
                 );
@@ -66,6 +69,7 @@ class GlobalStatisticalWidget extends StatelessWidget {
                     return _buildIndicator(
                       percentage: 0,
                       width: constraints.maxWidth,
+                      context: context
                     );
                   },
                 );
@@ -79,6 +83,7 @@ class GlobalStatisticalWidget extends StatelessWidget {
               return _buildIndicator(
                 percentage: 0,
                 width: constraints.maxWidth,
+                context: context
               );
             },
           );
@@ -92,10 +97,17 @@ class GlobalStatisticalWidget extends StatelessWidget {
 
   /// Construit l'indicateur de progression pour éviter la duplication de code.
   /// Le type de retour est `Widget` pour plus de sûreté.
-  Widget _buildIndicator({required double percentage, required double width}) {
-    // S'assure que le pourcentage est toujours entre 0.0 et 1.0
-    final clampedPercentage = percentage.clamp(0.0, 1.0);
+  Widget _buildIndicator({required double percentage, required double width, required BuildContext context}) {
 
+    const Set<String> _rtlLangs = {'ar', 'fa', 'he', 'ur'};
+
+    bool _isRtlFromAppLocale(BuildContext context) {
+      final code = Localizations.localeOf(context).languageCode.toLowerCase();
+      return _rtlLangs.contains(code);
+    }
+
+    final clampedPercentage = percentage.clamp(0.0, 1.0);
+    final bool isRtl = _isRtlFromAppLocale(context);
     return Center(
       child: Stack(
         alignment: Alignment.center,
@@ -113,15 +125,23 @@ class GlobalStatisticalWidget extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 lineHeight: 20.0,
                 segments: [
+                  if(isRtl)
+                    SegmentLinearIndicator(
+                      percent: 1.0 - max(0.05, clampedPercentage),
+                      color: Colors.orange,
+                    ),
                   SegmentLinearIndicator(
                     percent: max(0.05, clampedPercentage),
                     color: Colors.green,
                     enableStripes: true,
                   ),
-                  SegmentLinearIndicator(
-                    percent: 1.0 - max(0.05, clampedPercentage),
-                    color: Colors.orange,
-                  ),
+                  if(!isRtl)
+                    SegmentLinearIndicator(
+                      percent: 1.0 - max(0.05, clampedPercentage),
+                      color: Colors.orange,
+                    ),
+
+
                 ],
                 barRadius: const Radius.circular(5.0),
               ),

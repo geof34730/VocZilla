@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Ons benodig toegang tot jou galery sodat jy 'n profielfoto kan kies.",
     "nscamerausagedescription": "Ons benodig toegang tot jou kamera sodat jy 'n nuwe profielfoto kan neem.",
     "nsmicrophoneusagedescription": "Ons benodig die mikrofoon om klankopname in sommige funksies te aktiveer.",
-    "nsspeechrecognitionusagedescription": "Ons gebruik stemherkenning om jou toe te laat om met die toepassing te kommunikeer deur jou stem te gebruik."
+    "nsspeechrecognitionusagedescription": "Ons gebruik stemherkenning om jou toe te laat om met die toepassing te kommunikeer deur jou stem te gebruik.",
+    "your_position": "Jou posisie"
 }

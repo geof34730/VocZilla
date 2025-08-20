@@ -550,4 +550,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Ons gebruik stemherkenning om jou toe te laat om met die toepassing te kommunikeer deur jou stem te gebruik.';
+
+  @override
+  String get your_position => 'Jou posisie';
 }

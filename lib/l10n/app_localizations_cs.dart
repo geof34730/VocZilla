@@ -550,4 +550,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Používáme rozpoznávání hlasu, abychom vám umožnili interagovat s aplikací pomocí hlasu.';
+
+  @override
+  String get your_position => 'Vaše pozice';
 }

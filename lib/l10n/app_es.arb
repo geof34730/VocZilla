@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Necesitamos acceso a tu galería para permitirte elegir una foto de perfil.",
     "nscamerausagedescription": "Necesitamos acceso a tu cámara para permitirte tomar una nueva foto de perfil.",
     "nsmicrophoneusagedescription": "Necesitamos el micrófono para habilitar la grabación de audio en algunas funciones.",
-    "nsspeechrecognitionusagedescription": "Utilizamos reconocimiento de voz para permitirle interactuar con la aplicación usando su voz."
+    "nsspeechrecognitionusagedescription": "Utilizamos reconocimiento de voz para permitirle interactuar con la aplicación usando su voz.",
+    "your_position": "Tu posición"
 }

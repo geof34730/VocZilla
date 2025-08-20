@@ -550,4 +550,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'உங்கள் குரலைப் பயன்படுத்தி பயன்பாட்டுடன் தொடர்பு கொள்ள உங்களை அனுமதிக்க, குரல் அங்கீகாரத்தைப் பயன்படுத்துகிறோம்.';
+
+  @override
+  String get your_position => 'உங்கள் நிலை';
 }

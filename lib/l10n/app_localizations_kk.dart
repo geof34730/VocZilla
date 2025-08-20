@@ -550,4 +550,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Даусыңызды пайдаланып қолданбамен әрекеттесуіңізге мүмкіндік беру үшін біз дауысты тану мүмкіндігін қолданамыз.';
+
+  @override
+  String get your_position => 'Сіздің ұстанымыңыз';
 }

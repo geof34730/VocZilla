@@ -550,4 +550,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Бид таны дуу хоолойг ашиглан программтай харилцах боломжийг олгохын тулд дуу хоолой таних системийг ашигладаг.';
+
+  @override
+  String get your_position => 'Таны байр суурь';
 }

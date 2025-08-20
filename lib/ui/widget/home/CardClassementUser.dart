@@ -72,7 +72,7 @@ class CardClassementUser extends StatelessWidget {
                           child: AutoSizeText(
                             // Consider using your localization helper here.
                             // e.g., context.loc.your_position
-                            "Votre position",
+                            context.loc.your_position,
                             style: getFontForLanguage(
                               codelang:
                               Localizations.localeOf(context).languageCode,

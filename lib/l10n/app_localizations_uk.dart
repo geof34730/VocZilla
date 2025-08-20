@@ -550,4 +550,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Ми використовуємо розпізнавання голосу, щоб ви могли взаємодіяти з додатком за допомогою голосу.';
+
+  @override
+  String get your_position => 'Ваша позиція';
 }

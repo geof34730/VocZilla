@@ -550,4 +550,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'ພວກເຮົາໃຊ້ການຮັບຮູ້ສຽງເພື່ອໃຫ້ທ່ານສາມາດໂຕ້ຕອບກັບແອັບພລິເຄຊັນໂດຍໃຊ້ສຽງຂອງເຈົ້າ.';
+
+  @override
+  String get your_position => 'ຕໍາແໜ່ງຂອງເຈົ້າ';
 }

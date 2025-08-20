@@ -550,4 +550,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Մենք օգտագործում ենք ձայնի ճանաչում, որպեսզի դուք կարողանաք փոխազդել ծրագրի հետ ձեր ձայնի միջոցով։';
+
+  @override
+  String get your_position => 'Ձեր դիրքը';
 }

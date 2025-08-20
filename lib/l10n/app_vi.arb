@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Chúng tôi cần quyền truy cập vào thư viện ảnh của bạn để bạn có thể chọn ảnh đại diện.",
     "nscamerausagedescription": "Chúng tôi cần quyền truy cập vào máy ảnh của bạn để chụp ảnh đại diện mới.",
     "nsmicrophoneusagedescription": "Chúng ta cần micrô để có thể ghi âm ở một số tính năng.",
-    "nsspeechrecognitionusagedescription": "Chúng tôi sử dụng công nghệ nhận dạng giọng nói để cho phép bạn tương tác với ứng dụng bằng giọng nói của mình."
+    "nsspeechrecognitionusagedescription": "Chúng tôi sử dụng công nghệ nhận dạng giọng nói để cho phép bạn tương tác với ứng dụng bằng giọng nói của mình.",
+    "your_position": "Vị trí của bạn"
 }

@@ -550,4 +550,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Sisebenzisa ukunakwa kwezwi ukukuvumela ukuthi uhlanganyele nohlelo lokusebenza usebenzisa izwi lakho.';
+
+  @override
+  String get your_position => 'Isikhundla sakho';
 }

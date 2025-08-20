@@ -8,9 +8,6 @@ import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
-import 'LevelChart.dart';
-
-
 
 class CardHomeStatisticalWidget extends StatefulWidget {
 
@@ -24,10 +21,7 @@ class CardHomeStatisticalWidget extends StatefulWidget {
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
 
-
-
   const CardHomeStatisticalWidget({super.key,
-
     required this.barColorProgress,
     required this.barColorLeft,
     required this.paddingLevelBar,
@@ -37,7 +31,6 @@ class CardHomeStatisticalWidget extends StatefulWidget {
     required this.isListTheme,
     this.vocabulaireBegin,
     this.vocabulaireEnd
-
   });
 
   @override
@@ -95,6 +88,13 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
   }
 
   dynamic getLinearPercentIndicator({required double percentage}){
+    const Set<String> _rtlLangs = {'ar', 'fa', 'he', 'ur'};
+
+    bool _isRtlFromAppLocale(BuildContext context) {
+      final code = Localizations.localeOf(context).languageCode.toLowerCase();
+      return _rtlLangs.contains(code);
+    }
+    final bool isRtl = _isRtlFromAppLocale(context);
     return Center(
         child:Stack(
           alignment: Alignment.center,
@@ -113,15 +113,21 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
                   width: double.infinity,
                   lineHeight: 15.0,
                   segments: [
+                    if(isRtl)
+                      SegmentLinearIndicator(
+                        percent: 1.0 - percentage,
+                        color: widget.barColorLeft,
+                      ),
                     SegmentLinearIndicator(
                       percent: percentage,
                       color: widget.barColorProgress,
                       enableStripes: true,
                     ),
-                    SegmentLinearIndicator(
-                      percent: 1.0 - percentage,
-                      color: widget.barColorLeft,
-                    ),
+                    if(!isRtl)
+                      SegmentLinearIndicator(
+                        percent: 1.0 - percentage,
+                        color: widget.barColorLeft,
+                      ),
                   ],
                   barRadius: Radius.circular(5.0),
                 ),

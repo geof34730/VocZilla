@@ -550,4 +550,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Fem servir el reconeixement de veu per permetre\'t interactuar amb l\'aplicació mitjançant la teva veu.';
+
+  @override
+  String get your_position => 'La teva posició';
 }

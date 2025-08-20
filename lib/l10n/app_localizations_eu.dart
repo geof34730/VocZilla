@@ -550,4 +550,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Ahots-ezagutza erabiltzen dugu aplikazioarekin zure ahotsa erabiliz elkarreragin ahal izateko.';
+
+  @override
+  String get your_position => 'Zure posizioa';
 }

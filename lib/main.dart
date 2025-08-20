@@ -20,9 +20,13 @@ final RouteObserver<ModalRoute<void>> routeObserver = RouteObserver<ModalRoute<v
 
 FirebaseMessaging messaging = FirebaseMessaging.instance;
 
-void main({bool shootScreenShot = false,String? localForce=null}) async {
+void main({
+  bool shootScreenShot = false,
+  String? localForce=null,
+  bool forFeatureGraphicParam=false
+}) async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  forFeatureGraphic=forFeatureGraphicParam;
   if(!testScreenShot) {
     await SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
@@ -32,7 +36,7 @@ void main({bool shootScreenShot = false,String? localForce=null}) async {
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   await FirebaseInitializer.initialize();
-  if (!shootScreenShot) {
+  if (!testScreenShot) {
     final notificationService = NotificationService();
     await notificationService.initialize();
     if(!Platform.isMacOS) {

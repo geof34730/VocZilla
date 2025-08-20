@@ -19,7 +19,6 @@ import '../../logic/blocs/user/user_event.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
 import '../widget/home/TitleWidget.dart';
-import '../widget/statistical/LevelChart.dart';
 import '../widget/home/CardClassementGamer.dart';
 import '../widget/home/HomeListPerso.dart';
 

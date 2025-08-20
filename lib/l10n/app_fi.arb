@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Tarvitsemme pääsyn galleriaasi, jotta voit valita profiilikuvan.",
     "nscamerausagedescription": "Tarvitsemme pääsyn kameraasi, jotta voit ottaa uuden profiilikuvan.",
     "nsmicrophoneusagedescription": "Tarvitsemme mikrofonin äänen tallentamiseen joissakin ominaisuuksissa.",
-    "nsspeechrecognitionusagedescription": "Käytämme äänentunnistusta, jotta voit olla vuorovaikutuksessa sovelluksen kanssa äänelläsi."
+    "nsspeechrecognitionusagedescription": "Käytämme äänentunnistusta, jotta voit olla vuorovaikutuksessa sovelluksen kanssa äänelläsi.",
+    "your_position": "Sinun sijaintisi"
 }

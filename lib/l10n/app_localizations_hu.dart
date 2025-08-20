@@ -550,4 +550,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Hangfelismerést használunk, hogy a hangoddal kommunikálhass az alkalmazással.';
+
+  @override
+  String get your_position => 'A pozíciód';
 }

@@ -550,4 +550,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => '음성 인식을 사용하면 음성으로 애플리케이션과 상호 작용할 수 있습니다.';
+
+  @override
+  String get your_position => '당신의 위치';
 }

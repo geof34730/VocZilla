@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Profil resminizi seçebilmeniz için galerinize erişmemiz gerekiyor.",
     "nscamerausagedescription": "Yeni bir profil resmi çekebilmeniz için kameranıza erişmemiz gerekiyor.",
     "nsmicrophoneusagedescription": "Bazı özelliklerde ses kaydı yapabilmek için mikrofona ihtiyacımız var.",
-    "nsspeechrecognitionusagedescription": "Uygulamayla sesinizi kullanarak etkileşime geçebilmenizi sağlamak için ses tanıma özelliğini kullanıyoruz."
+    "nsspeechrecognitionusagedescription": "Uygulamayla sesinizi kullanarak etkileşime geçebilmenizi sağlamak için ses tanıma özelliğini kullanıyoruz.",
+    "your_position": "Pozisyonunuz"
 }

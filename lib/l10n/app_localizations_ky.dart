@@ -550,4 +550,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Үнүңүз аркылуу колдонмо менен иштешүүгө мүмкүнчүлүк берүү үчүн үн таанууну колдонобуз.';
+
+  @override
+  String get your_position => 'Сиздин позицияңыз';
 }

@@ -2,13 +2,12 @@ const String titleApp="VocZilla";
 const int titleAppCute1=3;
 String versionApp="1.0.0";
 const bool debugMode= false;
-const bool testScreenShot = true;
+const bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
 const int daysFreeTrial=7;
 const String emailTestRevisionStore="voczilla.test2@flutter-now.com";
-
-
+bool forFeatureGraphic = false;
 bool changeVocabulaireSinceVisiteHome = false;
 
 //const  String serveurUrl="http://192.168.0.11:8080";
@@ -21,6 +20,4 @@ final String serverRankCurrentUser = '$serveurUrl/api/leaderboard/ranking';
 
 const String ANDROID_APP_STORE_URL="https://play.google.com/store/apps/details?id=com.geoffreypetain.voczilla.voczilla";
 const String IOS_APP_STORE_URL="https://apps.apple.com/us/app/com.geoffreypetain.voczilla.voczilla/6742488058";
-
-
 

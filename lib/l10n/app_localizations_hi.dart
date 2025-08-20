@@ -550,4 +550,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'हम आपको अपनी आवाज का उपयोग करके एप्लिकेशन के साथ इंटरैक्ट करने की अनुमति देने के लिए ध्वनि पहचान का उपयोग करते हैं।';
+
+  @override
+  String get your_position => 'आपका मत';
 }

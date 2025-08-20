@@ -550,4 +550,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'نحن نستخدم خاصية التعرف على الصوت للسماح لك بالتفاعل مع التطبيق باستخدام صوتك.';
+
+  @override
+  String get your_position => 'موقعك';
 }

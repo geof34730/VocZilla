@@ -550,4 +550,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'ನಿಮ್ಮ ಧ್ವನಿಯನ್ನು ಬಳಸಿಕೊಂಡು ಅಪ್ಲಿಕೇಶನ್‌ನೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಲು ನಾವು ಧ್ವನಿ ಗುರುತಿಸುವಿಕೆಯನ್ನು ಬಳಸುತ್ತೇವೆ.';
+
+  @override
+  String get your_position => 'ನಿಮ್ಮ ಸ್ಥಾನ';
 }

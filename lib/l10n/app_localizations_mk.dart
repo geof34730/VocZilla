@@ -550,4 +550,7 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Користиме препознавање на глас за да ви овозможиме да комуницирате со апликацијата користејќи го вашиот глас.';
+
+  @override
+  String get your_position => 'Вашата позиција';
 }

@@ -550,4 +550,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Käytämme äänentunnistusta, jotta voit olla vuorovaikutuksessa sovelluksen kanssa äänelläsi.';
+
+  @override
+  String get your_position => 'Sinun sijaintisi';
 }

@@ -550,4 +550,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'ድምፅህን ተጠቅመህ ከመተግበሪያው ጋር እንድትገናኝ ለመፍቀድ የድምጽ ማወቂያ እንጠቀማለን።';
+
+  @override
+  String get your_position => 'የእርስዎ አቋም';
 }

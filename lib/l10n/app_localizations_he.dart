@@ -550,4 +550,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'אנו משתמשים בזיהוי קולי כדי לאפשר לך לתקשר עם האפליקציה באמצעות קולך.';
+
+  @override
+  String get your_position => 'המיקום שלך';
 }

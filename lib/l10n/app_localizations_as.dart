@@ -550,4 +550,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'আমি আপোনাৰ কণ্ঠস্বৰ ব্যৱহাৰ কৰি এপ্লিকেচনৰ সৈতে যোগাযোগ কৰিবলৈ অনুমতি দিবলৈ ভয়েচ চিনাক্তকৰণ ব্যৱহাৰ কৰো।';
+
+  @override
+  String get your_position => 'আপোনাৰ স্থিতি';
 }

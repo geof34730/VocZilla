@@ -12,16 +12,10 @@ import 'package:vobzilla/ui/widget/statistical/global_statisctical_widget.dart';
 import '../../core/utils/ui.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../global.dart';
-import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
-import '../widget/statistical/LevelChart.dart';
-import '../widget/home/CardClassementGamer.dart';
-import '../widget/home/HomeListPerso.dart';
 
 class UpdateScreen extends StatelessWidget {
   const UpdateScreen({super.key});
-
-
   Future<void> _launchStore() async {
     final String url = Platform.isAndroid
         ? ANDROID_APP_STORE_URL
@@ -34,15 +28,12 @@ class UpdateScreen extends StatelessWidget {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Column(
-
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-
           Padding(
             padding: EdgeInsets.only(top:20, bottom: 0,left:20,right:20),
             child:Text(
@@ -74,8 +65,6 @@ class UpdateScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
             )
           ),
-
-
         ]
 
     );

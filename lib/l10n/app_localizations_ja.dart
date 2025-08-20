@@ -550,4 +550,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => '音声認識を使用すると、音声を使用してアプリケーションを操作できるようになります。';
+
+  @override
+  String get your_position => 'あなたの立場';
 }

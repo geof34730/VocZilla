@@ -550,4 +550,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'ما از تشخیص صدا استفاده می‌کنیم تا به شما امکان دهیم با استفاده از صدای خود با برنامه تعامل داشته باشید.';
+
+  @override
+  String get your_position => 'موقعیت شما';
 }

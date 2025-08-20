@@ -231,15 +231,27 @@ Widget _buildMenuItems(BuildContext context) {
           Navigator.pushNamed(context, AppRoute.subscription);
         },
       ),
-      VocZillaTile(
-        keyParam: ValueKey('link_logout'),
-        icon: Icons.logout,
-        label: context.loc.drawer_disconnect,
-        color: Colors.grey,
-        onTap: () {
-          Navigator.of(context).pop();
-          context.read<AuthBloc>().add(SignOutRequested());
+      BlocListener<AuthBloc, AuthState>(
+        listener: (context, state) {
+          // Une fois que l'état est mis à jour comme non authentifié, redirigez vers l'écran de connexion.
+          if (state is AuthUnauthenticated) {
+            // Nous utilisons pushNamedAndRemoveUntil pour vider la pile de navigation,
+            // empêchant l'utilisateur de revenir à une page nécessitant une authentification.
+            // Assurez-vous que AppRoute.login pointe vers votre écran d'accueil/connexion.
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil(AppRoute.home, (route) => false);
+          }
         },
+        child: VocZillaTile(
+          keyParam: const ValueKey('link_logout'),
+          icon: Icons.logout,
+          label: context.loc.drawer_disconnect,
+          color: Colors.grey,
+          onTap: () {
+            Navigator.of(context).pop(); // Ferme le tiroir
+            context.read<AuthBloc>().add(SignOutRequested()); // Déclenche l'événement de déconnexion
+          },
+        ),
       ),
     ],
   );
@@ -251,4 +263,3 @@ void closeDrawer(BuildContext context) {
 }
 
 /// Helper function to provide a valid name for the Avatar widget.
-

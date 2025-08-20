@@ -550,4 +550,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Folosim recunoașterea vocală pentru a vă permite să interacționați cu aplicația folosind vocea.';
+
+  @override
+  String get your_position => 'Poziția dumneavoastră';
 }

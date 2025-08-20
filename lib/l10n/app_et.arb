@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Profiilipildi valimiseks vajame juurdepääsu teie galeriile.",
     "nscamerausagedescription": "Uue profiilipildi tegemiseks vajame juurdepääsu teie kaamerale.",
     "nsmicrophoneusagedescription": "Mõnes funktsioonis heli salvestamise lubamiseks vajame mikrofoni.",
-    "nsspeechrecognitionusagedescription": "Kasutame hääletuvastust, et saaksite rakendusega oma hääle abil suhelda."
+    "nsspeechrecognitionusagedescription": "Kasutame hääletuvastust, et saaksite rakendusega oma hääle abil suhelda.",
+    "your_position": "Teie positsioon"
 }

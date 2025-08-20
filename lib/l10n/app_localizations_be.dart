@@ -550,4 +550,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'Мы выкарыстоўваем распазнаванне голасу, каб вы маглі ўзаемадзейнічаць з дадаткам з дапамогай голасу.';
+
+  @override
+  String get your_position => 'Ваша пазіцыя';
 }

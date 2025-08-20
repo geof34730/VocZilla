@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Damit Sie ein Profilbild auswählen können, benötigen wir Zugriff auf Ihre Galerie.",
     "nscamerausagedescription": "Damit Sie ein neues Profilbild aufnehmen können, benötigen wir Zugriff auf Ihre Kamera.",
     "nsmicrophoneusagedescription": "Wir benötigen das Mikrofon, um bei einigen Funktionen die Audioaufnahme zu ermöglichen.",
-    "nsspeechrecognitionusagedescription": "Wir verwenden Spracherkennung, damit Sie mit der Anwendung über Ihre Stimme interagieren können."
+    "nsspeechrecognitionusagedescription": "Wir verwenden Spracherkennung, damit Sie mit der Anwendung über Ihre Stimme interagieren können.",
+    "your_position": "Ihre Position"
 }

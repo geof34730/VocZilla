@@ -550,4 +550,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get nsspeechrecognitionusagedescription => 'ଆପଣଙ୍କ ସ୍ୱର ବ୍ୟବହାର କରି ଆପ୍ଲିକେସନ୍ ସହିତ ଇଣ୍ଟରାକ୍ଟ କରିବାକୁ ଅନୁମତି ଦେବା ପାଇଁ ଆମେ ସ୍ୱର ଚିହ୍ନଟକରଣ ବ୍ୟବହାର କରୁ।';
+
+  @override
+  String get your_position => 'ତୁମର ସ୍ଥିତି';
 }

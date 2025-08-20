@@ -179,5 +179,6 @@
     "nsphotolibraryusagedescription": "Avem nevoie de acces la galeria ta pentru a-ți permite să alegi o fotografie de profil.",
     "nscamerausagedescription": "Avem nevoie de acces la camera ta foto pentru a-ți permite să faci o nouă fotografie de profil.",
     "nsmicrophoneusagedescription": "Avem nevoie de microfon pentru a activa înregistrarea audio în anumite funcții.",
-    "nsspeechrecognitionusagedescription": "Folosim recunoașterea vocală pentru a vă permite să interacționați cu aplicația folosind vocea."
+    "nsspeechrecognitionusagedescription": "Folosim recunoașterea vocală pentru a vă permite să interacționați cu aplicația folosind vocea.",
+    "your_position": "Poziția dumneavoastră"
 }
