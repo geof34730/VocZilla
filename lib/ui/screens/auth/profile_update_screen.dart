@@ -14,26 +14,36 @@ class ProfileUpdateScreen extends StatefulWidget {
 }
 
 class _ProfileUpdateScreenState extends State<ProfileUpdateScreen> {
+  TextStyle? _titleStyle; // Stocke le style pour éviter de le recalculer
+
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // On calcule le style une fois ici, car il dépend du contexte (pour la langue).
+    if (_titleStyle == null) {
+      _titleStyle = getFontForLanguage(
+        codelang: Localizations.localeOf(context).languageCode,
+        fontSize: 25,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-        key: ValueKey('screenUpdateProfil'),
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top:20),
-            child:Text(context.loc.profil_update_title,
-                style: getFontForLanguage(
-                  codelang: Localizations.localeOf(context).languageCode,
-                  fontSize: 25,
-                )
+    // On enveloppe avec SingleChildScrollView pour éviter les problèmes de dépassement
+    // lorsque le clavier apparaît.
+    return SingleChildScrollView(
+      child: Column(
+          key: const ValueKey('screenUpdateProfil'),
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
+              child: Text(context.loc.profil_update_title, style: _titleStyle),
             ),
-          ),
-          FormProfilUpdate()
-        ]
+            const FormProfilUpdate()
+          ]),
     );
   }
 }

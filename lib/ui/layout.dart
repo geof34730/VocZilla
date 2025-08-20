@@ -21,7 +21,7 @@ import '../logic/blocs/notification/notification_bloc.dart';
 import '../logic/blocs/notification/notification_event.dart';
 import '../logic/blocs/notification/notification_state.dart';
 
-class Layout extends StatelessWidget {
+class Layout extends StatefulWidget {
   const Layout({
     Key? key,
     required this.child,
@@ -32,6 +32,7 @@ class Layout extends StatelessWidget {
     this.id = "0",
     this.titleScreen = null,
   }) : super(key: key);
+
   final bool appBarNotLogged;
   final bool logged;
   final bool showBottomNavigationBar;
@@ -40,16 +41,22 @@ class Layout extends StatelessWidget {
   final String id;
   final String? titleScreen;
 
+  @override
+  State<Layout> createState() => _LayoutState();
+}
+
+class _LayoutState extends State<Layout> {
+  // BONNE PRATIQUE: La clé est créée une seule fois et conservée par l'état.
+  // Elle n'est plus recréée à chaque build.
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-
-    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
-      key: scaffoldKey,
+      key: _scaffoldKey,
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
-      appBar: AuthAppBar(scaffoldKey: scaffoldKey, appBarNotLogged: appBarNotLogged),
+      appBar: AuthAppBar(scaffoldKey: _scaffoldKey, appBarNotLogged: widget.appBarNotLogged),
       endDrawer: BlocBuilder<DrawerBloc, DrawerState>(
         builder: (context, state) {
          if (state is SettingsDrawerState) {
@@ -78,22 +85,22 @@ class Layout extends StatelessWidget {
             ),
           )
       ) : null),
-      bottomNavigationBar: (showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: itemSelected) : null,
+      bottomNavigationBar: (widget.showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: widget.itemSelected) : null,
       body:SingleChildScrollView(
           child:Padding(
-              padding: logged ? EdgeInsets.only(top: kToolbarHeight + MediaQuery.of(context).padding.top + 20,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
+              padding: widget.logged ? EdgeInsets.only(top: kToolbarHeight + MediaQuery.of(context).padding.top + 20,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,
               child:Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  if(titleScreen != null)...[
+                  if(widget.titleScreen != null)...[
                     Padding(
                     padding: EdgeInsets.only(bottom: 8),
-                      child:titleWidget(text:titleScreen!,codelang: Localizations.localeOf(context).languageCode)
+                      child:titleWidget(text:widget.titleScreen!,codelang: Localizations.localeOf(context).languageCode)
                     )
                   ],
-                  child,
+                  widget.child,
                 ],
               )
             )

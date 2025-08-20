@@ -70,10 +70,8 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
                         ],
                       ),
                     ),
-
               );
             }
-
             // 3. Si l'état n'est pas AuthAuthenticated (ex: chargement, déconnecté),
             //    on n'affiche rien dans les actions.
             return const SizedBox.shrink();

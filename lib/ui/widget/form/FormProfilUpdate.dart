@@ -30,6 +30,7 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
 
   bool _controllersInitialized = false;
   String? _newImageAvatarBase64;
+  late Future<UserFirestore?> _userFuture; // <-- NOUVEAU: Variable pour stocker la Future
 
   @override
   void dispose() {
@@ -37,6 +38,13 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
     lastNameController.dispose();
     pseudoController.dispose();
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    // BONNE PRATIQUE: On charge les données une seule fois ici.
+    _userFuture = LocalStorageService().loadUser();
   }
 
   void _initializeControllers(UserFirestore userProfile) {
@@ -107,7 +115,7 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
     final notificationBloc = context.read<NotificationBloc>();
     return Center(
       child: FutureBuilder<UserFirestore?>(
-        future: LocalStorageService().loadUser(),
+        future: _userFuture, // <-- MODIFIÉ: On utilise la Future stockée
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
