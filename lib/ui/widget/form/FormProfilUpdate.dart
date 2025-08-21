@@ -1,5 +1,6 @@
 import 'dart:convert';
-import 'dart:io'; // <-- AJOUTÉ pour File (même si on utilise les bytes, c'est une bonne pratique)
+import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,7 +13,6 @@ import '../../../core/utils/string.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';
 import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
-import '../../../logic/blocs/notification/notification_bloc.dart';
 
 import 'CustomTextField.dart';
 
@@ -24,18 +24,16 @@ class FormProfilUpdate extends StatefulWidget {
 }
 
 class _FormProfilUpdateState extends State<FormProfilUpdate> {
-  final TextEditingController firstNameController = TextEditingController();
-  final TextEditingController lastNameController = TextEditingController();
   final TextEditingController pseudoController = TextEditingController();
 
   bool _controllersInitialized = false;
   String? _newImageAvatarBase64;
-  late Future<UserFirestore?> _userFuture; // <-- NOUVEAU: Variable pour stocker la Future
+  Uint8List? _imageToShowBytes;
+  bool _isSubmitting = false;
+  late Future<UserFirestore?> _userFuture;
 
   @override
   void dispose() {
-    firstNameController.dispose();
-    lastNameController.dispose();
     pseudoController.dispose();
     super.dispose();
   }
@@ -43,19 +41,23 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
   @override
   void initState() {
     super.initState();
-    // BONNE PRATIQUE: On charge les données une seule fois ici.
     _userFuture = LocalStorageService().loadUser();
   }
 
-  void _initializeControllers(UserFirestore userProfile) {
+  void _initializeState(UserFirestore userProfile) {
     if (!_controllersInitialized) {
       pseudoController.text = userProfile.pseudo ?? '';
+      if (userProfile.imageAvatar.isNotEmpty) {
+        try {
+          _imageToShowBytes = base64Decode(userProfile.imageAvatar);
+        } catch (e) {
+          _imageToShowBytes = null;
+        }
+      }
       _controllersInitialized = true;
     }
   }
 
-  // <-- MODIFIÉ: La fonction accepte maintenant une `ImageSource`
-  // pour savoir si elle doit ouvrir la galerie ou l'appareil photo.
   Future<void> _pickImage(ImageSource source) async {
     final ImagePicker picker = ImagePicker();
     try {
@@ -67,6 +69,7 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
       if (image != null) {
         final bytes = await image.readAsBytes();
         setState(() {
+          _imageToShowBytes = bytes;
           _newImageAvatarBase64 = base64Encode(bytes);
         });
       }
@@ -79,7 +82,6 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
     }
   }
 
-  // <-- NOUVEAU: La fonction qui affiche le menu de choix.
   void _showImageSourceActionSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -90,17 +92,17 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
               ListTile(
                 leading: const Icon(Icons.photo_library),
                 title: const Text('Galerie'),
-                onTap: () {
-                  _pickImage(ImageSource.gallery);
-                  Navigator.of(context).pop(); // Ferme le menu
+                onTap: () async {
+                  Navigator.of(context).pop();
+                  await _pickImage(ImageSource.gallery);
                 },
               ),
               ListTile(
                 leading: const Icon(Icons.photo_camera),
                 title: const Text('Appareil photo'),
-                onTap: () {
-                  _pickImage(ImageSource.camera);
-                  Navigator.of(context).pop(); // Ferme le menu
+                onTap: () async {
+                  Navigator.of(context).pop();
+                  await _pickImage(ImageSource.camera);
                 },
               ),
             ],
@@ -112,10 +114,9 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
 
   @override
   Widget build(BuildContext context) {
-    final notificationBloc = context.read<NotificationBloc>();
     return Center(
       child: FutureBuilder<UserFirestore?>(
-        future: _userFuture, // <-- MODIFIÉ: On utilise la Future stockée
+        future: _userFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -126,18 +127,24 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
 
           if (snapshot.hasData) {
             final userProfile = snapshot.data!;
-            _initializeControllers(userProfile);
-
-            final imageToShow = _newImageAvatarBase64 ?? userProfile.imageAvatar;
+            _initializeState(userProfile);
 
             return BlocListener<AuthBloc, AuthState>(
               listener: (context, state) {
+                // On réinitialise l'état de soumission dès qu'on reçoit un nouvel état du BLoC,
+                // ce qui signifie que l'opération est terminée (succès ou échec).
+                if (mounted) {
+                  setState(() {
+                    _isSubmitting = false;
+                  });
+                }
+
                 if (state is AuthAuthenticated) {
                   Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
                 }
               },
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0), // Peut être const
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -148,10 +155,10 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
                         fit: StackFit.expand,
                         clipBehavior: Clip.none,
                         children: [
-                          if (imageToShow.isNotEmpty)
+                          if (_imageToShowBytes != null)
                             ClipOval(
                               child: Image.memory(
-                                base64Decode(imageToShow),
+                                _imageToShowBytes!,
                                 width: 120,
                                 height: 120,
                                 fit: BoxFit.cover,
@@ -174,8 +181,7 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
                             bottom: -5,
                             right: -5,
                             child: GestureDetector(
-                              // <-- MODIFIÉ: On appelle la fonction qui affiche le menu
-                              onTap: () => _showImageSourceActionSheet(context),
+                              onTap: _isSubmitting ? null : () => _showImageSourceActionSheet(context),
                               child: Container(
                                 height: 40,
                                 width: 40,
@@ -207,16 +213,26 @@ class _FormProfilUpdateState extends State<FormProfilUpdate> {
 
                     const SizedBox(height: 20),
                     ElevatedButton(
-                      onPressed: () {
-                        context.read<AuthBloc>().add(
-                          UpdateUserProfilEvent(
-                            pseudo: pseudoController.text,
-                            imageAvatar: _newImageAvatarBase64,
-                          ),
-                        );
+                      onPressed: _isSubmitting ? null : () {
+                        setState(() {
+                          _isSubmitting = true;
+                        });
+                        context.read<AuthBloc>().add(UpdateUserProfilEvent(
+                          pseudo: pseudoController.text,
+                          imageAvatar: _newImageAvatarBase64,
+                        ));
                       },
-                      child:  Text(context.loc.save),
-                    )
+                      child: _isSubmitting
+                          ? const SizedBox(
+                              height: 20,
+                              width: 20,
+                              child: CircularProgressIndicator(
+                                color: Colors.white,
+                                strokeWidth: 2.0,
+                              ),
+                            )
+                          : Text(context.loc.save),
+                    ),
                   ],
                 ),
               ),

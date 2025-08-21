@@ -29,8 +29,10 @@ class CardClassementUser extends StatelessWidget {
           final String pseudo = userProfile.pseudo ?? '';
 
           return SizedBox(
-            height: 127, // Vous pouvez ajuster cette valeur selon vos besoins.
+            height: 89,
+            // Vous pouvez ajuster cette valeur selon vos besoins.
             child: Card(
+                clipBehavior: Clip.antiAlias, // Ceci agira comme un "overflow: hidden"
                 color: Colors.deepPurple,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -73,12 +75,12 @@ class CardClassementUser extends StatelessWidget {
                               context.loc.your_position,
                               style: getFontForLanguage(
                                 codelang: Localizations.localeOf(context).languageCode,
-                                fontSize: 20,
+                                fontSize: 15,
                               ).copyWith(color: Colors.white),
                               maxLines: 1,
                               minFontSize: 12,
                             ),
-                            const SizedBox(height: 4),
+
                             AutoSizeText(
                               position.toString(),
                               style: getFontForLanguage(

@@ -85,15 +85,19 @@ class CardClassementGamer extends StatelessWidget {
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.center, // Meilleur alignement vertical
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,// Meilleur alignement vertical
                   children: [
                     _buildAvatar(), // Utilisation de l'avatar dynamique
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 5),
                     Expanded(
                       child: Text(
-                        user.pseudo, // Pseudo dynamique
+                        user.pseudo,
                         textAlign: TextAlign.start,
                         style: getFontForLanguage(
                           codelang: Localizations.localeOf(context).languageCode,
@@ -147,7 +151,7 @@ class CardClassementGamer extends StatelessWidget {
     final textAlignForSmallPercentage = isRtl ? TextAlign.right : TextAlign.left;
 
     return SizedBox(
-        height: 70.0, // Pour permettre au logo de déborder verticalement
+        height: 30.0, // Pour permettre au logo de déborder verticalement
         child: Stack(
             alignment: Alignment.center,
             clipBehavior: Clip.none, // Permet au logo de déborder sans être coupé
@@ -209,7 +213,7 @@ class CardClassementGamer extends StatelessWidget {
                     ],
                     Image.asset(
                       "assets/brand/logo_landing.png",
-                      width: 80,
+                      width: 50,
                     ),
                     if (clampedPercentage <= 0.2) ...[
                       const SizedBox(width: 5),

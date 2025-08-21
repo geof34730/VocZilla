@@ -39,9 +39,11 @@ class HomeScreen extends StatelessWidget {
               isListPerso : false,
               isListTheme : false,
             ),
+
+
+
             HomelistPerso(),
             titleWidget(text: context.loc.home_title_list_defined,codelang: codelang),
-
             HorizontalScrollViewCardHome(
                 children: [
                 CardHome(
@@ -50,7 +52,6 @@ class HomeScreen extends StatelessWidget {
                   vocabulaireBegin: 0,
                   vocabulaireEnd: 20,
                   paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-
                 ),
                 CardHome(
                   title: "TOP 20 / 50",
@@ -73,6 +74,13 @@ class HomeScreen extends StatelessWidget {
                   vocabulaireEnd: 200,
                   paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
                 ),
+                  CardHome(
+                    title: "TOP 200 / 500",
+                    keyStringTest: "top100200",
+                    vocabulaireBegin: 200,
+                    vocabulaireEnd: 500,
+                    paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
+                  ),
               ]
             ),
             titleWidget(text: context.loc.by_themes,codelang: codelang),

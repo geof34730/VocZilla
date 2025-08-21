@@ -34,7 +34,7 @@ class GlobalStatisticalWidget extends StatefulWidget {
 class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
   Future<StatisticalLength>? _statisticalFuture;
   StatisticalLength? _lastStatisticalData;
-  static const double _heightIndicator = 70.0;
+  static const double _heightIndicator = 50.0;
 
   @override
   void initState() {
@@ -148,7 +148,9 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     final textAlignForBigPercentage = isRtl ? TextAlign.left : TextAlign.right;
     final textAlignForSmallPercentage = isRtl ? TextAlign.right : TextAlign.left;
 
-    return SizedBox(
+    return Center(child:Padding(
+        padding: EdgeInsets.only(left:30,right:30),
+        child:SizedBox(
         height: _heightIndicator,
         child: Stack(
             alignment: Alignment.center,
@@ -213,7 +215,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                     ],
                     Image.asset(
                       "assets/brand/logo_landing.png",
-                      width: 80,
+                      width: 50,
                     ),
                     if (clampedPercentage <= 0.2) ...[
                       const SizedBox(width: 5),
@@ -235,7 +237,8 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
               ),
             ],
           )
-    );
+        )
+    ));
   }
 
   double _getPositionLeftCursor({

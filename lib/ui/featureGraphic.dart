@@ -41,7 +41,7 @@ class FeatureGraphic extends StatelessWidget {
                       style: getFontForLanguage(
                         codelang: Localizations.localeOf(context).languageCode,
                         fontSize: 40,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.bold,
                       ).copyWith(
                         color: Colors.black,
                         decoration: TextDecoration.none,

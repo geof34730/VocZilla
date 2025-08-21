@@ -143,10 +143,11 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> with WidgetsBin
             ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.only(top: 15, left: 8, right: 8),
+              padding: const EdgeInsets.only(top: 10, left: 8, right: 8),
               child: Text(
                 context.loc.freetrial_info2,
                 style: const TextStyle(
+                  height:1,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
