@@ -81,14 +81,15 @@ class PersonnalisationStep1Screen extends StatelessWidget {
             padding: EdgeInsets.only(left: 20, right: 20, top: 10.00, bottom: 10.0),
             child: ValueListenableBuilder<Color>(
               valueListenable: colorListNotifier,
+              // key: ValueKey('color_picker_builder'), // You could add a key here too if needed for the builder
               builder: (context, color, child) {
                 return MaterialColorPicker(
+                  key: ValueKey('color_picker'),
                   allowShades: true,
                   onlyShadeSelection: false,
                   onColorChange: (Color color) {
                     colorListNotifier.value = color;
                     save(
-
                         guidListPerso: finalGuidList,
                         context: context
                     );
@@ -170,5 +171,3 @@ class PersonnalisationStep1Screen extends StatelessWidget {
 
 
 }
-
-

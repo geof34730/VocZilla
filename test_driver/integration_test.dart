@@ -77,6 +77,33 @@ void main() {
       await driver.tap(back);
     }
 
+    /// [NOUVEAU] Helper pour créer une liste personnalisée avec une couleur spécifique.
+    /// Cette fonction suppose que le driver est sur l'écran `perso_list_step1`.
+    Future<void> createListWithColor(
+        FlutterDriver driver,
+        String title,
+        int colorSwatchIndex,
+        ) async {
+      print("  - Saisie du titre : $title");
+      await driver.tap(find.byValueKey('title_perso_field'));
+      await driver.enterText(title);
+
+
+
+      print("  - Sélection de la pastille de couleur (index: $colorSwatchIndex)");
+      // On utilise la clé unique que nous avons ajoutée. L'index commence à 0 dans l'appel,
+      // mais nos clés commencent à 'color_1', donc on ajoute 1.
+      final colorKey = 'color_${colorSwatchIndex + 1}';
+      final colorFinder = find.byValueKey(colorKey);
+      await driver.waitFor(colorFinder);
+      await driver.tap(colorFinder);
+      await takeScreenshot(driver, getNameFile('personallist_step1'));
+      print("  - Clic sur 'Suivant' pour passer à l'étape 2");
+      await driver.tap(find.byValueKey('button_valide_step_perso'));
+
+    }
+
+
     // ------- Lifecycle -------
     setUpAll(() async {
       driver = await FlutterDriver.connect(timeout: const Duration(minutes: 2));
@@ -142,108 +169,68 @@ void main() {
         await driver.waitFor(find.byValueKey('home_logged'));
         await takeScreenshot(driver, getNameFile('homeperso'));
 
-        print('find buttonAddList');
+        // --- [MODIFIÉ] Création de 3 listes avec des couleurs différentes ---
+
+        // Liste 1
+        print('➡️ Création de "My personal list 1" avec la première couleur...');
         await driver.tap(find.byValueKey('buttonAddList'));
-        print('ok buttonAddList');
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await driver.tap(find.byValueKey('title_perso_field'));
-        await driver.enterText('My personal list 1');
-        await takeScreenshot(driver, getNameFile('personallist1'));
-
-        await driver.tap(find.byValueKey('button_valide_step_perso'));
+        await createListWithColor(driver, 'My personal list 1', 3); // 1ère couleur (index 0)
         await driver.waitFor(find.byValueKey('perso_list_step2'));
-        await takeScreenshot(driver, getNameFile('personallist2'));
-
+        print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));
         await driver.tap(find.byValueKey('button_add_voc_4'));
-
+        await takeScreenshot(driver, getNameFile('personallist_step2'));
+        print("  - Retour à l'écran d'accueil des listes");
         await tapBackButton(driver);
+        await driver.waitFor(find.byValueKey('home_logged'));
 
 
-        print('find button_create_list');
+
+        // Liste 2
+        print('➡️ Création de "My personal list 2" avec une couleur différente...');
         await driver.tap(find.byValueKey('button_create_list'));
-        print('ok button_create_list');
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await driver.tap(find.byValueKey('title_perso_field'));
-        await driver.enterText('My personal list 2');
-
-
-        await driver.tap(find.byValueKey('button_valide_step_perso'));
-        await driver.waitFor(find.byValueKey('perso_list_step2'));
-
-
+        await createListWithColor(driver, 'My personal list 2', 6);
+        print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));
         await driver.tap(find.byValueKey('button_add_voc_4'));
-
+        print("  - Retour à l'écran d'accueil des listes");
         await tapBackButton(driver);
+        await driver.waitFor(find.byValueKey('home_logged'));
 
-
-        print('find button_create_list');
+        // Liste 3
+        print('➡️ Création de "My personal list 3" avec une autre couleur...');
         await driver.tap(find.byValueKey('button_create_list'));
-        print('ok button_create_list');
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await driver.tap(find.byValueKey('title_perso_field'));
-        await driver.enterText('My personal list 3');
-
-
-        await driver.tap(find.byValueKey('button_valide_step_perso'));
-        await driver.waitFor(find.byValueKey('perso_list_step2'));
-
-
+        await createListWithColor(driver, 'My personal list 3', 8); // 11ème couleur (index 10)
+        print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));
         await driver.tap(find.byValueKey('button_add_voc_4'));
-
+        print("  - Retour à l'écran d'accueil des listes");
         await tapBackButton(driver);
-
-        print('find button_create_list');
-        await driver.tap(find.byValueKey('button_create_list'));
-        print('ok button_create_list');
-        await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await driver.tap(find.byValueKey('title_perso_field'));
-        await driver.enterText('My personal list 4');
-
-
-        await driver.tap(find.byValueKey('button_valide_step_perso'));
-        await driver.waitFor(find.byValueKey('perso_list_step2'));
-
-
-        await driver.tap(find.byValueKey('button_add_voc_1'));
-        await driver.tap(find.byValueKey('button_add_voc_2'));
-        await driver.tap(find.byValueKey('button_add_voc_4'));
-
-        await tapBackButton(driver);
-
 
         await driver.waitFor(find.byValueKey('home_logged'));
         await takeScreenshot(driver, getNameFile('homepersolist'));
 
+        // --- [MODIFIÉ] Suppression des 3 listes créées ---
+        print('➡️ Suppression des 3 listes créées...');
+        final deleteButtonFinder = find.byValueKey('buttonDeletePerso1');
 
+        for (int i = 1; i <= 3; i++) {
+          print('  - Suppression de la liste $i/3...');
+          // Cette logique suppose que le bouton de suppression de la première liste
+          // visible a toujours la clé 'buttonDeletePerso1'.
+          await driver.waitFor(deleteButtonFinder);
+          await driver.tap(deleteButtonFinder);
+          // Délai pour laisser l'UI se mettre à jour.
+          await Future.delayed(const Duration(seconds: 2));
+        }
 
-
-        final deleteButtonFinder1 = find.byValueKey('buttonDeletePerso1');
-        await driver.waitFor(deleteButtonFinder1);
-        await driver.tap(deleteButtonFinder1);
-        await Future.delayed(Duration(seconds: 2));
-        final deleteButtonFinder2 = find.byValueKey('buttonDeletePerso1');
-        await driver.waitFor(deleteButtonFinder2);
-        await driver.tap(deleteButtonFinder2);
-        await Future.delayed(Duration(seconds: 2));
-        final deleteButtonFinder3 = find.byValueKey('buttonDeletePerso1');
-        await driver.waitFor(deleteButtonFinder3);
-        await driver.tap(deleteButtonFinder3);
-        await Future.delayed(Duration(seconds: 2));
-        final deleteButtonFinder4 = find.byValueKey('buttonDeletePerso1');
-        await driver.waitFor(deleteButtonFinder4);
-        await driver.tap(deleteButtonFinder4);
-
-
-
-
-
-
+        // --- Suite du test original ---
 
         // Learn
         await driver.tap(find.byValueKey('buttonLearntop20'));
@@ -262,20 +249,6 @@ void main() {
         await driver.waitFor(find.byValueKey('screenQuizz'));
         await takeScreenshot(driver, getNameFile('quizz'));
 
-
-/*
-        print('find open_drawer_voczilla');
-        await driver.tap(find.byValueKey('open_drawer_voczilla'));
-        print('ok open_drawer_voczilla');
-
-        print('find link_subscription');
-        await driver.tap(find.byValueKey('link_subscription'));
-        print('ok link_subscription');
-
-        await driver.waitFor(find.byValueKey('screenSubscription'));
-        await takeScreenshot(driver, getNameFile('scrSeenSubscription'));
-*/
-
         print('find open_drawer_voczilla');
         await driver.tap(find.byValueKey('open_drawer_voczilla'));
         print('ok open_drawer_voczilla');
@@ -284,12 +257,9 @@ void main() {
         await driver.tap(find.byValueKey('link_logout'));
         print('ok link_logout');
 
-
-
-
         print('✅ Fin des screenshots');
       },
-      timeout: const Timeout(Duration(minutes: 3)),
+      timeout: const Timeout(Duration(minutes: 5)), // Augmentation du timeout pour les tests plus longs
     );
   });
 }

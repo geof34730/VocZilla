@@ -132,7 +132,7 @@ platform :all do
 
     # Buckets Play Store
     android_folders = [
-      "FeatureGraphic",
+     # "FeatureGraphic",
       "phoneScreenshots",
       "sevenInchScreenshots",
       "tenInchScreenshots"

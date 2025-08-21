@@ -36,8 +36,13 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
       setState(() => _isLoading = true);
       try {
         // 1. Récupérer l'identifiant de l'appareil
-        final deviceId = await getPlatformDeviceId();
-
+        String? deviceId;
+        if(testScreenShot) {
+           deviceId= "DeviceTest-546684643131";
+        }
+        else{
+          deviceId = await getPlatformDeviceId();
+        }
         if (deviceId == null) {
           throw Exception("Impossible de récupérer un identifiant valide pour l'appareil.");
         }

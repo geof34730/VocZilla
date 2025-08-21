@@ -46,8 +46,6 @@ class Layout extends StatefulWidget {
 }
 
 class _LayoutState extends State<Layout> {
-  // BONNE PRATIQUE: La clé est créée une seule fois et conservée par l'état.
-  // Elle n'est plus recréée à chaque build.
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
