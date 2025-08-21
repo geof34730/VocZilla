@@ -1,24 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:uuid/uuid.dart';
 import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/data/models/vocabulary_user.dart';
-import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
-import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
-import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_event.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
-import '../../../logic/notifiers/button_notifier.dart';
-import '../../widget/elements/PlaySoond.dart';
+import '../../widget/elements/Error.dart';
 import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 
 class PersonnalisationStep2Screen extends StatefulWidget {
@@ -36,18 +28,75 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
   late int sortColumnIndex;
   GlobalKey<PaginatedDataTableState> tableKey = GlobalKey();
   TextEditingController searchController = TextEditingController();
-  final _vocabulaireRepository=VocabulaireRepository();
+  final _vocabulaireRepository = VocabulaireRepository();
+  final Set<String> _processingGuids = {};
+  VocabulairesLoaded? _lastLoadedState;
+
+  void _toggleVocabulary(Map<String, dynamic> vocabulaire, bool dataToLearn) {
+    final String guid = vocabulaire['GUID'];
+    if (_processingGuids.contains(guid)) {
+      return; // Avoid multiple clicks if already processing
+    }
+
+    setState(() {
+      _processingGuids.add(guid);
+    });
+
+    final bool isSelected = vocabulaire['isSelectedInListPerso'];
+
+    if (isSelected) {
+      Logger.Green.log("DELETE: ${guid}");
+      BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteVocabulaireListPerso(guidListPerso: widget.guidListPerso, guidVocabulaire: guid));
+    } else {
+      Logger.Green.log("ADD: ${guid}");
+      BlocProvider.of<VocabulaireUserBloc>(context).add(AddVocabulaireListPerso(guidListPerso: widget.guidListPerso, guidVocabulaire: guid));
+    }
+    // We wrap this in a Future to ensure that the setState from above has time to update the UI
+    // and show the loader before the list starts refreshing. This prevents a race condition.
+    Future(() => BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(dataToLearn, widget.guidListPerso)));
+  }
 
   @override
   Widget build(BuildContext context) {
-    String guidListPerso=widget.guidListPerso;
+    String guidListPerso = widget.guidListPerso;
     final langCode = LanguageUtils.getSmallCodeLanguage(context: context);
-    return BlocBuilder<VocabulairesBloc, VocabulairesState>(
-      builder: (context, state) {
-        if (state is VocabulairesLoading) {
-          return Center(child: CircularProgressIndicator());
-        } else if (state is VocabulairesLoaded) {
-          var data = (state.data.vocabulaireList)
+
+    return BlocListener<VocabulairesBloc, VocabulairesState>(
+      listener: (context, state) {
+        if (state is VocabulairesLoaded) {
+          _lastLoadedState = state;
+          if (_processingGuids.isNotEmpty) {
+            setState(() {
+              _processingGuids.clear();
+            });
+          }
+        } else if (state is VocabulairesError) {
+          // When an error occurs (e.g., during a refresh), clear the processing indicators
+          // so the user can try again, and show an error message.
+          if (_processingGuids.isNotEmpty) {
+            setState(() {
+              _processingGuids.clear();
+            });
+          }
+          ErrorMessage(context: context, message: context.loc.error_loading);
+        }
+      },
+      child: BlocBuilder<VocabulairesBloc, VocabulairesState>(
+        builder: (context, state) {
+          if (state is VocabulairesLoading && _lastLoadedState == null) {
+            return Center(child: CircularProgressIndicator());
+          }
+
+          final dataState = state is VocabulairesLoaded ? state : _lastLoadedState;
+
+          if (dataState == null) {
+            if (state is VocabulairesError) {
+              return Center(child: Text(context.loc.error_loading));
+            }
+            return Center(child: Text(context.loc.unknown_error)); // fallback
+          }
+
+          var data = (dataState.data.vocabulaireList)
               .map((item) => item as Map<String, dynamic>)
               .toList();
           if (searchQuery.isNotEmpty) {
@@ -62,18 +111,26 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
           }
           final dataSource = data.isEmpty
               ? EmptyDataSource(context: context)
-              : VocabularyDataSource(data: data, context: context,guidListPerso: guidListPerso,dataToLearn:state.data.isVocabularyNotLearned,langCode: langCode);
+              : VocabularyDataSource(
+                  data: data,
+                  context: context,
+                  guidListPerso: guidListPerso,
+                  dataToLearn: dataState.data.isVocabularyNotLearned,
+                  langCode: langCode,
+                  processingGuids: _processingGuids,
+                  onToggle: _toggleVocabulary,
+                );
           int rowsPerPage = data.isEmpty ? 1 : (data.length < 10 ? data.length : 10);
-          bool isNotLearned = state.data.isVocabularyNotLearned;
+          bool isNotLearned = dataState.data.isVocabularyNotLearned;
           int _vocabulaireConnu = isNotLearned ? 0 : 1;
           return Column(
             key: ValueKey('perso_list_step2'),
             children: [
               RadioChoiceVocabularyLearnedOrNot(
-                  state: state,
-                  vocabulaireConnu: _vocabulaireConnu,
-                  vocabulaireRepository: _vocabulaireRepository,
-                  guidListPerso: guidListPerso,
+                state: dataState,
+                vocabulaireConnu: _vocabulaireConnu,
+                vocabulaireRepository: _vocabulaireRepository,
+                guidListPerso: guidListPerso,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -84,15 +141,15 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
                     border: OutlineInputBorder(),
                     suffixIcon: searchQuery.isNotEmpty
                         ? IconButton(
-                      icon: Icon(Icons.cancel, color: Colors.red,),
-                      onPressed: () {
-                        setState(() {
-                          searchQuery = '';
-                          searchController.clear();
-                          tableKey = GlobalKey();
-                        });
-                      },
-                    )
+                            icon: Icon(Icons.cancel, color: Colors.red),
+                            onPressed: () {
+                              setState(() {
+                                searchQuery = '';
+                                searchController.clear();
+                                tableKey = GlobalKey();
+                              });
+                            },
+                          )
                         : null,
                   ),
                   onChanged: (value) {
@@ -104,82 +161,75 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
                   },
                 ),
               ),
-              // Use a fixed height for the table or wrap it in a ListView
               if (!data.isEmpty)
                 Container(
-                  // Set a fixed height
                   width: MediaQuery.of(context).size.width,
                   child: PaginatedDataTable(
                     key: tableKey,
                     columns: [
                       DataColumn(
                           onSort: (columnIndex, ascending) {},
-                          label: Flexible(child: Center(child: Text(context.loc.language_anglais,
+                          label: Flexible(
+                              child: Center(
+                                  child: Text(
+                            context.loc.language_anglais,
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Roboto',
                             ),
                             textAlign: TextAlign.center,
-                          )))
-                      ),
+                          )))),
                       DataColumn(
                           onSort: (columnIndex, ascending) {},
-                          label: Flexible(child: Center(child: Text(context.loc.language_locale,
+                          label: Flexible(
+                              child: Center(
+                                  child: Text(
+                            context.loc.language_locale,
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Roboto',
                             ),
                             textAlign: TextAlign.center,
-                          )))
-                      ),
+                          )))),
                       DataColumn(
-                          label: Flexible(child: Center(child: Text("",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Roboto',
-                            ),
-                            textAlign: TextAlign.center,
-                          )))
-                      ),
+                          label: Flexible(
+                              child: Center(
+                                  child: Text(
+                        "",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Roboto',
+                        ),
+                        textAlign: TextAlign.center,
+                      )))),
                     ],
                     source: dataSource,
-                    rowsPerPage: rowsPerPage,  // Nombre de lignes par page
+                    rowsPerPage: rowsPerPage,
                     columnSpacing: 20,
                     horizontalMargin: 10,
-                    // headingRowColor: WidgetStateProperty.all(AppColors.cardBackground),
                   ),
                 )
               else
                 Container(
-                  // Set a fixed height
                   width: MediaQuery.of(context).size.width,
                   child: PaginatedDataTable(
                     key: tableKey,
                     columns: [
-                      DataColumn(
-                          onSort: (columnIndex, ascending) {},
-                          label: Text('')
-                      ),
+                      DataColumn(onSort: (columnIndex, ascending) {}, label: Text('')),
                     ],
                     source: dataSource,
-                    rowsPerPage: rowsPerPage,  // Nombre de lignes par page
+                    rowsPerPage: rowsPerPage,
                     columnSpacing: 0,
                     horizontalMargin: 10,
-                    // headingRowColor: WidgetStateProperty.all(AppColors.cardBackground),
                   ),
                 ),
-              ]
-
+            ],
           );
-        } else if (state is VocabulairesError) {
-          return Center(child: Text(context.loc.error_loading));
-        } else {
-          return Center(child: Text(context.loc.unknown_error)); // fallback
-        }
-      },
+        },
+      ),
     );
   }
 }
@@ -191,8 +241,17 @@ class VocabularyDataSource extends DataTableSource {
   final bool dataToLearn;
   final String langCode;
 
-  VocabularyDataSource({required this.data, required this.context, required this.guidListPerso, required this.dataToLearn, required this.langCode});
+  final Set<String> processingGuids;
+  final Function(Map<String, dynamic>, bool) onToggle;
 
+  VocabularyDataSource(
+      {required this.data,
+      required this.context,
+      required this.guidListPerso,
+      required this.dataToLearn,
+      required this.langCode,
+      required this.processingGuids,
+      required this.onToggle});
   @override
   DataRow getRow(int index) {
     assert(index >= 0);
@@ -202,6 +261,7 @@ class VocabularyDataSource extends DataTableSource {
 
     final vocabulaire = data[index];
     Color colorRow = index.isEven ? Colors.white : Color.fromRGBO(192, 192, 192, 1.0);
+    final bool isLoading = processingGuids.contains(vocabulaire['GUID']);
     return DataRow.byIndex(
       index: index,
       color: WidgetStateProperty.all(colorRow),
@@ -246,23 +306,23 @@ class VocabularyDataSource extends DataTableSource {
                       radius: 30,
                       backgroundColor:  vocabulaire['isSelectedInListPerso'] ? Colors.red : Colors.green,
                       child: IconButton(
-                        //key: UniqueKey(),
                         key: ValueKey('button_add_voc_$index'),
-                        icon: Icon(
-                          vocabulaire['isSelectedInListPerso'] ? Icons.delete: Icons.add,
-                          color: Colors.white,
-                        ),
-                        onPressed: () {
-                          if(vocabulaire['isSelectedInListPerso']){
-                            Logger.Green.log("DELETE: ${vocabulaire['GUID']}");
-                            BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteVocabulaireListPerso(guidListPerso: guidListPerso, guidVocabulaire: vocabulaire['GUID']));
-                          }
-                          else{
-                            Logger.Green.log("ADD: ${vocabulaire['GUID']}");
-                            BlocProvider.of<VocabulaireUserBloc>(context).add(AddVocabulaireListPerso(guidListPerso: guidListPerso, guidVocabulaire: vocabulaire['GUID']));
-                          }
-                          BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(dataToLearn,guidListPerso));
-                        },
+                        icon: isLoading
+                            ? const SizedBox(
+                                width: 24,
+                                height: 24,
+                                child: CircularProgressIndicator(
+                                  color: Colors.white,
+                                  strokeWidth: 2.0,
+                                ),
+                              )
+                            : Icon(
+                                vocabulaire['isSelectedInListPerso']
+                                    ? Icons.delete
+                                    : Icons.add,
+                                color: Colors.white,
+                              ),
+                        onPressed: isLoading ? null : () => onToggle(vocabulaire, dataToLearn),
                       ),
                     ),
                  )

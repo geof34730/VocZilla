@@ -83,6 +83,7 @@ void main() {
         FlutterDriver driver,
         String title,
         int colorSwatchIndex,
+        bool shootStep1
         ) async {
       print("  - Saisie du titre : $title");
       await driver.tap(find.byValueKey('title_perso_field'));
@@ -97,7 +98,9 @@ void main() {
       final colorFinder = find.byValueKey(colorKey);
       await driver.waitFor(colorFinder);
       await driver.tap(colorFinder);
-      await takeScreenshot(driver, getNameFile('personallist_step1'));
+      if (shootStep1) {
+        await takeScreenshot(driver, getNameFile('personallist_step1'));
+      }
       print("  - Clic sur 'Suivant' pour passer à l'étape 2");
       await driver.tap(find.byValueKey('button_valide_step_perso'));
 
@@ -175,7 +178,7 @@ void main() {
         print('➡️ Création de "My personal list 1" avec la première couleur...');
         await driver.tap(find.byValueKey('buttonAddList'));
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await createListWithColor(driver, 'My personal list 1', 3); // 1ère couleur (index 0)
+        await createListWithColor(driver, 'My personal list 1', 3, true); // 1ère couleur (index 0)
         await driver.waitFor(find.byValueKey('perso_list_step2'));
         print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
@@ -192,7 +195,7 @@ void main() {
         print('➡️ Création de "My personal list 2" avec une couleur différente...');
         await driver.tap(find.byValueKey('button_create_list'));
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await createListWithColor(driver, 'My personal list 2', 6);
+        await createListWithColor(driver, 'My personal list 2', 6,false);
         print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));
@@ -205,7 +208,7 @@ void main() {
         print('➡️ Création de "My personal list 3" avec une autre couleur...');
         await driver.tap(find.byValueKey('button_create_list'));
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await createListWithColor(driver, 'My personal list 3', 8); // 11ème couleur (index 10)
+        await createListWithColor(driver, 'My personal list 3', 8,false); // 11ème couleur (index 10)
         print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));

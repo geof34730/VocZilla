@@ -66,21 +66,21 @@ class CardClassementGamer extends StatelessWidget {
           color: Colors.green,
           child: ListTile(
             leading: SizedBox(
-              width: 40,
-              child: Center( // Simplifié pour un meilleur centrage
+              width: 60,
+              // Simplifié pour un meilleur centrage
                 child: AutoSizeText(
                   position.toString(),
                   style: getFontForLanguage(
                     codelang: Localizations.localeOf(context).languageCode,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
                   ).copyWith(
                     color: Colors.white,
                     decoration: TextDecoration.none,
                   ),
                   maxLines: 1,
                   minFontSize: 10,
-                ),
+
               ),
             ),
             title: Column(
@@ -137,93 +137,127 @@ class CardClassementGamer extends StatelessWidget {
   }
 
   // Le reste de votre code (getLinearPercentIndicator, getPositionLeftCursor) reste inchangé
-  dynamic getLinearPercentIndicator({required double percentage, required double width, required BuildContext context}) {
+  Widget getLinearPercentIndicator({required double percentage, required double width, required BuildContext context}) {
+    final clampedPercentage = percentage.clamp(0.0, 1.0);
+    final bool isRtl = Directionality.of(context) == TextDirection.rtl;
 
-    const Set<String> _rtlLangs = {'ar', 'fa', 'he', 'ur'};
+    // Le texte du pourcentage doit s'aligner en s'éloignant du logo.
+    // La disposition du texte (gauche/droite) change en fonction du pourcentage.
+    final textAlignForBigPercentage = isRtl ? TextAlign.left : TextAlign.right;
+    final textAlignForSmallPercentage = isRtl ? TextAlign.right : TextAlign.left;
 
-    bool _isRtlFromAppLocale(BuildContext context) {
-      final code = Localizations.localeOf(context).languageCode.toLowerCase();
-      return _rtlLangs.contains(code);
-    }
-    final bool isRtl = _isRtlFromAppLocale(context);
-
-    return Center(
+    return SizedBox(
+        height: 70.0, // Pour permettre au logo de déborder verticalement
         child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              width: width,
-              height: 20.0,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0), color: Colors.grey),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(5.0),
-                child: MultiSegmentLinearIndicator(
-                  padding: EdgeInsets.zero,
-                  width: double.infinity,
-                  lineHeight: 20.0,
-                  segments: [
-                    if(isRtl)
-                     SegmentLinearIndicator(
-                        percent: 1.0 - max(0.08, percentage),
-                        color: Colors.orange,
-                      ),
-                    SegmentLinearIndicator(
-                      percent: max(0.08, percentage),
-                      color: Colors.white,
-                      enableStripes: true,
-                    ),
-                    if(!isRtl)
+            alignment: Alignment.center,
+            clipBehavior: Clip.none, // Permet au logo de déborder sans être coupé
+            children: [
+              Container(
+                width: width,
+                height: 20.0,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.0), color: Colors.grey),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5.0),
+                  child: MultiSegmentLinearIndicator(
+                    padding: EdgeInsets.zero,
+                    lineHeight: 20.0,
+                    segments: [
+                      if (isRtl)
+                        SegmentLinearIndicator(
+                          percent: 1.0 - clampedPercentage,
+                          color: Colors.orange,
+                        ),
                       SegmentLinearIndicator(
-                        percent: 1.0 - max(0.08, percentage),
-                        color: Colors.orange,
+                        percent: clampedPercentage,
+                        color: Colors.white,
+                        enableStripes: true,
                       ),
-                  ],
-                  barRadius: const Radius.circular(5.0),
+                      if (!isRtl)
+                        SegmentLinearIndicator(
+                          percent: 1.0 - clampedPercentage,
+                          color: Colors.orange,
+                        ),
+                    ],
+                    barRadius: const Radius.circular(5.0),
+                  ),
                 ),
               ),
-            ),
-            Padding(
-                padding: EdgeInsets.only(
-                    left: getPositionLeftCursor(
-                        percentage: percentage, width: width)),
+              Positioned(
+                left: getPositionLeftCursor(
+                  percentage: clampedPercentage,
+                  width: width,
+                  isRtl: isRtl,
+                ),
                 child: Row(
+                  mainAxisSize: MainAxisSize.min, // Important pour que la Row ne prenne que la place nécessaire
                   children: [
-                    if (percentage > 0.2) ...[
+                    if (clampedPercentage > 0.2) ...[
                       SizedBox(
                         width: 60,
                         child: Text(
-                            "${(percentage * 100).toStringAsFixed(1)}%",
-                            textAlign: TextAlign.right,
-                            style: const TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            )),
-                      )
+                          "${(clampedPercentage * 100).toStringAsFixed(1)}%",
+                          textAlign: textAlignForBigPercentage,
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 5),
                     ],
                     Image.asset(
                       "assets/brand/logo_landing.png",
                       width: 80,
                     ),
-                    if (percentage <= 0.2) ...[
-                      Text(
-                        "${(percentage * 100).toStringAsFixed(1)}%",
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                    if (clampedPercentage <= 0.2) ...[
+                      const SizedBox(width: 5),
+                      SizedBox(
+                        width: 60,
+                        child: Text(
+                          "${(clampedPercentage * 100).toStringAsFixed(1)}%",
+                          textAlign: textAlignForSmallPercentage,
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ]
+                    ],
                   ],
-                ))
-          ],
-        ));
+                ),
+              ),
+            ],
+          )
+    );
   }
 
-  double getPositionLeftCursor({required double percentage, required double width}) {
-    double position = width * percentage - (percentage > 0.2 ? 120 : 40);
-    return max(0, min(position, width - 140));
+  double getPositionLeftCursor({
+    required double percentage,
+    required double width,
+    required bool isRtl,
+  }) {
+    // Définir les dimensions et la disposition du curseur
+    const double textBlockWidth = 60.0 + 5.0;
+    const double imageWidth = 80.0;
+    const double cursorRowWidth = textBlockWidth + imageWidth;
+    const double halfImageWidth = imageWidth / 2;
+
+    // Déterminer la disposition de la Row en fonction du pourcentage pour trouver le centre du logo
+    // isLogoVisuallyFirst est vrai si le logo apparaît en premier (à gauche en LTR, à droite en RTL)
+    final bool isLogoVisuallyFirst = (isRtl && percentage > 0.2) || (!isRtl && percentage <= 0.2);
+    final double logoCenterOffsetInRow = isLogoVisuallyFirst ? halfImageWidth : textBlockWidth + halfImageWidth;
+
+    // Calculer le point de jonction idéal sur la barre
+    final double junctionPoint = isRtl ? width * (1 - percentage) : width * percentage;
+
+    // Calculer la position de départ idéale pour la Row pour centrer le logo sur la jonction
+    final double idealPosition = junctionPoint - logoCenterOffsetInRow;
+
+    // Pour que le centre du logo soit sur le point de jonction, la Row doit commencer à: position = point de jonction - décalage du centre du logo.
+    // On ne contraint plus la position pour permettre au logo de déborder.
+    return idealPosition;
   }
 }

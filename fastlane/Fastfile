@@ -22,6 +22,9 @@ platform :all do
         -e build \
         -e ios/Pods \
         -e android/.gradle \
+        -e .env \
+        -e voczilla-play.json \
+        -e firebase.json \
         -e android/app/google-services.json \
         -e ios/Runner/GoogleService-Info.plist || true")
   end
@@ -193,8 +196,9 @@ platform :all do
 
   desc "📷 Screenshots (iOS + Android) — orchestrateur"
   lane :screenshots do
-    screenshots_android
     screenshots_ios
+    screenshots_android
+
 
     # Nettoyage disque après exécution
     free = disk_free_gb(".")

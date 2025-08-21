@@ -28,86 +28,72 @@ class CardClassementUser extends StatelessWidget {
           final userProfile = state.userProfile;
           final String pseudo = userProfile.pseudo ?? '';
 
-          return Card(
-            color: Colors.deepPurple,
-            child: ListTile(
-              leading: userProfile.imageAvatar.isNotEmpty
-                  ? Container(
-                width: 80,
-                height: 80,
-                decoration: BoxDecoration(
-                  color: Colors.blue.shade700,
-                  shape: BoxShape.circle,
-                ),
-                clipBehavior: Clip.antiAlias,
-                child: Image.memory(
-                  base64Decode(userProfile.imageAvatar),
-                  fit: BoxFit.contain,
-                  errorBuilder: (context, error, stackTrace) {
-                    // Assuming 'Avatar' is a valid widget in your project.
-                    // The flutter_profile_picture package provides a 'ProfilePicture' widget.
-                    return Avatar(
-                      radius: 40,
-                      name: _getValidName(pseudo),
-                      fontsize: 30,
-                    );
-                  },
-                ),
-              )
-                  : Avatar(
-                radius: 40,
-                name: _getValidName(pseudo),
-                fontsize: 30,
-              ),
-              title: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
+          return SizedBox(
+            height: 127, // Vous pouvez ajuster cette valeur selon vos besoins.
+            child: Card(
+                color: Colors.deepPurple,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                  child: Row(
                     children: [
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Center(
-                          child: AutoSizeText(
-                            // Consider using your localization helper here.
-                            // e.g., context.loc.your_position
-                            context.loc.your_position,
-                            style: getFontForLanguage(
-                              codelang:
-                              Localizations.localeOf(context).languageCode,
-                              fontSize: 20,
-                            ).copyWith(
-                              color: Colors.white,
+                      // --- Avatar on the left ---
+                      userProfile.imageAvatar.isNotEmpty
+                          ? Container(
+                              width: 80,
+                              height: 80,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.memory(
+                                base64Decode(userProfile.imageAvatar),
+                                fit: BoxFit.cover,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return Avatar(
+                                    radius: 40,
+                                    name: _getValidName(pseudo),
+                                    fontsize: 30,
+                                  );
+                                },
+                              ),
+                            )
+                          : Avatar(
+                              radius: 40,
+                              name: _getValidName(pseudo),
+                              fontsize: 30,
                             ),
-                            maxLines: 1,
-                            minFontSize: 12,
-                          ),
+                      const SizedBox(width: 16),
+                      // --- Text content on the right ---
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            AutoSizeText(
+                              context.loc.your_position,
+                              style: getFontForLanguage(
+                                codelang: Localizations.localeOf(context).languageCode,
+                                fontSize: 20,
+                              ).copyWith(color: Colors.white),
+                              maxLines: 1,
+                              minFontSize: 12,
+                            ),
+                            const SizedBox(height: 4),
+                            AutoSizeText(
+                              position.toString(),
+                              style: getFontForLanguage(
+                                codelang: Localizations.localeOf(context).languageCode,
+                                fontSize: 30,
+                              ).copyWith(color: Colors.white),
+                              maxLines: 1,
+                              minFontSize: 20,
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 3),
-                    // The Expanded widget that caused the error has been removed.
-                    child: Center(
-                      child: AutoSizeText(
-                        position.toString(),
-                        style: getFontForLanguage(
-                          codelang:
-                          Localizations.localeOf(context).languageCode,
-                          fontSize: 30,
-                        ).copyWith(
-                          color: Colors.white,
-                        ),
-                        maxLines: 1,
-                        minFontSize: 30,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                )),
           );
         }
 

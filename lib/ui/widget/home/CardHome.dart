@@ -96,22 +96,28 @@ class CardHome extends StatelessWidget {
       color: backgroundColor,
       child: Column(
         children: [
-          Text(
-            title.toUpperCase(),
-            textAlign: TextAlign.center,
-            style: getFontForLanguage(
-              codelang: Localizations.localeOf(context).languageCode,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              // Tu peux ajouter fontWeight si besoin
-            ).copyWith(
-              color: backgroundColor == Colors.white ? Colors.black : Colors.white,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Text(
+              title.toUpperCase(),
+              textAlign: TextAlign.center,
+              maxLines: 1,
+              softWrap: false,
+              overflow: TextOverflow.ellipsis,
+              style: getFontForLanguage(
+                codelang: Localizations.localeOf(context).languageCode,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                // Tu peux ajouter fontWeight si besoin
+              ).copyWith(
+                color: backgroundColor == Colors.white ? Colors.black : Colors.white,
+              ),
             ),
           ),
 
          if(nbVocabulaire==0 && isListPerso)...[
            Container(
-             height: 72,
+             height: 80,
              padding: EdgeInsets.only(left:5, right:5),
              child: Column(
                mainAxisAlignment: MainAxisAlignment.center,
@@ -122,6 +128,8 @@ class CardHome extends StatelessWidget {
                      color: Colors.white,
                    ),
                    textAlign: TextAlign.center,
+                   maxLines: 2,
+                   overflow: TextOverflow.ellipsis,
                  ),
                ],
              ),

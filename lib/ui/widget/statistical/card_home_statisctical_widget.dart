@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
-import '../../../core/utils/logger.dart';
+
 import '../../../data/models/statistical_length.dart';
-import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
+import '../elements/Error.dart';
 
 class CardHomeStatisticalWidget extends StatefulWidget {
-
-  final dynamic barColorProgress;
-  final dynamic barColorLeft;
-  final dynamic paddingLevelBar;
+  final Color barColorProgress;
+  final Color barColorLeft;
+  final EdgeInsetsGeometry paddingLevelBar;
   final double widthWidget;
   final dynamic list;
   final bool isListPerso;
@@ -21,7 +19,8 @@ class CardHomeStatisticalWidget extends StatefulWidget {
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
 
-  const CardHomeStatisticalWidget({super.key,
+  const CardHomeStatisticalWidget({
+    super.key,
     required this.barColorProgress,
     required this.barColorLeft,
     required this.paddingLevelBar,
@@ -30,122 +29,164 @@ class CardHomeStatisticalWidget extends StatefulWidget {
     required this.isListPerso,
     required this.isListTheme,
     this.vocabulaireBegin,
-    this.vocabulaireEnd
+    this.vocabulaireEnd,
   });
 
   @override
-  _CardHomeStatisticalWidgetState createState() => _CardHomeStatisticalWidgetState();
+  State<CardHomeStatisticalWidget> createState() => _CardHomeStatisticalWidgetState();
 }
 
 class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
+  Future<StatisticalLength>? _statisticalFuture;
+  StatisticalLength? _lastStatisticalData;
+
+  @override
+  void initState() {
+    super.initState();
+    // Lance le premier chargement si les données utilisateur sont déjà prêtes.
+    if (context.read<VocabulaireUserBloc>().state is VocabulaireUserLoaded) {
+      _fetchStatisticalData();
+    }
+  }
+
+  @override
+  void didUpdateWidget(CardHomeStatisticalWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Rafraîchit les données si les paramètres du widget ont changé.
+    if (widget.list != oldWidget.list ||
+        widget.isListPerso != oldWidget.isListPerso ||
+        widget.isListTheme != oldWidget.isListTheme ||
+        widget.vocabulaireBegin != oldWidget.vocabulaireBegin ||
+        widget.vocabulaireEnd != oldWidget.vocabulaireEnd) {
+      _fetchStatisticalData();
+    }
+  }
+
+  void _fetchStatisticalData() {
+    // Mémorise le Future pour ne pas le recréer à chaque build.
+    // On utilise setState pour que le FutureBuilder réagisse au nouveau Future.
+    setState(() {
+      if (widget.isListPerso || widget.isListTheme) {
+        _statisticalFuture = VocabulaireUserRepository().getVocabulaireListDataStatisticalLengthData(
+          list: widget.list,
+          isListPerso: widget.isListPerso,
+          isListTheme: widget.isListTheme,
+        );
+      } else {
+        _statisticalFuture = VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
+          vocabulaireBegin: widget.vocabulaireBegin,
+          vocabulaireEnd: widget.vocabulaireEnd,
+          isListPerso: widget.isListPerso,
+          isListTheme: widget.isListTheme,
+        );
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
+    return BlocConsumer<VocabulaireUserBloc, VocabulaireUserState>(
+      listener: (context, state) {
+        // Réagit aux changements des données utilisateur pour rafraîchir les stats.
+        if (state is VocabulaireUserLoaded) {
+          _fetchStatisticalData();
+        }
+      },
       builder: (context, state) {
-        if (state is VocabulaireUserLoaded ) {
-          return FutureBuilder(
-            future: widget.isListPerso || widget.isListTheme
-              ?
-                VocabulaireUserRepository().getVocabulaireListDataStatisticalLengthData(
-                    list: widget.list,
-                    isListPerso : widget.isListPerso,
-                    isListTheme : widget.isListTheme,
-                  )
-              :
-                VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
-                  vocabulaireBegin: widget.vocabulaireBegin,
-                  vocabulaireEnd: widget.vocabulaireEnd,
-                  isListPerso : widget.isListPerso,
-                  isListTheme : widget.isListTheme,
-                )
-            ,
+        // Affiche la barre de progression même si les données ne sont pas encore chargées.
+        if (state is VocabulaireUserLoaded) {
+          return FutureBuilder<StatisticalLength>(
+            future: _statisticalFuture,
             builder: (context, userDataSnapshot) {
-              if (userDataSnapshot.connectionState == ConnectionState.waiting) {
-                return CircularProgressIndicator(); // Show a loading indicator while waiting
-              } else if (userDataSnapshot.hasError) {
-
-                Logger.Red.log(userDataSnapshot);
-                return Text('Erreur affichage Statistique 1'); // Handle error
-              } else if (userDataSnapshot.hasData) {
-                StatisticalLength? statisticalData = userDataSnapshot.data;
-                double percentageProgression = ((statisticalData!.vocabLearnedCount / statisticalData.countVocabulaireAll));
-                return getLinearPercentIndicator(percentage: percentageProgression);
-              } else {
-                return getLinearPercentIndicator(percentage: 0);
+              // Met en cache les dernières données valides.
+              if (userDataSnapshot.hasData) {
+                _lastStatisticalData = userDataSnapshot.data;
               }
+
+              // Gère l'erreur de manière non bloquante.
+              if (userDataSnapshot.hasError && _lastStatisticalData == null) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  ErrorMessage(context: context, message: 'Erreur de statistique: ${userDataSnapshot.error}');
+                });
+              }
+
+              // Calcule le pourcentage à afficher en se basant sur les données en cache.
+              double percentageProgression = 0.0;
+              if (_lastStatisticalData != null) {
+                final statisticalData = _lastStatisticalData!;
+                if (statisticalData.countVocabulaireAll > 0) {
+                  percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
+                }
+              }
+
+              // Construit toujours l'indicateur, ce qui évite les sauts d'interface.
+              return _buildIndicator(percentage: percentageProgression);
             },
           );
-        } else {
-          if (state is VocabulaireUserEmpty) {
-            return getLinearPercentIndicator(percentage: 0);
-          }
-          else {
-            return const Text('Erreur affichage Statistique 2');
-          }
         }
+
+        // Si les données utilisateur sont vides ou pas encore chargées,
+        // affiche la barre de progression à 0%.
+        if (state is VocabulaireUserEmpty) {
+          _lastStatisticalData = null; // Vide le cache
+        }
+        return _buildIndicator(percentage: 0);
       },
     );
   }
 
-  dynamic getLinearPercentIndicator({required double percentage}){
-    const Set<String> _rtlLangs = {'ar', 'fa', 'he', 'ur'};
+  /// Construit l'indicateur de progression linéaire.
+  Widget _buildIndicator({required double percentage}) {
+    final clampedPercentage = percentage.clamp(0.0, 1.0);
+    final bool isRtl = Directionality.of(context) == TextDirection.rtl;
 
-    bool _isRtlFromAppLocale(BuildContext context) {
-      final code = Localizations.localeOf(context).languageCode.toLowerCase();
-      return _rtlLangs.contains(code);
-    }
-    final bool isRtl = _isRtlFromAppLocale(context);
     return Center(
-        child:Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              width:  double.infinity,
-              height: 14.0,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 0.5),
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(5.0),
-                child: MultiSegmentLinearIndicator(
-                  padding: EdgeInsets.zero,
-                  width: double.infinity,
-                  lineHeight: 15.0,
-                  segments: [
-                    if(isRtl)
-                      SegmentLinearIndicator(
-                        percent: 1.0 - percentage,
-                        color: widget.barColorLeft,
-                      ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            width: double.infinity,
+            height: 14.0,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 0.5),
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5.0),
+              child: MultiSegmentLinearIndicator(
+                padding: EdgeInsets.zero,
+                lineHeight: 15.0,
+                segments: [
+                  if (isRtl)
                     SegmentLinearIndicator(
-                      percent: percentage,
-                      color: widget.barColorProgress,
-                      enableStripes: true,
+                      percent: 1.0 - clampedPercentage,
+                      color: widget.barColorLeft,
                     ),
-                    if(!isRtl)
-                      SegmentLinearIndicator(
-                        percent: 1.0 - percentage,
-                        color: widget.barColorLeft,
-                      ),
-                  ],
-                  barRadius: Radius.circular(5.0),
-                ),
+                  SegmentLinearIndicator(
+                    percent: clampedPercentage,
+                    color: widget.barColorProgress,
+                    enableStripes: true,
+                  ),
+                  if (!isRtl)
+                    SegmentLinearIndicator(
+                      percent: 1.0 - clampedPercentage,
+                      color: widget.barColorLeft,
+                    ),
+                ],
+                barRadius: const Radius.circular(5.0),
               ),
             ),
-            Text(
-              "${(percentage * 100).toStringAsFixed(1)}%",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 10,
-                fontWeight: FontWeight.bold,
-              ),
+          ),
+          Text(
+            "${(clampedPercentage * 100).toStringAsFixed(1)}%",
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 10,
+              fontWeight: FontWeight.bold,
             ),
-          ],
-        )
-
+          ),
+        ],
+      ),
     );
   }
-
-
 }

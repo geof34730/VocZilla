@@ -24,17 +24,12 @@ class HomeLogoutScreen extends StatefulWidget {
 }
 
 class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
-  @override
-  Widget build(BuildContext context) {
-    print("*************************** $forFeatureGraphic **************************");
-    final codelang = Localizations.localeOf(context).languageCode;
-    final baseStyle = Theme.of(context).textTheme.bodyMedium;
-    bool _isLoading = false;
+  bool _isLoading = false;
 
-    Future<void> _signInAsGuest() async {
-      if (_isLoading) return;
-      setState(() => _isLoading = true);
-      try {
+  Future<void> _signInAsGuest() async {
+    if (_isLoading) return;
+    setState(() => _isLoading = true);
+    try {
         // 1. Récupérer l'identifiant de l'appareil
         String? deviceId;
         if(testScreenShot) {
@@ -85,7 +80,13 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
       } finally {
         if (mounted) setState(() => _isLoading = false);
       }
-    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print("*************************** $forFeatureGraphic **************************");
+    final codelang = Localizations.localeOf(context).languageCode;
+    final baseStyle = Theme.of(context).textTheme.bodyMedium;
     return Scaffold(
       body: BackgroundBlueLinear(
         child: Center(
@@ -172,7 +173,7 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
                 const SizedBox(height: 15),
                 ElevatedButton(
                   key: ValueKey('link_home_login'),
-                  onPressed: _signInAsGuest,
+                  onPressed: _isLoading ? null : _signInAsGuest,
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                   ),
