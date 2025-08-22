@@ -1,7 +1,7 @@
 const String titleApp="VocZilla";
 const int titleAppCute1=3;
 String versionApp="1.0.0";
-const bool debugMode= false;
+const bool debugMode=false;
 const bool testScreenShot = true;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';

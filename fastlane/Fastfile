@@ -2,7 +2,6 @@
 default_platform(:all)
 
 platform :all do
-
   #########################################
   # ========== HELPERS GÉNÉRAUX ==========
   #########################################
@@ -53,13 +52,11 @@ platform :all do
   # =============== LANES ================
   #########################################
 
-  desc "📷 Screenshots iOS (simulateur) — build unique + config runtime (Option 3)"
-  lane :screenshots_ios do |options|
+  desc "📷 Screenshots iOS — build unique + config runtime + simulateur adapté par bucket"
+  lane :screenshots_ios do |_options|
     project_root    = File.expand_path("..", __dir__)
     shots_dir       = File.join(project_root, screenshots_dir)
     FileUtils.mkdir_p(shots_dir)
-
-    ios_udid = options[:udid] || "DFE799EA-B2F9-4EBA-BEC7-13970400A07E" # adapte si besoin
 
     clean_build!
     ensure_firebase_files_present!
@@ -68,12 +65,8 @@ platform :all do
     # Build iOS (target driver) si absent/incorrect (avec marqueur)
     ensure_ios_simulator_built_once!
 
-    # Boot du simulateur + désinstallation app (évite Runner sans Driver)
-    start_ios_simulator_by_udid(ios_udid)
-    uninstall_ios_app(ios_udid, ios_bundle_id)
-
     ios_folders = [
-      "iphone6_7_inch",
+      #"iphone6_7_inch",
       "iPad Pro (12.9-inch) (3rd generation)",
       "ipad_12_9_inch"
     ]
@@ -82,9 +75,13 @@ platform :all do
     UI.user_error!("❌ Aucune locale trouvée") if locales.empty?
 
     ios_folders.each do |dest_folder|
+      udid = ios_device_for_folder(dest_folder)
+      start_ios_simulator_by_udid(udid)
+      uninstall_ios_app(udid, ios_bundle_id)
+
       locales.each do |locale|
         purge_screenshots_dir!(shots_dir)
-        UI.message("📸 iOS — locale=#{locale}, dest=#{dest_folder}")
+        UI.message("📸 iOS — device=#{udid}, locale=#{locale}, dest=#{dest_folder}")
 
         env = "PLATFORM=ios LOCALE=#{locale} DESTFOLDER='#{dest_folder}' FOR_FEATURE_GRAPHIC=false"
         cmd = %Q{
@@ -94,13 +91,13 @@ platform :all do
             --target=test_driver/app.dart \
             --no-build \
             --use-application-binary="#{ios_sim_runner_app_path}" \
-            -d #{ios_udid} \
+            -d #{udid} \
             --screenshot="#{shots_dir}"
         }.strip
 
         ok = run_drive_with_retries!(cmd: cmd, retries: 2, locale: locale, dest_folder: dest_folder, shots_dir: shots_dir)
         unless ok
-          UI.important("⏭️ Skip #{locale}/#{dest_folder} après échecs.")
+          UI.important("⏭️ Skip iOS #{locale}/#{dest_folder} après échecs.")
           next
         end
 
@@ -118,7 +115,7 @@ platform :all do
     UI.success("✅ Screenshots iOS terminés")
   end
 
-  desc "📷 Screenshots Android — build unique + config runtime (Option 3) + réglage résolution (+ reboot par bucket)"
+  desc "📷 Screenshots Android — build unique + config runtime + réglage résolution (+ reboot par bucket)"
   lane :screenshots_android do |options|
     project_root    = File.expand_path("..", __dir__)
     shots_dir       = File.join(project_root, screenshots_dir)
@@ -133,9 +130,8 @@ platform :all do
     # Build Android (target driver) si absent/incorrect (avec marqueur)
     ensure_android_built_once!(:debug)
 
-    # Buckets Play Store
     android_folders = [
-     # "FeatureGraphic",
+      "FeatureGraphic",
       "phoneScreenshots",
       "sevenInchScreenshots",
       "tenInchScreenshots"
@@ -145,7 +141,7 @@ platform :all do
     UI.user_error!("❌ Aucune locale trouvée") if locales.empty?
 
     android_folders.each do |dest_folder|
-      # 🔄 Reboot propre de l'émulateur à chaque bucket pour la stabilité
+      # 🔄 Reboot propre de l'émulateur à chaque bucket pour la stabilité (deviceId restera emulator-5554)
       stop_emulator
       start_emulator_once(avd_name)
       emulator_id = get_running_emulator_id
@@ -156,7 +152,7 @@ platform :all do
       locales.each do |locale|
         purge_screenshots_dir!(shots_dir)
         is_feature = (dest_folder == "FeatureGraphic")
-        UI.message("📸 Android — locale=#{locale}, dest=#{dest_folder}")
+        UI.message("📸 Android — deviceId=#{emulator_id}, locale=#{locale}, dest=#{dest_folder}")
 
         env = "PLATFORM=android LOCALE=#{locale} DESTFOLDER='#{dest_folder}' FOR_FEATURE_GRAPHIC=#{is_feature}"
         cmd = %Q{
@@ -172,7 +168,7 @@ platform :all do
 
         ok = run_drive_with_retries!(cmd: cmd, retries: 2, locale: locale, dest_folder: dest_folder, shots_dir: shots_dir, emulator_id: emulator_id)
         unless ok
-          UI.important("⏭️ Skip #{locale}/#{dest_folder} après échecs.")
+          UI.important("⏭️ Skip Android #{locale}/#{dest_folder} après échecs.")
           next
         end
 
@@ -187,7 +183,6 @@ platform :all do
       end
 
       reset_emulator_resolution(emulator_id)
-      # on ne stoppe pas ici : il sera redémarré au prochain bucket
     end
 
     stop_emulator
@@ -198,7 +193,6 @@ platform :all do
   lane :screenshots do
     screenshots_ios
     screenshots_android
-
 
     # Nettoyage disque après exécution
     free = disk_free_gb(".")
@@ -223,6 +217,21 @@ end
 # ================= Helpers =================
 
 require "tmpdir"
+
+# ----- Mapping simulateurs iOS pour garder les bonnes tailles -----
+# Adapte ces UDID si tu veux cibler d'autres devices de ta liste.
+def ios_device_for_folder(dest_folder)
+  map = {
+    # iPhone 6.7" → iPhone 15 Pro Max (iOS 17.0)
+    #"iphone6_7_inch" => "DFE799EA-B2F9-4EBA-BEC7-13970400A07E",
+    # iPad 12.9" → iPad Pro (12.9-inch) (6th generation) (iOS 17.0)
+    "iPad Pro (12.9-inch) (3rd generation)" => "0F7B7680-E990-4724-9FF8-DF316C3D87CA",
+    "ipad_12_9_inch" => "0F7B7680-E990-4724-9FF8-DF316C3D87CA"
+  }
+  udid = map[dest_folder]
+  UI.user_error!("❌ Aucun simulateur iOS mappé pour '#{dest_folder}'") unless udid
+  udid
+end
 
 # ----- Wrapper retries (2) + logs + mitigations -----
 def run_drive_with_retries!(cmd:, retries:, locale:, dest_folder:, shots_dir:, emulator_id: nil)
@@ -368,6 +377,7 @@ end
 
 # ----- iOS Simulators -----
 def start_ios_simulator_by_udid(udid)
+  UI.user_error!("❌ UDID iOS vide") if udid.to_s.strip.empty?
   is_booted = sh(%Q{xcrun simctl list devices | grep -F "#{udid}"}, log: false).include?("(Booted)")
   sh("xcrun simctl boot #{udid}") unless is_booted
   sh("open -a Simulator --args -CurrentDeviceUDID #{udid} || true")
@@ -398,7 +408,7 @@ def start_emulator_once(avd_name)
   sh("adb start-server || true")
 
   emulator_cmd = [
-    File.join(ENV['ANDROID_HOME'], "emulator", "emulator"),
+    File.join(ENV['ANDROID_HOME'] || ENV['ANDROID_SDK_ROOT'], "emulator", "emulator"),
     "-avd", avd_name,
     "-no-snapshot-load",
     "-no-audio"
@@ -498,7 +508,9 @@ end
 def extract_locales
   project_root = File.expand_path("..", __dir__)
   arb_files = Dir[File.join(project_root, "lib/l10n/app_*.arb")]
-  locales = arb_files.map { |f| f.match(/app_(.+)\.arb$/)&.captures&.first }.compact.uniq
+  locales = arb_files.map { |f|
+    File.basename(f).match(/app_(.+)\.arb$/)&.captures&.first
+  }.compact.uniq
   UI.user_error!("❌ Aucune locale trouvée dans les fichiers ARB.") if locales.empty?
   locales
 end
@@ -539,7 +551,7 @@ def get_normalized_locale(locale, platform)
   map_script   = File.join(project_root, "fastlane/invoke_locale_mapper.dart")
   UI.user_error!("❌ Script de mapping de locale introuvable: #{map_script}") unless File.exist?(map_script)
 
-  normalized = sh("dart \"#{map_script}\" #{platform} #{locale}", log: false).strip
+  normalized = sh(%Q{dart "#{map_script}" #{platform} #{locale}}, log: false).strip
   return normalized.empty? ? nil : normalized
 end
 

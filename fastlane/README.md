@@ -29,7 +29,7 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane all screenshots_ios
 ```
 
-📷 Screenshots iOS (simulateur) — build unique + config runtime (Option 3)
+📷 Screenshots iOS — build unique + config runtime + simulateur adapté par bucket
 
 ### all screenshots_android
 
@@ -37,7 +37,7 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane all screenshots_android
 ```
 
-📷 Screenshots Android — build unique + config runtime (Option 3) + réglage résolution (+ reboot par bucket)
+📷 Screenshots Android — build unique + config runtime + réglage résolution (+ reboot par bucket)
 
 ### all screenshots
 
