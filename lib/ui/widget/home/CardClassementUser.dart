@@ -67,7 +67,7 @@ class CardClassementUser extends StatelessWidget {
                       const SizedBox(width: 16),
                       // --- Text content on the right ---
                       Expanded(
-                        child: Column(
+                        child: FittedBox(fit: BoxFit.scaleDown, child:Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -80,7 +80,6 @@ class CardClassementUser extends StatelessWidget {
                               maxLines: 1,
                               minFontSize: 12,
                             ),
-
                             AutoSizeText(
                               position.toString(),
                               style: getFontForLanguage(
@@ -91,7 +90,7 @@ class CardClassementUser extends StatelessWidget {
                               minFontSize: 20,
                             ),
                           ],
-                        ),
+                        )),
                       ),
                     ],
                   ),

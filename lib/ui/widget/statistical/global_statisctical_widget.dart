@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
 
-
 import '../../../data/models/statistical_length.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
@@ -34,7 +33,14 @@ class GlobalStatisticalWidget extends StatefulWidget {
 class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
   Future<StatisticalLength>? _statisticalFuture;
   StatisticalLength? _lastStatisticalData;
+
+  // Constantes synchronisées (utilisées partout)
   static const double _heightIndicator = 50.0;
+  static const double _hPadding = 20.0;
+  static const double _lineHeight = 20.0;
+  static const double _textWidth = 60.0;
+  static const double _gap = 5.0;
+  static const double _logoWidth = 50.0; // doit correspondre à Image.asset(width: 50)
 
   @override
   void initState() {
@@ -59,13 +65,14 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
   }
 
   void _fetchStatisticalData() {
-    _statisticalFuture = VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
-      vocabulaireBegin: widget.vocabulaireBegin,
-      vocabulaireEnd: widget.vocabulaireEnd,
-      guidList: widget.guidList,
-      isListPerso: widget.isListPerso,
-      isListTheme: widget.isListTheme,
-    );
+    _statisticalFuture =
+        VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
+          vocabulaireBegin: widget.vocabulaireBegin,
+          vocabulaireEnd: widget.vocabulaireEnd,
+          guidList: widget.guidList,
+          isListPerso: widget.isListPerso,
+          isListTheme: widget.isListTheme,
+        );
   }
 
   @override
@@ -89,27 +96,27 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                 _lastStatisticalData = userDataSnapshot.data;
               }
 
-              // If an error occurs and we have no cached data, show the error.
+              // If an error occurs and we have no cached data, show the error (non bloquant).
               if (userDataSnapshot.hasError && _lastStatisticalData == null) {
-                // Il est préférable d'afficher une erreur non bloquante
-                // et de quand même rendre le widget dans son état initial.
                 WidgetsBinding.instance.addPostFrameCallback((_) {
-                  ErrorMessage(context: context, message: 'Erreur de statistique: ${userDataSnapshot.error}');
+                  ErrorMessage(
+                    context: context,
+                    message: 'Erreur de statistique: ${userDataSnapshot.error}',
+                  );
                 });
               }
 
-              // Déterminer le pourceRntage à afficher.
-              // Utiliser les données mises en cache si elles existent, sinon 0.
+              // Déterminer le pourcentage à afficher.
               double percentageProgression = 0.0;
               if (_lastStatisticalData != null) {
                 final statisticalData = _lastStatisticalData!;
                 if (statisticalData.countVocabulaireAll > 0) {
-                  percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
+                  percentageProgression = statisticalData.vocabLearnedCount /
+                      statisticalData.countVocabulaireAll;
                 }
               }
 
-              // Toujours construire l'indicateur avec le pourcentage déterminé.
-              // Cela couvre les états de chargement, vide, d'erreur (avec affichage de l'ancienne donnée) et de données disponibles.
+              // Toujours construire l'indicateur.
               return LayoutBuilder(
                 builder: (context, constraints) => _buildIndicator(
                   percentage: percentageProgression,
@@ -143,22 +150,26 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     final clampedPercentage = percentage.clamp(0.0, 1.0);
     final bool isRtl = Directionality.of(context) == TextDirection.rtl;
 
-    // Le texte du pourcentage doit s'aligner en s'éloignant du logo.
-    // La disposition du texte (gauche/droite) change en fonction du pourcentage.
     final textAlignForBigPercentage = isRtl ? TextAlign.left : TextAlign.right;
     final textAlignForSmallPercentage = isRtl ? TextAlign.right : TextAlign.left;
 
-    return Center(child:Padding(
-        padding: EdgeInsets.only(left:30,right:30),
-        child:SizedBox(
-        height: _heightIndicator,
-        child: Stack(
+    // Largeur réellement disponible après padding
+    final double availableWidth =
+    (width - (_hPadding * 2)).clamp(0.0, double.infinity);
+
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: _hPadding),
+        child: SizedBox(
+          height: _heightIndicator,
+          child: Stack(
             alignment: Alignment.center,
-            clipBehavior: Clip.none, // Permet au logo de déborder sans être coupé
+            clipBehavior: Clip.none, // autorise le débordement du logo
             children: [
+              // Barre d'avancement (utilise availableWidth)
               Container(
-                width: width,
-                height: 20.0,
+                width: availableWidth,
+                height: _lineHeight,
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.white, width: 0.5),
                   borderRadius: BorderRadius.circular(5.0),
@@ -167,7 +178,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                   borderRadius: BorderRadius.circular(5.0),
                   child: MultiSegmentLinearIndicator(
                     padding: EdgeInsets.zero,
-                    lineHeight: 20.0,
+                    lineHeight: _lineHeight,
                     segments: [
                       if (isRtl)
                         SegmentLinearIndicator(
@@ -189,18 +200,22 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                   ),
                 ),
               ),
+
+              // Curseur (logo + texte) positionné par rapport à la largeur réelle
               Positioned(
                 left: _getPositionLeftCursor(
-                    percentage: clampedPercentage,
-                    width: width,
-                    isRtl: isRtl,
+                  percentage: clampedPercentage,
+                  width: availableWidth,
+                  isRtl: isRtl,
                 ),
                 child: Row(
-                  mainAxisSize: MainAxisSize.min, // Important pour que la Row ne prenne que la place nécessaire
+                  mainAxisSize: MainAxisSize.min,
+                  // S'assure que l'ordre visuel suit la Directionality
+                  textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
                   children: [
                     if (clampedPercentage > 0.2) ...[
                       SizedBox(
-                        width: 60,
+                        width: _textWidth,
                         child: Text(
                           "${(clampedPercentage * 100).toStringAsFixed(1)}%",
                           textAlign: textAlignForBigPercentage,
@@ -211,16 +226,16 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 5),
+                      const SizedBox(width: _gap),
                     ],
                     Image.asset(
                       "assets/brand/logo_landing.png",
-                      width: 50,
+                      width: _logoWidth, // synchronisé avec le calcul
                     ),
                     if (clampedPercentage <= 0.2) ...[
-                      const SizedBox(width: 5),
+                      const SizedBox(width: _gap),
                       SizedBox(
-                        width: 60,
+                        width: _textWidth,
                         child: Text(
                           "${(clampedPercentage * 100).toStringAsFixed(1)}%",
                           textAlign: textAlignForSmallPercentage,
@@ -236,35 +251,37 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                 ),
               ),
             ],
-          )
-        )
-    ));
+          ),
+        ),
+      ),
+    );
   }
 
   double _getPositionLeftCursor({
     required double percentage,
-    required double width,
+    required double width, // largeur réelle (après padding)
     required bool isRtl,
   }) {
-    // Définir les dimensions et la disposition du curseur
-    const double textBlockWidth = 60.0 + 5.0;
-    const double imageWidth = 80.0;
-    const double cursorRowWidth = textBlockWidth + imageWidth;
-    const double halfImageWidth = imageWidth / 2;
+    // Largeurs cohérentes avec le rendu réel
+    const double textBlockWidth = _textWidth + _gap;
+    const double halfImageWidth = _logoWidth / 2;
 
-    // Déterminer la disposition de la Row en fonction du pourcentage pour trouver le centre du logo
-    // isLogoVisuallyFirst est vrai si le logo apparaît en premier (à gauche en LTR, à droite en RTL)
-    final bool isLogoVisuallyFirst = (isRtl && percentage > 0.2) || (!isRtl && percentage <= 0.2);
-    final double logoCenterOffsetInRow = isLogoVisuallyFirst ? halfImageWidth : textBlockWidth + halfImageWidth;
+    // Position de la jonction (à partir du bord gauche de la barre)
+    final double junctionPoint =
+    isRtl ? width * (1 - percentage) : width * percentage;
 
-    // Calculer le point de jonction idéal sur la barre
-    final double junctionPoint = isRtl ? width * (1 - percentage) : width * percentage;
+    // Le logo apparaît visuellement en premier selon le sens + seuil 0.2
+    final bool isLogoVisuallyFirst =
+        (isRtl && percentage > 0.2) || (!isRtl && percentage <= 0.2);
 
-    // Calculer la position de départ idéale pour la Row pour centrer le logo sur la jonction
-    final double idealPosition = junctionPoint - logoCenterOffsetInRow;
+    // Décalage du centre du logo dans la Row (depuis son bord "start")
+    final double logoCenterOffsetInRow =
+    isLogoVisuallyFirst ? halfImageWidth : textBlockWidth + halfImageWidth;
 
-    // Pour que le centre du logo soit sur le point de jonction, la Row doit commencer à: position = point de jonction - décalage du centre du logo
-    // On ne contraint plus la position pour permettre au logo de déborder.
-    return idealPosition;
+    // Bord gauche de la Row pour centrer le logo exactement sur la jonction
+    final double idealLeft = junctionPoint - logoCenterOffsetInRow;
+
+    // Pas de clamp ici pour autoriser le débordement volontaire du logo
+    return idealLeft;
   }
 }

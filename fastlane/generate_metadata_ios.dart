@@ -137,8 +137,8 @@ void writeMetadata(
   File('$basePath/review_information/last_name.txt').writeAsStringSync("PETAIN");
   File('$basePath/review_information/phone_number.txt').writeAsStringSync("+33 6 59 00 27 62");
   File('$basePath/review_information/email_address.txt').writeAsStringSync("geoffrey.petain@gmail.com");
-  File('$basePath/review_information/demo_user.txt').writeAsStringSync("voczilla.test2@flutter-now.com");
-  File('$basePath/review_information/demo_password.txt').writeAsStringSync("Hefpccy%08%08");
+  File('$basePath/review_information/demo_user.txt').writeAsStringSync("");
+  File('$basePath/review_information/demo_password.txt').writeAsStringSync("");
 
 
   File('$path/name.txt').writeAsStringSync(title.trim());

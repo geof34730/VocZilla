@@ -29,6 +29,34 @@ platform :all do
   end
 
   #########################################
+  # ======= CONFIG IAP REVIEW CAPTURE =====
+  #########################################
+
+  # Nom du fichier attendu pour la capture IAP (provenant du run iphone6_7_inch)
+  IAP_REVIEW_SOURCE_FILENAME = "iphone6_7_inch_09.png"
+
+  # Stage la capture IAP uniquement quand dest_folder == 'iphone6_7_inch'
+  # Copie + rename: fastlane/app_review/<locale>/iap_review.png
+  def stage_iap_review_shot!(locale:, dest_folder:, shots_dir:, project_root:)
+    return unless dest_folder == "iphone6_7_inch"
+
+    src = File.join(shots_dir, IAP_REVIEW_SOURCE_FILENAME)
+    unless File.exist?(src)
+      UI.important("⚠️ #{IAP_REVIEW_SOURCE_FILENAME} introuvable dans #{shots_dir} (locale=#{locale}, dest=#{dest_folder})")
+      return
+    end
+
+    # ⬇️ même locale finale que pour les screenshots iOS
+    normalized = normalize_locale_or_fallback(locale, "ios")
+
+    dest_dir = File.join(project_root, "fastlane", "app_review", normalized)
+    FileUtils.mkdir_p(dest_dir)
+    dest = File.join(dest_dir, "iap_review.png") # <-- renommage ici
+    FileUtils.cp(src, dest)
+    UI.message("📎 App Review staged: #{dest} (locale=#{locale}, normalized=#{normalized})")
+  end
+
+  #########################################
   # ============ METADATA LANE ============
   #########################################
 
@@ -66,7 +94,7 @@ platform :all do
     ensure_ios_simulator_built_once!
 
     ios_folders = [
-      #"iphone6_7_inch",
+      "iphone6_7_inch",
       "iPad Pro (12.9-inch) (3rd generation)",
       "ipad_12_9_inch"
     ]
@@ -101,7 +129,18 @@ platform :all do
           next
         end
 
+        # Nettoie les captures parasites générées par flutter drive
         clean_driver_artifacts!(shots_dir)
+
+        # 👉 Stage la capture App Review pour cette locale (UNIQUEMENT pour iphone6_7_inch)
+        stage_iap_review_shot!(
+          locale: locale,
+          dest_folder: dest_folder,
+          shots_dir: shots_dir,
+          project_root: project_root
+        )
+
+        # Copie les autres captures vers fastlane/metadata
         copy_screenshots_to_metadata(
           platform_store: "ios",
           locale: locale,
@@ -197,7 +236,7 @@ platform :all do
     # Nettoyage disque après exécution
     free = disk_free_gb(".")
     aggressive = free < env_threshold_gb
-    UI.message("💾 Espace libre: #{free} GB (seuil: #{env_threshold_gb} GB) → cleanup #{aggressive ? "AGRESSIF" : "sélectif"}")
+    UI.message("💾 Espace libre: #{free} GB (seuil: #{env_threshold_gb} GB) → cleanup #{aggressive ? 'AGRESSIF' : 'sélectif'}")
     cleanup_builds(keep_ios_build: true, aggressive: aggressive)
 
     UI.success("🎉 Screenshots multi-plateforme terminés")
@@ -223,7 +262,7 @@ require "tmpdir"
 def ios_device_for_folder(dest_folder)
   map = {
     # iPhone 6.7" → iPhone 15 Pro Max (iOS 17.0)
-    #"iphone6_7_inch" => "DFE799EA-B2F9-4EBA-BEC7-13970400A07E",
+    "iphone6_7_inch" => "DFE799EA-B2F9-4EBA-BEC7-13970400A07E",
     # iPad 12.9" → iPad Pro (12.9-inch) (6th generation) (iOS 17.0)
     "iPad Pro (12.9-inch) (3rd generation)" => "0F7B7680-E990-4724-9FF8-DF316C3D87CA",
     "ipad_12_9_inch" => "0F7B7680-E990-4724-9FF8-DF316C3D87CA"
@@ -520,11 +559,8 @@ def copy_screenshots_to_metadata(platform_store:, locale:, dest_folder:, screens
   clean_driver_artifacts!(screenshots_dir) # supprime driver_*.png & drive_*.png
   screenshots = Dir[File.join(screenshots_dir, "*.png")]
 
-  normalized_locale = get_normalized_locale(locale, platform_store)
-  if normalized_locale.nil?
-    UI.important("⚠️ Locale #{locale} non supportée pour #{platform_store}. Ignorée pour la copie.")
-    return
-  end
+  # ⬇️ même locale finale que pour app_review (fallback si mapper renvoie nil)
+  normalized_locale = normalize_locale_or_fallback(locale, platform_store)
 
   relative_metadata =
     if platform_store == "android" && dest_folder == "FeatureGraphic"
@@ -553,6 +589,12 @@ def get_normalized_locale(locale, platform)
 
   normalized = sh(%Q{dart "#{map_script}" #{platform} #{locale}}, log: false).strip
   return normalized.empty? ? nil : normalized
+end
+
+# ----- Locale normalization (shared) -----
+def normalize_locale_or_fallback(locale, platform)
+  normalized = get_normalized_locale(locale, platform)
+  (normalized && !normalized.empty?) ? normalized : locale
 end
 
 # ----- Nettoyage espace disque -----
