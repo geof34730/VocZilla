@@ -47,6 +47,7 @@
     "pronunciation_error1" : "Echec de l'initialisation de la reconnaissance vocale",
     "pronunciation_error2" : "Erreur lors de l'initialisation",
     "pronunciation_error3" : "Erreur lors du démarrage de l'écoute",
+    "pronunciation_try_again" : "Je n'ai pas compris. Veuillez réessayer.",
     "pronunciation_error4" : "La reconnaissance vocale n'est pas prête.",
     "pronunciation_error5" : "Permission microphone refusée",
     "offline_title" : "Hors ligne",

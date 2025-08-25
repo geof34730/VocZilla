@@ -12,21 +12,12 @@ Future<int> getLastBuildNumber() async {
   final jsonData = json.decode(content);
   return jsonData['lastBuildNumber'];
 }
-
-// 📝 Génère le fichier d'informations pour la révision Google Play
-// Les informations sont écrites directement dans cette fonction.
 Future<void> generateReviewInformation(String basePath) async {
-  // --- VOS INFORMATIONS DE TEST ICI ---
-  // ⚠️ ATTENTION : Remplacer les valeurs ci-dessous par vos propres informations de test.
-  // Assurez-vous que ce fichier n'est pas versionné dans un dépôt public.
-  const login = "voczilla.test2@flutter-now.com";
-  const password = "Hefpccy%08%08";
-  const notes = """
-1. Lancez l'application.
-2. Utilisez les identifiants ci-dessus pour vous connecter.
-3. Toutes les fonctionnalités sont disponibles sur ce compte de test.
-""";
-  // ------------------------------------
+
+  const login = "";
+  const password = "";
+  const notes = "";
+
 
   // On ne génère pas le fichier si les identifiants n'ont pas été modifiés.
   if (login == "METTRE_VOTRE_LOGIN_ICI" || password == "METTRE_VOTRE_MOT_DE_PASSE_ICI") {
@@ -35,16 +26,8 @@ Future<void> generateReviewInformation(String basePath) async {
     return;
   }
 
-  var reviewContent = 'Informations de connexion pour l\'équipe de révision :\n\n';
-  reviewContent += 'Login / Nom d\'utilisateur: $login\n';
-  reviewContent += 'Mot de passe: $password\n';
-
-  if (notes.trim().isNotEmpty) {
-    reviewContent += '\nInstructions supplémentaires :\n$notes';
-  }
-
   final reviewFilePath = '$basePath/review_information.txt';
-  await File(reviewFilePath).writeAsString(reviewContent);
+  await File(reviewFilePath).writeAsString("aucune ligne à écrire");
   print('✅ Fichier review_information.txt généré.');
 }
 

@@ -17,15 +17,17 @@ Widget CongratulationOrErrorData({required int vocabulaireConnu,required BuildCo
                      fontSize: 35,
                      fontWeight: FontWeight.bold
                  ),
+                   textAlign: TextAlign.center
                )
            ),
            Text(context.loc.widget_congratulation_message,
              style: TextStyle(
                color: Colors.green,
                fontSize: 20,
+               height:1
 
              ),
-
+              textAlign: TextAlign.center,
            )
          ]
      );

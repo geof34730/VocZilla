@@ -43,10 +43,7 @@ class AppRoute {
   static const String updateScreen = '/update';
   static const String featureGraphic = '/featureGraphic';
 
-  static bool isCompteTestForRevisionStore() {
-    final firebaseUser = FirebaseAuth.instance.currentUser;
-    return firebaseUser?.email == emailTestRevisionStore;
-  }
+
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
     print("*************************** ${settings.name} **************************");
@@ -60,12 +57,17 @@ class AppRoute {
     return MaterialPageRoute(
       settings: settings,
       builder: (context) {
-        UserRepository().checkUserStatusOncePerDay(context);
         return MultiBlocListener(
           listeners: [
             BlocListener<AuthBloc, AuthState>(
+              listenWhen: (previous, current) {
+                // Ne réagit qu'à la transition de déconnecté à connecté.
+                return previous is! AuthAuthenticated && current is AuthAuthenticated;
+              },
               listener: (context, authState) {
                 if (authState is AuthAuthenticated && authState is! AuthProfileUpdated) {
+                  // On vérifie le statut de l'utilisateur UNE SEULE FOIS, ici.
+                  UserRepository().checkUserStatusOncePerDay(context);
                   final userProfile = authState.userProfile;
                   final firebaseUser = FirebaseAuth.instance.currentUser;
                   if (firebaseUser == null) {
@@ -77,14 +79,20 @@ class AppRoute {
             ),
             BlocListener<UserBloc, UserState>(
               listener: (context, userState) {
-                Logger.Red.log("BlocListener<UserBloc, UserState>");
-                if (!isCompteTestForRevisionStore() && settings.name != subscription) {
-                  if (userState is UserFreeTrialPeriodAndNotSubscribed) {
-                    userRepository.showDialogueFreeTrialOnceByDay(context: context);
-                  }
-                  if (userState is UserFreeTrialPeriodEndAndNotSubscribed) {
-                    Logger.Red.log('ROUTE UserFreeTrialPeriodEndAndNotSubscribed');
-                    if (settings.name != subscription) {
+                final userBlocInstance = context.read<UserBloc>();
+                Logger.Red.log(
+                    "Listener<UserBloc> HashCode: ${userBlocInstance.hashCode}, State: $userState");
+
+                // userRepository.showDialogueFreeTrialOnceByDay(context: context);
+                if (settings.name != subscription) {
+                  if (userState is UserSessionLoaded) {
+                    // User is in trial and not subscribed, show the dialog
+                    if (userState.isTrialActive && !userState.isSubscribed) {
+                      userRepository.showDialogueFreeTrialOnceByDay(context: context);
+                    }
+                    // User's trial has ended and they are not subscribed, force to subscription page
+                    else if (!userState.isTrialActive && !userState.isSubscribed) {
+                      Logger.Red.log('ROUTE: Trial ended and not subscribed. Redirecting to subscription page.');
                       Navigator.pushReplacementNamed(
                           context,
                           subscription,
@@ -156,16 +164,8 @@ class AppRoute {
   }
 
   static Widget _getAuthenticatedPage(RouteSettings settings, BuildContext context) {
-    final userState = context.watch<UserBloc>().state;
     final uri = Uri.parse(settings.name ?? '');
     Logger.Blue.log("_getAuthenticatedPage settings.name: ${settings.name}");
-    if (!isCompteTestForRevisionStore() && settings.name != subscription) {
-      if (userState is UserInitial || userState is UserLoading ||
-          userState is UserError ||
-          userState is UserFreeTrialPeriodEndAndNotSubscribed) {
-        //return Layout(child: Loading());
-      }
-    }
 
     if (uri.pathSegments.isNotEmpty) {
       final rootPath = '/${uri.pathSegments[0]}';
@@ -176,7 +176,7 @@ class AppRoute {
           return Layout(titleScreen: context.loc.title_subscription, child: SubscriptionScreen());
         case home:
         case homeLogged:
-          Layout(child: HomeScreen());
+          return Layout(child: HomeScreen());
         case updateScreen:
           return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
         case '/vocabulary':

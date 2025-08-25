@@ -3,8 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
-import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
-import 'package:vobzilla/logic/blocs/drawer/drawer_event.dart';
 import 'package:vobzilla/ui/widget/appBar/TitleSite.dart';
 
 import '../../../core/utils/string.dart';
@@ -34,8 +32,7 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
                     child:GestureDetector(
                       key: ValueKey('open_drawer_voczilla'),
                       onTap: () {
-                        context.read<DrawerBloc>().add(OpenSettingsDrawer(context: context));
-                        scaffoldKey.currentState!.openEndDrawer();
+                        scaffoldKey.currentState?.openEndDrawer();
                       },
                       child: Stack(
 
@@ -86,4 +83,3 @@ class AppBarLogged extends StatelessWidget implements PreferredSizeWidget {
 
 
 }
-

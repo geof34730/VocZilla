@@ -1,9 +1,4 @@
 abstract class UserEvent {}
 
-class CheckUserStatus extends UserEvent {}
-
-
-class LoadUserData extends UserEvent {
-  final String userId;
-  LoadUserData(this.userId);
-}
+/// Fired once after authentication to load all user data and check subscription status.
+class InitializeUserSession extends UserEvent {}

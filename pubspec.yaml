@@ -87,7 +87,9 @@ dependencies:
   http: ^1.4.0
   image_picker: ^1.1.2
   firebase_analytics: ^11.6.0
-
+  sherpa_onnx: ^1.12.9
+  record: ^6.1.1
+  path_provider: ^2.1.4
 
 
 flutter_launcher_icons:
@@ -151,6 +153,10 @@ flutter:
     - assets/audios/gcloud/
     - assets/data/list-vocabulaire.json
     - assets/data/list-themes.json
+    - assets/asr_en/tokens.txt
+    - assets/asr_en/encoder-epoch-99-avg-1.int8.onnx
+    - assets/asr_en/decoder-epoch-99-avg-1.int8.onnx
+    - assets/asr_en/joiner-epoch-99-avg-1.int8.onnx
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

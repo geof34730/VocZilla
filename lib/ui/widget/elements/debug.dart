@@ -40,6 +40,22 @@ class DebugWidget extends StatelessWidget {
                     ]),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange.shade700,
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 24, vertical: 12),
+                ),
+                onPressed: () => _clearSharedPreferences(context),
+                child: const Text(
+                  'Vider les SharedPreferences',
+                  style:
+                  TextStyle(color: Colors.white, fontSize: 16),
+                ),
+              ),
+            ),
 
 
             SingleChildScrollView(
@@ -143,6 +159,44 @@ class DebugWidget extends StatelessWidget {
         ));
   }
 
+  Future<void> _clearSharedPreferences(BuildContext context) async {
+    final bool? confirmed = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext dialogContext) {
+        return AlertDialog(
+          title: const Text('Confirmer la suppression'),
+          content: const Text(
+              'Voulez-vous vraiment supprimer toutes les SharedPreferences ? Cette action est irréversible.'),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Annuler'),
+              onPressed: () => Navigator.of(dialogContext).pop(false),
+            ),
+            TextButton(
+              child: const Text('Supprimer', style: TextStyle(color: Colors.red)),
+              onPressed: () => Navigator.of(dialogContext).pop(true),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (confirmed == true && context.mounted) {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.clear();
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+              'Toutes les SharedPreferences ont été supprimées. Veuillez redémarrer l\'application.'),
+          backgroundColor: Colors.green,
+        ),
+      );
+      // On ferme le panneau de debug après l'action
+      if (context.mounted) Navigator.of(context).pop();
+    }
+  }
+
   Future<Map<String, dynamic>> _getAllSharedPreferences() async {
     final prefs = await SharedPreferences.getInstance();
     final keys = prefs.getKeys();
@@ -154,5 +208,3 @@ class DebugWidget extends StatelessWidget {
   }
 
 }
-
-

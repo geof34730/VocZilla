@@ -46,7 +46,7 @@ class UserRepository {
     // AUTHENTICATION GUARD: Do nothing if no user is signed in.
     if (_firebaseAuth.currentUser == null) {
       Logger.Yellow.log("checkUserStatusOncePerDay cancelled: user not authenticated.");
-      return;
+    //  return;
     }
 
     Logger.Yellow.log("*********checkUserStatusOncePerDay");
@@ -55,12 +55,16 @@ class UserRepository {
     final today = DateTime.now().toIso8601String().substring(0, 10);
     final lastCheckStatusDate = prefs.getString('lastCheckStatusDate');
 
+
+    Logger.Yellow.log('lastCheckStatusDate ***: $lastCheckStatusDate');
+
+
     if (lastCheckStatusDate != today) {
       Logger.Green.log("checkUserStatusOncePerDay: Checking user status...");
       prefs.setString('lastCheckStatusDate', today);
       // It's safer to check if the context is still mounted before using it.
       if (context.mounted) {
-        context.read<UserBloc>().add(CheckUserStatus());
+        context.read<UserBloc>().add(InitializeUserSession());
       }
     } else {
       Logger.Green.log("checkUserStatusOncePerDay: Already checked today.");
@@ -76,8 +80,10 @@ class UserRepository {
     await prefs.setString('lastCheckStatusDate', yesterday);
   }
 
-  Future<void> showDialogueFreeTrialOnceByDay(
-      {required BuildContext context}) async {
+  Future<void> showDialogueFreeTrialOnceByDay({required BuildContext context}) async {
+
+    Logger.Blue.log("Go view freetrial dialogue");
+
     // AUTHENTICATION GUARD: Do nothing if no user is signed in.
     if (_firebaseAuth.currentUser == null) {
       Logger.Yellow.log("showDialogueFreeTrialOnceByDay cancelled: user not authenticated.");

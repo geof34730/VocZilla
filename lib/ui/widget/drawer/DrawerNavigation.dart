@@ -11,6 +11,7 @@ import 'package:vobzilla/logic/blocs/user/user_state.dart';
 import 'package:vobzilla/ui/widget/drawer/trial_period_tile.dart';
 import 'package:vobzilla/ui/widget/drawer/voczilla_tile.dart';
 import '../../../app_route.dart';
+import '../../../core/utils/logger.dart';
 import '../../../core/utils/string.dart';
 import '../../../core/utils/switchLanguageItems.dart';
 import '../../../global.dart'; // Needed for daysFreeTrial
@@ -19,33 +20,37 @@ import '../../../logic/blocs/auth/auth_event.dart';
 import '../../../logic/blocs/auth/auth_state.dart';
 import '../elements/DialogHelper.dart';
 
-/// Builds the main navigation drawer for the application.
+/// The main navigation drawer for the application.
 ///
-/// Note: For better structure and testability, consider converting this
-/// top-level function into a `StatelessWidget` class in the future.
-Drawer DrawerNavigation({
-  required BuildContext context,
-}) {
-  return Drawer(
-    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-    elevation: 5,
-    child: Container(
-      color: Colors.white,
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          // ===== HEADER =====
-          _buildDrawerHeader(context),
+/// This has been converted to a `StatelessWidget` to ensure proper `BuildContext`
+/// handling and reliable state updates from BLoC, which solves issues where
+/// `BlocBuilder` might not update correctly.
+class NavigationDrawer extends StatelessWidget {
+  const NavigationDrawer({super.key});
 
-          // === PÉRIODE D'ESSAI (ANIMÉE) ===
-          _buildTrialPeriodTile(context),
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+      elevation: 5,
+      child: Container(
+        color: Colors.white,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            // ===== HEADER =====
+            _buildDrawerHeader(context),
 
-          // ===== MENU ITEMS =====
-          _buildMenuItems(context),
-        ],
+            // === PÉRIODE D'ESSAI (ANIMÉE) ===
+            _buildTrialPeriodTile(),
+
+            // ===== MENU ITEMS =====
+            _buildMenuItems(context),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 /// Builds the header of the drawer, displaying user information.
 Widget _buildDrawerHeader(BuildContext context) {
@@ -107,30 +112,28 @@ Widget _buildDrawerHeader(BuildContext context) {
                             ),
                             Padding(
                              padding: EdgeInsets.only(left:5),
-                            child:ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                padding: const EdgeInsets.all(4),
-                                minimumSize: const Size(0, 0),
-                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                elevation: 0,
-                              ),
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                                Navigator.pushNamed(context, AppRoute.updateProfile);
-                              },
-                              child: const Icon(
-                                Icons.edit,
-                                size: 22,
-                              ),
-                            ),
+                                child:ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    padding: const EdgeInsets.all(4),
+                                    minimumSize: const Size(0, 0),
+                                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                    elevation: 0,
+                                  ),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                    Navigator.pushNamed(context, AppRoute.updateProfile);
+                                  },
+                                  child: const Icon(
+                                    Icons.edit,
+                                    size: 22,
+                                  ),
+                                ),
                             )
                           ],
                         ),
                       ],
                     ),
                   )
-
-
                 ],
               ),
               const Spacer(),
@@ -185,12 +188,16 @@ Widget _buildLanguageDropdown(BuildContext context) {
 
 
 /// Builds the trial period tile if the user is in their trial period.
-Widget _buildTrialPeriodTile(BuildContext context) {
-  return BlocBuilder<UserBloc, UserState>(
+Widget _buildTrialPeriodTile() {
+  return BlocBuilder<UserBloc, UserState>( // Ce builder va maintenant recevoir correctement le contexte et les mises à jour
     builder: (context, userState) {
-      if (userState is UserFreeTrialPeriodAndNotSubscribed) {
-        final int daysLeft = userState.daysLeft;
-        final double progress =(daysFreeTrial - daysLeft).clamp(0, daysFreeTrial) / daysFreeTrial;
+      Logger.Pink.log("********* Drawer userState: $userState");
+      if (userState is UserSessionLoaded && userState.isTrialActive && !userState.isSubscribed) {
+        Logger.Pink.log("Drawer: Affichage de la tuile de période d'essai.");
+        final int daysLeft = userState.trialDaysLeft;
+        final double progress = (daysFreeTrial > 0)
+            ? (daysFreeTrial - daysLeft).clamp(0, daysFreeTrial) / daysFreeTrial
+            : 0.0;
         return TrialPeriodTile(
           progress: progress,
           daysRemaining: daysLeft,
@@ -263,3 +270,10 @@ void closeDrawer(BuildContext context) {
 }
 
 /// Helper function to provide a valid name for the Avatar widget.
+
+// L'ancienne fonction est conservée pour la compatibilité mais marquée comme obsolète.
+// Il est recommandé d'utiliser directement le widget NavigationDrawer.
+@Deprecated('Use NavigationDrawer widget instead for better state management. Will be removed in a future version.')
+Drawer DrawerNavigation({
+  required BuildContext context,
+}) => const Drawer(child: NavigationDrawer());

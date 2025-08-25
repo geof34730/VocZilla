@@ -1,12 +1,12 @@
 const String titleApp="VocZilla";
 const int titleAppCute1=3;
 String versionApp="1.0.0";
-const bool debugMode=false;
+const bool debugMode=true;
 const bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
-const int daysFreeTrial=7;
-const String emailTestRevisionStore="voczilla.test2@flutter-now.com";
+const int daysFreeTrial=3;
+
 bool forFeatureGraphic = false;
 bool changeVocabulaireSinceVisiteHome = false;
 

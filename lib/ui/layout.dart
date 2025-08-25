@@ -1,22 +1,17 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide NavigationDrawer;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_state.dart';
-import 'package:vobzilla/logic/blocs/drawer/drawer_bloc.dart';
 import 'package:vobzilla/ui/widget/appBar/AppBarLogged.dart';
 import 'package:vobzilla/ui/widget/appBar/AppBarNotLogged.dart';
 import 'package:vobzilla/ui/widget/bottomNavigationBar/BottomNavigationBarVocabulary.dart';
-
-
 import 'package:vobzilla/ui/widget/drawer/DrawerNavigation.dart';
 import 'package:vobzilla/ui/widget/elements/debug.dart';
 import 'package:vobzilla/ui/widget/home/TitleWidget.dart';
 
 import '../global.dart';
-import '../logic/blocs/drawer/drawer_state.dart';
 import '../logic/blocs/notification/notification_bloc.dart';
 import '../logic/blocs/notification/notification_event.dart';
 import '../logic/blocs/notification/notification_state.dart';
@@ -55,14 +50,7 @@ class _LayoutState extends State<Layout> {
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
       appBar: AuthAppBar(scaffoldKey: _scaffoldKey, appBarNotLogged: widget.appBarNotLogged),
-      endDrawer: BlocBuilder<DrawerBloc, DrawerState>(
-        builder: (context, state) {
-         if (state is SettingsDrawerState) {
-            return DrawerNavigation(context: context);
-          }
-          return Container(); // État par défaut ou vide
-        },
-      ),
+      endDrawer: const NavigationDrawer(),
       floatingActionButton: (debugMode ? FloatingActionButton(
           elevation: 15,
           backgroundColor: Colors.red,

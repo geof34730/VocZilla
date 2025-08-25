@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => DrawerBloc()),
           BlocProvider(create: (context) => LocalizationCubit()),
           BlocProvider(create: (context) => PurchaseBloc()..add(LoadProducts())),
-          BlocProvider(create: (context) => UserBloc(UserRepository())..add(CheckUserStatus())),
+          BlocProvider(create: (context) => UserBloc(UserRepository())),
           BlocProvider(create: (context) => VocabulairesBloc()),
           BlocProvider(create: (context) => UpdateBloc()..add(CheckForUpdate())),
           BlocProvider(create: (context) => VocabulaireUserBloc()..add(CheckVocabulaireUserStatus())),
@@ -142,18 +142,18 @@ class MyApp extends StatelessWidget {
                       listener: (context, state) {
                         if (state is AuthAuthenticated) {
                           Logger.Green.log("User is authenticated, loading user data for UID: ${state.userProfile.uid}");
-                          context.read<UserBloc>().add(LoadUserData(state.userProfile.uid));
+                          context.read<UserBloc>().add(InitializeUserSession());
                         }
                         // Optionnel mais recommandé : gérer la déconnexion
                         else if (state is AuthUnauthenticated) {
-                          context.read<UserBloc>().add(CheckUserStatus());
+                          context.read<UserBloc>().add(InitializeUserSession());
                         }
                       },
                     ),
                     BlocListener<UserBloc, UserState>(
                       listener: (context, state) {
                         BlocStateTracker().updateState('UserBloc', state);
-                        if (state is UserLoaded) {
+                        if (state is UserSessionLoaded) {
                           context.read<VocabulaireUserBloc>().add(VocabulaireUserUpdate(state.userData));
                         }
                       },

@@ -133,6 +133,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> with WidgetsBin
                 child: Text(
                   context.loc.freetrial_info1.replaceAll("\$daysFreeTrial", "$daysFreeTrial"),
                   style: const TextStyle(
+                    height:1.1,
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                     color: Colors.red,
@@ -147,7 +148,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> with WidgetsBin
               child: Text(
                 context.loc.freetrial_info2,
                 style: const TextStyle(
-                  height:1,
+                  height:1.1,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,

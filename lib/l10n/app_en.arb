@@ -40,6 +40,7 @@
     "pronunciation_error1": "Failed to initialize speech recognition",
     "pronunciation_error2": "Error during initialization",
     "pronunciation_error3": "Error starting listening",
+    "pronunciation_try_again": "I didn't understand. Please try again.",
     "pronunciation_error4": "Voice recognition is not ready.",
     "pronunciation_error5": "Microphone permission denied",
     "offline_title": "Offline",
