@@ -132,6 +132,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get pronunciation_error3 => 'सुनना शुरू करने में त्रुटि';
 
   @override
+  String get pronunciation_try_again => 'मैं समझ नहीं पाया। कृपया पुनः प्रयास करें।';
+
+  @override
   String get pronunciation_error4 => 'आवाज पहचान तैयार नहीं है.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get your_position => 'आपका मत';
+
+  @override
+  String get downloading_models => 'मॉडल डाउनलोड हो रहे हैं...';
+
+  @override
+  String get error_downloading_models => 'डाउनलोड विफल';
+
+  @override
+  String get error_check_connection => 'कृपया अपने इंटरनेट कनेक्शन की जाँच करें।';
 }

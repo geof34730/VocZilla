@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Жаңа профиль суретін түсіруге мүмкіндік беру үшін камераңызға рұқсат қажет.",
     "nsmicrophoneusagedescription": "Кейбір мүмкіндіктерде дыбыс жазуды қосу үшін бізге микрофон қажет.",
     "nsspeechrecognitionusagedescription": "Даусыңызды пайдаланып қолданбамен әрекеттесуіңізге мүмкіндік беру үшін біз дауысты тану мүмкіндігін қолданамыз.",
-    "your_position": "Сіздің ұстанымыңыз"
+    "your_position": "Сіздің ұстанымыңыз",
+    "pronunciation_try_again": "Мен түсінбедім. Қайталап көріңіз.",
+    "downloading_models": "Үлгілер жүктелуде...",
+    "error_downloading_models": "Жүктеп алу сәтсіз аяқталды",
+    "error_check_connection": "Интернет байланысын тексеріңіз."
 }

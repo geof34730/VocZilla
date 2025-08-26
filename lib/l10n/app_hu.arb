@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Hozzáférés szükséges a kamerádhoz, hogy új profilképet készíthess.",
     "nsmicrophoneusagedescription": "Bizonyos funkciókban a hangfelvétel engedélyezéséhez szükségünk van a mikrofonra.",
     "nsspeechrecognitionusagedescription": "Hangfelismerést használunk, hogy a hangoddal kommunikálhass az alkalmazással.",
-    "your_position": "A pozíciód"
+    "your_position": "A pozíciód",
+    "pronunciation_try_again": "Nem értettem. Kérlek, próbáld újra.",
+    "downloading_models": "A modellek letöltése...",
+    "error_downloading_models": "Letöltés sikertelen",
+    "error_check_connection": "Kérjük, ellenőrizze az internetkapcsolatát."
 }

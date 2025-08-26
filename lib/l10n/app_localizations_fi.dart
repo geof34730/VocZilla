@@ -132,6 +132,9 @@ class AppLocalizationsFi extends AppLocalizations {
   String get pronunciation_error3 => 'Virhe kuuntelun aloittamisessa';
 
   @override
+  String get pronunciation_try_again => 'En ymmärtänyt. Yritä uudelleen.';
+
+  @override
   String get pronunciation_error4 => 'Äänentunnistus ei ole valmis.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get your_position => 'Sinun sijaintisi';
+
+  @override
+  String get downloading_models => 'Mallien lataaminen...';
+
+  @override
+  String get error_downloading_models => 'Lataus epäonnistui';
+
+  @override
+  String get error_check_connection => 'Tarkista internetyhteytesi.';
 }

@@ -132,6 +132,9 @@ class AppLocalizationsTe extends AppLocalizations {
   String get pronunciation_error3 => 'వినడం ప్రారంభించడంలో లోపం';
 
   @override
+  String get pronunciation_try_again => 'నాకు అర్థం కాలేదు. దయచేసి మళ్ళీ ప్రయత్నించండి.';
+
+  @override
   String get pronunciation_error4 => 'వాయిస్ గుర్తింపు సిద్ధంగా లేదు.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get your_position => 'మీ స్థానం';
+
+  @override
+  String get downloading_models => 'మోడల్‌లను డౌన్‌లోడ్ చేస్తోంది...';
+
+  @override
+  String get error_downloading_models => 'డౌన్‌లోడ్ విఫలమైంది';
+
+  @override
+  String get error_check_connection => 'దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేయండి.';
 }

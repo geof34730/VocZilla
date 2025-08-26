@@ -132,6 +132,9 @@ class AppLocalizationsKy extends AppLocalizations {
   String get pronunciation_error3 => 'Угууну баштоодо ката кетти';
 
   @override
+  String get pronunciation_try_again => 'Мен түшүнгөн жокмун. Сураныч, кайра аракет кылыңыз.';
+
+  @override
   String get pronunciation_error4 => 'Үн таануу даяр эмес.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get your_position => 'Сиздин позицияңыз';
+
+  @override
+  String get downloading_models => 'Моделдер жүктөлүүдө...';
+
+  @override
+  String get error_downloading_models => 'Жүктөп алуу ишке ашкан жок';
+
+  @override
+  String get error_check_connection => 'Интернет туташууңузду текшериңиз.';
 }

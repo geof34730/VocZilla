@@ -132,6 +132,9 @@ class AppLocalizationsKa extends AppLocalizations {
   String get pronunciation_error3 => 'შეცდომა მოსმენის დაწყებისას მოხდა. მოხდა შეცდომა მოსმენის დაწყებისას.';
 
   @override
+  String get pronunciation_try_again => 'ვერ გავიგე. გთხოვთ, ხელახლა სცადოთ.';
+
+  @override
   String get pronunciation_error4 => 'ხმის ამოცნობა მზად არ არის.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get your_position => 'თქვენი პოზიცია';
+
+  @override
+  String get downloading_models => 'მოდელების ჩამოტვირთვა...';
+
+  @override
+  String get error_downloading_models => 'ჩამოტვირთვა ვერ მოხერხდა';
+
+  @override
+  String get error_check_connection => 'გთხოვთ, შეამოწმოთ თქვენი ინტერნეტ კავშირი.';
 }

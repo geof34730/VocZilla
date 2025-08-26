@@ -132,6 +132,9 @@ class AppLocalizationsCa extends AppLocalizations {
   String get pronunciation_error3 => 'S\'ha produït un error en iniciar l\'escolta';
 
   @override
+  String get pronunciation_try_again => 'No ho he entès. Si us plau, torna-ho a intentar.';
+
+  @override
   String get pronunciation_error4 => 'El reconeixement de veu no està a punt.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get your_position => 'La teva posició';
+
+  @override
+  String get downloading_models => 'Descarregant els models...';
+
+  @override
+  String get error_downloading_models => 'La descàrrega ha fallat';
+
+  @override
+  String get error_check_connection => 'Si us plau, comproveu la vostra connexió a Internet.';
 }

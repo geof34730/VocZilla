@@ -132,6 +132,9 @@ class AppLocalizationsIs extends AppLocalizations {
   String get pronunciation_error3 => 'Villa í að hefja hlustun';
 
   @override
+  String get pronunciation_try_again => 'Ég skildi ekki. Vinsamlegast reynið aftur.';
+
+  @override
   String get pronunciation_error4 => 'Raddgreining er ekki tilbúin.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get your_position => 'Staða þín';
+
+  @override
+  String get downloading_models => 'Að sækja fyrirmyndirnar...';
+
+  @override
+  String get error_downloading_models => 'Niðurhal mistókst';
+
+  @override
+  String get error_check_connection => 'Vinsamlegast athugaðu nettenginguna þína.';
 }

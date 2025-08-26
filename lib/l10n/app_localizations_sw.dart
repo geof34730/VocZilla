@@ -132,6 +132,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get pronunciation_error3 => 'Hitilafu katika kuanza kusikiliza';
 
   @override
+  String get pronunciation_try_again => 'sikuelewa. Tafadhali jaribu tena.';
+
+  @override
   String get pronunciation_error4 => 'Utambuzi wa sauti hauko tayari.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get your_position => 'Nafasi yako';
+
+  @override
+  String get downloading_models => 'Inapakua miundo...';
+
+  @override
+  String get error_downloading_models => 'Imeshindwa kupakua';
+
+  @override
+  String get error_check_connection => 'Tafadhali angalia muunganisho wako wa intaneti.';
 }

@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Yangi profil rasmini olishga ruxsat berish uchun kamerangizga kirishimiz kerak.",
     "nsmicrophoneusagedescription": "Ayrim funksiyalarda ovoz yozishni yoqish uchun bizga mikrofon kerak.",
     "nsspeechrecognitionusagedescription": "Ovoz yordamida ilova bilan muloqot qilish imkonini berish uchun biz ovozni tanishdan foydalanamiz.",
-    "your_position": "Sizning pozitsiyangiz"
+    "your_position": "Sizning pozitsiyangiz",
+    "pronunciation_try_again": "Men tushunmadim. Iltimos, qayta urinib koʻring.",
+    "downloading_models": "Modellar yuklab olinmoqda...",
+    "error_downloading_models": "Yuklab bo‘lmadi",
+    "error_check_connection": "Internet ulanishingizni tekshiring."
 }

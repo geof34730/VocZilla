@@ -24,6 +24,7 @@ platform :all do
         -e .env \
         -e voczilla-play.json \
         -e firebase.json \
+        -e android/app/key.jks\
         -e android/app/google-services.json \
         -e ios/Runner/GoogleService-Info.plist || true")
   end
@@ -34,27 +35,6 @@ platform :all do
 
   # Nom du fichier attendu pour la capture IAP (provenant du run iphone6_7_inch)
   IAP_REVIEW_SOURCE_FILENAME = "iphone6_7_inch_09.png"
-
-  # Stage la capture IAP uniquement quand dest_folder == 'iphone6_7_inch'
-  # Copie + rename: fastlane/app_review/<locale>/iap_review.png
-  def stage_iap_review_shot!(locale:, dest_folder:, shots_dir:, project_root:)
-    return unless dest_folder == "iphone6_7_inch"
-
-    src = File.join(shots_dir, IAP_REVIEW_SOURCE_FILENAME)
-    unless File.exist?(src)
-      UI.important("⚠️ #{IAP_REVIEW_SOURCE_FILENAME} introuvable dans #{shots_dir} (locale=#{locale}, dest=#{dest_folder})")
-      return
-    end
-
-    # ⬇️ même locale finale que pour les screenshots iOS
-    normalized = normalize_locale_or_fallback(locale, "ios")
-
-    dest_dir = File.join(project_root, "fastlane", "app_review", normalized)
-    FileUtils.mkdir_p(dest_dir)
-    dest = File.join(dest_dir, "iap_review.png") # <-- renommage ici
-    FileUtils.cp(src, dest)
-    UI.message("📎 App Review staged: #{dest} (locale=#{locale}, normalized=#{normalized})")
-  end
 
   #########################################
   # ============ METADATA LANE ============
@@ -94,8 +74,8 @@ platform :all do
     ensure_ios_simulator_built_once!
 
     ios_folders = [
-      "iphone6_7_inch",
-      "iPad Pro (12.9-inch) (3rd generation)",
+      #"iphone6_7_inch",
+      #"iPad Pro (12.9-inch) (3rd generation)",
       "ipad_12_9_inch"
     ]
 
@@ -108,6 +88,9 @@ platform :all do
       uninstall_ios_app(udid, ios_bundle_id)
 
       locales.each do |locale|
+        normalized_locale = normalize_locale_or_skip(locale, "ios")
+        next if normalized_locale.nil?
+
         purge_screenshots_dir!(shots_dir)
         UI.message("📸 iOS — device=#{udid}, locale=#{locale}, dest=#{dest_folder}")
 
@@ -132,18 +115,10 @@ platform :all do
         # Nettoie les captures parasites générées par flutter drive
         clean_driver_artifacts!(shots_dir)
 
-        # 👉 Stage la capture App Review pour cette locale (UNIQUEMENT pour iphone6_7_inch)
-        stage_iap_review_shot!(
-          locale: locale,
-          dest_folder: dest_folder,
-          shots_dir: shots_dir,
-          project_root: project_root
-        )
-
         # Copie les autres captures vers fastlane/metadata
         copy_screenshots_to_metadata(
           platform_store: "ios",
-          locale: locale,
+          normalized_locale: normalized_locale,
           dest_folder: dest_folder,
           screenshots_dir: shots_dir,
           project_root: project_root
@@ -170,10 +145,10 @@ platform :all do
     ensure_android_built_once!(:debug)
 
     android_folders = [
-      "FeatureGraphic",
       "phoneScreenshots",
       "sevenInchScreenshots",
-      "tenInchScreenshots"
+      "tenInchScreenshots",
+      "FeatureGraphic"
     ]
 
     locales = extract_locales
@@ -189,6 +164,9 @@ platform :all do
       set_emulator_resolution(emulator_id, dest_folder)
 
       locales.each do |locale|
+        normalized_locale = normalize_locale_or_skip(locale, "android")
+        next if normalized_locale.nil?
+
         purge_screenshots_dir!(shots_dir)
         is_feature = (dest_folder == "FeatureGraphic")
         UI.message("📸 Android — deviceId=#{emulator_id}, locale=#{locale}, dest=#{dest_folder}")
@@ -214,7 +192,7 @@ platform :all do
         clean_driver_artifacts!(shots_dir)
         copy_screenshots_to_metadata(
           platform_store: "android",
-          locale: locale,
+          normalized_locale: normalized_locale,
           dest_folder: dest_folder,
           screenshots_dir: shots_dir,
           project_root: project_root
@@ -230,8 +208,9 @@ platform :all do
 
   desc "📷 Screenshots (iOS + Android) — orchestrateur"
   lane :screenshots do
+
+    #screenshots_android
     screenshots_ios
-    screenshots_android
 
     # Nettoyage disque après exécution
     free = disk_free_gb(".")
@@ -554,13 +533,32 @@ def extract_locales
   locales
 end
 
+# ----- Bridge Dart pour normaliser les locales -----
+def get_normalized_locale(locale, platform)
+  project_root = File.expand_path("..", __dir__)
+  map_script   = File.join(project_root, "fastlane/invoke_locale_mapper.dart")
+  UI.user_error!("❌ Script de mapping de locale introuvable: #{map_script}") unless File.exist?(map_script)
+
+  normalized = sh(%Q{dart "#{map_script}" #{platform} #{locale}}, log: false).strip
+  return normalized.empty? ? nil : normalized
+end
+
+# ----- Locale normalization (skip si non supportée) -----
+def normalize_locale_or_skip(locale, platform)
+  normalized = get_normalized_locale(locale, platform)
+
+  if normalized.nil? || normalized.empty?
+    UI.important("⚠️ Locale #{locale} non supportée pour #{platform} → ignorée -> next langue.")
+    return nil
+  end
+
+  normalized
+end
+
 # ----- Copie des screenshots vers metadata -----
-def copy_screenshots_to_metadata(platform_store:, locale:, dest_folder:, screenshots_dir:, project_root:)
+def copy_screenshots_to_metadata(platform_store:, normalized_locale:, dest_folder:, screenshots_dir:, project_root:)
   clean_driver_artifacts!(screenshots_dir) # supprime driver_*.png & drive_*.png
   screenshots = Dir[File.join(screenshots_dir, "*.png")]
-
-  # ⬇️ même locale finale que pour app_review (fallback si mapper renvoie nil)
-  normalized_locale = normalize_locale_or_fallback(locale, platform_store)
 
   relative_metadata =
     if platform_store == "android" && dest_folder == "FeatureGraphic"
@@ -577,24 +575,8 @@ def copy_screenshots_to_metadata(platform_store:, locale:, dest_folder:, screens
   [dest_dir_project, dest_dir_symlink].each do |dest_dir|
     UI.message("📁 Copie des captures vers : #{dest_dir}")
     FileUtils.mkdir_p(dest_dir)
-    screenshots.empty? ? UI.important("Aucune capture à copier pour #{locale}") : FileUtils.cp(screenshots, dest_dir)
+    screenshots.empty? ? UI.important("Aucune capture à copier pour #{normalized_locale}") : FileUtils.cp(screenshots, dest_dir)
   end
-end
-
-# ----- Bridge Dart pour normaliser les locales -----
-def get_normalized_locale(locale, platform)
-  project_root = File.expand_path("..", __dir__)
-  map_script   = File.join(project_root, "fastlane/invoke_locale_mapper.dart")
-  UI.user_error!("❌ Script de mapping de locale introuvable: #{map_script}") unless File.exist?(map_script)
-
-  normalized = sh(%Q{dart "#{map_script}" #{platform} #{locale}}, log: false).strip
-  return normalized.empty? ? nil : normalized
-end
-
-# ----- Locale normalization (shared) -----
-def normalize_locale_or_fallback(locale, platform)
-  normalized = get_normalized_locale(locale, platform)
-  (normalized && !normalized.empty?) ? normalized : locale
 end
 
 # ----- Nettoyage espace disque -----

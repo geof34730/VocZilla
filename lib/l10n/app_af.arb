@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Ons benodig toegang tot jou kamera sodat jy 'n nuwe profielfoto kan neem.",
     "nsmicrophoneusagedescription": "Ons benodig die mikrofoon om klankopname in sommige funksies te aktiveer.",
     "nsspeechrecognitionusagedescription": "Ons gebruik stemherkenning om jou toe te laat om met die toepassing te kommunikeer deur jou stem te gebruik.",
-    "your_position": "Jou posisie"
+    "your_position": "Jou posisie",
+    "pronunciation_try_again": "Ek het nie verstaan nie. Probeer asseblief weer.",
+    "downloading_models": "Laai tans die modelle af...",
+    "error_downloading_models": "Aflaai het misluk",
+    "error_check_connection": "Kontroleer asseblief u internetverbinding."
 }

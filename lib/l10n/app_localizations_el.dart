@@ -132,6 +132,9 @@ class AppLocalizationsEl extends AppLocalizations {
   String get pronunciation_error3 => 'Σφάλμα κατά την έναρξη της ακρόασης';
 
   @override
+  String get pronunciation_try_again => 'Δεν κατάλαβα. Παρακαλώ δοκιμάστε ξανά.';
+
+  @override
   String get pronunciation_error4 => 'Η αναγνώριση φωνής δεν είναι έτοιμη.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get your_position => 'Η θέση σας';
+
+  @override
+  String get downloading_models => 'Λήψη των μοντέλων...';
+
+  @override
+  String get error_downloading_models => 'Η λήψη απέτυχε.';
+
+  @override
+  String get error_check_connection => 'Ελέγξτε τη σύνδεσή σας στο διαδίκτυο.';
 }

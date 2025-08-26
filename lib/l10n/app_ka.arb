@@ -180,5 +180,9 @@
     "nscamerausagedescription": "პროფილის ახალი სურათის გადასაღებად, თქვენს კამერაზე წვდომა გვჭირდება.",
     "nsmicrophoneusagedescription": "ზოგიერთ ფუნქციაში აუდიოჩანაწერის ჩასართავად მიკროფონი გვჭირდება.",
     "nsspeechrecognitionusagedescription": "ჩვენ ვიყენებთ ხმის ამოცნობის ფუნქციას, რათა აპლიკაციასთან ხმოვანი სიგნალით ურთიერთქმედება შეძლოთ.",
-    "your_position": "თქვენი პოზიცია"
+    "your_position": "თქვენი პოზიცია",
+    "pronunciation_try_again": "ვერ გავიგე. გთხოვთ, ხელახლა სცადოთ.",
+    "downloading_models": "მოდელების ჩამოტვირთვა...",
+    "error_downloading_models": "ჩამოტვირთვა ვერ მოხერხდა",
+    "error_check_connection": "გთხოვთ, შეამოწმოთ თქვენი ინტერნეტ კავშირი."
 }

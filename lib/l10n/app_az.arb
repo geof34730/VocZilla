@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Yeni profil şəklini çəkməyə icazə vermək üçün kameranıza giriş tələb edirik.",
     "nsmicrophoneusagedescription": "Bəzi funksiyalarda səs yazmağı aktivləşdirmək üçün mikrofona ehtiyacımız var.",
     "nsspeechrecognitionusagedescription": "Səsinizdən istifadə edərək proqramla əlaqə saxlamağınız üçün səsin tanınmasından istifadə edirik.",
-    "your_position": "Sizin mövqeyiniz"
+    "your_position": "Sizin mövqeyiniz",
+    "pronunciation_try_again": "Mən başa düşmədim. Yenidən cəhd edin.",
+    "downloading_models": "Modellər endirilir...",
+    "error_downloading_models": "Yükləmə uğursuz oldu",
+    "error_check_connection": "Zəhmət olmasa internet bağlantınızı yoxlayın."
 }

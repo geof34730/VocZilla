@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Нуждаем се от достъп до камерата ви, за да можете да си направите нова профилна снимка.",
     "nsmicrophoneusagedescription": "Нуждаем се от микрофон, за да активираме аудио запис в някои функции.",
     "nsspeechrecognitionusagedescription": "Използваме гласово разпознаване, за да ви позволим да взаимодействате с приложението, използвайки гласа си.",
-    "your_position": "Вашата позиция"
+    "your_position": "Вашата позиция",
+    "pronunciation_try_again": "Не разбрах. Моля, опитайте отново.",
+    "downloading_models": "Изтегляне на моделите...",
+    "error_downloading_models": "Изтеглянето не бе успешно",
+    "error_check_connection": "Моля, проверете интернет връзката си."
 }

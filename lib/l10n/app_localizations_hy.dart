@@ -132,6 +132,9 @@ class AppLocalizationsHy extends AppLocalizations {
   String get pronunciation_error3 => 'Սխալ լսելու մեկնարկի ժամանակ';
 
   @override
+  String get pronunciation_try_again => 'Ես չհասկացա։ Խնդրում եմ կրկին փորձեք։';
+
+  @override
   String get pronunciation_error4 => 'Ձայնի ճանաչումը պատրաստ չէ։';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get your_position => 'Ձեր դիրքը';
+
+  @override
+  String get downloading_models => 'Մոդելների ներբեռնում...';
+
+  @override
+  String get error_downloading_models => 'Ներբեռնումը ձախողվեց';
+
+  @override
+  String get error_check_connection => 'Խնդրում ենք ստուգել ձեր ինտերնետային կապը։';
 }

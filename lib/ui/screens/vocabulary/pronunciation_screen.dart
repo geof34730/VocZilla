@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // rootBundle
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,6 +11,10 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:record/record.dart'; // v6.x -> AudioRecorder
 import 'package:path_provider/path_provider.dart';
 import 'package:sherpa_onnx/sherpa_onnx.dart'; // v1.12.9
+
+// 🔥 Firebase
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 import '../../../global.dart';
 import '../../widget/elements/PlaySoond.dart';
@@ -62,12 +67,23 @@ class _PronunciationScreenState extends State<PronunciationScreen>
   // état d’initialisation
   bool _initInProgress = true; // on démarre en “initialisation en cours”
   bool _asrReady = false;      // ASR prêt (recognizer créé) ?
+  double? _downloadProgress;
+  String? _downloadError;
 
-  // Assets (clé bundle)
-  static const String _pTokens  = 'assets/asr_en/tokens.txt';
-  static const String _pEncoder = 'assets/asr_en/encoder-epoch-99-avg-1.int8.onnx';
-  static const String _pDecoder = 'assets/asr_en/decoder-epoch-99-avg-1.int8.onnx';
-  static const String _pJoiner  = 'assets/asr_en/joiner-epoch-99-avg-1.int8.onnx';
+  // Correctif homophones (lettres + mots)
+  bool _homophonesFix = true;
+
+  // ===== GESTION DES MODÈLES ASR (TÉLÉCHARGEMENT) =====
+  // Afficher la barre de progression UNIQUEMENT quand un vrai téléchargement a lieu
+  bool _showModelDownloadUi = false;
+
+  // ⚠️ Plus d'URL bricolée : on passe par FirebaseStorage.ref(...).getDownloadURL()
+  final Map<String, String> _modelFiles = {
+    'tokens': 'tokens.txt',
+    'encoder': 'encoder-epoch-99-avg-1.int8.onnx',
+    'decoder': 'decoder-epoch-99-avg-1.int8.onnx',
+    'joiner': 'joiner-epoch-99-avg-1.int8.onnx',
+  };
 
   // FICHIERS LOCAUX (chemins absolus pour Sherpa)
   String? _fTokens, _fEncoder, _fDecoder, _fJoiner;
@@ -90,25 +106,45 @@ class _PronunciationScreenState extends State<PronunciationScreen>
   }
 
   Future<void> _bootstrapAsr() async {
+    // 🚫 Mode screenshot : on ne touche pas au micro ni à l'ASR
+    if (testScreenShot) {
+      Logger.Yellow.log("Screenshot mode: ASR/micro désactivés");
+      setState(() {
+        _initInProgress = false; // pas de loader
+        _asrReady = false;
+        _micReady = false;
+      });
+      return;
+    }
+
     setState(() {
       _initInProgress = true;
       _asrReady = false;
+      _downloadError = null;
     });
 
     if (!(await _ensureMic())) {
       Logger.Red.log("Microphone permission denied");
       setState(() {
-        _initInProgress = false; // on arrête l’init (bouton restera grisé)
+        _initInProgress = false; // on arrête l’init (bouton restera grisé hors screenshot)
       });
       return;
     }
 
-    final ok = await _assertAssetsPresent();
-    if (!ok) {
+    // 🔥 S'assurer que Firebase est initialisé (au cas où)
+    try {
+      Firebase.apps.isEmpty ? await Firebase.initializeApp() : null;
+    } catch (e) {
+      // si déjà initialisé ailleurs, on ignore
+      Logger.Yellow.log('Firebase init skip/ok: $e');
+    }
+
+    // Étape 2: S'assurer que les modèles sont prêts (téléchargement si besoin)
+    final modelsReady = await _ensureModelsAreReady();
+    if (!modelsReady) {
       setState(() => _initInProgress = false);
       return;
     }
-
     await _initSherpaOnnx();
 
     setState(() {
@@ -152,57 +188,143 @@ class _PronunciationScreenState extends State<PronunciationScreen>
     return _micReady;
   }
 
-  // ===== Vérifier assets (bundle) =====
-  Future<bool> _assertAssetsPresent() async {
-    Future<bool> _probe(String p) async {
-      try {
-        await rootBundle.load(p);
-        Logger.Green.log("ASR asset OK: $p");
-        return true;
-      } catch (e) {
-        Logger.Red.log("ASR asset manquant: $p -> $e");
-        return false;
-      }
-    }
+  // ===== Gestion des modèles ASR =====
 
-    final okTokens  = await _probe(_pTokens);
-    final okEncoder = await _probe(_pEncoder);
-    final okDecoder = await _probe(_pDecoder);
-    final okJoiner  = await _probe(_pJoiner);
-
-    final ok = okTokens && okEncoder && okDecoder && okJoiner;
-    if (!ok) {
-      Logger.Red.log("Assets ASR incomplets. Vérifie pubspec.yaml et assets/asr_en/");
-      _scheduleDeferredErrorDisplay();
-    }
-    return ok;
-  }
-
-  // ===== Copie des assets → fichiers locaux =====
-  Future<String> _copyAssetToFile(String assetKey, String relativeName) async {
-    final data = await rootBundle.load(assetKey);
+  Future<String> _getLocalModelPath(String fileName) async {
     final dir = await getApplicationSupportDirectory();
-    final file = File('${dir.path}/$relativeName');
-    await file.create(recursive: true);
-    await file.writeAsBytes(
-      data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),
-      flush: true,
-    );
-    Logger.Green.log('ASR file ready: ${file.path}');
-    return file.path;
+    return '${dir.path}/asr_en/$fileName';
   }
 
-  Future<void> _materializeAsrAssets() async {
-    _fTokens  = await _copyAssetToFile(_pTokens,  'asr_en/tokens.txt');
-    _fEncoder = await _copyAssetToFile(_pEncoder, 'asr_en/encoder.onnx');
-    _fDecoder = await _copyAssetToFile(_pDecoder, 'asr_en/decoder.onnx');
-    _fJoiner  = await _copyAssetToFile(_pJoiner,  'asr_en/joiner.onnx');
+  // --- Helper : validation rapide d’un vrai fichier ONNX (évite le crash natif)
+  Future<bool> _looksLikeOnnx(File f) async {
+    final len = await f.length();
+    if (len < 1024) return false; // trop petit pour être un modèle
+    try {
+      final head = await f.openRead(0, 64).fold<BytesBuilder>(
+        BytesBuilder(),
+            (b, d) { b.add(d); return b; },
+      );
+      final s = String.fromCharCodes(head.takeBytes());
+      if (s.startsWith('<!DOCTYPE') || s.startsWith('<html') || s.startsWith('{')) return false; // HTML/JSON
+    } catch (_) {
+      return false;
+    }
+    return true;
+  }
+
+  /// (Optionnel) Reset complet du cache modèles pour forcer un redownload propre
+  Future<void> _clearLocalModels() async {
+    final dir = await getApplicationSupportDirectory();
+    final modelsDir = Directory('${dir.path}/asr_en');
+    if (await modelsDir.exists()) {
+      await modelsDir.delete(recursive: true).catchError((_) {});
+      Logger.Yellow.log("Cache des modèles supprimé.");
+    }
+  }
+
+  /// Vérifie si les modèles sont présents localement, sinon les télécharge via Firebase Storage.
+  Future<bool> _ensureModelsAreReady() async {
+    final dio = Dio();
+    final localPaths = <String, String>{};
+
+    try {
+      // 1) Pré-check: tout est déjà là ? (pas d'UI de téléchargement dans ce cas)
+      bool needsDownload = false;
+      for (var i = 0; i < _modelFiles.entries.length; i++) {
+        final entry = _modelFiles.entries.elementAt(i);
+        final key = entry.key; // tokens | encoder | decoder | joiner
+        final fileName = entry.value;
+        final localPath = await _getLocalModelPath(fileName);
+        final file = File(localPath);
+
+        if (await file.exists()) {
+          final ok = key == 'tokens' ? (await file.length()) > 0 : await _looksLikeOnnx(file);
+          if (ok) {
+            localPaths[key] = localPath;
+            continue;
+          } else {
+            needsDownload = true;
+          }
+        } else {
+          needsDownload = true;
+        }
+      }
+
+      if (!needsDownload) {
+        // Rien à télécharger, on renseigne les chemins et on sort sans afficher la barre
+        _fTokens  = localPaths['tokens'];
+        _fEncoder = localPaths['encoder'];
+        _fDecoder = localPaths['decoder'];
+        _fJoiner  = localPaths['joiner'];
+        return true;
+      }
+
+      // 2) Téléchargement nécessaire → on affiche la barre
+      if (mounted) setState(() { _showModelDownloadUi = true; _downloadProgress = 0.0; });
+
+      for (var i = 0; i < _modelFiles.entries.length; i++) {
+        final entry = _modelFiles.entries.elementAt(i);
+        final key = entry.key;
+        final fileName = entry.value;
+        final localPath = await _getLocalModelPath(fileName);
+        final file = File(localPath);
+
+        // Si fichier présent mais invalide, on le supprime avant redownload
+        if (await file.exists()) {
+          final ok = key == 'tokens' ? (await file.length()) > 0 : await _looksLikeOnnx(file);
+          if (!ok) { await file.delete().catchError((_) {}); }
+        }
+
+        if (!await file.exists()) {
+          Logger.Yellow.log("Modèle '$fileName' non trouvé, téléchargement (Firebase Storage)...");
+          await file.create(recursive: true);
+
+          // Télécharge via SDK (plus robuste) avec progression
+          final ref = FirebaseStorage.instance.ref('models/$fileName');
+          final task = ref.writeToFile(file);
+          task.snapshotEvents.listen((snap) {
+            if (snap.totalBytes > 0 && mounted) {
+              final prog = snap.bytesTransferred / snap.totalBytes;
+              setState(() => _downloadProgress = (i + prog) / _modelFiles.length);
+            }
+          });
+          await task;
+          Logger.Green.log("Modèle '$fileName' téléchargé via Firebase Storage.");
+        } else {
+          Logger.Green.log("Modèle '$fileName' trouvé localement.");
+        }
+
+        // Validation finale
+        final ok = key == 'tokens' ? (await file.length()) > 0 : await _looksLikeOnnx(file);
+        if (!ok) {
+          await file.delete().catchError((_) {});
+          final msg = "Le fichier $fileName est corrompu. Réessaie le téléchargement.";
+          Logger.Red.log(msg);
+          if (mounted) setState(() => _downloadError = msg);
+          return false;
+        }
+
+        localPaths[key] = localPath;
+      }
+
+      _fTokens  = localPaths['tokens'];
+      _fEncoder = localPaths['encoder'];
+      _fDecoder = localPaths['decoder'];
+      _fJoiner  = localPaths['joiner'];
+      return true;
+
+    } catch (e) {
+      Logger.Red.log("Échec du téléchargement des modèles ASR: $e");
+      if (mounted) setState(() => _downloadError = "Vérifie ta connexion ou les autorisations Firebase Storage.");
+      return false;
+    } finally {
+      if (mounted) setState(() { _downloadProgress = null; _showModelDownloadUi = false; });
+    }
   }
 
   // ===== Init Sherpa-ONNX (API 1.12.9) =====
   Future<void> _initSherpaOnnx() async {
     try {
-      await _materializeAsrAssets();
       initBindings(); // obligatoire
 
       final model = OnlineModelConfig(
@@ -231,6 +353,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
 
   // ===== Start/Stop =====
   Future<void> _startListening() async {
+    if (testScreenShot) return; // 🛑 blocage total en screenshot
     if (_recognizer == null) {
       Logger.Red.log("ASR non initialisé");
       _scheduleDeferredErrorDisplay();
@@ -263,9 +386,10 @@ class _PronunciationScreenState extends State<PronunciationScreen>
 
       if (mounted && isRecording) {
         setState(() {
-          final base = 10.0;
-          final amp = 40.0 * (rms.clamp(0.0, 0.2) / 0.2);
-          _barHeights = List.generate(10, (i) => base + amp * (0.6 + 0.4 * Random().nextDouble()));
+          // animation plus visible
+          final base = 5.0;
+          final amp = 80.0 * (rms.clamp(0.0, 0.3) / 0.3);
+          _barHeights = List.generate(10, (i) => base + amp * (0.5 + 0.5 * Random().nextDouble()));
         });
       }
 
@@ -279,7 +403,8 @@ class _PronunciationScreenState extends State<PronunciationScreen>
 
       final partial = (_recognizer!.getResult(_asrStream!).text ?? '').trim();
       if (partial.isNotEmpty) {
-        final norm = replaceNumbersWithWords(partial);
+        var norm = replaceNumbersWithWords(partial);
+        norm = normalizeHomophonesForTarget(norm, vocabularyEnSelected); // << homophones
         setState(() => _lastWords = norm);
 
         if (norm.toLowerCase() == vocabularyEnSelected.toLowerCase()) {
@@ -292,7 +417,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
 
       // ---- 3) endpoint sherpa OU silence prolongé ----
       const double silenceRms = 0.01; // ~ -40 dBFS
-      const int    maxSilMs   = 3000; // 1 seconde
+      const int    maxSilMs   = 3000; // 3 secondes
       _lastAudioTs ??= DateTime.now();
       if (rms > silenceRms) _lastAudioTs = DateTime.now();
 
@@ -307,31 +432,39 @@ class _PronunciationScreenState extends State<PronunciationScreen>
     });
   }
 
-  Future<void> _finalizeAndStop() async {
-    try {
-      await _micSub?.cancel();
-      _micSub = null;
+  /// Arrête l'enregistrement et récupère le texte final de l'ASR.
+  Future<String> _stopRecordingAndGetFinalText() async {
+    await _micSub?.cancel();
+    _micSub = null;
+    if (await _recorder.isRecording()) {
       await _recorder.stop();
+    }
 
-      _asrStream?.inputFinished();
+    if (_recognizer == null || _asrStream == null) return '';
 
-      // flush final
-      while (_recognizer != null &&
-          _asrStream != null &&
-          _recognizer!.isReady(_asrStream!)) {
-        _recognizer!.decode(_asrStream!);
-      }
+    _asrStream!.inputFinished();
+    while (_recognizer!.isReady(_asrStream!)) {
+      _recognizer!.decode(_asrStream!);
+    }
+    return (_recognizer!.getResult(_asrStream!).text ?? '').trim();
+  }
 
-      final finalText = (_recognizer?.getResult(_asrStream!).text ?? '').trim();
-      Logger.Green.log("Final: $finalText");
-      final normalized = replaceNumbersWithWords(finalText);
+  Future<void> _finalizeAndStop() async {
+    if (!isRecording) return; // Évite les appels multiples
+    try {
+      final finalText = await _stopRecordingAndGetFinalText();
+      Logger.Green.log("Final (silence/endpoint): $finalText");
+      var normalized = replaceNumbersWithWords(finalText);
+      normalized = normalizeHomophonesForTarget(normalized, vocabularyEnSelected); // << homophones
       final ok = normalized.toLowerCase() == vocabularyEnSelected.toLowerCase();
 
-      setState(() {
-        _lastWords = normalized;
-        isCorrect = ok;
-        viewResulte = true;
-      });
+      if (mounted) {
+        setState(() {
+          _lastWords = normalized;
+          isCorrect = ok;
+          viewResulte = true;
+        });
+      }
     } catch (e) {
       Logger.Red.log("Finalize error: $e");
     } finally {
@@ -341,29 +474,21 @@ class _PronunciationScreenState extends State<PronunciationScreen>
   }
 
   Future<void> _stopListening() async {
+    if (!isRecording) return; // Évite les appels multiples
     try {
-      await _micSub?.cancel();
-      _micSub = null;
-      await _recorder.stop();
-
-      _asrStream?.inputFinished();
-
-      while (_recognizer != null &&
-          _asrStream != null &&
-          _recognizer!.isReady(_asrStream!)) {
-        _recognizer!.decode(_asrStream!);
-      }
-
-      final finalText = (_recognizer?.getResult(_asrStream!).text ?? '').trim();
+      final finalText = await _stopRecordingAndGetFinalText();
       if (finalText.isNotEmpty) {
-        Logger.Green.log("Final: $finalText");
-        final normalized = replaceNumbersWithWords(finalText);
+        Logger.Green.log("Final (user stop): $finalText");
+        var normalized = replaceNumbersWithWords(finalText);
+        normalized = normalizeHomophonesForTarget(normalized, vocabularyEnSelected); // << homophones
         final ok = normalized.toLowerCase() == vocabularyEnSelected.toLowerCase();
-        setState(() {
-          _lastWords = normalized;
-          isCorrect = ok;
-          viewResulte = true;
-        });
+        if (mounted) {
+          setState(() {
+            _lastWords = normalized;
+            isCorrect = ok;
+            viewResulte = true;
+          });
+        }
       }
     } catch (_) {
     } finally {
@@ -392,6 +517,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
             vocabularyEnSelected = data[randomItemData]['EN'];
           }
 
+          // ✅ En screenshot, on n’intègre PAS testScreenShot ici :
           final bool canTapRecord = _asrReady && _micReady && !_initInProgress;
 
           return Column(
@@ -460,11 +586,38 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                 ],
               ),
 
+              // === Indicateur de téléchargement/erreur pendant l'init ===
+              if (_initInProgress && !_asrReady && _showModelDownloadUi)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+                  child: Column(
+                    children: [
+                      if (_downloadProgress != null) ...[
+                        Text(
+                          "${context.loc.downloading_models} (${(_downloadProgress! * 100).toStringAsFixed(0)}%)",
+                          style: const TextStyle(color: Colors.black54),
+                        ),
+                        const SizedBox(height: 8),
+                        LinearProgressIndicator(value: _downloadProgress),
+                      ],
+                      if (_downloadError != null) ...[
+                        const SizedBox(height: 8),
+                        const Icon(Icons.error_outline, color: Colors.red, size: 24),
+                        const SizedBox(height: 4),
+                        Text(
+                          "${context.loc.error_downloading_models}: $_downloadError",
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(color: Colors.red),
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
 
-
-              // === Bouton enregistrement (désactivé tant que !_asrReady || !_micReady || _initInProgress) ===
+              // === Bouton enregistrement ===
               IgnorePointer(
-                ignoring: !canTapRecord || isRecording,
+                // En screenshot: jamais ignoré (cliquable), sinon logique habituelle
+                ignoring: ((!canTapRecord || isRecording) && !testScreenShot),
                 child: GestureDetector(
                   onTap: _toggleRecording,
                   child: SizedBox(
@@ -509,7 +662,9 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                             shape: BoxShape.circle,
                             color: isRecording
                                 ? Colors.red
-                                : (canTapRecord ? Colors.green : Colors.grey), // gris si désactivé
+                                : (testScreenShot
+                                ? Colors.green // 🟢 En screenshot: vert
+                                : (canTapRecord ? Colors.green : Colors.grey)),
                             boxShadow: const [
                               BoxShadow(
                                 color: Colors.black26,
@@ -615,13 +770,13 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                 ],
               ),
 
-              // Petit hint si désactivé
-              if (!canTapRecord && !_initInProgress)
+              // Petit hint si désactivé (🚫 pas en screenshot)
+              if (!canTapRecord && !_initInProgress && !testScreenShot)
                 Padding(
                   padding: const EdgeInsets.only(top: 12),
                   child: Text(
                     _micReady
-                        ? context.loc.unknown_error // tu peux mettre un message dédié “ASR non prêt…”
+                        ? (_downloadError ?? context.loc.unknown_error)
                         : 'Micro non autorisé',
                     style: const TextStyle(color: Colors.grey),
                   ),
@@ -695,6 +850,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
 
   // Bouton mic — UI instantanée + ASR en arrière-plan
   void _toggleRecording() async {
+    if (testScreenShot) return; // 🛑 pas d’action en mode screenshot
     // sécurité: on ignore si pas prêt
     if (!_asrReady || !_micReady || _initInProgress) return;
 
@@ -727,6 +883,90 @@ class _PronunciationScreenState extends State<PronunciationScreen>
     };
     final regex = RegExp(r'\b\d+\b');
     return input.replaceAllMapped(regex, (m) => numberWords[m.group(0)] ?? m.group(0)!);
+  }
+
+  String _canon(String s) => s.trim().toLowerCase().replaceAll('’', "'");
+
+  /// Corrige lettres & homophones: si `recognized` et `expected` appartiennent au même set,
+  /// on force la sortie sur `expected`. S'applique seulement aux réponses d'un seul mot.
+  String normalizeHomophonesForTarget(String recognized, String expected) {
+    if (!_homophonesFix) return recognized;
+    final rRaw = recognized.trim();
+    if (rRaw.isEmpty) return recognized;
+    if (rRaw.split(RegExp(r'\s+')).length > 1) return recognized;
+
+    final r = _canon(rRaw);
+    final e = _canon(expected);
+
+    const List<Set<String>> homophoneSets = [
+      // Lettres ~ mots
+      {'a'},
+      {'b', 'be', 'bee'},
+      {'c', 'see', 'sea'},
+      {'d', 'dee'},
+      {'e'},
+      {'f', 'ef', 'eff'},
+      {'g', 'gee'},
+      {'h', 'aitch'},
+      {'i', 'eye'},
+      {'j', 'jay'},
+      {'k', 'kay'},
+      {'l', 'el'},
+      {'m', 'em'},
+      {'n', 'en'},
+      {'o', 'oh', 'owe'},
+      {'p', 'pee', 'pea'},
+      {'q', 'cue', 'queue'},
+      {'r', 'are', 'ar'},
+      {'s', 'ess'},
+      {'t', 'tee', 'tea'},
+      {'u', 'you', 'yew'},
+      {'v', 'vee'},
+      {'w', 'double u', 'double-u', 'doubleu'},
+      {'x', 'ex'},
+      {'y', 'why'},
+      {'z', 'zee', 'zed'},
+
+      // Mots ~ mots (fréquents)
+      {'to', 'too', 'two'},
+      {'for', 'four', 'fore'},
+      {"there", "their", "they're"},
+      {'your', "you're"},
+      {'by', 'buy', 'bye'},
+      {'one', 'won'},
+      {'no', 'know'},
+      {'here', 'hear'},
+      {'which', 'witch'},
+      {'weather', 'whether'},
+      {'bear', 'bare'},
+      {'break', 'brake'},
+      {'cell', 'sell'},
+      {'flower', 'flour'},
+      {'hole', 'whole'},
+      {'peace', 'piece'},
+      {'pair', 'pare', 'pear'},
+      {'pain', 'pane'},
+      {'son', 'sun'},
+      {'some', 'sum'},
+      {'wait', 'weight'},
+      {'week', 'weak'},
+      {'would', 'wood'},
+      {'new', 'knew'},
+      {'meat', 'meet'},
+      {'road', 'rode', 'rowed'},
+      {'plane', 'plain'},
+      {'stair', 'stare'},
+      {'mail', 'male'},
+      {'morning', 'mourning'},
+      {'so', 'sew', 'sow'},
+    ];
+
+    for (final set in homophoneSets) {
+      if (set.contains(r) && set.contains(e)) {
+        return expected;
+      }
+    }
+    return recognized;
   }
 
   Float32List _pcm16ToF32(Uint8List bytes) {

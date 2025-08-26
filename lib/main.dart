@@ -25,6 +25,12 @@ void main({
   String? localForce=null,
   bool forFeatureGraphicParam=false
 }) async {
+
+  if(localForce!=null){
+    testScreenShot=true;
+    debugMode=false;
+  }
+
   WidgetsFlutterBinding.ensureInitialized();
   forFeatureGraphic=forFeatureGraphicParam;
   if(!testScreenShot) {

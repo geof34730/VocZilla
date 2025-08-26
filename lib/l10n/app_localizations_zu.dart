@@ -132,6 +132,9 @@ class AppLocalizationsZu extends AppLocalizations {
   String get pronunciation_error3 => 'Iphutha lokuqala ukulalela';
 
   @override
+  String get pronunciation_try_again => 'Angizange ngiqonde. Sicela uzame futhi.';
+
+  @override
   String get pronunciation_error4 => 'Ukuqashelwa kwezwi akulungile.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get your_position => 'Isikhundla sakho';
+
+  @override
+  String get downloading_models => 'Ilanda amamodeli...';
+
+  @override
+  String get error_downloading_models => 'Ukulanda kuhlulekile';
+
+  @override
+  String get error_check_connection => 'Sicela uhlole uxhumano lwakho lwe-inthanethi.';
 }

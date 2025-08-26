@@ -43,7 +43,7 @@ fastlane deliver \
   --screenshots_path "$SCREENSHOT_DIR" \
   --skip_binary_upload true \
   --skip_metadata false \
-  --overwrite_screenshots false \
+  --overwrite_screenshots true \
   --run_precheck_before_submit false \
   --ignore_language_directory_validation true \
   --app_version "$VERSION_NAME" \

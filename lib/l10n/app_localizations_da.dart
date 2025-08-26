@@ -132,6 +132,9 @@ class AppLocalizationsDa extends AppLocalizations {
   String get pronunciation_error3 => 'Fejl ved opstart af lytning';
 
   @override
+  String get pronunciation_try_again => 'Jeg forstod det ikke. Prøv igen.';
+
+  @override
   String get pronunciation_error4 => 'Stemmegenkendelse er ikke klar.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get your_position => 'Din position';
+
+  @override
+  String get downloading_models => 'Downloader modellerne...';
+
+  @override
+  String get error_downloading_models => 'Download mislykkedes';
+
+  @override
+  String get error_check_connection => 'Tjek venligst din internetforbindelse.';
 }

@@ -132,6 +132,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get pronunciation_error3 => 'Eroare la pornirea ascultării';
 
   @override
+  String get pronunciation_try_again => 'Nu am înțeles. Te rog încearcă din nou.';
+
+  @override
   String get pronunciation_error4 => 'Recunoașterea vocală nu este gata.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get your_position => 'Poziția dumneavoastră';
+
+  @override
+  String get downloading_models => 'Descărcarea modelelor...';
+
+  @override
+  String get error_downloading_models => 'Descărcarea a eșuat';
+
+  @override
+  String get error_check_connection => 'Vă rugăm să verificați conexiunea la internet.';
 }

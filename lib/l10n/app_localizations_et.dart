@@ -132,6 +132,9 @@ class AppLocalizationsEt extends AppLocalizations {
   String get pronunciation_error3 => 'Viga kuulamise alustamisel';
 
   @override
+  String get pronunciation_try_again => 'Ma ei saanud aru. Palun proovi uuesti.';
+
+  @override
   String get pronunciation_error4 => 'Häältuvastus pole valmis.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get your_position => 'Teie positsioon';
+
+  @override
+  String get downloading_models => 'Mudelite allalaadimine...';
+
+  @override
+  String get error_downloading_models => 'Allalaadimine ebaõnnestus';
+
+  @override
+  String get error_check_connection => 'Palun kontrollige oma internetiühendust.';
 }

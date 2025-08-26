@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Sidinga ukufinyelela kukhamera yakho ukuze sikuvumele ukuthi uthathe isithombe sephrofayela esisha.",
     "nsmicrophoneusagedescription": "Sidinga imakrofoni ukuze sikwazi ukurekhodwa komsindo kwezinye izici.",
     "nsspeechrecognitionusagedescription": "Sisebenzisa ukunakwa kwezwi ukukuvumela ukuthi uhlanganyele nohlelo lokusebenza usebenzisa izwi lakho.",
-    "your_position": "Isikhundla sakho"
+    "your_position": "Isikhundla sakho",
+    "pronunciation_try_again": "Angizange ngiqonde. Sicela uzame futhi.",
+    "downloading_models": "Ilanda amamodeli...",
+    "error_downloading_models": "Ukulanda kuhlulekile",
+    "error_check_connection": "Sicela uhlole uxhumano lwakho lwe-inthanethi."
 }

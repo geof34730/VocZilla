@@ -132,6 +132,9 @@ class AppLocalizationsMy extends AppLocalizations {
   String get pronunciation_error3 => 'နားထောင်ခြင်းစတင်ရာတွင် အမှားအယွင်းရှိသည်။';
 
   @override
+  String get pronunciation_try_again => 'နားမလည်ခဲ့ပါ။ ထပ်စမ်းကြည့်ပါ။';
+
+  @override
   String get pronunciation_error4 => 'အသံအသိအမှတ်ပြုခြင်း အဆင်သင့်မဖြစ်သေးပါ။';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get your_position => 'မင်းရဲ့ရာထူး';
+
+  @override
+  String get downloading_models => 'မော်ဒယ်များကို ဒေါင်းလုဒ်လုပ်နေသည်...';
+
+  @override
+  String get error_downloading_models => 'ဒေါင်းလုဒ် မအောင်မြင်ပါ။';
+
+  @override
+  String get error_check_connection => 'သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပါ။';
 }

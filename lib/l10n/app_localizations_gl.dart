@@ -132,6 +132,9 @@ class AppLocalizationsGl extends AppLocalizations {
   String get pronunciation_error3 => 'Produciuse un erro ao iniciar a escoita';
 
   @override
+  String get pronunciation_try_again => 'Non o entendín. Téntao de novo.';
+
+  @override
   String get pronunciation_error4 => 'O recoñecemento de voz non está listo.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get your_position => 'A túa posición';
+
+  @override
+  String get downloading_models => 'Descargando os modelos...';
+
+  @override
+  String get error_downloading_models => 'Fallou a descarga';
+
+  @override
+  String get error_check_connection => 'Comproba a túa conexión a internet.';
 }

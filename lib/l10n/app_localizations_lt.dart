@@ -132,6 +132,9 @@ class AppLocalizationsLt extends AppLocalizations {
   String get pronunciation_error3 => 'Klaida pradedant klausytis';
 
   @override
+  String get pronunciation_try_again => 'Nesupratau. Bandykite dar kartą.';
+
+  @override
   String get pronunciation_error4 => 'Balso atpažinimas neparengtas.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get your_position => 'Jūsų pozicija';
+
+  @override
+  String get downloading_models => 'Modelių atsisiuntimas...';
+
+  @override
+  String get error_downloading_models => 'Atsisiuntimas nepavyko';
+
+  @override
+  String get error_check_connection => 'Patikrinkite interneto ryšį.';
 }

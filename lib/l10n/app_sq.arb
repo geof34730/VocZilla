@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Na duhet qasje në kamerën tënde për të të lejuar të bësh një fotografi të re profili.",
     "nsmicrophoneusagedescription": "Na duhet mikrofoni për të aktivizuar regjistrimin audio në disa veçori.",
     "nsspeechrecognitionusagedescription": "Ne përdorim njohjen e zërit për t'ju lejuar të bashkëveproni me aplikacionin duke përdorur zërin tuaj.",
-    "your_position": "Pozicioni juaj"
+    "your_position": "Pozicioni juaj",
+    "pronunciation_try_again": "Nuk e kuptova. Ju lutem provoni përsëri.",
+    "downloading_models": "Duke shkarkuar modelet...",
+    "error_downloading_models": "Shkarkimi dështoi",
+    "error_check_connection": "Ju lutemi kontrolloni lidhjen tuaj të internetit."
 }

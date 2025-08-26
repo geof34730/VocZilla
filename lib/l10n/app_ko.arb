@@ -180,5 +180,9 @@
     "nscamerausagedescription": "새로운 프로필 사진을 찍으려면 카메라에 접근해야 합니다.",
     "nsmicrophoneusagedescription": "일부 기능에서 오디오 녹음을 하려면 마이크가 필요합니다.",
     "nsspeechrecognitionusagedescription": "음성 인식을 사용하면 음성으로 애플리케이션과 상호 작용할 수 있습니다.",
-    "your_position": "당신의 위치"
+    "your_position": "당신의 위치",
+    "pronunciation_try_again": "이해하지 못했습니다. 다시 시도해 주세요.",
+    "downloading_models": "모델을 다운로드하는 중...",
+    "error_downloading_models": "다운로드에 실패했습니다",
+    "error_check_connection": "인터넷 연결을 확인하세요."
 }

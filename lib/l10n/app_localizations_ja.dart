@@ -132,6 +132,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get pronunciation_error3 => 'リスニング開始エラー';
 
   @override
+  String get pronunciation_try_again => '理解できませんでした。もう一度お試しください。';
+
+  @override
   String get pronunciation_error4 => '音声認識の準備ができていません。';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get your_position => 'あなたの立場';
+
+  @override
+  String get downloading_models => 'モデルをダウンロードしています...';
+
+  @override
+  String get error_downloading_models => 'ダウンロードに失敗しました';
+
+  @override
+  String get error_check_connection => 'インターネット接続を確認してください。';
 }

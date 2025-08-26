@@ -22,7 +22,7 @@ voczilla-play.json
 .env
 firebase.json
 /firebase.json
-assets/asr_en/encoder-epoch-99-avg-1.int8.onnx
+assets/asr_en/
 
 node_modules
 

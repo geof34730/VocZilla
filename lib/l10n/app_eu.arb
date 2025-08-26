@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Profil-argazki berri bat atera ahal izateko, zure kamerarako sarbidea behar dugu.",
     "nsmicrophoneusagedescription": "Mikrofonoa behar dugu funtzio batzuetan audioa grabatzeko aukera emateko.",
     "nsspeechrecognitionusagedescription": "Ahots-ezagutza erabiltzen dugu aplikazioarekin zure ahotsa erabiliz elkarreragin ahal izateko.",
-    "your_position": "Zure posizioa"
+    "your_position": "Zure posizioa",
+    "pronunciation_try_again": "Ez dut ulertu. Saiatu berriro, mesedez.",
+    "downloading_models": "Modeloak deskargatzen...",
+    "error_downloading_models": "Deskargatzeak huts egin du",
+    "error_check_connection": "Mesedez, egiaztatu zure Interneteko konexioa."
 }

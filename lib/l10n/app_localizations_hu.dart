@@ -132,6 +132,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get pronunciation_error3 => 'Hiba a hallgatás megkezdésekor';
 
   @override
+  String get pronunciation_try_again => 'Nem értettem. Kérlek, próbáld újra.';
+
+  @override
   String get pronunciation_error4 => 'A hangfelismerés nem áll készen.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get your_position => 'A pozíciód';
+
+  @override
+  String get downloading_models => 'A modellek letöltése...';
+
+  @override
+  String get error_downloading_models => 'Letöltés sikertelen';
+
+  @override
+  String get error_check_connection => 'Kérjük, ellenőrizze az internetkapcsolatát.';
 }

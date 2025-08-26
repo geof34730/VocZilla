@@ -132,6 +132,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get pronunciation_error3 => '开始监听时出错';
 
   @override
+  String get pronunciation_try_again => '我不明白。请重试。';
+
+  @override
   String get pronunciation_error4 => '语音识别尚未准备好。';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get your_position => '您的职位';
+
+  @override
+  String get downloading_models => '正在下载模型...';
+
+  @override
+  String get error_downloading_models => '下载失败';
+
+  @override
+  String get error_check_connection => '请检查您的互联网连接。';
 }

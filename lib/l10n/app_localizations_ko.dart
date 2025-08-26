@@ -132,6 +132,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get pronunciation_error3 => '청취 시작 오류';
 
   @override
+  String get pronunciation_try_again => '이해하지 못했습니다. 다시 시도해 주세요.';
+
+  @override
   String get pronunciation_error4 => '음성 인식 기능이 준비되지 않았습니다.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get your_position => '당신의 위치';
+
+  @override
+  String get downloading_models => '모델을 다운로드하는 중...';
+
+  @override
+  String get error_downloading_models => '다운로드에 실패했습니다';
+
+  @override
+  String get error_check_connection => '인터넷 연결을 확인하세요.';
 }

@@ -132,6 +132,9 @@ class AppLocalizationsUz extends AppLocalizations {
   String get pronunciation_error3 => 'Tinglashni boshlashda xatolik yuz berdi';
 
   @override
+  String get pronunciation_try_again => 'Men tushunmadim. Iltimos, qayta urinib koʻring.';
+
+  @override
   String get pronunciation_error4 => 'Ovozni aniqlash tayyor emas.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get your_position => 'Sizning pozitsiyangiz';
+
+  @override
+  String get downloading_models => 'Modellar yuklab olinmoqda...';
+
+  @override
+  String get error_downloading_models => 'Yuklab bo‘lmadi';
+
+  @override
+  String get error_check_connection => 'Internet ulanishingizni tekshiring.';
 }

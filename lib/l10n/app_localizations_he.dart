@@ -132,6 +132,9 @@ class AppLocalizationsHe extends AppLocalizations {
   String get pronunciation_error3 => 'שגיאה בהתחלת ההאזנה';
 
   @override
+  String get pronunciation_try_again => 'לא הבנתי. אנא נסה שוב.';
+
+  @override
   String get pronunciation_error4 => 'זיהוי קולי אינו מוכן.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get your_position => 'המיקום שלך';
+
+  @override
+  String get downloading_models => 'מוריד את המודלים...';
+
+  @override
+  String get error_downloading_models => 'ההורדה נכשלה';
+
+  @override
+  String get error_check_connection => 'אנא בדוק את חיבור האינטרנט שלך.';
 }

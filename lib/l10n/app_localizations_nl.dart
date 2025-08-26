@@ -132,6 +132,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get pronunciation_error3 => 'Fout bij het starten van luisteren';
 
   @override
+  String get pronunciation_try_again => 'Ik heb het niet begrepen. Probeer het opnieuw.';
+
+  @override
   String get pronunciation_error4 => 'Spraakherkenning is nog niet gereed.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get your_position => 'Jouw positie';
+
+  @override
+  String get downloading_models => 'De modellen worden gedownload...';
+
+  @override
+  String get error_downloading_models => 'Downloaden mislukt';
+
+  @override
+  String get error_check_connection => 'Controleer uw internetverbinding.';
 }

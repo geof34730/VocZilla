@@ -111,7 +111,7 @@ const Map<String, String> _playLocaleMapping = {
 /// CORRIGÉ : Liste des locales officiellement supportées par VOTRE Google Play Store.
 const Set<String> _playSupportedLocales = {
   'be','ar','af','az', 'de', 'am', 'en-US', 'en-GB', 'bg', 'ca', 'zh-HK', 'zh-CN', 'zh-TW',
-  'ko', 'hr', 'da', 'es-419', 'es-ES', 'et', 'fi', 'fr-CA', 'fr-FR', 'el','si'
+  'ko', 'hr', 'da', 'es-419', 'es-ES', 'et', 'fi', 'fr-CA', 'fr-FR', 'el','si',
    'hi', 'hu', 'id', 'in', 'is', 'it', 'ja', 'lv', 'lt', 'ms', 'nl','mk','my','ne',
   'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sr', 'sk', 'sl', 'sv', 'sw','ka','km','kn','ky','lo','mn','mr',
   'fil', 'cs', 'th', 'tr', 'uk', 'vi', 'zu','gu','kk','pa','sq','ta','te','ur','bn','eu','fa','gl','he','hy','ml'

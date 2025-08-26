@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Uue profiilipildi tegemiseks vajame juurdepääsu teie kaamerale.",
     "nsmicrophoneusagedescription": "Mõnes funktsioonis heli salvestamise lubamiseks vajame mikrofoni.",
     "nsspeechrecognitionusagedescription": "Kasutame hääletuvastust, et saaksite rakendusega oma hääle abil suhelda.",
-    "your_position": "Teie positsioon"
+    "your_position": "Teie positsioon",
+    "pronunciation_try_again": "Ma ei saanud aru. Palun proovi uuesti.",
+    "downloading_models": "Mudelite allalaadimine...",
+    "error_downloading_models": "Allalaadimine ebaõnnestus",
+    "error_check_connection": "Palun kontrollige oma internetiühendust."
 }

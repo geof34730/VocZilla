@@ -132,6 +132,9 @@ class AppLocalizationsKn extends AppLocalizations {
   String get pronunciation_error3 => 'ಕೇಳುವಿಕೆಯನ್ನು ಪ್ರಾರಂಭಿಸುವಲ್ಲಿ ದೋಷ';
 
   @override
+  String get pronunciation_try_again => 'ನನಗೆ ಅರ್ಥವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
+
+  @override
   String get pronunciation_error4 => 'ಧ್ವನಿ ಗುರುತಿಸುವಿಕೆ ಸಿದ್ಧವಾಗಿಲ್ಲ.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get your_position => 'ನಿಮ್ಮ ಸ್ಥಾನ';
+
+  @override
+  String get downloading_models => 'ಮಾದರಿಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...';
+
+  @override
+  String get error_downloading_models => 'ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಗಿದೆ';
+
+  @override
+  String get error_check_connection => 'ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ.';
 }

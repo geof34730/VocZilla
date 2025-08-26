@@ -180,5 +180,9 @@
     "nscamerausagedescription": "አዲስ የመገለጫ ፎቶ እንዲያነሱ ለማስቻል የካሜራዎን መዳረሻ እንፈልጋለን።",
     "nsmicrophoneusagedescription": "በአንዳንድ ባህሪያት የድምጽ ቀረጻን ለማንቃት ማይክሮፎኑን እንፈልጋለን።",
     "nsspeechrecognitionusagedescription": "ድምፅህን ተጠቅመህ ከመተግበሪያው ጋር እንድትገናኝ ለመፍቀድ የድምጽ ማወቂያ እንጠቀማለን።",
-    "your_position": "የእርስዎ አቋም"
+    "your_position": "የእርስዎ አቋም",
+    "pronunciation_try_again": "አልገባኝም። እባክዎ እንደገና ይሞክሩ።",
+    "downloading_models": "ሞዴሎቹን በማውረድ ላይ...",
+    "error_downloading_models": "ማውረድ አልተሳካም።",
+    "error_check_connection": "እባክዎ የበይነመረብ ግንኙነትዎን ያረጋግጡ።"
 }

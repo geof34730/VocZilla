@@ -132,6 +132,9 @@ class AppLocalizationsSr extends AppLocalizations {
   String get pronunciation_error3 => 'Грешка при почетку слушања';
 
   @override
+  String get pronunciation_try_again => 'Нисам разумео/ла. Молим вас покушајте поново.';
+
+  @override
   String get pronunciation_error4 => 'Препознавање гласа није спремно.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get your_position => 'Ваша позиција';
+
+  @override
+  String get downloading_models => 'Преузимање модела...';
+
+  @override
+  String get error_downloading_models => 'Преузимање није успело';
+
+  @override
+  String get error_check_connection => 'Молимо вас да проверите интернет везу.';
 }

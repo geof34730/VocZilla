@@ -132,6 +132,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get pronunciation_error3 => 'Ralat semasa mula mendengar';
 
   @override
+  String get pronunciation_try_again => 'Saya tidak faham. Sila cuba lagi.';
+
+  @override
   String get pronunciation_error4 => 'Pengecaman suara belum sedia.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get your_position => 'kedudukan awak';
+
+  @override
+  String get downloading_models => 'Memuat turun model...';
+
+  @override
+  String get error_downloading_models => 'Muat turun gagal';
+
+  @override
+  String get error_check_connection => 'Sila semak sambungan internet anda.';
 }

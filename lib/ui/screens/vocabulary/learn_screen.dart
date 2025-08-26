@@ -24,6 +24,8 @@ class LearnScreen extends StatefulWidget {
 class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStateMixin {
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
   late double screenWidth;
+  late double screenHeight;
+  late double sizeCardLearn;
   int numItemVocabulary = 0;
   late AnimationController _controller;
   late int durationAnimationFlipCard = 500;
@@ -58,6 +60,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
   Widget build(BuildContext context) {
 
     screenWidth = MediaQuery.of(context).size.width;
+    screenHeight = MediaQuery.of(context).size.height;
+    sizeCardLearn= (screenWidth * 0.8) > (screenHeight * 0.6) ? screenHeight * 0.6 : screenWidth * 0.8;
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
       builder: (context, state) {
         if (state is VocabulairesLoading) {
@@ -121,8 +125,9 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                         color: AppColors.cardBackground,
                                         elevation: 8.0,
                                         child: Container(
-                                          width: screenWidth * 0.8,
-                                          height: screenWidth * 0.8,
+                                          width: sizeCardLearn,
+                                          height: sizeCardLearn,
+
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
@@ -133,6 +138,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black87,
                                                 ),
+                                                textAlign: TextAlign.center,
+
                                               ),
                                             ],
                                           ),
@@ -147,8 +154,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                         elevation: 8.0,
                                         child: (visibilityBack ?
                                         Container(
-                                          width: screenWidth * 0.8,
-                                          height: screenWidth * 0.8,
+                                          width: sizeCardLearn,
+                                          height: sizeCardLearn,
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
@@ -159,6 +166,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black87,
                                                 ),
+                                                textAlign: TextAlign.center,
                                               ),
                                               SizedBox(height: 30),
                                               PlaySoond(
@@ -171,8 +179,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                         )
                                             :
                                         Container(
-                                            width: screenWidth * 0.8,
-                                            height: screenWidth * 0.8,
+                                            width: sizeCardLearn,
+                                            height: sizeCardLearn,
                                             child:Text('')
                                         )
                                         )
@@ -187,8 +195,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Container(
-                              width: screenWidth * 0.8,
-                              height: screenWidth * 0.8,
+                              width: sizeCardLearn,
+                              height: sizeCardLearn,
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

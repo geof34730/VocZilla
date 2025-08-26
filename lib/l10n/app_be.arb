@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Нам патрэбен доступ да вашай камеры, каб вы маглі зрабіць новую фатаграфію профілю.",
     "nsmicrophoneusagedescription": "Нам патрэбен мікрафон, каб уключыць запіс гуку ў некаторых функцыях.",
     "nsspeechrecognitionusagedescription": "Мы выкарыстоўваем распазнаванне голасу, каб вы маглі ўзаемадзейнічаць з дадаткам з дапамогай голасу.",
-    "your_position": "Ваша пазіцыя"
+    "your_position": "Ваша пазіцыя",
+    "pronunciation_try_again": "Я не зразумеў. Паспрабуйце яшчэ раз.",
+    "downloading_models": "Загрузка мадэляў...",
+    "error_downloading_models": "Памылка загрузкі",
+    "error_check_connection": "Калі ласка, праверце падключэнне да Інтэрнэту."
 }

@@ -93,11 +93,12 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                             Padding(
                               padding: const EdgeInsets.only(top: 20),
                               child: Text(
-                                "${data[randomItemData]['EN']} = ${data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)]}",
+                                "${data[randomItemData]['EN']} = ${data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)]} ",
                                 style: TextStyle(
                                   fontSize: 40.0,
                                   fontWeight: FontWeight.bold,
                                 ),
+                                textAlign: TextAlign.center,
                               ),
                             ),
                             Padding(

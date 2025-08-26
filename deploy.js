@@ -8,9 +8,9 @@ require('dotenv').config();
 // Fonction pour lire l'Appfile et extraire les informations nécessaires
 function getAppfileInfo(appfilePath) {
     return {
-        appleId: process.env.FASTLANE_APPLE_ID,
+        appleId: process.env.ENV_FASTLANE_APPLE_ID,
         appIdentifier: process.env.ENV_FASTLANE_APP_ID,
-        teamId: process.env.FASTLANE_TEAM_ID
+        teamId: process.env.ENV_FASTLANE_TEAM_ID
     };
 }
 
@@ -83,7 +83,7 @@ function getAppfileInfo(appfilePath) {
     execSync(`fastlane all generate_metadata`, { stdio: "inherit" });
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
     execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
-
+/*
             console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
             execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -107,7 +107,7 @@ function getAppfileInfo(appfilePath) {
             --aab build/app/outputs/bundle/release/app-release.aab \
             --track ${track} \
             --json_key ${serviceAccountPath} \
-            --package_name ${appIdentifier} \
+            --package_name com.geoffreypetain.voczilla.voczilla \
             --metadata_path fastlane/metadata/android \
             --skip_upload_changelogs false \
             --skip_upload_images false \
@@ -120,7 +120,7 @@ function getAppfileInfo(appfilePath) {
         console.error("\n❌ Échec du déploiement Android :", error.message);
         process.exit(1);
     }
-
+*/
     console.log("\n✅ Déploiement Android terminé avec succès !");
 
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
@@ -137,8 +137,19 @@ function getAppfileInfo(appfilePath) {
         process.exit(1);
     }
     else{
-        console.error("YES !!!!! La variable FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD est trouvé.");
+        console.log("YES !!!!! La variable FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD est trouvé.");
     }
+
+    // Vérification cruciale de la session Fastlane
+    if (!process.env.FASTLANE_SESSION) {
+        console.error("❌ La variable d'environnement FASTLANE_SESSION est manquante.");
+        console.error("   Veuillez d'abord exécuter : source ./SH/fastlane-auth.sh");
+        process.exit(1);
+    }
+    else{
+        console.log("YES !!!!! La variable FASTLANE_SESSION est trouvé.");
+    }
+
 
 
     try {
@@ -163,9 +174,13 @@ function getAppfileInfo(appfilePath) {
         execSync(command, {
             stdio: "inherit",
             env: {
+                // On s'assure de passer toutes les variables d'environnement actuelles
                 ...process.env,
+                // Et on ajoute/remplace celles nécessaires pour Fastlane
                 FASTLANE_VERBOSE: "1",
                 FASTLANE_SKIP_UPDATE_CHECK: "1",
+                FASTLANE_USER: process.env.ENV_FASTLANE_APPLE_ID, // ou ENV_FASTLANE_USER
+                FASTLANE_APP_IDENTIFIER: process.env.ENV_FASTLANE_APP_ID,
                 FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: process.env.ENV_FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD,
             }
         });
@@ -212,4 +227,3 @@ function getAppfileInfo(appfilePath) {
 
 
 })();
-

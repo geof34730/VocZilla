@@ -132,6 +132,9 @@ class AppLocalizationsKk extends AppLocalizations {
   String get pronunciation_error3 => 'Тыңдауды бастау қатесі';
 
   @override
+  String get pronunciation_try_again => 'Мен түсінбедім. Қайталап көріңіз.';
+
+  @override
   String get pronunciation_error4 => 'Дауысты тану дайын емес.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get your_position => 'Сіздің ұстанымыңыз';
+
+  @override
+  String get downloading_models => 'Үлгілер жүктелуде...';
+
+  @override
+  String get error_downloading_models => 'Жүктеп алу сәтсіз аяқталды';
+
+  @override
+  String get error_check_connection => 'Интернет байланысын тексеріңіз.';
 }

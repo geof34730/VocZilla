@@ -1252,6 +1252,9 @@ PODS:
   - Firebase/Messaging (11.15.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 11.15.0)
+  - Firebase/Storage (11.15.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 11.15.0)
   - firebase_analytics (11.6.0):
     - Firebase/Analytics (= 11.15.0)
     - firebase_core
@@ -1269,6 +1272,10 @@ PODS:
     - Flutter
   - firebase_messaging (15.2.10):
     - Firebase/Messaging (= 11.15.0)
+    - firebase_core
+    - Flutter
+  - firebase_storage (12.4.10):
+    - Firebase/Storage (= 11.15.0)
     - firebase_core
     - Flutter
   - FirebaseABTesting (11.15.0):
@@ -1361,6 +1368,13 @@ PODS:
     - nanopb (~> 3.30910.0)
   - FirebaseMessagingInterop (11.15.0)
   - FirebaseSharedSwift (11.15.0)
+  - FirebaseStorage (11.15.0):
+    - FirebaseAppCheckInterop (~> 11.0)
+    - FirebaseAuthInterop (~> 11.0)
+    - FirebaseCore (~> 11.15.0)
+    - FirebaseCoreExtension (~> 11.15.0)
+    - GoogleUtilities/Environment (~> 8.1)
+    - GTMSessionFetcher/Core (< 5.0, >= 3.4)
   - Flutter (1.0.0)
   - flutter_facebook_auth (7.1.2):
     - FBSDKLoginKit (~> 18.0.0)
@@ -1583,6 +1597,7 @@ DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_in_app_messaging (from `.symlinks/plugins/firebase_in_app_messaging/ios`)
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
+  - firebase_storage (from `.symlinks/plugins/firebase_storage/ios`)
   - Flutter (from `Flutter`)
   - flutter_facebook_auth (from `.symlinks/plugins/flutter_facebook_auth/ios`)
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
@@ -1629,6 +1644,7 @@ SPEC REPOS:
     - FirebaseMessaging
     - FirebaseMessagingInterop
     - FirebaseSharedSwift
+    - FirebaseStorage
     - GoogleAdsOnDeviceConversion
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -1664,6 +1680,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_in_app_messaging/ios"
   firebase_messaging:
     :path: ".symlinks/plugins/firebase_messaging/ios"
+  firebase_storage:
+    :path: ".symlinks/plugins/firebase_storage/ios"
   Flutter:
     :path: Flutter
   flutter_facebook_auth:
@@ -1719,6 +1737,7 @@ SPEC CHECKSUMS:
   firebase_core: 995454a784ff288be5689b796deb9e9fa3601818
   firebase_in_app_messaging: 903a0e11af637c36216b4ab12fbef2af94ead656
   firebase_messaging: f4a41dd102ac18b840eba3f39d67e77922d3f707
+  firebase_storage: 1144b3236855c52ff52741b12374862ee84d5a28
   FirebaseABTesting: 5e9d432834aebf27ab72100d37af44dfbe8d82f7
   FirebaseAnalytics: 6433dfd311ba78084fc93bdfc145e8cb75740eae
   FirebaseAppCheckInterop: 06fe5a3799278ae4667e6c432edd86b1030fa3df
@@ -1735,6 +1754,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: 3b26e2cee503815e01c3701236b020aa9b576f09
   FirebaseMessagingInterop: 63e504b147a7206cfe64cbe2f40c2ddd009945bd
   FirebaseSharedSwift: e17c654ef1f1a616b0b33054e663ad1035c8fd40
+  FirebaseStorage: 50fc9ee147392943e492467db6b52759b0447037
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   flutter_facebook_auth: d97dc09216aebd99d7ac52360186a630f67bdf18
   flutter_local_notifications: a5a732f069baa862e728d839dd2ebb904737effb

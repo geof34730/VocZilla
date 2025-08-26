@@ -132,6 +132,9 @@ class AppLocalizationsMn extends AppLocalizations {
   String get pronunciation_error3 => 'Сонсож эхлэхэд алдаа гарлаа';
 
   @override
+  String get pronunciation_try_again => 'Би ойлгосонгүй. Дахин оролдоно уу.';
+
+  @override
   String get pronunciation_error4 => 'Дуу таних бэлэн биш байна.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get your_position => 'Таны байр суурь';
+
+  @override
+  String get downloading_models => 'Загваруудыг татаж авч байна...';
+
+  @override
+  String get error_downloading_models => 'Татаж чадсангүй';
+
+  @override
+  String get error_check_connection => 'Интернэт холболтоо шалгана уу.';
 }

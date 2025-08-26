@@ -180,5 +180,9 @@
     "nscamerausagedescription": "برای اینکه بتوانیم عکس پروفایل جدید بگیریم، باید به دوربین شما دسترسی داشته باشیم.",
     "nsmicrophoneusagedescription": "برای فعال کردن ضبط صدا در برخی از ویژگی‌ها به میکروفون نیاز داریم.",
     "nsspeechrecognitionusagedescription": "ما از تشخیص صدا استفاده می‌کنیم تا به شما امکان دهیم با استفاده از صدای خود با برنامه تعامل داشته باشید.",
-    "your_position": "موقعیت شما"
+    "your_position": "موقعیت شما",
+    "pronunciation_try_again": "متوجه نشدم. لطفا دوباره امتحان کنید.",
+    "downloading_models": "دانلود مدل‌ها ...",
+    "error_downloading_models": "دانلود ناموفق بود",
+    "error_check_connection": "لطفا اتصال اینترنت خود را بررسی کنید."
 }

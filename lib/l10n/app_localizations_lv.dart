@@ -132,6 +132,9 @@ class AppLocalizationsLv extends AppLocalizations {
   String get pronunciation_error3 => 'Kļūda, sākot klausīšanos';
 
   @override
+  String get pronunciation_try_again => 'Es nesapratu. Lūdzu, mēģiniet vēlreiz.';
+
+  @override
   String get pronunciation_error4 => 'Balss atpazīšana nav gatava.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get your_position => 'Jūsu pozīcija';
+
+  @override
+  String get downloading_models => 'Modeļu lejupielāde...';
+
+  @override
+  String get error_downloading_models => 'Lejupielāde neizdevās';
+
+  @override
+  String get error_check_connection => 'Lūdzu, pārbaudiet savu interneta savienojumu.';
 }

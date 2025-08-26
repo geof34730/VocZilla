@@ -132,6 +132,9 @@ class AppLocalizationsBe extends AppLocalizations {
   String get pronunciation_error3 => 'Памылка пачатку праслухоўвання';
 
   @override
+  String get pronunciation_try_again => 'Я не зразумеў. Паспрабуйце яшчэ раз.';
+
+  @override
   String get pronunciation_error4 => 'Распазнаванне голасу не гатовае.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get your_position => 'Ваша пазіцыя';
+
+  @override
+  String get downloading_models => 'Загрузка мадэляў...';
+
+  @override
+  String get error_downloading_models => 'Памылка загрузкі';
+
+  @override
+  String get error_check_connection => 'Калі ласка, праверце падключэнне да Інтэрнэту.';
 }

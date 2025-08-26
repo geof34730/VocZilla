@@ -132,6 +132,9 @@ class AppLocalizationsKm extends AppLocalizations {
   String get pronunciation_error3 => 'កំហុសក្នុងការចាប់ផ្តើមស្តាប់';
 
   @override
+  String get pronunciation_try_again => 'ខ្ញុំមិនយល់ទេ។ សូមព្យាយាមម្តងទៀត។';
+
+  @override
   String get pronunciation_error4 => 'ការសម្គាល់សំឡេងមិនទាន់រួចរាល់ទេ។';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get your_position => 'ទីតាំងរបស់អ្នក។';
+
+  @override
+  String get downloading_models => 'កំពុងទាញយកម៉ូដែល...';
+
+  @override
+  String get error_downloading_models => 'ការទាញយកបរាជ័យ';
+
+  @override
+  String get error_check_connection => 'សូមពិនិត្យមើលការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក។';
 }

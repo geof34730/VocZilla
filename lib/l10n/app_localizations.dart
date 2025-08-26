@@ -481,6 +481,12 @@ abstract class AppLocalizations {
   /// **'Error starting listening'**
   String get pronunciation_error3;
 
+  /// No description provided for @pronunciation_try_again.
+  ///
+  /// In en, this message translates to:
+  /// **'I didn\'t understand. Please try again.'**
+  String get pronunciation_try_again;
+
   /// No description provided for @pronunciation_error4.
   ///
   /// In en, this message translates to:
@@ -1326,6 +1332,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your position'**
   String get your_position;
+
+  /// No description provided for @downloading_models.
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading the models...'**
+  String get downloading_models;
+
+  /// No description provided for @error_downloading_models.
+  ///
+  /// In en, this message translates to:
+  /// **'Download failed'**
+  String get error_downloading_models;
+
+  /// No description provided for @error_check_connection.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check your internet connection.'**
+  String get error_check_connection;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

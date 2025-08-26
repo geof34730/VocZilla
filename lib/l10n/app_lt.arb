@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Mums reikia prieigos prie jūsų kameros, kad galėtumėte padaryti naują profilio nuotrauką.",
     "nsmicrophoneusagedescription": "Mums reikia mikrofono, kad kai kuriose funkcijose būtų galima įrašyti garsą.",
     "nsspeechrecognitionusagedescription": "Mes naudojame balso atpažinimo funkciją, kad galėtumėte sąveikauti su programa naudodami savo balsą.",
-    "your_position": "Jūsų pozicija"
+    "your_position": "Jūsų pozicija",
+    "pronunciation_try_again": "Nesupratau. Bandykite dar kartą.",
+    "downloading_models": "Modelių atsisiuntimas...",
+    "error_downloading_models": "Atsisiuntimas nepavyko",
+    "error_check_connection": "Patikrinkite interneto ryšį."
 }

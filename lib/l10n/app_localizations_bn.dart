@@ -132,6 +132,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get pronunciation_error3 => 'শোনা শুরু করার সময় ত্রুটি হয়েছে';
 
   @override
+  String get pronunciation_try_again => 'আমি বুঝতে পারিনি। আবার চেষ্টা করুন।';
+
+  @override
   String get pronunciation_error4 => 'ভয়েস রিকগনিশন প্রস্তুত নয়।';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get your_position => 'তোমার অবস্থান';
+
+  @override
+  String get downloading_models => 'মডেলগুলি ডাউনলোড করা হচ্ছে...';
+
+  @override
+  String get error_downloading_models => 'ডাউনলোড ব্যর্থ হয়েছে';
+
+  @override
+  String get error_check_connection => 'আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন।';
 }

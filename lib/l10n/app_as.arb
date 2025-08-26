@@ -180,5 +180,9 @@
     "nscamerausagedescription": "আপোনাক নতুন প্ৰফাইল ছবি তুলিবলৈ আমাক আপোনাৰ কেমেৰাৰ প্ৰৱেশৰ প্ৰয়োজন।",
     "nsmicrophoneusagedescription": "কিছুমান বৈশিষ্ট্যত অডিঅ’ ৰেকৰ্ডিং সক্ষম কৰিবলৈ আমাক মাইক্ৰ’ফোনৰ প্ৰয়োজন।",
     "nsspeechrecognitionusagedescription": "আমি আপোনাৰ কণ্ঠস্বৰ ব্যৱহাৰ কৰি এপ্লিকেচনৰ সৈতে যোগাযোগ কৰিবলৈ অনুমতি দিবলৈ ভয়েচ চিনাক্তকৰণ ব্যৱহাৰ কৰো।",
-    "your_position": "আপোনাৰ স্থিতি"
+    "your_position": "আপোনাৰ স্থিতি",
+    "pronunciation_try_again": "মই বুজি পোৱা নাছিলো। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।",
+    "downloading_models": "মডেল ডাউনলোড...",
+    "error_downloading_models": "ডাউনলোড বিফল",
+    "error_check_connection": "অনুগ্ৰহ কৰি আপোনাৰ ইণ্টাৰনেট সংযোগ পৰীক্ষা কৰক।"
 }

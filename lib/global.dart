@@ -1,11 +1,11 @@
 const String titleApp="VocZilla";
 const int titleAppCute1=3;
 String versionApp="1.0.0";
-const bool debugMode=true;
-const bool testScreenShot = false;
+bool debugMode=false;
+bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
-const int daysFreeTrial=3;
+const int daysFreeTrial=7;
 
 bool forFeatureGraphic = false;
 bool changeVocabulaireSinceVisiteHome = false;

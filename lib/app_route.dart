@@ -88,7 +88,9 @@ class AppRoute {
                   if (userState is UserSessionLoaded) {
                     // User is in trial and not subscribed, show the dialog
                     if (userState.isTrialActive && !userState.isSubscribed) {
-                      userRepository.showDialogueFreeTrialOnceByDay(context: context);
+                      if(!testScreenShot) {
+                        userRepository.showDialogueFreeTrialOnceByDay(context: context);
+                      }
                     }
                     // User's trial has ended and they are not subscribed, force to subscription page
                     else if (!userState.isTrialActive && !userState.isSubscribed) {

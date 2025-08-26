@@ -132,6 +132,9 @@ class AppLocalizationsPa extends AppLocalizations {
   String get pronunciation_error3 => 'ਸੁਣਨਾ ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਗੜਬੜ ਹੋਈ';
 
   @override
+  String get pronunciation_try_again => 'ਮੈਨੂੰ ਸਮਝ ਨਹੀਂ ਆਇਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
+
+  @override
   String get pronunciation_error4 => 'ਅਵਾਜ਼ ਪਛਾਣ ਤਿਆਰ ਨਹੀਂ ਹੈ।';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get your_position => 'ਤੁਹਾਡੀ ਸਥਿਤੀ';
+
+  @override
+  String get downloading_models => 'ਮਾਡਲ ਡਾਊਨਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ...';
+
+  @override
+  String get error_downloading_models => 'ਡਾਊਨਲੋਡ ਅਸਫਲ ਰਿਹਾ';
+
+  @override
+  String get error_check_connection => 'ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।';
 }

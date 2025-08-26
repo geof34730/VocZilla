@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Potřebujeme přístup k vašemu fotoaparátu, abyste si mohli pořídit novou profilovou fotku.",
     "nsmicrophoneusagedescription": "Pro nahrávání zvuku v některých funkcích potřebujeme mikrofon.",
     "nsspeechrecognitionusagedescription": "Používáme rozpoznávání hlasu, abychom vám umožnili interagovat s aplikací pomocí hlasu.",
-    "your_position": "Vaše pozice"
+    "your_position": "Vaše pozice",
+    "pronunciation_try_again": "Nerozuměl jsem. Zkuste to prosím znovu.",
+    "downloading_models": "Stahování modelů...",
+    "error_downloading_models": "Stahování se nezdařilo",
+    "error_check_connection": "Zkontrolujte prosím své internetové připojení."
 }

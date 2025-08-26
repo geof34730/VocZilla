@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Tunahitaji ufikiaji wa kamera yako ili kukuruhusu kupiga picha mpya ya wasifu.",
     "nsmicrophoneusagedescription": "Tunahitaji maikrofoni ili kuwezesha kurekodi sauti katika baadhi ya vipengele.",
     "nsspeechrecognitionusagedescription": "Tunatumia utambuzi wa sauti ili kukuruhusu kuingiliana na programu kwa kutumia sauti yako.",
-    "your_position": "Nafasi yako"
+    "your_position": "Nafasi yako",
+    "pronunciation_try_again": "sikuelewa. Tafadhali jaribu tena.",
+    "downloading_models": "Inapakua miundo...",
+    "error_downloading_models": "Imeshindwa kupakua",
+    "error_check_connection": "Tafadhali angalia muunganisho wako wa intaneti."
 }

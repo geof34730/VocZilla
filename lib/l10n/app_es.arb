@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Necesitamos acceso a tu cámara para permitirte tomar una nueva foto de perfil.",
     "nsmicrophoneusagedescription": "Necesitamos el micrófono para habilitar la grabación de audio en algunas funciones.",
     "nsspeechrecognitionusagedescription": "Utilizamos reconocimiento de voz para permitirle interactuar con la aplicación usando su voz.",
-    "your_position": "Tu posición"
+    "your_position": "Tu posición",
+    "pronunciation_try_again": "No entendí. Inténtalo de nuevo.",
+    "downloading_models": "Descargando los modelos...",
+    "error_downloading_models": "Descarga fallida",
+    "error_check_connection": "Por favor verifique su conexión a Internet."
 }

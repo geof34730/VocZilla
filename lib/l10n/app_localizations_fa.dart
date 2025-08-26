@@ -132,6 +132,9 @@ class AppLocalizationsFa extends AppLocalizations {
   String get pronunciation_error3 => 'خطا در شروع گوش دادن';
 
   @override
+  String get pronunciation_try_again => 'متوجه نشدم. لطفا دوباره امتحان کنید.';
+
+  @override
   String get pronunciation_error4 => 'تشخیص صدا آماده نیست.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get your_position => 'موقعیت شما';
+
+  @override
+  String get downloading_models => 'دانلود مدل‌ها ...';
+
+  @override
+  String get error_downloading_models => 'دانلود ناموفق بود';
+
+  @override
+  String get error_check_connection => 'لطفا اتصال اینترنت خود را بررسی کنید.';
 }

@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Yeni bir profil resmi çekebilmeniz için kameranıza erişmemiz gerekiyor.",
     "nsmicrophoneusagedescription": "Bazı özelliklerde ses kaydı yapabilmek için mikrofona ihtiyacımız var.",
     "nsspeechrecognitionusagedescription": "Uygulamayla sesinizi kullanarak etkileşime geçebilmenizi sağlamak için ses tanıma özelliğini kullanıyoruz.",
-    "your_position": "Pozisyonunuz"
+    "your_position": "Pozisyonunuz",
+    "pronunciation_try_again": "Anlamadım. Lütfen tekrar deneyin.",
+    "downloading_models": "Modeller indiriliyor...",
+    "error_downloading_models": "İndirme başarısız oldu",
+    "error_check_connection": "Lütfen internet bağlantınızı kontrol edin."
 }

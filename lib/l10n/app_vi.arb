@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Chúng tôi cần quyền truy cập vào máy ảnh của bạn để chụp ảnh đại diện mới.",
     "nsmicrophoneusagedescription": "Chúng ta cần micrô để có thể ghi âm ở một số tính năng.",
     "nsspeechrecognitionusagedescription": "Chúng tôi sử dụng công nghệ nhận dạng giọng nói để cho phép bạn tương tác với ứng dụng bằng giọng nói của mình.",
-    "your_position": "Vị trí của bạn"
+    "your_position": "Vị trí của bạn",
+    "pronunciation_try_again": "Tôi không hiểu. Vui lòng thử lại.",
+    "downloading_models": "Đang tải xuống các mô hình...",
+    "error_downloading_models": "Tải xuống không thành công",
+    "error_check_connection": "Vui lòng kiểm tra kết nối internet của bạn."
 }

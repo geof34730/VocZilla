@@ -132,6 +132,9 @@ class AppLocalizationsSq extends AppLocalizations {
   String get pronunciation_error3 => 'Gabim gjatë fillimit të dëgjimit gjatë dëgjimit';
 
   @override
+  String get pronunciation_try_again => 'Nuk e kuptova. Ju lutem provoni përsëri.';
+
+  @override
   String get pronunciation_error4 => 'Njohja e zërit nuk është gati.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get your_position => 'Pozicioni juaj';
+
+  @override
+  String get downloading_models => 'Duke shkarkuar modelet...';
+
+  @override
+  String get error_downloading_models => 'Shkarkimi dështoi';
+
+  @override
+  String get error_check_connection => 'Ju lutemi kontrolloni lidhjen tuaj të internetit.';
 }

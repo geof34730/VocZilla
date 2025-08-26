@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Жаңы профиль сүрөтүн тартууга уруксат берүү үчүн камераңызга кирүү мүмкүнчүлүгү керек.",
     "nsmicrophoneusagedescription": "Кээ бир функцияларда аудио жаздыруу үчүн микрофон керек.",
     "nsspeechrecognitionusagedescription": "Үнүңүз аркылуу колдонмо менен иштешүүгө мүмкүнчүлүк берүү үчүн үн таанууну колдонобуз.",
-    "your_position": "Сиздин позицияңыз"
+    "your_position": "Сиздин позицияңыз",
+    "pronunciation_try_again": "Мен түшүнгөн жокмун. Сураныч, кайра аракет кылыңыз.",
+    "downloading_models": "Моделдер жүктөлүүдө...",
+    "error_downloading_models": "Жүктөп алуу ишке ашкан жок",
+    "error_check_connection": "Интернет туташууңузду текшериңиз."
 }

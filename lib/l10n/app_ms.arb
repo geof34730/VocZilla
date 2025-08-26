@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Kami memerlukan akses kepada kamera anda untuk membolehkan anda mengambil gambar profil baharu.",
     "nsmicrophoneusagedescription": "Kami memerlukan mikrofon untuk mendayakan rakaman audio dalam beberapa ciri.",
     "nsspeechrecognitionusagedescription": "Kami menggunakan pengecaman suara untuk membolehkan anda berinteraksi dengan aplikasi menggunakan suara anda.",
-    "your_position": "kedudukan awak"
+    "your_position": "kedudukan awak",
+    "pronunciation_try_again": "Saya tidak faham. Sila cuba lagi.",
+    "downloading_models": "Memuat turun model...",
+    "error_downloading_models": "Muat turun gagal",
+    "error_check_connection": "Sila semak sambungan internet anda."
 }

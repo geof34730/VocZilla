@@ -251,24 +251,23 @@ void main() {
         await driver.tap(find.byValueKey('buttonQuizztop20'));
         await driver.waitFor(find.byValueKey('screenQuizz'));
         await takeScreenshot(driver, getNameFile('quizz'));
+        await tapBackButton(driver);
 
 
         if (platform == 'ios') {
-          print('find open_drawer_voczilla');
-          await driver.tap(find.byValueKey('open_drawer_voczilla'));
-          print('ok open_drawer_voczilla');
+          // pronunciation
+          await driver.tap(find.byValueKey('buttonPrononciationtop20'));
+          await driver.waitFor(find.byValueKey('screenPrononciation'));
+          await takeScreenshot(driver, getNameFile('Prononciation'));
+          await tapBackButton(driver);
 
-          print('find link_subscription');
-          await driver.tap(find.byValueKey('link_subscription'));
-          print('ok link_subscription');
-
-          await driver.waitFor(find.byValueKey('screenSubscription'));
-          await takeScreenshot(driver, getNameFile('screenSubscription'));
+          //List
+          await driver.tap(find.byValueKey('buttonListtop20'));
+          await driver.waitFor(find.byValueKey('screenList'));
+          await takeScreenshot(driver, getNameFile('Liste'));
+          await tapBackButton(driver);
 
         }
-
-
-
 
         print('find open_drawer_voczilla');
         await driver.tap(find.byValueKey('open_drawer_voczilla'));

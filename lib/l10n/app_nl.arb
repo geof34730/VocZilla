@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Wij hebben toegang tot uw camera nodig zodat u een nieuwe profielfoto kunt maken.",
     "nsmicrophoneusagedescription": "We hebben de microfoon nodig om audio-opnamen in bepaalde functies mogelijk te maken.",
     "nsspeechrecognitionusagedescription": "Wij maken gebruik van spraakherkenning zodat u met uw stem kunt communiceren met de applicatie.",
-    "your_position": "Jouw positie"
+    "your_position": "Jouw positie",
+    "pronunciation_try_again": "Ik heb het niet begrepen. Probeer het opnieuw.",
+    "downloading_models": "De modellen worden gedownload...",
+    "error_downloading_models": "Downloaden mislukt",
+    "error_check_connection": "Controleer uw internetverbinding."
 }

@@ -132,6 +132,9 @@ class AppLocalizationsLo extends AppLocalizations {
   String get pronunciation_error3 => 'ເກີດຄວາມຜິດພາດໃນການເລີ່ມຟັງ';
 
   @override
+  String get pronunciation_try_again => 'ຂ້ອຍບໍ່ເຂົ້າໃຈ. ກະລຸນາລອງອີກຄັ້ງ.';
+
+  @override
   String get pronunciation_error4 => 'ການຮັບຮູ້ສຽງຍັງບໍ່ພ້ອມ.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get your_position => 'ຕໍາແໜ່ງຂອງເຈົ້າ';
+
+  @override
+  String get downloading_models => 'ກຳລັງດາວໂຫຼດຕົວແບບ...';
+
+  @override
+  String get error_downloading_models => 'ການດາວໂຫຼດລົ້ມເຫລວ';
+
+  @override
+  String get error_check_connection => 'ກະລຸນາກວດເບິ່ງການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ.';
 }

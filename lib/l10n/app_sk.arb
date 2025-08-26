@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Potrebujeme prístup k vášmu fotoaparátu, aby ste si mohli vytvoriť novú profilovú fotku.",
     "nsmicrophoneusagedescription": "Na nahrávanie zvuku v niektorých funkciách potrebujeme mikrofón.",
     "nsspeechrecognitionusagedescription": "Na interakciu s aplikáciou pomocou hlasu používame rozpoznávanie hlasu.",
-    "your_position": "Vaša pozícia"
+    "your_position": "Vaša pozícia",
+    "pronunciation_try_again": "Nerozumel som. Skúste to znova.",
+    "downloading_models": "Sťahovanie modelov...",
+    "error_downloading_models": "Sťahovanie zlyhalo",
+    "error_check_connection": "Skontrolujte si, prosím, internetové pripojenie."
 }

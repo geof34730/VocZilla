@@ -132,6 +132,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get pronunciation_error3 => 'Lỗi khi bắt đầu nghe';
 
   @override
+  String get pronunciation_try_again => 'Tôi không hiểu. Vui lòng thử lại.';
+
+  @override
   String get pronunciation_error4 => 'Nhận dạng giọng nói chưa sẵn sàng.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get your_position => 'Vị trí của bạn';
+
+  @override
+  String get downloading_models => 'Đang tải xuống các mô hình...';
+
+  @override
+  String get error_downloading_models => 'Tải xuống không thành công';
+
+  @override
+  String get error_check_connection => 'Vui lòng kiểm tra kết nối internet của bạn.';
 }

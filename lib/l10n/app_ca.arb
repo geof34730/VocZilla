@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Necessitem accés a la teva càmera per permetre't fer una nova foto de perfil.",
     "nsmicrophoneusagedescription": "Necessitem el micròfon per habilitar la gravació d'àudio en algunes funcions.",
     "nsspeechrecognitionusagedescription": "Fem servir el reconeixement de veu per permetre't interactuar amb l'aplicació mitjançant la teva veu.",
-    "your_position": "La teva posició"
+    "your_position": "La teva posició",
+    "pronunciation_try_again": "No ho he entès. Si us plau, torna-ho a intentar.",
+    "downloading_models": "Descarregant els models...",
+    "error_downloading_models": "La descàrrega ha fallat",
+    "error_check_connection": "Si us plau, comproveu la vostra connexió a Internet."
 }

@@ -180,5 +180,9 @@
     "nscamerausagedescription": "新しいプロフィール写真を撮影するには、カメラにアクセスする必要があります。",
     "nsmicrophoneusagedescription": "一部の機能で音声録音を有効にするにはマイクが必要です。",
     "nsspeechrecognitionusagedescription": "音声認識を使用すると、音声を使用してアプリケーションを操作できるようになります。",
-    "your_position": "あなたの立場"
+    "your_position": "あなたの立場",
+    "pronunciation_try_again": "理解できませんでした。もう一度お試しください。",
+    "downloading_models": "モデルをダウンロードしています...",
+    "error_downloading_models": "ダウンロードに失敗しました",
+    "error_check_connection": "インターネット接続を確認してください。"
 }

@@ -180,5 +180,9 @@
     "nscamerausagedescription": "เราจำเป็นต้องเข้าถึงกล้องของคุณเพื่อให้คุณสามารถถ่ายรูปโปรไฟล์ใหม่ได้",
     "nsmicrophoneusagedescription": "เราจำเป็นต้องมีไมโครโฟนเพื่อให้สามารถบันทึกเสียงในฟีเจอร์บางอย่างได้",
     "nsspeechrecognitionusagedescription": "เราใช้การจดจำเสียงเพื่อให้คุณสามารถโต้ตอบกับแอปพลิเคชันโดยใช้เสียงของคุณ",
-    "your_position": "ตำแหน่งของคุณ"
+    "your_position": "ตำแหน่งของคุณ",
+    "pronunciation_try_again": "ฉันไม่เข้าใจ กรุณาลองอีกครั้ง",
+    "downloading_models": "กำลังดาวน์โหลดโมเดล...",
+    "error_downloading_models": "การดาวน์โหลดล้มเหลว",
+    "error_check_connection": "กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของคุณ"
 }

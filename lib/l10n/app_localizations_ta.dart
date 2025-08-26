@@ -132,6 +132,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get pronunciation_error3 => 'கேட்கத் தொடங்குவதில் பிழை';
 
   @override
+  String get pronunciation_try_again => 'எனக்குப் புரியவில்லை. மீண்டும் முயற்சிக்கவும்.';
+
+  @override
   String get pronunciation_error4 => 'குரல் அங்கீகாரம் தயாராக இல்லை.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get your_position => 'உங்கள் நிலை';
+
+  @override
+  String get downloading_models => 'மாதிரிகளைப் பதிவிறக்குகிறது...';
+
+  @override
+  String get error_downloading_models => 'பதிவிறக்கம் தோல்வியடைந்தது';
+
+  @override
+  String get error_check_connection => 'உங்கள் இணைய இணைப்பைச் சரிபார்க்கவும்.';
 }

@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Нам нужен доступ к вашей камере, чтобы вы могли сделать новую фотографию профиля.",
     "nsmicrophoneusagedescription": "Микрофон необходим для записи звука в некоторых функциях.",
     "nsspeechrecognitionusagedescription": "Мы используем функцию распознавания голоса, чтобы вы могли взаимодействовать с приложением с помощью голоса.",
-    "your_position": "Ваша позиция"
+    "your_position": "Ваша позиция",
+    "pronunciation_try_again": "Я не понял. Попробуйте ещё раз.",
+    "downloading_models": "Загрузка моделей...",
+    "error_downloading_models": "Загрузка не удалась",
+    "error_check_connection": "Проверьте подключение к Интернету."
 }

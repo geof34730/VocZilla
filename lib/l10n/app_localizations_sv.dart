@@ -132,6 +132,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get pronunciation_error3 => 'Fel vid uppstart av lyssning';
 
   @override
+  String get pronunciation_try_again => 'Jag förstod inte. Försök igen.';
+
+  @override
   String get pronunciation_error4 => 'Röstigenkänning är inte klar.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get your_position => 'Din position';
+
+  @override
+  String get downloading_models => 'Laddar ner modellerna...';
+
+  @override
+  String get error_downloading_models => 'Nedladdningen misslyckades';
+
+  @override
+  String get error_check_connection => 'Kontrollera din internetanslutning.';
 }

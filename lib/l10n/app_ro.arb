@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Avem nevoie de acces la camera ta foto pentru a-ți permite să faci o nouă fotografie de profil.",
     "nsmicrophoneusagedescription": "Avem nevoie de microfon pentru a activa înregistrarea audio în anumite funcții.",
     "nsspeechrecognitionusagedescription": "Folosim recunoașterea vocală pentru a vă permite să interacționați cu aplicația folosind vocea.",
-    "your_position": "Poziția dumneavoastră"
+    "your_position": "Poziția dumneavoastră",
+    "pronunciation_try_again": "Nu am înțeles. Te rog încearcă din nou.",
+    "downloading_models": "Descărcarea modelelor...",
+    "error_downloading_models": "Descărcarea a eșuat",
+    "error_check_connection": "Vă rugăm să verificați conexiunea la internet."
 }

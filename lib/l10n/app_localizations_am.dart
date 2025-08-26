@@ -132,6 +132,9 @@ class AppLocalizationsAm extends AppLocalizations {
   String get pronunciation_error3 => 'ማዳመጥ መጀመር ላይ ስህተት';
 
   @override
+  String get pronunciation_try_again => 'አልገባኝም። እባክዎ እንደገና ይሞክሩ።';
+
+  @override
   String get pronunciation_error4 => 'የድምጽ ማወቂያ ዝግጁ አይደለም።';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get your_position => 'የእርስዎ አቋም';
+
+  @override
+  String get downloading_models => 'ሞዴሎቹን በማውረድ ላይ...';
+
+  @override
+  String get error_downloading_models => 'ማውረድ አልተሳካም።';
+
+  @override
+  String get error_check_connection => 'እባክዎ የበይነመረብ ግንኙነትዎን ያረጋግጡ።';
 }

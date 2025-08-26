@@ -132,6 +132,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get pronunciation_error3 => 'Dinlemeye başlarken hata oluştu';
 
   @override
+  String get pronunciation_try_again => 'Anlamadım. Lütfen tekrar deneyin.';
+
+  @override
   String get pronunciation_error4 => 'Ses tanıma özelliği henüz hazır değil.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get your_position => 'Pozisyonunuz';
+
+  @override
+  String get downloading_models => 'Modeller indiriliyor...';
+
+  @override
+  String get error_downloading_models => 'İndirme başarısız oldu';
+
+  @override
+  String get error_check_connection => 'Lütfen internet bağlantınızı kontrol edin.';
 }

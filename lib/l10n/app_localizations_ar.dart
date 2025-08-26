@@ -132,6 +132,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get pronunciation_error3 => 'خطأ في بدء الاستماع';
 
   @override
+  String get pronunciation_try_again => 'لم أفهم. يُرجى المحاولة مرة أخرى.';
+
+  @override
   String get pronunciation_error4 => 'التعرف على الصوت ليس جاهزًا.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get your_position => 'موقعك';
+
+  @override
+  String get downloading_models => 'جاري تنزيل النماذج...';
+
+  @override
+  String get error_downloading_models => 'فشل التنزيل';
+
+  @override
+  String get error_check_connection => 'يرجى التحقق من اتصالك بالإنترنت.';
 }

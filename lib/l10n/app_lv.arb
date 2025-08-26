@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Mums ir nepieciešama piekļuve jūsu kamerai, lai jūs varētu uzņemt jaunu profila attēlu.",
     "nsmicrophoneusagedescription": "Lai dažās funkcijās iespējotu audio ierakstīšanu, mums ir nepieciešams mikrofons.",
     "nsspeechrecognitionusagedescription": "Mēs izmantojam balss atpazīšanu, lai jūs varētu mijiedarboties ar lietotni, izmantojot balsi.",
-    "your_position": "Jūsu pozīcija"
+    "your_position": "Jūsu pozīcija",
+    "pronunciation_try_again": "Es nesapratu. Lūdzu, mēģiniet vēlreiz.",
+    "downloading_models": "Modeļu lejupielāde...",
+    "error_downloading_models": "Lejupielāde neizdevās",
+    "error_check_connection": "Lūdzu, pārbaudiet savu interneta savienojumu."
 }

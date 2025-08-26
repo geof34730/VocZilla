@@ -132,6 +132,9 @@ class AppLocalizationsCs extends AppLocalizations {
   String get pronunciation_error3 => 'Chyba při zahájení poslechu';
 
   @override
+  String get pronunciation_try_again => 'Nerozuměl jsem. Zkuste to prosím znovu.';
+
+  @override
   String get pronunciation_error4 => 'Rozpoznávání hlasu není připraveno.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get your_position => 'Vaše pozice';
+
+  @override
+  String get downloading_models => 'Stahování modelů...';
+
+  @override
+  String get error_downloading_models => 'Stahování se nezdařilo';
+
+  @override
+  String get error_check_connection => 'Zkontrolujte prosím své internetové připojení.';
 }

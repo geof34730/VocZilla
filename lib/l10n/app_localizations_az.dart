@@ -132,6 +132,9 @@ class AppLocalizationsAz extends AppLocalizations {
   String get pronunciation_error3 => 'Dinləməyə başladıqda xəta baş verdi';
 
   @override
+  String get pronunciation_try_again => 'Mən başa düşmədim. Yenidən cəhd edin.';
+
+  @override
   String get pronunciation_error4 => 'Səsin tanınması hazır deyil.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get your_position => 'Sizin mövqeyiniz';
+
+  @override
+  String get downloading_models => 'Modellər endirilir...';
+
+  @override
+  String get error_downloading_models => 'Yükləmə uğursuz oldu';
+
+  @override
+  String get error_check_connection => 'Zəhmət olmasa internet bağlantınızı yoxlayın.';
 }

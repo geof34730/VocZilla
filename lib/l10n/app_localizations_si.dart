@@ -132,6 +132,9 @@ class AppLocalizationsSi extends AppLocalizations {
   String get pronunciation_error3 => 'සවන් දීම ආරම්භ කිරීමේ දෝෂයකි';
 
   @override
+  String get pronunciation_try_again => 'මට තේරුණේ නැහැ. කරුණාකර නැවත උත්සාහ කරන්න.';
+
+  @override
   String get pronunciation_error4 => 'හඬ හඳුනාගැනීම සූදානම් නැත.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get your_position => 'ඔබේ ස්ථානය';
+
+  @override
+  String get downloading_models => 'ආකෘති බාගත කරමින්...';
+
+  @override
+  String get error_downloading_models => 'බාගැනීම අසාර්ථක විය.';
+
+  @override
+  String get error_check_connection => 'කරුණාකර ඔබගේ අන්තර්ජාල සම්බන්ධතාවය පරීක්ෂා කරන්න.';
 }

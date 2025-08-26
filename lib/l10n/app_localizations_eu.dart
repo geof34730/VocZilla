@@ -132,6 +132,9 @@ class AppLocalizationsEu extends AppLocalizations {
   String get pronunciation_error3 => 'Errorea entzuten hastean';
 
   @override
+  String get pronunciation_try_again => 'Ez dut ulertu. Saiatu berriro, mesedez.';
+
+  @override
   String get pronunciation_error4 => 'Ahots-ezagutza ez dago prest.';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get your_position => 'Zure posizioa';
+
+  @override
+  String get downloading_models => 'Modeloak deskargatzen...';
+
+  @override
+  String get error_downloading_models => 'Deskargatzeak huts egin du';
+
+  @override
+  String get error_check_connection => 'Mesedez, egiaztatu zure Interneteko konexioa.';
 }

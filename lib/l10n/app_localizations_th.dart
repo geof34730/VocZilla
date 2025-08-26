@@ -132,6 +132,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get pronunciation_error3 => 'เกิดข้อผิดพลาดในการเริ่มฟัง';
 
   @override
+  String get pronunciation_try_again => 'ฉันไม่เข้าใจ กรุณาลองอีกครั้ง';
+
+  @override
   String get pronunciation_error4 => 'การจดจำเสียงยังไม่พร้อมใช้งาน';
 
   @override
@@ -553,4 +556,13 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get your_position => 'ตำแหน่งของคุณ';
+
+  @override
+  String get downloading_models => 'กำลังดาวน์โหลดโมเดล...';
+
+  @override
+  String get error_downloading_models => 'การดาวน์โหลดล้มเหลว';
+
+  @override
+  String get error_check_connection => 'กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของคุณ';
 }

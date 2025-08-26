@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Tarvitsemme pääsyn kameraasi, jotta voit ottaa uuden profiilikuvan.",
     "nsmicrophoneusagedescription": "Tarvitsemme mikrofonin äänen tallentamiseen joissakin ominaisuuksissa.",
     "nsspeechrecognitionusagedescription": "Käytämme äänentunnistusta, jotta voit olla vuorovaikutuksessa sovelluksen kanssa äänelläsi.",
-    "your_position": "Sinun sijaintisi"
+    "your_position": "Sinun sijaintisi",
+    "pronunciation_try_again": "En ymmärtänyt. Yritä uudelleen.",
+    "downloading_models": "Mallien lataaminen...",
+    "error_downloading_models": "Lataus epäonnistui",
+    "error_check_connection": "Tarkista internetyhteytesi."
 }

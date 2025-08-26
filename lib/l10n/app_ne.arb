@@ -180,5 +180,9 @@
     "nscamerausagedescription": "तपाईंलाई नयाँ प्रोफाइल तस्वीर खिच्न अनुमति दिन हामीलाई तपाईंको क्यामेरामा पहुँच चाहिन्छ।",
     "nsmicrophoneusagedescription": "केही सुविधाहरूमा अडियो रेकर्डिङ सक्षम गर्न हामीलाई माइक्रोफोन चाहिन्छ।",
     "nsspeechrecognitionusagedescription": "हामी तपाईंको आवाज प्रयोग गरेर अनुप्रयोगसँग अन्तर्क्रिया गर्न अनुमति दिन आवाज पहिचान प्रयोग गर्छौं।",
-    "your_position": "तपाईंको पद"
+    "your_position": "तपाईंको पद",
+    "pronunciation_try_again": "मैले बुझिन। कृपया फेरि प्रयास गर्नुहोस्।",
+    "downloading_models": "मोडेलहरू डाउनलोड गर्दै...",
+    "error_downloading_models": "डाउनलोड असफल भयो",
+    "error_check_connection": "कृपया आफ्नो इन्टरनेट जडान जाँच गर्नुहोस्।"
 }

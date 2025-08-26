@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Trebamo pristup vašoj kameri kako bismo vam omogućili snimanje nove profilne slike.",
     "nsmicrophoneusagedescription": "Mikrofon nam je potreban kako bismo omogućili snimanje zvuka u nekim značajkama.",
     "nsspeechrecognitionusagedescription": "Koristimo prepoznavanje glasa kako bismo vam omogućili interakciju s aplikacijom pomoću glasa.",
-    "your_position": "Vaša pozicija"
+    "your_position": "Vaša pozicija",
+    "pronunciation_try_again": "Nisam razumio\/la. Pokušajte ponovno.",
+    "downloading_models": "Preuzimanje modela...",
+    "error_downloading_models": "Preuzimanje nije uspjelo",
+    "error_check_connection": "Molimo provjerite svoju internetsku vezu."
 }

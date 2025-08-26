@@ -180,5 +180,9 @@
     "nscamerausagedescription": "Vi skal bruge adgang til dit kamera, så du kan tage et nyt profilbillede.",
     "nsmicrophoneusagedescription": "Vi skal bruge mikrofonen for at aktivere lydoptagelse i nogle funktioner.",
     "nsspeechrecognitionusagedescription": "Vi bruger stemmegenkendelse, så du kan interagere med applikationen ved hjælp af din stemme.",
-    "your_position": "Din position"
+    "your_position": "Din position",
+    "pronunciation_try_again": "Jeg forstod det ikke. Prøv igen.",
+    "downloading_models": "Downloader modellerne...",
+    "error_downloading_models": "Download mislykkedes",
+    "error_check_connection": "Tjek venligst din internetforbindelse."
 }
