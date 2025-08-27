@@ -9,7 +9,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get app_release_note => 'નવું સંસ્કરણ: અનામી ઓળખ, એકાઉન્ટ અથવા નોંધણી વિના, એપ્લિકેશન પરવાનગીઓનો બધી ભાષાઓમાં અનુવાદ, સરળ ઉપયોગ.';
+  String get app_release_note => 'એપ્લિકેશન નેવિગેશનમાં ગોપનીયતા નીતિ અને ઉપયોગની શરતો (EULA) ની લિંક્સ ઉમેરી.';
 
   @override
   String get share_list_perso_alert_disponible => 'યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!';
@@ -565,4 +565,10 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get error_check_connection => 'કૃપા કરીને તમારું ઇન્ટરનેટ કનેક્શન તપાસો.';
+
+  @override
+  String get politique_de_confidentialite => 'ગોપનીયતા નીતિ';
+
+  @override
+  String get conditions_dutilisation => 'ઉપયોગની શરતો';
 }

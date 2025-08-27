@@ -9,7 +9,7 @@ class AppLocalizationsAs extends AppLocalizations {
   AppLocalizationsAs([String locale = 'as']) : super(locale);
 
   @override
-  String get app_release_note => 'নতুন সংস্কৰণ: বেনামী চিনাক্তকৰণৰ বাবে ধন্যবাদ, একাউণ্ট বা পঞ্জীয়ন অবিহনে, এপৰ অনুমতিসমূহৰ সকলো ভাষালৈ অনুবাদ।';
+  String get app_release_note => 'এপ নেভিগেচনত গোপনীয়তা নীতি আৰু সেৱাৰ চৰ্তসমূহ (EULA)ৰ লিংক যোগ কৰা হৈছে';
 
   @override
   String get share_list_perso_alert_disponible => 'অতি সোনকালে উপলব্ধ হ’ব তালিকা শ্বেয়াৰিং বৈশিষ্ট্য!';
@@ -565,4 +565,10 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get error_check_connection => 'অনুগ্ৰহ কৰি আপোনাৰ ইণ্টাৰনেট সংযোগ পৰীক্ষা কৰক।';
+
+  @override
+  String get politique_de_confidentialite => 'গোপনীয়তা নীতি';
+
+  @override
+  String get conditions_dutilisation => 'ব্যৱহাৰৰ চৰ্তসমূহ';
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "አዲስ ስሪት፡ የቀላል አጠቃቀም ምስጋና ይግባውና ስም-አልባ መታወቂያ፣ ያለ መለያ ወይም ምዝገባ፣ የመተግበሪያው ፈቃዶች ወደ ሁሉም ቋንቋዎች መተርጎም።",
+    "app_release_note": "በመተግበሪያው አሰሳ ውስጥ ወደ የግላዊነት መመሪያ እና የአጠቃቀም ውል (EULA) አገናኞች ታክለዋል።",
     "share_list_perso_alert_disponible": "የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!",
     "information": "መረጃ",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "አልገባኝም። እባክዎ እንደገና ይሞክሩ።",
     "downloading_models": "ሞዴሎቹን በማውረድ ላይ...",
     "error_downloading_models": "ማውረድ አልተሳካም።",
-    "error_check_connection": "እባክዎ የበይነመረብ ግንኙነትዎን ያረጋግጡ።"
+    "error_check_connection": "እባክዎ የበይነመረብ ግንኙነትዎን ያረጋግጡ።",
+    "politique_de_confidentialite": "የግላዊነት ፖሊሲ",
+    "conditions_dutilisation": "የአጠቃቀም ውል",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

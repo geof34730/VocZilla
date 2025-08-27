@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Inguqulo entsha: ukusetshenziswa okulula ngenxa yokuhlonza okungaziwa, ngaphandle kwe-akhawunti noma ukubhaliswa, ukuhunyushwa kwezimvume zohlelo lokusebenza kuzo zonke izilimi.",
+    "app_release_note": "Kwengezwe izixhumanisi kokuthi Inqubomgomo Yobumfihlo kanye Nemigomo Yokusebenzisa (EULA) ekuzulazuleni kohlelo lokusebenza",
     "share_list_perso_alert_disponible": "Isici sokwabelana ngohlu sizotholakala maduze!",
     "information": "Ulwazi",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Angizange ngiqonde. Sicela uzame futhi.",
     "downloading_models": "Ilanda amamodeli...",
     "error_downloading_models": "Ukulanda kuhlulekile",
-    "error_check_connection": "Sicela uhlole uxhumano lwakho lwe-inthanethi."
+    "error_check_connection": "Sicela uhlole uxhumano lwakho lwe-inthanethi.",
+    "politique_de_confidentialite": "Inqubomgomo yobumfihlo",
+    "conditions_dutilisation": "Imigomo Yokusebenzisa",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

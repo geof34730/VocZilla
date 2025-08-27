@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get app_release_note => 'الإصدار الجديد: استخدام مبسط بفضل التعريف المجهول، دون حساب أو تسجيل، وترجمة أذونات التطبيق إلى جميع اللغات.';
+  String get app_release_note => 'تمت إضافة روابط لسياسة الخصوصية وشروط الاستخدام (EULA) في التنقل بالتطبيق';
 
   @override
   String get share_list_perso_alert_disponible => 'ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!';
@@ -565,4 +565,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get error_check_connection => 'يرجى التحقق من اتصالك بالإنترنت.';
+
+  @override
+  String get politique_de_confidentialite => 'سياسة الخصوصية';
+
+  @override
+  String get conditions_dutilisation => 'شروط الاستخدام';
 }

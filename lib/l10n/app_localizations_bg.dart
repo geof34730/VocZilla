@@ -9,7 +9,7 @@ class AppLocalizationsBg extends AppLocalizations {
   AppLocalizationsBg([String locale = 'bg']) : super(locale);
 
   @override
-  String get app_release_note => 'Нова версия: опростена употреба благодарение на анонимна идентификация, без акаунт или регистрация, превод на разрешенията на приложението на всички езици.';
+  String get app_release_note => 'Добавени са връзки към Политиката за поверителност и Условията за ползване (EULA) в навигацията на приложението';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцията за споделяне на списъци ще бъде достъпна съвсем скоро!';
@@ -565,4 +565,10 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Моля, проверете интернет връзката си.';
+
+  @override
+  String get politique_de_confidentialite => 'Политика за поверителност';
+
+  @override
+  String get conditions_dutilisation => 'Условия за ползване';
 }

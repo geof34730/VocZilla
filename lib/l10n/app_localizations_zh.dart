@@ -9,7 +9,7 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get app_release_note => '新版本：通过匿名识别简化了使用，无需帐户或注册，将应用程序权限翻译成所有语言。';
+  String get app_release_note => '在应用程序导航中添加了隐私政策和使用条款 (EULA) 的链接';
 
   @override
   String get share_list_perso_alert_disponible => '列表共享功能即将推出！';
@@ -565,4 +565,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get error_check_connection => '请检查您的互联网连接。';
+
+  @override
+  String get politique_de_confidentialite => '隐私政策';
+
+  @override
+  String get conditions_dutilisation => '使用条款';
 }

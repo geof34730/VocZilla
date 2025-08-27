@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ਨਵਾਂ ਸੰਸਕਰਣ: ਗੁਮਨਾਮ ਪਛਾਣ, ਖਾਤੇ ਜਾਂ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਤੋਂ ਬਿਨਾਂ, ਐਪ ਅਨੁਮਤੀਆਂ ਦਾ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰਕੇ ਸਰਲ ਵਰਤੋਂ।",
+    "app_release_note": "ਐਪ ਨੈਵੀਗੇਸ਼ਨ ਵਿੱਚ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਅਤੇ ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ (EULA) ਦੇ ਲਿੰਕ ਜੋੜੇ ਗਏ ਹਨ।",
     "share_list_perso_alert_disponible": "ਸੂਚੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਹੁਤ ਜਲਦੀ ਉਪਲਬਧ ਹੋਵੇਗੀ!",
     "information": "ਜਾਣਕਾਰੀ",
     "app_title": "ਵੋਜ਼ਿਲਾ",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "ਮੈਨੂੰ ਸਮਝ ਨਹੀਂ ਆਇਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
     "downloading_models": "ਮਾਡਲ ਡਾਊਨਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ...",
     "error_downloading_models": "ਡਾਊਨਲੋਡ ਅਸਫਲ ਰਿਹਾ",
-    "error_check_connection": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+    "error_check_connection": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "politique_de_confidentialite": "ਪਰਾਈਵੇਟ ਨੀਤੀ",
+    "conditions_dutilisation": "ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

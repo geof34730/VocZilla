@@ -9,7 +9,7 @@ class AppLocalizationsMn extends AppLocalizations {
   AppLocalizationsMn([String locale = 'mn']) : super(locale);
 
   @override
-  String get app_release_note => 'Шинэ хувилбар: Бүртгэлгүй, бүртгэлгүй, нэрээ нууцалсан таних, програмын зөвшөөрлийг бүх хэл рүү орчуулснаар хялбаршуулсан хэрэглээ.';
+  String get app_release_note => 'Програмын навигаци дахь Нууцлалын бодлого, ашиглалтын нөхцөлийн (EULA) холбоосыг нэмсэн';
 
   @override
   String get share_list_perso_alert_disponible => 'Жагсаалт хуваалцах онцлог тун удахгүй бэлэн болно!';
@@ -565,4 +565,10 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Интернэт холболтоо шалгана уу.';
+
+  @override
+  String get politique_de_confidentialite => 'Нууцлалын бодлого';
+
+  @override
+  String get conditions_dutilisation => 'Хэрэглэх нөхцөл';
 }

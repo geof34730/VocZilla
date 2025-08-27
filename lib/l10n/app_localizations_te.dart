@@ -9,7 +9,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get app_release_note => 'కొత్త వెర్షన్: ఖాతా లేదా రిజిస్ట్రేషన్ లేకుండా అనామక గుర్తింపు, యాప్ అనుమతులను అన్ని భాషల్లోకి అనువదించడం ద్వారా సరళీకృత ఉపయోగం.';
+  String get app_release_note => 'యాప్ నావిగేషన్‌లో గోప్యతా విధానం మరియు సేవా నిబంధనల (EULA)కి లింక్‌లు జోడించబడ్డాయి.';
 
   @override
   String get share_list_perso_alert_disponible => 'జాబితా భాగస్వామ్య ఫీచర్ అతి త్వరలో అందుబాటులోకి వస్తుంది!';
@@ -565,4 +565,10 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get error_check_connection => 'దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేయండి.';
+
+  @override
+  String get politique_de_confidentialite => 'గోప్యతా విధానం';
+
+  @override
+  String get conditions_dutilisation => 'ఉపయోగ నిబంధనలు';
 }

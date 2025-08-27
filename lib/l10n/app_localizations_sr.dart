@@ -9,7 +9,7 @@ class AppLocalizationsSr extends AppLocalizations {
   AppLocalizationsSr([String locale = 'sr']) : super(locale);
 
   @override
-  String get app_release_note => 'Нова верзија: поједностављена употреба захваљујући анонимној идентификацији, без налога или регистрације, превод дозвола апликације на све језике.';
+  String get app_release_note => 'Додати линкови до Политике приватности и Услова коришћења (EULA) у навигацији апликације';
 
   @override
   String get share_list_perso_alert_disponible => 'Функција дељења листе биће доступна ускоро!';
@@ -565,4 +565,10 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Молимо вас да проверите интернет везу.';
+
+  @override
+  String get politique_de_confidentialite => 'Политика приватности';
+
+  @override
+  String get conditions_dutilisation => 'Услови коришћења';
 }

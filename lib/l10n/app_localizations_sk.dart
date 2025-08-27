@@ -9,7 +9,7 @@ class AppLocalizationsSk extends AppLocalizations {
   AppLocalizationsSk([String locale = 'sk']) : super(locale);
 
   @override
-  String get app_release_note => 'Nová verzia: zjednodušené používanie vďaka anonymnej identifikácii, bez účtu alebo registrácie, preklad povolení aplikácie do všetkých jazykov.';
+  String get app_release_note => 'V navigácii aplikácie boli pridané odkazy na Zásady ochrany osobných údajov a Podmienky používania (EULA).';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcia zdieľania zoznamov bude dostupná už čoskoro!';
@@ -565,4 +565,10 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Skontrolujte si, prosím, internetové pripojenie.';
+
+  @override
+  String get politique_de_confidentialite => 'Zásady ochrany osobných údajov';
+
+  @override
+  String get conditions_dutilisation => 'Podmienky používania';
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "नवीन आवृत्ती: अनामिक ओळख, खाते किंवा नोंदणीशिवाय, अ‍ॅप परवानग्यांचे सर्व भाषांमध्ये भाषांतर यामुळे वापर सुलभ केला आहे.",
+    "app_release_note": "अ‍ॅप नेव्हिगेशनमध्ये गोपनीयता धोरण आणि वापराच्या अटी (EULA) च्या लिंक्स जोडल्या आहेत.",
     "share_list_perso_alert_disponible": "यादी शेअरिंग वैशिष्ट्य लवकरच उपलब्ध होईल!",
     "information": "माहिती",
     "app_title": "व्होकझिला",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "मला समजले नाही. कृपया पुन्हा प्रयत्न करा.",
     "downloading_models": "मॉडेल्स डाउनलोड करत आहे...",
     "error_downloading_models": "डाउनलोड अयशस्वी झाले",
-    "error_check_connection": "कृपया तुमचे इंटरनेट कनेक्शन तपासा."
+    "error_check_connection": "कृपया तुमचे इंटरनेट कनेक्शन तपासा.",
+    "politique_de_confidentialite": "गोपनीयता धोरण",
+    "conditions_dutilisation": "वापराच्या अटी",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

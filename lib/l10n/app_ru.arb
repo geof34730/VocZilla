@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Новая версия: упрощенное использование благодаря анонимной идентификации, без учетной записи и регистрации, перевод разрешений приложения на все языки.",
+    "app_release_note": "Добавлены ссылки на Политику конфиденциальности и условия использования (EULA) в навигацию по приложению.",
     "share_list_perso_alert_disponible": "Функция обмена списками станет доступна совсем скоро!",
     "information": "Информация",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Я не понял. Попробуйте ещё раз.",
     "downloading_models": "Загрузка моделей...",
     "error_downloading_models": "Загрузка не удалась",
-    "error_check_connection": "Проверьте подключение к Интернету."
+    "error_check_connection": "Проверьте подключение к Интернету.",
+    "politique_de_confidentialite": "политика конфиденциальности",
+    "conditions_dutilisation": "Условия эксплуатации",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

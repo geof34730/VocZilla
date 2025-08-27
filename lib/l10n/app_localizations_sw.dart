@@ -9,7 +9,7 @@ class AppLocalizationsSw extends AppLocalizations {
   AppLocalizationsSw([String locale = 'sw']) : super(locale);
 
   @override
-  String get app_release_note => 'Toleo jipya: matumizi yaliyorahisishwa kutokana na utambulisho usiojulikana, bila akaunti au usajili, tafsiri ya ruhusa za programu katika lugha zote.';
+  String get app_release_note => 'Umeongeza viungo vya Sera ya Faragha na Sheria na Masharti (EULA) katika urambazaji wa programu';
 
   @override
   String get share_list_perso_alert_disponible => 'Kipengele cha kushiriki orodha kitapatikana hivi karibuni!';
@@ -565,4 +565,10 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Tafadhali angalia muunganisho wako wa intaneti.';
+
+  @override
+  String get politique_de_confidentialite => 'Sera ya Faragha';
+
+  @override
+  String get conditions_dutilisation => 'Masharti ya Matumizi';
 }

@@ -9,7 +9,7 @@ class AppLocalizationsHe extends AppLocalizations {
   AppLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get app_release_note => 'גרסה חדשה: שימוש פשוט יותר הודות לזיהוי אנונימי, ללא חשבון או רישום, תרגום הרשאות האפליקציה לכל השפות.';
+  String get app_release_note => 'נוספו קישורים למדיניות הפרטיות ותנאי השימוש (EULA) בניווט האפליקציה';
 
   @override
   String get share_list_perso_alert_disponible => 'תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!';
@@ -565,4 +565,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get error_check_connection => 'אנא בדוק את חיבור האינטרנט שלך.';
+
+  @override
+  String get politique_de_confidentialite => 'מדיניות פרטיות';
+
+  @override
+  String get conditions_dutilisation => 'תנאי שימוש';
 }

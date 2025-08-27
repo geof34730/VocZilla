@@ -9,7 +9,7 @@ class AppLocalizationsNl extends AppLocalizations {
   AppLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get app_release_note => 'Nieuwe versie: vereenvoudigd gebruik dankzij anonieme identificatie, zonder account of registratie, vertaling van de app-machtigingen in alle talen.';
+  String get app_release_note => 'Links naar het privacybeleid en de gebruiksvoorwaarden (EULA) toegevoegd in de app-navigatie';
 
   @override
   String get share_list_perso_alert_disponible => 'De functie om lijsten te delen zal binnenkort beschikbaar zijn!';
@@ -565,4 +565,10 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Controleer uw internetverbinding.';
+
+  @override
+  String get politique_de_confidentialite => 'Privacybeleid';
+
+  @override
+  String get conditions_dutilisation => 'Gebruiksvoorwaarden';
 }

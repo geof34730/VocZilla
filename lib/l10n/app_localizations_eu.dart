@@ -9,7 +9,7 @@ class AppLocalizationsEu extends AppLocalizations {
   AppLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get app_release_note => 'Bertsio berria: erabilera sinplifikatua identifikazio anonimoari esker, konturik edo erregistrorik gabe, aplikazioaren baimenak hizkuntza guztietara itzultzea.';
+  String get app_release_note => 'Aplikazioaren nabigazioan Pribatutasun Politika eta Zerbitzu Baldintzetarako (EULA) estekak gehitu dira';
 
   @override
   String get share_list_perso_alert_disponible => 'Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!';
@@ -565,4 +565,10 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Mesedez, egiaztatu zure Interneteko konexioa.';
+
+  @override
+  String get politique_de_confidentialite => 'Pribatutasun Politika';
+
+  @override
+  String get conditions_dutilisation => 'Erabilera Baldintzak';
 }

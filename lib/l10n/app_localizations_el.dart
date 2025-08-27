@@ -9,7 +9,7 @@ class AppLocalizationsEl extends AppLocalizations {
   AppLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get app_release_note => 'Νέα έκδοση: απλοποιημένη χρήση χάρη στην ανώνυμη αναγνώριση, χωρίς λογαριασμό ή εγγραφή, μετάφραση των δικαιωμάτων εφαρμογής σε όλες τις γλώσσες.';
+  String get app_release_note => 'Προστέθηκαν σύνδεσμοι προς την Πολιτική Απορρήτου και τους Όρους Χρήσης (EULA) στην πλοήγηση της εφαρμογής';
 
   @override
   String get share_list_perso_alert_disponible => 'Η λειτουργία κοινής χρήσης λίστας θα είναι διαθέσιμη πολύ σύντομα!';
@@ -565,4 +565,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Ελέγξτε τη σύνδεσή σας στο διαδίκτυο.';
+
+  @override
+  String get politique_de_confidentialite => 'Πολιτική Απορρήτου';
+
+  @override
+  String get conditions_dutilisation => 'Όροι Χρήσης';
 }

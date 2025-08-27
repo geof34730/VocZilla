@@ -9,7 +9,7 @@ class AppLocalizationsKm extends AppLocalizations {
   AppLocalizationsKm([String locale = 'km']) : super(locale);
 
   @override
-  String get app_release_note => 'កំណែថ្មី៖ ការប្រើប្រាស់យ៉ាងសាមញ្ញ ដោយសារការកំណត់អត្តសញ្ញាណអនាមិក ដោយគ្មានគណនី ឬការចុះឈ្មោះ ការបកប្រែការអនុញ្ញាតកម្មវិធីទៅជាភាសាទាំងអស់។';
+  String get app_release_note => 'បានបន្ថែមតំណភ្ជាប់ទៅគោលការណ៍ឯកជនភាព និងលក្ខខណ្ឌប្រើប្រាស់ (EULA) នៅក្នុងការរុករកកម្មវិធី';
 
   @override
   String get share_list_perso_alert_disponible => 'មុខងារចែករំលែកបញ្ជីនឹងមានក្នុងពេលឆាប់ៗនេះ!';
@@ -565,4 +565,10 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get error_check_connection => 'សូមពិនិត្យមើលការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក។';
+
+  @override
+  String get politique_de_confidentialite => 'គោលការណ៍ឯកជនភាព';
+
+  @override
+  String get conditions_dutilisation => 'ល័ក្ខខ័ណ្ឌនៃការប្រើប្រាស់';
 }

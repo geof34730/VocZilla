@@ -1,5 +1,5 @@
 {
-    "app_release_note": "نسخه جدید: استفاده ساده به لطف شناسایی ناشناس، بدون نیاز به حساب کاربری یا ثبت نام، ترجمه مجوزهای برنامه به همه زبان‌ها.",
+    "app_release_note": "پیوندهایی به سیاست حفظ حریم خصوصی و شرایط استفاده (EULA) در ناوبری برنامه اضافه شد",
     "share_list_perso_alert_disponible": "قابلیت اشتراک‌گذاری لیست خیلی زود در دسترس قرار خواهد گرفت!",
     "information": "اطلاعات",
     "app_title": "وُکزیلا",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "متوجه نشدم. لطفا دوباره امتحان کنید.",
     "downloading_models": "دانلود مدل‌ها ...",
     "error_downloading_models": "دانلود ناموفق بود",
-    "error_check_connection": "لطفا اتصال اینترنت خود را بررسی کنید."
+    "error_check_connection": "لطفا اتصال اینترنت خود را بررسی کنید.",
+    "politique_de_confidentialite": "سیاست حفظ حریم خصوصی",
+    "conditions_dutilisation": "شرایط استفاده",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

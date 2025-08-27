@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Nová verzia: zjednodušené používanie vďaka anonymnej identifikácii, bez účtu alebo registrácie, preklad povolení aplikácie do všetkých jazykov.",
+    "app_release_note": "V navigácii aplikácie boli pridané odkazy na Zásady ochrany osobných údajov a Podmienky používania (EULA).",
     "share_list_perso_alert_disponible": "Funkcia zdieľania zoznamov bude dostupná už čoskoro!",
     "information": "Informácie",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Nerozumel som. Skúste to znova.",
     "downloading_models": "Sťahovanie modelov...",
     "error_downloading_models": "Sťahovanie zlyhalo",
-    "error_check_connection": "Skontrolujte si, prosím, internetové pripojenie."
+    "error_check_connection": "Skontrolujte si, prosím, internetové pripojenie.",
+    "politique_de_confidentialite": "Zásady ochrany osobných údajov",
+    "conditions_dutilisation": "Podmienky používania",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

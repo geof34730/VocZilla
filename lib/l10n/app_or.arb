@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ନୂତନ ସଂସ୍କରଣ: ବେନାମୀ ପରିଚୟ ପାଇଁ ସରଳୀକୃତ ବ୍ୟବହାର, ଆକାଉଣ୍ଟ କିମ୍ବା ପଞ୍ଜିକରଣ ବିନା, ଆପ୍ ଅନୁମତିର ସମସ୍ତ ଭାଷାରେ ଅନୁବାଦ।",
+    "app_release_note": "ଆପ୍ ନାଭିଗେସନ୍‌ରେ ଗୋପନୀୟତା ନୀତି ଏବଂ ସେବାର ସର୍ତ୍ତାବଳୀ (EULA) ର ଲିଙ୍କ୍‌ଗୁଡ଼ିକ ଯୋଡାଯାଇଛି।",
     "share_list_perso_alert_disponible": "ତାଲିକା ସେୟାରିଂ ବୈଶିଷ୍ଟ୍ୟ ଖୁବ୍ ଶୀଘ୍ର ଉପଲବ୍ଧ ହେବ!",
     "information": "ସୂଚନା",
     "app_title": "ଭୋକ୍‌ଜିଲା",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "ମୁଁ ବୁଝିପାରିଲି ନାହିଁ। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
     "downloading_models": "ମଡେଲଗୁଡ଼ିକ ଡାଉନଲୋଡ୍ ହେଉଛି...",
     "error_downloading_models": "ଡାଉନଲୋଡ୍ ବିଫଳ ହେଲା",
-    "error_check_connection": "ଦୟାକରି ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ।"
+    "error_check_connection": "ଦୟାକରି ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ।",
+    "politique_de_confidentialite": "ଗୋପନୀୟତା ନୀତି",
+    "conditions_dutilisation": "ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

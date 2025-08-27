@@ -9,7 +9,7 @@ class AppLocalizationsKy extends AppLocalizations {
   AppLocalizationsKy([String locale = 'ky']) : super(locale);
 
   @override
-  String get app_release_note => 'Жаңы версия: эсепсиз же каттоосуз, анонимдүү идентификациянын аркасында жөнөкөйлөштүрүлгөн колдонуу, колдонмонун уруксаттарын бардык тилдерге которуу.';
+  String get app_release_note => 'Колдонмонун навигациясында Купуялык саясатына жана колдонуу шарттарына (EULA) шилтемелер кошулду';
 
   @override
   String get share_list_perso_alert_disponible => 'Тизме менен бөлүшүү функциясы жакында жеткиликтүү болот!';
@@ -565,4 +565,10 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Интернет туташууңузду текшериңиз.';
+
+  @override
+  String get politique_de_confidentialite => 'Купуялык саясаты';
+
+  @override
+  String get conditions_dutilisation => 'Колдонуу шарттары';
 }

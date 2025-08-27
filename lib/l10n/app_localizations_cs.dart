@@ -9,7 +9,7 @@ class AppLocalizationsCs extends AppLocalizations {
   AppLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get app_release_note => 'Nová verze: zjednodušené používání díky anonymní identifikaci, bez účtu nebo registrace, překlad oprávnění aplikace do všech jazyků.';
+  String get app_release_note => 'V navigaci aplikace přidány odkazy na Zásady ochrany osobních údajů a Podmínky použití (EULA)';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkce sdílení seznamů bude k dispozici velmi brzy!';
@@ -565,4 +565,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Zkontrolujte prosím své internetové připojení.';
+
+  @override
+  String get politique_de_confidentialite => 'Zásady ochrany osobních údajů';
+
+  @override
+  String get conditions_dutilisation => 'Podmínky použití';
 }

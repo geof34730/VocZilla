@@ -9,7 +9,7 @@ class AppLocalizationsEt extends AppLocalizations {
   AppLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get app_release_note => 'Uus versioon: lihtsustatud kasutamine tänu anonüümsele tuvastamisele, konto või registreerimiseta, rakenduse õiguste tõlkimine kõikidesse keeltesse.';
+  String get app_release_note => 'Rakenduse navigeerimisribale lisati lingid privaatsuspoliitikale ja kasutustingimustele (EULA).';
 
   @override
   String get share_list_perso_alert_disponible => 'Loendi jagamise funktsioon on saadaval peagi!';
@@ -565,4 +565,10 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Palun kontrollige oma internetiühendust.';
+
+  @override
+  String get politique_de_confidentialite => 'Privaatsuspoliitika';
+
+  @override
+  String get conditions_dutilisation => 'Kasutustingimused';
 }

@@ -9,7 +9,7 @@ class AppLocalizationsOr extends AppLocalizations {
   AppLocalizationsOr([String locale = 'or']) : super(locale);
 
   @override
-  String get app_release_note => 'ନୂତନ ସଂସ୍କରଣ: ବେନାମୀ ପରିଚୟ ପାଇଁ ସରଳୀକୃତ ବ୍ୟବହାର, ଆକାଉଣ୍ଟ କିମ୍ବା ପଞ୍ଜିକରଣ ବିନା, ଆପ୍ ଅନୁମତିର ସମସ୍ତ ଭାଷାରେ ଅନୁବାଦ।';
+  String get app_release_note => 'ଆପ୍ ନାଭିଗେସନ୍‌ରେ ଗୋପନୀୟତା ନୀତି ଏବଂ ସେବାର ସର୍ତ୍ତାବଳୀ (EULA) ର ଲିଙ୍କ୍‌ଗୁଡ଼ିକ ଯୋଡାଯାଇଛି।';
 
   @override
   String get share_list_perso_alert_disponible => 'ତାଲିକା ସେୟାରିଂ ବୈଶିଷ୍ଟ୍ୟ ଖୁବ୍ ଶୀଘ୍ର ଉପଲବ୍ଧ ହେବ!';
@@ -565,4 +565,10 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get error_check_connection => 'ଦୟାକରି ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ।';
+
+  @override
+  String get politique_de_confidentialite => 'ଗୋପନୀୟତା ନୀତି';
+
+  @override
+  String get conditions_dutilisation => 'ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ';
 }

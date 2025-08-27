@@ -9,7 +9,7 @@ class AppLocalizationsZu extends AppLocalizations {
   AppLocalizationsZu([String locale = 'zu']) : super(locale);
 
   @override
-  String get app_release_note => 'Inguqulo entsha: ukusetshenziswa okulula ngenxa yokuhlonza okungaziwa, ngaphandle kwe-akhawunti noma ukubhaliswa, ukuhunyushwa kwezimvume zohlelo lokusebenza kuzo zonke izilimi.';
+  String get app_release_note => 'Kwengezwe izixhumanisi kokuthi Inqubomgomo Yobumfihlo kanye Nemigomo Yokusebenzisa (EULA) ekuzulazuleni kohlelo lokusebenza';
 
   @override
   String get share_list_perso_alert_disponible => 'Isici sokwabelana ngohlu sizotholakala maduze!';
@@ -565,4 +565,10 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Sicela uhlole uxhumano lwakho lwe-inthanethi.';
+
+  @override
+  String get politique_de_confidentialite => 'Inqubomgomo yobumfihlo';
+
+  @override
+  String get conditions_dutilisation => 'Imigomo Yokusebenzisa';
 }

@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 import 'package:vobzilla/logic/blocs/auth/auth_bloc.dart';
@@ -238,6 +240,29 @@ Widget _buildMenuItems(BuildContext context) {
           Navigator.pushNamed(context, AppRoute.subscription);
         },
       ),
+      if(Platform.isIOS)
+      VocZillaTile(
+        keyParam: ValueKey('link_mention1'),
+        icon: Icons.info,
+        label: context.loc.politique_de_confidentialite,
+        color: Colors.purple,
+        onTap: () async {
+          await openUrl("https://flutter-now.com/voczilla-politique-de-confidentialite/");
+        },
+      ),
+      if(Platform.isIOS)
+      VocZillaTile(
+        keyParam: ValueKey('link_mention2'),
+        icon: Icons.info,
+        label: "${context.loc.conditions_dutilisation} (EULA)",
+        color: Colors.purple,
+        onTap: () async {
+          await openUrl("https://www.apple.com/legal/internet-services/itunes/dev/stdeula/");
+        },
+      ),
+
+
+
       BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           // Une fois que l'état est mis à jour comme non authentifié, redirigez vers l'écran de connexion.
@@ -245,8 +270,7 @@ Widget _buildMenuItems(BuildContext context) {
             // Nous utilisons pushNamedAndRemoveUntil pour vider la pile de navigation,
             // empêchant l'utilisateur de revenir à une page nécessitant une authentification.
             // Assurez-vous que AppRoute.login pointe vers votre écran d'accueil/connexion.
-            Navigator.of(context)
-                .pushNamedAndRemoveUntil(AppRoute.home, (route) => false);
+            Navigator.of(context).pushNamedAndRemoveUntil(AppRoute.home, (route) => false);
           }
         },
         child: VocZillaTile(
@@ -268,7 +292,21 @@ Widget _buildMenuItems(BuildContext context) {
 void closeDrawer(BuildContext context) {
   Navigator.of(context).pop();
 }
-
+Future<void> openUrl(String url) async {
+  final uri = Uri.parse(url);
+  // Ouvre dans une vue web intégrée (iOS: SFSafariViewController)
+  final ok = await launchUrl(
+    uri,
+    mode: LaunchMode.inAppBrowserView,
+    webViewConfiguration: const WebViewConfiguration(enableJavaScript: true),
+  );
+  if (!ok) {
+    // fallback : tente l’appli externe (Safari/Chrome)
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      throw Exception('Impossible d’ouvrir $url');
+    }
+  }
+}
 /// Helper function to provide a valid name for the Avatar widget.
 
 // L'ancienne fonction est conservée pour la compatibilité mais marquée comme obsolète.

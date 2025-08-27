@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Yangi versiya: anonim identifikatsiya tufayli soddalashtirilgan foydalanish, hisobsiz yoki ro'yxatdan o'tmasdan, ilova ruxsatnomalarini barcha tillarga tarjima qilish.",
+    "app_release_note": "Ilova navigatsiyasida Maxfiylik siyosati va foydalanish shartlariga (EULA) havolalar qo'shildi",
     "share_list_perso_alert_disponible": "Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!",
     "information": "Ma'lumot",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Men tushunmadim. Iltimos, qayta urinib koʻring.",
     "downloading_models": "Modellar yuklab olinmoqda...",
     "error_downloading_models": "Yuklab bo‘lmadi",
-    "error_check_connection": "Internet ulanishingizni tekshiring."
+    "error_check_connection": "Internet ulanishingizni tekshiring.",
+    "politique_de_confidentialite": "Maxfiylik siyosati",
+    "conditions_dutilisation": "Foydalanish shartlari",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

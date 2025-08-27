@@ -9,7 +9,7 @@ class AppLocalizationsTh extends AppLocalizations {
   AppLocalizationsTh([String locale = 'th']) : super(locale);
 
   @override
-  String get app_release_note => 'เวอร์ชันใหม่: ใช้งานง่ายขึ้นด้วยการระบุตัวตนแบบไม่เปิดเผยตัวตน ไม่ต้องใช้บัญชีหรือลงทะเบียน แปลสิทธิ์การใช้งานแอปเป็นทุกภาษา';
+  String get app_release_note => 'เพิ่มลิงก์ไปยังนโยบายความเป็นส่วนตัวและข้อกำหนดในการให้บริการ (EULA) ในการนำทางแอป';
 
   @override
   String get share_list_perso_alert_disponible => 'ฟีเจอร์การแชร์รายการจะพร้อมใช้งานเร็วๆ นี้!';
@@ -565,4 +565,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get error_check_connection => 'กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของคุณ';
+
+  @override
+  String get politique_de_confidentialite => 'นโยบายความเป็นส่วนตัว';
+
+  @override
+  String get conditions_dutilisation => 'เงื่อนไขการใช้งาน';
 }

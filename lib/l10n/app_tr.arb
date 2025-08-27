@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Yeni versiyon: Anonim kimlik doğrulama, hesap veya kayıt gerektirmeme, uygulama izinlerinin tüm dillere çevrilmesi sayesinde basitleştirilmiş kullanım.",
+    "app_release_note": "Uygulama navigasyonuna Gizlilik Politikası ve Hizmet Şartları (EULA) bağlantıları eklendi",
     "share_list_perso_alert_disponible": "Liste paylaşım özelliği çok yakında kullanıma sunulacak!",
     "information": "Bilgi",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Anlamadım. Lütfen tekrar deneyin.",
     "downloading_models": "Modeller indiriliyor...",
     "error_downloading_models": "İndirme başarısız oldu",
-    "error_check_connection": "Lütfen internet bağlantınızı kontrol edin."
+    "error_check_connection": "Lütfen internet bağlantınızı kontrol edin.",
+    "politique_de_confidentialite": "Gizlilik Politikası",
+    "conditions_dutilisation": "Kullanım Şartları",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

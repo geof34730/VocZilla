@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Шинэ хувилбар: Бүртгэлгүй, бүртгэлгүй, нэрээ нууцалсан таних, програмын зөвшөөрлийг бүх хэл рүү орчуулснаар хялбаршуулсан хэрэглээ.",
+    "app_release_note": "Програмын навигаци дахь Нууцлалын бодлого, ашиглалтын нөхцөлийн (EULA) холбоосыг нэмсэн",
     "share_list_perso_alert_disponible": "Жагсаалт хуваалцах онцлог тун удахгүй бэлэн болно!",
     "information": "Мэдээлэл",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Би ойлгосонгүй. Дахин оролдоно уу.",
     "downloading_models": "Загваруудыг татаж авч байна...",
     "error_downloading_models": "Татаж чадсангүй",
-    "error_check_connection": "Интернэт холболтоо шалгана уу."
+    "error_check_connection": "Интернэт холболтоо шалгана уу.",
+    "politique_de_confidentialite": "Нууцлалын бодлого",
+    "conditions_dutilisation": "Хэрэглэх нөхцөл",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

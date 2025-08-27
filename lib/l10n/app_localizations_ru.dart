@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get app_release_note => 'Новая версия: упрощенное использование благодаря анонимной идентификации, без учетной записи и регистрации, перевод разрешений приложения на все языки.';
+  String get app_release_note => 'Добавлены ссылки на Политику конфиденциальности и условия использования (EULA) в навигацию по приложению.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функция обмена списками станет доступна совсем скоро!';
@@ -565,4 +565,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Проверьте подключение к Интернету.';
+
+  @override
+  String get politique_de_confidentialite => 'политика конфиденциальности';
+
+  @override
+  String get conditions_dutilisation => 'Условия эксплуатации';
 }

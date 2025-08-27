@@ -1,5 +1,5 @@
 {
-    "app_release_note": "កំណែថ្មី៖ ការប្រើប្រាស់យ៉ាងសាមញ្ញ ដោយសារការកំណត់អត្តសញ្ញាណអនាមិក ដោយគ្មានគណនី ឬការចុះឈ្មោះ ការបកប្រែការអនុញ្ញាតកម្មវិធីទៅជាភាសាទាំងអស់។",
+    "app_release_note": "បានបន្ថែមតំណភ្ជាប់ទៅគោលការណ៍ឯកជនភាព និងលក្ខខណ្ឌប្រើប្រាស់ (EULA) នៅក្នុងការរុករកកម្មវិធី",
     "share_list_perso_alert_disponible": "មុខងារចែករំលែកបញ្ជីនឹងមានក្នុងពេលឆាប់ៗនេះ!",
     "information": "ព័ត៌មាន",
     "app_title": "វ៉ុកហ្សីឡា",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "ខ្ញុំមិនយល់ទេ។ សូមព្យាយាមម្តងទៀត។",
     "downloading_models": "កំពុងទាញយកម៉ូដែល...",
     "error_downloading_models": "ការទាញយកបរាជ័យ",
-    "error_check_connection": "សូមពិនិត្យមើលការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក។"
+    "error_check_connection": "សូមពិនិត្យមើលការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក។",
+    "politique_de_confidentialite": "គោលការណ៍ឯកជនភាព",
+    "conditions_dutilisation": "ល័ក្ខខ័ណ្ឌនៃការប្រើប្រាស់",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

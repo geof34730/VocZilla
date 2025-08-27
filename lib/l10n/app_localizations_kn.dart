@@ -9,7 +9,7 @@ class AppLocalizationsKn extends AppLocalizations {
   AppLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get app_release_note => 'ಹೊಸ ಆವೃತ್ತಿ: ಖಾತೆ ಅಥವಾ ನೋಂದಣಿ ಇಲ್ಲದೆ ಅನಾಮಧೇಯ ಗುರುತಿಸುವಿಕೆ, ಅಪ್ಲಿಕೇಶನ್ ಅನುಮತಿಗಳನ್ನು ಎಲ್ಲಾ ಭಾಷೆಗಳಿಗೆ ಅನುವಾದಿಸುವುದರಿಂದ ಸರಳೀಕೃತ ಬಳಕೆ.';
+  String get app_release_note => 'ಅಪ್ಲಿಕೇಶನ್ ನ್ಯಾವಿಗೇಷನ್‌ನಲ್ಲಿ ಗೌಪ್ಯತಾ ನೀತಿ ಮತ್ತು ಬಳಕೆಯ ನಿಯಮಗಳಿಗೆ (EULA) ಲಿಂಕ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ.';
 
   @override
   String get share_list_perso_alert_disponible => 'ಪಟ್ಟಿ ಹಂಚಿಕೆ ವೈಶಿಷ್ಟ್ಯವು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಿರುತ್ತದೆ!';
@@ -565,4 +565,10 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get error_check_connection => 'ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ.';
+
+  @override
+  String get politique_de_confidentialite => 'ಗೌಪ್ಯತಾ ನೀತಿ';
+
+  @override
+  String get conditions_dutilisation => 'ಬಳಕೆಯ ನಿಯಮಗಳು';
 }

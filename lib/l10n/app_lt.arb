@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Nauja versija: supaprastintas naudojimas dėl anoniminės identifikacijos, be paskyros ar registracijos, programėlės leidimų vertimo į visas kalbas.",
+    "app_release_note": "Programėlės naršymo juostoje pridėtos nuorodos į privatumo politiką ir naudojimo sąlygas (EULA).",
     "share_list_perso_alert_disponible": "Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!",
     "information": "Informacija",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Nesupratau. Bandykite dar kartą.",
     "downloading_models": "Modelių atsisiuntimas...",
     "error_downloading_models": "Atsisiuntimas nepavyko",
-    "error_check_connection": "Patikrinkite interneto ryšį."
+    "error_check_connection": "Patikrinkite interneto ryšį.",
+    "politique_de_confidentialite": "Privatumo politika",
+    "conditions_dutilisation": "Naudojimo sąlygos",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

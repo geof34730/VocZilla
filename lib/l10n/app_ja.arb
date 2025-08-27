@@ -1,5 +1,5 @@
 {
-    "app_release_note": "新バージョン: 匿名識別によりアカウントや登録が不要になり、アプリの権限がすべての言語に翻訳されるため、使用が簡素化されます。",
+    "app_release_note": "アプリのナビゲーションにプライバシーポリシーと利用規約（EULA）へのリンクを追加しました",
     "share_list_perso_alert_disponible": "リスト共有機能はまもなく利用可能になります。",
     "information": "情報",
     "app_title": "ヴォックジラ",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "理解できませんでした。もう一度お試しください。",
     "downloading_models": "モデルをダウンロードしています...",
     "error_downloading_models": "ダウンロードに失敗しました",
-    "error_check_connection": "インターネット接続を確認してください。"
+    "error_check_connection": "インターネット接続を確認してください。",
+    "politique_de_confidentialite": "プライバシーポリシー",
+    "conditions_dutilisation": "利用規約",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

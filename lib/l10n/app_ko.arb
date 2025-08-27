@@ -1,5 +1,5 @@
 {
-    "app_release_note": "새로운 버전: 계정이나 등록 없이 익명으로 식별하여 사용이 간편해졌으며, 앱 권한이 모든 언어로 번역되었습니다.",
+    "app_release_note": "앱 탐색에 개인정보 보호정책 및 이용약관(EULA) 링크가 추가되었습니다.",
     "share_list_perso_alert_disponible": "목록 공유 기능이 곧 출시됩니다!",
     "information": "정보",
     "app_title": "보크질라",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "이해하지 못했습니다. 다시 시도해 주세요.",
     "downloading_models": "모델을 다운로드하는 중...",
     "error_downloading_models": "다운로드에 실패했습니다",
-    "error_check_connection": "인터넷 연결을 확인하세요."
+    "error_check_connection": "인터넷 연결을 확인하세요.",
+    "politique_de_confidentialite": "개인정보 보호정책",
+    "conditions_dutilisation": "이용 약관",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

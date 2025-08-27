@@ -1,7 +1,7 @@
 {
 
 
-    "app_release_note" : "Nouvelle version : utilisation simplifiée grâce à une identification anonyme, sans compte ni inscription, traduction des autorisations de l'app dans toutes les langues.",
+    "app_release_note" : "Ajout liens vers Politique de confidentialité et Conditions d’utilisation (EULA) dans la navigation de l'application",
     "your_position":"Votre position",
     "nsphotolibraryusagedescription" : "Nous avons besoin d'accéder à votre galerie pour vous permettre de choisir une photo de profil.",
     "nscamerausagedescription" : "Nous avons besoin d'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.",
@@ -188,5 +188,8 @@
     "login_tous_champs_obligatoires": "Veuillez remplir tous les champs",
     "email_validation_merci_register" : "Merci de vous être inscrit !",
     "erreur_chargement_produits": "Erreur lors du chargement des produits",
-    "reessayer": "Réessayer"
+    "reessayer": "Réessayer",
+    "politique_de_confidentialite" : "Politique de confidentialité",
+    "conditions_dutilisation" : "Conditions d’utilisation"
+
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "नया संस्करण: अनाम पहचान, बिना खाते या पंजीकरण के, सभी भाषाओं में ऐप अनुमतियों के अनुवाद के कारण सरलीकृत उपयोग।",
+    "app_release_note": "ऐप नेविगेशन में गोपनीयता नीति और उपयोग की शर्तों (EULA) के लिंक जोड़े गए",
     "share_list_perso_alert_disponible": "सूची साझा करने की सुविधा बहुत जल्द उपलब्ध होगी!",
     "information": "जानकारी",
     "app_title": "वोकज़िला",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "मैं समझ नहीं पाया। कृपया पुनः प्रयास करें।",
     "downloading_models": "मॉडल डाउनलोड हो रहे हैं...",
     "error_downloading_models": "डाउनलोड विफल",
-    "error_check_connection": "कृपया अपने इंटरनेट कनेक्शन की जाँच करें।"
+    "error_check_connection": "कृपया अपने इंटरनेट कनेक्शन की जाँच करें।",
+    "politique_de_confidentialite": "गोपनीयता नीति",
+    "conditions_dutilisation": "उपयोग की शर्तें",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

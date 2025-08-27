@@ -83,9 +83,9 @@ function getAppfileInfo(appfilePath) {
     execSync(`fastlane all generate_metadata`, { stdio: "inherit" });
     console.log(`\n🔧 Nettoyage & récupération des packages Flutter...`);
     execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
-/*
+
             console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
-            execSync(
+      /*     execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
                 { stdio: "inherit" }
             );

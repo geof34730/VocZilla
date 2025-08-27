@@ -9,7 +9,7 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get app_release_note => 'Yeni versiyon: Anonim kimlik doğrulama, hesap veya kayıt gerektirmeme, uygulama izinlerinin tüm dillere çevrilmesi sayesinde basitleştirilmiş kullanım.';
+  String get app_release_note => 'Uygulama navigasyonuna Gizlilik Politikası ve Hizmet Şartları (EULA) bağlantıları eklendi';
 
   @override
   String get share_list_perso_alert_disponible => 'Liste paylaşım özelliği çok yakında kullanıma sunulacak!';
@@ -565,4 +565,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Lütfen internet bağlantınızı kontrol edin.';
+
+  @override
+  String get politique_de_confidentialite => 'Gizlilik Politikası';
+
+  @override
+  String get conditions_dutilisation => 'Kullanım Şartları';
 }

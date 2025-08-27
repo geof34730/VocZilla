@@ -1,5 +1,5 @@
 {
-    "app_release_note": "新版本：通过匿名识别简化了使用，无需帐户或注册，将应用程序权限翻译成所有语言。",
+    "app_release_note": "在应用程序导航中添加了隐私政策和使用条款 (EULA) 的链接",
     "share_list_perso_alert_disponible": "列表共享功能即将推出！",
     "information": "信息",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "我不明白。请重试。",
     "downloading_models": "正在下载模型...",
     "error_downloading_models": "下载失败",
-    "error_check_connection": "请检查您的互联网连接。"
+    "error_check_connection": "请检查您的互联网连接。",
+    "politique_de_confidentialite": "隐私政策",
+    "conditions_dutilisation": "使用条款",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Neue Version: Vereinfachte Nutzung dank anonymer Identifizierung, ohne Account oder Registrierung, Übersetzung der App-Berechtigungen in alle Sprachen.",
+    "app_release_note": "Links zu Datenschutzrichtlinien und Nutzungsbedingungen (EULA) in der App-Navigation hinzugefügt",
     "share_list_perso_alert_disponible": "Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Ich habe es nicht verstanden. Bitte versuchen Sie es erneut.",
     "downloading_models": "Die Modelle werden heruntergeladen ...",
     "error_downloading_models": "Download fehlgeschlagen",
-    "error_check_connection": "Bitte überprüfen Sie Ihre Internetverbindung."
+    "error_check_connection": "Bitte überprüfen Sie Ihre Internetverbindung.",
+    "politique_de_confidentialite": "Datenschutzrichtlinie",
+    "conditions_dutilisation": "Nutzungsbedingungen",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

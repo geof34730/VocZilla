@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Нова верзија: поједностављена употреба захваљујући анонимној идентификацији, без налога или регистрације, превод дозвола апликације на све језике.",
+    "app_release_note": "Додати линкови до Политике приватности и Услова коришћења (EULA) у навигацији апликације",
     "share_list_perso_alert_disponible": "Функција дељења листе биће доступна ускоро!",
     "information": "Информације",
     "app_title": "ВокЗила",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Нисам разумео\/ла. Молим вас покушајте поново.",
     "downloading_models": "Преузимање модела...",
     "error_downloading_models": "Преузимање није успело",
-    "error_check_connection": "Молимо вас да проверите интернет везу."
+    "error_check_connection": "Молимо вас да проверите интернет везу.",
+    "politique_de_confidentialite": "Политика приватности",
+    "conditions_dutilisation": "Услови коришћења",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

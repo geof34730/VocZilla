@@ -1,5 +1,5 @@
 {
-    "app_release_note": "નવું સંસ્કરણ: અનામી ઓળખ, એકાઉન્ટ અથવા નોંધણી વિના, એપ્લિકેશન પરવાનગીઓનો બધી ભાષાઓમાં અનુવાદ, સરળ ઉપયોગ.",
+    "app_release_note": "એપ્લિકેશન નેવિગેશનમાં ગોપનીયતા નીતિ અને ઉપયોગની શરતો (EULA) ની લિંક્સ ઉમેરી.",
     "share_list_perso_alert_disponible": "યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!",
     "information": "માહિતી",
     "app_title": "વોકઝિલા",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "મને સમજાયું નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.",
     "downloading_models": "મોડેલો ડાઉનલોડ કરી રહ્યા છીએ...",
     "error_downloading_models": "ડાઉનલોડ નિષ્ફળ થયું",
-    "error_check_connection": "કૃપા કરીને તમારું ઇન્ટરનેટ કનેક્શન તપાસો."
+    "error_check_connection": "કૃપા કરીને તમારું ઇન્ટરનેટ કનેક્શન તપાસો.",
+    "politique_de_confidentialite": "ગોપનીયતા નીતિ",
+    "conditions_dutilisation": "ઉપયોગની શરતો",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

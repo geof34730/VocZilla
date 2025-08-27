@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Ný útgáfa: einfölduð notkun þökk sé nafnlausri auðkenningu, án aðgangs eða skráningar, þýðing á forritsheimildum á öll tungumál.",
+    "app_release_note": "Bætt við tenglum á persónuverndarstefnu og notkunarskilmála (EULA) í leiðsögn appsins",
     "share_list_perso_alert_disponible": "Aðgerðin til að deila listanum verður tiltæk mjög fljótlega!",
     "information": "Upplýsingar",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Ég skildi ekki. Vinsamlegast reynið aftur.",
     "downloading_models": "Að sækja fyrirmyndirnar...",
     "error_downloading_models": "Niðurhal mistókst",
-    "error_check_connection": "Vinsamlegast athugaðu nettenginguna þína."
+    "error_check_connection": "Vinsamlegast athugaðu nettenginguna þína.",
+    "politique_de_confidentialite": "Persónuverndarstefna",
+    "conditions_dutilisation": "Notkunarskilmálar",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Nuwe weergawe: vereenvoudigde gebruik danksy anonieme identifikasie, sonder rekening of registrasie, vertaling van die toepassing se toestemmings in alle tale.",
+    "app_release_note": "Skakels na Privaatheidsbeleid en Gebruiksvoorwaardes (EULA) in die toepassingsnavigasie bygevoeg",
     "share_list_perso_alert_disponible": "Die lysdelingsfunksie sal binnekort beskikbaar wees!",
     "information": "Inligting",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Ek het nie verstaan nie. Probeer asseblief weer.",
     "downloading_models": "Laai tans die modelle af...",
     "error_downloading_models": "Aflaai het misluk",
-    "error_check_connection": "Kontroleer asseblief u internetverbinding."
+    "error_check_connection": "Kontroleer asseblief u internetverbinding.",
+    "politique_de_confidentialite": "Privaatheidsbeleid",
+    "conditions_dutilisation": "Gebruiksvoorwaardes",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

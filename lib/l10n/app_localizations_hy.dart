@@ -9,7 +9,7 @@ class AppLocalizationsHy extends AppLocalizations {
   AppLocalizationsHy([String locale = 'hy']) : super(locale);
 
   @override
-  String get app_release_note => 'Նոր տարբերակ՝ պարզեցված օգտագործում՝ անանուն նույնականացման շնորհիվ, առանց հաշվի կամ գրանցման, հավելվածի թույլտվությունների թարգմանություն բոլոր լեզուներով։';
+  String get app_release_note => 'Հավելվածի նավիգացիայում ավելացվել են հղումներ դեպի Գաղտնիության քաղաքականություն և Օգտագործման պայմաններ (EULA):';
 
   @override
   String get share_list_perso_alert_disponible => 'Ցուցակի համօգտագործման գործառույթը շատ շուտով հասանելի կլինի։';
@@ -565,4 +565,10 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Խնդրում ենք ստուգել ձեր ինտերնետային կապը։';
+
+  @override
+  String get politique_de_confidentialite => 'Գաղտնիության քաղաքականություն';
+
+  @override
+  String get conditions_dutilisation => 'Օգտագործման պայմաններ';
 }

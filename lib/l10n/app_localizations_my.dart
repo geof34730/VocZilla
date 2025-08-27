@@ -9,7 +9,7 @@ class AppLocalizationsMy extends AppLocalizations {
   AppLocalizationsMy([String locale = 'my']) : super(locale);
 
   @override
-  String get app_release_note => 'ဗားရှင်းအသစ်- အကောင့် သို့မဟုတ် မှတ်ပုံတင်ခြင်းမရှိဘဲ၊ အက်ပ်ခွင့်ပြုချက်များကို ဘာသာစကားအားလုံးသို့ ဘာသာပြန်ဆိုခြင်းမပြုဘဲ အမည်မသိသက်သေခံခြင်း၏ ကျေးဇူးတင်စကားကြောင့် ရိုးရှင်းသောအသုံးပြုမှု။';
+  String get app_release_note => 'အက်ပ်လမ်းညွှန်မှုတွင် ကိုယ်ရေးကိုယ်တာမူဝါဒနှင့် ဝန်ဆောင်မှုစည်းမျဉ်းများ (EULA) သို့ လင့်ခ်များထည့်ထားသည်။';
 
   @override
   String get share_list_perso_alert_disponible => 'စာရင်းမျှဝေခြင်းအင်္ဂါရပ်ကို မကြာမီ ရနိုင်ပါမည်။';
@@ -565,4 +565,10 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get error_check_connection => 'သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပါ။';
+
+  @override
+  String get politique_de_confidentialite => 'ကိုယ်ရေးအချက်အလက်မူဝါဒ';
+
+  @override
+  String get conditions_dutilisation => 'သတ်မှတ်ချက်များ';
 }

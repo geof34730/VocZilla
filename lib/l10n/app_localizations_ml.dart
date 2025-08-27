@@ -9,7 +9,7 @@ class AppLocalizationsMl extends AppLocalizations {
   AppLocalizationsMl([String locale = 'ml']) : super(locale);
 
   @override
-  String get app_release_note => 'പുതിയ പതിപ്പ്: അക്കൗണ്ടോ രജിസ്ട്രേഷനോ ഇല്ലാതെ അജ്ഞാത തിരിച്ചറിയൽ, ആപ്പ് അനുമതികൾ എല്ലാ ഭാഷകളിലേക്കും വിവർത്തനം ചെയ്യൽ എന്നിവയിലൂടെ ലളിതമാക്കിയ ഉപയോഗം.';
+  String get app_release_note => 'ആപ്പ് നാവിഗേഷനിൽ സ്വകാര്യതാ നയത്തിലേക്കും ഉപയോഗ നിബന്ധനകളിലേക്കും (EULA) ലിങ്കുകൾ ചേർത്തു.';
 
   @override
   String get share_list_perso_alert_disponible => 'ലിസ്റ്റ് പങ്കിടൽ സവിശേഷത വളരെ വേഗം ലഭ്യമാകും!';
@@ -565,4 +565,10 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get error_check_connection => 'നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക.';
+
+  @override
+  String get politique_de_confidentialite => 'സ്വകാര്യതാ നയം';
+
+  @override
+  String get conditions_dutilisation => 'ഉപയോഗ നിബന്ധനകൾ';
 }

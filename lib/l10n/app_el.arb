@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Νέα έκδοση: απλοποιημένη χρήση χάρη στην ανώνυμη αναγνώριση, χωρίς λογαριασμό ή εγγραφή, μετάφραση των δικαιωμάτων εφαρμογής σε όλες τις γλώσσες.",
+    "app_release_note": "Προστέθηκαν σύνδεσμοι προς την Πολιτική Απορρήτου και τους Όρους Χρήσης (EULA) στην πλοήγηση της εφαρμογής",
     "share_list_perso_alert_disponible": "Η λειτουργία κοινής χρήσης λίστας θα είναι διαθέσιμη πολύ σύντομα!",
     "information": "Πληροφορίες",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Δεν κατάλαβα. Παρακαλώ δοκιμάστε ξανά.",
     "downloading_models": "Λήψη των μοντέλων...",
     "error_downloading_models": "Η λήψη απέτυχε.",
-    "error_check_connection": "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο."
+    "error_check_connection": "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο.",
+    "politique_de_confidentialite": "Πολιτική Απορρήτου",
+    "conditions_dutilisation": "Όροι Χρήσης",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "নতুন সংস্কৰণ: বেনামী চিনাক্তকৰণৰ বাবে ধন্যবাদ, একাউণ্ট বা পঞ্জীয়ন অবিহনে, এপৰ অনুমতিসমূহৰ সকলো ভাষালৈ অনুবাদ।",
+    "app_release_note": "এপ নেভিগেচনত গোপনীয়তা নীতি আৰু সেৱাৰ চৰ্তসমূহ (EULA)ৰ লিংক যোগ কৰা হৈছে",
     "share_list_perso_alert_disponible": "অতি সোনকালে উপলব্ধ হ’ব তালিকা শ্বেয়াৰিং বৈশিষ্ট্য!",
     "information": "তথ্য",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "মই বুজি পোৱা নাছিলো। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।",
     "downloading_models": "মডেল ডাউনলোড...",
     "error_downloading_models": "ডাউনলোড বিফল",
-    "error_check_connection": "অনুগ্ৰহ কৰি আপোনাৰ ইণ্টাৰনেট সংযোগ পৰীক্ষা কৰক।"
+    "error_check_connection": "অনুগ্ৰহ কৰি আপোনাৰ ইণ্টাৰনেট সংযোগ পৰীক্ষা কৰক।",
+    "politique_de_confidentialite": "গোপনীয়তা নীতি",
+    "conditions_dutilisation": "ব্যৱহাৰৰ চৰ্তসমূহ",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

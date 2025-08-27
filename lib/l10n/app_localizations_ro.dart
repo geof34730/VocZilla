@@ -9,7 +9,7 @@ class AppLocalizationsRo extends AppLocalizations {
   AppLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
-  String get app_release_note => 'Versiune nouă: utilizare simplificată datorită identificării anonime, fără cont sau înregistrare, traducerea permisiunilor aplicației în toate limbile.';
+  String get app_release_note => 'Adăugate linkuri către Politica de confidențialitate și Termenii și condițiile de utilizare (EULA) în navigarea aplicației';
 
   @override
   String get share_list_perso_alert_disponible => 'Funcția de partajare a listei va fi disponibilă foarte curând!';
@@ -565,4 +565,10 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Vă rugăm să verificați conexiunea la internet.';
+
+  @override
+  String get politique_de_confidentialite => 'Politica de confidențialitate';
+
+  @override
+  String get conditions_dutilisation => 'Termeni de utilizare';
 }

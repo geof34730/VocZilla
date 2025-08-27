@@ -9,7 +9,7 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get app_release_note => 'नया संस्करण: अनाम पहचान, बिना खाते या पंजीकरण के, सभी भाषाओं में ऐप अनुमतियों के अनुवाद के कारण सरलीकृत उपयोग।';
+  String get app_release_note => 'ऐप नेविगेशन में गोपनीयता नीति और उपयोग की शर्तों (EULA) के लिंक जोड़े गए';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझा करने की सुविधा बहुत जल्द उपलब्ध होगी!';
@@ -565,4 +565,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get error_check_connection => 'कृपया अपने इंटरनेट कनेक्शन की जाँच करें।';
+
+  @override
+  String get politique_de_confidentialite => 'गोपनीयता नीति';
+
+  @override
+  String get conditions_dutilisation => 'उपयोग की शर्तें';
 }

@@ -9,7 +9,7 @@ class AppLocalizationsAf extends AppLocalizations {
   AppLocalizationsAf([String locale = 'af']) : super(locale);
 
   @override
-  String get app_release_note => 'Nuwe weergawe: vereenvoudigde gebruik danksy anonieme identifikasie, sonder rekening of registrasie, vertaling van die toepassing se toestemmings in alle tale.';
+  String get app_release_note => 'Skakels na Privaatheidsbeleid en Gebruiksvoorwaardes (EULA) in die toepassingsnavigasie bygevoeg';
 
   @override
   String get share_list_perso_alert_disponible => 'Die lysdelingsfunksie sal binnekort beskikbaar wees!';
@@ -565,4 +565,10 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Kontroleer asseblief u internetverbinding.';
+
+  @override
+  String get politique_de_confidentialite => 'Privaatheidsbeleid';
+
+  @override
+  String get conditions_dutilisation => 'Gebruiksvoorwaardes';
 }

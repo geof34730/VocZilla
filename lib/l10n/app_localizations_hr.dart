@@ -9,7 +9,7 @@ class AppLocalizationsHr extends AppLocalizations {
   AppLocalizationsHr([String locale = 'hr']) : super(locale);
 
   @override
-  String get app_release_note => 'Nova verzija: pojednostavljeno korištenje zahvaljujući anonimnoj identifikaciji, bez računa ili registracije, prijevod dopuštenja aplikacije na sve jezike.';
+  String get app_release_note => 'Dodane su poveznice na Pravila privatnosti i Uvjete korištenja (EULA) u navigaciji aplikacije';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija dijeljenja popisa bit će dostupna vrlo brzo!';
@@ -565,4 +565,10 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Molimo provjerite svoju internetsku vezu.';
+
+  @override
+  String get politique_de_confidentialite => 'Pravila o privatnosti';
+
+  @override
+  String get conditions_dutilisation => 'Uvjeti korištenja';
 }

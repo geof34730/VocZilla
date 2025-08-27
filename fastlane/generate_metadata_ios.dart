@@ -67,7 +67,14 @@ void main() async {
     final locale = match.group(1)!;
     final content = json.decode(await File(file.path).readAsString());
     final description = content['app_description'] ?? 'description manquante';
-    final title = content['app_title'] ?? 'Titre manquant';
+
+
+    //Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+    //Privacy Policy: https://flutter-now.com/voczilla-politique-de-confidentialite/
+
+
+
+  final title = content['app_title'] ?? 'Titre manquant';
     final keywords = content['app_keywords'] ?? 'keyword manquant';
     final rawShortPromotion = content['app_promotion_ios'] ?? 'promotion manquante';
     final promotion = truncateShortDescription(rawShortPromotion);

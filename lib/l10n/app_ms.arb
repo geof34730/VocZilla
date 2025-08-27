@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Versi baharu: penggunaan dipermudahkan terima kasih kepada pengenalan tanpa nama, tanpa akaun atau pendaftaran, terjemahan kebenaran apl ke dalam semua bahasa.",
+    "app_release_note": "Menambahkan pautan ke Dasar Privasi dan Syarat Penggunaan (EULA) dalam navigasi apl",
     "share_list_perso_alert_disponible": "Ciri perkongsian senarai akan tersedia tidak lama lagi!",
     "information": "Maklumat",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Saya tidak faham. Sila cuba lagi.",
     "downloading_models": "Memuat turun model...",
     "error_downloading_models": "Muat turun gagal",
-    "error_check_connection": "Sila semak sambungan internet anda."
+    "error_check_connection": "Sila semak sambungan internet anda.",
+    "politique_de_confidentialite": "Dasar Privasi",
+    "conditions_dutilisation": "Syarat Penggunaan",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

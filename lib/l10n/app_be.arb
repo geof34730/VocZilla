@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Новая версія: спрошчанае выкарыстанне дзякуючы ананімнай ідэнтыфікацыі, без уліковага запісу або рэгістрацыі, пераклад дазволаў праграмы на ўсе мовы.",
+    "app_release_note": "Дададзены спасылкі на Палітыку прыватнасці і Умовы карыстання (EULA) у навігацыі па праграме",
     "share_list_perso_alert_disponible": "Функцыя сумеснага выкарыстання спісу будзе даступная вельмі хутка!",
     "information": "Інфармацыя",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Я не зразумеў. Паспрабуйце яшчэ раз.",
     "downloading_models": "Загрузка мадэляў...",
     "error_downloading_models": "Памылка загрузкі",
-    "error_check_connection": "Калі ласка, праверце падключэнне да Інтэрнэту."
+    "error_check_connection": "Калі ласка, праверце падключэнне да Інтэрнэту.",
+    "politique_de_confidentialite": "Палітыка прыватнасці",
+    "conditions_dutilisation": "Умовы карыстання",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

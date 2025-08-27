@@ -9,7 +9,7 @@ class AppLocalizationsIs extends AppLocalizations {
   AppLocalizationsIs([String locale = 'is']) : super(locale);
 
   @override
-  String get app_release_note => 'Ný útgáfa: einfölduð notkun þökk sé nafnlausri auðkenningu, án aðgangs eða skráningar, þýðing á forritsheimildum á öll tungumál.';
+  String get app_release_note => 'Bætt við tenglum á persónuverndarstefnu og notkunarskilmála (EULA) í leiðsögn appsins';
 
   @override
   String get share_list_perso_alert_disponible => 'Aðgerðin til að deila listanum verður tiltæk mjög fljótlega!';
@@ -565,4 +565,10 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Vinsamlegast athugaðu nettenginguna þína.';
+
+  @override
+  String get politique_de_confidentialite => 'Persónuverndarstefna';
+
+  @override
+  String get conditions_dutilisation => 'Notkunarskilmálar';
 }

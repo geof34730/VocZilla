@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Ny versjon: forenklet bruk takket være anonym identifikasjon, uten konto eller registrering, oversettelse av apptillatelsene til alle språk.",
+    "app_release_note": "La til lenker til personvernregler og bruksvilkår (EULA) i appnavigasjonen",
     "share_list_perso_alert_disponible": "Funksjonen for deling av lister vil være tilgjengelig veldig snart!",
     "information": "Informasjon",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Jeg forsto ikke. Prøv igjen.",
     "downloading_models": "Laster ned modellene...",
     "error_downloading_models": "Nedlastingen mislyktes",
-    "error_check_connection": "Sjekk internettforbindelsen din."
+    "error_check_connection": "Sjekk internettforbindelsen din.",
+    "politique_de_confidentialite": "Personvernerklæring",
+    "conditions_dutilisation": "Bruksvilkår",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

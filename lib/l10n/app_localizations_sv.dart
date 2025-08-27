@@ -9,7 +9,7 @@ class AppLocalizationsSv extends AppLocalizations {
   AppLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get app_release_note => 'Ny version: förenklad användning tack vare anonym identifiering, utan konto eller registrering, översättning av appbehörigheterna till alla språk.';
+  String get app_release_note => 'Lade till länkar till sekretesspolicy och användarvillkor (EULA) i appnavigeringen';
 
   @override
   String get share_list_perso_alert_disponible => 'Funktionen för att dela listor kommer att finnas tillgänglig mycket snart!';
@@ -565,4 +565,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Kontrollera din internetanslutning.';
+
+  @override
+  String get politique_de_confidentialite => 'Integritetspolicy';
+
+  @override
+  String get conditions_dutilisation => 'Användarvillkor';
 }

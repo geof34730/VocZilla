@@ -9,7 +9,7 @@ class AppLocalizationsPa extends AppLocalizations {
   AppLocalizationsPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get app_release_note => 'ਨਵਾਂ ਸੰਸਕਰਣ: ਗੁਮਨਾਮ ਪਛਾਣ, ਖਾਤੇ ਜਾਂ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਤੋਂ ਬਿਨਾਂ, ਐਪ ਅਨੁਮਤੀਆਂ ਦਾ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰਕੇ ਸਰਲ ਵਰਤੋਂ।';
+  String get app_release_note => 'ਐਪ ਨੈਵੀਗੇਸ਼ਨ ਵਿੱਚ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਅਤੇ ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ (EULA) ਦੇ ਲਿੰਕ ਜੋੜੇ ਗਏ ਹਨ।';
 
   @override
   String get share_list_perso_alert_disponible => 'ਸੂਚੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਹੁਤ ਜਲਦੀ ਉਪਲਬਧ ਹੋਵੇਗੀ!';
@@ -565,4 +565,10 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get error_check_connection => 'ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।';
+
+  @override
+  String get politique_de_confidentialite => 'ਪਰਾਈਵੇਟ ਨੀਤੀ';
+
+  @override
+  String get conditions_dutilisation => 'ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ';
 }

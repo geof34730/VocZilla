@@ -1,5 +1,5 @@
 {
-    "app_release_note": "নতুন সংস্করণ: বেনামী শনাক্তকরণের মাধ্যমে সরলীকৃত ব্যবহার, অ্যাকাউন্ট বা নিবন্ধন ছাড়াই, অ্যাপের অনুমতি সকল ভাষায় অনুবাদ করা হয়েছে।",
+    "app_release_note": "অ্যাপ নেভিগেশনে গোপনীয়তা নীতি এবং ব্যবহারের শর্তাবলী (EULA) এর লিঙ্ক যোগ করা হয়েছে।",
     "share_list_perso_alert_disponible": "তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!",
     "information": "তথ্য",
     "app_title": "VocZilla সম্পর্কে",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "আমি বুঝতে পারিনি। আবার চেষ্টা করুন।",
     "downloading_models": "মডেলগুলি ডাউনলোড করা হচ্ছে...",
     "error_downloading_models": "ডাউনলোড ব্যর্থ হয়েছে",
-    "error_check_connection": "আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন।"
+    "error_check_connection": "আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন।",
+    "politique_de_confidentialite": "গোপনীয়তা নীতি",
+    "conditions_dutilisation": "ব্যবহারের শর্তাবলী",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

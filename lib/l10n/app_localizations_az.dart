@@ -9,7 +9,7 @@ class AppLocalizationsAz extends AppLocalizations {
   AppLocalizationsAz([String locale = 'az']) : super(locale);
 
   @override
-  String get app_release_note => 'Yeni versiya: anonim identifikasiya sayəsində sadələşdirilmiş istifadə, hesab və ya qeydiyyat olmadan, proqram icazələrinin bütün dillərə tərcüməsi.';
+  String get app_release_note => 'Tətbiq naviqasiyasında Məxfilik Siyasəti və İstifadə Şərtlərinə (EULA) keçidlər əlavə edildi';
 
   @override
   String get share_list_perso_alert_disponible => 'Siyahı paylaşma xüsusiyyəti çox tezliklə mövcud olacaq!';
@@ -565,4 +565,10 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Zəhmət olmasa internet bağlantınızı yoxlayın.';
+
+  @override
+  String get politique_de_confidentialite => 'Məxfilik Siyasəti';
+
+  @override
+  String get conditions_dutilisation => 'İstifadə şərtləri';
 }

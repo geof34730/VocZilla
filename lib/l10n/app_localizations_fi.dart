@@ -9,7 +9,7 @@ class AppLocalizationsFi extends AppLocalizations {
   AppLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get app_release_note => 'Uusi versio: yksinkertaistettu käyttö anonyymin tunnistuksen ansiosta, ilman tiliä tai rekisteröitymistä, sovelluksen käyttöoikeuksien käännös kaikille kielille.';
+  String get app_release_note => 'Lisätty linkit tietosuojakäytäntöön ja käyttöehtoihin (EULA) sovelluksen navigointiin';
 
   @override
   String get share_list_perso_alert_disponible => 'Listan jakamisominaisuus on saatavilla pian!';
@@ -565,4 +565,10 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Tarkista internetyhteytesi.';
+
+  @override
+  String get politique_de_confidentialite => 'Tietosuojakäytäntö';
+
+  @override
+  String get conditions_dutilisation => 'Käyttöehdot';
 }

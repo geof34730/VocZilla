@@ -9,7 +9,7 @@ class AppLocalizationsNe extends AppLocalizations {
   AppLocalizationsNe([String locale = 'ne']) : super(locale);
 
   @override
-  String get app_release_note => 'नयाँ संस्करण: बेनामी पहिचानको लागि सरलीकृत प्रयोग, खाता वा दर्ता बिना, सबै भाषाहरूमा एप अनुमतिहरूको अनुवाद।';
+  String get app_release_note => 'एप नेभिगेसनमा गोपनीयता नीति र प्रयोगका सर्तहरू (EULA) मा लिङ्कहरू थपियो।';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझेदारी सुविधा चाँडै उपलब्ध हुनेछ!';
@@ -565,4 +565,10 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get error_check_connection => 'कृपया आफ्नो इन्टरनेट जडान जाँच गर्नुहोस्।';
+
+  @override
+  String get politique_de_confidentialite => 'गोपनीयता नीति';
+
+  @override
+  String get conditions_dutilisation => 'प्रयोगका सर्तहरू';
 }

@@ -9,7 +9,7 @@ class AppLocalizationsSq extends AppLocalizations {
   AppLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
-  String get app_release_note => 'Version i ri: përdorim i thjeshtuar falë identifikimit anonim, pa llogari ose regjistrim, përkthim i lejeve të aplikacionit në të gjitha gjuhët.';
+  String get app_release_note => 'U shtuan lidhje për Politikën e Privatësisë dhe Kushtet e Përdorimit (EULA) në navigimin e aplikacionit';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksioni i ndarjes së listës do të jetë i disponueshëm shumë shpejt!';
@@ -565,4 +565,10 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Ju lutemi kontrolloni lidhjen tuaj të internetit.';
+
+  @override
+  String get politique_de_confidentialite => 'Politika e Privatësisë';
+
+  @override
+  String get conditions_dutilisation => 'Kushtet e Përdorimit';
 }

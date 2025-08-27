@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Жаңа нұсқа: тіркелгісіз немесе тіркеусіз анонимді сәйкестендіру, қолданба рұқсаттарын барлық тілдерге аудару арқасында оңайлатылған пайдалану.",
+    "app_release_note": "Қолданба шарлауында Құпиялылық саясаты мен пайдалану шарттарына (EULA) сілтемелер қосылды",
     "share_list_perso_alert_disponible": "Тізіммен бөлісу мүмкіндігі жақын арада қолжетімді болады!",
     "information": "Ақпарат",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Мен түсінбедім. Қайталап көріңіз.",
     "downloading_models": "Үлгілер жүктелуде...",
     "error_downloading_models": "Жүктеп алу сәтсіз аяқталды",
-    "error_check_connection": "Интернет байланысын тексеріңіз."
+    "error_check_connection": "Интернет байланысын тексеріңіз.",
+    "politique_de_confidentialite": "Құпиялылық саясаты",
+    "conditions_dutilisation": "Пайдалану шарттары",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

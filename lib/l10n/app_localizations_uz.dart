@@ -9,7 +9,7 @@ class AppLocalizationsUz extends AppLocalizations {
   AppLocalizationsUz([String locale = 'uz']) : super(locale);
 
   @override
-  String get app_release_note => 'Yangi versiya: anonim identifikatsiya tufayli soddalashtirilgan foydalanish, hisobsiz yoki ro\'yxatdan o\'tmasdan, ilova ruxsatnomalarini barcha tillarga tarjima qilish.';
+  String get app_release_note => 'Ilova navigatsiyasida Maxfiylik siyosati va foydalanish shartlariga (EULA) havolalar qo\'shildi';
 
   @override
   String get share_list_perso_alert_disponible => 'Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!';
@@ -565,4 +565,10 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Internet ulanishingizni tekshiring.';
+
+  @override
+  String get politique_de_confidentialite => 'Maxfiylik siyosati';
+
+  @override
+  String get conditions_dutilisation => 'Foydalanish shartlari';
 }

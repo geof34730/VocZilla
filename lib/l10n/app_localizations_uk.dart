@@ -9,7 +9,7 @@ class AppLocalizationsUk extends AppLocalizations {
   AppLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get app_release_note => 'Нова версія: спрощене використання завдяки анонімній ідентифікації, без облікового запису чи реєстрації, переклад дозволів програми на всі мови.';
+  String get app_release_note => 'Додано посилання на Політику конфіденційності та Умови використання (EULA) у навігації застосунку';
 
   @override
   String get share_list_perso_alert_disponible => 'Функція спільного доступу до списку буде доступна дуже скоро!';
@@ -565,4 +565,10 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Будь ласка, перевірте ваше інтернет-з’єднання.';
+
+  @override
+  String get politique_de_confidentialite => 'Політика конфіденційності';
+
+  @override
+  String get conditions_dutilisation => 'Умови використання';
 }

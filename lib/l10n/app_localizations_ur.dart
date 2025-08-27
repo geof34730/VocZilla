@@ -9,7 +9,7 @@ class AppLocalizationsUr extends AppLocalizations {
   AppLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
-  String get app_release_note => 'نیا ورژن: گمنام شناخت کی بدولت آسان استعمال، اکاؤنٹ یا رجسٹریشن کے بغیر، تمام زبانوں میں ایپ کی اجازتوں کا ترجمہ۔';
+  String get app_release_note => 'ایپ نیویگیشن میں رازداری کی پالیسی اور استعمال کی شرائط (EULA) کے لنکس شامل کیے گئے';
 
   @override
   String get share_list_perso_alert_disponible => 'لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!';
@@ -565,4 +565,10 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get error_check_connection => 'براہ کرم اپنا انٹرنیٹ کنکشن چیک کریں۔';
+
+  @override
+  String get politique_de_confidentialite => 'رازداری کی پالیسی';
+
+  @override
+  String get conditions_dutilisation => 'استعمال کی شرائط';
 }

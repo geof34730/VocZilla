@@ -9,7 +9,7 @@ class AppLocalizationsMk extends AppLocalizations {
   AppLocalizationsMk([String locale = 'mk']) : super(locale);
 
   @override
-  String get app_release_note => 'Нова верзија: поедноставена употреба благодарение на анонимната идентификација, без сметка или регистрација, превод на дозволите за апликацијата на сите јазици.';
+  String get app_release_note => 'Додадени се врски до Политиката за приватност и Условите за користење (EULA) во навигацијата на апликацијата';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцијата за споделување на листа ќе биде достапна многу наскоро!';
@@ -565,4 +565,10 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Проверете ја вашата интернет-врска.';
+
+  @override
+  String get politique_de_confidentialite => 'Политика за приватност';
+
+  @override
+  String get conditions_dutilisation => 'Услови за користење';
 }

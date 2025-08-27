@@ -9,7 +9,7 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get app_release_note => '새로운 버전: 계정이나 등록 없이 익명으로 식별하여 사용이 간편해졌으며, 앱 권한이 모든 언어로 번역되었습니다.';
+  String get app_release_note => '앱 탐색에 개인정보 보호정책 및 이용약관(EULA) 링크가 추가되었습니다.';
 
   @override
   String get share_list_perso_alert_disponible => '목록 공유 기능이 곧 출시됩니다!';
@@ -565,4 +565,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get error_check_connection => '인터넷 연결을 확인하세요.';
+
+  @override
+  String get politique_de_confidentialite => '개인정보 보호정책';
+
+  @override
+  String get conditions_dutilisation => '이용 약관';
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "नयाँ संस्करण: बेनामी पहिचानको लागि सरलीकृत प्रयोग, खाता वा दर्ता बिना, सबै भाषाहरूमा एप अनुमतिहरूको अनुवाद।",
+    "app_release_note": "एप नेभिगेसनमा गोपनीयता नीति र प्रयोगका सर्तहरू (EULA) मा लिङ्कहरू थपियो।",
     "share_list_perso_alert_disponible": "सूची साझेदारी सुविधा चाँडै उपलब्ध हुनेछ!",
     "information": "जानकारी",
     "app_title": "भोकजिला",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "मैले बुझिन। कृपया फेरि प्रयास गर्नुहोस्।",
     "downloading_models": "मोडेलहरू डाउनलोड गर्दै...",
     "error_downloading_models": "डाउनलोड असफल भयो",
-    "error_check_connection": "कृपया आफ्नो इन्टरनेट जडान जाँच गर्नुहोस्।"
+    "error_check_connection": "कृपया आफ्नो इन्टरनेट जडान जाँच गर्नुहोस्।",
+    "politique_de_confidentialite": "गोपनीयता नीति",
+    "conditions_dutilisation": "प्रयोगका सर्तहरू",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

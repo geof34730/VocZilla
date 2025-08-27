@@ -1,5 +1,5 @@
 {
-    "app_release_note": "కొత్త వెర్షన్: ఖాతా లేదా రిజిస్ట్రేషన్ లేకుండా అనామక గుర్తింపు, యాప్ అనుమతులను అన్ని భాషల్లోకి అనువదించడం ద్వారా సరళీకృత ఉపయోగం.",
+    "app_release_note": "యాప్ నావిగేషన్‌లో గోప్యతా విధానం మరియు సేవా నిబంధనల (EULA)కి లింక్‌లు జోడించబడ్డాయి.",
     "share_list_perso_alert_disponible": "జాబితా భాగస్వామ్య ఫీచర్ అతి త్వరలో అందుబాటులోకి వస్తుంది!",
     "information": "సమాచారం",
     "app_title": "వోక్జిల్లా",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "నాకు అర్థం కాలేదు. దయచేసి మళ్ళీ ప్రయత్నించండి.",
     "downloading_models": "మోడల్‌లను డౌన్‌లోడ్ చేస్తోంది...",
     "error_downloading_models": "డౌన్‌లోడ్ విఫలమైంది",
-    "error_check_connection": "దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేయండి."
+    "error_check_connection": "దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేయండి.",
+    "politique_de_confidentialite": "గోప్యతా విధానం",
+    "conditions_dutilisation": "ఉపయోగ నిబంధనలు",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

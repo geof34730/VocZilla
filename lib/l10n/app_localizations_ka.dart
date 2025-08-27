@@ -9,7 +9,7 @@ class AppLocalizationsKa extends AppLocalizations {
   AppLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get app_release_note => 'ახალი ვერსია: გამარტივებული გამოყენება ანონიმური იდენტიფიკაციის წყალობით, ანგარიშის ან რეგისტრაციის გარეშე, აპლიკაციის ნებართვების ყველა ენაზე თარგმნა.';
+  String get app_release_note => 'აპლიკაციის ნავიგაციაში დაემატა ბმულები კონფიდენციალურობის პოლიტიკასა და გამოყენების პირობებზე (EULA)';
 
   @override
   String get share_list_perso_alert_disponible => 'სიის გაზიარების ფუნქცია ძალიან მალე იქნება ხელმისაწვდომი!';
@@ -565,4 +565,10 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get error_check_connection => 'გთხოვთ, შეამოწმოთ თქვენი ინტერნეტ კავშირი.';
+
+  @override
+  String get politique_de_confidentialite => 'კონფიდენციალურობის პოლიტიკა';
+
+  @override
+  String get conditions_dutilisation => 'გამოყენების პირობები';
 }

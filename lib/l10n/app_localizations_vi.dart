@@ -9,7 +9,7 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get app_release_note => 'Phiên bản mới: sử dụng đơn giản hơn nhờ tính năng nhận dạng ẩn danh, không cần tài khoản hoặc đăng ký, dịch quyền ứng dụng sang mọi ngôn ngữ.';
+  String get app_release_note => 'Đã thêm liên kết đến Chính sách quyền riêng tư và Điều khoản sử dụng (EULA) trong phần điều hướng ứng dụng';
 
   @override
   String get share_list_perso_alert_disponible => 'Tính năng chia sẻ danh sách sẽ sớm có mặt!';
@@ -565,4 +565,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Vui lòng kiểm tra kết nối internet của bạn.';
+
+  @override
+  String get politique_de_confidentialite => 'Chính sách bảo mật';
+
+  @override
+  String get conditions_dutilisation => 'Điều khoản sử dụng';
 }

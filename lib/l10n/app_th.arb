@@ -1,5 +1,5 @@
 {
-    "app_release_note": "เวอร์ชันใหม่: ใช้งานง่ายขึ้นด้วยการระบุตัวตนแบบไม่เปิดเผยตัวตน ไม่ต้องใช้บัญชีหรือลงทะเบียน แปลสิทธิ์การใช้งานแอปเป็นทุกภาษา",
+    "app_release_note": "เพิ่มลิงก์ไปยังนโยบายความเป็นส่วนตัวและข้อกำหนดในการให้บริการ (EULA) ในการนำทางแอป",
     "share_list_perso_alert_disponible": "ฟีเจอร์การแชร์รายการจะพร้อมใช้งานเร็วๆ นี้!",
     "information": "ข้อมูล",
     "app_title": "วอคซิลล่า",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "ฉันไม่เข้าใจ กรุณาลองอีกครั้ง",
     "downloading_models": "กำลังดาวน์โหลดโมเดล...",
     "error_downloading_models": "การดาวน์โหลดล้มเหลว",
-    "error_check_connection": "กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของคุณ"
+    "error_check_connection": "กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของคุณ",
+    "politique_de_confidentialite": "นโยบายความเป็นส่วนตัว",
+    "conditions_dutilisation": "เงื่อนไขการใช้งาน",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

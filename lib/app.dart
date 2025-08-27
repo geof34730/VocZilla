@@ -125,9 +125,7 @@ class MyApp extends StatelessWidget {
                       listenWhen: (previous, current) => previous != current,
                       listener: (context, locale) {
                         final localCode = locale.languageCode.toLowerCase();
-                        Logger.Red.log("CHANGE LANGUE IN BLOCKCONSUMER : $localCode");
                         context.read<VocabulairesBloc>().add(LocaleChangedVocabulaires(local: localCode));
-
                       },
                       builder: (context, locale) {
                         return MultiBlocListener(

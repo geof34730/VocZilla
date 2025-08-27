@@ -9,7 +9,7 @@ class AppLocalizationsMr extends AppLocalizations {
   AppLocalizationsMr([String locale = 'mr']) : super(locale);
 
   @override
-  String get app_release_note => 'नवीन आवृत्ती: अनामिक ओळख, खाते किंवा नोंदणीशिवाय, अ‍ॅप परवानग्यांचे सर्व भाषांमध्ये भाषांतर यामुळे वापर सुलभ केला आहे.';
+  String get app_release_note => 'अ‍ॅप नेव्हिगेशनमध्ये गोपनीयता धोरण आणि वापराच्या अटी (EULA) च्या लिंक्स जोडल्या आहेत.';
 
   @override
   String get share_list_perso_alert_disponible => 'यादी शेअरिंग वैशिष्ट्य लवकरच उपलब्ध होईल!';
@@ -565,4 +565,10 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get error_check_connection => 'कृपया तुमचे इंटरनेट कनेक्शन तपासा.';
+
+  @override
+  String get politique_de_confidentialite => 'गोपनीयता धोरण';
+
+  @override
+  String get conditions_dutilisation => 'वापराच्या अटी';
 }

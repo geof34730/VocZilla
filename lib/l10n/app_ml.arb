@@ -1,5 +1,5 @@
 {
-    "app_release_note": "പുതിയ പതിപ്പ്: അക്കൗണ്ടോ രജിസ്ട്രേഷനോ ഇല്ലാതെ അജ്ഞാത തിരിച്ചറിയൽ, ആപ്പ് അനുമതികൾ എല്ലാ ഭാഷകളിലേക്കും വിവർത്തനം ചെയ്യൽ എന്നിവയിലൂടെ ലളിതമാക്കിയ ഉപയോഗം.",
+    "app_release_note": "ആപ്പ് നാവിഗേഷനിൽ സ്വകാര്യതാ നയത്തിലേക്കും ഉപയോഗ നിബന്ധനകളിലേക്കും (EULA) ലിങ്കുകൾ ചേർത്തു.",
     "share_list_perso_alert_disponible": "ലിസ്റ്റ് പങ്കിടൽ സവിശേഷത വളരെ വേഗം ലഭ്യമാകും!",
     "information": "വിവരങ്ങൾ",
     "app_title": "വോക്‌സില്ല",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "എനിക്ക് മനസ്സിലായില്ല. വീണ്ടും ശ്രമിക്കൂ.",
     "downloading_models": "മോഡലുകൾ ഡൗൺലോഡ് ചെയ്യുന്നു...",
     "error_downloading_models": "ഡൗൺലോഡ് പരാജയപ്പെട്ടു",
-    "error_check_connection": "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക."
+    "error_check_connection": "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക.",
+    "politique_de_confidentialite": "സ്വകാര്യതാ നയം",
+    "conditions_dutilisation": "ഉപയോഗ നിബന്ധനകൾ",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

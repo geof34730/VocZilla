@@ -1,5 +1,5 @@
 {
-    "app_release_note": "نیا ورژن: گمنام شناخت کی بدولت آسان استعمال، اکاؤنٹ یا رجسٹریشن کے بغیر، تمام زبانوں میں ایپ کی اجازتوں کا ترجمہ۔",
+    "app_release_note": "ایپ نیویگیشن میں رازداری کی پالیسی اور استعمال کی شرائط (EULA) کے لنکس شامل کیے گئے",
     "share_list_perso_alert_disponible": "لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!",
     "information": "معلومات",
     "app_title": "ووک زیلا",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "میں سمجھ نہیں پایا۔ براہ کرم دوبارہ کوشش کریں۔",
     "downloading_models": "ماڈلز ڈاؤن لوڈ ہو رہے ہیں...",
     "error_downloading_models": "ڈاؤن لوڈ ناکام ہو گیا۔",
-    "error_check_connection": "براہ کرم اپنا انٹرنیٹ کنکشن چیک کریں۔"
+    "error_check_connection": "براہ کرم اپنا انٹرنیٹ کنکشن چیک کریں۔",
+    "politique_de_confidentialite": "رازداری کی پالیسی",
+    "conditions_dutilisation": "استعمال کی شرائط",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

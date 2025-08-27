@@ -9,7 +9,7 @@ class AppLocalizationsSi extends AppLocalizations {
   AppLocalizationsSi([String locale = 'si']) : super(locale);
 
   @override
-  String get app_release_note => 'නව අනුවාදය: ගිණුමක් හෝ ලියාපදිංචියක් නොමැතිව නිර්නාමික හඳුනාගැනීම්, යෙදුම් අවසරයන් සියලුම භාෂාවලට පරිවර්තනය කිරීම හේතුවෙන් සරල කළ භාවිතය.';
+  String get app_release_note => 'යෙදුම් සංචාලනය තුළ රහස්‍යතා ප්‍රතිපත්තිය සහ භාවිත නියමයන් (EULA) වෙත සබැඳි එක් කරන ලදී';
 
   @override
   String get share_list_perso_alert_disponible => 'ලැයිස්තු බෙදාගැනීමේ විශේෂාංගය ඉතා ඉක්මනින් ලබා ගත හැකි වනු ඇත!';
@@ -565,4 +565,10 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get error_check_connection => 'කරුණාකර ඔබගේ අන්තර්ජාල සම්බන්ධතාවය පරීක්ෂා කරන්න.';
+
+  @override
+  String get politique_de_confidentialite => 'රහස්යතා ප්රතිපත්තිය';
+
+  @override
+  String get conditions_dutilisation => 'භාවිත නියම';
 }

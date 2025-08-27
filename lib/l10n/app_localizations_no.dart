@@ -9,7 +9,7 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
-  String get app_release_note => 'Ny versjon: forenklet bruk takket være anonym identifikasjon, uten konto eller registrering, oversettelse av apptillatelsene til alle språk.';
+  String get app_release_note => 'La til lenker til personvernregler og bruksvilkår (EULA) i appnavigasjonen';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksjonen for deling av lister vil være tilgjengelig veldig snart!';
@@ -565,4 +565,10 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Sjekk internettforbindelsen din.';
+
+  @override
+  String get politique_de_confidentialite => 'Personvernerklæring';
+
+  @override
+  String get conditions_dutilisation => 'Bruksvilkår';
 }

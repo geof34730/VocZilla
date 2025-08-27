@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Bertsio berria: erabilera sinplifikatua identifikazio anonimoari esker, konturik edo erregistrorik gabe, aplikazioaren baimenak hizkuntza guztietara itzultzea.",
+    "app_release_note": "Aplikazioaren nabigazioan Pribatutasun Politika eta Zerbitzu Baldintzetarako (EULA) estekak gehitu dira",
     "share_list_perso_alert_disponible": "Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!",
     "information": "Informazioa",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Ez dut ulertu. Saiatu berriro, mesedez.",
     "downloading_models": "Modeloak deskargatzen...",
     "error_downloading_models": "Deskargatzeak huts egin du",
-    "error_check_connection": "Mesedez, egiaztatu zure Interneteko konexioa."
+    "error_check_connection": "Mesedez, egiaztatu zure Interneteko konexioa.",
+    "politique_de_confidentialite": "Pribatutasun Politika",
+    "conditions_dutilisation": "Erabilera Baldintzak",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

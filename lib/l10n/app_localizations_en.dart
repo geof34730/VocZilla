@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get app_release_note => 'New version: simplified use thanks to anonymous identification, without account or registration, translation of the app permissions into all languages.';
+  String get app_release_note => 'Added links to Privacy Policy and Terms of Use (EULA) in the app navigation';
 
   @override
   String get share_list_perso_alert_disponible => 'The list sharing feature will be available very soon!';
@@ -222,7 +222,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get abonnement_descriptif_mensuel => 'Free as a bird: cancel whenever you want.';
 
   @override
-  String get abonnement_descriptif_annuel => 'Enjoy your experience to the fullest while saving money.';
+  String get abonnement_descriptif_annuel => 'Enjoy your experience and save money.';
 
   @override
   String get button_sabonner => 'Subscribe';
@@ -565,4 +565,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Please check your internet connection.';
+
+  @override
+  String get politique_de_confidentialite => 'Privacy Policy';
+
+  @override
+  String get conditions_dutilisation => 'Terms of Use';
 }

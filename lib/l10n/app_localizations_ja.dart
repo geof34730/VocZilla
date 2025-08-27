@@ -9,7 +9,7 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get app_release_note => '新バージョン: 匿名識別によりアカウントや登録が不要になり、アプリの権限がすべての言語に翻訳されるため、使用が簡素化されます。';
+  String get app_release_note => 'アプリのナビゲーションにプライバシーポリシーと利用規約（EULA）へのリンクを追加しました';
 
   @override
   String get share_list_perso_alert_disponible => 'リスト共有機能はまもなく利用可能になります。';
@@ -565,4 +565,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get error_check_connection => 'インターネット接続を確認してください。';
+
+  @override
+  String get politique_de_confidentialite => 'プライバシーポリシー';
+
+  @override
+  String get conditions_dutilisation => '利用規約';
 }

@@ -5,17 +5,17 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000209">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000239">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="2.747586">
+      <testcase classname="fastlane.lanes" name="1: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="1.651505">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="0.482607">
+      <testcase classname="fastlane.lanes" name="2: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="0.445977">
         
       </testcase>
     

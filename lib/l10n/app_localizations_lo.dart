@@ -9,7 +9,7 @@ class AppLocalizationsLo extends AppLocalizations {
   AppLocalizationsLo([String locale = 'lo']) : super(locale);
 
   @override
-  String get app_release_note => 'ເວີຊັນໃໝ່: ການນຳໃຊ້ແບບງ່າຍດາຍຍ້ອນການລະບຸຕົວຕົນແບບບໍ່ເປີດເຜີຍຊື່, ໂດຍບໍ່ມີບັນຊີ ຫຼື ການລົງທະບຽນ, ການແປການອະນຸຍາດແອັບເປັນທຸກພາສາ.';
+  String get app_release_note => 'ເພີ່ມລິ້ງໃສ່ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ ແລະເງື່ອນໄຂການນຳໃຊ້ (EULA) ໃນການນຳທາງແອັບ';
 
   @override
   String get share_list_perso_alert_disponible => 'ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!';
@@ -565,4 +565,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get error_check_connection => 'ກະລຸນາກວດເບິ່ງການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ.';
+
+  @override
+  String get politique_de_confidentialite => 'ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ';
+
+  @override
+  String get conditions_dutilisation => 'ເງື່ອນໄຂການນໍາໃຊ້';
 }

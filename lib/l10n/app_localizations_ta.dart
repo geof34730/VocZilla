@@ -9,7 +9,7 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get app_release_note => 'புதிய பதிப்பு: கணக்கு அல்லது பதிவு இல்லாமல் அநாமதேய அடையாளம் காணல், பயன்பாட்டு அனுமதிகளை அனைத்து மொழிகளிலும் மொழிபெயர்த்தல் ஆகியவற்றால் எளிமைப்படுத்தப்பட்ட பயன்பாடு.';
+  String get app_release_note => 'பயன்பாட்டு வழிசெலுத்தலில் தனியுரிமைக் கொள்கை மற்றும் பயன்பாட்டு விதிமுறைகளுக்கான (EULA) இணைப்புகள் சேர்க்கப்பட்டன.';
 
   @override
   String get share_list_perso_alert_disponible => 'பட்டியல் பகிர்வு அம்சம் மிக விரைவில் கிடைக்கும்!';
@@ -565,4 +565,10 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get error_check_connection => 'உங்கள் இணைய இணைப்பைச் சரிபார்க்கவும்.';
+
+  @override
+  String get politique_de_confidentialite => 'தனியுரிமைக் கொள்கை';
+
+  @override
+  String get conditions_dutilisation => 'பயன்பாட்டு விதிமுறைகள்';
 }

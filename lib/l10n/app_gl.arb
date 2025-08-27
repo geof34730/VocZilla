@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Nova versión: uso simplificado grazas á identificación anónima, sen conta nin rexistro, tradución dos permisos da aplicación a todos os idiomas.",
+    "app_release_note": "Engadíronse ligazóns á Política de privacidade e ás Condicións de servizo (EULA) na navegación da aplicación",
     "share_list_perso_alert_disponible": "A función para compartir listas estará dispoñible moi pronto!",
     "information": "Información",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Non o entendín. Téntao de novo.",
     "downloading_models": "Descargando os modelos...",
     "error_downloading_models": "Fallou a descarga",
-    "error_check_connection": "Comproba a túa conexión a internet."
+    "error_check_connection": "Comproba a túa conexión a internet.",
+    "politique_de_confidentialite": "Política de privacidade",
+    "conditions_dutilisation": "Condicións de uso",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

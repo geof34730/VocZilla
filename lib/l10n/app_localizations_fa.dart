@@ -9,7 +9,7 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get app_release_note => 'نسخه جدید: استفاده ساده به لطف شناسایی ناشناس، بدون نیاز به حساب کاربری یا ثبت نام، ترجمه مجوزهای برنامه به همه زبان‌ها.';
+  String get app_release_note => 'پیوندهایی به سیاست حفظ حریم خصوصی و شرایط استفاده (EULA) در ناوبری برنامه اضافه شد';
 
   @override
   String get share_list_perso_alert_disponible => 'قابلیت اشتراک‌گذاری لیست خیلی زود در دسترس قرار خواهد گرفت!';
@@ -565,4 +565,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get error_check_connection => 'لطفا اتصال اینترنت خود را بررسی کنید.';
+
+  @override
+  String get politique_de_confidentialite => 'سیاست حفظ حریم خصوصی';
+
+  @override
+  String get conditions_dutilisation => 'شرایط استفاده';
 }

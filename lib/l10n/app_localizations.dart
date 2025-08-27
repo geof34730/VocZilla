@@ -238,7 +238,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_release_note.
   ///
   /// In en, this message translates to:
-  /// **'New version: simplified use thanks to anonymous identification, without account or registration, translation of the app permissions into all languages.'**
+  /// **'Added links to Privacy Policy and Terms of Use (EULA) in the app navigation'**
   String get app_release_note;
 
   /// No description provided for @share_list_perso_alert_disponible.
@@ -664,7 +664,7 @@ abstract class AppLocalizations {
   /// No description provided for @abonnement_descriptif_annuel.
   ///
   /// In en, this message translates to:
-  /// **'Enjoy your experience to the fullest while saving money.'**
+  /// **'Enjoy your experience and save money.'**
   String get abonnement_descriptif_annuel;
 
   /// No description provided for @button_sabonner.
@@ -1350,6 +1350,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please check your internet connection.'**
   String get error_check_connection;
+
+  /// No description provided for @politique_de_confidentialite.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get politique_de_confidentialite;
+
+  /// No description provided for @conditions_dutilisation.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of Use'**
+  String get conditions_dutilisation;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

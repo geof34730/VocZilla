@@ -9,7 +9,7 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get app_release_note => 'নতুন সংস্করণ: বেনামী শনাক্তকরণের মাধ্যমে সরলীকৃত ব্যবহার, অ্যাকাউন্ট বা নিবন্ধন ছাড়াই, অ্যাপের অনুমতি সকল ভাষায় অনুবাদ করা হয়েছে।';
+  String get app_release_note => 'অ্যাপ নেভিগেশনে গোপনীয়তা নীতি এবং ব্যবহারের শর্তাবলী (EULA) এর লিঙ্ক যোগ করা হয়েছে।';
 
   @override
   String get share_list_perso_alert_disponible => 'তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!';
@@ -565,4 +565,10 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get error_check_connection => 'আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন।';
+
+  @override
+  String get politique_de_confidentialite => 'গোপনীয়তা নীতি';
+
+  @override
+  String get conditions_dutilisation => 'ব্যবহারের শর্তাবলী';
 }

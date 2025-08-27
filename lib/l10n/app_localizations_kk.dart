@@ -9,7 +9,7 @@ class AppLocalizationsKk extends AppLocalizations {
   AppLocalizationsKk([String locale = 'kk']) : super(locale);
 
   @override
-  String get app_release_note => 'Жаңа нұсқа: тіркелгісіз немесе тіркеусіз анонимді сәйкестендіру, қолданба рұқсаттарын барлық тілдерге аудару арқасында оңайлатылған пайдалану.';
+  String get app_release_note => 'Қолданба шарлауында Құпиялылық саясаты мен пайдалану шарттарына (EULA) сілтемелер қосылды';
 
   @override
   String get share_list_perso_alert_disponible => 'Тізіммен бөлісу мүмкіндігі жақын арада қолжетімді болады!';
@@ -565,4 +565,10 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Интернет байланысын тексеріңіз.';
+
+  @override
+  String get politique_de_confidentialite => 'Құпиялылық саясаты';
+
+  @override
+  String get conditions_dutilisation => 'Пайдалану шарттары';
 }

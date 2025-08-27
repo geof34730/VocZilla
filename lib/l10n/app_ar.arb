@@ -1,5 +1,5 @@
 {
-    "app_release_note": "الإصدار الجديد: استخدام مبسط بفضل التعريف المجهول، دون حساب أو تسجيل، وترجمة أذونات التطبيق إلى جميع اللغات.",
+    "app_release_note": "تمت إضافة روابط لسياسة الخصوصية وشروط الاستخدام (EULA) في التنقل بالتطبيق",
     "share_list_perso_alert_disponible": "ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!",
     "information": "معلومة",
     "app_title": "فوكزيلا",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "لم أفهم. يُرجى المحاولة مرة أخرى.",
     "downloading_models": "جاري تنزيل النماذج...",
     "error_downloading_models": "فشل التنزيل",
-    "error_check_connection": "يرجى التحقق من اتصالك بالإنترنت."
+    "error_check_connection": "يرجى التحقق من اتصالك بالإنترنت.",
+    "politique_de_confidentialite": "سياسة الخصوصية",
+    "conditions_dutilisation": "شروط الاستخدام",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

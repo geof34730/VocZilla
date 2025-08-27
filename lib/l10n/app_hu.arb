@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Új verzió: egyszerűsített használat az anonim azonosításnak köszönhetően, fiók vagy regisztráció nélkül, az alkalmazásengedélyek minden nyelvre lefordítva.",
+    "app_release_note": "Hozzáadtunk linkeket az Adatvédelmi irányelvekhez és a Felhasználási feltételekhez (EULA) az alkalmazás navigációjában.",
     "share_list_perso_alert_disponible": "A listamegosztási funkció hamarosan elérhető lesz!",
     "information": "Információ",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Nem értettem. Kérlek, próbáld újra.",
     "downloading_models": "A modellek letöltése...",
     "error_downloading_models": "Letöltés sikertelen",
-    "error_check_connection": "Kérjük, ellenőrizze az internetkapcsolatát."
+    "error_check_connection": "Kérjük, ellenőrizze az internetkapcsolatát.",
+    "politique_de_confidentialite": "Adatvédelmi irányelvek",
+    "conditions_dutilisation": "Felhasználási feltételek",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

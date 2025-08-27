@@ -9,7 +9,7 @@ class AppLocalizationsLv extends AppLocalizations {
   AppLocalizationsLv([String locale = 'lv']) : super(locale);
 
   @override
-  String get app_release_note => 'Jauna versija: vienkāršota lietošana, pateicoties anonīmai identifikācijai, bez konta vai reģistrācijas, lietotnes atļauju tulkošana visās valodās.';
+  String get app_release_note => 'Lietotnes navigācijā pievienotas saites uz konfidencialitātes politiku un lietošanas noteikumiem (EULA).';
 
   @override
   String get share_list_perso_alert_disponible => 'Saraksta koplietošanas funkcija būs pieejama jau pavisam drīz!';
@@ -565,4 +565,10 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Lūdzu, pārbaudiet savu interneta savienojumu.';
+
+  @override
+  String get politique_de_confidentialite => 'Privātuma politika';
+
+  @override
+  String get conditions_dutilisation => 'Lietošanas noteikumi';
 }

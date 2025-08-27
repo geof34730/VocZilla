@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get app_release_note => 'Neue Version: Vereinfachte Nutzung dank anonymer Identifizierung, ohne Account oder Registrierung, Übersetzung der App-Berechtigungen in alle Sprachen.';
+  String get app_release_note => 'Links zu Datenschutzrichtlinien und Nutzungsbedingungen (EULA) in der App-Navigation hinzugefügt';
 
   @override
   String get share_list_perso_alert_disponible => 'Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!';
@@ -565,4 +565,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Bitte überprüfen Sie Ihre Internetverbindung.';
+
+  @override
+  String get politique_de_confidentialite => 'Datenschutzrichtlinie';
+
+  @override
+  String get conditions_dutilisation => 'Nutzungsbedingungen';
 }

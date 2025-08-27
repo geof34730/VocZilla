@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Uus versioon: lihtsustatud kasutamine tänu anonüümsele tuvastamisele, konto või registreerimiseta, rakenduse õiguste tõlkimine kõikidesse keeltesse.",
+    "app_release_note": "Rakenduse navigeerimisribale lisati lingid privaatsuspoliitikale ja kasutustingimustele (EULA).",
     "share_list_perso_alert_disponible": "Loendi jagamise funktsioon on saadaval peagi!",
     "information": "Teave",
     "app_title": "VocZilla",
@@ -184,5 +184,13 @@
     "pronunciation_try_again": "Ma ei saanud aru. Palun proovi uuesti.",
     "downloading_models": "Mudelite allalaadimine...",
     "error_downloading_models": "Allalaadimine ebaõnnestus",
-    "error_check_connection": "Palun kontrollige oma internetiühendust."
+    "error_check_connection": "Palun kontrollige oma internetiühendust.",
+    "politique_de_confidentialite": "Privaatsuspoliitika",
+    "conditions_dutilisation": "Kasutustingimused",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-08-27T16:47:05+00:00"
+    }
 }

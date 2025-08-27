@@ -9,7 +9,7 @@ class AppLocalizationsHu extends AppLocalizations {
   AppLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get app_release_note => 'Új verzió: egyszerűsített használat az anonim azonosításnak köszönhetően, fiók vagy regisztráció nélkül, az alkalmazásengedélyek minden nyelvre lefordítva.';
+  String get app_release_note => 'Hozzáadtunk linkeket az Adatvédelmi irányelvekhez és a Felhasználási feltételekhez (EULA) az alkalmazás navigációjában.';
 
   @override
   String get share_list_perso_alert_disponible => 'A listamegosztási funkció hamarosan elérhető lesz!';
@@ -565,4 +565,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Kérjük, ellenőrizze az internetkapcsolatát.';
+
+  @override
+  String get politique_de_confidentialite => 'Adatvédelmi irányelvek';
+
+  @override
+  String get conditions_dutilisation => 'Felhasználási feltételek';
 }

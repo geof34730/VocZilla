@@ -9,7 +9,7 @@ class AppLocalizationsDa extends AppLocalizations {
   AppLocalizationsDa([String locale = 'da']) : super(locale);
 
   @override
-  String get app_release_note => 'Ny version: forenklet brug takket være anonym identifikation, uden konto eller registrering, oversættelse af apptilladelserne til alle sprog.';
+  String get app_release_note => 'Tilføjet links til privatlivspolitik og brugsbetingelser (EULA) i appens navigation';
 
   @override
   String get share_list_perso_alert_disponible => 'Funktionen til deling af lister vil være tilgængelig meget snart!';
@@ -565,4 +565,10 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get error_check_connection => 'Tjek venligst din internetforbindelse.';
+
+  @override
+  String get politique_de_confidentialite => 'Privatlivspolitik';
+
+  @override
+  String get conditions_dutilisation => 'Brugsbetingelser';
 }
