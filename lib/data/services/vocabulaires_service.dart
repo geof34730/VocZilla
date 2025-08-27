@@ -8,10 +8,10 @@ import '../models/vocabulary_user.dart';
 class VocabulaireService {
 
 
-  Future<List<dynamic>> getAllData() async {
+  Future<List<dynamic>> getAllData({required String local}) async {
     try {
       // Lire le fichier JSON depuis les assets
-      final String response = await rootBundle.loadString('assets/data/list-vocabulaire.json');
+      final String response = await rootBundle.loadString('assets/data/vocabulaires/${local.toLowerCase()}.json');
       final List<dynamic> jsonData = json.decode(response);
       return jsonData;
     } catch (e) {

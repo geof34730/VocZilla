@@ -13,15 +13,15 @@ class AnswerNotifier extends ChangeNotifier {
   final BuildContext context;
   AnswerNotifier(this.context);
 
-  Future<void> markAsAnsweredCorrectly({required bool isAnswerUser, required String guidVocabulaire}) async {
+  Future<void> markAsAnsweredCorrectly({required bool isAnswerUser, required String guidVocabulaire, required String local}) async {
     final VocabulaireUserRepository vocabulaireUserRepository=VocabulaireUserRepository();
     final vocabulaireUserBloc = BlocProvider.of<VocabulaireUserBloc>(context);
     if (isAnswerUser) {
-      await vocabulaireUserRepository.addVocabulaireUserDataLearned(vocabularyGuid: guidVocabulaire);
+      await vocabulaireUserRepository.addVocabulaireUserDataLearned(vocabularyGuid: guidVocabulaire, local:local);
     } else {
       await vocabulaireUserRepository.removeVocabulaireUserDataLearned(vocabularyGuid: guidVocabulaire);
     }
-    vocabulaireUserBloc.add(CheckVocabulaireUserStatus());
+    vocabulaireUserBloc.add(CheckVocabulaireUserStatus(local: local));
     if (!_hasAnsweredCorrectly) {
       _hasAnsweredCorrectly = true;
       notifyListeners();

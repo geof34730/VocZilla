@@ -10,8 +10,9 @@ import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 
 class BottomNavigationBarVocabulary extends StatelessWidget implements PreferredSizeWidget {
   final int itemSelected;
+  final String local;
 
-  const BottomNavigationBarVocabulary({super.key,  required this.itemSelected});
+  const BottomNavigationBarVocabulary({super.key,  required this.itemSelected, required this.local});
 
   @override
   Widget build(BuildContext context) {
@@ -62,30 +63,31 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
                 ],
                 currentIndex: itemSelected,
                 // Set the initial selected index
+
                 onTap: (value) {
                   switch (value) {
                     case 0:
-                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, local: local);
                       Navigator.pushReplacementNamed(context, '/vocabulary/list');
                       break;
                     case 1:
-                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, isVocabularyNotLearned: true);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, isVocabularyNotLearned: true, local: local);
                       Navigator.pushReplacementNamed(context, '/vocabulary/learn');
                       break;
                     case 2:
-                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, local: local);
                       Navigator.pushReplacementNamed(context, '/vocabulary/voicedictation');
                       break;
                     case 3:
-                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, local: local);
                       Navigator.pushReplacementNamed( context, '/vocabulary/pronunciation');
                       break;
                     case 4:
-                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, isVocabularyNotLearned: true);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, isVocabularyNotLearned: true, local: local);
                       Navigator.pushReplacementNamed(context, '/vocabulary/quizz');
                       break;
                     case 5:
-                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context);
+                      _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, local: local);
                       Navigator.pushReplacementNamed(context, '/vocabulary/statistical');
                       break;
                   }

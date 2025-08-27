@@ -61,22 +61,31 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
           maxLength: widget.resulteField.length,
           maxLengthEnforcement: MaxLengthEnforcement.enforced,
           onChanged: (value) {
-            if (widget.ControlerField.text.length <= widget.resulteField.length) {
-              setState(() { });
-            }
-            if(widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase()){
-              if(widget.AnswerNotifier) {
-                AnswerNotifier(
-                    context
-                ).markAsAnsweredCorrectly(
-                  isAnswerUser: true,
-                  guidVocabulaire: widget.GUID,
-                );
+            // On appelle setState pour déclencher une reconstruction, ce qui mettra à jour l'icône et la couleur de la bordure.
+            setState(() {});
+
+            if (getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField)) {
+              // Utiliser un post-frame callback pour mettre à jour le contrôleur en toute sécurité après le build.
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                if (mounted) {
+                  // Compléter avec le texte correct, y compris les descriptions.
+                  widget.ControlerField.text = widget.resulteField;
+                  widget.ControlerField.selection = TextSelection.fromPosition(
+                    TextPosition(offset: widget.resulteField.length),
+                  );
+                }
+              });
+
+              if (widget.AnswerNotifier) {
+                AnswerNotifier(context).markAsAnsweredCorrectly(
+                    isAnswerUser: true,
+                    guidVocabulaire: widget.GUID,
+                    local: Localizations.localeOf(context).languageCode);
               }
-              if(widget.ButtonNextNotifier) {
+              if (widget.ButtonNextNotifier) {
                 widget.buttonNotifier?.updateButtonState(true);
               }
-              if(widget.voidCallBack != null){
+              if (widget.voidCallBack != null) {
                 widget.voidCallBack!();
               }
             }
@@ -119,6 +128,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
                       ).markAsAnsweredCorrectly(
                         isAnswerUser: false,
                         guidVocabulaire: widget.GUID,
+                        local: Localizations.localeOf(context).languageCode
                       );
                   }
                   if(widget.ButtonNextNotifier) {
@@ -137,34 +147,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
   }
 
 
-
   Icon writeContentAndStyleIcon({required TextEditingController controllerField, required String stockValue}) {
-    if (stockValue.contains("/")) {
-      dynamic arrayVerb = stockValueNoDescription(stockValue: stockValue).split(" / ");
-      for (var verb in arrayVerb) {
-        if (controllerField.text.toUpperCase().indexOf(' / ') > 0) {
-          int posNewSaisiVerbe = controllerField.text.toUpperCase().indexOf(' / ') + 3;
-          int nbSeparatorVerb = '/'.allMatches(stockValue).length;
-          //JUSTE SECOND VERB
-          if (nbSeparatorVerb > '/'.allMatches(controllerField.text).length) {
-            String newText = controllerField.text.substring(posNewSaisiVerbe, controllerField.text.length);
-            if (newText.toUpperCase() == verb.toUpperCase()) {
-              controllerField.value = TextEditingValue(
-                text: "${controllerField.text} / ",
-                selection: TextSelection.collapsed(offset: "${controllerField.text} / ".length),
-              );
-            }
-          }
-        } else {
-          if (controllerField.text.toUpperCase() == verb.toUpperCase()) {
-            controllerField.value = TextEditingValue(
-              text: "$verb / ",
-              selection: TextSelection.collapsed(offset: "$verb / ".length),
-            );
-          }
-        }
-      }
-    }
     if (controllerField.text != '') {
       if (getErrorField(controllerField: controllerField, stockValue: stockValue)) {
         return const Icon(Icons.error, color: Colors.red);
@@ -174,10 +157,6 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
       return const Icon(Icons.question_answer, color: Colors.blue);
     }
     if (getSuccesField(controllerField: controllerField, stockValue: stockValue)) {
-      controllerField.value = TextEditingValue(
-        text: stockValue,
-        selection: TextSelection.collapsed(offset: stockValue.length),
-      );
       return const Icon(Icons.check, color: Colors.green);
     } else {
       return const Icon(Icons.question_answer, color: Colors.blue);

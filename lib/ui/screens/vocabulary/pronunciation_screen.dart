@@ -558,7 +558,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                         ),
                       ),
                       Text(
-                        "(${data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)]})",
+                        "(${data[randomItemData]["TRAD"]})",
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 14,
@@ -734,7 +734,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
 
                     Text(
                       testScreenShot
-                          ? data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)]
+                          ? data[randomItemData]["TRAD"]
                           : _lastWords,
                       style: TextStyle(
                         fontSize: 24,

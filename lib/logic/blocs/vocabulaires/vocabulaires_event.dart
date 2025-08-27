@@ -4,14 +4,21 @@ abstract class VocabulairesEvent {}
 
 class LoadVocabulairesData extends VocabulairesEvent {
   final VocabularyBlocLocal data;
-
-  LoadVocabulairesData(this.data);
+  LoadVocabulairesData({required this.data});
 }
 
 class getAllVocabulaire extends VocabulairesEvent {
   late bool isVocabularyNotLearned;
   late String guid;
-  getAllVocabulaire(this.isVocabularyNotLearned, this.guid);
+  late String local;
+  getAllVocabulaire({ required this.isVocabularyNotLearned, required this.guid, required this.local});
+}
+
+class LocaleChangedVocabulaires extends VocabulairesEvent {
+  final String local;
+  LocaleChangedVocabulaires({required this.local});
+
+
 }
 
 class GetVocabulaireList extends VocabulairesEvent {
@@ -23,6 +30,7 @@ class GetVocabulaireList extends VocabulairesEvent {
   final String titleList;
   final bool isListPerso;
   final bool isListTheme;
+  final String local;
 
 
   GetVocabulaireList({
@@ -33,6 +41,8 @@ class GetVocabulaireList extends VocabulairesEvent {
     this.guid,
     required this.titleList,
     required this.isListPerso,
-    required this.isListTheme
+    required this.isListTheme,
+    required this.local
+
   });
 }

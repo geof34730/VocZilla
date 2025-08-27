@@ -18,6 +18,7 @@ class CardHomeStatisticalWidget extends StatefulWidget {
   final bool isListTheme;
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
+  final String local;
 
   const CardHomeStatisticalWidget({
     super.key,
@@ -30,6 +31,7 @@ class CardHomeStatisticalWidget extends StatefulWidget {
     required this.isListTheme,
     this.vocabulaireBegin,
     this.vocabulaireEnd,
+    required this.local
   });
 
   @override
@@ -78,6 +80,7 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
           vocabulaireEnd: widget.vocabulaireEnd,
           isListPerso: widget.isListPerso,
           isListTheme: widget.isListTheme,
+          local:widget.local
         );
       }
     });

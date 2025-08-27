@@ -5,45 +5,51 @@ import '../../../data/models/vocabulary_bloc_local.dart';
 
 abstract class VocabulaireUserEvent {}
 
-class CheckVocabulaireUserStatus extends VocabulaireUserEvent {}
-
+class CheckVocabulaireUserStatus extends VocabulaireUserEvent {
+  final String local;
+  CheckVocabulaireUserStatus({required this.local});
+}
 
 
 class LoadVocabulaireUserData extends VocabulaireUserEvent {
   final VocabulaireUser data;
-  LoadVocabulaireUserData(this.data);
+  final String local;
+  LoadVocabulaireUserData({required this.data, required this.local});
 }
 
 class DeleteListPerso extends VocabulaireUserEvent {
   final String listPersoGuid;
-  DeleteListPerso(this.listPersoGuid);
+  final String local;
+  DeleteListPerso({required this.listPersoGuid, required this.local});
 }
 
 class AddListPerso extends VocabulaireUserEvent {
   final ListPerso listPerso;
-  AddListPerso(this.listPerso);
+  final String local;
+  AddListPerso({required this.listPerso,  required this.local});
 }
 
 class UpdateListPerso extends VocabulaireUserEvent {
   final ListPerso listPerso;
-  UpdateListPerso(this.listPerso);
+  final String local;
+  UpdateListPerso({required this.listPerso,  required this.local});
 }
 
 class AddVocabulaireListPerso extends VocabulaireUserEvent {
   final String guidListPerso;
   final String guidVocabulaire;
-  AddVocabulaireListPerso({required this.guidListPerso, required  this.guidVocabulaire});
+  final String local;
+  AddVocabulaireListPerso({required this.guidListPerso, required  this.guidVocabulaire,  required this.local});
 }
 
 class DeleteVocabulaireListPerso extends VocabulaireUserEvent {
   final String guidListPerso;
   final String guidVocabulaire;
-  DeleteVocabulaireListPerso({required this.guidListPerso, required  this.guidVocabulaire});
+  final String local;
+  DeleteVocabulaireListPerso({required this.guidListPerso, required  this.guidVocabulaire,required this.local});
 }
 class VocabulaireUserUpdate extends VocabulaireUserEvent {
   final Map<String, dynamic> userData;
-  VocabulaireUserUpdate(this.userData);
+  VocabulaireUserUpdate({required this.userData});
 }
 class VocabulaireUserBlocErrorCleared extends VocabulaireUserEvent {}
-
-

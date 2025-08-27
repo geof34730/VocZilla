@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:vobzilla/ui/screens/offline_screen.dart';
+import 'dart:async'; // Ajoute ceci pour StreamSubscription
 
 class ConnectivityAwareWidget extends StatefulWidget {
   final Widget child;
@@ -12,19 +13,27 @@ class ConnectivityAwareWidget extends StatefulWidget {
 }
 
 class _ConnectivityAwareWidgetState extends State<ConnectivityAwareWidget> {
-  late Stream<List<ConnectivityResult>> _connectivityStream;
+  late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
   bool _isOffline = false;
 
   @override
   void initState() {
     super.initState();
-    _connectivityStream = Connectivity().onConnectivityChanged;
-    _connectivityStream.listen((List<ConnectivityResult> results) {
+    // On écoute le stream et on garde la référence à l'abonnement
+    _connectivitySubscription = Connectivity().onConnectivityChanged.listen((List<ConnectivityResult> results) {
+      if (!mounted) return; // Sécurité : on vérifie que le widget est encore monté
       setState(() {
         _isOffline =
             results.contains(ConnectivityResult.none) || results.isEmpty;
       });
     });
+  }
+
+  @override
+  void dispose() {
+    // On annule l'abonnement pour éviter les appels après dispose
+    _connectivitySubscription.cancel();
+    super.dispose();
   }
 
   @override
@@ -35,6 +44,3 @@ class _ConnectivityAwareWidgetState extends State<ConnectivityAwareWidget> {
     return widget.child;
   }
 }
-
-
-

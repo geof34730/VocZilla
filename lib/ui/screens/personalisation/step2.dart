@@ -43,17 +43,18 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
     });
 
     final bool isSelected = vocabulaire['isSelectedInListPerso'];
-
+    final String local = LanguageUtils.getSmallCodeLanguage(context: context);
     if (isSelected) {
       Logger.Green.log("DELETE: ${guid}");
-      BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteVocabulaireListPerso(guidListPerso: widget.guidListPerso, guidVocabulaire: guid));
+      BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteVocabulaireListPerso(guidListPerso: widget.guidListPerso, guidVocabulaire: guid, local: local));
     } else {
       Logger.Green.log("ADD: ${guid}");
-      BlocProvider.of<VocabulaireUserBloc>(context).add(AddVocabulaireListPerso(guidListPerso: widget.guidListPerso, guidVocabulaire: guid));
+      BlocProvider.of<VocabulaireUserBloc>(context).add(AddVocabulaireListPerso(guidListPerso: widget.guidListPerso, guidVocabulaire: guid, local: local));
     }
     // We wrap this in a Future to ensure that the setState from above has time to update the UI
     // and show the loader before the list starts refreshing. This prevents a race condition.
-    Future(() => BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(dataToLearn, widget.guidListPerso)));
+    Future(() => BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(isVocabularyNotLearned: dataToLearn, guid: widget.guidListPerso, local: local)));
+
   }
 
   @override
@@ -104,7 +105,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
               return vocabulaire['EN']
                   .toLowerCase()
                   .contains(searchQuery.toLowerCase()) ||
-                  vocabulaire[langCode]
+                  vocabulaire["TRAD"]
                       .toLowerCase()
                       .contains(searchQuery.toLowerCase());
             }).toList();
@@ -131,6 +132,7 @@ class _PersonnalisationStep2ScreenState extends State<PersonnalisationStep2Scree
                 vocabulaireConnu: _vocabulaireConnu,
                 vocabulaireRepository: _vocabulaireRepository,
                 guidListPerso: guidListPerso,
+                local: langCode,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -290,7 +292,7 @@ class VocabularyDataSource extends DataTableSource {
         ),
         DataCell(
             Center(
-                child: Text(vocabulaire[langCode ?? ''],
+                child: Text(vocabulaire['TRAD'],
                   style: TextStyle(
                     fontFamily: 'Roboto',
                   ),

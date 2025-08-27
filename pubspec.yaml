@@ -152,7 +152,8 @@ flutter:
     - assets/brand/logo_featureGraphic.png
     - assets/brand/featureGraphic_mobile.png
     - assets/audios/gcloud/
-    - assets/data/list-vocabulaire.json
+ #   - assets/data/list-vocabulaire.json
+    - assets/data/vocabulaires/
     - assets/data/list-themes.json
   #   - images/a_dot_ham.jpeg
 

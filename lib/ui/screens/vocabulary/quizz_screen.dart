@@ -61,7 +61,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                 switch (Random().nextInt(2)) {
                   case 0:
                     {
-                      customeTextZillaControllerLearnLocalLanguage.text =data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)];
+                      customeTextZillaControllerLearnLocalLanguage.text =data[randomItemData]["TRAD"];
                     }
                     break;
                   case 1:
@@ -81,6 +81,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     guidList: state.data.guid,
                     isListPerso : state.data.isListPerso,
                     isListTheme : state.data.isListTheme,
+                    local: LanguageUtils.getSmallCodeLanguage(context: context)
                   )
                 :
                   GlobalStatisticalWidget(
@@ -88,6 +89,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     vocabulaireEnd: state.data.vocabulaireEnd,
                     isListPerso : false,
                     isListTheme : false,
+                    local:LanguageUtils.getSmallCodeLanguage(context: context)
                   ),
 
                 Text(context.loc.quizz_progression_title,
@@ -100,7 +102,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                   state: state,
                   vocabulaireConnu: _vocabulaireConnu,
                   vocabulaireRepository: _vocabulaireRepository,
-
+                  local: LanguageUtils.getSmallCodeLanguage(context: context),
                 ),
                   if (data.isEmpty)...[
                     CongratulationOrErrorData(vocabulaireConnu:_vocabulaireConnu,context: context)
@@ -118,14 +120,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                     ButtonNextNotifier: true,
                                     buttonNotifier: buttonNotifier,
                                     ControlerField: customeTextZillaControllerLearnLocalLanguage,
-                                    labelText: customeTextZillaControllerLearnLocalLanguage
-                                        .text == data[randomItemData][LanguageUtils
-                                        .getSmallCodeLanguage(context: context)]
+                                    labelText: customeTextZillaControllerLearnLocalLanguage.text.isNotEmpty
                                         ? "${context.loc.quizz_en} ${context.loc
                                         .language_locale}"
                                         : "${context.loc.quizz_saisie_in} ${context
                                         .loc.language_locale}",
-                                    resulteField: data[randomItemData][LanguageUtils.getSmallCodeLanguage(context: context)],
+                                    resulteField: data[randomItemData]["TRAD"],
                                     resultSound: false,
                                     GUID: data[randomItemData]['GUID'],
                                   ),
@@ -134,8 +134,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                     ButtonNextNotifier: true,
                                     buttonNotifier: buttonNotifier,
                                     ControlerField: customeTextZillaControllerLearnEnglishLanguage,
-                                    labelText: customeTextZillaControllerLearnEnglishLanguage
-                                        .text == data[randomItemData]["EN"]
+                                    labelText: customeTextZillaControllerLearnEnglishLanguage.text.isNotEmpty
                                         ? "${context.loc.quizz_en} ${context.loc
                                         .language_anglais}"
                                         : "${context.loc.quizz_saisie_in} ${context
@@ -158,7 +157,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                       _vocabulaireRepository.goVocabulairesWithState(
                                           context: context,
                                           isVocabularyNotLearned: _vocabulaireConnu==0 ? true : false,
-                                          state:state
+                                          state: state,
+                                          local: LanguageUtils.getSmallCodeLanguage(context: context)
                                       );
                                       next();
                                     },
@@ -204,4 +204,3 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
 
 }
-

@@ -16,6 +16,7 @@ class GlobalStatisticalWidget extends StatefulWidget {
   final String? guidList;
   final bool isListPerso;
   final bool isListTheme;
+  final String local;
 
   const GlobalStatisticalWidget({
     super.key,
@@ -24,6 +25,7 @@ class GlobalStatisticalWidget extends StatefulWidget {
     this.guidList,
     required this.isListPerso,
     required this.isListTheme,
+    required this.local,
   });
 
   @override
@@ -47,7 +49,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     super.initState();
     // Fetch initial data only if the user data is already loaded.
     if (context.read<VocabulaireUserBloc>().state is VocabulaireUserLoaded) {
-      _fetchStatisticalData();
+      _fetchStatisticalData(local: widget.local);
     }
   }
 
@@ -60,11 +62,12 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
         widget.guidList != oldWidget.guidList ||
         widget.isListPerso != oldWidget.isListPerso ||
         widget.isListTheme != oldWidget.isListTheme) {
-      _fetchStatisticalData();
+
+      _fetchStatisticalData(local: widget.local);
     }
   }
 
-  void _fetchStatisticalData() {
+  void _fetchStatisticalData({required String local}) {
     _statisticalFuture =
         VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
           vocabulaireBegin: widget.vocabulaireBegin,
@@ -72,6 +75,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
           guidList: widget.guidList,
           isListPerso: widget.isListPerso,
           isListTheme: widget.isListTheme,
+          local: local
         );
   }
 
@@ -82,7 +86,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
         // When user data changes, refetch statistics.
         if (state is VocabulaireUserLoaded) {
           setState(() {
-            _fetchStatisticalData();
+            _fetchStatisticalData(local: widget.local);
           });
         }
       },

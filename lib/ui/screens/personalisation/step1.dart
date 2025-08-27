@@ -10,6 +10,7 @@ import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_event.dart';
 
 import '../../../core/utils/enum.dart';
+import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
@@ -34,16 +35,26 @@ class _PersonnalisationStep1ScreenState extends State<PersonnalisationStep1Scree
   late final String finalGuidList;
   Timer? _debounce;
   bool _isLoading = false;
+  bool _isInit = false;
+  final _vocabulaireUserRepository = VocabulaireUserRepository();
 
   @override
   void initState() {
     super.initState();
     finalGuidList = widget.guidListPerso ?? guidListGenerate;
+    // The logic that depends on context has been moved to didChangeDependencies
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_isInit) return;
+
     final isEditing = widget.guidListPerso != null;
     statutFormNotifier.updateStatutFormState(isEditing ? statutListPerso.edit : statutListPerso.create);
 
     if (isEditing) {
-      VocabulaireUserRepository().getListPerso(guidListPerso: widget.guidListPerso!).then((value){
+      _vocabulaireUserRepository.getListPerso(guidListPerso: widget.guidListPerso!, local: LanguageUtils.getSmallCodeLanguage(context: context)).then((value){
         if (value != null && mounted) {
           titleList.text = value.title;
           colorListNotifier.value = Color(value.color);
@@ -51,6 +62,7 @@ class _PersonnalisationStep1ScreenState extends State<PersonnalisationStep1Scree
         }
       });
     }
+    _isInit = true;
   }
 
   @override
@@ -190,7 +202,7 @@ class _PersonnalisationStep1ScreenState extends State<PersonnalisationStep1Scree
         color: colorListNotifier.value.value,
       );
       statutFormNotifier.updateStatutFormState(statutListPerso.edit);
-      BlocProvider.of<VocabulaireUserBloc>(context).add(AddListPerso(newListPerso));
+      BlocProvider.of<VocabulaireUserBloc>(context).add(AddListPerso( listPerso: newListPerso, local: LanguageUtils.getSmallCodeLanguage(context: context)));
     } else if (statutFormNotifier.statutForm == statutListPerso.edit) {
       //MISE A JOUR DE LA LISTE PERSO
       Logger.Green.log("MISE A JOUR DE LA LISTE PERSO");
@@ -199,9 +211,9 @@ class _PersonnalisationStep1ScreenState extends State<PersonnalisationStep1Scree
         title: titleList.text,
         color: colorListNotifier.value.value,
       );
-      BlocProvider.of<VocabulaireUserBloc>(context).add(UpdateListPerso(updateListPerso));
+      BlocProvider.of<VocabulaireUserBloc>(context).add(UpdateListPerso(listPerso: updateListPerso,local: LanguageUtils.getSmallCodeLanguage(context: context)));
     }
-    BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(false,guidListPerso));
+    BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire( isVocabularyNotLearned: false, guid: guidListPerso, local: LanguageUtils.getSmallCodeLanguage(context: context)));
   }
 
   Future<void> _saveAndNavigate({required BuildContext context, required String guidListPerso}) async {

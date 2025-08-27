@@ -14,12 +14,12 @@ class LeaderboardRepository {
   })  : _leaderboardService = leaderboardService,
         _vocabulaireUserRepository = vocabulaireUserRepository;
 
-  Future<LeaderboardData> fetchLeaderboardData({required String currentUserId}) async {
+  Future<LeaderboardData> fetchLeaderboardData({required String currentUserId, required String local}) async {
     try {
       final results = await Future.wait([
         _leaderboardService.fetchTopUsers(),
         _leaderboardService.fetchUserRank(uid: currentUserId),
-        _vocabulaireUserRepository.getCountVocabulaireAll()
+        _vocabulaireUserRepository.getCountVocabulaireAll(local: local)
       ]);
 
       final topUsers = results[0] as List<LeaderboardUser>;

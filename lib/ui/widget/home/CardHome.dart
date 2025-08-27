@@ -62,7 +62,7 @@ class CardHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    String local = Localizations.localeOf(context).languageCode;
     return LayoutBuilder(builder: (context, constraints) {
       double widthWidget = constraints.maxWidth;
       return  (isListShare  && !ownListShare
@@ -79,19 +79,19 @@ class CardHome extends StatelessWidget {
               color: Colors.blue,
               child:Container(
                   width: widthWidget,
-                  child:BoxCardHome(context: context, widthWidget: widthWidget)
+                  child:BoxCardHome(context: context, widthWidget: widthWidget,local: local)
                 )
           )
           :
           Container(
             width: widthWidget,
-            child:BoxCardHome(context: context, widthWidget: widthWidget)
+            child:BoxCardHome(context: context, widthWidget: widthWidget,local: local)
           )
         );
     });
   }
 
-  Card BoxCardHome({required BuildContext context, required double widthWidget}){
+  Card BoxCardHome({required BuildContext context, required double widthWidget, required String local}){
     return Card(
       color: backgroundColor,
       child: Column(
@@ -151,7 +151,7 @@ class CardHome extends StatelessWidget {
                     valueKey: "buttonList${keyStringTest}",
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme  );
+                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme  );
                       Navigator.pushNamed(context, '/vocabulary/list');
                     },
                     iconContent: Icons.list,
@@ -162,7 +162,7 @@ class CardHome extends StatelessWidget {
                     valueKey: 'buttonLearn${keyStringTest}',
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
+                      _vocabulaireRepository.goVocabulaires(local:local,isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
                       Navigator.pushNamed(context, '/vocabulary/learn');
                     },
                     iconContent: Icons.school_rounded,
@@ -173,7 +173,7 @@ class CardHome extends StatelessWidget {
                     valueKey: 'buttonVoiceDictation${keyStringTest}',
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
+                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
                       Navigator.pushNamed(context, '/vocabulary/voicedictation');
                     },
                     iconContent: Icons.play_circle,
@@ -184,7 +184,7 @@ class CardHome extends StatelessWidget {
                     valueKey: 'buttonPrononciation${keyStringTest}',
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
+                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
                       Navigator.pushNamed(context, '/vocabulary/pronunciation');
                     },
                     iconContent: Icons.mic,
@@ -195,7 +195,7 @@ class CardHome extends StatelessWidget {
                     valueKey: 'buttonQuizz${keyStringTest}',
                     colorIcon: Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
+                      _vocabulaireRepository.goVocabulaires(local:local,isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
                       Navigator.pushNamed(context, '/vocabulary/quizz');
                     },
                     iconContent: Icons.assignment,
@@ -220,6 +220,7 @@ class CardHome extends StatelessWidget {
                     barColorProgress: Colors.green,
                     barColorLeft:  Colors.orange ,
                     paddingLevelBar: paddingLevelBar,
+                    local:local
                   ),
               )
           ],
@@ -258,7 +259,7 @@ class CardHome extends StatelessWidget {
                       colorIcon: Colors.red,
                       onClickButton: () {
                         if(testScreenShot) {
-                          BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(guid));
+                          BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(listPersoGuid: guid, local:local));
                         }
                         else {
                           showDialog(
@@ -286,8 +287,7 @@ class CardHome extends StatelessWidget {
                                   ElevatedButton(
                                     child: Text(context.loc.oui),
                                     onPressed: () {
-                                      BlocProvider.of<VocabulaireUserBloc>(
-                                          context).add(DeleteListPerso(guid));
+                                      BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(listPersoGuid: guid, local: local));
                                       Navigator.of(dialogContext).pop();
                                     },
                                     style: ElevatedButton.styleFrom(

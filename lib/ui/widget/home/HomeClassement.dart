@@ -8,11 +8,15 @@ import 'package:vobzilla/global.dart';
 import 'package:vobzilla/main.dart'; // NOUVEAU: Importer main.dart pour routeObserver
 import 'package:vobzilla/ui/widget/elements/Loading.dart';
 
+import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_bloc.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_event.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_state.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
+
 import 'CardClassementGamer.dart';
 import 'CardClassementUser.dart';
 
@@ -29,11 +33,12 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
   @override
   void initState() {
     super.initState();
-    _fetchData();
+
   }
  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    _fetchData();
     routeObserver.subscribe(this, ModalRoute.of(context)!);
   }
 
@@ -53,9 +58,10 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
   }
 
   void _fetchData() {
+    final langCode = LanguageUtils.getSmallCodeLanguage(context: context);
     final userId = FirebaseAuth.instance.currentUser?.uid;
     if (userId != null) {
-      context.read<LeaderboardBloc>().add(FetchLeaderboard());
+      context.read<LeaderboardBloc>().add(FetchLeaderboard(local: langCode));
     }
   }
 
@@ -78,6 +84,7 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
   }
 
   Widget _buildLoaded(BuildContext context, LeaderboardData data) {
+
     return RefreshIndicator(
       onRefresh: () async {
         _fetchData();

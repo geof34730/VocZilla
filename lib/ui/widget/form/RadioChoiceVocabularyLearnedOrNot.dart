@@ -12,13 +12,15 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
   final dynamic state;
   final int vocabulaireConnu; // 0: à apprendre, 1: tous/appris
   final String? guidListPerso;
+  final String local;
 
   const RadioChoiceVocabularyLearnedOrNot({
     Key? key,
     required this.vocabulaireRepository,
     required this.state,
     required this.vocabulaireConnu,
-    this.guidListPerso
+    this.guidListPerso,
+    required this.local
   }) : super(key: key);
 
   @override
@@ -39,13 +41,13 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
             isSelected: vocabulaireConnu == 0,
             onTap: () {
               if(guidListPerso != null) {
-                BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(true, guidListPerso!));
+                BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(isVocabularyNotLearned: true, guid: guidListPerso!, local: Localizations.localeOf(context).languageCode));
               }
               else {
                 vocabulaireRepository.goVocabulairesWithState(
                   context: context,
                   isVocabularyNotLearned: true,
-                  state: state,
+                  state: state, local: Localizations.localeOf(context).languageCode,
                 );
               }
             },
@@ -58,13 +60,14 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
             isSelected: vocabulaireConnu == 1,
             onTap: () {
               if(guidListPerso != null) {
-                BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire(false, guidListPerso!));
+                BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire( isVocabularyNotLearned: false, guid: guidListPerso!, local: Localizations.localeOf(context).languageCode ));
               }
               else {
                 vocabulaireRepository.goVocabulairesWithState(
                   context: context,
                   isVocabularyNotLearned: false,
                   state: state,
+                  local: Localizations.localeOf(context).languageCode
                 );
               }
             },

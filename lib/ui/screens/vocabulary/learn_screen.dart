@@ -78,7 +78,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                       RadioChoiceVocabularyLearnedOrNot(
                           state: state,
                           vocabulaireConnu: _vocabulaireConnu,
-                          vocabulaireRepository: _vocabulaireRepository
+                          vocabulaireRepository: _vocabulaireRepository,
+                          local: LanguageUtils.getSmallCodeLanguage(context: context)
                       ),
                       if (data.isEmpty)...[
                         CongratulationOrErrorData(vocabulaireConnu:_vocabulaireConnu,context: context)
@@ -132,7 +133,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
                                               Text(
-                                                "${data[numItemVocabulary][LanguageUtils.getSmallCodeLanguage(context: context)]}",
+                                                "${data[numItemVocabulary]["TRAD"]}",
                                                 style: TextStyle(
                                                   fontSize: 40,
                                                   fontWeight: FontWeight.bold,

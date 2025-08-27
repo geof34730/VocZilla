@@ -30,6 +30,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       emit(VocabulaireUserLoaded(vocabulaireUser));
     });
 
+
   }
   void _onVocabulaireUserBlocErrorCleared(VocabulaireUserBlocErrorCleared event, Emitter<VocabulaireUserState> emit,) {
       if (state is VocabulaireUserError) {
@@ -43,7 +44,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   Future<void> _onCheckVocabulaireUserStatus(
       CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
     try {
-      VocabulaireUser? userData = await _vocabulaireUserRepository.getVocabulaireUserData();
+      VocabulaireUser? userData = await _vocabulaireUserRepository.getVocabulaireUserData(local: event.local);
       if (userData != null) {
         emit(VocabulaireUserLoaded(userData));
       } else {
@@ -70,7 +71,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     try {
       await _vocabulaireUserRepository.deleteListPerso(guid: event.listPersoGuid);
       emit(ListPersoDeletionSuccess(event.listPersoGuid));
-      add(CheckVocabulaireUserStatus());
+      add(CheckVocabulaireUserStatus(local: event.local));
     } catch (e) {
       emit(VocabulaireUserError("vocabulaire_user_error_delete_list"));
     }
@@ -80,9 +81,9 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   Future<void> _onAddListPerso(
       AddListPerso event, Emitter<VocabulaireUserState> emit) async {
     try {
-      await _vocabulaireUserRepository.addListPerso(listPerso: event.listPerso);
+      await _vocabulaireUserRepository.addListPerso(listPerso: event.listPerso, local: event.local);
       // Rafraîchit les données après l'action
-      add(CheckVocabulaireUserStatus());
+      add(CheckVocabulaireUserStatus(local: event.local));
     } catch (e) {
       emit(VocabulaireUserError("vocabulaire_user_error_add_list_perso"));
     }
@@ -92,9 +93,9 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   Future<void> _onUpdateListPerso(
       UpdateListPerso event, Emitter<VocabulaireUserState> emit) async {
     try {
-      await _vocabulaireUserRepository.updateListPerso(listPerso: event.listPerso);
+      await _vocabulaireUserRepository.updateListPerso(listPerso: event.listPerso, local: event.local);
       // Rafraîchit les données après l'action
-      add(CheckVocabulaireUserStatus());
+      add(CheckVocabulaireUserStatus(local: event.local));
     } catch (e) {
       emit(VocabulaireUserError("vocabulaire_user_error_update_list_perso"));
     }
@@ -105,9 +106,12 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       AddVocabulaireListPerso event, Emitter<VocabulaireUserState> emit) async {
     try {
       await _vocabulaireUserRepository.addVocabulaireListPerso(
-          guidListPerso: event.guidListPerso, guidVocabulaire: event.guidVocabulaire);
+          guidListPerso: event.guidListPerso,
+          guidVocabulaire: event.guidVocabulaire,
+          local: event.local
+      );
       // Rafraîchit les données après l'action
-      add(CheckVocabulaireUserStatus());
+      add(CheckVocabulaireUserStatus(local: event.local));
     } catch (e) {
       emit(VocabulaireUserError("vocabulaire_user_error_add_vocabulaire_list_perso"));
     }
@@ -118,10 +122,12 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       DeleteVocabulaireListPerso event, Emitter<VocabulaireUserState> emit) async {
     try {
       await _vocabulaireUserRepository.deleteVocabulaireListPerso(
-          guidListPerso: event.guidListPerso, guidVocabulaire: event.guidVocabulaire
+          guidListPerso: event.guidListPerso,
+          guidVocabulaire: event.guidVocabulaire,
+          local: event.local
       );
       // Rafraîchit les données après l'action
-      add(CheckVocabulaireUserStatus());
+      add(CheckVocabulaireUserStatus(local: event.local));
     } catch (e) {
       emit(VocabulaireUserError("vocabulaire_user_error_add_vocabulaire_list_perso"));
     }

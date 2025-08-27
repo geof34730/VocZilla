@@ -25,7 +25,7 @@ class LeaderboardBloc extends Bloc<LeaderboardEvent, LeaderboardState> {
     emit(LeaderboardLoading());
     try {
       final String? currentUserId = FirebaseAuth.instance.currentUser?.uid;
-      final leaderboardData = await leaderboardRepository.fetchLeaderboardData(currentUserId: currentUserId ?? '');
+      final leaderboardData = await leaderboardRepository.fetchLeaderboardData(currentUserId: currentUserId ?? '', local:event.local);
       emit(LeaderboardLoaded(leaderboardData));
     } catch (e) {
       emit(LeaderboardError(e.toString()));

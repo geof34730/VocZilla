@@ -71,7 +71,7 @@ class _LayoutState extends State<Layout> {
             ),
           )
       ) : null),
-      bottomNavigationBar: (widget.showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: widget.itemSelected) : null,
+      bottomNavigationBar: (widget.showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: widget.itemSelected, local: Localizations.localeOf(context).languageCode) : null,
       body:SingleChildScrollView(
           child:Padding(
               padding: widget.logged ? EdgeInsets.only(top: kToolbarHeight + MediaQuery.of(context).padding.top + 20,left:10,right:10,bottom:20) : EdgeInsets.all(0) ,

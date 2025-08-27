@@ -9,6 +9,7 @@ import 'package:vobzilla/ui/widget/home/HomeClassement.dart';
 import 'package:vobzilla/ui/widget/home/HomeListTheme.dart';
 import 'package:vobzilla/ui/widget/statistical/global_statisctical_widget.dart';
 import '../../core/utils/getFontForLanguage.dart';
+import '../../core/utils/languageUtils.dart';
 import '../../core/utils/ui.dart';
 import '../../data/repository/data_user_repository.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
@@ -16,6 +17,7 @@ import '../../logic/blocs/notification/notification_bloc.dart';
 import '../../logic/blocs/notification/notification_event.dart';
 import '../../logic/blocs/user/user_bloc.dart';
 import '../../logic/blocs/user/user_event.dart';
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
 import '../widget/home/TitleWidget.dart';
@@ -28,6 +30,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final codelang = Localizations.localeOf(context).languageCode;
     return Column(
           key: ValueKey('home_logged'),
@@ -38,6 +41,7 @@ class HomeScreen extends StatelessWidget {
             GlobalStatisticalWidget(
               isListPerso : false,
               isListTheme : false,
+              local: codelang,
             ),
 
 

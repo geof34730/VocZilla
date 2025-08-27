@@ -15,8 +15,9 @@ abstract class LeaderboardEvent extends Equatable {
 // Il contient l'ID de l'utilisateur nécessaire à la requête.
 class FetchLeaderboard extends LeaderboardEvent {
   final String? currentUserId = FirebaseAuth.instance.currentUser?.uid;
+  final String local;
 
-  FetchLeaderboard();
+  FetchLeaderboard({required  this.local});
 
 // On ajoute currentUserId aux props pour que deux événements avec le même ID
 // soient considérés comme égaux.

@@ -57,7 +57,8 @@ class _ListScreenState extends State<ListScreen> {
               RadioChoiceVocabularyLearnedOrNot(
                   state: state,
                   vocabulaireConnu: _vocabulaireConnu,
-                  vocabulaireRepository: _vocabulaireRepository
+                  vocabulaireRepository: _vocabulaireRepository,
+                  local: LanguageUtils.getSmallCodeLanguage(context: context)
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -213,7 +214,7 @@ class VocabularyDataSource extends DataTableSource {
         ),
         DataCell(
           Center(
-              child: Text(vocabulaire[LanguageUtils.getSmallCodeLanguage(context: context) ?? ''],
+              child: Text(vocabulaire["TRAD"],
               style: TextStyle(
                 fontFamily: 'Roboto',
               ),

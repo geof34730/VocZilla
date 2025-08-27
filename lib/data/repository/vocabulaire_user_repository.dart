@@ -44,7 +44,7 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<VocabulaireUser?> getVocabulaireUserData() async {
+  Future<VocabulaireUser?> getVocabulaireUserData({required String local}) async {
    Logger.Green.log("getVocabulaireUserData 222");
     try {
       var userDataJson = await localStorageService.getUserData();
@@ -53,7 +53,7 @@ class VocabulaireUserRepository {
         return VocabulaireUser.fromJson(userDataJson);
       }
       else {
-        final userData = await getEmptyVocabulaireUserData();
+        final userData = await getEmptyVocabulaireUserData(local:local);
         return userData;
       }
     } catch (e) {
@@ -75,9 +75,9 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<VocabulaireUser> getEmptyVocabulaireUserData() async {
+  Future<VocabulaireUser> getEmptyVocabulaireUserData({required String local}) async {
     Logger.Pink.log('VocabulaireUserRepository:  getEmptyVocabulaireUserData');
-    final vocabulairesAll = await VocabulaireService().getAllData();
+    final vocabulairesAll = await VocabulaireService().getAllData(local:local);
     final List<ListTheme> userTheme = await VocabulaireService().getThemesData();
     Logger.Yellow.log("LIST PERSO VIDE");
     VocabulaireUser dataEmpty = VocabulaireUser(
@@ -90,7 +90,7 @@ class VocabulaireUserRepository {
     return dataEmpty;
   }
 
-  Future<void> addVocabulaireUserDataLearned({required String vocabularyGuid}) async {
+  Future<void> addVocabulaireUserDataLearned({required String vocabularyGuid,required String local}) async {
     Logger.Red.log("addVocabulaireUserDataLearned: vocabularyGuid: $vocabularyGuid ");
     try {
       Logger.Green.log('Tentative d\'ajout du vocabulaire : $vocabularyGuid');
@@ -100,7 +100,7 @@ class VocabulaireUserRepository {
         userData = VocabulaireUser.fromJson(userDataJson);
       } else {
         // Initialiser les données utilisateur avec une structure par défaut
-        userData = await getEmptyVocabulaireUserData();
+        userData = await getEmptyVocabulaireUserData(local:local);
         Logger.Green.log('Données utilisateur initialisées par défaut.');
       }
       // Ajouter le vocabulaire à la liste si ce n'est pas déjà présent
@@ -189,8 +189,8 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<int>getCountVocabulaireAll() async {
-    var data = await VocabulaireRepository().getDataTop();
+  Future<int>getCountVocabulaireAll({required String local}) async {
+    var data = await VocabulaireRepository().getDataTop(local:local);
     return data.length;
   }
 
@@ -201,22 +201,23 @@ class VocabulaireUserRepository {
     int? vocabulaireEnd,
     ListPerso? listPerso,
     required bool isListPerso,
-    required bool isListTheme
+    required bool isListTheme,
+    required String local
 
   }) async {
     try {
       var data = [];
       late List<dynamic> dataSlice;
       if(isListPerso){
-        dataSlice = await getVocabulaireListPersoByGuidListPerso(guidListPerso: guidList ?? "");
+        dataSlice = await getVocabulaireListPersoByGuidListPerso(guidListPerso: guidList ?? "",local: local);
       }
       else if(isListTheme){
       //////////////////ADD FOR THEME
         Logger.Blue.log("//////////////////ADD FOR THEME sssss");
-        dataSlice = await getVocabulaireListThemeByGuidList(guidList: guidList ?? "");
+        dataSlice = await getVocabulaireListThemeByGuidList(guidList: guidList ?? "", local: local);
 
       }else{
-        data = await VocabulaireRepository().getDataTop(); // Ensure this is awaited
+        data = await VocabulaireRepository().getDataTop(local:local); // Ensure this is awaited
         vocabulaireBegin ??= 0;
         vocabulaireEnd ??= data.length;
         dataSlice = data.sublist(vocabulaireBegin, vocabulaireEnd);
@@ -235,8 +236,8 @@ class VocabulaireUserRepository {
   }
 
   ////BEGIN LIST PERSO
-  Future<List<dynamic>> getVocabulaireListPersoByGuidListPerso({required String guidListPerso}) async {
-    VocabulaireUser? userData = await getVocabulaireUserData();
+  Future<List<dynamic>> getVocabulaireListPersoByGuidListPerso({required String guidListPerso, required String local}) async {
+    VocabulaireUser? userData = await getVocabulaireUserData(local: local);
     if (userData != null) {
       ListPerso? listVocabulairePerso = userData.listPerso.firstWhere(
             (list) => list.guid == guidListPerso,
@@ -244,7 +245,7 @@ class VocabulaireUserRepository {
       );
       if (listVocabulairePerso != null) {
         List<String> vocabGuids = listVocabulairePerso.listGuidVocabulary;
-        List<dynamic> allVocabularies = await VocabulaireRepository().getDataTop();
+        List<dynamic> allVocabularies = await VocabulaireRepository().getDataTop(local: local);
         List<dynamic> vocabularies = allVocabularies.where((vocab) {
           return vocabGuids.contains(vocab['GUID']);
         }).toList();
@@ -256,8 +257,8 @@ class VocabulaireUserRepository {
   }
 
 
-  Future<List<dynamic>> getVocabulaireListThemeByGuidList({required String guidList}) async {
-    VocabulaireUser? userData = await getVocabulaireUserData();
+  Future<List<dynamic>> getVocabulaireListThemeByGuidList({required String guidList, required String local}) async {
+    VocabulaireUser? userData = await getVocabulaireUserData(local: local);
 
     if (userData != null) {
       ListTheme? listVocabulaire = userData.listTheme.firstWhere(
@@ -268,7 +269,7 @@ class VocabulaireUserRepository {
 
       if (listVocabulaire != null) {
         List<String> vocabGuids = listVocabulaire.listGuidVocabulary;
-        List<dynamic> allVocabularies = await VocabulaireRepository().getDataTop();
+        List<dynamic> allVocabularies = await VocabulaireRepository().getDataTop(local:local);
         List<dynamic> vocabularies = allVocabularies.where((vocab) {
           return vocabGuids.contains(vocab['GUID']);
         }).toList();
@@ -281,8 +282,8 @@ class VocabulaireUserRepository {
     return [];
   }
 
-  Future<void> addListPerso({required ListPerso listPerso}) async {
-    VocabulaireUser? userData = await getVocabulaireUserData();
+  Future<void> addListPerso({required ListPerso listPerso, required String local}) async {
+    VocabulaireUser? userData = await getVocabulaireUserData(local: local);
     if (userData != null) {
       // Create a new list with the existing items plus the new item
       List<ListPerso> updatedListPerso = List.from(userData.listPerso)..add(listPerso);
@@ -320,10 +321,10 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<void> updateListPerso({required ListPerso listPerso}) async {
+  Future<void> updateListPerso({required ListPerso listPerso,required String local}) async {
     try {
       // Récupérer les données utilisateur actuelles
-      VocabulaireUser? userData = await getVocabulaireUserData();
+      VocabulaireUser? userData = await getVocabulaireUserData(local: local);
       if (userData != null) {
         // Mettre à jour la liste perso avec les nouvelles valeurs
         List<ListPerso> updatedListPerso = userData.listPerso.map((existingListPerso) {
@@ -349,10 +350,10 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<ListPerso?> getListPerso({required String guidListPerso}) async {
+  Future<ListPerso?> getListPerso({required String guidListPerso,required String local}) async {
     try {
       // Récupérer les données utilisateur actuelles
-      VocabulaireUser? userData = await getVocabulaireUserData();
+      VocabulaireUser? userData = await getVocabulaireUserData(local:local);
 
       if (userData != null) {
         // Trouver la liste perso avec le guid spécifié
@@ -382,10 +383,10 @@ class VocabulaireUserRepository {
     print(guid);
   }
 
-  Future<void> addVocabulaireListPerso({required String guidListPerso, required String guidVocabulaire }) async {
+  Future<void> addVocabulaireListPerso({required String guidListPerso, required String guidVocabulaire, required String local }) async {
     try {
       // Récupérer les données utilisateur actuelles
-      VocabulaireUser? userData = await getVocabulaireUserData();
+      VocabulaireUser? userData = await getVocabulaireUserData(local: local);
       if (userData != null) {
         // Trouver la liste perso avec le guid spécifié
         List<ListPerso> updatedListPerso = userData.listPerso.map((listPerso) {
@@ -410,10 +411,10 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<void> deleteVocabulaireListPerso({required String guidListPerso, required String guidVocabulaire}) async {
+  Future<void> deleteVocabulaireListPerso({required String guidListPerso, required String guidVocabulaire, required String local}) async {
     try {
       // Récupérer les données utilisateur actuelles
-      VocabulaireUser? userData = await getVocabulaireUserData();
+      VocabulaireUser? userData = await getVocabulaireUserData(local: local);
 
       if (userData != null) {
         // Trouver la liste perso avec le guid spécifié

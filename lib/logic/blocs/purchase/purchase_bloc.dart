@@ -22,8 +22,7 @@ class PurchaseBloc extends Bloc<PurchaseEvent, PurchaseState> {
     on<PurchaseUpdated>(_onPurchaseUpdated);
 
     // Écoute du flux d’achats → on dispatch un event (pas de emit direct ici).
-    _purchaseSubscription = _inAppPurchase.purchaseStream.listen(
-          (list) => add(PurchaseUpdated(list)),
+    _purchaseSubscription = _inAppPurchase.purchaseStream.listen((list) => add(PurchaseUpdated(list)),
       onError: (error) {
         Logger.Red.log('Erreur flux achats: $error');
         add(PurchaseFailed(error.toString()));
