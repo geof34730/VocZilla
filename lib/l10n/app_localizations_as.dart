@@ -571,4 +571,43 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ব্যৱহাৰৰ চৰ্তসমূহ';
+
+  @override
+  String get vocabulaire_type_adjectif => 'বিশেষণ';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ক্ৰিয়া বিশেষণ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'প্ৰশ্নবোধক বিভক্তি';
+
+  @override
+  String get vocabulaire_type_conjonction => 'সংযোগ';
+
+  @override
+  String get vocabulaire_type_determinant => 'নিৰ্ণায়ক';
+
+  @override
+  String get vocabulaire_type_interjection => 'ইন্টাৰজেকচন';
+
+  @override
+  String get vocabulaire_type_nom => 'নাম';
+
+  @override
+  String get vocabulaire_type_numeral => 'সংখ্যা';
+
+  @override
+  String get vocabulaire_type_pronom => 'সৰ্বনাম';
+
+  @override
+  String get vocabulaire_type_preposition => 'অব্যয়';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modal verb';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitive verb';
+
+  @override
+  String get vocabulaire_type_inconnu => 'অজ্ঞাত';
 }

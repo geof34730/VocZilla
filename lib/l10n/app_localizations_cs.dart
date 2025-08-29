@@ -571,4 +571,43 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Podmínky použití';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Přídavné jméno';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Příslovce';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Tázací příslovce';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Spojení';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinant';
+
+  @override
+  String get vocabulaire_type_interjection => 'Citoslovce';
+
+  @override
+  String get vocabulaire_type_nom => 'Jméno';
+
+  @override
+  String get vocabulaire_type_numeral => 'Číslice';
+
+  @override
+  String get vocabulaire_type_pronom => 'Zájmeno';
+
+  @override
+  String get vocabulaire_type_preposition => 'Předložka';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modální sloveso';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitiv slovesa';
+
+  @override
+  String get vocabulaire_type_inconnu => 'neznámý';
 }

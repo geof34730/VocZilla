@@ -571,4 +571,43 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ഉപയോഗ നിബന്ധനകൾ';
+
+  @override
+  String get vocabulaire_type_adjectif => 'നാമവിശേഷണം';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ക്രിയാവിശേഷണം';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ചോദ്യം ചെയ്യൽ ക്രിയാവിശേഷണം';
+
+  @override
+  String get vocabulaire_type_conjonction => 'സംയോജനം';
+
+  @override
+  String get vocabulaire_type_determinant => 'ഡിറ്റർമിനന്റ്';
+
+  @override
+  String get vocabulaire_type_interjection => 'ഇടപെടൽ';
+
+  @override
+  String get vocabulaire_type_nom => 'പേര്';
+
+  @override
+  String get vocabulaire_type_numeral => 'സംഖ്യ';
+
+  @override
+  String get vocabulaire_type_pronom => 'സർവ്വനാമം';
+
+  @override
+  String get vocabulaire_type_preposition => 'പ്രീപോസിഷൻ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'മോഡൽ ക്രിയ';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'അനിർവചനീയ ക്രിയ';
+
+  @override
+  String get vocabulaire_type_inconnu => 'അജ്ഞാതം';
 }

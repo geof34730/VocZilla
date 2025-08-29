@@ -1362,6 +1362,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Terms of Use'**
   String get conditions_dutilisation;
+
+  /// No description provided for @vocabulaire_type_adjectif.
+  ///
+  /// In en, this message translates to:
+  /// **'Adjective'**
+  String get vocabulaire_type_adjectif;
+
+  /// No description provided for @vocabulaire_type_adverbe.
+  ///
+  /// In en, this message translates to:
+  /// **'Adverb'**
+  String get vocabulaire_type_adverbe;
+
+  /// No description provided for @vocabulaire_type_adverbeInterrogatif.
+  ///
+  /// In en, this message translates to:
+  /// **'Interrogative adverb'**
+  String get vocabulaire_type_adverbeInterrogatif;
+
+  /// No description provided for @vocabulaire_type_conjonction.
+  ///
+  /// In en, this message translates to:
+  /// **'Conjunction'**
+  String get vocabulaire_type_conjonction;
+
+  /// No description provided for @vocabulaire_type_determinant.
+  ///
+  /// In en, this message translates to:
+  /// **'Determinant'**
+  String get vocabulaire_type_determinant;
+
+  /// No description provided for @vocabulaire_type_interjection.
+  ///
+  /// In en, this message translates to:
+  /// **'Interjection'**
+  String get vocabulaire_type_interjection;
+
+  /// No description provided for @vocabulaire_type_nom.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get vocabulaire_type_nom;
+
+  /// No description provided for @vocabulaire_type_numeral.
+  ///
+  /// In en, this message translates to:
+  /// **'Numeral'**
+  String get vocabulaire_type_numeral;
+
+  /// No description provided for @vocabulaire_type_pronom.
+  ///
+  /// In en, this message translates to:
+  /// **'Pronoun'**
+  String get vocabulaire_type_pronom;
+
+  /// No description provided for @vocabulaire_type_preposition.
+  ///
+  /// In en, this message translates to:
+  /// **'Preposition'**
+  String get vocabulaire_type_preposition;
+
+  /// No description provided for @vocabulaire_type_verbeModal.
+  ///
+  /// In en, this message translates to:
+  /// **'modal verb'**
+  String get vocabulaire_type_verbeModal;
+
+  /// No description provided for @vocabulaire_type_verbeInfinitif.
+  ///
+  /// In en, this message translates to:
+  /// **'infinitive verb'**
+  String get vocabulaire_type_verbeInfinitif;
+
+  /// No description provided for @vocabulaire_type_inconnu.
+  ///
+  /// In en, this message translates to:
+  /// **'unknown'**
+  String get vocabulaire_type_inconnu;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

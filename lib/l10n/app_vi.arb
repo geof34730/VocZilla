@@ -187,10 +187,17 @@
     "error_check_connection": "Vui lòng kiểm tra kết nối internet của bạn.",
     "politique_de_confidentialite": "Chính sách bảo mật",
     "conditions_dutilisation": "Điều khoản sử dụng",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Tính từ",
+    "vocabulaire_type_adverbe": "Trạng từ",
+    "vocabulaire_type_adverbeInterrogatif": "Trạng từ nghi vấn",
+    "vocabulaire_type_conjonction": "Sự liên kết",
+    "vocabulaire_type_determinant": "Định thức",
+    "vocabulaire_type_interjection": "Thán từ",
+    "vocabulaire_type_nom": "Tên",
+    "vocabulaire_type_numeral": "Số",
+    "vocabulaire_type_pronom": "Đại từ",
+    "vocabulaire_type_preposition": "Giới từ",
+    "vocabulaire_type_verbeModal": "động từ khiếm khuyết",
+    "vocabulaire_type_verbeInfinitif": "động từ nguyên thể",
+    "vocabulaire_type_inconnu": "không rõ"
 }

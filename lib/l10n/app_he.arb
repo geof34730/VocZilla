@@ -187,10 +187,17 @@
     "error_check_connection": "אנא בדוק את חיבור האינטרנט שלך.",
     "politique_de_confidentialite": "מדיניות פרטיות",
     "conditions_dutilisation": "תנאי שימוש",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "תוֹאַר",
+    "vocabulaire_type_adverbe": "תוֹאַר הַפּוֹעֵל",
+    "vocabulaire_type_adverbeInterrogatif": "פועל-תואר שאלה",
+    "vocabulaire_type_conjonction": "צירוף",
+    "vocabulaire_type_determinant": "קוֹצֵב",
+    "vocabulaire_type_interjection": "קטע",
+    "vocabulaire_type_nom": "שֵׁם",
+    "vocabulaire_type_numeral": "סִפְרָה",
+    "vocabulaire_type_pronom": "כִּנוּי",
+    "vocabulaire_type_preposition": "מִלַת יַחַס",
+    "vocabulaire_type_verbeModal": "פועל מודאלי",
+    "vocabulaire_type_verbeInfinitif": "פועל אינפיניטיבי",
+    "vocabulaire_type_inconnu": "לֹא יְדוּעַ"
 }

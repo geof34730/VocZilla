@@ -571,4 +571,43 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Хэрэглэх нөхцөл';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Тэмдэглэл';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Үйл үг';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Асуултын үйл үг';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Холболт';
+
+  @override
+  String get vocabulaire_type_determinant => 'Тодорхойлогч';
+
+  @override
+  String get vocabulaire_type_interjection => 'Таслал';
+
+  @override
+  String get vocabulaire_type_nom => 'Нэр';
+
+  @override
+  String get vocabulaire_type_numeral => 'Тоо';
+
+  @override
+  String get vocabulaire_type_pronom => 'төлөөний үг';
+
+  @override
+  String get vocabulaire_type_preposition => 'Угтвар үг';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'модаль үйл үг';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitive үйл үг';
+
+  @override
+  String get vocabulaire_type_inconnu => 'үл мэдэгдэх';
 }

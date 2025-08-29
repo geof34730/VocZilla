@@ -571,4 +571,43 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Условия за ползване';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Прилагателно';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Наречие';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Въпросително наречие';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Съюз';
+
+  @override
+  String get vocabulaire_type_determinant => 'Определящ фактор';
+
+  @override
+  String get vocabulaire_type_interjection => 'Междуметие';
+
+  @override
+  String get vocabulaire_type_nom => 'Име';
+
+  @override
+  String get vocabulaire_type_numeral => 'Цифра';
+
+  @override
+  String get vocabulaire_type_pronom => 'Местоимение';
+
+  @override
+  String get vocabulaire_type_preposition => 'Предлог';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'модален глагол';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'инфинитив глагол';
+
+  @override
+  String get vocabulaire_type_inconnu => 'неизвестен';
 }

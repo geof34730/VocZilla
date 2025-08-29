@@ -571,4 +571,43 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'वापराच्या अटी';
+
+  @override
+  String get vocabulaire_type_adjectif => 'विशेषण';
+
+  @override
+  String get vocabulaire_type_adverbe => 'क्रियाविशेषण';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'प्रश्नार्थक क्रियाविशेषण';
+
+  @override
+  String get vocabulaire_type_conjonction => 'उभयान्वयी अव्यय';
+
+  @override
+  String get vocabulaire_type_determinant => 'निर्धारक';
+
+  @override
+  String get vocabulaire_type_interjection => 'इंटरजेक्शन';
+
+  @override
+  String get vocabulaire_type_nom => 'नाव';
+
+  @override
+  String get vocabulaire_type_numeral => 'अंक';
+
+  @override
+  String get vocabulaire_type_pronom => 'सर्वनाम';
+
+  @override
+  String get vocabulaire_type_preposition => 'पूर्वपदार्थ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'मोडल क्रियापद';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'अनंत क्रियापद';
+
+  @override
+  String get vocabulaire_type_inconnu => 'अज्ञात';
 }

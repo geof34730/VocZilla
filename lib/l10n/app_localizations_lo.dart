@@ -571,4 +571,43 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ເງື່ອນໄຂການນໍາໃຊ້';
+
+  @override
+  String get vocabulaire_type_adjectif => 'ຄຳຄຸນນາມ';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ຄຳສຸພາສິດ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ຄຳກິລິຍາຕອບໂຕ້';
+
+  @override
+  String get vocabulaire_type_conjonction => 'ສົມທົບ';
+
+  @override
+  String get vocabulaire_type_determinant => 'ຕົວກໍານົດ';
+
+  @override
+  String get vocabulaire_type_interjection => 'ຄຳອະທິບາຍ';
+
+  @override
+  String get vocabulaire_type_nom => 'ຊື່';
+
+  @override
+  String get vocabulaire_type_numeral => 'ຕົວເລກ';
+
+  @override
+  String get vocabulaire_type_pronom => 'ຄຳນາມ';
+
+  @override
+  String get vocabulaire_type_preposition => 'Preposition';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modal verb';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'ຄໍາກິລິຍາ infinitive';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ບໍ່ຮູ້ຈັກ';
 }

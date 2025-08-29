@@ -571,4 +571,43 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Erabilera Baldintzak';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Adjektiboa';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Adberbioa';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Galderazko adberbioa';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Konjuntzioa';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinatzailea';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjekzioa';
+
+  @override
+  String get vocabulaire_type_nom => 'Izena';
+
+  @override
+  String get vocabulaire_type_numeral => 'Zenbakia';
+
+  @override
+  String get vocabulaire_type_pronom => 'Izenordaina';
+
+  @override
+  String get vocabulaire_type_preposition => 'Preposizioa';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'aditz modala';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'aditz infinitiboa';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ezezaguna';
 }

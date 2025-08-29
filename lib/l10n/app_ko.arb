@@ -187,10 +187,17 @@
     "error_check_connection": "인터넷 연결을 확인하세요.",
     "politique_de_confidentialite": "개인정보 보호정책",
     "conditions_dutilisation": "이용 약관",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "형용사",
+    "vocabulaire_type_adverbe": "부사",
+    "vocabulaire_type_adverbeInterrogatif": "의문 부사",
+    "vocabulaire_type_conjonction": "접속사",
+    "vocabulaire_type_determinant": "결정자",
+    "vocabulaire_type_interjection": "감탄사",
+    "vocabulaire_type_nom": "이름",
+    "vocabulaire_type_numeral": "숫자",
+    "vocabulaire_type_pronom": "대명사",
+    "vocabulaire_type_preposition": "전치사",
+    "vocabulaire_type_verbeModal": "모달 동사",
+    "vocabulaire_type_verbeInfinitif": "부정사",
+    "vocabulaire_type_inconnu": "알려지지 않은"
 }

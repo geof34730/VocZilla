@@ -571,4 +571,43 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Lietošanas noteikumi';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Īpašības vārds';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Apstākļa vārds';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Jautājošais apstākļa vārds';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Saiklis';
+
+  @override
+  String get vocabulaire_type_determinant => 'Noteicošais faktors';
+
+  @override
+  String get vocabulaire_type_interjection => 'Iestarpinājums';
+
+  @override
+  String get vocabulaire_type_nom => 'Vārds';
+
+  @override
+  String get vocabulaire_type_numeral => 'Skaitlis';
+
+  @override
+  String get vocabulaire_type_pronom => 'Vietniekvārds';
+
+  @override
+  String get vocabulaire_type_preposition => 'Prievārds';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modālais darbības vārds';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'nenoteiksmes darbības vārds';
+
+  @override
+  String get vocabulaire_type_inconnu => 'nezināms';
 }

@@ -571,4 +571,43 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Օգտագործման պայմաններ';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Ածական';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Մակբայ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Հարցական մակբայ';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Շաղկապ';
+
+  @override
+  String get vocabulaire_type_determinant => 'Որոշիչ գործոն';
+
+  @override
+  String get vocabulaire_type_interjection => 'Միջամտություն';
+
+  @override
+  String get vocabulaire_type_nom => 'Անուն';
+
+  @override
+  String get vocabulaire_type_numeral => 'Թվային';
+
+  @override
+  String get vocabulaire_type_pronom => 'Դերանուն';
+
+  @override
+  String get vocabulaire_type_preposition => 'Նախդիր';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'մոդալ բայ';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'անորոշ բայ';
+
+  @override
+  String get vocabulaire_type_inconnu => 'անհայտ';
 }

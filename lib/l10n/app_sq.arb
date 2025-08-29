@@ -187,10 +187,17 @@
     "error_check_connection": "Ju lutemi kontrolloni lidhjen tuaj të internetit.",
     "politique_de_confidentialite": "Politika e Privatësisë",
     "conditions_dutilisation": "Kushtet e Përdorimit",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Mbiemër",
+    "vocabulaire_type_adverbe": "Ndajfolje",
+    "vocabulaire_type_adverbeInterrogatif": "Ndajfolje pyetëse",
+    "vocabulaire_type_conjonction": "Lidhëz",
+    "vocabulaire_type_determinant": "Përcaktues",
+    "vocabulaire_type_interjection": "Ndërhyrje",
+    "vocabulaire_type_nom": "Emri",
+    "vocabulaire_type_numeral": "Numëror",
+    "vocabulaire_type_pronom": "Përemër",
+    "vocabulaire_type_preposition": "Parafjalë",
+    "vocabulaire_type_verbeModal": "folje modale",
+    "vocabulaire_type_verbeInfinitif": "folje infinitivi",
+    "vocabulaire_type_inconnu": "i panjohur"
 }

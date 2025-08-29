@@ -571,4 +571,43 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'သတ်မှတ်ချက်များ';
+
+  @override
+  String get vocabulaire_type_adjectif => 'နာမ်';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ကြိယာဝိသေသန';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Interrogative ကြိယာဝိသေသန';
+
+  @override
+  String get vocabulaire_type_conjonction => 'သမ္ဗန္ဓ';
+
+  @override
+  String get vocabulaire_type_determinant => 'အဆုံးအဖြတ်';
+
+  @override
+  String get vocabulaire_type_interjection => 'စကားပြန်';
+
+  @override
+  String get vocabulaire_type_nom => 'နာမည်';
+
+  @override
+  String get vocabulaire_type_numeral => 'ဂဏန်း';
+
+  @override
+  String get vocabulaire_type_pronom => 'နာမ်စား';
+
+  @override
+  String get vocabulaire_type_preposition => 'ဝိဘတ်';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modal ကြိယာ';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'အဆုံးမရှိကြိယာ';
+
+  @override
+  String get vocabulaire_type_inconnu => 'မသိ';
 }

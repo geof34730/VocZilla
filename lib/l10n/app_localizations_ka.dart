@@ -571,4 +571,43 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'გამოყენების პირობები';
+
+  @override
+  String get vocabulaire_type_adjectif => 'ზედსართავი სახელი';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ზმნიზედა';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'კითხვითი ზმნიზედა';
+
+  @override
+  String get vocabulaire_type_conjonction => 'შეერთება';
+
+  @override
+  String get vocabulaire_type_determinant => 'განმსაზღვრელი ფაქტორი';
+
+  @override
+  String get vocabulaire_type_interjection => 'ინტერჯექცია';
+
+  @override
+  String get vocabulaire_type_nom => 'სახელი';
+
+  @override
+  String get vocabulaire_type_numeral => 'რიცხვითი';
+
+  @override
+  String get vocabulaire_type_pronom => 'ნაცვალსახელი';
+
+  @override
+  String get vocabulaire_type_preposition => 'წინდებული';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'მოდალური ზმნა';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'ინფინიტივის ზმნა';
+
+  @override
+  String get vocabulaire_type_inconnu => 'უცნობი';
 }

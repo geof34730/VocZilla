@@ -571,4 +571,43 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => '利用規約';
+
+  @override
+  String get vocabulaire_type_adjectif => '形容詞';
+
+  @override
+  String get vocabulaire_type_adverbe => '副詞';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => '疑問副詞';
+
+  @override
+  String get vocabulaire_type_conjonction => '接続詞';
+
+  @override
+  String get vocabulaire_type_determinant => '行列式';
+
+  @override
+  String get vocabulaire_type_interjection => '間投詞';
+
+  @override
+  String get vocabulaire_type_nom => '名前';
+
+  @override
+  String get vocabulaire_type_numeral => '数字';
+
+  @override
+  String get vocabulaire_type_pronom => '代名詞';
+
+  @override
+  String get vocabulaire_type_preposition => '前置詞';
+
+  @override
+  String get vocabulaire_type_verbeModal => '助動詞';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => '不定詞動詞';
+
+  @override
+  String get vocabulaire_type_inconnu => '未知';
 }

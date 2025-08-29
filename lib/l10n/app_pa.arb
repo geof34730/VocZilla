@@ -187,10 +187,17 @@
     "error_check_connection": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।",
     "politique_de_confidentialite": "ਪਰਾਈਵੇਟ ਨੀਤੀ",
     "conditions_dutilisation": "ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "ਵਿਸ਼ੇਸ਼ਣ",
+    "vocabulaire_type_adverbe": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
+    "vocabulaire_type_adverbeInterrogatif": "ਪੁੱਛਗਿੱਛ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
+    "vocabulaire_type_conjonction": "ਜੋੜ",
+    "vocabulaire_type_determinant": "ਨਿਰਧਾਰਕ",
+    "vocabulaire_type_interjection": "ਇੰਟਰਜੇਕਸ਼ਨ",
+    "vocabulaire_type_nom": "ਨਾਮ",
+    "vocabulaire_type_numeral": "ਅੰਕ",
+    "vocabulaire_type_pronom": "ਪੜਨਾਂਵ",
+    "vocabulaire_type_preposition": "ਅਗੇਤਰ",
+    "vocabulaire_type_verbeModal": "ਮਾਡਲ ਕਿਰਿਆ",
+    "vocabulaire_type_verbeInfinitif": "ਅਨੰਤ ਕਿਰਿਆ",
+    "vocabulaire_type_inconnu": "ਅਣਜਾਣ"
 }

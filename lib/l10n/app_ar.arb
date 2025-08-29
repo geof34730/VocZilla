@@ -187,10 +187,17 @@
     "error_check_connection": "يرجى التحقق من اتصالك بالإنترنت.",
     "politique_de_confidentialite": "سياسة الخصوصية",
     "conditions_dutilisation": "شروط الاستخدام",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "صفة",
+    "vocabulaire_type_adverbe": "ظرف",
+    "vocabulaire_type_adverbeInterrogatif": "ظرف استفهامي",
+    "vocabulaire_type_conjonction": "اِقتِران",
+    "vocabulaire_type_determinant": "المحدد",
+    "vocabulaire_type_interjection": "تعجب",
+    "vocabulaire_type_nom": "اسم",
+    "vocabulaire_type_numeral": "رقم",
+    "vocabulaire_type_pronom": "ضمير",
+    "vocabulaire_type_preposition": "حرف الجر",
+    "vocabulaire_type_verbeModal": "فعل مساعد",
+    "vocabulaire_type_verbeInfinitif": "فعل المصدر",
+    "vocabulaire_type_inconnu": "مجهول"
 }

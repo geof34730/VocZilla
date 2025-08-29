@@ -187,10 +187,17 @@
     "error_check_connection": "Lūdzu, pārbaudiet savu interneta savienojumu.",
     "politique_de_confidentialite": "Privātuma politika",
     "conditions_dutilisation": "Lietošanas noteikumi",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Īpašības vārds",
+    "vocabulaire_type_adverbe": "Apstākļa vārds",
+    "vocabulaire_type_adverbeInterrogatif": "Jautājošais apstākļa vārds",
+    "vocabulaire_type_conjonction": "Saiklis",
+    "vocabulaire_type_determinant": "Noteicošais faktors",
+    "vocabulaire_type_interjection": "Iestarpinājums",
+    "vocabulaire_type_nom": "Vārds",
+    "vocabulaire_type_numeral": "Skaitlis",
+    "vocabulaire_type_pronom": "Vietniekvārds",
+    "vocabulaire_type_preposition": "Prievārds",
+    "vocabulaire_type_verbeModal": "modālais darbības vārds",
+    "vocabulaire_type_verbeInfinitif": "nenoteiksmes darbības vārds",
+    "vocabulaire_type_inconnu": "nezināms"
 }

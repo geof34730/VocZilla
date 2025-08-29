@@ -571,4 +571,43 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => '이용 약관';
+
+  @override
+  String get vocabulaire_type_adjectif => '형용사';
+
+  @override
+  String get vocabulaire_type_adverbe => '부사';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => '의문 부사';
+
+  @override
+  String get vocabulaire_type_conjonction => '접속사';
+
+  @override
+  String get vocabulaire_type_determinant => '결정자';
+
+  @override
+  String get vocabulaire_type_interjection => '감탄사';
+
+  @override
+  String get vocabulaire_type_nom => '이름';
+
+  @override
+  String get vocabulaire_type_numeral => '숫자';
+
+  @override
+  String get vocabulaire_type_pronom => '대명사';
+
+  @override
+  String get vocabulaire_type_preposition => '전치사';
+
+  @override
+  String get vocabulaire_type_verbeModal => '모달 동사';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => '부정사';
+
+  @override
+  String get vocabulaire_type_inconnu => '알려지지 않은';
 }

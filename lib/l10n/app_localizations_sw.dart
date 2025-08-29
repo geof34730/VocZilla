@@ -571,4 +571,43 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Masharti ya Matumizi';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Kivumishi';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Kielezi';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Kielezi cha kuuliza';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Kiunganishi';
+
+  @override
+  String get vocabulaire_type_determinant => 'Kuamua';
+
+  @override
+  String get vocabulaire_type_interjection => 'Kuingilia kati';
+
+  @override
+  String get vocabulaire_type_nom => 'Jina';
+
+  @override
+  String get vocabulaire_type_numeral => 'Nambari';
+
+  @override
+  String get vocabulaire_type_pronom => 'Kiwakilishi';
+
+  @override
+  String get vocabulaire_type_preposition => 'Kihusishi';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'kitenzi cha modali';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'kitenzi kisicho na kikomo';
+
+  @override
+  String get vocabulaire_type_inconnu => 'haijulikani';
 }

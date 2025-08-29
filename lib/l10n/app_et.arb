@@ -187,10 +187,17 @@
     "error_check_connection": "Palun kontrollige oma internetiühendust.",
     "politique_de_confidentialite": "Privaatsuspoliitika",
     "conditions_dutilisation": "Kasutustingimused",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Omadussõna",
+    "vocabulaire_type_adverbe": "Määrsõna",
+    "vocabulaire_type_adverbeInterrogatif": "Küsiv määrsõna",
+    "vocabulaire_type_conjonction": "Konjunktsioon",
+    "vocabulaire_type_determinant": "Määrav tegur",
+    "vocabulaire_type_interjection": "Interjektsioon",
+    "vocabulaire_type_nom": "Nimi",
+    "vocabulaire_type_numeral": "Number",
+    "vocabulaire_type_pronom": "Asesõna",
+    "vocabulaire_type_preposition": "Eessõna",
+    "vocabulaire_type_verbeModal": "modaalverb",
+    "vocabulaire_type_verbeInfinitif": "infinitiivverb",
+    "vocabulaire_type_inconnu": "tundmatu"
 }

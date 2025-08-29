@@ -187,10 +187,17 @@
     "error_check_connection": "Tarkista internetyhteytesi.",
     "politique_de_confidentialite": "Tietosuojakäytäntö",
     "conditions_dutilisation": "Käyttöehdot",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Adjektiivi",
+    "vocabulaire_type_adverbe": "Adverbi",
+    "vocabulaire_type_adverbeInterrogatif": "Kysymysadverbi",
+    "vocabulaire_type_conjonction": "Konjunktio",
+    "vocabulaire_type_determinant": "Määrittävä tekijä",
+    "vocabulaire_type_interjection": "Huudahdus",
+    "vocabulaire_type_nom": "Nimi",
+    "vocabulaire_type_numeral": "Numero",
+    "vocabulaire_type_pronom": "Pronomini",
+    "vocabulaire_type_preposition": "Prepositio",
+    "vocabulaire_type_verbeModal": "modaalinen verbi",
+    "vocabulaire_type_verbeInfinitif": "infinitiiviverbi",
+    "vocabulaire_type_inconnu": "tuntematon"
 }

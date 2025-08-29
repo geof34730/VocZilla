@@ -187,10 +187,17 @@
     "error_check_connection": "Проверете ја вашата интернет-врска.",
     "politique_de_confidentialite": "Политика за приватност",
     "conditions_dutilisation": "Услови за користење",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Придавка",
+    "vocabulaire_type_adverbe": "Прилог",
+    "vocabulaire_type_adverbeInterrogatif": "Прашален прилог",
+    "vocabulaire_type_conjonction": "Сврзник",
+    "vocabulaire_type_determinant": "Детерминант",
+    "vocabulaire_type_interjection": "Интерјекција",
+    "vocabulaire_type_nom": "Име",
+    "vocabulaire_type_numeral": "Бројка",
+    "vocabulaire_type_pronom": "Заменка",
+    "vocabulaire_type_preposition": "Предлог",
+    "vocabulaire_type_verbeModal": "модален глагол",
+    "vocabulaire_type_verbeInfinitif": "инфинитив глагол",
+    "vocabulaire_type_inconnu": "непознат"
 }

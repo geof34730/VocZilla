@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
+import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
 import '../../widget/elements/PlaySoond.dart';
@@ -192,22 +193,39 @@ class VocabularyDataSource extends DataTableSource {
       cells: [
         DataCell(
             Center(
-                child: Row(
+                child:  Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Icon(
-                        vocabulaire['isLearned'] ? Icons.check: Icons.close,
-                        color: vocabulaire['isLearned'] ? Colors.green : Colors.red,
-                        size: 16.0,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            vocabulaire['isLearned'] ? Icons.check: Icons.close,
+                            color: vocabulaire['isLearned'] ? Colors.green : Colors.red,
+                            size: 16.0,
+                          ),
+                          Text(vocabulaire['EN'] ?? '',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Roboto',
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ]
                       ),
-                      Text(vocabulaire['EN']   ?? '',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Roboto',
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+                      Padding(
+                        padding: EdgeInsetsGeometry.only(left:16),
+                          child:Text(
+                          "(${getTypeDetaiVocabulaire(typeDetail:vocabulaire['TYPE_DETAIL'],context: context)})",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 10
+                          ),
+                          )
+                      )
                     ]
                 )
             )

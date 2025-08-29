@@ -571,4 +571,43 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => '使用条款';
+
+  @override
+  String get vocabulaire_type_adjectif => '形容词';
+
+  @override
+  String get vocabulaire_type_adverbe => '副词';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => '疑问副词';
+
+  @override
+  String get vocabulaire_type_conjonction => '连词';
+
+  @override
+  String get vocabulaire_type_determinant => '行列式';
+
+  @override
+  String get vocabulaire_type_interjection => '欹';
+
+  @override
+  String get vocabulaire_type_nom => '姓名';
+
+  @override
+  String get vocabulaire_type_numeral => '数字';
+
+  @override
+  String get vocabulaire_type_pronom => '代词';
+
+  @override
+  String get vocabulaire_type_preposition => '介词';
+
+  @override
+  String get vocabulaire_type_verbeModal => '情态动词';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => '不定式动词';
+
+  @override
+  String get vocabulaire_type_inconnu => '未知';
 }

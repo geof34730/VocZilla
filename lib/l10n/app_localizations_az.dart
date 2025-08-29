@@ -571,4 +571,43 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'İstifadə şərtləri';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Sifət';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Zərf';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Sorğu zərfi';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Bağlayıcı';
+
+  @override
+  String get vocabulaire_type_determinant => 'Müəyyənedici';
+
+  @override
+  String get vocabulaire_type_interjection => 'İnteryeksiya';
+
+  @override
+  String get vocabulaire_type_nom => 'ad';
+
+  @override
+  String get vocabulaire_type_numeral => 'Rəqəm';
+
+  @override
+  String get vocabulaire_type_pronom => 'əvəzlik';
+
+  @override
+  String get vocabulaire_type_preposition => 'Ön söz';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modal fel';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'məsdər fel';
+
+  @override
+  String get vocabulaire_type_inconnu => 'naməlum';
 }

@@ -571,4 +571,43 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Podmienky používania';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Prídavné meno';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Príslovka';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Opytovacie príslovky';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Spojka';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinant';
+
+  @override
+  String get vocabulaire_type_interjection => 'Citoslovce';
+
+  @override
+  String get vocabulaire_type_nom => 'Meno';
+
+  @override
+  String get vocabulaire_type_numeral => 'Číslo';
+
+  @override
+  String get vocabulaire_type_pronom => 'Zámeno';
+
+  @override
+  String get vocabulaire_type_preposition => 'Predložka';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modálne sloveso';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitív slovesa';
+
+  @override
+  String get vocabulaire_type_inconnu => 'neznámy';
 }

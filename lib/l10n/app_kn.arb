@@ -187,10 +187,17 @@
     "error_check_connection": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ.",
     "politique_de_confidentialite": "ಗೌಪ್ಯತಾ ನೀತಿ",
     "conditions_dutilisation": "ಬಳಕೆಯ ನಿಯಮಗಳು",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "ವಿಶೇಷಣ",
+    "vocabulaire_type_adverbe": "ಕ್ರಿಯಾವಿಶೇಷಣ",
+    "vocabulaire_type_adverbeInterrogatif": "ಪ್ರಶ್ನಾರ್ಹ ಕ್ರಿಯಾವಿಶೇಷಣ",
+    "vocabulaire_type_conjonction": "ಸಂಯೋಗ",
+    "vocabulaire_type_determinant": "ನಿರ್ಣಾಯಕ",
+    "vocabulaire_type_interjection": "ಪ್ರಕ್ಷೇಪಣ",
+    "vocabulaire_type_nom": "ಹೆಸರು",
+    "vocabulaire_type_numeral": "ಸಂಖ್ಯಾವಾಚಕ",
+    "vocabulaire_type_pronom": "ಸರ್ವನಾಮ",
+    "vocabulaire_type_preposition": "ಪೂರ್ವಭಾವಿ ಸ್ಥಾನ",
+    "vocabulaire_type_verbeModal": "ಮೋಡಲ್ ಕ್ರಿಯಾಪದ",
+    "vocabulaire_type_verbeInfinitif": "ಅನಂತ ಕ್ರಿಯಾಪದ",
+    "vocabulaire_type_inconnu": "ತಿಳಿದಿಲ್ಲ"
 }

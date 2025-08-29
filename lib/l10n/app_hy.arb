@@ -187,10 +187,17 @@
     "error_check_connection": "Խնդրում ենք ստուգել ձեր ինտերնետային կապը։",
     "politique_de_confidentialite": "Գաղտնիության քաղաքականություն",
     "conditions_dutilisation": "Օգտագործման պայմաններ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Ածական",
+    "vocabulaire_type_adverbe": "Մակբայ",
+    "vocabulaire_type_adverbeInterrogatif": "Հարցական մակբայ",
+    "vocabulaire_type_conjonction": "Շաղկապ",
+    "vocabulaire_type_determinant": "Որոշիչ գործոն",
+    "vocabulaire_type_interjection": "Միջամտություն",
+    "vocabulaire_type_nom": "Անուն",
+    "vocabulaire_type_numeral": "Թվային",
+    "vocabulaire_type_pronom": "Դերանուն",
+    "vocabulaire_type_preposition": "Նախդիր",
+    "vocabulaire_type_verbeModal": "մոդալ բայ",
+    "vocabulaire_type_verbeInfinitif": "անորոշ բայ",
+    "vocabulaire_type_inconnu": "անհայտ"
 }

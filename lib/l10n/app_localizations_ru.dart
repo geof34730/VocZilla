@@ -571,4 +571,43 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Условия эксплуатации';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Прилагательное';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Наречие';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Вопросительное наречие';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Соединение';
+
+  @override
+  String get vocabulaire_type_determinant => 'Определитель';
+
+  @override
+  String get vocabulaire_type_interjection => 'Междометие';
+
+  @override
+  String get vocabulaire_type_nom => 'Имя';
+
+  @override
+  String get vocabulaire_type_numeral => 'Цифра';
+
+  @override
+  String get vocabulaire_type_pronom => 'Местоимение';
+
+  @override
+  String get vocabulaire_type_preposition => 'Предлог';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'модальный глагол';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'инфинитив глагола';
+
+  @override
+  String get vocabulaire_type_inconnu => 'неизвестный';
 }

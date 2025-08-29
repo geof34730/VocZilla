@@ -187,10 +187,17 @@
     "error_check_connection": "براہ کرم اپنا انٹرنیٹ کنکشن چیک کریں۔",
     "politique_de_confidentialite": "رازداری کی پالیسی",
     "conditions_dutilisation": "استعمال کی شرائط",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "صفت",
+    "vocabulaire_type_adverbe": "فعل",
+    "vocabulaire_type_adverbeInterrogatif": "سوالیہ فعل",
+    "vocabulaire_type_conjonction": "کنکشن",
+    "vocabulaire_type_determinant": "تعین کرنے والا",
+    "vocabulaire_type_interjection": "انٹرجیکشن",
+    "vocabulaire_type_nom": "نام",
+    "vocabulaire_type_numeral": "عددی",
+    "vocabulaire_type_pronom": "ضمیر",
+    "vocabulaire_type_preposition": "Preposition",
+    "vocabulaire_type_verbeModal": "موڈل فعل",
+    "vocabulaire_type_verbeInfinitif": "لامتناہی فعل",
+    "vocabulaire_type_inconnu": "نامعلوم"
 }

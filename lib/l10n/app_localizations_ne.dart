@@ -571,4 +571,43 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'प्रयोगका सर्तहरू';
+
+  @override
+  String get vocabulaire_type_adjectif => 'विशेषण';
+
+  @override
+  String get vocabulaire_type_adverbe => 'क्रियाविशेषण';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'प्रश्नार्थक क्रियाविशेषण';
+
+  @override
+  String get vocabulaire_type_conjonction => 'संयोजन';
+
+  @override
+  String get vocabulaire_type_determinant => 'निर्धारक';
+
+  @override
+  String get vocabulaire_type_interjection => 'अन्तर्क्रिया';
+
+  @override
+  String get vocabulaire_type_nom => 'नाम';
+
+  @override
+  String get vocabulaire_type_numeral => 'अंक';
+
+  @override
+  String get vocabulaire_type_pronom => 'सर्वनाम';
+
+  @override
+  String get vocabulaire_type_preposition => 'पूर्वसर्ग';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'मोडल क्रिया';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'अनन्त क्रिया';
+
+  @override
+  String get vocabulaire_type_inconnu => 'अज्ञात';
 }

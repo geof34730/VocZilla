@@ -571,4 +571,43 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Uvjeti korištenja';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Pridjev';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Prilog';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Upitni prilog';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Konjunkcija';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinanta';
+
+  @override
+  String get vocabulaire_type_interjection => 'Uzvik';
+
+  @override
+  String get vocabulaire_type_nom => 'Ime';
+
+  @override
+  String get vocabulaire_type_numeral => 'Brojčani';
+
+  @override
+  String get vocabulaire_type_pronom => 'Zamjenica';
+
+  @override
+  String get vocabulaire_type_preposition => 'Prijedlog';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modalni glagol';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitivni glagol';
+
+  @override
+  String get vocabulaire_type_inconnu => 'nepoznato';
 }

@@ -571,4 +571,43 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ល័ក្ខខ័ណ្ឌនៃការប្រើប្រាស់';
+
+  @override
+  String get vocabulaire_type_adjectif => 'គុណនាម';
+
+  @override
+  String get vocabulaire_type_adverbe => 'គុណកិរិយា';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'សព្វវចនាធិប្បាយ';
+
+  @override
+  String get vocabulaire_type_conjonction => 'ការភ្ជាប់';
+
+  @override
+  String get vocabulaire_type_determinant => 'កំណត់';
+
+  @override
+  String get vocabulaire_type_interjection => 'អន្តរកម្ម';
+
+  @override
+  String get vocabulaire_type_nom => 'ឈ្មោះ';
+
+  @override
+  String get vocabulaire_type_numeral => 'លេខ';
+
+  @override
+  String get vocabulaire_type_pronom => 'សព្វនាម';
+
+  @override
+  String get vocabulaire_type_preposition => 'បុព្វបទ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'កិរិយាស័ព្ទម៉ូឌុល';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'កិរិយាសព្ទគ្មានកំណត់';
+
+  @override
+  String get vocabulaire_type_inconnu => 'មិនស្គាល់';
 }

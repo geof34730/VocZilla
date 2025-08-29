@@ -571,4 +571,43 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Foydalanish shartlari';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Sifat';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Adverb';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'So‘roq qo‘shimchasi';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Bog‘lovchi';
+
+  @override
+  String get vocabulaire_type_determinant => 'Aniqlovchi';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjection';
+
+  @override
+  String get vocabulaire_type_nom => 'Ism';
+
+  @override
+  String get vocabulaire_type_numeral => 'Raqamli';
+
+  @override
+  String get vocabulaire_type_pronom => 'Olmosh';
+
+  @override
+  String get vocabulaire_type_preposition => 'Old gap';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modal fe\'l';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitiv fe\'l';
+
+  @override
+  String get vocabulaire_type_inconnu => 'noma\'lum';
 }

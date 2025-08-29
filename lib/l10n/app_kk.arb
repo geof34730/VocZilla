@@ -187,10 +187,17 @@
     "error_check_connection": "Интернет байланысын тексеріңіз.",
     "politique_de_confidentialite": "Құпиялылық саясаты",
     "conditions_dutilisation": "Пайдалану шарттары",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Сын есім",
+    "vocabulaire_type_adverbe": "Үстеу",
+    "vocabulaire_type_adverbeInterrogatif": "Сұраулы етістік",
+    "vocabulaire_type_conjonction": "Жалғау",
+    "vocabulaire_type_determinant": "Анықтаушы",
+    "vocabulaire_type_interjection": "Үзіліс",
+    "vocabulaire_type_nom": "Аты",
+    "vocabulaire_type_numeral": "Сандық",
+    "vocabulaire_type_pronom": "Есімдік",
+    "vocabulaire_type_preposition": "Предлог",
+    "vocabulaire_type_verbeModal": "модальды етістік",
+    "vocabulaire_type_verbeInfinitif": "инфинитив етістік",
+    "vocabulaire_type_inconnu": "белгісіз"
 }

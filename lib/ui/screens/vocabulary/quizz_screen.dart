@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
+import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../global.dart';
@@ -129,6 +130,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                     resultSound: false,
                                     GUID: data[randomItemData]['GUID'],
                                   ),
+
                                   CustomTextZillaField(
                                     AnswerNotifier: true,
                                     ButtonNextNotifier: true,
@@ -143,6 +145,14 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                     resultSound: true,
                                     GUID: data[randomItemData]['GUID'],
                                   ),
+                                  Text(
+                                    "(${getTypeDetaiVocabulaire(typeDetail:data[randomItemData]['TYPE_DETAIL'],context: context)})",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        height:1
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -151,7 +161,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                               builder: (context, child) {
                                 return (buttonNotifier.showButton || testScreenShot)
                                     ? Padding(
-                                  padding: const EdgeInsets.only(top: 20),
+                                  padding: const EdgeInsets.only(top: 0),
                                   child: ElevatedButton(
                                     onPressed: () {
                                       _vocabulaireRepository.goVocabulairesWithState(

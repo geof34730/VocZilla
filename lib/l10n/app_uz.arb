@@ -187,10 +187,17 @@
     "error_check_connection": "Internet ulanishingizni tekshiring.",
     "politique_de_confidentialite": "Maxfiylik siyosati",
     "conditions_dutilisation": "Foydalanish shartlari",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Sifat",
+    "vocabulaire_type_adverbe": "Adverb",
+    "vocabulaire_type_adverbeInterrogatif": "So‘roq qo‘shimchasi",
+    "vocabulaire_type_conjonction": "Bog‘lovchi",
+    "vocabulaire_type_determinant": "Aniqlovchi",
+    "vocabulaire_type_interjection": "Interjection",
+    "vocabulaire_type_nom": "Ism",
+    "vocabulaire_type_numeral": "Raqamli",
+    "vocabulaire_type_pronom": "Olmosh",
+    "vocabulaire_type_preposition": "Old gap",
+    "vocabulaire_type_verbeModal": "modal fe'l",
+    "vocabulaire_type_verbeInfinitif": "infinitiv fe'l",
+    "vocabulaire_type_inconnu": "noma'lum"
 }

@@ -187,10 +187,17 @@
     "error_check_connection": "कृपया अपने इंटरनेट कनेक्शन की जाँच करें।",
     "politique_de_confidentialite": "गोपनीयता नीति",
     "conditions_dutilisation": "उपयोग की शर्तें",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "विशेषण",
+    "vocabulaire_type_adverbe": "क्रिया विशेषण",
+    "vocabulaire_type_adverbeInterrogatif": "प्रश्नवाचक क्रियाविशेषण",
+    "vocabulaire_type_conjonction": "संयोजक",
+    "vocabulaire_type_determinant": "सिद्ध",
+    "vocabulaire_type_interjection": "विस्मयादिबोधक",
+    "vocabulaire_type_nom": "नाम",
+    "vocabulaire_type_numeral": "अंक",
+    "vocabulaire_type_pronom": "सर्वनाम",
+    "vocabulaire_type_preposition": "पूर्वसर्ग",
+    "vocabulaire_type_verbeModal": "मॉडल क्रिया",
+    "vocabulaire_type_verbeInfinitif": "क्रिया के साधारण रूप",
+    "vocabulaire_type_inconnu": "अज्ञात"
 }

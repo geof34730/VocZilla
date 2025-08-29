@@ -571,4 +571,43 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'භාවිත නියම';
+
+  @override
+  String get vocabulaire_type_adjectif => 'නාම විශේෂණය';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ක්‍රියා විශේෂණය';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ප්‍රශ්නාර්ථ විශේෂණය';
+
+  @override
+  String get vocabulaire_type_conjonction => 'සංයෝජනය';
+
+  @override
+  String get vocabulaire_type_determinant => 'නිර්ණායකය';
+
+  @override
+  String get vocabulaire_type_interjection => 'අතුරු කථාව';
+
+  @override
+  String get vocabulaire_type_nom => 'නම';
+
+  @override
+  String get vocabulaire_type_numeral => 'ඉලක්කම්';
+
+  @override
+  String get vocabulaire_type_pronom => 'සර්වනාමය';
+
+  @override
+  String get vocabulaire_type_preposition => 'පෙරනිමිත්ත';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'මාදිලියේ ක්‍රියා පදය';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'අනන්ත ක්‍රියා පදය';
+
+  @override
+  String get vocabulaire_type_inconnu => 'නොදන්නා';
 }

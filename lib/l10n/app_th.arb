@@ -187,10 +187,17 @@
     "error_check_connection": "กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของคุณ",
     "politique_de_confidentialite": "นโยบายความเป็นส่วนตัว",
     "conditions_dutilisation": "เงื่อนไขการใช้งาน",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "คุณศัพท์",
+    "vocabulaire_type_adverbe": "คำวิเศษณ์",
+    "vocabulaire_type_adverbeInterrogatif": "คำวิเศษณ์คำถาม",
+    "vocabulaire_type_conjonction": "คำสันธาน",
+    "vocabulaire_type_determinant": "ตัวกำหนด",
+    "vocabulaire_type_interjection": "คำอุทาน",
+    "vocabulaire_type_nom": "ชื่อ",
+    "vocabulaire_type_numeral": "ตัวเลข",
+    "vocabulaire_type_pronom": "สรรพนาม",
+    "vocabulaire_type_preposition": "บุพบท",
+    "vocabulaire_type_verbeModal": "กริยาช่วย",
+    "vocabulaire_type_verbeInfinitif": "กริยา infinitive",
+    "vocabulaire_type_inconnu": "ไม่ทราบ"
 }

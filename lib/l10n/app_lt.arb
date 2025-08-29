@@ -187,10 +187,17 @@
     "error_check_connection": "Patikrinkite interneto ryšį.",
     "politique_de_confidentialite": "Privatumo politika",
     "conditions_dutilisation": "Naudojimo sąlygos",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Būdvardis",
+    "vocabulaire_type_adverbe": "Prieveiksmis",
+    "vocabulaire_type_adverbeInterrogatif": "Klausiamasis prieveiksmis",
+    "vocabulaire_type_conjonction": "Jungtukas",
+    "vocabulaire_type_determinant": "Determinantas",
+    "vocabulaire_type_interjection": "Įterpimas",
+    "vocabulaire_type_nom": "Vardas",
+    "vocabulaire_type_numeral": "Skaitmuo",
+    "vocabulaire_type_pronom": "Įvardis",
+    "vocabulaire_type_preposition": "Prielinksnis",
+    "vocabulaire_type_verbeModal": "modalinis veiksmažodis",
+    "vocabulaire_type_verbeInfinitif": "bendratis veiksmažodis",
+    "vocabulaire_type_inconnu": "nežinomas"
 }

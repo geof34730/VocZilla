@@ -187,10 +187,17 @@
     "error_check_connection": "请检查您的互联网连接。",
     "politique_de_confidentialite": "隐私政策",
     "conditions_dutilisation": "使用条款",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "形容词",
+    "vocabulaire_type_adverbe": "副词",
+    "vocabulaire_type_adverbeInterrogatif": "疑问副词",
+    "vocabulaire_type_conjonction": "连词",
+    "vocabulaire_type_determinant": "行列式",
+    "vocabulaire_type_interjection": "欹",
+    "vocabulaire_type_nom": "姓名",
+    "vocabulaire_type_numeral": "数字",
+    "vocabulaire_type_pronom": "代词",
+    "vocabulaire_type_preposition": "介词",
+    "vocabulaire_type_verbeModal": "情态动词",
+    "vocabulaire_type_verbeInfinitif": "不定式动词",
+    "vocabulaire_type_inconnu": "未知"
 }

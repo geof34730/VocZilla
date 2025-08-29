@@ -5,7 +5,7 @@ bool debugMode=false;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
-const int daysFreeTrial=7;
+final int daysFreeTrial=debugMode ? 2000 :7;
 
 bool forFeatureGraphic = false;
 bool changeVocabulaireSinceVisiteHome = false;

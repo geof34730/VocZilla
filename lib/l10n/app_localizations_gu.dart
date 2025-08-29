@@ -571,4 +571,43 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ઉપયોગની શરતો';
+
+  @override
+  String get vocabulaire_type_adjectif => 'વિશેષણ';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ક્રિયાવિશેષણ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'પ્રશ્નાર્થ ક્રિયાવિશેષણ';
+
+  @override
+  String get vocabulaire_type_conjonction => 'જોડાણ';
+
+  @override
+  String get vocabulaire_type_determinant => 'નિર્ધારક';
+
+  @override
+  String get vocabulaire_type_interjection => 'ઇન્ટરજેક્શન';
+
+  @override
+  String get vocabulaire_type_nom => 'નામ';
+
+  @override
+  String get vocabulaire_type_numeral => 'સંખ્યા';
+
+  @override
+  String get vocabulaire_type_pronom => 'સર્વનામ';
+
+  @override
+  String get vocabulaire_type_preposition => 'પૂર્વનિર્ધારણ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'મોડલ ક્રિયાપદ';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'અનંત ક્રિયાપદ';
+
+  @override
+  String get vocabulaire_type_inconnu => 'અજ્ઞાત';
 }

@@ -571,4 +571,43 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'የአጠቃቀም ውል';
+
+  @override
+  String get vocabulaire_type_adjectif => 'ቅጽል';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ተውሳክ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ጠያቂ ተውሳክ';
+
+  @override
+  String get vocabulaire_type_conjonction => 'ቁርኝት';
+
+  @override
+  String get vocabulaire_type_determinant => 'ቆራጥ';
+
+  @override
+  String get vocabulaire_type_interjection => 'ጣልቃ መግባት';
+
+  @override
+  String get vocabulaire_type_nom => 'ስም';
+
+  @override
+  String get vocabulaire_type_numeral => 'ቁጥር';
+
+  @override
+  String get vocabulaire_type_pronom => 'ተውላጠ ስም';
+
+  @override
+  String get vocabulaire_type_preposition => 'ቅድመ ሁኔታ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'ሞዳል ግስ';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'ማለቂያ የሌለው ግሥ';
+
+  @override
+  String get vocabulaire_type_inconnu => 'የማይታወቅ';
 }

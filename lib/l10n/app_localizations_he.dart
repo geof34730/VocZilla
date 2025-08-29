@@ -571,4 +571,43 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'תנאי שימוש';
+
+  @override
+  String get vocabulaire_type_adjectif => 'תוֹאַר';
+
+  @override
+  String get vocabulaire_type_adverbe => 'תוֹאַר הַפּוֹעֵל';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'פועל-תואר שאלה';
+
+  @override
+  String get vocabulaire_type_conjonction => 'צירוף';
+
+  @override
+  String get vocabulaire_type_determinant => 'קוֹצֵב';
+
+  @override
+  String get vocabulaire_type_interjection => 'קטע';
+
+  @override
+  String get vocabulaire_type_nom => 'שֵׁם';
+
+  @override
+  String get vocabulaire_type_numeral => 'סִפְרָה';
+
+  @override
+  String get vocabulaire_type_pronom => 'כִּנוּי';
+
+  @override
+  String get vocabulaire_type_preposition => 'מִלַת יַחַס';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'פועל מודאלי';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'פועל אינפיניטיבי';
+
+  @override
+  String get vocabulaire_type_inconnu => 'לֹא יְדוּעַ';
 }

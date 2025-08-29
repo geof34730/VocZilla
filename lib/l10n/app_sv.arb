@@ -187,10 +187,17 @@
     "error_check_connection": "Kontrollera din internetanslutning.",
     "politique_de_confidentialite": "Integritetspolicy",
     "conditions_dutilisation": "Användarvillkor",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Adjektiv",
+    "vocabulaire_type_adverbe": "Adverb",
+    "vocabulaire_type_adverbeInterrogatif": "Frågande adverb",
+    "vocabulaire_type_conjonction": "Samband",
+    "vocabulaire_type_determinant": "Determinant",
+    "vocabulaire_type_interjection": "Interjektion",
+    "vocabulaire_type_nom": "Namn",
+    "vocabulaire_type_numeral": "Siffra",
+    "vocabulaire_type_pronom": "Pronomen",
+    "vocabulaire_type_preposition": "Preposition",
+    "vocabulaire_type_verbeModal": "modalt verb",
+    "vocabulaire_type_verbeInfinitif": "infinitivt verb",
+    "vocabulaire_type_inconnu": "okänd"
 }

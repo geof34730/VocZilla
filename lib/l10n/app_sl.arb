@@ -187,10 +187,17 @@
     "error_check_connection": "Preverite svojo internetno povezavo.",
     "politique_de_confidentialite": "Pravilnik o zasebnosti",
     "conditions_dutilisation": "Pogoji uporabe",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Pridevnik",
+    "vocabulaire_type_adverbe": "Prislov",
+    "vocabulaire_type_adverbeInterrogatif": "Vprašalni prislov",
+    "vocabulaire_type_conjonction": "Konjunkcija",
+    "vocabulaire_type_determinant": "Determinanta",
+    "vocabulaire_type_interjection": "Medmet",
+    "vocabulaire_type_nom": "Ime",
+    "vocabulaire_type_numeral": "Številka",
+    "vocabulaire_type_pronom": "Zaimek",
+    "vocabulaire_type_preposition": "Predlog",
+    "vocabulaire_type_verbeModal": "modalni glagol",
+    "vocabulaire_type_verbeInfinitif": "nedoločnik glagol",
+    "vocabulaire_type_inconnu": "neznano"
 }

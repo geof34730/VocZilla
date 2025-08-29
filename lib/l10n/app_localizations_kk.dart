@@ -571,4 +571,43 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Пайдалану шарттары';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Сын есім';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Үстеу';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Сұраулы етістік';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Жалғау';
+
+  @override
+  String get vocabulaire_type_determinant => 'Анықтаушы';
+
+  @override
+  String get vocabulaire_type_interjection => 'Үзіліс';
+
+  @override
+  String get vocabulaire_type_nom => 'Аты';
+
+  @override
+  String get vocabulaire_type_numeral => 'Сандық';
+
+  @override
+  String get vocabulaire_type_pronom => 'Есімдік';
+
+  @override
+  String get vocabulaire_type_preposition => 'Предлог';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'модальды етістік';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'инфинитив етістік';
+
+  @override
+  String get vocabulaire_type_inconnu => 'белгісіз';
 }

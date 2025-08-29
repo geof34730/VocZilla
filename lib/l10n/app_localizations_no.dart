@@ -571,4 +571,43 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Bruksvilkår';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Adjektiv';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Adverb';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Spørrende adverb';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Konjunksjon';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinant';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjeksjon';
+
+  @override
+  String get vocabulaire_type_nom => 'Navn';
+
+  @override
+  String get vocabulaire_type_numeral => 'Tall';
+
+  @override
+  String get vocabulaire_type_pronom => 'Pronomen';
+
+  @override
+  String get vocabulaire_type_preposition => 'Preposisjon';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modalt verb';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitivt verb';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ukjent';
 }

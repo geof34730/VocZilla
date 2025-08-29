@@ -571,4 +571,43 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ಬಳಕೆಯ ನಿಯಮಗಳು';
+
+  @override
+  String get vocabulaire_type_adjectif => 'ವಿಶೇಷಣ';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ಕ್ರಿಯಾವಿಶೇಷಣ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ಪ್ರಶ್ನಾರ್ಹ ಕ್ರಿಯಾವಿಶೇಷಣ';
+
+  @override
+  String get vocabulaire_type_conjonction => 'ಸಂಯೋಗ';
+
+  @override
+  String get vocabulaire_type_determinant => 'ನಿರ್ಣಾಯಕ';
+
+  @override
+  String get vocabulaire_type_interjection => 'ಪ್ರಕ್ಷೇಪಣ';
+
+  @override
+  String get vocabulaire_type_nom => 'ಹೆಸರು';
+
+  @override
+  String get vocabulaire_type_numeral => 'ಸಂಖ್ಯಾವಾಚಕ';
+
+  @override
+  String get vocabulaire_type_pronom => 'ಸರ್ವನಾಮ';
+
+  @override
+  String get vocabulaire_type_preposition => 'ಪೂರ್ವಭಾವಿ ಸ್ಥಾನ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'ಮೋಡಲ್ ಕ್ರಿಯಾಪದ';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'ಅನಂತ ಕ್ರಿಯಾಪದ';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ತಿಳಿದಿಲ್ಲ';
 }

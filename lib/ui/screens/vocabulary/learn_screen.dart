@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/ui/theme/appColors.dart';
+import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';
@@ -160,14 +161,24 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
+
                                               Text(
                                                 "${data[numItemVocabulary]['EN']}",
                                                 style: TextStyle(
                                                   fontSize: 40,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black87,
+                                                  height: 1
                                                 ),
+
                                                 textAlign: TextAlign.center,
+                                              ),
+                                              Text(
+                                                "(${getTypeDetaiVocabulaire(typeDetail:data[numItemVocabulary]['TYPE_DETAIL'],context: context)})",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    fontSize: 14
+                                                ),
                                               ),
                                               SizedBox(height: 30),
                                               PlaySoond(

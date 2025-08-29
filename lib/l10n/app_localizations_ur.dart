@@ -571,4 +571,43 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'استعمال کی شرائط';
+
+  @override
+  String get vocabulaire_type_adjectif => 'صفت';
+
+  @override
+  String get vocabulaire_type_adverbe => 'فعل';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'سوالیہ فعل';
+
+  @override
+  String get vocabulaire_type_conjonction => 'کنکشن';
+
+  @override
+  String get vocabulaire_type_determinant => 'تعین کرنے والا';
+
+  @override
+  String get vocabulaire_type_interjection => 'انٹرجیکشن';
+
+  @override
+  String get vocabulaire_type_nom => 'نام';
+
+  @override
+  String get vocabulaire_type_numeral => 'عددی';
+
+  @override
+  String get vocabulaire_type_pronom => 'ضمیر';
+
+  @override
+  String get vocabulaire_type_preposition => 'Preposition';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'موڈل فعل';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'لامتناہی فعل';
+
+  @override
+  String get vocabulaire_type_inconnu => 'نامعلوم';
 }

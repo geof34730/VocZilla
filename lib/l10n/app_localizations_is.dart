@@ -571,4 +571,43 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Notkunarskilmálar';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Lýsingarorð';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Atviksorð';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Spurnaratviksorð';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Samtenging';
+
+  @override
+  String get vocabulaire_type_determinant => 'Ákvarðandi';
+
+  @override
+  String get vocabulaire_type_interjection => 'Innskot';
+
+  @override
+  String get vocabulaire_type_nom => 'Nafn';
+
+  @override
+  String get vocabulaire_type_numeral => 'Tölunúmer';
+
+  @override
+  String get vocabulaire_type_pronom => 'Fornafn';
+
+  @override
+  String get vocabulaire_type_preposition => 'Forsetning';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'sagnorð';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'óendanlegt sögn';
+
+  @override
+  String get vocabulaire_type_inconnu => 'óþekkt';
 }

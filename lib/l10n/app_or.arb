@@ -187,10 +187,17 @@
     "error_check_connection": "ଦୟାକରି ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ।",
     "politique_de_confidentialite": "ଗୋପନୀୟତା ନୀତି",
     "conditions_dutilisation": "ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "ବିଶେଷଣ",
+    "vocabulaire_type_adverbe": "କ୍ରିୟା ବିଶେଷଣ",
+    "vocabulaire_type_adverbeInterrogatif": "ପ୍ରଶ୍ନାର୍ଥକ କ୍ରିୟା ବିଶେଷଣ",
+    "vocabulaire_type_conjonction": "ସଂଯୋଜନ",
+    "vocabulaire_type_determinant": "ନିର୍ଣ୍ଣାୟକ",
+    "vocabulaire_type_interjection": "ଇଣ୍ଟରଜେକ୍ସନ୍",
+    "vocabulaire_type_nom": "ନାମ",
+    "vocabulaire_type_numeral": "ସଂଖ୍ୟା",
+    "vocabulaire_type_pronom": "ସର୍ବନାମ",
+    "vocabulaire_type_preposition": "ଅବ୍ୟୟ",
+    "vocabulaire_type_verbeModal": "ମୂଖ୍ୟ କ୍ରିୟା",
+    "vocabulaire_type_verbeInfinitif": "ଅନନ୍ତ କ୍ରିୟା",
+    "vocabulaire_type_inconnu": "ଅଜଣା"
 }

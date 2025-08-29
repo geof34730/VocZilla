@@ -571,4 +571,43 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'شروط الاستخدام';
+
+  @override
+  String get vocabulaire_type_adjectif => 'صفة';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ظرف';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ظرف استفهامي';
+
+  @override
+  String get vocabulaire_type_conjonction => 'اِقتِران';
+
+  @override
+  String get vocabulaire_type_determinant => 'المحدد';
+
+  @override
+  String get vocabulaire_type_interjection => 'تعجب';
+
+  @override
+  String get vocabulaire_type_nom => 'اسم';
+
+  @override
+  String get vocabulaire_type_numeral => 'رقم';
+
+  @override
+  String get vocabulaire_type_pronom => 'ضمير';
+
+  @override
+  String get vocabulaire_type_preposition => 'حرف الجر';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'فعل مساعد';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'فعل المصدر';
+
+  @override
+  String get vocabulaire_type_inconnu => 'مجهول';
 }

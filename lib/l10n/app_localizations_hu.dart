@@ -571,4 +571,43 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Felhasználási feltételek';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Melléknév';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Határozószó';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Kérdő határozószó';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Konjunkció';
+
+  @override
+  String get vocabulaire_type_determinant => 'Döntő';
+
+  @override
+  String get vocabulaire_type_interjection => 'Indulatszó';
+
+  @override
+  String get vocabulaire_type_nom => 'Név';
+
+  @override
+  String get vocabulaire_type_numeral => 'Számjegy';
+
+  @override
+  String get vocabulaire_type_pronom => 'Névmás';
+
+  @override
+  String get vocabulaire_type_preposition => 'Elöljáró';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modális ige';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'főnévi igenév';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ismeretlen';
 }

@@ -571,4 +571,43 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Умови використання';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Прикметник';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Прислівник';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Питальний прислівник';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Кон\'юнкція';
+
+  @override
+  String get vocabulaire_type_determinant => 'Визначальний фактор';
+
+  @override
+  String get vocabulaire_type_interjection => 'Вигук';
+
+  @override
+  String get vocabulaire_type_nom => 'Ім\'я';
+
+  @override
+  String get vocabulaire_type_numeral => 'Цифра';
+
+  @override
+  String get vocabulaire_type_pronom => 'Займенник';
+
+  @override
+  String get vocabulaire_type_preposition => 'Прийменник';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'модальне дієслово';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'інфінітив дієслова';
+
+  @override
+  String get vocabulaire_type_inconnu => 'невідомий';
 }

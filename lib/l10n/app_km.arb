@@ -187,10 +187,17 @@
     "error_check_connection": "សូមពិនិត្យមើលការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក។",
     "politique_de_confidentialite": "គោលការណ៍ឯកជនភាព",
     "conditions_dutilisation": "ល័ក្ខខ័ណ្ឌនៃការប្រើប្រាស់",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "គុណនាម",
+    "vocabulaire_type_adverbe": "គុណកិរិយា",
+    "vocabulaire_type_adverbeInterrogatif": "សព្វវចនាធិប្បាយ",
+    "vocabulaire_type_conjonction": "ការភ្ជាប់",
+    "vocabulaire_type_determinant": "កំណត់",
+    "vocabulaire_type_interjection": "អន្តរកម្ម",
+    "vocabulaire_type_nom": "ឈ្មោះ",
+    "vocabulaire_type_numeral": "លេខ",
+    "vocabulaire_type_pronom": "សព្វនាម",
+    "vocabulaire_type_preposition": "បុព្វបទ",
+    "vocabulaire_type_verbeModal": "កិរិយាស័ព្ទម៉ូឌុល",
+    "vocabulaire_type_verbeInfinitif": "កិរិយាសព្ទគ្មានកំណត់",
+    "vocabulaire_type_inconnu": "មិនស្គាល់"
 }

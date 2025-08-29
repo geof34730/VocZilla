@@ -187,10 +187,17 @@
     "error_check_connection": "သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပါ။",
     "politique_de_confidentialite": "ကိုယ်ရေးအချက်အလက်မူဝါဒ",
     "conditions_dutilisation": "သတ်မှတ်ချက်များ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "နာမ်",
+    "vocabulaire_type_adverbe": "ကြိယာဝိသေသန",
+    "vocabulaire_type_adverbeInterrogatif": "Interrogative ကြိယာဝိသေသန",
+    "vocabulaire_type_conjonction": "သမ္ဗန္ဓ",
+    "vocabulaire_type_determinant": "အဆုံးအဖြတ်",
+    "vocabulaire_type_interjection": "စကားပြန်",
+    "vocabulaire_type_nom": "နာမည်",
+    "vocabulaire_type_numeral": "ဂဏန်း",
+    "vocabulaire_type_pronom": "နာမ်စား",
+    "vocabulaire_type_preposition": "ဝိဘတ်",
+    "vocabulaire_type_verbeModal": "modal ကြိယာ",
+    "vocabulaire_type_verbeInfinitif": "အဆုံးမရှိကြိယာ",
+    "vocabulaire_type_inconnu": "မသိ"
 }

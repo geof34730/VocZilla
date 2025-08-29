@@ -571,4 +571,43 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Condicions d\'ús';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Adjectiu';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Adverbi';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'adverbi interrogatiu';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Conjunció';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinant';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjecció';
+
+  @override
+  String get vocabulaire_type_nom => 'Nom';
+
+  @override
+  String get vocabulaire_type_numeral => 'Numeral';
+
+  @override
+  String get vocabulaire_type_pronom => 'Pronom';
+
+  @override
+  String get vocabulaire_type_preposition => 'Preposició';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'verb modal';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'verb infinitiu';
+
+  @override
+  String get vocabulaire_type_inconnu => 'desconegut';
 }

@@ -571,4 +571,43 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ';
+
+  @override
+  String get vocabulaire_type_adjectif => 'ବିଶେଷଣ';
+
+  @override
+  String get vocabulaire_type_adverbe => 'କ୍ରିୟା ବିଶେଷଣ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ପ୍ରଶ୍ନାର୍ଥକ କ୍ରିୟା ବିଶେଷଣ';
+
+  @override
+  String get vocabulaire_type_conjonction => 'ସଂଯୋଜନ';
+
+  @override
+  String get vocabulaire_type_determinant => 'ନିର୍ଣ୍ଣାୟକ';
+
+  @override
+  String get vocabulaire_type_interjection => 'ଇଣ୍ଟରଜେକ୍ସନ୍';
+
+  @override
+  String get vocabulaire_type_nom => 'ନାମ';
+
+  @override
+  String get vocabulaire_type_numeral => 'ସଂଖ୍ୟା';
+
+  @override
+  String get vocabulaire_type_pronom => 'ସର୍ବନାମ';
+
+  @override
+  String get vocabulaire_type_preposition => 'ଅବ୍ୟୟ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'ମୂଖ୍ୟ କ୍ରିୟା';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'ଅନନ୍ତ କ୍ରିୟା';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ଅଜଣା';
 }

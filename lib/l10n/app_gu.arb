@@ -187,10 +187,17 @@
     "error_check_connection": "કૃપા કરીને તમારું ઇન્ટરનેટ કનેક્શન તપાસો.",
     "politique_de_confidentialite": "ગોપનીયતા નીતિ",
     "conditions_dutilisation": "ઉપયોગની શરતો",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "વિશેષણ",
+    "vocabulaire_type_adverbe": "ક્રિયાવિશેષણ",
+    "vocabulaire_type_adverbeInterrogatif": "પ્રશ્નાર્થ ક્રિયાવિશેષણ",
+    "vocabulaire_type_conjonction": "જોડાણ",
+    "vocabulaire_type_determinant": "નિર્ધારક",
+    "vocabulaire_type_interjection": "ઇન્ટરજેક્શન",
+    "vocabulaire_type_nom": "નામ",
+    "vocabulaire_type_numeral": "સંખ્યા",
+    "vocabulaire_type_pronom": "સર્વનામ",
+    "vocabulaire_type_preposition": "પૂર્વનિર્ધારણ",
+    "vocabulaire_type_verbeModal": "મોડલ ક્રિયાપદ",
+    "vocabulaire_type_verbeInfinitif": "અનંત ક્રિયાપદ",
+    "vocabulaire_type_inconnu": "અજ્ઞાત"
 }

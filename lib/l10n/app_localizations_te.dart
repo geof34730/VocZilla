@@ -571,4 +571,43 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ఉపయోగ నిబంధనలు';
+
+  @override
+  String get vocabulaire_type_adjectif => 'విశేషణం';
+
+  @override
+  String get vocabulaire_type_adverbe => 'క్రియా విశేషణం';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ప్రశ్నించే క్రియా విశేషణం';
+
+  @override
+  String get vocabulaire_type_conjonction => 'సంయోగం';
+
+  @override
+  String get vocabulaire_type_determinant => 'నిర్ణయాధికారి';
+
+  @override
+  String get vocabulaire_type_interjection => 'అంతరాయము';
+
+  @override
+  String get vocabulaire_type_nom => 'పేరు';
+
+  @override
+  String get vocabulaire_type_numeral => 'సంఖ్యా';
+
+  @override
+  String get vocabulaire_type_pronom => 'సర్వనామం';
+
+  @override
+  String get vocabulaire_type_preposition => 'ప్రిపోజిషన్';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'మోడల్ క్రియ';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'అనాది క్రియ';
+
+  @override
+  String get vocabulaire_type_inconnu => 'తెలియదు';
 }

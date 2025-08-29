@@ -187,10 +187,17 @@
     "error_check_connection": "Zkontrolujte prosím své internetové připojení.",
     "politique_de_confidentialite": "Zásady ochrany osobních údajů",
     "conditions_dutilisation": "Podmínky použití",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Přídavné jméno",
+    "vocabulaire_type_adverbe": "Příslovce",
+    "vocabulaire_type_adverbeInterrogatif": "Tázací příslovce",
+    "vocabulaire_type_conjonction": "Spojení",
+    "vocabulaire_type_determinant": "Determinant",
+    "vocabulaire_type_interjection": "Citoslovce",
+    "vocabulaire_type_nom": "Jméno",
+    "vocabulaire_type_numeral": "Číslice",
+    "vocabulaire_type_pronom": "Zájmeno",
+    "vocabulaire_type_preposition": "Předložka",
+    "vocabulaire_type_verbeModal": "modální sloveso",
+    "vocabulaire_type_verbeInfinitif": "infinitiv slovesa",
+    "vocabulaire_type_inconnu": "neznámý"
 }

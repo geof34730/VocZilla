@@ -571,4 +571,43 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Kushtet e Përdorimit';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Mbiemër';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Ndajfolje';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Ndajfolje pyetëse';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Lidhëz';
+
+  @override
+  String get vocabulaire_type_determinant => 'Përcaktues';
+
+  @override
+  String get vocabulaire_type_interjection => 'Ndërhyrje';
+
+  @override
+  String get vocabulaire_type_nom => 'Emri';
+
+  @override
+  String get vocabulaire_type_numeral => 'Numëror';
+
+  @override
+  String get vocabulaire_type_pronom => 'Përemër';
+
+  @override
+  String get vocabulaire_type_preposition => 'Parafjalë';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'folje modale';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'folje infinitivi';
+
+  @override
+  String get vocabulaire_type_inconnu => 'i panjohur';
 }

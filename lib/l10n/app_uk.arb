@@ -187,10 +187,17 @@
     "error_check_connection": "Будь ласка, перевірте ваше інтернет-з’єднання.",
     "politique_de_confidentialite": "Політика конфіденційності",
     "conditions_dutilisation": "Умови використання",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Прикметник",
+    "vocabulaire_type_adverbe": "Прислівник",
+    "vocabulaire_type_adverbeInterrogatif": "Питальний прислівник",
+    "vocabulaire_type_conjonction": "Кон'юнкція",
+    "vocabulaire_type_determinant": "Визначальний фактор",
+    "vocabulaire_type_interjection": "Вигук",
+    "vocabulaire_type_nom": "Ім'я",
+    "vocabulaire_type_numeral": "Цифра",
+    "vocabulaire_type_pronom": "Займенник",
+    "vocabulaire_type_preposition": "Прийменник",
+    "vocabulaire_type_verbeModal": "модальне дієслово",
+    "vocabulaire_type_verbeInfinitif": "інфінітив дієслова",
+    "vocabulaire_type_inconnu": "невідомий"
 }

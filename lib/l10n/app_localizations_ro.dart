@@ -571,4 +571,43 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Termeni de utilizare';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Adjectiv';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Adverb';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Adverb interogativ';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Conjuncție';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinant';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjecţie';
+
+  @override
+  String get vocabulaire_type_nom => 'Nume';
+
+  @override
+  String get vocabulaire_type_numeral => 'Numeral';
+
+  @override
+  String get vocabulaire_type_pronom => 'Pronume';
+
+  @override
+  String get vocabulaire_type_preposition => 'Prepoziţie';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'verbe modale';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'verb la infinitiv';
+
+  @override
+  String get vocabulaire_type_inconnu => 'necunoscut';
 }

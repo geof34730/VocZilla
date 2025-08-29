@@ -571,4 +571,43 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'เงื่อนไขการใช้งาน';
+
+  @override
+  String get vocabulaire_type_adjectif => 'คุณศัพท์';
+
+  @override
+  String get vocabulaire_type_adverbe => 'คำวิเศษณ์';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'คำวิเศษณ์คำถาม';
+
+  @override
+  String get vocabulaire_type_conjonction => 'คำสันธาน';
+
+  @override
+  String get vocabulaire_type_determinant => 'ตัวกำหนด';
+
+  @override
+  String get vocabulaire_type_interjection => 'คำอุทาน';
+
+  @override
+  String get vocabulaire_type_nom => 'ชื่อ';
+
+  @override
+  String get vocabulaire_type_numeral => 'ตัวเลข';
+
+  @override
+  String get vocabulaire_type_pronom => 'สรรพนาม';
+
+  @override
+  String get vocabulaire_type_preposition => 'บุพบท';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'กริยาช่วย';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'กริยา infinitive';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ไม่ทราบ';
 }

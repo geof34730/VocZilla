@@ -16,6 +16,7 @@ import 'package:sherpa_onnx/sherpa_onnx.dart'; // v1.12.9
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
+import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../global.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/languageUtils.dart';
@@ -558,12 +559,19 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                         ),
                       ),
                       Text(
-                        "(${data[randomItemData]["TRAD"]})",
+                        "${data[randomItemData]["TRAD"]}",
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 14,
                           color: Colors.black,
                           height: 1.2,
+                        ),
+                      ),
+                      Text(
+                        "(${getTypeDetaiVocabulaire(typeDetail:data[randomItemData]['TYPE_DETAIL'],context: context)})",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 12
                         ),
                       ),
                     ],

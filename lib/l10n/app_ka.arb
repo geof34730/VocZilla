@@ -187,10 +187,17 @@
     "error_check_connection": "გთხოვთ, შეამოწმოთ თქვენი ინტერნეტ კავშირი.",
     "politique_de_confidentialite": "კონფიდენციალურობის პოლიტიკა",
     "conditions_dutilisation": "გამოყენების პირობები",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "ზედსართავი სახელი",
+    "vocabulaire_type_adverbe": "ზმნიზედა",
+    "vocabulaire_type_adverbeInterrogatif": "კითხვითი ზმნიზედა",
+    "vocabulaire_type_conjonction": "შეერთება",
+    "vocabulaire_type_determinant": "განმსაზღვრელი ფაქტორი",
+    "vocabulaire_type_interjection": "ინტერჯექცია",
+    "vocabulaire_type_nom": "სახელი",
+    "vocabulaire_type_numeral": "რიცხვითი",
+    "vocabulaire_type_pronom": "ნაცვალსახელი",
+    "vocabulaire_type_preposition": "წინდებული",
+    "vocabulaire_type_verbeModal": "მოდალური ზმნა",
+    "vocabulaire_type_verbeInfinitif": "ინფინიტივის ზმნა",
+    "vocabulaire_type_inconnu": "უცნობი"
 }

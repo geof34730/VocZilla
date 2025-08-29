@@ -187,10 +187,17 @@
     "error_check_connection": "Kérjük, ellenőrizze az internetkapcsolatát.",
     "politique_de_confidentialite": "Adatvédelmi irányelvek",
     "conditions_dutilisation": "Felhasználási feltételek",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Melléknév",
+    "vocabulaire_type_adverbe": "Határozószó",
+    "vocabulaire_type_adverbeInterrogatif": "Kérdő határozószó",
+    "vocabulaire_type_conjonction": "Konjunkció",
+    "vocabulaire_type_determinant": "Döntő",
+    "vocabulaire_type_interjection": "Indulatszó",
+    "vocabulaire_type_nom": "Név",
+    "vocabulaire_type_numeral": "Számjegy",
+    "vocabulaire_type_pronom": "Névmás",
+    "vocabulaire_type_preposition": "Elöljáró",
+    "vocabulaire_type_verbeModal": "modális ige",
+    "vocabulaire_type_verbeInfinitif": "főnévi igenév",
+    "vocabulaire_type_inconnu": "ismeretlen"
 }

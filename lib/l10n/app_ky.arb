@@ -187,10 +187,17 @@
     "error_check_connection": "Интернет туташууңузду текшериңиз.",
     "politique_de_confidentialite": "Купуялык саясаты",
     "conditions_dutilisation": "Колдонуу шарттары",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Сын атооч",
+    "vocabulaire_type_adverbe": "Тактооч",
+    "vocabulaire_type_adverbeInterrogatif": "Сурак тактооч",
+    "vocabulaire_type_conjonction": "Конъюнктура",
+    "vocabulaire_type_determinant": "Детерминант",
+    "vocabulaire_type_interjection": "Interjection",
+    "vocabulaire_type_nom": "аты",
+    "vocabulaire_type_numeral": "Сан",
+    "vocabulaire_type_pronom": "Зат атооч",
+    "vocabulaire_type_preposition": "Предлог",
+    "vocabulaire_type_verbeModal": "модалдык этиш",
+    "vocabulaire_type_verbeInfinitif": "инфинитив этиш",
+    "vocabulaire_type_inconnu": "белгисиз"
 }

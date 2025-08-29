@@ -571,4 +571,43 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Kullanım Şartları';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Sıfat';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Zarf';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Soru zarfı';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Bağlaç';
+
+  @override
+  String get vocabulaire_type_determinant => 'Belirleyici';
+
+  @override
+  String get vocabulaire_type_interjection => 'Ünlem';
+
+  @override
+  String get vocabulaire_type_nom => 'İsim';
+
+  @override
+  String get vocabulaire_type_numeral => 'Rakam';
+
+  @override
+  String get vocabulaire_type_pronom => 'Zamir';
+
+  @override
+  String get vocabulaire_type_preposition => 'Edat';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modal fiil';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'mastar fiil';
+
+  @override
+  String get vocabulaire_type_inconnu => 'bilinmeyen';
 }

@@ -187,10 +187,17 @@
     "error_check_connection": "لطفا اتصال اینترنت خود را بررسی کنید.",
     "politique_de_confidentialite": "سیاست حفظ حریم خصوصی",
     "conditions_dutilisation": "شرایط استفاده",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "صفت",
+    "vocabulaire_type_adverbe": "قید",
+    "vocabulaire_type_adverbeInterrogatif": "قید پرسشی",
+    "vocabulaire_type_conjonction": "حرف ربط",
+    "vocabulaire_type_determinant": "تعیین کننده",
+    "vocabulaire_type_interjection": "حرف ندا",
+    "vocabulaire_type_nom": "نام",
+    "vocabulaire_type_numeral": "عدد",
+    "vocabulaire_type_pronom": "ضمیر",
+    "vocabulaire_type_preposition": "حرف اضافه",
+    "vocabulaire_type_verbeModal": "فعل کمکی",
+    "vocabulaire_type_verbeInfinitif": "فعل مصدر",
+    "vocabulaire_type_inconnu": "ناشناخته"
 }

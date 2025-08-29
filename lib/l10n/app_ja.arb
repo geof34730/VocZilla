@@ -187,10 +187,17 @@
     "error_check_connection": "インターネット接続を確認してください。",
     "politique_de_confidentialite": "プライバシーポリシー",
     "conditions_dutilisation": "利用規約",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "形容詞",
+    "vocabulaire_type_adverbe": "副詞",
+    "vocabulaire_type_adverbeInterrogatif": "疑問副詞",
+    "vocabulaire_type_conjonction": "接続詞",
+    "vocabulaire_type_determinant": "行列式",
+    "vocabulaire_type_interjection": "間投詞",
+    "vocabulaire_type_nom": "名前",
+    "vocabulaire_type_numeral": "数字",
+    "vocabulaire_type_pronom": "代名詞",
+    "vocabulaire_type_preposition": "前置詞",
+    "vocabulaire_type_verbeModal": "助動詞",
+    "vocabulaire_type_verbeInfinitif": "不定詞動詞",
+    "vocabulaire_type_inconnu": "未知"
 }

@@ -187,10 +187,17 @@
     "error_check_connection": "Tjek venligst din internetforbindelse.",
     "politique_de_confidentialite": "Privatlivspolitik",
     "conditions_dutilisation": "Brugsbetingelser",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Adjektiv",
+    "vocabulaire_type_adverbe": "Biord",
+    "vocabulaire_type_adverbeInterrogatif": "Spørgende adverbium",
+    "vocabulaire_type_conjonction": "Konjunktion",
+    "vocabulaire_type_determinant": "Determinant",
+    "vocabulaire_type_interjection": "Interjektion",
+    "vocabulaire_type_nom": "Navn",
+    "vocabulaire_type_numeral": "Tal",
+    "vocabulaire_type_pronom": "Stedord",
+    "vocabulaire_type_preposition": "Forholdsord",
+    "vocabulaire_type_verbeModal": "modalverbum",
+    "vocabulaire_type_verbeInfinitif": "infinitivt verbum",
+    "vocabulaire_type_inconnu": "ukendt"
 }

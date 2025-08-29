@@ -187,10 +187,17 @@
     "error_check_connection": "உங்கள் இணைய இணைப்பைச் சரிபார்க்கவும்.",
     "politique_de_confidentialite": "தனியுரிமைக் கொள்கை",
     "conditions_dutilisation": "பயன்பாட்டு விதிமுறைகள்",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "பெயரடை",
+    "vocabulaire_type_adverbe": "வினையுரிச்சொல்",
+    "vocabulaire_type_adverbeInterrogatif": "கேள்விக்குரிய வினையுரிச்சொல்",
+    "vocabulaire_type_conjonction": "இணைப்பு",
+    "vocabulaire_type_determinant": "தீர்மானிப்பவர்",
+    "vocabulaire_type_interjection": "இடைச்சொல்",
+    "vocabulaire_type_nom": "பெயர்",
+    "vocabulaire_type_numeral": "எண்",
+    "vocabulaire_type_pronom": "பிரதிபெயர்",
+    "vocabulaire_type_preposition": "முன்மொழிவு",
+    "vocabulaire_type_verbeModal": "மாதிரி வினைச்சொல்",
+    "vocabulaire_type_verbeInfinitif": "முடிவிலி வினைச்சொல்",
+    "vocabulaire_type_inconnu": "தெரியவில்லை"
 }

@@ -571,4 +571,43 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Imigomo Yokusebenzisa';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Isiphawulo';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Isandiso';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Isandiso sokubuza';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Isihlanganiso';
+
+  @override
+  String get vocabulaire_type_determinant => 'Ukunquma';
+
+  @override
+  String get vocabulaire_type_interjection => 'Ukungenelela';
+
+  @override
+  String get vocabulaire_type_nom => 'Igama';
+
+  @override
+  String get vocabulaire_type_numeral => 'Inombolo';
+
+  @override
+  String get vocabulaire_type_pronom => 'Isabizwana soqobo';
+
+  @override
+  String get vocabulaire_type_preposition => 'Isilandiso';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'isenzo se-modal';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'isenzo esingapheli';
+
+  @override
+  String get vocabulaire_type_inconnu => 'akwaziwa';
 }

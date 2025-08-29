@@ -187,10 +187,17 @@
     "error_check_connection": "Sila semak sambungan internet anda.",
     "politique_de_confidentialite": "Dasar Privasi",
     "conditions_dutilisation": "Syarat Penggunaan",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Kata adjektif",
+    "vocabulaire_type_adverbe": "Kata keterangan",
+    "vocabulaire_type_adverbeInterrogatif": "Kata keterangan tanya",
+    "vocabulaire_type_conjonction": "Kata Hubung",
+    "vocabulaire_type_determinant": "Penentu",
+    "vocabulaire_type_interjection": "Kata seru",
+    "vocabulaire_type_nom": "Nama",
+    "vocabulaire_type_numeral": "angka",
+    "vocabulaire_type_pronom": "Kata ganti nama",
+    "vocabulaire_type_preposition": "Kata depan",
+    "vocabulaire_type_verbeModal": "kata kerja modal",
+    "vocabulaire_type_verbeInfinitif": "kata kerja infinitif",
+    "vocabulaire_type_inconnu": "tidak diketahui"
 }

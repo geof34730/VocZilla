@@ -187,10 +187,17 @@
     "error_check_connection": "Kontroleer asseblief u internetverbinding.",
     "politique_de_confidentialite": "Privaatheidsbeleid",
     "conditions_dutilisation": "Gebruiksvoorwaardes",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Byvoeglike naamwoord",
+    "vocabulaire_type_adverbe": "Bywoord",
+    "vocabulaire_type_adverbeInterrogatif": "Vraende bywoord",
+    "vocabulaire_type_conjonction": "Konjunksie",
+    "vocabulaire_type_determinant": "Bepalende",
+    "vocabulaire_type_interjection": "Tussenwerpsel",
+    "vocabulaire_type_nom": "Naam",
+    "vocabulaire_type_numeral": "Syfer",
+    "vocabulaire_type_pronom": "Voornaamwoord",
+    "vocabulaire_type_preposition": "Voorsetsel",
+    "vocabulaire_type_verbeModal": "modale werkwoord",
+    "vocabulaire_type_verbeInfinitif": "infinitiewe werkwoord",
+    "vocabulaire_type_inconnu": "onbekend"
 }

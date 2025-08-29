@@ -571,4 +571,43 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Điều khoản sử dụng';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Tính từ';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Trạng từ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Trạng từ nghi vấn';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Sự liên kết';
+
+  @override
+  String get vocabulaire_type_determinant => 'Định thức';
+
+  @override
+  String get vocabulaire_type_interjection => 'Thán từ';
+
+  @override
+  String get vocabulaire_type_nom => 'Tên';
+
+  @override
+  String get vocabulaire_type_numeral => 'Số';
+
+  @override
+  String get vocabulaire_type_pronom => 'Đại từ';
+
+  @override
+  String get vocabulaire_type_preposition => 'Giới từ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'động từ khiếm khuyết';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'động từ nguyên thể';
+
+  @override
+  String get vocabulaire_type_inconnu => 'không rõ';
 }

@@ -187,10 +187,17 @@
     "error_check_connection": "Lütfen internet bağlantınızı kontrol edin.",
     "politique_de_confidentialite": "Gizlilik Politikası",
     "conditions_dutilisation": "Kullanım Şartları",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Sıfat",
+    "vocabulaire_type_adverbe": "Zarf",
+    "vocabulaire_type_adverbeInterrogatif": "Soru zarfı",
+    "vocabulaire_type_conjonction": "Bağlaç",
+    "vocabulaire_type_determinant": "Belirleyici",
+    "vocabulaire_type_interjection": "Ünlem",
+    "vocabulaire_type_nom": "İsim",
+    "vocabulaire_type_numeral": "Rakam",
+    "vocabulaire_type_pronom": "Zamir",
+    "vocabulaire_type_preposition": "Edat",
+    "vocabulaire_type_verbeModal": "modal fiil",
+    "vocabulaire_type_verbeInfinitif": "mastar fiil",
+    "vocabulaire_type_inconnu": "bilinmeyen"
 }

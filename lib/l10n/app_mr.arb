@@ -187,10 +187,17 @@
     "error_check_connection": "कृपया तुमचे इंटरनेट कनेक्शन तपासा.",
     "politique_de_confidentialite": "गोपनीयता धोरण",
     "conditions_dutilisation": "वापराच्या अटी",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "विशेषण",
+    "vocabulaire_type_adverbe": "क्रियाविशेषण",
+    "vocabulaire_type_adverbeInterrogatif": "प्रश्नार्थक क्रियाविशेषण",
+    "vocabulaire_type_conjonction": "उभयान्वयी अव्यय",
+    "vocabulaire_type_determinant": "निर्धारक",
+    "vocabulaire_type_interjection": "इंटरजेक्शन",
+    "vocabulaire_type_nom": "नाव",
+    "vocabulaire_type_numeral": "अंक",
+    "vocabulaire_type_pronom": "सर्वनाम",
+    "vocabulaire_type_preposition": "पूर्वपदार्थ",
+    "vocabulaire_type_verbeModal": "मोडल क्रियापद",
+    "vocabulaire_type_verbeInfinitif": "अनंत क्रियापद",
+    "vocabulaire_type_inconnu": "अज्ञात"
 }

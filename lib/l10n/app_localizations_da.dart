@@ -571,4 +571,43 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Brugsbetingelser';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Adjektiv';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Biord';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Spørgende adverbium';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Konjunktion';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinant';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjektion';
+
+  @override
+  String get vocabulaire_type_nom => 'Navn';
+
+  @override
+  String get vocabulaire_type_numeral => 'Tal';
+
+  @override
+  String get vocabulaire_type_pronom => 'Stedord';
+
+  @override
+  String get vocabulaire_type_preposition => 'Forholdsord';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modalverbum';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitivt verbum';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ukendt';
 }

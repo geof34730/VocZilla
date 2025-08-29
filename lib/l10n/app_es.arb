@@ -187,10 +187,17 @@
     "error_check_connection": "Por favor verifique su conexión a Internet.",
     "politique_de_confidentialite": "política de privacidad",
     "conditions_dutilisation": "Condiciones de uso",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Adjetivo",
+    "vocabulaire_type_adverbe": "Adverbio",
+    "vocabulaire_type_adverbeInterrogatif": "adverbio interrogativo",
+    "vocabulaire_type_conjonction": "Conjunción",
+    "vocabulaire_type_determinant": "Determinante",
+    "vocabulaire_type_interjection": "Interjección",
+    "vocabulaire_type_nom": "Nombre",
+    "vocabulaire_type_numeral": "Número",
+    "vocabulaire_type_pronom": "Pronombre",
+    "vocabulaire_type_preposition": "Preposición",
+    "vocabulaire_type_verbeModal": "verbo modal",
+    "vocabulaire_type_verbeInfinitif": "verbo infinitivo",
+    "vocabulaire_type_inconnu": "desconocido"
 }

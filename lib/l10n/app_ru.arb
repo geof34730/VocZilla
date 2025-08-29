@@ -187,10 +187,17 @@
     "error_check_connection": "Проверьте подключение к Интернету.",
     "politique_de_confidentialite": "политика конфиденциальности",
     "conditions_dutilisation": "Условия эксплуатации",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Прилагательное",
+    "vocabulaire_type_adverbe": "Наречие",
+    "vocabulaire_type_adverbeInterrogatif": "Вопросительное наречие",
+    "vocabulaire_type_conjonction": "Соединение",
+    "vocabulaire_type_determinant": "Определитель",
+    "vocabulaire_type_interjection": "Междометие",
+    "vocabulaire_type_nom": "Имя",
+    "vocabulaire_type_numeral": "Цифра",
+    "vocabulaire_type_pronom": "Местоимение",
+    "vocabulaire_type_preposition": "Предлог",
+    "vocabulaire_type_verbeModal": "модальный глагол",
+    "vocabulaire_type_verbeInfinitif": "инфинитив глагола",
+    "vocabulaire_type_inconnu": "неизвестный"
 }

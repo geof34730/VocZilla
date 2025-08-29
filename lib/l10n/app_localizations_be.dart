@@ -571,4 +571,43 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Умовы карыстання';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Прыметнік';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Прыслоўе';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Пытальнае прыслоўе';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Злучнік';
+
+  @override
+  String get vocabulaire_type_determinant => 'Вызначальны фактар';
+
+  @override
+  String get vocabulaire_type_interjection => 'Выклічнік';
+
+  @override
+  String get vocabulaire_type_nom => 'Імя';
+
+  @override
+  String get vocabulaire_type_numeral => 'Лічба';
+
+  @override
+  String get vocabulaire_type_pronom => 'Займеннік';
+
+  @override
+  String get vocabulaire_type_preposition => 'Прыназоўнік';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'мадальны дзеяслоў';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'інфінітыў дзеяслоў';
+
+  @override
+  String get vocabulaire_type_inconnu => 'невядомы';
 }

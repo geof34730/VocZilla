@@ -571,4 +571,43 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'பயன்பாட்டு விதிமுறைகள்';
+
+  @override
+  String get vocabulaire_type_adjectif => 'பெயரடை';
+
+  @override
+  String get vocabulaire_type_adverbe => 'வினையுரிச்சொல்';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'கேள்விக்குரிய வினையுரிச்சொல்';
+
+  @override
+  String get vocabulaire_type_conjonction => 'இணைப்பு';
+
+  @override
+  String get vocabulaire_type_determinant => 'தீர்மானிப்பவர்';
+
+  @override
+  String get vocabulaire_type_interjection => 'இடைச்சொல்';
+
+  @override
+  String get vocabulaire_type_nom => 'பெயர்';
+
+  @override
+  String get vocabulaire_type_numeral => 'எண்';
+
+  @override
+  String get vocabulaire_type_pronom => 'பிரதிபெயர்';
+
+  @override
+  String get vocabulaire_type_preposition => 'முன்மொழிவு';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'மாதிரி வினைச்சொல்';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'முடிவிலி வினைச்சொல்';
+
+  @override
+  String get vocabulaire_type_inconnu => 'தெரியவில்லை';
 }

@@ -187,10 +187,17 @@
     "error_check_connection": "ກະລຸນາກວດເບິ່ງການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ.",
     "politique_de_confidentialite": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ",
     "conditions_dutilisation": "ເງື່ອນໄຂການນໍາໃຊ້",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "ຄຳຄຸນນາມ",
+    "vocabulaire_type_adverbe": "ຄຳສຸພາສິດ",
+    "vocabulaire_type_adverbeInterrogatif": "ຄຳກິລິຍາຕອບໂຕ້",
+    "vocabulaire_type_conjonction": "ສົມທົບ",
+    "vocabulaire_type_determinant": "ຕົວກໍານົດ",
+    "vocabulaire_type_interjection": "ຄຳອະທິບາຍ",
+    "vocabulaire_type_nom": "ຊື່",
+    "vocabulaire_type_numeral": "ຕົວເລກ",
+    "vocabulaire_type_pronom": "ຄຳນາມ",
+    "vocabulaire_type_preposition": "Preposition",
+    "vocabulaire_type_verbeModal": "modal verb",
+    "vocabulaire_type_verbeInfinitif": "ຄໍາກິລິຍາ infinitive",
+    "vocabulaire_type_inconnu": "ບໍ່ຮູ້ຈັກ"
 }

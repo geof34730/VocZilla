@@ -187,10 +187,17 @@
     "error_check_connection": "Tafadhali angalia muunganisho wako wa intaneti.",
     "politique_de_confidentialite": "Sera ya Faragha",
     "conditions_dutilisation": "Masharti ya Matumizi",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Kivumishi",
+    "vocabulaire_type_adverbe": "Kielezi",
+    "vocabulaire_type_adverbeInterrogatif": "Kielezi cha kuuliza",
+    "vocabulaire_type_conjonction": "Kiunganishi",
+    "vocabulaire_type_determinant": "Kuamua",
+    "vocabulaire_type_interjection": "Kuingilia kati",
+    "vocabulaire_type_nom": "Jina",
+    "vocabulaire_type_numeral": "Nambari",
+    "vocabulaire_type_pronom": "Kiwakilishi",
+    "vocabulaire_type_preposition": "Kihusishi",
+    "vocabulaire_type_verbeModal": "kitenzi cha modali",
+    "vocabulaire_type_verbeInfinitif": "kitenzi kisicho na kikomo",
+    "vocabulaire_type_inconnu": "haijulikani"
 }

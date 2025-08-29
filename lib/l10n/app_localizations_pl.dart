@@ -571,4 +571,43 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Warunki korzystania';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Przymiotnik';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Przysłówek';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Przysłówek pytający';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Spójnik';
+
+  @override
+  String get vocabulaire_type_determinant => 'Wyznacznik';
+
+  @override
+  String get vocabulaire_type_interjection => 'Wykrzyknik';
+
+  @override
+  String get vocabulaire_type_nom => 'Nazwa';
+
+  @override
+  String get vocabulaire_type_numeral => 'Liczbowy';
+
+  @override
+  String get vocabulaire_type_pronom => 'Zaimek';
+
+  @override
+  String get vocabulaire_type_preposition => 'Przyimek';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'czasownik modalny';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'bezokolicznik';
+
+  @override
+  String get vocabulaire_type_inconnu => 'nieznany';
 }

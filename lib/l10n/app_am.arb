@@ -187,10 +187,17 @@
     "error_check_connection": "እባክዎ የበይነመረብ ግንኙነትዎን ያረጋግጡ።",
     "politique_de_confidentialite": "የግላዊነት ፖሊሲ",
     "conditions_dutilisation": "የአጠቃቀም ውል",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "ቅጽል",
+    "vocabulaire_type_adverbe": "ተውሳክ",
+    "vocabulaire_type_adverbeInterrogatif": "ጠያቂ ተውሳክ",
+    "vocabulaire_type_conjonction": "ቁርኝት",
+    "vocabulaire_type_determinant": "ቆራጥ",
+    "vocabulaire_type_interjection": "ጣልቃ መግባት",
+    "vocabulaire_type_nom": "ስም",
+    "vocabulaire_type_numeral": "ቁጥር",
+    "vocabulaire_type_pronom": "ተውላጠ ስም",
+    "vocabulaire_type_preposition": "ቅድመ ሁኔታ",
+    "vocabulaire_type_verbeModal": "ሞዳል ግስ",
+    "vocabulaire_type_verbeInfinitif": "ማለቂያ የሌለው ግሥ",
+    "vocabulaire_type_inconnu": "የማይታወቅ"
 }

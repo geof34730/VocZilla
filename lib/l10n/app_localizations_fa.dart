@@ -571,4 +571,43 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'شرایط استفاده';
+
+  @override
+  String get vocabulaire_type_adjectif => 'صفت';
+
+  @override
+  String get vocabulaire_type_adverbe => 'قید';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'قید پرسشی';
+
+  @override
+  String get vocabulaire_type_conjonction => 'حرف ربط';
+
+  @override
+  String get vocabulaire_type_determinant => 'تعیین کننده';
+
+  @override
+  String get vocabulaire_type_interjection => 'حرف ندا';
+
+  @override
+  String get vocabulaire_type_nom => 'نام';
+
+  @override
+  String get vocabulaire_type_numeral => 'عدد';
+
+  @override
+  String get vocabulaire_type_pronom => 'ضمیر';
+
+  @override
+  String get vocabulaire_type_preposition => 'حرف اضافه';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'فعل کمکی';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'فعل مصدر';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ناشناخته';
 }

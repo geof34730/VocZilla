@@ -571,4 +571,43 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Όροι Χρήσης';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Επίθετο';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Επίρρημα';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Ερωτηματικό επίρρημα';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Σύνδεση';
+
+  @override
+  String get vocabulaire_type_determinant => 'Καθοριστικός';
+
+  @override
+  String get vocabulaire_type_interjection => 'Επιφώνημα';
+
+  @override
+  String get vocabulaire_type_nom => 'Ονομα';
+
+  @override
+  String get vocabulaire_type_numeral => 'Αριθμός';
+
+  @override
+  String get vocabulaire_type_pronom => 'Αντωνυμία';
+
+  @override
+  String get vocabulaire_type_preposition => 'Πρόθεση';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'τροπικό ρήμα';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'απαρέμφατο ρήμα';
+
+  @override
+  String get vocabulaire_type_inconnu => 'άγνωστος';
 }

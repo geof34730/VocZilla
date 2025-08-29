@@ -187,10 +187,17 @@
     "error_check_connection": "దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేయండి.",
     "politique_de_confidentialite": "గోప్యతా విధానం",
     "conditions_dutilisation": "ఉపయోగ నిబంధనలు",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "విశేషణం",
+    "vocabulaire_type_adverbe": "క్రియా విశేషణం",
+    "vocabulaire_type_adverbeInterrogatif": "ప్రశ్నించే క్రియా విశేషణం",
+    "vocabulaire_type_conjonction": "సంయోగం",
+    "vocabulaire_type_determinant": "నిర్ణయాధికారి",
+    "vocabulaire_type_interjection": "అంతరాయము",
+    "vocabulaire_type_nom": "పేరు",
+    "vocabulaire_type_numeral": "సంఖ్యా",
+    "vocabulaire_type_pronom": "సర్వనామం",
+    "vocabulaire_type_preposition": "ప్రిపోజిషన్",
+    "vocabulaire_type_verbeModal": "మోడల్ క్రియ",
+    "vocabulaire_type_verbeInfinitif": "అనాది క్రియ",
+    "vocabulaire_type_inconnu": "తెలియదు"
 }

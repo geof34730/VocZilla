@@ -187,10 +187,17 @@
     "error_check_connection": "Si us plau, comproveu la vostra connexió a Internet.",
     "politique_de_confidentialite": "Política de privacitat",
     "conditions_dutilisation": "Condicions d'ús",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Adjectiu",
+    "vocabulaire_type_adverbe": "Adverbi",
+    "vocabulaire_type_adverbeInterrogatif": "adverbi interrogatiu",
+    "vocabulaire_type_conjonction": "Conjunció",
+    "vocabulaire_type_determinant": "Determinant",
+    "vocabulaire_type_interjection": "Interjecció",
+    "vocabulaire_type_nom": "Nom",
+    "vocabulaire_type_numeral": "Numeral",
+    "vocabulaire_type_pronom": "Pronom",
+    "vocabulaire_type_preposition": "Preposició",
+    "vocabulaire_type_verbeModal": "verb modal",
+    "vocabulaire_type_verbeInfinitif": "verb infinitiu",
+    "vocabulaire_type_inconnu": "desconegut"
 }

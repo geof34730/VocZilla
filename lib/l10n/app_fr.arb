@@ -190,6 +190,18 @@
     "erreur_chargement_produits": "Erreur lors du chargement des produits",
     "reessayer": "Réessayer",
     "politique_de_confidentialite" : "Politique de confidentialité",
-    "conditions_dutilisation" : "Conditions d’utilisation"
-
+    "conditions_dutilisation" : "Conditions d’utilisation",
+    "vocabulaire_type_adjectif" : "Adjectif",
+    "vocabulaire_type_adverbe" : "Adverbe",
+    "vocabulaire_type_adverbeInterrogatif" : "Adverbe interrogatif",
+    "vocabulaire_type_conjonction" : "Conjonction",
+    "vocabulaire_type_determinant" : "Déterminant",
+    "vocabulaire_type_interjection" : "Interjection",
+    "vocabulaire_type_nom" : "Nom",
+    "vocabulaire_type_numeral" : "Numéral",
+    "vocabulaire_type_pronom" : "Pronom",
+    "vocabulaire_type_preposition" : "Préposition",
+    "vocabulaire_type_verbeModal" : "verbe modal",
+    "vocabulaire_type_verbeInfinitif" : "verbe à l'infinitif",
+    "vocabulaire_type_inconnu" : "inconnu"
 }

@@ -571,4 +571,43 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Kasutustingimused';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Omadussõna';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Määrsõna';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Küsiv määrsõna';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Konjunktsioon';
+
+  @override
+  String get vocabulaire_type_determinant => 'Määrav tegur';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjektsioon';
+
+  @override
+  String get vocabulaire_type_nom => 'Nimi';
+
+  @override
+  String get vocabulaire_type_numeral => 'Number';
+
+  @override
+  String get vocabulaire_type_pronom => 'Asesõna';
+
+  @override
+  String get vocabulaire_type_preposition => 'Eessõna';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modaalverb';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitiivverb';
+
+  @override
+  String get vocabulaire_type_inconnu => 'tundmatu';
 }

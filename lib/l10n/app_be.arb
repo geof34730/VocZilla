@@ -187,10 +187,17 @@
     "error_check_connection": "Калі ласка, праверце падключэнне да Інтэрнэту.",
     "politique_de_confidentialite": "Палітыка прыватнасці",
     "conditions_dutilisation": "Умовы карыстання",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Прыметнік",
+    "vocabulaire_type_adverbe": "Прыслоўе",
+    "vocabulaire_type_adverbeInterrogatif": "Пытальнае прыслоўе",
+    "vocabulaire_type_conjonction": "Злучнік",
+    "vocabulaire_type_determinant": "Вызначальны фактар",
+    "vocabulaire_type_interjection": "Выклічнік",
+    "vocabulaire_type_nom": "Імя",
+    "vocabulaire_type_numeral": "Лічба",
+    "vocabulaire_type_pronom": "Займеннік",
+    "vocabulaire_type_preposition": "Прыназоўнік",
+    "vocabulaire_type_verbeModal": "мадальны дзеяслоў",
+    "vocabulaire_type_verbeInfinitif": "інфінітыў дзеяслоў",
+    "vocabulaire_type_inconnu": "невядомы"
 }

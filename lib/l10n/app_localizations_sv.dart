@@ -571,4 +571,43 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Användarvillkor';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Adjektiv';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Adverb';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Frågande adverb';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Samband';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinant';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjektion';
+
+  @override
+  String get vocabulaire_type_nom => 'Namn';
+
+  @override
+  String get vocabulaire_type_numeral => 'Siffra';
+
+  @override
+  String get vocabulaire_type_pronom => 'Pronomen';
+
+  @override
+  String get vocabulaire_type_preposition => 'Preposition';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modalt verb';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitivt verb';
+
+  @override
+  String get vocabulaire_type_inconnu => 'okänd';
 }

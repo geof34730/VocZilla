@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/core/utils/localization.dart';
 import 'package:vobzilla/logic/cubit/localization_cubit.dart';
 
+import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../global.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/languageUtils.dart';
@@ -97,8 +98,16 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                                 style: TextStyle(
                                   fontSize: 40.0,
                                   fontWeight: FontWeight.bold,
+                                  height:1
                                 ),
                                 textAlign: TextAlign.center,
+                              ),
+                            ),
+                            Text(
+                              "(${getTypeDetaiVocabulaire(typeDetail:data[randomItemData]['TYPE_DETAIL'],context: context)})",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 16
                               ),
                             ),
                             Padding(

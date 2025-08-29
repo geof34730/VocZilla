@@ -187,10 +187,17 @@
     "error_check_connection": "Моля, проверете интернет връзката си.",
     "politique_de_confidentialite": "Политика за поверителност",
     "conditions_dutilisation": "Условия за ползване",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Прилагателно",
+    "vocabulaire_type_adverbe": "Наречие",
+    "vocabulaire_type_adverbeInterrogatif": "Въпросително наречие",
+    "vocabulaire_type_conjonction": "Съюз",
+    "vocabulaire_type_determinant": "Определящ фактор",
+    "vocabulaire_type_interjection": "Междуметие",
+    "vocabulaire_type_nom": "Име",
+    "vocabulaire_type_numeral": "Цифра",
+    "vocabulaire_type_pronom": "Местоимение",
+    "vocabulaire_type_preposition": "Предлог",
+    "vocabulaire_type_verbeModal": "модален глагол",
+    "vocabulaire_type_verbeInfinitif": "инфинитив глагол",
+    "vocabulaire_type_inconnu": "неизвестен"
 }

@@ -187,10 +187,17 @@
     "error_check_connection": "කරුණාකර ඔබගේ අන්තර්ජාල සම්බන්ධතාවය පරීක්ෂා කරන්න.",
     "politique_de_confidentialite": "රහස්යතා ප්රතිපත්තිය",
     "conditions_dutilisation": "භාවිත නියම",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "නාම විශේෂණය",
+    "vocabulaire_type_adverbe": "ක්‍රියා විශේෂණය",
+    "vocabulaire_type_adverbeInterrogatif": "ප්‍රශ්නාර්ථ විශේෂණය",
+    "vocabulaire_type_conjonction": "සංයෝජනය",
+    "vocabulaire_type_determinant": "නිර්ණායකය",
+    "vocabulaire_type_interjection": "අතුරු කථාව",
+    "vocabulaire_type_nom": "නම",
+    "vocabulaire_type_numeral": "ඉලක්කම්",
+    "vocabulaire_type_pronom": "සර්වනාමය",
+    "vocabulaire_type_preposition": "පෙරනිමිත්ත",
+    "vocabulaire_type_verbeModal": "මාදිලියේ ක්‍රියා පදය",
+    "vocabulaire_type_verbeInfinitif": "අනන්ත ක්‍රියා පදය",
+    "vocabulaire_type_inconnu": "නොදන්නා"
 }

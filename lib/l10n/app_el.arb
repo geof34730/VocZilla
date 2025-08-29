@@ -187,10 +187,17 @@
     "error_check_connection": "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο.",
     "politique_de_confidentialite": "Πολιτική Απορρήτου",
     "conditions_dutilisation": "Όροι Χρήσης",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Επίθετο",
+    "vocabulaire_type_adverbe": "Επίρρημα",
+    "vocabulaire_type_adverbeInterrogatif": "Ερωτηματικό επίρρημα",
+    "vocabulaire_type_conjonction": "Σύνδεση",
+    "vocabulaire_type_determinant": "Καθοριστικός",
+    "vocabulaire_type_interjection": "Επιφώνημα",
+    "vocabulaire_type_nom": "Ονομα",
+    "vocabulaire_type_numeral": "Αριθμός",
+    "vocabulaire_type_pronom": "Αντωνυμία",
+    "vocabulaire_type_preposition": "Πρόθεση",
+    "vocabulaire_type_verbeModal": "τροπικό ρήμα",
+    "vocabulaire_type_verbeInfinitif": "απαρέμφατο ρήμα",
+    "vocabulaire_type_inconnu": "άγνωστος"
 }

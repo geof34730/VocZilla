@@ -571,4 +571,43 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Syarat Penggunaan';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Kata adjektif';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Kata keterangan';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Kata keterangan tanya';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Kata Hubung';
+
+  @override
+  String get vocabulaire_type_determinant => 'Penentu';
+
+  @override
+  String get vocabulaire_type_interjection => 'Kata seru';
+
+  @override
+  String get vocabulaire_type_nom => 'Nama';
+
+  @override
+  String get vocabulaire_type_numeral => 'angka';
+
+  @override
+  String get vocabulaire_type_pronom => 'Kata ganti nama';
+
+  @override
+  String get vocabulaire_type_preposition => 'Kata depan';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'kata kerja modal';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'kata kerja infinitif';
+
+  @override
+  String get vocabulaire_type_inconnu => 'tidak diketahui';
 }

@@ -571,4 +571,43 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Услови за користење';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Придавка';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Прилог';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Прашален прилог';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Сврзник';
+
+  @override
+  String get vocabulaire_type_determinant => 'Детерминант';
+
+  @override
+  String get vocabulaire_type_interjection => 'Интерјекција';
+
+  @override
+  String get vocabulaire_type_nom => 'Име';
+
+  @override
+  String get vocabulaire_type_numeral => 'Бројка';
+
+  @override
+  String get vocabulaire_type_pronom => 'Заменка';
+
+  @override
+  String get vocabulaire_type_preposition => 'Предлог';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'модален глагол';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'инфинитив глагол';
+
+  @override
+  String get vocabulaire_type_inconnu => 'непознат';
 }

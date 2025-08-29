@@ -187,10 +187,17 @@
     "error_check_connection": "Sprawdź połączenie internetowe.",
     "politique_de_confidentialite": "Polityka prywatności",
     "conditions_dutilisation": "Warunki korzystania",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Przymiotnik",
+    "vocabulaire_type_adverbe": "Przysłówek",
+    "vocabulaire_type_adverbeInterrogatif": "Przysłówek pytający",
+    "vocabulaire_type_conjonction": "Spójnik",
+    "vocabulaire_type_determinant": "Wyznacznik",
+    "vocabulaire_type_interjection": "Wykrzyknik",
+    "vocabulaire_type_nom": "Nazwa",
+    "vocabulaire_type_numeral": "Liczbowy",
+    "vocabulaire_type_pronom": "Zaimek",
+    "vocabulaire_type_preposition": "Przyimek",
+    "vocabulaire_type_verbeModal": "czasownik modalny",
+    "vocabulaire_type_verbeInfinitif": "bezokolicznik",
+    "vocabulaire_type_inconnu": "nieznany"
 }

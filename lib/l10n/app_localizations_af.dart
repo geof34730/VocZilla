@@ -571,4 +571,43 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Gebruiksvoorwaardes';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Byvoeglike naamwoord';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Bywoord';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Vraende bywoord';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Konjunksie';
+
+  @override
+  String get vocabulaire_type_determinant => 'Bepalende';
+
+  @override
+  String get vocabulaire_type_interjection => 'Tussenwerpsel';
+
+  @override
+  String get vocabulaire_type_nom => 'Naam';
+
+  @override
+  String get vocabulaire_type_numeral => 'Syfer';
+
+  @override
+  String get vocabulaire_type_pronom => 'Voornaamwoord';
+
+  @override
+  String get vocabulaire_type_preposition => 'Voorsetsel';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modale werkwoord';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitiewe werkwoord';
+
+  @override
+  String get vocabulaire_type_inconnu => 'onbekend';
 }

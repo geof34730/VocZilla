@@ -571,4 +571,43 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ';
+
+  @override
+  String get vocabulaire_type_adjectif => 'ਵਿਸ਼ੇਸ਼ਣ';
+
+  @override
+  String get vocabulaire_type_adverbe => 'ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'ਪੁੱਛਗਿੱਛ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ';
+
+  @override
+  String get vocabulaire_type_conjonction => 'ਜੋੜ';
+
+  @override
+  String get vocabulaire_type_determinant => 'ਨਿਰਧਾਰਕ';
+
+  @override
+  String get vocabulaire_type_interjection => 'ਇੰਟਰਜੇਕਸ਼ਨ';
+
+  @override
+  String get vocabulaire_type_nom => 'ਨਾਮ';
+
+  @override
+  String get vocabulaire_type_numeral => 'ਅੰਕ';
+
+  @override
+  String get vocabulaire_type_pronom => 'ਪੜਨਾਂਵ';
+
+  @override
+  String get vocabulaire_type_preposition => 'ਅਗੇਤਰ';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'ਮਾਡਲ ਕਿਰਿਆ';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'ਅਨੰਤ ਕਿਰਿਆ';
+
+  @override
+  String get vocabulaire_type_inconnu => 'ਅਣਜਾਣ';
 }

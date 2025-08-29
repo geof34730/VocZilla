@@ -571,4 +571,43 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'उपयोग की शर्तें';
+
+  @override
+  String get vocabulaire_type_adjectif => 'विशेषण';
+
+  @override
+  String get vocabulaire_type_adverbe => 'क्रिया विशेषण';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'प्रश्नवाचक क्रियाविशेषण';
+
+  @override
+  String get vocabulaire_type_conjonction => 'संयोजक';
+
+  @override
+  String get vocabulaire_type_determinant => 'सिद्ध';
+
+  @override
+  String get vocabulaire_type_interjection => 'विस्मयादिबोधक';
+
+  @override
+  String get vocabulaire_type_nom => 'नाम';
+
+  @override
+  String get vocabulaire_type_numeral => 'अंक';
+
+  @override
+  String get vocabulaire_type_pronom => 'सर्वनाम';
+
+  @override
+  String get vocabulaire_type_preposition => 'पूर्वसर्ग';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'मॉडल क्रिया';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'क्रिया के साधारण रूप';
+
+  @override
+  String get vocabulaire_type_inconnu => 'अज्ञात';
 }

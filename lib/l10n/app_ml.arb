@@ -187,10 +187,17 @@
     "error_check_connection": "നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക.",
     "politique_de_confidentialite": "സ്വകാര്യതാ നയം",
     "conditions_dutilisation": "ഉപയോഗ നിബന്ധനകൾ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "നാമവിശേഷണം",
+    "vocabulaire_type_adverbe": "ക്രിയാവിശേഷണം",
+    "vocabulaire_type_adverbeInterrogatif": "ചോദ്യം ചെയ്യൽ ക്രിയാവിശേഷണം",
+    "vocabulaire_type_conjonction": "സംയോജനം",
+    "vocabulaire_type_determinant": "ഡിറ്റർമിനന്റ്",
+    "vocabulaire_type_interjection": "ഇടപെടൽ",
+    "vocabulaire_type_nom": "പേര്",
+    "vocabulaire_type_numeral": "സംഖ്യ",
+    "vocabulaire_type_pronom": "സർവ്വനാമം",
+    "vocabulaire_type_preposition": "പ്രീപോസിഷൻ",
+    "vocabulaire_type_verbeModal": "മോഡൽ ക്രിയ",
+    "vocabulaire_type_verbeInfinitif": "അനിർവചനീയ ക്രിയ",
+    "vocabulaire_type_inconnu": "അജ്ഞാതം"
 }

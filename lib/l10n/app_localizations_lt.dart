@@ -571,4 +571,43 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Naudojimo sąlygos';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Būdvardis';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Prieveiksmis';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Klausiamasis prieveiksmis';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Jungtukas';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinantas';
+
+  @override
+  String get vocabulaire_type_interjection => 'Įterpimas';
+
+  @override
+  String get vocabulaire_type_nom => 'Vardas';
+
+  @override
+  String get vocabulaire_type_numeral => 'Skaitmuo';
+
+  @override
+  String get vocabulaire_type_pronom => 'Įvardis';
+
+  @override
+  String get vocabulaire_type_preposition => 'Prielinksnis';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modalinis veiksmažodis';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'bendratis veiksmažodis';
+
+  @override
+  String get vocabulaire_type_inconnu => 'nežinomas';
 }

@@ -187,10 +187,17 @@
     "error_check_connection": "Sjekk internettforbindelsen din.",
     "politique_de_confidentialite": "Personvernerklæring",
     "conditions_dutilisation": "Bruksvilkår",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Adjektiv",
+    "vocabulaire_type_adverbe": "Adverb",
+    "vocabulaire_type_adverbeInterrogatif": "Spørrende adverb",
+    "vocabulaire_type_conjonction": "Konjunksjon",
+    "vocabulaire_type_determinant": "Determinant",
+    "vocabulaire_type_interjection": "Interjeksjon",
+    "vocabulaire_type_nom": "Navn",
+    "vocabulaire_type_numeral": "Tall",
+    "vocabulaire_type_pronom": "Pronomen",
+    "vocabulaire_type_preposition": "Preposisjon",
+    "vocabulaire_type_verbeModal": "modalt verb",
+    "vocabulaire_type_verbeInfinitif": "infinitivt verb",
+    "vocabulaire_type_inconnu": "ukjent"
 }

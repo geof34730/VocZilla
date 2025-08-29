@@ -571,4 +571,43 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Käyttöehdot';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Adjektiivi';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Adverbi';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Kysymysadverbi';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Konjunktio';
+
+  @override
+  String get vocabulaire_type_determinant => 'Määrittävä tekijä';
+
+  @override
+  String get vocabulaire_type_interjection => 'Huudahdus';
+
+  @override
+  String get vocabulaire_type_nom => 'Nimi';
+
+  @override
+  String get vocabulaire_type_numeral => 'Numero';
+
+  @override
+  String get vocabulaire_type_pronom => 'Pronomini';
+
+  @override
+  String get vocabulaire_type_preposition => 'Prepositio';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'modaalinen verbi';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'infinitiiviverbi';
+
+  @override
+  String get vocabulaire_type_inconnu => 'tuntematon';
 }

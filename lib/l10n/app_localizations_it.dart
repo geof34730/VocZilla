@@ -571,4 +571,43 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Termini di utilizzo';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Aggettivo';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Avverbio';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'avverbio interrogativo';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Congiunzione';
+
+  @override
+  String get vocabulaire_type_determinant => 'Determinante';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interiezione';
+
+  @override
+  String get vocabulaire_type_nom => 'Nome';
+
+  @override
+  String get vocabulaire_type_numeral => 'Numero';
+
+  @override
+  String get vocabulaire_type_pronom => 'Pronome';
+
+  @override
+  String get vocabulaire_type_preposition => 'Preposizione';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'verbo modale';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'verbo all\'infinito';
+
+  @override
+  String get vocabulaire_type_inconnu => 'sconosciuto';
 }

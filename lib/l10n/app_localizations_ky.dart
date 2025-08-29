@@ -571,4 +571,43 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get conditions_dutilisation => 'Колдонуу шарттары';
+
+  @override
+  String get vocabulaire_type_adjectif => 'Сын атооч';
+
+  @override
+  String get vocabulaire_type_adverbe => 'Тактооч';
+
+  @override
+  String get vocabulaire_type_adverbeInterrogatif => 'Сурак тактооч';
+
+  @override
+  String get vocabulaire_type_conjonction => 'Конъюнктура';
+
+  @override
+  String get vocabulaire_type_determinant => 'Детерминант';
+
+  @override
+  String get vocabulaire_type_interjection => 'Interjection';
+
+  @override
+  String get vocabulaire_type_nom => 'аты';
+
+  @override
+  String get vocabulaire_type_numeral => 'Сан';
+
+  @override
+  String get vocabulaire_type_pronom => 'Зат атооч';
+
+  @override
+  String get vocabulaire_type_preposition => 'Предлог';
+
+  @override
+  String get vocabulaire_type_verbeModal => 'модалдык этиш';
+
+  @override
+  String get vocabulaire_type_verbeInfinitif => 'инфинитив этиш';
+
+  @override
+  String get vocabulaire_type_inconnu => 'белгисиз';
 }

@@ -187,10 +187,17 @@
     "error_check_connection": "Sicela uhlole uxhumano lwakho lwe-inthanethi.",
     "politique_de_confidentialite": "Inqubomgomo yobumfihlo",
     "conditions_dutilisation": "Imigomo Yokusebenzisa",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-08-27T16:47:05+00:00"
-    }
+    "vocabulaire_type_adjectif": "Isiphawulo",
+    "vocabulaire_type_adverbe": "Isandiso",
+    "vocabulaire_type_adverbeInterrogatif": "Isandiso sokubuza",
+    "vocabulaire_type_conjonction": "Isihlanganiso",
+    "vocabulaire_type_determinant": "Ukunquma",
+    "vocabulaire_type_interjection": "Ukungenelela",
+    "vocabulaire_type_nom": "Igama",
+    "vocabulaire_type_numeral": "Inombolo",
+    "vocabulaire_type_pronom": "Isabizwana soqobo",
+    "vocabulaire_type_preposition": "Isilandiso",
+    "vocabulaire_type_verbeModal": "isenzo se-modal",
+    "vocabulaire_type_verbeInfinitif": "isenzo esingapheli",
+    "vocabulaire_type_inconnu": "akwaziwa"
 }
