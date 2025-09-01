@@ -622,4 +622,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'дієслово';
+
+  @override
+  String get app_description_android => 'VocZilla – ідеальний додаток для розширення вашого словникового запасу англійської мови, незалежно від вашого рівня. Відкрийте для себе тисячі слів, розділених за темами, та відстежуйте свій прогрес!';
 }

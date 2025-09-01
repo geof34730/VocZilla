@@ -203,5 +203,6 @@
     "restaurer_achats": "Buyisela okuthengiwe",
     "restaurer_achats_error": "Ukubuyisela kuhlulekile. Sicela uzame futhi.",
     "restauration_terminee": "Ukubuyisela kuqedile. Uma ubunokubhalisele okusebenzayo, manje sekubuyisiwe.",
-    "vocabulaire_type_verbe": "isenzo"
+    "vocabulaire_type_verbe": "isenzo",
+    "app_description_android": "I-VocZilla iwuhlelo lokusebenza oluphelele lokwandisa ulwazimagama lwakho lwesiNgisi, kungakhathaliseki izinga lakho. Zitholele izinkulungwane zamagama ahlukaniswe ngetimu futhi ulandelele ukuqhubeka kwakho!"
 }

@@ -203,5 +203,6 @@
     "restaurer_achats": "Käufe wiederherstellen",
     "restaurer_achats_error": "Wiederherstellung fehlgeschlagen. Bitte versuchen Sie es erneut.",
     "restauration_terminee": "Wiederherstellung abgeschlossen. Wenn Sie ein aktives Abonnement hatten, ist es jetzt wiederhergestellt.",
-    "vocabulaire_type_verbe": "Verb"
+    "vocabulaire_type_verbe": "Verb",
+    "app_description_android": "VocZilla ist die perfekte App, um Ihren englischen Wortschatz zu erweitern, unabhängig von Ihrem Niveau. Entdecken Sie Tausende von Wörtern, kategorisiert nach Themen, und verfolgen Sie Ihre Fortschritte!"
 }

@@ -622,4 +622,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'tegusõna';
+
+  @override
+  String get app_description_android => 'VocZilla on ideaalne rakendus oma inglise keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid sõnu, mis on teemade kaupa liigitatud, ja jälgige oma edusamme!';
 }

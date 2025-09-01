@@ -622,4 +622,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ကြိယာ';
+
+  @override
+  String get app_description_android => 'VocZilla သည် သင်၏အင်္ဂလိပ်ဝေါဟာရကို ချဲ့ထွင်ရန် အကောင်းဆုံးအက်ပ်ဖြစ်သည်။ ခေါင်းစဉ်အလိုက် အမျိုးအစားခွဲထားသော စကားလုံးထောင်ပေါင်းများစွာကို ရှာဖွေပြီး သင့်တိုးတက်မှုကို ခြေရာခံပါ။';
 }

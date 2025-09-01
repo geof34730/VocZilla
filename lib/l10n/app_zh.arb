@@ -203,5 +203,6 @@
     "restaurer_achats": "恢复购买",
     "restaurer_achats_error": "恢复失败，请重试。",
     "restauration_terminee": "恢复已完成。如果您之前有有效订阅，则现在已恢复。",
-    "vocabulaire_type_verbe": "动词"
+    "vocabulaire_type_verbe": "动词",
+    "app_description_android": "VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，并追踪您的学习进度！"
 }

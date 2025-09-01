@@ -203,5 +203,6 @@
     "restaurer_achats": "購入を復元する",
     "restaurer_achats_error": "復元に失敗しました。もう一度お試しください。",
     "restauration_terminee": "復元が完了しました。有効なサブスクリプションをお持ちの場合は、復元されました。",
-    "vocabulaire_type_verbe": "動詞"
+    "vocabulaire_type_verbe": "動詞",
+    "app_description_android": "VocZillaは、レベルを問わず英語の語彙力を高めるのに最適なアプリです。テーマ別に分類された数千もの単語を発見し、学習の進捗状況を追跡できます。"
 }

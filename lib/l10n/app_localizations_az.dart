@@ -622,4 +622,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'fel';
+
+  @override
+  String get app_description_android => 'VocZilla səviyyənizdən asılı olmayaraq ingilis dili lüğətinizi genişləndirmək üçün mükəmməl proqramdır. Mövzuya görə kateqoriyalara bölünmüş minlərlə sözü kəşf edin və tərəqqinizi izləyin!';
 }

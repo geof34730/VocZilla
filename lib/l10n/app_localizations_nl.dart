@@ -622,4 +622,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'werkwoord';
+
+  @override
+  String get app_description_android => 'VocZilla is de perfecte app om je Engelse woordenschat uit te breiden, ongeacht je niveau. Ontdek duizenden woorden, gecategoriseerd per thema, en volg je voortgang!';
 }

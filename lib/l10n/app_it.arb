@@ -203,5 +203,6 @@
     "restaurer_achats": "Ripristina gli acquisti",
     "restaurer_achats_error": "Ripristino non riuscito. Riprova.",
     "restauration_terminee": "Ripristino completato. Se avevi un abbonamento attivo, ora è stato ripristinato.",
-    "vocabulaire_type_verbe": "verbo"
+    "vocabulaire_type_verbe": "verbo",
+    "app_description_android": "VocZilla è l'app perfetta per ampliare il tuo vocabolario inglese, indipendentemente dal tuo livello. Scopri migliaia di parole suddivise per argomento e monitora i tuoi progressi!"
 }

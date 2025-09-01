@@ -622,4 +622,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ক্ৰিয়া';
+
+  @override
+  String get app_description_android => 'VocZilla আপোনাৰ ইংৰাজী শব্দভাণ্ডাৰ সম্প্ৰসাৰণ কৰিবলৈ নিখুঁত এপ, আপোনাৰ স্তৰ যিয়েই নহওক কিয়। থিম অনুসৰি শ্ৰেণীভুক্ত হাজাৰ হাজাৰ শব্দ আৱিষ্কাৰ কৰক আৰু আপোনাৰ অগ্ৰগতি অনুসৰণ কৰক!';
 }

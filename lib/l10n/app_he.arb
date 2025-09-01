@@ -203,5 +203,6 @@
     "restaurer_achats": "שחזור רכישות",
     "restaurer_achats_error": "השחזור נכשל. אנא נסה שוב.",
     "restauration_terminee": "השחזור הושלם. אם היה לך מנוי פעיל, הוא משוחזר כעת.",
-    "vocabulaire_type_verbe": "פּוֹעַל"
+    "vocabulaire_type_verbe": "פּוֹעַל",
+    "app_description_android": "VocZilla היא האפליקציה המושלמת להרחבת אוצר המילים שלכם באנגלית, ללא קשר לרמתכם. גלו אלפי מילים המסווגות לפי נושא ועקובו אחר ההתקדמות שלכם!"
 }

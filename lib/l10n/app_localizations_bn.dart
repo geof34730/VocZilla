@@ -622,4 +622,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ক্রিয়া';
+
+  @override
+  String get app_description_android => 'আপনার ইংরেজি শব্দভাণ্ডার প্রসারিত করার জন্য VocZilla হল একটি নিখুঁত অ্যাপ, আপনার স্তর যাই হোক না কেন। থিম অনুসারে শ্রেণীবদ্ধ হাজার হাজার শব্দ আবিষ্কার করুন এবং আপনার অগ্রগতি ট্র্যাক করুন!';
 }

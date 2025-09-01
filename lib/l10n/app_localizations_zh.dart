@@ -622,4 +622,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => '动词';
+
+  @override
+  String get app_description_android => 'VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，并追踪您的学习进度！';
 }

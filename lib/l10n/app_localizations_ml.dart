@@ -622,4 +622,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ക്രിയ';
+
+  @override
+  String get app_description_android => 'നിങ്ങളുടെ ഇംഗ്ലീഷ് പദാവലി വികസിപ്പിക്കുന്നതിനുള്ള മികച്ച ആപ്പാണ് വോക്‌സില്ല, നിങ്ങളുടെ ലെവൽ എന്തുതന്നെയായാലും. തീം അനുസരിച്ച് തരംതിരിച്ച ആയിരക്കണക്കിന് വാക്കുകൾ കണ്ടെത്തി നിങ്ങളുടെ പുരോഗതി ട്രാക്ക് ചെയ്യുക!';
 }

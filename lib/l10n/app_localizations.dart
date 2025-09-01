@@ -1464,6 +1464,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'verb'**
   String get vocabulaire_type_verbe;
+
+  /// No description provided for @app_description_android.
+  ///
+  /// In en, this message translates to:
+  /// **'VocZilla is the perfect app to expand your English vocabulary, no matter your level. Discover thousands of words categorized by theme and track your progress!'**
+  String get app_description_android;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

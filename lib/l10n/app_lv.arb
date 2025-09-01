@@ -203,5 +203,6 @@
     "restaurer_achats": "Atjaunot pirkumus",
     "restaurer_achats_error": "Atjaunošana neizdevās. Lūdzu, mēģiniet vēlreiz.",
     "restauration_terminee": "Atjaunošana pabeigta. Ja jums bija aktīvs abonements, tas tagad ir atjaunots.",
-    "vocabulaire_type_verbe": "darbības vārds"
+    "vocabulaire_type_verbe": "darbības vārds",
+    "app_description_android": "VocZilla ir lieliska lietotne, lai paplašinātu savu angļu valodas vārdu krājumu neatkarīgi no jūsu līmeņa. Atklājiet tūkstošiem vārdu, kas sakārtoti pēc tēmas, un sekojiet līdzi savam progresam!"
 }

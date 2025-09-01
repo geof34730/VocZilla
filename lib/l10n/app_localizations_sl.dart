@@ -622,4 +622,7 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'glagol';
+
+  @override
+  String get app_description_android => 'VocZilla je odlična aplikacija za širjenje vašega angleškega besedišča, ne glede na vašo raven. Odkrijte na tisoče besed, razvrščenih po temah, in spremljajte svoj napredek!';
 }

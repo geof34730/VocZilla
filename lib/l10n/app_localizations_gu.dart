@@ -622,4 +622,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ક્રિયાપદ';
+
+  @override
+  String get app_description_android => 'VocZilla એ તમારા અંગ્રેજી શબ્દભંડોળને વિસ્તૃત કરવા માટે એક સંપૂર્ણ એપ્લિકેશન છે, ભલે તમારું સ્તર ગમે તે હોય. થીમ દ્વારા વર્ગીકૃત કરાયેલા હજારો શબ્દો શોધો અને તમારી પ્રગતિને ટ્રૅક કરો!';
 }

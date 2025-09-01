@@ -622,4 +622,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ρήμα';
+
+  @override
+  String get app_description_android => 'Το VocZilla είναι η τέλεια εφαρμογή για να εμπλουτίσετε το αγγλικό σας λεξιλόγιο, ανεξάρτητα από το επίπεδό σας. Ανακαλύψτε χιλιάδες λέξεις κατηγοριοποιημένες ανά θέμα και παρακολουθήστε την πρόοδό σας!';
 }

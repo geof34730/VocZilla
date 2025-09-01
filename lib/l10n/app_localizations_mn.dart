@@ -622,4 +622,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'үйл үг';
+
+  @override
+  String get app_description_android => 'VocZilla бол таны түвшингээс үл хамааран англи хэлний үгсийн санг тэлэх төгс програм юм. Сэдвийн дагуу ангилсан мянга мянган үгсийг олж, ахиц дэвшлээ хянах!';
 }

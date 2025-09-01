@@ -89,7 +89,7 @@ void main() async {
     final locale = match.group(1)!;
     final content = json.decode(await File(file.path).readAsString());
 
-    final description = content['app_description'] ?? 'description manquante';
+    final description = content['app_description_android'] ?? 'description manquante';
     final title = content['app_title'] ?? 'Titre manquant';
     final keywords = content['app_keywords'] ?? 'keyword manquant';
     final shortDescription = content['app_short_description'] ?? 'short description manquante';

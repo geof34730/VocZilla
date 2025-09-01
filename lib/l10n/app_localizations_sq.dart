@@ -622,4 +622,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'folje';
+
+  @override
+  String get app_description_android => 'VocZilla është aplikacioni perfekt për të zgjeruar fjalorin tuaj në anglisht, pavarësisht nivelit tuaj. Zbuloni mijëra fjalë të kategorizuara sipas temës dhe ndiqni progresin tuaj!';
 }

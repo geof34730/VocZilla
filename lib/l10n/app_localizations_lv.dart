@@ -622,4 +622,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'darbības vārds';
+
+  @override
+  String get app_description_android => 'VocZilla ir lieliska lietotne, lai paplašinātu savu angļu valodas vārdu krājumu neatkarīgi no jūsu līmeņa. Atklājiet tūkstošiem vārdu, kas sakārtoti pēc tēmas, un sekojiet līdzi savam progresam!';
 }

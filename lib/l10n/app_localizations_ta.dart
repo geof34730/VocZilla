@@ -622,4 +622,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'வினை';
+
+  @override
+  String get app_description_android => 'உங்கள் ஆங்கில சொற்களஞ்சியத்தை விரிவுபடுத்த VocZilla சரியான பயன்பாடாகும், உங்கள் ஆங்கில நிலை எதுவாக இருந்தாலும் சரி. கருப்பொருளின் அடிப்படையில் வகைப்படுத்தப்பட்ட ஆயிரக்கணக்கான சொற்களைக் கண்டறிந்து உங்கள் முன்னேற்றத்தைக் கண்காணிக்கவும்!';
 }

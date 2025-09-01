@@ -622,4 +622,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'กริยา';
+
+  @override
+  String get app_description_android => 'VocZilla คือแอปที่สมบูรณ์แบบสำหรับเพิ่มพูนคลังคำศัพท์ภาษาอังกฤษของคุณ ไม่ว่าคุณจะมีระดับความรู้เท่าใด ค้นพบคำศัพท์นับพันที่จัดหมวดหมู่ตามหัวข้อ และติดตามความก้าวหน้าของคุณ!';
 }

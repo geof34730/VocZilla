@@ -622,4 +622,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'động từ';
+
+  @override
+  String get app_description_android => 'VocZilla là ứng dụng hoàn hảo để mở rộng vốn từ vựng tiếng Anh của bạn, bất kể trình độ. Khám phá hàng ngàn từ vựng được phân loại theo chủ đề và theo dõi tiến trình học tập của bạn!';
 }

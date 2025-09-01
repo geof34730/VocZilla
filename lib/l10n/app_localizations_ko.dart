@@ -622,4 +622,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => '동사';
+
+  @override
+  String get app_description_android => 'VocZilla는 레벨에 관계없이 영어 어휘력을 향상하는 데 완벽한 앱입니다. 주제별로 분류된 수천 개의 단어를 발견하고 학습 진척도를 확인하세요!';
 }

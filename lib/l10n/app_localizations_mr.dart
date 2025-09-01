@@ -622,4 +622,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'क्रियापद';
+
+  @override
+  String get app_description_android => 'तुमची पातळी काहीही असो, तुमचा इंग्रजी शब्दसंग्रह वाढवण्यासाठी VocZilla हे एक परिपूर्ण अॅप आहे. थीमनुसार वर्गीकृत हजारो शब्द शोधा आणि तुमच्या प्रगतीचा मागोवा घ्या!';
 }

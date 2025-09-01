@@ -203,5 +203,6 @@
     "restaurer_achats": "Obnovi nakupe",
     "restaurer_achats_error": "Obnovitev ni uspela. Poskusite znova.",
     "restauration_terminee": "Obnovitev je končana. Če ste imeli aktivno naročnino, je zdaj obnovljena.",
-    "vocabulaire_type_verbe": "glagol"
+    "vocabulaire_type_verbe": "glagol",
+    "app_description_android": "VocZilla je odlična aplikacija za širjenje vašega angleškega besedišča, ne glede na vašo raven. Odkrijte na tisoče besed, razvrščenih po temah, in spremljajte svoj napredek!"
 }

@@ -622,4 +622,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ግስ';
+
+  @override
+  String get app_description_android => 'VocZilla የእርስዎን ደረጃ ምንም ይሁን ምን የእንግሊዝኛ ቃላትን ለማስፋት ፍጹም መተግበሪያ ነው። በጭብጥ የተከፋፈሉ በሺዎች የሚቆጠሩ ቃላትን ያግኙ እና እድገትዎን ይከታተሉ!';
 }

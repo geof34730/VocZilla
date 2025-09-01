@@ -203,5 +203,6 @@
     "restaurer_achats": "Obnoviť nákupy",
     "restaurer_achats_error": "Obnovenie zlyhalo. Skúste to znova.",
     "restauration_terminee": "Obnovenie dokončené. Ak ste mali aktívne predplatné, je teraz obnovené.",
-    "vocabulaire_type_verbe": "sloveso"
+    "vocabulaire_type_verbe": "sloveso",
+    "app_description_android": "VocZilla je perfektná aplikácia na rozšírenie vašej anglickej slovnej zásoby bez ohľadu na vašu úroveň. Objavte tisíce slov zoradených podľa témy a sledujte svoj pokrok!"
 }

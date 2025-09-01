@@ -622,4 +622,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'فعل';
+
+  @override
+  String get app_description_android => 'فوكزيلا هو التطبيق الأمثل لإثراء مفرداتك الإنجليزية، مهما كان مستواك. اكتشف آلاف الكلمات المصنفة حسب الموضوع، وتابع تقدمك!';
 }

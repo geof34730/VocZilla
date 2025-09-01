@@ -622,4 +622,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'فعل';
+
+  @override
+  String get app_description_android => 'VocZilla برنامه‌ای بی‌نظیر برای گسترش دایره لغات انگلیسی شماست، صرف نظر از سطحتان. هزاران کلمه را که بر اساس موضوع دسته‌بندی شده‌اند، کشف کنید و پیشرفت خود را پیگیری کنید!';
 }

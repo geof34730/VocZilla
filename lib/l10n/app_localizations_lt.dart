@@ -622,4 +622,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'veiksmažodis';
+
+  @override
+  String get app_description_android => '„VocZilla“ yra puiki programėlė, skirta išplėsti savo anglų kalbos žodyną, nesvarbu, koks jūsų lygis. Atraskite tūkstančius žodžių, suskirstytų pagal temas, ir stebėkite savo pažangą!';
 }

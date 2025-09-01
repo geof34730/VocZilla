@@ -622,4 +622,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ಕ್ರಿಯಾಪದ';
+
+  @override
+  String get app_description_android => 'ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ವಿಸ್ತರಿಸಲು VocZilla ಪರಿಪೂರ್ಣ ಅಪ್ಲಿಕೇಶನ್ ಆಗಿದೆ, ನಿಮ್ಮ ಮಟ್ಟವನ್ನು ಲೆಕ್ಕಿಸದೆ. ಥೀಮ್ ಮೂಲಕ ವರ್ಗೀಕರಿಸಲಾದ ಸಾವಿರಾರು ಪದಗಳನ್ನು ಅನ್ವೇಷಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ!';
 }

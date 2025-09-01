@@ -622,4 +622,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'sloveso';
+
+  @override
+  String get app_description_android => 'VocZilla je perfektná aplikácia na rozšírenie vašej anglickej slovnej zásoby bez ohľadu na vašu úroveň. Objavte tisíce slov zoradených podľa témy a sledujte svoj pokrok!';
 }

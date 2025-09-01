@@ -622,4 +622,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'czasownik';
+
+  @override
+  String get app_description_android => 'VocZilla to idealna aplikacja do poszerzania słownictwa angielskiego, niezależnie od poziomu. Odkryj tysiące słówek posegregowanych tematycznie i śledź swoje postępy!';
 }

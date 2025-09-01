@@ -203,5 +203,6 @@
     "restaurer_achats": "Gjenopprett kjøp",
     "restaurer_achats_error": "Gjenopprettingen mislyktes. Prøv på nytt.",
     "restauration_terminee": "Gjenopprettingen er fullført. Hvis du hadde et aktivt abonnement, er det nå gjenopprettet.",
-    "vocabulaire_type_verbe": "verb"
+    "vocabulaire_type_verbe": "verb",
+    "app_description_android": "VocZilla er den perfekte appen for å utvide ditt engelske ordforråd, uansett nivå. Oppdag tusenvis av ord kategorisert etter tema og følg fremgangen din!"
 }

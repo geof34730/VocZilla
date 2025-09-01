@@ -622,4 +622,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'فعل';
+
+  @override
+  String get app_description_android => 'VocZilla آپ کی انگریزی الفاظ کو بڑھانے کے لیے ایک بہترین ایپ ہے، چاہے آپ کی سطح کچھ بھی ہو۔ تھیم کے لحاظ سے درجہ بند ہزاروں الفاظ دریافت کریں اور اپنی پیشرفت کو ٹریک کریں!';
 }

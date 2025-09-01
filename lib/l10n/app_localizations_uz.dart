@@ -622,4 +622,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'fe\'l';
+
+  @override
+  String get app_description_android => 'VocZilla - bu sizning darajangizdan qat\'i nazar, ingliz tilidagi lug\'atingizni kengaytirish uchun mukammal dastur. Mavzu bo\'yicha toifalarga ajratilgan minglab so\'zlarni kashf eting va taraqqiyotingizni kuzatib boring!';
 }

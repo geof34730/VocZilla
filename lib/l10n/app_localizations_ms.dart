@@ -622,4 +622,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'kata kerja';
+
+  @override
+  String get app_description_android => 'VocZilla ialah aplikasi yang sempurna untuk mengembangkan perbendaharaan kata bahasa Inggeris anda, tidak kira tahap anda. Temui beribu-ribu perkataan yang dikategorikan mengikut tema dan jejak kemajuan anda!';
 }

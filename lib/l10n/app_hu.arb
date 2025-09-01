@@ -203,5 +203,6 @@
     "restaurer_achats": "Vásárlások visszaállítása",
     "restaurer_achats_error": "A visszaállítás sikertelen. Próbáld újra.",
     "restauration_terminee": "A visszaállítás befejeződött. Ha volt aktív előfizetése, akkor az most vissza van állítva.",
-    "vocabulaire_type_verbe": "ige"
+    "vocabulaire_type_verbe": "ige",
+    "app_description_android": "A VocZilla a tökéletes alkalmazás az angol szókincs bővítésére, szintedtől függetlenül. Fedezz fel több ezer szót témák szerint kategorizálva, és kövesd nyomon a fejlődésedet!"
 }

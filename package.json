@@ -9,6 +9,7 @@
     "fastlaneUploadScreenshotsIos": "SH/fastlane_upload_screenshots_ios.sh",
     "fastlaneUploadScreenshotsAndroid": "SH/fastlane_upload_screenshots_android.sh",
     "fastlaneUploadMetaDataIos": "SH/fastlane_upload_metadata_ios.sh",
+    "fastlaneUploadMetaDataAndroid": "SH/fastlane_upload_metadata_android.sh",
     "fastlaneVerifyUploaded" : "SH/fastlane_upload_metadata_ios.sh",
     "fastlaneViewMetadataScreenshotsIos" : "./SH/fastlane-view-meta-ios.sh",
     "fastlaneViewMetadataScreenshotsAndroid" : "./SH/fastlane-view-meta-android.sh",

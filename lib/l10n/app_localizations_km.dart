@@ -622,4 +622,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'កិរិយាសព្ទ';
+
+  @override
+  String get app_description_android => 'VocZilla គឺជាកម្មវិធីដ៏ល្អឥតខ្ចោះដើម្បីពង្រីកវាក្យសព្ទភាសាអង់គ្លេសរបស់អ្នក មិនថាកម្រិតរបស់អ្នកទេ។ ស្វែងរកពាក្យរាប់ពាន់ដែលបែងចែកតាមប្រធានបទ និងតាមដានវឌ្ឍនភាពរបស់អ្នក!';
 }

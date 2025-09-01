@@ -622,4 +622,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'verb';
+
+  @override
+  String get app_description_android => 'VocZilla este aplicația perfectă pentru a-ți extinde vocabularul în limba engleză, indiferent de nivelul tău. Descoperă mii de cuvinte clasificate pe teme și urmărește-ți progresul!';
 }

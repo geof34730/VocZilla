@@ -622,4 +622,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'բայ';
+
+  @override
+  String get app_description_android => 'VocZilla-ն կատարյալ հավելված է ձեր անգլերենի բառապաշարը ընդլայնելու համար՝ անկախ ձեր մակարդակից: Բացահայտեք հազարավոր բառեր՝ դասակարգված ըստ թեմայի և հետևեք ձեր առաջընթացին:';
 }

@@ -622,4 +622,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'kitenzi';
+
+  @override
+  String get app_description_android => 'VocZilla ndiyo programu bora zaidi ya kupanua msamiati wako wa Kiingereza, haijalishi kiwango chako. Gundua maelfu ya maneno yaliyoainishwa kulingana na mada na ufuatilie maendeleo yako!';
 }

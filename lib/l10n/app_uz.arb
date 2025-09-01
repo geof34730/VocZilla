@@ -203,5 +203,6 @@
     "restaurer_achats": "Xaridlarni tiklash",
     "restaurer_achats_error": "Qayta tiklash amalga oshmadi. Iltimos, qayta urinib koʻring.",
     "restauration_terminee": "Qayta tiklash tugallandi. Agar sizda faol obuna bo'lsa, u endi tiklandi.",
-    "vocabulaire_type_verbe": "fe'l"
+    "vocabulaire_type_verbe": "fe'l",
+    "app_description_android": "VocZilla - bu sizning darajangizdan qat'i nazar, ingliz tilidagi lug'atingizni kengaytirish uchun mukammal dastur. Mavzu bo'yicha toifalarga ajratilgan minglab so'zlarni kashf eting va taraqqiyotingizni kuzatib boring!"
 }

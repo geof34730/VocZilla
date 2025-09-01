@@ -203,5 +203,6 @@
     "restaurer_achats": "Khôi phục giao dịch mua",
     "restaurer_achats_error": "Khôi phục không thành công. Vui lòng thử lại.",
     "restauration_terminee": "Quá trình khôi phục hoàn tất. Nếu bạn có đăng ký đang hoạt động, đăng ký đó hiện đã được khôi phục.",
-    "vocabulaire_type_verbe": "động từ"
+    "vocabulaire_type_verbe": "động từ",
+    "app_description_android": "VocZilla là ứng dụng hoàn hảo để mở rộng vốn từ vựng tiếng Anh của bạn, bất kể trình độ. Khám phá hàng ngàn từ vựng được phân loại theo chủ đề và theo dõi tiến trình học tập của bạn!"
 }

@@ -622,4 +622,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ige';
+
+  @override
+  String get app_description_android => 'A VocZilla a tökéletes alkalmazás az angol szókincs bővítésére, szintedtől függetlenül. Fedezz fel több ezer szót témák szerint kategorizálva, és kövesd nyomon a fejlődésedet!';
 }

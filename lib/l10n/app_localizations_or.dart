@@ -622,4 +622,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'କ୍ରିୟା';
+
+  @override
+  String get app_description_android => 'VocZilla ହେଉଛି ଆପଣଙ୍କ ସ୍ତରର କୌଣସି କଥା ହେଉନା କାହିଁକି, ଆପଣଙ୍କ ଇଂରାଜୀ ଶବ୍ଦକୋଷକୁ ବିସ୍ତାର କରିବା ପାଇଁ ଏକ ଉତ୍ତମ ଆପ୍। ଥିମ୍ ଅନୁସାରେ ବର୍ଗୀକୃତ ହଜାର ହଜାର ଶବ୍ଦ ଆବିଷ୍କାର କରନ୍ତୁ ଏବଂ ଆପଣଙ୍କ ପ୍ରଗତିକୁ ଟ୍ରାକ୍ କରନ୍ତୁ!';
 }

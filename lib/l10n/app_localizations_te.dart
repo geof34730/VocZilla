@@ -622,4 +622,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'క్రియ';
+
+  @override
+  String get app_description_android => 'మీ స్థాయితో సంబంధం లేకుండా, మీ ఆంగ్ల పదజాలాన్ని విస్తరించుకోవడానికి VocZilla సరైన యాప్. థీమ్ ద్వారా వర్గీకరించబడిన వేలాది పదాలను కనుగొనండి మరియు మీ పురోగతిని ట్రాక్ చేయండి!';
 }

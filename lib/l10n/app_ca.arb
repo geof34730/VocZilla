@@ -203,5 +203,6 @@
     "restaurer_achats": "Restaurar compres",
     "restaurer_achats_error": "La restauració ha fallat. Torna-ho a intentar.",
     "restauration_terminee": "Restauració completada. Si tenies una subscripció activa, ara està restaurada.",
-    "vocabulaire_type_verbe": "verb"
+    "vocabulaire_type_verbe": "verb",
+    "app_description_android": "VocZilla és l'aplicació perfecta per ampliar el teu vocabulari anglès, independentment del teu nivell. Descobreix milers de paraules classificades per tema i fes un seguiment del teu progrés!"
 }

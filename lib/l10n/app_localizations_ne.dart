@@ -622,4 +622,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'क्रिया';
+
+  @override
+  String get app_description_android => 'VocZilla तपाईंको स्तरको पर्वाह नगरी तपाईंको अंग्रेजी शब्दावली विस्तार गर्नको लागि उत्तम एप हो। विषयवस्तु अनुसार वर्गीकृत हजारौं शब्दहरू पत्ता लगाउनुहोस् र आफ्नो प्रगति ट्र्याक गर्नुहोस्!';
 }

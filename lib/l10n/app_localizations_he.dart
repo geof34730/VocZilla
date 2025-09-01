@@ -622,4 +622,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'פּוֹעַל';
+
+  @override
+  String get app_description_android => 'VocZilla היא האפליקציה המושלמת להרחבת אוצר המילים שלכם באנגלית, ללא קשר לרמתכם. גלו אלפי מילים המסווגות לפי נושא ועקובו אחר ההתקדמות שלכם!';
 }

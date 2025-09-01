@@ -126,7 +126,7 @@ function getAppfileInfo(appfilePath) {
         `flutter clean && flutter pub get`,
         { stdio: "inherit" }
     );
-
+/*
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
         `flutter build ipa --release --build-name=${versionName} --build-number=${buildNumber}`,
@@ -194,6 +194,8 @@ function getAppfileInfo(appfilePath) {
         process.exit(1);
     }
     console.log("\n✅ Déploiement iOS terminé avec succès !");
+
+ */
 
     // Git operations
     console.log("\n📦 Git operations : Gestion des versions avec Git...");

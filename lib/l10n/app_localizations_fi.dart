@@ -622,4 +622,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'verbi';
+
+  @override
+  String get app_description_android => 'VocZilla on täydellinen sovellus englannin sanavarastosi laajentamiseen taitotasostasi riippumatta. Löydä tuhansia sanoja teeman mukaan luokiteltuina ja seuraa edistymistäsi!';
 }

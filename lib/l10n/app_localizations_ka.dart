@@ -622,4 +622,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ზმნა';
+
+  @override
+  String get app_description_android => 'VocZilla იდეალური აპლიკაციაა თქვენი ინგლისური ლექსიკის გასამდიდრებლად, თქვენი დონის მიუხედავად. აღმოაჩინეთ ათასობით სიტყვა, რომლებიც თემის მიხედვით არის კატეგორიზებული და თვალყური ადევნეთ თქვენს პროგრესს!';
 }

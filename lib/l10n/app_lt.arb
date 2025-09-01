@@ -203,5 +203,6 @@
     "restaurer_achats": "Atkurti pirkinius",
     "restaurer_achats_error": "Atkūrimas nepavyko. Bandykite dar kartą.",
     "restauration_terminee": "Atkūrimas baigtas. Jei turėjote aktyvią prenumeratą, ji dabar atkurta.",
-    "vocabulaire_type_verbe": "veiksmažodis"
+    "vocabulaire_type_verbe": "veiksmažodis",
+    "app_description_android": "„VocZilla“ yra puiki programėlė, skirta išplėsti savo anglų kalbos žodyną, nesvarbu, koks jūsų lygis. Atraskite tūkstančius žodžių, suskirstytų pagal temas, ir stebėkite savo pažangą!"
 }

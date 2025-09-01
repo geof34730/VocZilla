@@ -622,4 +622,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'aditza';
+
+  @override
+  String get app_description_android => 'VocZilla aplikazio ezin hobea da zure ingeles hiztegia zabaltzeko, zure maila edozein dela ere. Ezagutu gaiaren arabera sailkatutako milaka hitz eta jarraitu zure aurrerapena!';
 }

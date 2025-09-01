@@ -622,4 +622,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ຄຳກິລິຍາ';
+
+  @override
+  String get app_description_android => 'VocZilla ເປັນ app ທີ່ສົມບູນແບບເພື່ອຂະຫຍາຍຄໍາສັບພາສາອັງກິດຂອງທ່ານ, ບໍ່ວ່າລະດັບຂອງທ່ານ. ຄົ້ນພົບຫລາຍພັນຄໍາທີ່ຖືກຈັດປະເພດຕາມຫົວຂໍ້ແລະຕິດຕາມຄວາມຄືບຫນ້າຂອງທ່ານ!';
 }

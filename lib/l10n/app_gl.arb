@@ -203,5 +203,6 @@
     "restaurer_achats": "Restaurar compras",
     "restaurer_achats_error": "Fallou a restauración. Téntao de novo.",
     "restauration_terminee": "Restauración completada. Se tiñas unha subscrición activa, xa está restaurada.",
-    "vocabulaire_type_verbe": "verbo"
+    "vocabulaire_type_verbe": "verbo",
+    "app_description_android": "VocZilla é a aplicación perfecta para ampliar o teu vocabulario en inglés, sexa cal sexa o teu nivel. Descubre miles de palabras categorizadas por tema e fai un seguimento do teu progreso!"
 }

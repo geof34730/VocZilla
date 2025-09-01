@@ -203,5 +203,6 @@
     "restaurer_achats": "Palauta ostokset",
     "restaurer_achats_error": "Palautus epäonnistui. Yritä uudelleen.",
     "restauration_terminee": "Palautus valmis. Jos sinulla oli aktiivinen tilaus, se on nyt palautettu.",
-    "vocabulaire_type_verbe": "verbi"
+    "vocabulaire_type_verbe": "verbi",
+    "app_description_android": "VocZilla on täydellinen sovellus englannin sanavarastosi laajentamiseen taitotasostasi riippumatta. Löydä tuhansia sanoja teeman mukaan luokiteltuina ja seuraa edistymistäsi!"
 }

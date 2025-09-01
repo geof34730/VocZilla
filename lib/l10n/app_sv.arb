@@ -203,5 +203,6 @@
     "restaurer_achats": "Återställ köp",
     "restaurer_achats_error": "Återställningen misslyckades. Försök igen.",
     "restauration_terminee": "Återställningen är klar. Om du hade en aktiv prenumeration är den nu återställd.",
-    "vocabulaire_type_verbe": "verb"
+    "vocabulaire_type_verbe": "verb",
+    "app_description_android": "VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema och följ dina framsteg!"
 }

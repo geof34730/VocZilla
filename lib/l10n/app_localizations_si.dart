@@ -622,4 +622,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'ක්‍රියා පදය';
+
+  @override
+  String get app_description_android => 'ඔබේ මට්ටම කුමක් වුවත්, ඔබේ ඉංග්‍රීසි වචන මාලාව පුළුල් කිරීමට VocZilla පරිපූර්ණ යෙදුමකි. තේමාව අනුව වර්ගීකරණය කර ඇති වචන දහස් ගණනක් සොයාගෙන ඔබේ ප්‍රගතිය නිරීක්ෂණය කරන්න!';
 }

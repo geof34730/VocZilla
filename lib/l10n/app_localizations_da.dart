@@ -622,4 +622,7 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'udsagnsord';
+
+  @override
+  String get app_description_android => 'VocZilla er den perfekte app til at udvide dit engelske ordforråd, uanset dit niveau. Opdag tusindvis af ord kategoriseret efter tema og følg dine fremskridt!';
 }

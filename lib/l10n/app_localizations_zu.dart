@@ -622,4 +622,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'isenzo';
+
+  @override
+  String get app_description_android => 'I-VocZilla iwuhlelo lokusebenza oluphelele lokwandisa ulwazimagama lwakho lwesiNgisi, kungakhathaliseki izinga lakho. Zitholele izinkulungwane zamagama ahlukaniswe ngetimu futhi ulandelele ukuqhubeka kwakho!';
 }

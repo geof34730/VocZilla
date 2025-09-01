@@ -622,4 +622,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'fiil';
+
+  @override
+  String get app_description_android => 'VocZilla, seviyeniz ne olursa olsun İngilizce kelime dağarcığınızı genişletmek için mükemmel bir uygulamadır. Temalara göre kategorilendirilmiş binlerce kelimeyi keşfedin ve ilerlemenizi takip edin!';
 }

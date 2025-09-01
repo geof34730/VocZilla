@@ -203,5 +203,6 @@
     "restaurer_achats": "Przywróć zakupy",
     "restaurer_achats_error": "Przywracanie nie powiodło się. Spróbuj ponownie.",
     "restauration_terminee": "Przywracanie zakończone. Jeśli miałeś aktywną subskrypcję, została ona przywrócona.",
-    "vocabulaire_type_verbe": "czasownik"
+    "vocabulaire_type_verbe": "czasownik",
+    "app_description_android": "VocZilla to idealna aplikacja do poszerzania słownictwa angielskiego, niezależnie od poziomu. Odkryj tysiące słówek posegregowanych tematycznie i śledź swoje postępy!"
 }

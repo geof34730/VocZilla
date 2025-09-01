@@ -622,4 +622,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'етістік';
+
+  @override
+  String get app_description_android => 'VocZilla - деңгейіңізге қарамастан, ағылшын тіліндегі сөздік қорыңызды кеңейтуге арналған тамаша қолданба. Тақырып бойынша санатталған мыңдаған сөздерді тауып, үлгеріміңізді қадағалаңыз!';
 }

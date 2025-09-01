@@ -622,4 +622,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get vocabulaire_type_verbe => 'этиш';
+
+  @override
+  String get app_description_android => 'VocZilla - деңгээлиңизге карабастан, англисче лексикаңызды кеңейтүү үчүн эң сонун колдонмо. Тема боюнча категорияланган миңдеген сөздөрдү таап, прогрессиңизге көз салыңыз!';
 }

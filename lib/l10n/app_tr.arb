@@ -203,5 +203,6 @@
     "restaurer_achats": "Satın alımları geri yükle",
     "restaurer_achats_error": "Geri yükleme başarısız oldu. Lütfen tekrar deneyin.",
     "restauration_terminee": "Geri yükleme tamamlandı. Etkin bir aboneliğiniz varsa, artık geri yüklendi.",
-    "vocabulaire_type_verbe": "fiil"
+    "vocabulaire_type_verbe": "fiil",
+    "app_description_android": "VocZilla, seviyeniz ne olursa olsun İngilizce kelime dağarcığınızı genişletmek için mükemmel bir uygulamadır. Temalara göre kategorilendirilmiş binlerce kelimeyi keşfedin ve ilerlemenizi takip edin!"
 }

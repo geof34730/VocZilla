@@ -203,5 +203,6 @@
     "restaurer_achats": "Restaurați achizițiile",
     "restaurer_achats_error": "Restaurarea a eșuat. Vă rugăm să încercați din nou.",
     "restauration_terminee": "Restaurare finalizată. Dacă ați avut un abonament activ, acesta este acum restaurat.",
-    "vocabulaire_type_verbe": "verb"
+    "vocabulaire_type_verbe": "verb",
+    "app_description_android": "VocZilla este aplicația perfectă pentru a-ți extinde vocabularul în limba engleză, indiferent de nivelul tău. Descoperă mii de cuvinte clasificate pe teme și urmărește-ți progresul!"
 }

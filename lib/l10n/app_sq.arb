@@ -203,5 +203,6 @@
     "restaurer_achats": "Rivendos blerjet",
     "restaurer_achats_error": "Restaurimi dështoi. Ju lutemi provoni përsëri.",
     "restauration_terminee": "Restaurimi përfundoi. Nëse keni pasur një abonim aktiv, ai tani është restauruar.",
-    "vocabulaire_type_verbe": "folje"
+    "vocabulaire_type_verbe": "folje",
+    "app_description_android": "VocZilla është aplikacioni perfekt për të zgjeruar fjalorin tuaj në anglisht, pavarësisht nivelit tuaj. Zbuloni mijëra fjalë të kategorizuara sipas temës dhe ndiqni progresin tuaj!"
 }

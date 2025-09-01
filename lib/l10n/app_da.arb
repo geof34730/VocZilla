@@ -203,5 +203,6 @@
     "restaurer_achats": "Gendan køb",
     "restaurer_achats_error": "Gendannelsen mislykkedes. Prøv igen.",
     "restauration_terminee": "Gendannelsen er fuldført. Hvis du havde et aktivt abonnement, er det nu gendannet.",
-    "vocabulaire_type_verbe": "udsagnsord"
+    "vocabulaire_type_verbe": "udsagnsord",
+    "app_description_android": "VocZilla er den perfekte app til at udvide dit engelske ordforråd, uanset dit niveau. Opdag tusindvis af ord kategoriseret efter tema og følg dine fremskridt!"
 }
