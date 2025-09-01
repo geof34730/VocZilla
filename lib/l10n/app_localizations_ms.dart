@@ -610,4 +610,16 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'tidak diketahui';
+
+  @override
+  String get restaurer_achats => 'Pulihkan pembelian';
+
+  @override
+  String get restaurer_achats_error => 'Pemulihan gagal. Sila cuba lagi.';
+
+  @override
+  String get restauration_terminee => 'Pemulihan selesai. Jika anda mempunyai langganan aktif, ia kini dipulihkan.';
+
+  @override
+  String get vocabulaire_type_verbe => 'kata kerja';
 }

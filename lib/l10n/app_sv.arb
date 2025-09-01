@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposition",
     "vocabulaire_type_verbeModal": "modalt verb",
     "vocabulaire_type_verbeInfinitif": "infinitivt verb",
-    "vocabulaire_type_inconnu": "okänd"
+    "vocabulaire_type_inconnu": "okänd",
+    "restaurer_achats": "Återställ köp",
+    "restaurer_achats_error": "Återställningen misslyckades. Försök igen.",
+    "restauration_terminee": "Återställningen är klar. Om du hade en aktiv prenumeration är den nu återställd.",
+    "vocabulaire_type_verbe": "verb"
 }

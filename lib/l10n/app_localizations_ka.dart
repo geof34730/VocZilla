@@ -610,4 +610,16 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'უცნობი';
+
+  @override
+  String get restaurer_achats => 'შესყიდვების აღდგენა';
+
+  @override
+  String get restaurer_achats_error => 'აღდგენა ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.';
+
+  @override
+  String get restauration_terminee => 'აღდგენა დასრულდა. თუ აქტიური გამოწერა გქონდათ, ის ახლა აღდგენილია.';
+
+  @override
+  String get vocabulaire_type_verbe => 'ზმნა';
 }

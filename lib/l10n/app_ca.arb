@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposició",
     "vocabulaire_type_verbeModal": "verb modal",
     "vocabulaire_type_verbeInfinitif": "verb infinitiu",
-    "vocabulaire_type_inconnu": "desconegut"
+    "vocabulaire_type_inconnu": "desconegut",
+    "restaurer_achats": "Restaurar compres",
+    "restaurer_achats_error": "La restauració ha fallat. Torna-ho a intentar.",
+    "restauration_terminee": "Restauració completada. Si tenies una subscripció activa, ara està restaurada.",
+    "vocabulaire_type_verbe": "verb"
 }

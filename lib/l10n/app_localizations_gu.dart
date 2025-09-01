@@ -610,4 +610,16 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'અજ્ઞાત';
+
+  @override
+  String get restaurer_achats => 'ખરીદીઓ પુનઃસ્થાપિત કરો';
+
+  @override
+  String get restaurer_achats_error => 'પુનઃસ્થાપન નિષ્ફળ ગયું. કૃપા કરીને ફરી પ્રયાસ કરો.';
+
+  @override
+  String get restauration_terminee => 'પુનઃસ્થાપન પૂર્ણ થયું. જો તમારી પાસે સક્રિય સબ્સ્ક્રિપ્શન હતું, તો તે હવે પુનઃસ્થાપિત થયું છે.';
+
+  @override
+  String get vocabulaire_type_verbe => 'ક્રિયાપદ';
 }

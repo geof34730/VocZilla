@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "حرف اضافه",
     "vocabulaire_type_verbeModal": "فعل کمکی",
     "vocabulaire_type_verbeInfinitif": "فعل مصدر",
-    "vocabulaire_type_inconnu": "ناشناخته"
+    "vocabulaire_type_inconnu": "ناشناخته",
+    "restaurer_achats": "بازیابی خریدها",
+    "restaurer_achats_error": "بازیابی ناموفق بود. لطفاً دوباره امتحان کنید.",
+    "restauration_terminee": "بازیابی کامل شد. اگر اشتراک فعالی داشتید، اکنون بازیابی شده است.",
+    "vocabulaire_type_verbe": "فعل"
 }

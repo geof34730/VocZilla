@@ -610,4 +610,16 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'nezināms';
+
+  @override
+  String get restaurer_achats => 'Atjaunot pirkumus';
+
+  @override
+  String get restaurer_achats_error => 'Atjaunošana neizdevās. Lūdzu, mēģiniet vēlreiz.';
+
+  @override
+  String get restauration_terminee => 'Atjaunošana pabeigta. Ja jums bija aktīvs abonements, tas tagad ir atjaunots.';
+
+  @override
+  String get vocabulaire_type_verbe => 'darbības vārds';
 }

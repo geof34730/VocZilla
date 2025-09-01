@@ -610,4 +610,16 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => '未知';
+
+  @override
+  String get restaurer_achats => '購入を復元する';
+
+  @override
+  String get restaurer_achats_error => '復元に失敗しました。もう一度お試しください。';
+
+  @override
+  String get restauration_terminee => '復元が完了しました。有効なサブスクリプションをお持ちの場合は、復元されました。';
+
+  @override
+  String get vocabulaire_type_verbe => '動詞';
 }

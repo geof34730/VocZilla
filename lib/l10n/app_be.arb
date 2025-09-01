@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Прыназоўнік",
     "vocabulaire_type_verbeModal": "мадальны дзеяслоў",
     "vocabulaire_type_verbeInfinitif": "інфінітыў дзеяслоў",
-    "vocabulaire_type_inconnu": "невядомы"
+    "vocabulaire_type_inconnu": "невядомы",
+    "restaurer_achats": "Аднавіць пакупкі",
+    "restaurer_achats_error": "Аднаўленне не атрымалася. Паўтарыце спробу.",
+    "restauration_terminee": "Аднаўленне завершана. Калі ў вас была актыўная падпіска, яна цяпер адноўлена.",
+    "vocabulaire_type_verbe": "дзеяслоў"
 }

@@ -610,4 +610,16 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ناشناخته';
+
+  @override
+  String get restaurer_achats => 'بازیابی خریدها';
+
+  @override
+  String get restaurer_achats_error => 'بازیابی ناموفق بود. لطفاً دوباره امتحان کنید.';
+
+  @override
+  String get restauration_terminee => 'بازیابی کامل شد. اگر اشتراک فعالی داشتید، اکنون بازیابی شده است.';
+
+  @override
+  String get vocabulaire_type_verbe => 'فعل';
 }

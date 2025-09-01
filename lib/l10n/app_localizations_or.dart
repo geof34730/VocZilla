@@ -610,4 +610,16 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ଅଜଣା';
+
+  @override
+  String get restaurer_achats => 'କ୍ରୟଗୁଡ଼ିକ ପୁନଃସ୍ଥାପନ କରନ୍ତୁ';
+
+  @override
+  String get restaurer_achats_error => 'ପୁନରୁଦ୍ଧାର ବିଫଳ ହେଲା। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।';
+
+  @override
+  String get restauration_terminee => 'ପୁନରୁଦ୍ଧାର ସମ୍ପୂର୍ଣ୍ଣ ହୋଇଛି। ଯଦି ଆପଣଙ୍କର ଏକ ସକ୍ରିୟ ସଦସ୍ୟତା ଥିଲା, ତେବେ ଏହା ବର୍ତ୍ତମାନ ପୁନରୁଦ୍ଧାର ହୋଇଛି।';
+
+  @override
+  String get vocabulaire_type_verbe => 'କ୍ରିୟା';
 }

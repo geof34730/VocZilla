@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "წინდებული",
     "vocabulaire_type_verbeModal": "მოდალური ზმნა",
     "vocabulaire_type_verbeInfinitif": "ინფინიტივის ზმნა",
-    "vocabulaire_type_inconnu": "უცნობი"
+    "vocabulaire_type_inconnu": "უცნობი",
+    "restaurer_achats": "შესყიდვების აღდგენა",
+    "restaurer_achats_error": "აღდგენა ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.",
+    "restauration_terminee": "აღდგენა დასრულდა. თუ აქტიური გამოწერა გქონდათ, ის ახლა აღდგენილია.",
+    "vocabulaire_type_verbe": "ზმნა"
 }

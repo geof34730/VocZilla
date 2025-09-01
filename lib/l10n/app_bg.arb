@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Предлог",
     "vocabulaire_type_verbeModal": "модален глагол",
     "vocabulaire_type_verbeInfinitif": "инфинитив глагол",
-    "vocabulaire_type_inconnu": "неизвестен"
+    "vocabulaire_type_inconnu": "неизвестен",
+    "restaurer_achats": "Възстановяване на покупки",
+    "restaurer_achats_error": "Възстановяването не бе успешно. Моля, опитайте отново.",
+    "restauration_terminee": "Възстановяването е завършено. Ако сте имали активен абонамент, той вече е възстановен.",
+    "vocabulaire_type_verbe": "глагол"
 }

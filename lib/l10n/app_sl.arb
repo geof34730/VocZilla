@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Predlog",
     "vocabulaire_type_verbeModal": "modalni glagol",
     "vocabulaire_type_verbeInfinitif": "nedoločnik glagol",
-    "vocabulaire_type_inconnu": "neznano"
+    "vocabulaire_type_inconnu": "neznano",
+    "restaurer_achats": "Obnovi nakupe",
+    "restaurer_achats_error": "Obnovitev ni uspela. Poskusite znova.",
+    "restauration_terminee": "Obnovitev je končana. Če ste imeli aktivno naročnino, je zdaj obnovljena.",
+    "vocabulaire_type_verbe": "glagol"
 }

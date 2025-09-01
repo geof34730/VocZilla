@@ -610,4 +610,16 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'desconegut';
+
+  @override
+  String get restaurer_achats => 'Restaurar compres';
+
+  @override
+  String get restaurer_achats_error => 'La restauració ha fallat. Torna-ho a intentar.';
+
+  @override
+  String get restauration_terminee => 'Restauració completada. Si tenies una subscripció activa, ara està restaurada.';
+
+  @override
+  String get vocabulaire_type_verbe => 'verb';
 }

@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Przyimek",
     "vocabulaire_type_verbeModal": "czasownik modalny",
     "vocabulaire_type_verbeInfinitif": "bezokolicznik",
-    "vocabulaire_type_inconnu": "nieznany"
+    "vocabulaire_type_inconnu": "nieznany",
+    "restaurer_achats": "Przywróć zakupy",
+    "restaurer_achats_error": "Przywracanie nie powiodło się. Spróbuj ponownie.",
+    "restauration_terminee": "Przywracanie zakończone. Jeśli miałeś aktywną subskrypcję, została ona przywrócona.",
+    "vocabulaire_type_verbe": "czasownik"
 }

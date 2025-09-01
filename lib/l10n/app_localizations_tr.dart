@@ -610,4 +610,16 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'bilinmeyen';
+
+  @override
+  String get restaurer_achats => 'Satın alımları geri yükle';
+
+  @override
+  String get restaurer_achats_error => 'Geri yükleme başarısız oldu. Lütfen tekrar deneyin.';
+
+  @override
+  String get restauration_terminee => 'Geri yükleme tamamlandı. Etkin bir aboneliğiniz varsa, artık geri yüklendi.';
+
+  @override
+  String get vocabulaire_type_verbe => 'fiil';
 }

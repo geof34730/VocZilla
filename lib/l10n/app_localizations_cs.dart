@@ -610,4 +610,16 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'neznámý';
+
+  @override
+  String get restaurer_achats => 'Obnovit nákupy';
+
+  @override
+  String get restaurer_achats_error => 'Obnovení se nezdařilo. Zkuste to prosím znovu.';
+
+  @override
+  String get restauration_terminee => 'Obnovení dokončeno. Pokud jste měli aktivní předplatné, je nyní obnoveno.';
+
+  @override
+  String get vocabulaire_type_verbe => 'sloveso';
 }

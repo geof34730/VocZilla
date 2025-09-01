@@ -610,4 +610,16 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'белгісіз';
+
+  @override
+  String get restaurer_achats => 'Сатып алуларды қалпына келтіріңіз';
+
+  @override
+  String get restaurer_achats_error => 'Қалпына келтіру сәтсіз аяқталды. Қайталап көріңіз.';
+
+  @override
+  String get restauration_terminee => 'Қалпына келтіру аяқталды. Егер сізде белсенді жазылым болса, ол енді қалпына келтірілді.';
+
+  @override
+  String get vocabulaire_type_verbe => 'етістік';
 }

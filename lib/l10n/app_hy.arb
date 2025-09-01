@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Նախդիր",
     "vocabulaire_type_verbeModal": "մոդալ բայ",
     "vocabulaire_type_verbeInfinitif": "անորոշ բայ",
-    "vocabulaire_type_inconnu": "անհայտ"
+    "vocabulaire_type_inconnu": "անհայտ",
+    "restaurer_achats": "Վերականգնել գնումները",
+    "restaurer_achats_error": "Վերականգնումը ձախողվեց։ Խնդրում ենք կրկին փորձել։",
+    "restauration_terminee": "Վերականգնումն ավարտված է։ Եթե դուք ակտիվ բաժանորդագրություն եք ունեցել, այն այժմ վերականգնված է։",
+    "vocabulaire_type_verbe": "բայ"
 }

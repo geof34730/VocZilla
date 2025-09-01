@@ -610,4 +610,16 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'sconosciuto';
+
+  @override
+  String get restaurer_achats => 'Ripristina gli acquisti';
+
+  @override
+  String get restaurer_achats_error => 'Ripristino non riuscito. Riprova.';
+
+  @override
+  String get restauration_terminee => 'Ripristino completato. Se avevi un abbonamento attivo, ora è stato ripristinato.';
+
+  @override
+  String get vocabulaire_type_verbe => 'verbo';
 }

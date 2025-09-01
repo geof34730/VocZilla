@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Giới từ",
     "vocabulaire_type_verbeModal": "động từ khiếm khuyết",
     "vocabulaire_type_verbeInfinitif": "động từ nguyên thể",
-    "vocabulaire_type_inconnu": "không rõ"
+    "vocabulaire_type_inconnu": "không rõ",
+    "restaurer_achats": "Khôi phục giao dịch mua",
+    "restaurer_achats_error": "Khôi phục không thành công. Vui lòng thử lại.",
+    "restauration_terminee": "Quá trình khôi phục hoàn tất. Nếu bạn có đăng ký đang hoạt động, đăng ký đó hiện đã được khôi phục.",
+    "vocabulaire_type_verbe": "động từ"
 }

@@ -610,4 +610,16 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'tuntematon';
+
+  @override
+  String get restaurer_achats => 'Palauta ostokset';
+
+  @override
+  String get restaurer_achats_error => 'Palautus epäonnistui. Yritä uudelleen.';
+
+  @override
+  String get restauration_terminee => 'Palautus valmis. Jos sinulla oli aktiivinen tilaus, se on nyt palautettu.';
+
+  @override
+  String get vocabulaire_type_verbe => 'verbi';
 }

@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposizione",
     "vocabulaire_type_verbeModal": "verbo modale",
     "vocabulaire_type_verbeInfinitif": "verbo all'infinito",
-    "vocabulaire_type_inconnu": "sconosciuto"
+    "vocabulaire_type_inconnu": "sconosciuto",
+    "restaurer_achats": "Ripristina gli acquisti",
+    "restaurer_achats_error": "Ripristino non riuscito. Riprova.",
+    "restauration_terminee": "Ripristino completato. Se avevi un abbonamento attivo, ora è stato ripristinato.",
+    "vocabulaire_type_verbe": "verbo"
 }

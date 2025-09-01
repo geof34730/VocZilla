@@ -610,4 +610,16 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'neznámy';
+
+  @override
+  String get restaurer_achats => 'Obnoviť nákupy';
+
+  @override
+  String get restaurer_achats_error => 'Obnovenie zlyhalo. Skúste to znova.';
+
+  @override
+  String get restauration_terminee => 'Obnovenie dokončené. Ak ste mali aktívne predplatné, je teraz obnovené.';
+
+  @override
+  String get vocabulaire_type_verbe => 'sloveso';
 }

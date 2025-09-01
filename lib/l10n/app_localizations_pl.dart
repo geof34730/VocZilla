@@ -610,4 +610,16 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'nieznany';
+
+  @override
+  String get restaurer_achats => 'Przywróć zakupy';
+
+  @override
+  String get restaurer_achats_error => 'Przywracanie nie powiodło się. Spróbuj ponownie.';
+
+  @override
+  String get restauration_terminee => 'Przywracanie zakończone. Jeśli miałeś aktywną subskrypcję, została ona przywrócona.';
+
+  @override
+  String get vocabulaire_type_verbe => 'czasownik';
 }

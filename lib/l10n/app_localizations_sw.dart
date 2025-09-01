@@ -610,4 +610,16 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'haijulikani';
+
+  @override
+  String get restaurer_achats => 'Rejesha ununuzi';
+
+  @override
+  String get restaurer_achats_error => 'Urejeshaji haukufaulu. Tafadhali jaribu tena.';
+
+  @override
+  String get restauration_terminee => 'Urejeshaji umekamilika. Ikiwa ulikuwa na usajili unaoendelea, sasa umerejeshwa.';
+
+  @override
+  String get vocabulaire_type_verbe => 'kitenzi';
 }

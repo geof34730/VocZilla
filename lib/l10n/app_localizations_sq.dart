@@ -610,4 +610,16 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'i panjohur';
+
+  @override
+  String get restaurer_achats => 'Rivendos blerjet';
+
+  @override
+  String get restaurer_achats_error => 'Restaurimi dështoi. Ju lutemi provoni përsëri.';
+
+  @override
+  String get restauration_terminee => 'Restaurimi përfundoi. Nëse keni pasur një abonim aktiv, ai tani është restauruar.';
+
+  @override
+  String get vocabulaire_type_verbe => 'folje';
 }

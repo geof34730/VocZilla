@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "前置詞",
     "vocabulaire_type_verbeModal": "助動詞",
     "vocabulaire_type_verbeInfinitif": "不定詞動詞",
-    "vocabulaire_type_inconnu": "未知"
+    "vocabulaire_type_inconnu": "未知",
+    "restaurer_achats": "購入を復元する",
+    "restaurer_achats_error": "復元に失敗しました。もう一度お試しください。",
+    "restauration_terminee": "復元が完了しました。有効なサブスクリプションをお持ちの場合は、復元されました。",
+    "vocabulaire_type_verbe": "動詞"
 }

@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Elöljáró",
     "vocabulaire_type_verbeModal": "modális ige",
     "vocabulaire_type_verbeInfinitif": "főnévi igenév",
-    "vocabulaire_type_inconnu": "ismeretlen"
+    "vocabulaire_type_inconnu": "ismeretlen",
+    "restaurer_achats": "Vásárlások visszaállítása",
+    "restaurer_achats_error": "A visszaállítás sikertelen. Próbáld újra.",
+    "restauration_terminee": "A visszaállítás befejeződött. Ha volt aktív előfizetése, akkor az most vissza van állítva.",
+    "vocabulaire_type_verbe": "ige"
 }

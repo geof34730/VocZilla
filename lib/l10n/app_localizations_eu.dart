@@ -610,4 +610,16 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ezezaguna';
+
+  @override
+  String get restaurer_achats => 'Erosketak leheneratu';
+
+  @override
+  String get restaurer_achats_error => 'Berrezarpena huts egin du. Saiatu berriro.';
+
+  @override
+  String get restauration_terminee => 'Leheneratzea osatu da. Harpidetza aktibo bat bazenuen, leheneratuta dago orain.';
+
+  @override
+  String get vocabulaire_type_verbe => 'aditza';
 }

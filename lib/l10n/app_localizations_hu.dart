@@ -610,4 +610,16 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ismeretlen';
+
+  @override
+  String get restaurer_achats => 'Vásárlások visszaállítása';
+
+  @override
+  String get restaurer_achats_error => 'A visszaállítás sikertelen. Próbáld újra.';
+
+  @override
+  String get restauration_terminee => 'A visszaállítás befejeződött. Ha volt aktív előfizetése, akkor az most vissza van állítva.';
+
+  @override
+  String get vocabulaire_type_verbe => 'ige';
 }

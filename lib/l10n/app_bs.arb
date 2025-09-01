@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Prijedlog",
     "vocabulaire_type_verbeModal": "modalni glagol",
     "vocabulaire_type_verbeInfinitif": "infinitivni glagol",
-    "vocabulaire_type_inconnu": "nepoznato"
+    "vocabulaire_type_inconnu": "nepoznato",
+    "restaurer_achats": "Vrati kupovine",
+    "restaurer_achats_error": "Vraćanje nije uspjelo. Pokušajte ponovo.",
+    "restauration_terminee": "Obnova završena. Ako ste imali aktivnu pretplatu, ona je sada obnovljena.",
+    "vocabulaire_type_verbe": "glagol"
 }

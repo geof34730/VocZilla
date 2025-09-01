@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Parafjalë",
     "vocabulaire_type_verbeModal": "folje modale",
     "vocabulaire_type_verbeInfinitif": "folje infinitivi",
-    "vocabulaire_type_inconnu": "i panjohur"
+    "vocabulaire_type_inconnu": "i panjohur",
+    "restaurer_achats": "Rivendos blerjet",
+    "restaurer_achats_error": "Restaurimi dështoi. Ju lutemi provoni përsëri.",
+    "restauration_terminee": "Restaurimi përfundoi. Nëse keni pasur një abonim aktiv, ai tani është restauruar.",
+    "vocabulaire_type_verbe": "folje"
 }

@@ -610,4 +610,16 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'necunoscut';
+
+  @override
+  String get restaurer_achats => 'Restaurați achizițiile';
+
+  @override
+  String get restaurer_achats_error => 'Restaurarea a eșuat. Vă rugăm să încercați din nou.';
+
+  @override
+  String get restauration_terminee => 'Restaurare finalizată. Dacă ați avut un abonament activ, acesta este acum restaurat.';
+
+  @override
+  String get vocabulaire_type_verbe => 'verb';
 }

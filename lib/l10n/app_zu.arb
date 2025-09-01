@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Isilandiso",
     "vocabulaire_type_verbeModal": "isenzo se-modal",
     "vocabulaire_type_verbeInfinitif": "isenzo esingapheli",
-    "vocabulaire_type_inconnu": "akwaziwa"
+    "vocabulaire_type_inconnu": "akwaziwa",
+    "restaurer_achats": "Buyisela okuthengiwe",
+    "restaurer_achats_error": "Ukubuyisela kuhlulekile. Sicela uzame futhi.",
+    "restauration_terminee": "Ukubuyisela kuqedile. Uma ubunokubhalisele okusebenzayo, manje sekubuyisiwe.",
+    "vocabulaire_type_verbe": "isenzo"
 }

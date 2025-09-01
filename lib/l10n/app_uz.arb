@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Old gap",
     "vocabulaire_type_verbeModal": "modal fe'l",
     "vocabulaire_type_verbeInfinitif": "infinitiv fe'l",
-    "vocabulaire_type_inconnu": "noma'lum"
+    "vocabulaire_type_inconnu": "noma'lum",
+    "restaurer_achats": "Xaridlarni tiklash",
+    "restaurer_achats_error": "Qayta tiklash amalga oshmadi. Iltimos, qayta urinib koʻring.",
+    "restauration_terminee": "Qayta tiklash tugallandi. Agar sizda faol obuna bo'lsa, u endi tiklandi.",
+    "vocabulaire_type_verbe": "fe'l"
 }

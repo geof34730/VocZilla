@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Предлог",
     "vocabulaire_type_verbeModal": "модален глагол",
     "vocabulaire_type_verbeInfinitif": "инфинитив глагол",
-    "vocabulaire_type_inconnu": "непознат"
+    "vocabulaire_type_inconnu": "непознат",
+    "restaurer_achats": "Врати ги купувањата",
+    "restaurer_achats_error": "Враќањето не успеа. Обидете се повторно.",
+    "restauration_terminee": "Враќањето е завршено. Ако сте имале активна претплата, таа сега е обновена.",
+    "vocabulaire_type_verbe": "глагол"
 }

@@ -610,4 +610,16 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'לֹא יְדוּעַ';
+
+  @override
+  String get restaurer_achats => 'שחזור רכישות';
+
+  @override
+  String get restaurer_achats_error => 'השחזור נכשל. אנא נסה שוב.';
+
+  @override
+  String get restauration_terminee => 'השחזור הושלם. אם היה לך מנוי פעיל, הוא משוחזר כעת.';
+
+  @override
+  String get vocabulaire_type_verbe => 'פּוֹעַל';
 }

@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "অব্যয়",
     "vocabulaire_type_verbeModal": "মোডাল ক্রিয়া",
     "vocabulaire_type_verbeInfinitif": "অসীম ক্রিয়া",
-    "vocabulaire_type_inconnu": "অজানা"
+    "vocabulaire_type_inconnu": "অজানা",
+    "restaurer_achats": "কেনাকাটা পুনরুদ্ধার করুন",
+    "restaurer_achats_error": "পুনরুদ্ধার ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+    "restauration_terminee": "পুনরুদ্ধার সম্পূর্ণ হয়েছে। যদি আপনার একটি সক্রিয় সদস্যতা থাকে, তাহলে এটি এখন পুনরুদ্ধার করা হয়েছে।",
+    "vocabulaire_type_verbe": "ক্রিয়া"
 }

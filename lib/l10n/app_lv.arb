@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Prievārds",
     "vocabulaire_type_verbeModal": "modālais darbības vārds",
     "vocabulaire_type_verbeInfinitif": "nenoteiksmes darbības vārds",
-    "vocabulaire_type_inconnu": "nezināms"
+    "vocabulaire_type_inconnu": "nezināms",
+    "restaurer_achats": "Atjaunot pirkumus",
+    "restaurer_achats_error": "Atjaunošana neizdevās. Lūdzu, mēģiniet vēlreiz.",
+    "restauration_terminee": "Atjaunošana pabeigta. Ja jums bija aktīvs abonements, tas tagad ir atjaunots.",
+    "vocabulaire_type_verbe": "darbības vārds"
 }

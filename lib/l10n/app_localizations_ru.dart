@@ -610,4 +610,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'неизвестный';
+
+  @override
+  String get restaurer_achats => 'Восстановить покупки';
+
+  @override
+  String get restaurer_achats_error => 'Восстановление не удалось. Попробуйте ещё раз.';
+
+  @override
+  String get restauration_terminee => 'Восстановление завершено. Если у вас была активная подписка, она восстановлена.';
+
+  @override
+  String get vocabulaire_type_verbe => 'глагол';
 }

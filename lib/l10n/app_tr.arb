@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Edat",
     "vocabulaire_type_verbeModal": "modal fiil",
     "vocabulaire_type_verbeInfinitif": "mastar fiil",
-    "vocabulaire_type_inconnu": "bilinmeyen"
+    "vocabulaire_type_inconnu": "bilinmeyen",
+    "restaurer_achats": "Satın alımları geri yükle",
+    "restaurer_achats_error": "Geri yükleme başarısız oldu. Lütfen tekrar deneyin.",
+    "restauration_terminee": "Geri yükleme tamamlandı. Etkin bir aboneliğiniz varsa, artık geri yüklendi.",
+    "vocabulaire_type_verbe": "fiil"
 }

@@ -610,4 +610,16 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'óþekkt';
+
+  @override
+  String get restaurer_achats => 'Endurheimta kaup';
+
+  @override
+  String get restaurer_achats_error => 'Endurheimt mistókst. Reyndu aftur.';
+
+  @override
+  String get restauration_terminee => 'Endurheimt lokið. Ef þú varst með virka áskrift er hún nú endurheimt.';
+
+  @override
+  String get vocabulaire_type_verbe => 'sögn';
 }

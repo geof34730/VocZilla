@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposition",
     "vocabulaire_type_verbeModal": "موڈل فعل",
     "vocabulaire_type_verbeInfinitif": "لامتناہی فعل",
-    "vocabulaire_type_inconnu": "نامعلوم"
+    "vocabulaire_type_inconnu": "نامعلوم",
+    "restaurer_achats": "خریداریوں کو بحال کریں۔",
+    "restaurer_achats_error": "بحالی ناکام ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔",
+    "restauration_terminee": "بحالی مکمل۔ اگر آپ کے پاس ایک فعال سبسکرپشن تھا، تو اب اسے بحال کر دیا گیا ہے۔",
+    "vocabulaire_type_verbe": "فعل"
 }

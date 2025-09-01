@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "介词",
     "vocabulaire_type_verbeModal": "情态动词",
     "vocabulaire_type_verbeInfinitif": "不定式动词",
-    "vocabulaire_type_inconnu": "未知"
+    "vocabulaire_type_inconnu": "未知",
+    "restaurer_achats": "恢复购买",
+    "restaurer_achats_error": "恢复失败，请重试。",
+    "restauration_terminee": "恢复已完成。如果您之前有有效订阅，则现在已恢复。",
+    "vocabulaire_type_verbe": "动词"
 }

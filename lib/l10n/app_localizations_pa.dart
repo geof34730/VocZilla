@@ -610,4 +610,16 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ਅਣਜਾਣ';
+
+  @override
+  String get restaurer_achats => 'ਖਰੀਦਾਂ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕਰੋ';
+
+  @override
+  String get restaurer_achats_error => 'ਬਹਾਲੀ ਅਸਫਲ ਰਹੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
+
+  @override
+  String get restauration_terminee => 'ਬਹਾਲੀ ਪੂਰੀ ਹੋਈ। ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਇੱਕ ਕਿਰਿਆਸ਼ੀਲ ਗਾਹਕੀ ਸੀ, ਤਾਂ ਇਹ ਹੁਣ ਬਹਾਲ ਹੋ ਗਈ ਹੈ।';
+
+  @override
+  String get vocabulaire_type_verbe => 'ਕਿਰਿਆ';
 }

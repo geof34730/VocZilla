@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Předložka",
     "vocabulaire_type_verbeModal": "modální sloveso",
     "vocabulaire_type_verbeInfinitif": "infinitiv slovesa",
-    "vocabulaire_type_inconnu": "neznámý"
+    "vocabulaire_type_inconnu": "neznámý",
+    "restaurer_achats": "Obnovit nákupy",
+    "restaurer_achats_error": "Obnovení se nezdařilo. Zkuste to prosím znovu.",
+    "restauration_terminee": "Obnovení dokončeno. Pokud jste měli aktivní předplatné, je nyní obnoveno.",
+    "vocabulaire_type_verbe": "sloveso"
 }

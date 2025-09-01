@@ -610,4 +610,16 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'അജ്ഞാതം';
+
+  @override
+  String get restaurer_achats => 'വാങ്ങലുകൾ പുനഃസ്ഥാപിക്കുക';
+
+  @override
+  String get restaurer_achats_error => 'പുനഃസ്ഥാപനം പരാജയപ്പെട്ടു. വീണ്ടും ശ്രമിക്കുക.';
+
+  @override
+  String get restauration_terminee => 'പുനഃസ്ഥാപനം പൂർത്തിയായി. നിങ്ങൾക്ക് ഒരു സജീവ സബ്‌സ്‌ക്രിപ്‌ഷൻ ഉണ്ടായിരുന്നെങ്കിൽ, ഇപ്പോൾ അത് പുനഃസ്ഥാപിച്ചു.';
+
+  @override
+  String get vocabulaire_type_verbe => 'ക്രിയ';
 }

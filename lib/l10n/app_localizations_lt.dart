@@ -610,4 +610,16 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'nežinomas';
+
+  @override
+  String get restaurer_achats => 'Atkurti pirkinius';
+
+  @override
+  String get restaurer_achats_error => 'Atkūrimas nepavyko. Bandykite dar kartą.';
+
+  @override
+  String get restauration_terminee => 'Atkūrimas baigtas. Jei turėjote aktyvią prenumeratą, ji dabar atkurta.';
+
+  @override
+  String get vocabulaire_type_verbe => 'veiksmažodis';
 }

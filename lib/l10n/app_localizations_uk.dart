@@ -610,4 +610,16 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'невідомий';
+
+  @override
+  String get restaurer_achats => 'Відновити покупки';
+
+  @override
+  String get restaurer_achats_error => 'Відновлення не вдалося. Спробуйте ще раз.';
+
+  @override
+  String get restauration_terminee => 'Відновлення завершено. Якщо у вас була активна підписка, її тепер відновлено.';
+
+  @override
+  String get vocabulaire_type_verbe => 'дієслово';
 }

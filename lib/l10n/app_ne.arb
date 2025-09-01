@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "पूर्वसर्ग",
     "vocabulaire_type_verbeModal": "मोडल क्रिया",
     "vocabulaire_type_verbeInfinitif": "अनन्त क्रिया",
-    "vocabulaire_type_inconnu": "अज्ञात"
+    "vocabulaire_type_inconnu": "अज्ञात",
+    "restaurer_achats": "खरिदहरू पुनर्स्थापित गर्नुहोस्",
+    "restaurer_achats_error": "पुनर्स्थापना असफल भयो। कृपया फेरि प्रयास गर्नुहोस्।",
+    "restauration_terminee": "पुनर्स्थापना पूरा भयो। यदि तपाईंसँग सक्रिय सदस्यता थियो भने, यो अब पुनर्स्थापित गरिएको छ।",
+    "vocabulaire_type_verbe": "क्रिया"
 }

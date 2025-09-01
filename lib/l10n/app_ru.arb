@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Предлог",
     "vocabulaire_type_verbeModal": "модальный глагол",
     "vocabulaire_type_verbeInfinitif": "инфинитив глагола",
-    "vocabulaire_type_inconnu": "неизвестный"
+    "vocabulaire_type_inconnu": "неизвестный",
+    "restaurer_achats": "Восстановить покупки",
+    "restaurer_achats_error": "Восстановление не удалось. Попробуйте ещё раз.",
+    "restauration_terminee": "Восстановление завершено. Если у вас была активная подписка, она восстановлена.",
+    "vocabulaire_type_verbe": "глагол"
 }

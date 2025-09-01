@@ -610,4 +610,16 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'невядомы';
+
+  @override
+  String get restaurer_achats => 'Аднавіць пакупкі';
+
+  @override
+  String get restaurer_achats_error => 'Аднаўленне не атрымалася. Паўтарыце спробу.';
+
+  @override
+  String get restauration_terminee => 'Аднаўленне завершана. Калі ў вас была актыўная падпіска, яна цяпер адноўлена.';
+
+  @override
+  String get vocabulaire_type_verbe => 'дзеяслоў';
 }

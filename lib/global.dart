@@ -6,7 +6,7 @@ bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
 final int daysFreeTrial=debugMode ? 2000 :7;
-
+const resetTo=true;
 bool forFeatureGraphic = false;
 bool changeVocabulaireSinceVisiteHome = false;
 

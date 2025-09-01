@@ -610,4 +610,16 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'үл мэдэгдэх';
+
+  @override
+  String get restaurer_achats => 'Худалдан авалтыг сэргээх';
+
+  @override
+  String get restaurer_achats_error => 'Сэргээлт амжилтгүй болсон. Дахин оролдоно уу.';
+
+  @override
+  String get restauration_terminee => 'Сэргээх ажил дууссан. Хэрэв та идэвхтэй захиалгатай байсан бол одоо сэргээгдсэн.';
+
+  @override
+  String get vocabulaire_type_verbe => 'үйл үг';
 }

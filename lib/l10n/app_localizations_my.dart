@@ -610,4 +610,16 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'မသိ';
+
+  @override
+  String get restaurer_achats => 'ဝယ်ယူမှုများကို ပြန်လည်ရယူပါ။';
+
+  @override
+  String get restaurer_achats_error => 'ပြန်လည်ထူထောင်ခြင်း မအောင်မြင်ပါ။ ထပ်စမ်းကြည့်ပါ။';
+
+  @override
+  String get restauration_terminee => 'ပြန်လည်ထူထောင်ရေး ပြီးပါပြီ။ သင့်တွင် အသက်ဝင်သော စာရင်းသွင်းမှုတစ်ခုရှိခဲ့ပါက၊ ၎င်းကို ယခု ပြန်လည်ရယူလိုက်ပါ။';
+
+  @override
+  String get vocabulaire_type_verbe => 'ကြိယာ';
 }

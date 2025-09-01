@@ -610,4 +610,16 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'अज्ञात';
+
+  @override
+  String get restaurer_achats => 'खरीदारी वापस लौटाएं';
+
+  @override
+  String get restaurer_achats_error => 'पुनर्स्थापना विफल. कृपया पुनः प्रयास करें.';
+
+  @override
+  String get restauration_terminee => 'पुनर्स्थापना पूर्ण। यदि आपके पास कोई सक्रिय सदस्यता थी, तो वह अब पुनर्स्थापित हो गई है।';
+
+  @override
+  String get vocabulaire_type_verbe => 'क्रिया';
 }

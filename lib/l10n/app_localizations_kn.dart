@@ -610,4 +610,16 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ತಿಳಿದಿಲ್ಲ';
+
+  @override
+  String get restaurer_achats => 'ಖರೀದಿಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಿ';
+
+  @override
+  String get restaurer_achats_error => 'ಮರುಸ್ಥಾಪನೆ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
+
+  @override
+  String get restauration_terminee => 'ಮರುಸ್ಥಾಪನೆ ಪೂರ್ಣಗೊಂಡಿದೆ. ನೀವು ಸಕ್ರಿಯ ಚಂದಾದಾರಿಕೆಯನ್ನು ಹೊಂದಿದ್ದರೆ, ಅದನ್ನು ಈಗ ಮರುಸ್ಥಾಪಿಸಲಾಗಿದೆ.';
+
+  @override
+  String get vocabulaire_type_verbe => 'ಕ್ರಿಯಾಪದ';
 }

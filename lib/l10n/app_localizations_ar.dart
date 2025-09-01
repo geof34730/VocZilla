@@ -610,4 +610,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'مجهول';
+
+  @override
+  String get restaurer_achats => 'استعادة المشتريات';
+
+  @override
+  String get restaurer_achats_error => 'فشلت عملية الاستعادة. يُرجى المحاولة مرة أخرى.';
+
+  @override
+  String get restauration_terminee => 'اكتملت عملية الاستعادة. إذا كان لديك اشتراك نشط، فقد تمت استعادته الآن.';
+
+  @override
+  String get vocabulaire_type_verbe => 'فعل';
 }

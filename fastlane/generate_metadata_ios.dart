@@ -66,15 +66,21 @@ void main() async {
 
     final locale = match.group(1)!;
     final content = json.decode(await File(file.path).readAsString());
-    final description = content['app_description'] ?? 'description manquante';
+    final baseDescription = content['app_description'] ?? 'description manquante';
+    final termsLabel = content['conditions_dutilisation'] ?? 'Terms of Use';
+    final privacyLabel = content['politique_de_confidentialite'] ?? 'Privacy Policy';
 
+    // On assemble la description finale avec les liens requis par Apple.
+    final finalDescription = '''
+$baseDescription
 
-    //Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-    //Privacy Policy: https://flutter-now.com/voczilla-politique-de-confidentialite/
+---
 
+$termsLabel (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+$privacyLabel: https://flutter-now.com/voczilla-politique-de-confidentialite/
+''';
 
-
-  final title = content['app_title'] ?? 'Titre manquant';
+    final title = content['app_title'] ?? 'Titre manquant';
     final keywords = content['app_keywords'] ?? 'keyword manquant';
     final rawShortPromotion = content['app_promotion_ios'] ?? 'promotion manquante';
     final promotion = truncateShortDescription(rawShortPromotion);
@@ -93,7 +99,7 @@ void main() async {
       iosLocale,
       title,
       subtitle,
-      description,
+      finalDescription,
       keywords,
       promotion,
       releaseNote,
@@ -104,6 +110,12 @@ void main() async {
     print('✅ Métadonnées iOS générées pour $locale → $iosLocale');
   }
 }
+
+
+
+
+
+
 String truncateShortDescription(String input) {
   const maxLength = 140;
   if (input.length <= maxLength) return input;
@@ -156,9 +168,6 @@ void writeMetadata(
   File('$path/privacy_url.txt').writeAsStringSync(privacyUrl.trim());
   File('$path/promotional_text.txt').writeAsStringSync(promotion.trim());
   File('$path/support_url.txt').writeAsStringSync("https://docs.google.com/forms/d/e/1FAIpQLSfkcK4ry-8CoUWEvyDSC9e79HK_8d6lyPbWQtP9_au2kc2J3g/viewform");
-
-
-
 }
 
 String truncateKeywords(String input) {

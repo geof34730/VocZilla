@@ -610,4 +610,16 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'తెలియదు';
+
+  @override
+  String get restaurer_achats => 'కొనుగోళ్లను పునరుద్ధరించండి';
+
+  @override
+  String get restaurer_achats_error => 'పునరుద్ధరణ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి.';
+
+  @override
+  String get restauration_terminee => 'పునరుద్ధరణ పూర్తయింది. మీకు యాక్టివ్ సబ్‌స్క్రిప్షన్ ఉంటే, అది ఇప్పుడు పునరుద్ధరించబడింది.';
+
+  @override
+  String get vocabulaire_type_verbe => 'క్రియ';
 }

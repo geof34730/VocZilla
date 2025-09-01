@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposición",
     "vocabulaire_type_verbeModal": "verbo modal",
     "vocabulaire_type_verbeInfinitif": "verbo infinitivo",
-    "vocabulaire_type_inconnu": "desconocido"
+    "vocabulaire_type_inconnu": "desconocido",
+    "restaurer_achats": "Restaurar compras",
+    "restaurer_achats_error": "Error en la restauración. Inténtalo de nuevo.",
+    "restauration_terminee": "Restauración completa. Si tenía una suscripción activa, ya está restaurada.",
+    "vocabulaire_type_verbe": "verbo"
 }

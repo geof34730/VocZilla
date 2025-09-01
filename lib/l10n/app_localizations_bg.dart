@@ -610,4 +610,16 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'неизвестен';
+
+  @override
+  String get restaurer_achats => 'Възстановяване на покупки';
+
+  @override
+  String get restaurer_achats_error => 'Възстановяването не бе успешно. Моля, опитайте отново.';
+
+  @override
+  String get restauration_terminee => 'Възстановяването е завършено. Ако сте имали активен абонамент, той вече е възстановен.';
+
+  @override
+  String get vocabulaire_type_verbe => 'глагол';
 }

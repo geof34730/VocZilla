@@ -610,4 +610,16 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'نامعلوم';
+
+  @override
+  String get restaurer_achats => 'خریداریوں کو بحال کریں۔';
+
+  @override
+  String get restaurer_achats_error => 'بحالی ناکام ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔';
+
+  @override
+  String get restauration_terminee => 'بحالی مکمل۔ اگر آپ کے پاس ایک فعال سبسکرپشن تھا، تو اب اسے بحال کر دیا گیا ہے۔';
+
+  @override
+  String get vocabulaire_type_verbe => 'فعل';
 }

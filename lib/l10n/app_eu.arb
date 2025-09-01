@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposizioa",
     "vocabulaire_type_verbeModal": "aditz modala",
     "vocabulaire_type_verbeInfinitif": "aditz infinitiboa",
-    "vocabulaire_type_inconnu": "ezezaguna"
+    "vocabulaire_type_inconnu": "ezezaguna",
+    "restaurer_achats": "Erosketak leheneratu",
+    "restaurer_achats_error": "Berrezarpena huts egin du. Saiatu berriro.",
+    "restauration_terminee": "Leheneratzea osatu da. Harpidetza aktibo bat bazenuen, leheneratuta dago orain.",
+    "vocabulaire_type_verbe": "aditza"
 }

@@ -610,4 +610,16 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'अज्ञात';
+
+  @override
+  String get restaurer_achats => 'खरेदी पुनर्संचयित करा';
+
+  @override
+  String get restaurer_achats_error => 'पुनर्संचयित करणे अयशस्वी झाले. कृपया पुन्हा प्रयत्न करा.';
+
+  @override
+  String get restauration_terminee => 'पुनर्संचयित करणे पूर्ण झाले. जर तुमचे सक्रिय सदस्यत्व असेल, तर ते आता पुनर्संचयित केले आहे.';
+
+  @override
+  String get vocabulaire_type_verbe => 'क्रियापद';
 }

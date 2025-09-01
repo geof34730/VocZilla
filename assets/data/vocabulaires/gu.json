@@ -3,7 +3,7 @@
         "GUID": "83bc0207-5e6b-4546-8c4d-957dcc95cc61",
         "RANK": "1",
         "EN": "to be",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "TYPE_DETAIL": "verbe auxiliaire",
         "TRAD": "હોવું"
     },
     {
@@ -135,7 +135,7 @@
     {
         "GUID": "079f5c1f-55fb-4a8d-9918-fa4cc46073d0",
         "RANK": "44",
-        "EN": "to come",
+        "EN": "come",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "આવવાનું"
     },
@@ -220,7 +220,7 @@
         "GUID": "0d20a76c-3f39-41bc-9ca9-f213939cd29a",
         "RANK": "59",
         "EN": "Right",
-        "TYPE_DETAIL": "Interjection",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "અધિકાર"
     },
     {
@@ -654,7 +654,7 @@
         "GUID": "0a0ca447-3106-449f-aa9e-4489a3cf8135",
         "RANK": "131",
         "EN": "Boy",
-        "TYPE_DETAIL": "Interjection",
+        "TYPE_DETAIL": "Nom",
         "TRAD": "છોકરો"
     },
     {
@@ -676,7 +676,7 @@
         "RANK": "134",
         "EN": "to happen",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "થવાનું"
+        "TRAD": "થવું"
     },
     {
         "GUID": "1f67b351-ed8b-4303-92ee-39b39424a958",
@@ -731,7 +731,7 @@
         "GUID": "f338d9ee-54f7-403a-877f-4a9e6f13adfa",
         "RANK": "143",
         "EN": "First",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "પ્રથમ"
     },
     {
@@ -928,7 +928,7 @@
         "RANK": "174",
         "EN": "to start",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "શરૂ કરવા માટે"
+        "TRAD": "શરૂઆત"
     },
     {
         "GUID": "53f37465-4831-4a68-9e00-84e75c88969c",
@@ -1515,7 +1515,7 @@
         "GUID": "585a3975-c49d-4a55-9737-4733f5134556",
         "RANK": "260",
         "EN": "Second",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "બીજું"
     },
     {
@@ -2123,9 +2123,9 @@
     {
         "GUID": "7588e588-89e9-4f28-afd2-caa1173d8d1e",
         "RANK": "353",
-        "EN": "to save",
+        "EN": "save",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "બચાવવા માટે"
+        "TRAD": "સાચવો"
     },
     {
         "GUID": "1004c4d6-4c9b-4a9f-8fe4-4257299b4c41",
@@ -2240,13 +2240,6 @@
         "TRAD": "દરવાજો"
     },
     {
-        "GUID": "08b17ec7-ac06-4833-85d4-c8f524e989cc",
-        "RANK": "372",
-        "EN": "to gay",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગે માટે"
-    },
-    {
         "GUID": "9118aa11-23b1-4b33-b641-98d5d3f920e6",
         "RANK": "373",
         "EN": "Exactly",
@@ -2291,7 +2284,7 @@
     {
         "GUID": "3e164c77-291a-40e5-a0e4-d21042f5f572",
         "RANK": "380",
-        "EN": "to hurt",
+        "EN": "hurt",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "દુઃખ આપવું"
     },
@@ -2445,9 +2438,9 @@
     {
         "GUID": "c70504a0-7647-4562-8de1-736db60f9b4a",
         "RANK": "408",
-        "EN": "to sell",
+        "EN": "sell",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વેચવા માટે"
+        "TRAD": "વેચો"
     },
     {
         "GUID": "371dc4d7-9e9b-41eb-8a16-df051ee386eb",
@@ -2466,9 +2459,9 @@
     {
         "GUID": "a7b5884f-8dd7-41d3-984c-2dfe53d2a2df",
         "RANK": "412",
-        "EN": "to mind",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ધ્યાનમાં રાખવું"
+        "EN": "mind",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મન"
     },
     {
         "GUID": "a813116a-ebf5-4a91-a91b-74945b555e24",
@@ -2534,13 +2527,6 @@
         "TRAD": "હેઠળ"
     },
     {
-        "GUID": "4b7cd96c-1bb0-498d-9397-4599beca6c01",
-        "RANK": "423",
-        "EN": "to b",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "થી બી"
-    },
-    {
         "GUID": "1edeebe8-7ce1-4532-8c73-2dd01cf9879c",
         "RANK": "424",
         "EN": "Paper",
@@ -2564,9 +2550,9 @@
     {
         "GUID": "5b054b51-a2f8-401e-8367-56f6bb49a492",
         "RANK": "427",
-        "EN": "to mine",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મારા માટે"
+        "EN": "mine",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મારું"
     },
     {
         "GUID": "4235ecc0-a9f7-404b-9bdb-6c0232422528",
@@ -2634,9 +2620,9 @@
     {
         "GUID": "3b88d10a-8f37-4d1d-b1ed-8ea97eec62a1",
         "RANK": "438",
-        "EN": "to dude",
+        "EN": "dude",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "દોસ્તને"
+        "TRAD": "દોસ્ત"
     },
     {
         "GUID": "97c6e971-f7d2-4b9d-bd2d-561e00299488",
@@ -2872,9 +2858,9 @@
     {
         "GUID": "ed664748-c5c3-4ca5-a27c-0d12ec697cc2",
         "RANK": "477",
-        "EN": "to cute",
+        "EN": "cute",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ખૂબ જ સુંદર"
+        "TRAD": "સુંદર"
     },
     {
         "GUID": "20afab8f-75b0-4cee-bf5c-f08c6de61456",
@@ -3068,9 +3054,9 @@
     {
         "GUID": "6e28c3e4-1273-4dc0-8097-172d00a27d9d",
         "RANK": "508",
-        "EN": "to girlfriend",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગર્લફ્રેન્ડને"
+        "EN": "girlfriend",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ગર્લફ્રેન્ડ"
     },
     {
         "GUID": "d928ce79-8815-47fa-a8e6-fa0da158ea49",
@@ -3297,13 +3283,6 @@
         "TRAD": "સ્વીટી"
     },
     {
-        "GUID": "86afb05f-15bb-4fec-8172-38859a5b3819",
-        "RANK": "544",
-        "EN": "to s",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "થી s"
-    },
-    {
         "GUID": "0d9b8cdf-6bfd-4559-acd6-8c3d94027aaf",
         "RANK": "545",
         "EN": "to pass",
@@ -3428,13 +3407,6 @@
         "EN": "Husband",
         "TYPE_DETAIL": "Nom",
         "TRAD": "પતિ"
-    },
-    {
-        "GUID": "56b04178-0ed8-451e-ad74-e5d3180c8b86",
-        "RANK": "566",
-        "EN": "to shh",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "શશ કરવું"
     },
     {
         "GUID": "cbb0fbc1-53ba-420f-9ea0-b9f5f78b5804",
@@ -3810,8 +3782,8 @@
     {
         "GUID": "7233908f-4181-46a2-a747-1bf44aaf273d",
         "RANK": "630",
-        "EN": "to fault",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "fault",
+        "TYPE_DETAIL": "Nom",
         "TRAD": "દોષિત ઠરવું"
     },
     {
@@ -3957,7 +3929,7 @@
     {
         "GUID": "25d02951-0cb3-48ab-bf95-75974236e548",
         "RANK": "651",
-        "EN": "to begin",
+        "EN": "begin",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "શરૂ કરવા માટે"
     },
@@ -4104,7 +4076,7 @@
     {
         "GUID": "d81b4b58-7446-4f57-a819-4ec12d2fe95c",
         "RANK": "674",
-        "EN": "to expect",
+        "EN": "expect",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "અપેક્ષા રાખવી"
     },
@@ -4133,7 +4105,7 @@
         "GUID": "79eaff5d-5272-4c7f-9bfc-ce26721e397a",
         "RANK": "678",
         "EN": "to ugh",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "ઉફ્ફ"
     },
     {
@@ -4328,9 +4300,9 @@
     {
         "GUID": "0ac534d5-0387-4ed4-93fe-6b4ebb01c6d2",
         "RANK": "708",
-        "EN": "to favorite",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મનપસંદમાં"
+        "EN": "favorite",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "મનપસંદ"
     },
     {
         "GUID": "4bd8d06a-a169-4709-8d4e-31db6f3af874",
@@ -4433,8 +4405,8 @@
     {
         "GUID": "6ca61313-64df-4dc6-87ba-ea73ebd55cab",
         "RANK": "724",
-        "EN": "to sad",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "sad",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "દુઃખી થવું"
     },
     {
@@ -4875,7 +4847,7 @@
         "GUID": "d1e9883c-57e7-4cd1-8e00-4be25976cd83",
         "RANK": "792",
         "EN": "Third",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "ત્રીજો"
     },
     {
@@ -5231,9 +5203,9 @@
     {
         "GUID": "9b10f23c-5293-4829-8ab3-1fefbc5b20c5",
         "RANK": "848",
-        "EN": "to honest",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પ્રમાણિકપણે"
+        "EN": "honest",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "પ્રામાણિક"
     },
     {
         "GUID": "1e7df5cd-b6fb-4c1d-a08c-f78105c6a07a",
@@ -5399,8 +5371,8 @@
     {
         "GUID": "9f8a1760-8b43-4343-8eeb-1cb73824f6c1",
         "RANK": "872",
-        "EN": "to bottle",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "bottle",
+        "TYPE_DETAIL": "Nom",
         "TRAD": "બોટલમાં ભરવું"
     },
     {
@@ -5476,9 +5448,9 @@
     {
         "GUID": "52e2d0bc-f538-4503-989e-565a86a864d4",
         "RANK": "883",
-        "EN": "to shower",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્નાન કરવું"
+        "EN": "shower",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ફુવારો"
     },
     {
         "GUID": "1cf4862b-ed2b-4066-8bf1-acd29d7fd1b9",
@@ -5672,7 +5644,7 @@
     {
         "GUID": "4736471e-4613-4cb2-b018-23fa3a0f396b",
         "RANK": "914",
-        "EN": "to rid",
+        "EN": "rid",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "મુક્તિ આપવી"
     },
@@ -5798,9 +5770,9 @@
     {
         "GUID": "e34a3d4a-00c0-4fbf-8f51-e9b166bdb9e7",
         "RANK": "936",
-        "EN": "to fake",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "બનાવટી બનાવવું"
+        "EN": "fake",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "નકલી"
     },
     {
         "GUID": "02c3a03e-1cf4-4ece-ab25-2b0415235c84",
@@ -5945,9 +5917,9 @@
     {
         "GUID": "ec5a624e-43c9-4066-8b53-e1d3a30a55d8",
         "RANK": "959",
-        "EN": "to ear",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કાન સુધી"
+        "EN": "ear",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કાન"
     },
     {
         "GUID": "2347df65-c8a0-4364-b27e-04b026a00abf",
@@ -6057,9 +6029,9 @@
     {
         "GUID": "558a3798-c8b5-4599-8e98-6f7cd99dc044",
         "RANK": "977",
-        "EN": "to level",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્તર પર"
+        "EN": "level",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સ્તર"
     },
     {
         "GUID": "ea90d563-b500-4a4c-86c9-1186b8bfca49",
@@ -6127,9 +6099,9 @@
     {
         "GUID": "273be353-cf0d-4e6f-9a74-3fb4f88cb004",
         "RANK": "987",
-        "EN": "to bedroom",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "બેડરૂમમાં"
+        "EN": "bedroom",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "શયનખંડ"
     },
     {
         "GUID": "1932199b-f6be-47b4-ad32-79816c6e685e",
@@ -6449,9 +6421,9 @@
     {
         "GUID": "083d30d7-f136-48e2-b6be-2cbd900def5d",
         "RANK": "1038",
-        "EN": "to celebrate",
+        "EN": "celebrate",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ઉજવણી કરવી"
+        "TRAD": "ઉજવણી કરો"
     },
     {
         "GUID": "6ae06754-66a0-4dcc-a550-06fc2e05c44d",
@@ -6736,9 +6708,9 @@
     {
         "GUID": "f319d54d-ee43-4be0-a4b7-6cf2e87a2dc8",
         "RANK": "1083",
-        "EN": "to meat",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "માંસ માટે"
+        "EN": "meat",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "માંસ"
     },
     {
         "GUID": "62d50bd6-ebf1-4495-a680-732a22e0c964",
@@ -6771,9 +6743,9 @@
     {
         "GUID": "646256c8-73d6-45cd-99bf-6a15ba05a3f7",
         "RANK": "1089",
-        "EN": "to taste",
+        "EN": "taste",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્વાદ માટે"
+        "TRAD": "સ્વાદ"
     },
     {
         "GUID": "a06cc089-1f11-400a-ae42-fcbaf0988ce2",
@@ -6848,8 +6820,8 @@
     {
         "GUID": "5f0e9781-095e-4de5-b3da-14424ad89375",
         "RANK": "1100",
-        "EN": "to sake",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "sake",
+        "TYPE_DETAIL": "Nom",
         "TRAD": "ખાતર"
     },
     {
@@ -7240,9 +7212,9 @@
     {
         "GUID": "2d0c2877-4fa8-4b3c-b4f5-cc69d7b16b03",
         "RANK": "1162",
-        "EN": "to rat",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ઉંદર મારવો"
+        "EN": "rat",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ઉંદર"
     },
     {
         "GUID": "17576b93-ed9f-4170-bd62-7a68ada0c05a",
@@ -7387,9 +7359,9 @@
     {
         "GUID": "f6f784f6-02a7-497e-99ba-a31412ffb597",
         "RANK": "1186",
-        "EN": "to fear",
+        "EN": "fear",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ડરવું"
+        "TRAD": "ભય"
     },
     {
         "GUID": "4a1f197d-9275-46f5-9f30-a935382933e9",
@@ -7569,9 +7541,9 @@
     {
         "GUID": "1c307f46-5879-4117-9518-dce29a3b6399",
         "RANK": "1216",
-        "EN": "to classic",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ક્લાસિક માટે"
+        "EN": "classic",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "ક્લાસિક"
     },
     {
         "GUID": "c3f5bcea-e9ba-49f7-bbb4-7bb37b36a931",
@@ -7618,7 +7590,7 @@
     {
         "GUID": "7d0ad6fd-a89b-4cf8-a98b-6e4638d365af",
         "RANK": "1224",
-        "EN": "to discover",
+        "EN": "discover",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "શોધવું"
     },
@@ -7632,7 +7604,7 @@
     {
         "GUID": "72a5195b-0074-490a-8706-5270ae00ca63",
         "RANK": "1226",
-        "EN": "to plenty",
+        "EN": "plenty",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "પુષ્કળ"
     },
@@ -7765,8 +7737,8 @@
     {
         "GUID": "f39c935d-c7d9-4058-8bfe-3a020d072a0e",
         "RANK": "1246",
-        "EN": "to roommate",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "roommate",
+        "TYPE_DETAIL": "Nom",
         "TRAD": "રૂમમેટને"
     },
     {
@@ -7808,7 +7780,7 @@
         "GUID": "9df2b308-c0ad-457a-afd2-ba8b686e3829",
         "RANK": "1254",
         "EN": "Fourth",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "ચોથું"
     },
     {
@@ -7989,9 +7961,9 @@
     {
         "GUID": "13e20ae1-aeee-4305-9867-300466b856cd",
         "RANK": "1282",
-        "EN": "to bust",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ભાંગી નાખવું"
+        "EN": "bust",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "છાતી"
     },
     {
         "GUID": "fd8956fa-83f7-4f64-9348-76efdec77eec",
@@ -8038,9 +8010,9 @@
     {
         "GUID": "4fc97601-dcd5-4e56-8172-0ece626ffbaa",
         "RANK": "1290",
-        "EN": "to toast",
+        "EN": "toast",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ટોસ્ટ કરવું"
+        "TRAD": "ટોસ્ટ"
     },
     {
         "GUID": "1460cdf4-f2fc-4803-a47c-3d18030c6cdb",
@@ -8197,13 +8169,6 @@
         "TRAD": "ખાંડ"
     },
     {
-        "GUID": "d632c09b-4c39-423a-96d6-dc45c61d3962",
-        "RANK": "1314",
-        "EN": "to uhh",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ઉહહ"
-    },
-    {
         "GUID": "4add3586-d65a-47f1-9641-2d0c2186708d",
         "RANK": "1315",
         "EN": "Weekend",
@@ -8311,9 +8276,9 @@
     {
         "GUID": "13b781aa-6300-4a88-814a-2fcedb3b4ef3",
         "RANK": "1333",
-        "EN": "to sauce",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ચટણી કરવી"
+        "EN": "sauce",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ચટણી"
     },
     {
         "GUID": "22454d49-8af4-4de5-b1a2-e73ee87279c3",
@@ -8724,9 +8689,9 @@
     {
         "GUID": "cb1fa4d8-b52f-4a17-b089-9339bf5e363f",
         "RANK": "1397",
-        "EN": "to tour",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પ્રવાસ કરવો"
+        "EN": "tour",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પ્રવાસ"
     },
     {
         "GUID": "3cd45782-5ce5-4c6f-baec-457c1ddae412",
@@ -9039,9 +9004,9 @@
     {
         "GUID": "0bd9325a-1158-473b-8861-6a5f3b746cba",
         "RANK": "1448",
-        "EN": "to soda",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સોડા માટે"
+        "EN": "soda",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સોડા"
     },
     {
         "GUID": "ec2053a9-3847-4379-9266-f05fcb2a1660",
@@ -9088,9 +9053,9 @@
     {
         "GUID": "1139f0a8-fd80-4a65-a722-a1f55a93abe2",
         "RANK": "1456",
-        "EN": "to cheer",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ખુશ થવું"
+        "EN": "cheer",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ઉત્સાહ"
     },
     {
         "GUID": "fd7d3b82-49a6-43f8-adb5-71ccb5121fc0",
@@ -9112,13 +9077,6 @@
         "EN": "Tongue",
         "TYPE_DETAIL": "Nom",
         "TRAD": "જીભ"
-    },
-    {
-        "GUID": "9c59a670-fc1e-446f-825d-8733bca3331e",
-        "RANK": "1461",
-        "EN": "to valentine",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વેલેન્ટાઇન માટે"
     },
     {
         "GUID": "a3fcc02a-e21c-4e02-a142-43337b9828d3",
@@ -9179,9 +9137,9 @@
     {
         "GUID": "57c20d33-1169-40fe-bb56-81ec434d9a2d",
         "RANK": "1470",
-        "EN": "to steak",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્ટીક માટે"
+        "EN": "steak",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સ્ટીક"
     },
     {
         "GUID": "28e7de37-e971-451d-bcef-9e271d0d4818",
@@ -9466,9 +9424,9 @@
     {
         "GUID": "226a386a-1a1c-433a-9be0-2d76881362c0",
         "RANK": "1517",
-        "EN": "to pirate",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "લૂંટ ચલાવવી"
+        "EN": "pirate",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ચાંચિયો"
     },
     {
         "GUID": "13d1e270-379c-4289-9cf4-f740cf1ea658",
@@ -9536,9 +9494,9 @@
     {
         "GUID": "7ccfeed4-76c0-42ab-aeb8-9b510939a05c",
         "RANK": "1528",
-        "EN": "to sky",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "આકાશ તરફ"
+        "EN": "sky",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "આકાશ"
     },
     {
         "GUID": "fe8f8736-263d-499f-8f43-39398e641835",
@@ -9830,9 +9788,9 @@
     {
         "GUID": "9eae0b3f-e09f-4500-9ead-71df372cbc9d",
         "RANK": "1575",
-        "EN": "to crowd",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ભીડ કરવી"
+        "EN": "crowd",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ભીડ"
     },
     {
         "GUID": "4998e881-6d0c-430a-8cd3-ef11cad5177e",
@@ -9984,8 +9942,8 @@
     {
         "GUID": "f1003f35-c13e-4b66-a151-ea3ed1d9a4c6",
         "RANK": "1599",
-        "EN": "to result",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "result",
+        "TYPE_DETAIL": "Nom",
         "TRAD": "પરિણામ"
     },
     {
@@ -10468,7 +10426,7 @@
         "GUID": "5618cc39-22e4-454e-9c97-32a9b84f4c0e",
         "RANK": "1676",
         "EN": "Fifth",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "પાંચમું"
     },
     {
@@ -10593,16 +10551,16 @@
     {
         "GUID": "85c11234-398f-4815-955a-b87f5f1e4e94",
         "RANK": "1696",
-        "EN": "to toe",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પગ સુધી"
+        "EN": "toe",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "અંગૂઠો"
     },
     {
         "GUID": "153a2492-80ff-49f3-9fa2-3179260f6e47",
         "RANK": "1697",
-        "EN": "to yard",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "યાર્ડમાં"
+        "EN": "yard",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "આંગણું"
     },
     {
         "GUID": "1fd6a8fc-84ca-474e-b5ba-8d938c59fec1",
@@ -10719,9 +10677,9 @@
     {
         "GUID": "8a91c3aa-60b1-4d76-8791-dd9b623ac95f",
         "RANK": "1714",
-        "EN": "to candle",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મીણબત્તી પ્રગટાવવી"
+        "EN": "candle",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મીણબત્તી"
     },
     {
         "GUID": "b08fa7c9-842f-4927-b313-5dc464ce76c7",
@@ -10859,9 +10817,9 @@
     {
         "GUID": "b67c6e7f-ab5f-4361-bd8b-8fd25979b929",
         "RANK": "1737",
-        "EN": "to exact",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ચોક્કસ રીતે"
+        "EN": "exact",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "ચોક્કસ"
     },
     {
         "GUID": "1f8ea6ac-2661-4fed-aaf2-cc7bd1b42935",
@@ -10873,9 +10831,9 @@
     {
         "GUID": "b36aaccd-7f32-4a6d-b074-507bb3ca4ce6",
         "RANK": "1739",
-        "EN": "to hip",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કમર બાંધવી"
+        "EN": "hip",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "હિપ"
     },
     {
         "GUID": "65f1a27b-762d-4e84-92cc-456dcaaddb06",
@@ -10901,9 +10859,9 @@
     {
         "GUID": "4af96dab-ad2a-41b7-b9d3-d36501861549",
         "RANK": "1743",
-        "EN": "to effect",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "અમલમાં મૂકવું"
+        "EN": "effect",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "અસર"
     },
     {
         "GUID": "62e75a48-1d5e-4353-94f3-b1de7a60afce",
@@ -10953,13 +10911,6 @@
         "EN": "Waiter",
         "TYPE_DETAIL": "Nom",
         "TRAD": "વેઈટર"
-    },
-    {
-        "GUID": "ec8033b4-cce6-42b6-9f98-7c0ad078fbe3",
-        "RANK": "1752",
-        "EN": "to architect",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્થપતિ માટે"
     },
     {
         "GUID": "2d517a5c-649d-4959-a519-de9091e4746c",
@@ -11503,7 +11454,7 @@
     {
         "GUID": "f1f5e0ec-07e8-42d6-ba10-453f174a0a11",
         "RANK": "1843",
-        "EN": "to recommend",
+        "EN": "recommend",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "ભલામણ કરવી"
     },
@@ -11860,9 +11811,9 @@
     {
         "GUID": "2c3b11e6-366b-439a-890e-e2cd48d12b19",
         "RANK": "1896",
-        "EN": "to amount",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "રકમ પ્રમાણે"
+        "EN": "amount",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "રકમ"
     },
     {
         "GUID": "ca36c175-88ed-4f60-a866-b37a6cdc5ae6",
@@ -12005,18 +11956,11 @@
         "TRAD": "કૌશલ્ય"
     },
     {
-        "GUID": "d9061b01-2923-47ca-a39a-7c9c6eca44fd",
-        "RANK": "1921",
-        "EN": "to dammit",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ધિક્કારવું"
-    },
-    {
         "GUID": "23a7d9c4-e90f-4451-b12a-1ebe6a7cbb81",
         "RANK": "1923",
-        "EN": "to pancake",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પેનકેક બનાવવા માટે"
+        "EN": "pancake",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પેનકેક"
     },
     {
         "GUID": "f2b30ce5-e936-4090-9f62-b3b80b25489e",
@@ -12336,9 +12280,9 @@
     {
         "GUID": "3777be42-2a7a-4035-bc17-8e162a1eb766",
         "RANK": "1977",
-        "EN": "to challenge",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પડકાર ફેંકવો"
+        "EN": "challenge",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પડકાર"
     },
     {
         "GUID": "78ff3c58-d1ce-494f-9618-5b1a386bb6f6",
@@ -12357,9 +12301,9 @@
     {
         "GUID": "8f62a27d-1561-4155-b285-8b16504a04d8",
         "RANK": "1980",
-        "EN": "to fridge",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ફ્રીજમાં રાખવું"
+        "EN": "fridge",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ફ્રિજ"
     },
     {
         "GUID": "b54e5fd5-9abc-43dd-b788-7448c93deb9f",
@@ -12920,13 +12864,6 @@
         "EN": "Festival",
         "TYPE_DETAIL": "Nom",
         "TRAD": "તહેવાર"
-    },
-    {
-        "GUID": "e07f5ab0-81e6-40cf-8a85-c0162fd2d57e",
-        "RANK": "2074",
-        "EN": "to tenni",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ટેની સુધી"
     },
     {
         "GUID": "3984369a-baf4-4347-a446-112207c56c42",
@@ -13806,9 +13743,9 @@
     {
         "GUID": "dac19dad-a9f6-404e-95fe-2ed1d37bc0f6",
         "RANK": "2210",
-        "EN": "to haircut",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વાળ કાપવા માટે"
+        "EN": "haircut",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "વાળ કાપવા"
     },
     {
         "GUID": "41d2d29d-87dd-46e5-aeb4-f7b8f4554a0f",
@@ -13834,9 +13771,9 @@
     {
         "GUID": "f12ebd0c-5fc8-4db5-ba11-d5becf66ed1a",
         "RANK": "2216",
-        "EN": "to spare",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "બચાવવા માટે"
+        "EN": "spare",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "ફાજલ"
     },
     {
         "GUID": "e1b4f921-e23a-4a64-b88e-92e5a76f3e8d",
@@ -14583,9 +14520,9 @@
     {
         "GUID": "e1803941-f896-4c53-8e37-3f35a1d7542b",
         "RANK": "2345",
-        "EN": "to discount",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ડિસ્કાઉન્ટ કરવું"
+        "EN": "discount",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ડિસ્કાઉન્ટ"
     },
     {
         "GUID": "f4d65de1-14c8-4957-b51f-badeff61097b",
@@ -14674,9 +14611,9 @@
     {
         "GUID": "7b7a881e-47b9-42ee-a558-e01f850a67f6",
         "RANK": "2362",
-        "EN": "to puzzle",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મૂંઝવણમાં મૂકવું"
+        "EN": "Puzzle",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પઝલ"
     },
     {
         "GUID": "94b9ab14-02db-4250-909f-a5f8bfd9b1c9",
@@ -14856,9 +14793,9 @@
     {
         "GUID": "82e1193b-ad54-465c-8f16-777ae3cac30b",
         "RANK": "2389",
-        "EN": "to routine",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "નિત્યક્રમમાં"
+        "EN": "routine",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "દિનચર્યા"
     },
     {
         "GUID": "f29e2386-f4fd-4b08-a2d0-9d6db79a43d5",
@@ -14947,16 +14884,16 @@
     {
         "GUID": "959a7f50-deeb-4318-a72a-b8f589f725e4",
         "RANK": "2402",
-        "EN": "to helmet",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "હેલ્મેટ પહેરવું"
+        "EN": "helmet",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "હેલ્મેટ"
     },
     {
         "GUID": "702e4d2c-41f0-4f36-b42b-640fdfd87417",
         "RANK": "2403",
-        "EN": "to jackass",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગદ્દાર બનવું"
+        "EN": "jackass",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ગધેડો"
     },
     {
         "GUID": "500300f8-d18a-48e1-af5d-d252338c3ae7",
@@ -15017,9 +14954,9 @@
     {
         "GUID": "040d026e-e251-43ec-ad5b-7ea1385a3dca",
         "RANK": "2413",
-        "EN": "to turtle",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કાચબાને"
+        "EN": "turtle",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કાચબો"
     },
     {
         "GUID": "444690da-2ef8-4e73-b119-cbf13c7412e3",
@@ -15045,7 +14982,7 @@
     {
         "GUID": "d1193813-e558-49dc-a3e7-17eb56063a8d",
         "RANK": "2418",
-        "EN": "to compete",
+        "EN": "compete",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "સ્પર્ધા કરવી"
     },
@@ -15073,9 +15010,9 @@
     {
         "GUID": "30aa5956-08b5-4a0f-a2dc-3250cfed6bb8",
         "RANK": "2422",
-        "EN": "to flash",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ફ્લેશ કરવું"
+        "EN": "flash",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ફ્લેશ"
     },
     {
         "GUID": "9210eeef-8f3c-4176-958f-2f3c6b457212",
@@ -15083,13 +15020,6 @@
         "EN": "to heal",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "સાજા કરવા માટે"
-    },
-    {
-        "GUID": "49e9c38f-7436-4218-9acc-27ae8e1b6a40",
-        "RANK": "2424",
-        "EN": "to hippie",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "હિપ્પી માટે"
     },
     {
         "GUID": "8b3eeda5-d27c-4a2d-8113-0e33d68fabd3",
@@ -15157,9 +15087,9 @@
     {
         "GUID": "8ee0b9e3-89bc-45ca-a863-567418276cdc",
         "RANK": "2436",
-        "EN": "to detective",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ડિટેક્ટીવ માટે"
+        "EN": "detective",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ડિટેક્ટીવ"
     },
     {
         "GUID": "41f82c94-20f2-48f3-8505-2c478c8d7213",
@@ -15339,9 +15269,9 @@
     {
         "GUID": "443f0a5d-2e6c-47a1-be57-d064a2e27093",
         "RANK": "2467",
-        "EN": "to estate",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મિલકત માટે"
+        "EN": "estate",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મિલકત"
     },
     {
         "GUID": "8ffde408-1938-4518-b499-eb7983823f67",
@@ -15437,9 +15367,9 @@
     {
         "GUID": "a1ec4341-ffc8-4e1f-b85d-780d03bfec0d",
         "RANK": "2484",
-        "EN": "to legend",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "દંતકથા માટે"
+        "EN": "legend",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "દંતકથા"
     },
     {
         "GUID": "0b99d0d7-e265-49d9-8ab1-e01005acb89c",
@@ -15458,9 +15388,9 @@
     {
         "GUID": "2e331715-d10f-4645-a237-6be9f6825767",
         "RANK": "2487",
-        "EN": "to talente",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પ્રતિભાશાળી બનવું"
+        "EN": "talent",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પ્રતિભા"
     },
     {
         "GUID": "575ac01b-14bb-4cc9-9fbc-d6fc5d331040",
@@ -15654,9 +15584,9 @@
     {
         "GUID": "021f1203-c44b-4d3a-8101-8f057b25a8fc",
         "RANK": "2518",
-        "EN": "to behold",
+        "EN": "behold",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "જોવા માટે"
+        "TRAD": "જુઓ"
     },
     {
         "GUID": "34379860-1d77-4152-8a67-ce5bf92b8845",
@@ -15668,8 +15598,8 @@
     {
         "GUID": "70a28fd7-4e7a-4ccc-b8c6-6c1457ef4b4a",
         "RANK": "2520",
-        "EN": "to concentrate",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "concentrate",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "ધ્યાન કેન્દ્રિત કરવું"
     },
     {
@@ -15906,9 +15836,9 @@
     {
         "GUID": "6779fe5a-03b4-42a6-b5fa-04b07c9b3156",
         "RANK": "2561",
-        "EN": "to alcoholic",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "દારૂડિયા માટે"
+        "EN": "alcoholic",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "દારૂડિયા"
     },
     {
         "GUID": "5c157755-931a-444d-bd87-9b864eb1a494",
@@ -16277,9 +16207,9 @@
     {
         "GUID": "f0ebfa89-8edd-48bd-829d-ff836c616b73",
         "RANK": "2625",
-        "EN": "to shy",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "શરમાવું"
+        "EN": "shy",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "શરમાળ"
     },
     {
         "GUID": "27f56091-23e2-41db-a07e-2523e1757548",
@@ -16298,9 +16228,9 @@
     {
         "GUID": "84987070-7c86-4feb-aa29-dc68fec80738",
         "RANK": "2628",
-        "EN": "to colonel",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કર્નલને"
+        "EN": "colonel",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કર્નલ"
     },
     {
         "GUID": "07d519fe-ae39-4f37-994e-8c0a7469a28e",
@@ -16410,9 +16340,9 @@
     {
         "GUID": "70372bc5-b8f6-49ad-933f-6c2689f6901e",
         "RANK": "2646",
-        "EN": "to cheek",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગાલ મારવો"
+        "EN": "cheek",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ગાલ"
     },
     {
         "GUID": "8b00f56b-b48e-4d4c-9848-c40ec2e74b55",
@@ -16452,9 +16382,9 @@
     {
         "GUID": "fea5588b-7e3e-4db8-a0ea-93daf9d4ebbd",
         "RANK": "2653",
-        "EN": "to pea",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વટાણા કાપવા"
+        "EN": "pea",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "વટાણા"
     },
     {
         "GUID": "09731dfb-31f1-4531-b33d-dd38e3aa94df",
@@ -16466,9 +16396,9 @@
     {
         "GUID": "cc2bd3b0-df67-43ce-9dde-8c1c64cba938",
         "RANK": "2655",
-        "EN": "to rack",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "રેક કરવું"
+        "EN": "rack",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "રેક"
     },
     {
         "GUID": "d75edf1e-7680-4741-a1a6-c1cef369db08",
@@ -16613,9 +16543,9 @@
     {
         "GUID": "91b33239-4cde-473e-bf0f-7ebf99ed056c",
         "RANK": "2682",
-        "EN": "to cherry",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ચેરી માટે"
+        "EN": "cherry",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ચેરી"
     },
     {
         "GUID": "6b716fbe-2ee9-4d02-8706-a69611accd5a",
@@ -17040,9 +16970,9 @@
     {
         "GUID": "1a049083-f942-4ed6-a231-8ad310aa9c10",
         "RANK": "2751",
-        "EN": "to gray",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ભૂખરા રંગનું"
+        "EN": "gray",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ગ્રે"
     },
     {
         "GUID": "7b8a8a4e-b841-4b92-8fe6-e10e9fb321cd",
@@ -17285,9 +17215,9 @@
     {
         "GUID": "aa22c80c-7ec1-42f2-bbfe-3504a88a8706",
         "RANK": "2791",
-        "EN": "to rib",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પાંસળી સુધી"
+        "EN": "rib",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પાંસળી"
     },
     {
         "GUID": "8c7b8316-3cdc-4a68-a219-389ce9f17bfc",
@@ -17397,9 +17327,9 @@
     {
         "GUID": "7e3ac5b1-258f-46e8-9b40-cd88866ffa7e",
         "RANK": "2811",
-        "EN": "to novel",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "નવલકથા માટે"
+        "EN": "novel",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "નવલકથા"
     },
     {
         "GUID": "3da2a7ed-d89e-4f06-89eb-8d3dbb02ccaa",
@@ -17523,9 +17453,9 @@
     {
         "GUID": "4c8d6ca7-d8c9-4eeb-bf1c-18f2600d49cb",
         "RANK": "2833",
-        "EN": "to karate",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કરાટે માટે"
+        "EN": "karate",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કરાટે"
     },
     {
         "GUID": "48e1652d-b1b1-4f96-b87d-74b71808828b",
@@ -17565,9 +17495,9 @@
     {
         "GUID": "d0e749f1-f4a7-4edb-9244-7191c4d02979",
         "RANK": "2840",
-        "EN": "to raisin",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કિસમિસ કાપવી"
+        "EN": "raisin",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કિસમિસ"
     },
     {
         "GUID": "9a17ff3d-78d6-4665-8bd5-4379522e0b61",
@@ -17628,9 +17558,9 @@
     {
         "GUID": "c13ccf84-edf1-4e8e-bb9f-2a187de5d9dc",
         "RANK": "2852",
-        "EN": "to cave",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગુફામાં જવું"
+        "EN": "cave",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ગુફા"
     },
     {
         "GUID": "48d21665-96d7-491b-854b-ccd8cdfcc173",
@@ -17747,9 +17677,9 @@
     {
         "GUID": "0af3c43f-93d8-49f4-99c5-78bd307a6158",
         "RANK": "2872",
-        "EN": "to habit",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "આદત પાડવી"
+        "EN": "habit",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "આદત"
     },
     {
         "GUID": "b0d44d2c-6a14-4cda-91d4-d756be328199",
@@ -17817,9 +17747,9 @@
     {
         "GUID": "30d89ec0-ed1b-4b48-8a19-bd3cea3924c3",
         "RANK": "2883",
-        "EN": "to rainbow",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મેઘધનુષ્ય માટે"
+        "EN": "rainbow",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મેઘધનુષ્ય"
     },
     {
         "GUID": "3e51cfd2-b46b-48c9-b689-19425897f284",
@@ -17944,22 +17874,22 @@
         "GUID": "e2098a39-7fe8-43c3-9b76-cffef17af8fa",
         "RANK": "2905",
         "EN": "Sixth",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "છઠ્ઠું"
     },
     {
         "GUID": "8398d12e-564c-4e1d-b67a-cee8cd670813",
         "RANK": "2906",
-        "EN": "to spoon",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ચમચીમાં ભરવું"
+        "EN": "spoon",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ચમચી"
     },
     {
         "GUID": "01e5ac54-e798-4d74-a1aa-a2f8824527d3",
         "RANK": "2908",
-        "EN": "to strawberry",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્ટ્રોબેરી માટે"
+        "EN": "strawberry",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સ્ટ્રોબેરી"
     },
     {
         "GUID": "7bd08c01-8a89-4c8b-8ebf-cf191e5e81cc",
@@ -18020,9 +17950,9 @@
     {
         "GUID": "1cebe6e6-9b18-4e53-ae9a-fec34c4b016e",
         "RANK": "2917",
-        "EN": "to confirm",
+        "EN": "confirm",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ખાતરી કરવા માટે"
+        "TRAD": "પુષ્ટિ કરો"
     },
     {
         "GUID": "794a6d4e-5d4e-4bb5-aeb5-672785246c83",
@@ -18034,7 +17964,7 @@
     {
         "GUID": "7b129d6c-b58b-4fe0-8d97-78eef5fb7d33",
         "RANK": "2919",
-        "EN": "to disagree",
+        "EN": "disagree",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "અસંમત થવું"
     },
@@ -18104,9 +18034,9 @@
     {
         "GUID": "ceed93ab-a078-4704-bc79-4378b38244af",
         "RANK": "2933",
-        "EN": "to steam",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વરાળમાં ઉકાળવું"
+        "EN": "steam",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "વરાળ"
     },
     {
         "GUID": "5168188b-0a39-4bf9-a883-8e748c9fb50b",
@@ -18125,9 +18055,9 @@
     {
         "GUID": "a50ca339-514f-4960-a3da-cddae1855f6d",
         "RANK": "2936",
-        "EN": "to toothbrush",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ટૂથબ્રશ માટે"
+        "EN": "toothbrush",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ટૂથબ્રશ"
     },
     {
         "GUID": "69abc34c-4631-45e1-b5ce-fd8d3aea566e",
@@ -18412,9 +18342,9 @@
     {
         "GUID": "801510ee-a6d1-4363-bfc9-f2ce2dde45bb",
         "RANK": "2983",
-        "EN": "to barn",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કોઠાર માટે"
+        "EN": "barn",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કોઠાર"
     },
     {
         "GUID": "5b33ea98-2a8d-4d4d-99f4-3033f4f8f860",
@@ -18720,16 +18650,16 @@
     {
         "GUID": "993f81c3-5a43-47ab-b031-063189568f16",
         "RANK": "3036",
-        "EN": "to improve",
+        "EN": "improve",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સુધારવા માટે"
+        "TRAD": "સુધારો"
     },
     {
         "GUID": "a70b6838-49b9-4033-ba2f-77ca85a2a78d",
         "RANK": "3037",
-        "EN": "to intercourse",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સંભોગ કરવો"
+        "EN": "intercourse",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સંભોગ"
     },
     {
         "GUID": "f3e83f88-c238-4d72-9bcb-04e39418cdf9",
@@ -18916,9 +18846,9 @@
     {
         "GUID": "9521e22f-1614-4bdc-9559-1453231836c4",
         "RANK": "3069",
-        "EN": "to shift",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્થળાંતર કરવું"
+        "EN": "shift",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પાળી"
     },
     {
         "GUID": "55065a71-e51b-4912-bfd8-0fa3943c62ca",
@@ -19091,9 +19021,9 @@
     {
         "GUID": "352cfc88-0fd1-42d5-9202-4c7f5666ab7b",
         "RANK": "3099",
-        "EN": "to achieve",
+        "EN": "achieve",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "હાંસલ કરવા માટે"
+        "TRAD": "પ્રાપ્ત કરવું"
     },
     {
         "GUID": "292e7590-a798-46c1-8a28-d74220bdd612",
@@ -19161,9 +19091,9 @@
     {
         "GUID": "f58714bd-5b8e-4e8b-8a4d-f79a012b82eb",
         "RANK": "3110",
-        "EN": "to install",
+        "EN": "install",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્થાપિત કરવા માટે"
+        "TRAD": "ઇન્સ્ટોલ કરો"
     },
     {
         "GUID": "bdd5273f-4a9e-473d-82ce-70f4d7d2020f",
@@ -19315,9 +19245,9 @@
     {
         "GUID": "20744115-b672-4416-9efa-c4c7cdbf5cc1",
         "RANK": "3136",
-        "EN": "to elbow",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કોણી સુધી"
+        "EN": "elbow",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કોણી"
     },
     {
         "GUID": "5529a645-63f2-437d-baa2-f80c3ecc0419",
@@ -19378,9 +19308,9 @@
     {
         "GUID": "0e9748b9-c1c9-4f0e-89fb-9985af554fec",
         "RANK": "3146",
-        "EN": "to syrup",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ચાસણી માટે"
+        "EN": "syrup",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ચાસણી"
     },
     {
         "GUID": "6b7b2407-d35f-43a1-a878-ea8f133fda13",
@@ -19413,9 +19343,9 @@
     {
         "GUID": "6f15a51b-41c6-4b30-b5b2-fe172d702b42",
         "RANK": "3154",
-        "EN": "to blade",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "છરી વડે મારવું"
+        "EN": "blade",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "બ્લેડ"
     },
     {
         "GUID": "0fbf9b6d-b5e3-4691-8ce2-b58197ba00a2",
@@ -19476,9 +19406,9 @@
     {
         "GUID": "cd6f6daa-dfec-46a8-96ec-610935367880",
         "RANK": "3165",
-        "EN": "to heel",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "એડી પર ચડવું"
+        "EN": "heel",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "એડી"
     },
     {
         "GUID": "36b8744b-49f6-4b2c-b2f3-06ad75751b29",
@@ -19504,7 +19434,7 @@
     {
         "GUID": "f2ec55be-41e2-4f3e-b35b-80963edb5927",
         "RANK": "3171",
-        "EN": "to relieve",
+        "EN": "relieve",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "રાહત આપવી"
     },
@@ -19588,9 +19518,9 @@
     {
         "GUID": "4045d52c-6d14-4b5a-bf90-b9b66f09e8bf",
         "RANK": "3185",
-        "EN": "to explore",
+        "EN": "explore",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "શોધખોળ કરવી"
+        "TRAD": "શોધખોળ કરો"
     },
     {
         "GUID": "1cbebc7d-3c76-472b-a72c-17cc69e26f53",
@@ -19735,9 +19665,9 @@
     {
         "GUID": "162ecda1-d891-465b-b3d5-76da9b28b48a",
         "RANK": "3210",
-        "EN": "to stuff",
+        "EN": "stuff",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ભરવું"
+        "TRAD": "સામગ્રી"
     },
     {
         "GUID": "772fffea-82fc-4da8-ab32-226203882f27",
@@ -19756,9 +19686,9 @@
     {
         "GUID": "3a105966-cc57-4882-937a-82cdf994e8ae",
         "RANK": "3213",
-        "EN": "to drum",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ઢોલ વગાડવું"
+        "EN": "drum",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ઢોલ"
     },
     {
         "GUID": "778b5b18-5326-4a36-821c-ca0090a2997b",
@@ -19861,9 +19791,9 @@
     {
         "GUID": "9df52f53-26ce-4b89-a920-5944ae1bcb81",
         "RANK": "3230",
-        "EN": "to object",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વાંધો ઉઠાવવો"
+        "EN": "object",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "વસ્તુ"
     },
     {
         "GUID": "25e65b61-3030-4c0c-af43-5e80c243043b",
@@ -19889,7 +19819,7 @@
     {
         "GUID": "304b2620-c2e2-4036-952b-37c8e314a3ee",
         "RANK": "3234",
-        "EN": "to supportive",
+        "EN": "supportive",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "સહાયક"
     },
@@ -19931,9 +19861,9 @@
     {
         "GUID": "21ed5b3a-06f6-478f-8f45-fd172529039f",
         "RANK": "3242",
-        "EN": "to essay",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "નિબંધ લખવો"
+        "EN": "essay",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "નિબંધ"
     },
     {
         "GUID": "14d6b1a1-df1e-4703-91f8-0bf9f5da07c7",
@@ -19994,9 +19924,9 @@
     {
         "GUID": "30362179-b17b-41d8-847d-ebb16c7c9ad6",
         "RANK": "3254",
-        "EN": "to groom",
+        "EN": "groom",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વરરાજા બનાવવું"
+        "TRAD": "વરરાજા"
     },
     {
         "GUID": "843f4c13-5055-42a0-b919-1219066c1b52",
@@ -20155,9 +20085,9 @@
     {
         "GUID": "6c01dd66-e893-48b8-be94-e9abf8e371f4",
         "RANK": "3280",
-        "EN": "to bridesmaid",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "દુલ્હન માટે"
+        "EN": "bridesmaid",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "અપરિણીત સાહેલી"
     },
     {
         "GUID": "5fe1d24f-fdd8-48e2-87c3-26cb4af7a512",
@@ -20253,8 +20183,8 @@
     {
         "GUID": "5d3cded9-3436-4bca-9145-dff90606a8d4",
         "RANK": "3299",
-        "EN": "to tasty",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "tasty",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "સ્વાદિષ્ટ"
     },
     {
@@ -20344,9 +20274,9 @@
     {
         "GUID": "d5175dab-e9e2-411b-aa78-5b49b597de59",
         "RANK": "3314",
-        "EN": "to hay",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ઘાસ કાપવું"
+        "EN": "hay",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ઘાસ"
     },
     {
         "GUID": "100b8d25-45da-49c1-be8f-35f83e0ab3fb",
@@ -20379,9 +20309,9 @@
     {
         "GUID": "bf9e91f0-61ea-44e8-b07f-ab471d348c73",
         "RANK": "3319",
-        "EN": "to lobby",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "લોબીંગ કરવું"
+        "EN": "lobby",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "લોબી"
     },
     {
         "GUID": "1e0d0a82-c6f3-49ee-8585-ee6b4bb81c64",
@@ -20477,9 +20407,9 @@
     {
         "GUID": "1595cebf-efbe-4de9-be95-474b21bd4947",
         "RANK": "3335",
-        "EN": "to toaster",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ટોસ્ટર કરવું"
+        "EN": "toaster",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ટોસ્ટર"
     },
     {
         "GUID": "4c3d6834-a9db-42c0-bddc-c95c761ffc7b",
@@ -20701,9 +20631,9 @@
     {
         "GUID": "3b53c9ae-dff3-445b-84c7-78a20b3da0fb",
         "RANK": "3372",
-        "EN": "to thigh",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "જાંઘ સુધી"
+        "EN": "thigh",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "જાંઘ"
     },
     {
         "GUID": "cb5fe67a-1e6e-4ccf-8cac-ce8c3f656c33",
@@ -20818,13 +20748,6 @@
         "TRAD": "હોબો"
     },
     {
-        "GUID": "f79e8dc3-901a-4df3-926a-68b562686ed6",
-        "RANK": "3390",
-        "EN": "to hybrid",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સંકર માટે"
-    },
-    {
         "GUID": "1344d303-baa5-4857-9764-3cb51f1a7adf",
         "RANK": "3391",
         "EN": "to increase",
@@ -20841,9 +20764,9 @@
     {
         "GUID": "4dc73b38-8011-4502-bdbe-36375a9202b4",
         "RANK": "3393",
-        "EN": "to prevent",
+        "EN": "prevent",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "અટકાવવા માટે"
+        "TRAD": "અટકાવવું"
     },
     {
         "GUID": "af1d4920-1b25-4d51-8bd5-25a4af314fb7",
@@ -20958,13 +20881,6 @@
         "TRAD": "મૂત્રાશય"
     },
     {
-        "GUID": "8674334f-1275-440f-aca1-fe6e748e677f",
-        "RANK": "3413",
-        "EN": "to cult",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સંપ્રદાય કરવો"
-    },
-    {
         "GUID": "f65647a2-0cd4-473e-afb0-e9748acc6d96",
         "RANK": "3414",
         "EN": "Dealer",
@@ -20995,9 +20911,9 @@
     {
         "GUID": "91992072-b85a-43b5-9dfb-294110cef0bb",
         "RANK": "3419",
-        "EN": "to hump",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કૂદકો મારવો"
+        "EN": "hump",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ખૂંધ"
     },
     {
         "GUID": "ef8e7efe-3e68-4b61-89f0-721c3eace637",
@@ -21051,8 +20967,8 @@
     {
         "GUID": "7b65f8c3-f9ca-44a8-90af-a65858286a0d",
         "RANK": "3428",
-        "EN": "to passionate",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "passionate",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "ઉત્સાહી"
     },
     {
@@ -21191,9 +21107,9 @@
     {
         "GUID": "4e6a20c7-eb5b-4c28-86a7-632fdc7e9eac",
         "RANK": "3453",
-        "EN": "to concept",
+        "EN": "concept",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ખ્યાલ માટે"
+        "TRAD": "ખ્યાલ"
     },
     {
         "GUID": "b07cd111-3cb3-4029-9222-853789c6018a",
@@ -21201,13 +21117,6 @@
         "EN": "Core",
         "TYPE_DETAIL": "Nom",
         "TRAD": "કોર"
-    },
-    {
-        "GUID": "616de0c6-5eab-47a1-8013-34ce613929ea",
-        "RANK": "3455",
-        "EN": "to de",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "દ માટે"
     },
     {
         "GUID": "83b0a6c6-7d9c-4cfd-849e-99cd062eecb2",
@@ -21224,17 +21133,10 @@
         "TRAD": "ડિસ્પ્લે"
     },
     {
-        "GUID": "c69b7533-7d91-4880-80c8-5d5db0e21e38",
-        "RANK": "3458",
-        "EN": "to dna",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ડીએનએ સુધી"
-    },
-    {
         "GUID": "aba8bf27-3bd8-4a8b-84bb-e61f2a3dc9cb",
         "RANK": "3459",
         "EN": "Eighth",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "આઠમું"
     },
     {
@@ -21247,9 +21149,9 @@
     {
         "GUID": "e0b7fb87-8d84-438f-853b-5ea9ee1ed2e5",
         "RANK": "3461",
-        "EN": "to goose",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "હંસ માટે"
+        "EN": "goose",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "હંસ"
     },
     {
         "GUID": "8496f7d7-5841-4b9f-8bad-a8d6781e6179",
@@ -21268,9 +21170,9 @@
     {
         "GUID": "ca9c0403-a7d6-4606-8a97-597b48053b02",
         "RANK": "3464",
-        "EN": "to marathon",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મેરેથોન માટે"
+        "EN": "marathon",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મેરેથોન"
     },
     {
         "GUID": "90dffeb9-44ae-4833-9266-f3744f046365",
@@ -21324,9 +21226,9 @@
     {
         "GUID": "31461b17-e21e-4bf7-a431-f147ce93c705",
         "RANK": "3476",
-        "EN": "to surrender",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "શરણાગતિ સ્વીકારવી"
+        "EN": "surrender",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "શરણાગતિ"
     },
     {
         "GUID": "3e8c3bd3-fbc0-49b1-8a31-2ae3dacb456f",
@@ -21560,13 +21462,6 @@
         "TRAD": "પવન"
     },
     {
-        "GUID": "037af1f4-c338-4a61-bea9-e426b8964b0d",
-        "RANK": "3513",
-        "EN": "9-1-1",
-        "TYPE_DETAIL": "Numéral",
-        "TRAD": "૯-૧-૧"
-    },
-    {
         "GUID": "d8dcb513-b44a-49a9-9fda-69b396f5df6c",
         "RANK": "3514",
         "EN": "Adjustment",
@@ -21695,9 +21590,9 @@
     {
         "GUID": "e2dff033-5ad8-420a-b5e1-850edab464af",
         "RANK": "3532",
-        "EN": "to quote",
+        "EN": "quote",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "અવતરણ કરવું"
+        "TRAD": "અવતરણ"
     },
     {
         "GUID": "9612213d-0b7b-4154-91b6-8d47fdf5f4bf",
@@ -21716,9 +21611,9 @@
     {
         "GUID": "ff9b31c7-4249-44f9-b02e-9e6084656f24",
         "RANK": "3535",
-        "EN": "to sleeve",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "બાંયમાં મૂકવું"
+        "EN": "sleeve",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સ્લીવ"
     },
     {
         "GUID": "a62088a9-c931-41c5-a11b-66a2232b0818",
@@ -21730,9 +21625,9 @@
     {
         "GUID": "592db7d5-28b8-4f19-be84-e13e74e42ff1",
         "RANK": "3537",
-        "EN": "to sunshine",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સૂર્યપ્રકાશ માટે"
+        "EN": "sunshine",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સૂર્યપ્રકાશ"
     },
     {
         "GUID": "b40845f1-a4c5-468a-b0cf-d07031253bae",
@@ -21877,9 +21772,9 @@
     {
         "GUID": "e774b5b2-5188-4a08-ac4f-ae36f0bed467",
         "RANK": "3563",
-        "EN": "to indicate",
+        "EN": "indicate",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સૂચવવા માટે"
+        "TRAD": "સૂચવો"
     },
     {
         "GUID": "4e455a7e-549e-403d-8e99-a96445427213",
@@ -22024,7 +21919,7 @@
     {
         "GUID": "d7d9070a-5733-4cf9-905c-b2ab887ea54f",
         "RANK": "3592",
-        "EN": "to amuse",
+        "EN": "amuse",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "મનોરંજન કરવું"
     },
@@ -22193,7 +22088,7 @@
         "GUID": "f5097809-3162-4763-b0a4-536501b80989",
         "RANK": "3620",
         "EN": "Seventh",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "સાતમું"
     },
     {
@@ -22318,8 +22213,8 @@
     {
         "GUID": "88ac9f66-6185-450f-ab8d-ac4f534adf1b",
         "RANK": "3641",
-        "EN": "to magnificent",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "magnificent",
+        "TYPE_DETAIL": "Adverbe",
         "TRAD": "ભવ્ય"
     },
     {
@@ -22332,9 +22227,9 @@
     {
         "GUID": "9c18c2c1-99b0-4997-b3b8-e7f448e96432",
         "RANK": "3643",
-        "EN": "to marshmallow",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "માર્શમેલો બનાવવું"
+        "EN": "marshmallow",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "માર્શમેલો"
     },
     {
         "GUID": "7140e5b2-0bbb-487f-a44f-a7a08fad41f2",
@@ -22381,9 +22276,9 @@
     {
         "GUID": "795f089d-64bc-488a-905f-61432366b9f0",
         "RANK": "3651",
-        "EN": "to playground",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "રમતના મેદાનમાં"
+        "EN": "playground",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "રમતનું મેદાન"
     },
     {
         "GUID": "d08e7097-f8f1-4f68-a81f-771f33530e7d",
@@ -22549,16 +22444,16 @@
     {
         "GUID": "f987e40c-f482-4cec-bc3c-6b3653280ca6",
         "RANK": "3679",
-        "EN": "to kitten",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "બિલાડીના બચ્ચાને"
+        "EN": "kitten",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "બિલાડીનું બચ્ચું"
     },
     {
         "GUID": "61b103b9-86ac-49b0-bf1e-cdc9141b44e6",
         "RANK": "3680",
-        "EN": "to laptop",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "લેપટોપ પર"
+        "EN": "laptop",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "લેપટોપ"
     },
     {
         "GUID": "169212f4-0c53-4361-a58d-3b5caab2505e",
@@ -22829,9 +22724,9 @@
     {
         "GUID": "4f32f05e-101e-4aca-bb1e-b914df810114",
         "RANK": "3727",
-        "EN": "to salsa",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સાલસા માટે"
+        "EN": "salsa",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સાલસા"
     },
     {
         "GUID": "93dc7450-26bb-4078-8d00-b9ac2b6b50b1",
@@ -22892,9 +22787,9 @@
     {
         "GUID": "756e46a5-2204-4b6c-93a1-43a9ca0e3b27",
         "RANK": "3740",
-        "EN": "to appetite",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ભૂખ લાગવી"
+        "EN": "appetite",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ભૂખ"
     },
     {
         "GUID": "44c08231-065b-44ce-91bd-0444a0ca4ed1",
@@ -22990,9 +22885,9 @@
     {
         "GUID": "e839a090-8660-4202-a319-022c99613d09",
         "RANK": "3755",
-        "EN": "to eyebrow",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ભમર માટે"
+        "EN": "eyebrow",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ભમર"
     },
     {
         "GUID": "7c58711d-63c5-4a3d-9247-458814a02cae",
@@ -23046,9 +22941,9 @@
     {
         "GUID": "b06ca03a-f937-4993-b59b-77f0ec52b181",
         "RANK": "3765",
-        "EN": "to plain",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્પષ્ટ કરવું"
+        "EN": "plain",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સાદો"
     },
     {
         "GUID": "d2cc1b39-f45c-4ffe-9e2c-253cbc3076c1",
@@ -23130,9 +23025,9 @@
     {
         "GUID": "2aa3963d-ea20-46e8-9f77-2b4006dc4bf1",
         "RANK": "3780",
-        "EN": "to nerve",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ચિંતા કરવી"
+        "EN": "nerve",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "જ્ઞાનતંતુ"
     },
     {
         "GUID": "b4348538-48cf-4ff4-8ca3-73a4b9b8f1f1",
@@ -23186,9 +23081,9 @@
     {
         "GUID": "eba2e66d-ad7a-4279-842b-9c2f018706a1",
         "RANK": "3788",
-        "EN": "to atheist",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "નાસ્તિક માટે"
+        "EN": "atheist",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "નાસ્તિક"
     },
     {
         "GUID": "55d89e5f-300c-4ce5-9b5d-a0e1b9c95d06",
@@ -23214,8 +23109,8 @@
     {
         "GUID": "d8618109-5ada-4fb5-8512-7d2fc9216533",
         "RANK": "3792",
-        "EN": "to cuddle",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "cuddle",
+        "TYPE_DETAIL": "Nom",
         "TRAD": "આલિંગન કરવું"
     },
     {
@@ -23408,13 +23303,6 @@
         "TRAD": "આંતરિક"
     },
     {
-        "GUID": "d8465da8-79a7-4dee-902f-241cbc3bf390",
-        "RANK": "3824",
-        "EN": "to elf",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પિશાચને"
-    },
-    {
         "GUID": "fcfcd524-7d33-476c-96b3-64018ab1bb88",
         "RANK": "3825",
         "EN": "Claw",
@@ -23522,9 +23410,9 @@
     {
         "GUID": "08eb44f1-9ff3-49c8-8fb4-2545fda44501",
         "RANK": "3846",
-        "EN": "to homemade",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ઘરે બનાવેલા માટે"
+        "EN": "homemade",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ઘરે બનાવેલ"
     },
     {
         "GUID": "9265e757-ae05-4e21-abdf-fa26b4359a8e",
@@ -23613,9 +23501,9 @@
     {
         "GUID": "56c142cf-3105-494c-9e4f-72a71067c7bc",
         "RANK": "3862",
-        "EN": "to rig",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "રીગ કરવું"
+        "EN": "rig",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "રિગ"
     },
     {
         "GUID": "7c9952e8-68c3-44b4-8780-9eb60b8b6856",
@@ -23648,9 +23536,9 @@
     {
         "GUID": "7140cf81-754d-4c53-9fe4-89114e09ddab",
         "RANK": "3868",
-        "EN": "to surgeon",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સર્જનને"
+        "EN": "surgeon",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સર્જન"
     },
     {
         "GUID": "b78a9759-4eec-4345-ac5a-c31937d06c28",
@@ -23725,9 +23613,9 @@
     {
         "GUID": "7a587090-3c82-462e-ab78-f34378b4b454",
         "RANK": "3881",
-        "EN": "to appeal",
+        "EN": "appeal",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "અપીલ કરવી"
+        "TRAD": "અપીલ"
     },
     {
         "GUID": "2750eb88-f053-4844-8aaa-424a3a0cb62d",
@@ -24045,13 +23933,6 @@
         "TRAD": "પ્રેરણા"
     },
     {
-        "GUID": "1b894552-a339-4f27-8f5e-6ad920205095",
-        "RANK": "3934",
-        "EN": "to masturbate",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "હસ્તમૈથુન કરવું"
-    },
-    {
         "GUID": "522d38b6-edc3-46d8-b18e-b7c157238707",
         "RANK": "3935",
         "EN": "Melon",
@@ -24068,8 +23949,8 @@
     {
         "GUID": "56039793-99ba-4522-963b-672a357d1549",
         "RANK": "3937",
-        "EN": "to midget",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "midget",
+        "TYPE_DETAIL": "Nom",
         "TRAD": "બદમાશ માટે"
     },
     {
@@ -24152,7 +24033,7 @@
     {
         "GUID": "ce1ac77b-ac15-4c70-bdf3-cfde3f25423f",
         "RANK": "3949",
-        "EN": "to snuggle",
+        "EN": "snuggle",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "આલિંગન કરવું"
     },
@@ -24180,9 +24061,9 @@
     {
         "GUID": "7b2333c4-4d07-457e-94ca-ada2425c7473",
         "RANK": "3953",
-        "EN": "to tin",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ટીન કરવું"
+        "EN": "tin",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ટીન"
     },
     {
         "GUID": "f85aec5d-da42-4205-8c08-604d8c9c057a",
@@ -24194,9 +24075,9 @@
     {
         "GUID": "3a0d8946-5a18-431c-aabd-b34a1e31d685",
         "RANK": "3955",
-        "EN": "to zoom",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ઝૂમ કરવા માટે"
+        "EN": "zoom",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ઝૂમ કરો"
     },
     {
         "GUID": "5bf37724-67bb-4121-bff8-d3fa2677c345",
@@ -24607,9 +24488,9 @@
     {
         "GUID": "7760a8a3-88cd-4d65-8405-e65ea3f87354",
         "RANK": "4025",
-        "EN": "to date",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "આજ સુધી"
+        "EN": "date",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "તારીખ"
     },
     {
         "GUID": "33d9569e-dc27-4a91-900c-b8e1e23348ba",
@@ -24698,9 +24579,9 @@
     {
         "GUID": "cf485261-be08-427b-a194-8e2d32f297b0",
         "RANK": "4041",
-        "EN": "to psychiatrist",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મનોચિકિત્સકને"
+        "EN": "psychiatrist",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મનોચિકિત્સક"
     },
     {
         "GUID": "9a5944a8-70c2-4550-94b0-6ca605b300ad",
@@ -24712,9 +24593,9 @@
     {
         "GUID": "aaf0577d-4921-48ce-87ca-4a738da1e6d0",
         "RANK": "4043",
-        "EN": "to shotgun",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગોળીબાર કરવા માટે"
+        "EN": "shotgun",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "શોટગન"
     },
     {
         "GUID": "3e60b952-ce77-453a-a8b1-7cd2aa16d04c",
@@ -24761,9 +24642,9 @@
     {
         "GUID": "9a491143-2d4c-4a26-83a5-3b1d6b8180db",
         "RANK": "4051",
-        "EN": "to dawn",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પરોઢ સુધી"
+        "EN": "dawn",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પરોઢ"
     },
     {
         "GUID": "f1f6e2d5-2946-4eec-9ffb-7f9f1198e4b1",
@@ -24915,9 +24796,9 @@
     {
         "GUID": "f079bf1f-2fd2-45df-9df0-8e2265ed10c9",
         "RANK": "4076",
-        "EN": "to naive",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ભોળા માટે"
+        "EN": "naive",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "ભોળું"
     },
     {
         "GUID": "4e67e404-30ee-4780-9254-0e0db2f10888",
@@ -25041,16 +24922,9 @@
     {
         "GUID": "78b18eae-c8b1-454d-97c6-2cc00f9a4f7a",
         "RANK": "4096",
-        "EN": "to addict",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વ્યસની બનવું"
-    },
-    {
-        "GUID": "9ec876fd-c771-4dd5-b29b-4283cee7002b",
-        "RANK": "4097",
-        "EN": "to bah",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "બાહ કરવા માટે"
+        "EN": "addict",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "વ્યસની"
     },
     {
         "GUID": "bb9ecbd0-ecf2-4c1c-a670-6813e7961ed6",
@@ -25137,13 +25011,6 @@
         "TRAD": "વિક્ષેપ"
     },
     {
-        "GUID": "4bdb9d10-7547-43a0-87f3-b93931aaf87c",
-        "RANK": "4113",
-        "EN": "to dunk",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ડૂબકી મારવી"
-    },
-    {
         "GUID": "1551bbb8-e897-4daf-947f-de29c9e48f74",
         "RANK": "4114",
         "EN": "Edition",
@@ -25209,9 +25076,9 @@
     {
         "GUID": "0e2e60c9-fa35-4700-9dbc-91a60417bc80",
         "RANK": "4123",
-        "EN": "to kit",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સેટ કરવા માટે"
+        "EN": "kit",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કીટ"
     },
     {
         "GUID": "c7ef9807-7c90-4a5e-9857-c7f132481ddc",
@@ -25321,9 +25188,9 @@
     {
         "GUID": "f4b2b242-cec6-4869-8112-3eeb99b60a65",
         "RANK": "4141",
-        "EN": "to toad",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "દેડકા માટે"
+        "EN": "toad",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "દેડકો"
     },
     {
         "GUID": "5ea867e6-c2ca-4c19-9409-8c0bd6ca47fe",
@@ -25783,9 +25650,9 @@
     {
         "GUID": "7fb02f5f-0548-47c2-8a30-e20d9d644363",
         "RANK": "4219",
-        "EN": "to hen",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મરઘી માટે"
+        "EN": "hen",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મરઘી"
     },
     {
         "GUID": "3cec1935-2f8c-4f41-a0ea-d3b9370bf139",
@@ -25874,8 +25741,8 @@
     {
         "GUID": "9f77fc13-5306-4a61-833d-2c40f1a54c95",
         "RANK": "4235",
-        "EN": "to severe",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "severe",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "ગંભીર"
     },
     {
@@ -26077,7 +25944,7 @@
     {
         "GUID": "4a02b635-03c9-4d64-a139-5109672796b8",
         "RANK": "4270",
-        "EN": "to fry",
+        "EN": "fry",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "તળવું"
     },
@@ -26119,9 +25986,9 @@
     {
         "GUID": "83fb7565-d9b9-4db4-b99e-9601543c6cd3",
         "RANK": "4278",
-        "EN": "to milkshake",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મિલ્કશેક કરવું"
+        "EN": "milkshake",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મિલ્કશેક"
     },
     {
         "GUID": "5eb448ac-400a-491a-b879-23bc9c13eae8",
@@ -26182,9 +26049,9 @@
     {
         "GUID": "497045af-e1d3-4d11-9f14-24292148b82f",
         "RANK": "4288",
-        "EN": "to sane",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્વસ્થ થવું"
+        "EN": "sane",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "સમજદાર"
     },
     {
         "GUID": "f7fbd796-c93c-4b57-84f7-1d67cd33f856",
@@ -26399,9 +26266,9 @@
     {
         "GUID": "56c9aec2-1966-4279-8738-7ae5d7973fb8",
         "RANK": "4321",
-        "EN": "to jinx",
+        "EN": "jinx",
         "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મજાક કરવી"
+        "TRAD": "જિન્ક્સ"
     },
     {
         "GUID": "077a7563-ea94-487a-9fc9-7cfef90d6991",
@@ -26490,8 +26357,8 @@
     {
         "GUID": "06ef998a-0224-4095-88d7-5e68d836e261",
         "RANK": "4335",
-        "EN": "to priceless",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "priceless",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "અમૂલ્ય"
     },
     {
@@ -26546,9 +26413,9 @@
     {
         "GUID": "87d198e9-08c8-4a0b-8d0d-0038274e3807",
         "RANK": "4345",
-        "EN": "to sidewalk",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ફૂટપાથ પર"
+        "EN": "sidewalk",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ફૂટપાથ"
     },
     {
         "GUID": "84860e05-0219-494b-a16d-91c3c46baeb6",
@@ -26567,9 +26434,9 @@
     {
         "GUID": "d97dbfaf-c4b4-4b23-8d74-4fa8a24dabe2",
         "RANK": "4348",
-        "EN": "to spine",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "કરોડરજ્જુ સુધી"
+        "EN": "spine",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "કરોડરજ્જુ"
     },
     {
         "GUID": "075cddc5-fcb7-4e44-a6ab-841a2cd6c431",
@@ -26665,9 +26532,9 @@
     {
         "GUID": "cf0e60d0-9d5d-4a7e-a621-0cf8e52bcf2a",
         "RANK": "4365",
-        "EN": "to aid",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મદદ કરવી"
+        "EN": "aid",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સહાય"
     },
     {
         "GUID": "6c1a244f-7335-42d1-9428-b255d599c96c",
@@ -26798,8 +26665,8 @@
     {
         "GUID": "d1862023-dadd-4ceb-ac7f-3a9de07b98ad",
         "RANK": "4387",
-        "EN": "to insensitive",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "insensitive",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "અસંવેદનશીલ"
     },
     {
@@ -26854,9 +26721,9 @@
     {
         "GUID": "285c7924-6489-4171-bb59-c76ffd3f6b47",
         "RANK": "4395",
-        "EN": "to omelet",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "આમલેટ બનાવવું"
+        "EN": "omelet",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ઓમેલેટ"
     },
     {
         "GUID": "27e95a84-56ba-4263-b4e3-bfc2704a84aa",
@@ -27153,13 +27020,6 @@
         "TRAD": "નન"
     },
     {
-        "GUID": "666b77ec-b235-4148-8a33-9f5e9ab6d63c",
-        "RANK": "4446",
-        "EN": "P.m.",
-        "TYPE_DETAIL": "Numéral",
-        "TRAD": "બપોરે"
-    },
-    {
         "GUID": "05471690-70e6-4a06-86d9-7d25eb46fcc1",
         "RANK": "4447",
         "EN": "Patience",
@@ -27272,13 +27132,6 @@
         "TRAD": "ઉપશીર્ષક"
     },
     {
-        "GUID": "c39f2c18-f239-417e-8d55-ff9e903ba8a7",
-        "RANK": "4464",
-        "EN": "to tackle",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સામનો કરવો"
-    },
-    {
         "GUID": "4dd3e538-9da0-4c6b-bb0c-034ab3215bc9",
         "RANK": "4465",
         "EN": "Tacky",
@@ -27323,16 +27176,16 @@
     {
         "GUID": "e9b04114-5b8c-4fa0-aea6-2bc585b46ba7",
         "RANK": "4472",
-        "EN": "to vegan",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "શાકાહારી બનવું"
+        "EN": "vegan",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "શાકાહારી"
     },
     {
         "GUID": "d78f9bc0-8c34-4c0c-a3b2-40a88202edf3",
         "RANK": "4473",
-        "EN": "to womb",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગર્ભમાં જવું"
+        "EN": "womb",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ગર્ભાશય"
     },
     {
         "GUID": "a3e9902f-4565-4282-bbb2-b0df39639314",
@@ -27449,9 +27302,9 @@
     {
         "GUID": "08d28f38-6ca3-4974-8f63-d1504ec6b9a2",
         "RANK": "4496",
-        "EN": "to hike",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પગપાળા જવું"
+        "EN": "hike",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પદયાત્રા"
     },
     {
         "GUID": "8a99d786-a4d2-45de-87c6-5ddedd56f55a",
@@ -27463,9 +27316,9 @@
     {
         "GUID": "1aa4bbf9-f0a5-49b1-a0e3-4052dd9574f5",
         "RANK": "4498",
-        "EN": "to intimacy",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "આત્મીયતા માટે"
+        "EN": "intimacy",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "આત્મીયતા"
     },
     {
         "GUID": "e8c2a7fc-4ac8-4d6c-b685-de0d0c62b144",
@@ -27492,7 +27345,7 @@
         "GUID": "7c161e00-b21a-48e9-aa78-49c94fdcb8d5",
         "RANK": "4502",
         "EN": "Ninth",
-        "TYPE_DETAIL": "Numéral",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "નવમો"
     },
     {
@@ -27645,9 +27498,9 @@
     {
         "GUID": "79a6bae1-af0f-422d-98a8-5aefd4978ff6",
         "RANK": "4527",
-        "EN": "to unicorn",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "યુનિકોર્ન માટે"
+        "EN": "unicorn",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "યુનિકોર્ન"
     },
     {
         "GUID": "94a73e7c-4080-49c2-bdeb-101795605b29",
@@ -27939,9 +27792,9 @@
     {
         "GUID": "7f7d374e-e469-41e3-ad2b-0ba06262c960",
         "RANK": "4576",
-        "EN": "to passport",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "પાસપોર્ટ માટે"
+        "EN": "passport",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "પાસપોર્ટ"
     },
     {
         "GUID": "9b38e153-7fde-48fc-8dae-70ded42c8b9d",
@@ -28072,9 +27925,9 @@
     {
         "GUID": "e6b658ff-6636-4a7f-a9d8-e22eb86c7736",
         "RANK": "4595",
-        "EN": "to tab",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ટેબ પર"
+        "EN": "tab",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ટેબ"
     },
     {
         "GUID": "dc6a38cb-df4a-4520-8dd6-1abf4fb7ba75",
@@ -28208,13 +28061,6 @@
         "EN": "Brakes",
         "TYPE_DETAIL": "Nom",
         "TRAD": "બ્રેક્સ"
-    },
-    {
-        "GUID": "115134f7-4a22-4fb5-97cc-591d2229a17d",
-        "RANK": "4617",
-        "EN": "to bre",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "બ્રી"
     },
     {
         "GUID": "3f65a62f-d32d-40ec-92bb-46163db4d5ed",
@@ -28877,9 +28723,9 @@
     {
         "GUID": "14a69e88-3cbd-44bd-8fc2-4e11d81d1722",
         "RANK": "4725",
-        "EN": "to chalk",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ચાક કરવું"
+        "EN": "chalk",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ચાક"
     },
     {
         "GUID": "fe25492c-b65e-48ac-bd2a-e8bff030b638",
@@ -28940,9 +28786,9 @@
     {
         "GUID": "8705d9b7-4817-4c90-ae17-26f7a5bff158",
         "RANK": "4737",
-        "EN": "to ideal",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "આદર્શ માટે"
+        "EN": "ideal",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "આદર્શ"
     },
     {
         "GUID": "5819420f-8779-440e-9f18-af31a0249a5a",
@@ -29031,7 +28877,7 @@
     {
         "GUID": "9d698a4a-0074-4cc1-bc79-e0d7913f7790",
         "RANK": "4752",
-        "EN": "to conclude",
+        "EN": "conclude",
         "TYPE_DETAIL": "verbe à l'infinitif",
         "TRAD": "નિષ્કર્ષ કાઢવો"
     },
@@ -29066,9 +28912,9 @@
     {
         "GUID": "1107b7f7-62b3-40fd-baad-5390a71dc8b9",
         "RANK": "4757",
-        "EN": "to dorm",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "શયનગૃહમાં રહેવું"
+        "EN": "dorm",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "શયનગૃહ"
     },
     {
         "GUID": "e5f75282-6e24-46a3-be12-dc7245f96895",
@@ -29094,9 +28940,9 @@
     {
         "GUID": "0a559b3a-6d6e-4516-9088-955e73930988",
         "RANK": "4761",
-        "EN": "to filth",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગંદકી કરવી"
+        "EN": "filth",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ગંદકી"
     },
     {
         "GUID": "c46e1bae-7234-46c4-8d40-affff87c1722",
@@ -29125,13 +28971,6 @@
         "EN": "Genitals",
         "TYPE_DETAIL": "Nom",
         "TRAD": "ગુપ્તાંગ"
-    },
-    {
-        "GUID": "591edb5e-8234-4e77-8075-23570c00b28b",
-        "RANK": "4766",
-        "EN": "to goddamne",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ભગવાનને"
     },
     {
         "GUID": "4c754b11-dd1f-4f45-9e3c-f1046a54f82c",
@@ -29402,9 +29241,9 @@
     {
         "GUID": "f3070cf3-2b5e-42b6-9d7c-62063e19c200",
         "RANK": "4811",
-        "EN": "to alternative",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વૈકલ્પિક રીતે"
+        "EN": "alternative",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "વૈકલ્પિક"
     },
     {
         "GUID": "f841e125-c282-4720-87d2-f01063d7bc58",
@@ -29472,9 +29311,9 @@
     {
         "GUID": "b5713bb6-5bda-4a76-a5de-8eb8e77b3d3d",
         "RANK": "4824",
-        "EN": "to gnome",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "જીનોમ માટે"
+        "EN": "gnome",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "જીનોમ"
     },
     {
         "GUID": "9c79fdee-8a69-4f2e-9264-fa729d9347a8",
@@ -29496,13 +29335,6 @@
         "EN": "Kiddo",
         "TYPE_DETAIL": "Nom",
         "TRAD": "કિડો"
-    },
-    {
-        "GUID": "c6fbfe60-420d-482a-9e5d-1a0ae386a6d5",
-        "RANK": "4828",
-        "EN": "Kosher",
-        "TYPE_DETAIL": "Pronom",
-        "TRAD": "કોશર"
     },
     {
         "GUID": "467315b6-e232-4c5a-9c18-1edf12347498",
@@ -29612,9 +29444,9 @@
     {
         "GUID": "3957e8b5-c654-4896-b1c6-0ea38f2807e8",
         "RANK": "4847",
-        "EN": "to trauma",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ઇજા પહોંચાડવી"
+        "EN": "trauma",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ઇજા"
     },
     {
         "GUID": "f9bd8e90-35cc-4b39-946b-077a1b903b28",
@@ -29689,9 +29521,9 @@
     {
         "GUID": "4896a58e-bb5c-4133-adbb-9841ba5997d0",
         "RANK": "4861",
-        "EN": "to assist",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મદદ કરવી"
+        "EN": "assist",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સહાય કરવી"
     },
     {
         "GUID": "22191dfe-27d6-4540-b589-9235ab5fe095",
@@ -29731,8 +29563,8 @@
     {
         "GUID": "7f6d174d-c74e-4b83-b49a-4bdad8690b9d",
         "RANK": "4869",
-        "EN": "to convenient",
-        "TYPE_DETAIL": "verbe à l'infinitif",
+        "EN": "convenient",
+        "TYPE_DETAIL": "Adjectif",
         "TRAD": "અનુકૂળ"
     },
     {
@@ -29836,9 +29668,9 @@
     {
         "GUID": "f56836ba-d07f-427c-898e-d29dd25afd2e",
         "RANK": "4884",
-        "EN": "to galaxy",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગેલેક્સી સુધી"
+        "EN": "galaxy",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "આકાશગંગા"
     },
     {
         "GUID": "ed4f7120-a75b-45fe-8767-159d8b3e9655",
@@ -29885,9 +29717,9 @@
     {
         "GUID": "6f3a14b1-08c3-461e-a825-ea98b2134fb1",
         "RANK": "4891",
-        "EN": "to lettuce",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "લેટીસ માટે"
+        "EN": "lettuce",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "લેટીસ"
     },
     {
         "GUID": "5b821e6d-85b8-43bb-acc7-a8573b6b4d7c",
@@ -30018,9 +29850,9 @@
     {
         "GUID": "cd805830-aaaa-4c84-ae70-1e9194ca9adb",
         "RANK": "4911",
-        "EN": "to swimsuit",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્વિમસ્યુટ માટે"
+        "EN": "swimsuit",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સ્વિમસ્યુટ"
     },
     {
         "GUID": "3a31b1ee-8d48-4b88-970b-b3f3df7231a6",
@@ -30088,9 +29920,9 @@
     {
         "GUID": "9cb5a56a-d714-4651-b9cc-8e8ce84cdd19",
         "RANK": "4922",
-        "EN": "to floss",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ફ્લોસ કરવું"
+        "EN": "floss",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ફ્લોસ"
     },
     {
         "GUID": "5a28774c-7882-4b88-812f-7661656bfafd",
@@ -30172,9 +30004,9 @@
     {
         "GUID": "068f77ab-9574-403f-a820-20991c7cfc68",
         "RANK": "4936",
-        "EN": "to choir",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ગાયકવૃંદ માટે"
+        "EN": "choir",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ગાયકવૃંદ"
     },
     {
         "GUID": "1417647a-c348-4041-9833-064fa937b286",
@@ -30326,9 +30158,9 @@
     {
         "GUID": "3913c331-ee41-4275-aa56-49d048393f80",
         "RANK": "4964",
-        "EN": "to moose",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "મૂસ કરવું"
+        "EN": "moose",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "મૂસ"
     },
     {
         "GUID": "8794c77b-b413-4d3e-8dbe-17da7dc1cbbc",
@@ -30445,9 +30277,9 @@
     {
         "GUID": "f82d5ac1-5ee3-4734-a2e4-3b6b75402045",
         "RANK": "4983",
-        "EN": "to squad",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "ટીમમાં જોડવું"
+        "EN": "squad",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "ટુકડી"
     },
     {
         "GUID": "5533c62d-395d-48f5-adbb-9a6dc71d2860",
@@ -30466,9 +30298,9 @@
     {
         "GUID": "143c2d7e-b93b-4578-985f-cdbb8f406a8a",
         "RANK": "4986",
-        "EN": "to tribute",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "શ્રદ્ધાંજલિ આપવી"
+        "EN": "tribute",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "શ્રદ્ધાંજલિ"
     },
     {
         "GUID": "6c8fbbe4-cc44-4799-823b-f26f408b374b",
@@ -30480,9 +30312,9 @@
     {
         "GUID": "053b834e-86bf-4952-89b2-2f285c22f143",
         "RANK": "4988",
-        "EN": "to vile",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "અધમ કરવું"
+        "EN": "vile",
+        "TYPE_DETAIL": "Adjectif",
+        "TRAD": "અધમ"
     },
     {
         "GUID": "89884456-3432-419e-870b-52fd694dcde0",
@@ -30508,9 +30340,9 @@
     {
         "GUID": "a4b91f6a-7cd6-4eba-9687-0eca3d206b54",
         "RANK": "4992",
-        "EN": "to calf",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "વાછરડાને"
+        "EN": "calf",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "વાછરડું"
     },
     {
         "GUID": "72df1529-109a-4fde-b567-faf93b6c5f9f",
@@ -30949,9 +30781,9 @@
     {
         "GUID": "15b15ea9-93ce-49a0-9882-42a189b373ec",
         "RANK": "5061",
-        "EN": "to memorial",
-        "TYPE_DETAIL": "verbe à l'infinitif",
-        "TRAD": "સ્મારક માટે"
+        "EN": "memorial",
+        "TYPE_DETAIL": "Nom",
+        "TRAD": "સ્મારક"
     },
     {
         "GUID": "50f519ff-23f3-4f57-a454-938cb0b5474a",

@@ -610,4 +610,16 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'অজ্ঞাত';
+
+  @override
+  String get restaurer_achats => 'ক্ৰয়সমূহ পুনৰুদ্ধাৰ কৰক';
+
+  @override
+  String get restaurer_achats_error => 'পুনৰুদ্ধাৰ বিফল হ\'ল। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।';
+
+  @override
+  String get restauration_terminee => 'পুনৰুদ্ধাৰ সম্পূৰ্ণ। যদি আপোনাৰ এটা সক্ৰিয় স্বাক্ষৰণ আছিল, এতিয়া ইয়াক পুনৰুদ্ধাৰ কৰা হৈছে।';
+
+  @override
+  String get vocabulaire_type_verbe => 'ক্ৰিয়া';
 }

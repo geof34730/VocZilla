@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Prepositio",
     "vocabulaire_type_verbeModal": "modaalinen verbi",
     "vocabulaire_type_verbeInfinitif": "infinitiiviverbi",
-    "vocabulaire_type_inconnu": "tuntematon"
+    "vocabulaire_type_inconnu": "tuntematon",
+    "restaurer_achats": "Palauta ostokset",
+    "restaurer_achats_error": "Palautus epäonnistui. Yritä uudelleen.",
+    "restauration_terminee": "Palautus valmis. Jos sinulla oli aktiivinen tilaus, se on nyt palautettu.",
+    "vocabulaire_type_verbe": "verbi"
 }

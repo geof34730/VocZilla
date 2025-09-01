@@ -1440,6 +1440,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'unknown'**
   String get vocabulaire_type_inconnu;
+
+  /// No description provided for @restaurer_achats.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore purchases'**
+  String get restaurer_achats;
+
+  /// No description provided for @restaurer_achats_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Restoration failed. Please try again.'**
+  String get restaurer_achats_error;
+
+  /// No description provided for @restauration_terminee.
+  ///
+  /// In en, this message translates to:
+  /// **'Restoration complete. If you had an active subscription, it is now restored.'**
+  String get restauration_terminee;
+
+  /// No description provided for @vocabulaire_type_verbe.
+  ///
+  /// In en, this message translates to:
+  /// **'verb'**
+  String get vocabulaire_type_verbe;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

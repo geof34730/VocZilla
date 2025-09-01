@@ -610,4 +610,16 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'neznano';
+
+  @override
+  String get restaurer_achats => 'Obnovi nakupe';
+
+  @override
+  String get restaurer_achats_error => 'Obnovitev ni uspela. Poskusite znova.';
+
+  @override
+  String get restauration_terminee => 'Obnovitev je končana. Če ste imeli aktivno naročnino, je zdaj obnovljena.';
+
+  @override
+  String get vocabulaire_type_verbe => 'glagol';
 }

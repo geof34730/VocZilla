@@ -34,13 +34,13 @@ echo "📦 Version détectée : $VERSION_NAME"
 
 
 PLATFORM="ios"
-SCREENSHOT_DIR="./fastlane/metadata/ios"
+METADATA_DIR="./fastlane/metadata/ios"
 
 # Lancement de fastlane
 FASTLANE_ENABLE_BETA_DELIVER_SYNC_SCREENSHOTS=1 \
 fastlane deliver \
   --platform "$PLATFORM" \
-  --screenshots_path "$SCREENSHOT_DIR" \
+  --metadata_path "$METADATA_DIR" \
   --skip_binary_upload true \
   --skip_screenshots true \
   --skip_metadata false \

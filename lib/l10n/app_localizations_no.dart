@@ -610,4 +610,16 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ukjent';
+
+  @override
+  String get restaurer_achats => 'Gjenopprett kjøp';
+
+  @override
+  String get restaurer_achats_error => 'Gjenopprettingen mislyktes. Prøv på nytt.';
+
+  @override
+  String get restauration_terminee => 'Gjenopprettingen er fullført. Hvis du hadde et aktivt abonnement, er det nå gjenopprettet.';
+
+  @override
+  String get vocabulaire_type_verbe => 'verb';
 }

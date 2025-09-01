@@ -610,4 +610,16 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'naməlum';
+
+  @override
+  String get restaurer_achats => 'Satınalmaları bərpa edin';
+
+  @override
+  String get restaurer_achats_error => 'Bərpa uğursuz oldu. Yenidən cəhd edin.';
+
+  @override
+  String get restauration_terminee => 'Bərpa tamamlandı. Əgər aktiv abunəliyiniz varsa, o, indi bərpa olunub.';
+
+  @override
+  String get vocabulaire_type_verbe => 'fel';
 }

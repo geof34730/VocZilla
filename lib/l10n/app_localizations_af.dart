@@ -610,4 +610,16 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'onbekend';
+
+  @override
+  String get restaurer_achats => 'Herstel aankope';
+
+  @override
+  String get restaurer_achats_error => 'Herstel het misluk. Probeer asseblief weer.';
+
+  @override
+  String get restauration_terminee => 'Herstel voltooi. Indien jy \'n aktiewe intekening gehad het, is dit nou herstel.';
+
+  @override
+  String get vocabulaire_type_verbe => 'werkwoord';
 }

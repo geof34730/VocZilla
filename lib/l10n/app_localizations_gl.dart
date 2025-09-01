@@ -610,4 +610,16 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'descoñecido';
+
+  @override
+  String get restaurer_achats => 'Restaurar compras';
+
+  @override
+  String get restaurer_achats_error => 'Fallou a restauración. Téntao de novo.';
+
+  @override
+  String get restauration_terminee => 'Restauración completada. Se tiñas unha subscrición activa, xa está restaurada.';
+
+  @override
+  String get vocabulaire_type_verbe => 'verbo';
 }

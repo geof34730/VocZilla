@@ -610,4 +610,16 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'නොදන්නා';
+
+  @override
+  String get restaurer_achats => 'මිලදී ගැනීම් ප්‍රතිසාධනය කරන්න';
+
+  @override
+  String get restaurer_achats_error => 'ප්‍රතිසාධනය අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.';
+
+  @override
+  String get restauration_terminee => 'ප්‍රතිසාධනය සම්පූර්ණයි. ඔබට සක්‍රිය දායකත්වයක් තිබුණේ නම්, එය දැන් ප්‍රතිසාධනය කර ඇත.';
+
+  @override
+  String get vocabulaire_type_verbe => 'ක්‍රියා පදය';
 }

@@ -610,4 +610,16 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => '알려지지 않은';
+
+  @override
+  String get restaurer_achats => '구매 복원';
+
+  @override
+  String get restaurer_achats_error => '복원에 실패했습니다. 다시 시도해 주세요.';
+
+  @override
+  String get restauration_terminee => '복구가 완료되었습니다. 활성 구독이 있으셨다면 이제 복구되었습니다.';
+
+  @override
+  String get vocabulaire_type_verbe => '동사';
 }

@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Forsetning",
     "vocabulaire_type_verbeModal": "sagnorð",
     "vocabulaire_type_verbeInfinitif": "óendanlegt sögn",
-    "vocabulaire_type_inconnu": "óþekkt"
+    "vocabulaire_type_inconnu": "óþekkt",
+    "restaurer_achats": "Endurheimta kaup",
+    "restaurer_achats_error": "Endurheimt mistókst. Reyndu aftur.",
+    "restauration_terminee": "Endurheimt lokið. Ef þú varst með virka áskrift er hún nú endurheimt.",
+    "vocabulaire_type_verbe": "sögn"
 }

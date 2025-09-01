@@ -610,4 +610,16 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'noma\'lum';
+
+  @override
+  String get restaurer_achats => 'Xaridlarni tiklash';
+
+  @override
+  String get restaurer_achats_error => 'Qayta tiklash amalga oshmadi. Iltimos, qayta urinib koʻring.';
+
+  @override
+  String get restauration_terminee => 'Qayta tiklash tugallandi. Agar sizda faol obuna bo\'lsa, u endi tiklandi.';
+
+  @override
+  String get vocabulaire_type_verbe => 'fe\'l';
 }

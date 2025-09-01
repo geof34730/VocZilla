@@ -610,4 +610,16 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'không rõ';
+
+  @override
+  String get restaurer_achats => 'Khôi phục giao dịch mua';
+
+  @override
+  String get restaurer_achats_error => 'Khôi phục không thành công. Vui lòng thử lại.';
+
+  @override
+  String get restauration_terminee => 'Quá trình khôi phục hoàn tất. Nếu bạn có đăng ký đang hoạt động, đăng ký đó hiện đã được khôi phục.';
+
+  @override
+  String get vocabulaire_type_verbe => 'động từ';
 }

@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Предлог",
     "vocabulaire_type_verbeModal": "модальды етістік",
     "vocabulaire_type_verbeInfinitif": "инфинитив етістік",
-    "vocabulaire_type_inconnu": "белгісіз"
+    "vocabulaire_type_inconnu": "белгісіз",
+    "restaurer_achats": "Сатып алуларды қалпына келтіріңіз",
+    "restaurer_achats_error": "Қалпына келтіру сәтсіз аяқталды. Қайталап көріңіз.",
+    "restauration_terminee": "Қалпына келтіру аяқталды. Егер сізде белсенді жазылым болса, ол енді қалпына келтірілді.",
+    "vocabulaire_type_verbe": "етістік"
 }

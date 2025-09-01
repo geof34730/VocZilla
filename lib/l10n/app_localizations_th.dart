@@ -610,4 +610,16 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ไม่ทราบ';
+
+  @override
+  String get restaurer_achats => 'คืนค่าการซื้อ';
+
+  @override
+  String get restaurer_achats_error => 'การคืนค่าล้มเหลว โปรดลองอีกครั้ง';
+
+  @override
+  String get restauration_terminee => 'การกู้คืนเสร็จสมบูรณ์แล้ว หากคุณมีการสมัครใช้งานที่ใช้งานอยู่ คุณจะได้รับการกู้คืนแล้ว';
+
+  @override
+  String get vocabulaire_type_verbe => 'กริยา';
 }

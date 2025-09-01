@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Kata depan",
     "vocabulaire_type_verbeModal": "kata kerja modal",
     "vocabulaire_type_verbeInfinitif": "kata kerja infinitif",
-    "vocabulaire_type_inconnu": "tidak diketahui"
+    "vocabulaire_type_inconnu": "tidak diketahui",
+    "restaurer_achats": "Pulihkan pembelian",
+    "restaurer_achats_error": "Pemulihan gagal. Sila cuba lagi.",
+    "restauration_terminee": "Pemulihan selesai. Jika anda mempunyai langganan aktif, ia kini dipulihkan.",
+    "vocabulaire_type_verbe": "kata kerja"
 }

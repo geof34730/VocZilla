@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposição",
     "vocabulaire_type_verbeModal": "verbo modal",
     "vocabulaire_type_verbeInfinitif": "verbo infinitivo",
-    "vocabulaire_type_inconnu": "desconhecido"
+    "vocabulaire_type_inconnu": "desconhecido",
+    "restaurer_achats": "Restaurar compras",
+    "restaurer_achats_error": "A restauração falhou. Tente novamente.",
+    "restauration_terminee": "Restauração concluída. Se você tinha uma assinatura ativa, ela foi restaurada.",
+    "vocabulaire_type_verbe": "verbo"
 }

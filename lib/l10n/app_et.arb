@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Eessõna",
     "vocabulaire_type_verbeModal": "modaalverb",
     "vocabulaire_type_verbeInfinitif": "infinitiivverb",
-    "vocabulaire_type_inconnu": "tundmatu"
+    "vocabulaire_type_inconnu": "tundmatu",
+    "restaurer_achats": "Taasta ostud",
+    "restaurer_achats_error": "Taastamine ebaõnnestus. Palun proovige uuesti.",
+    "restauration_terminee": "Taastamine on lõpetatud. Kui teil oli aktiivne tellimus, on see nüüd taastatud.",
+    "vocabulaire_type_verbe": "tegusõna"
 }

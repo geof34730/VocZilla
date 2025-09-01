@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "පෙරනිමිත්ත",
     "vocabulaire_type_verbeModal": "මාදිලියේ ක්‍රියා පදය",
     "vocabulaire_type_verbeInfinitif": "අනන්ත ක්‍රියා පදය",
-    "vocabulaire_type_inconnu": "නොදන්නා"
+    "vocabulaire_type_inconnu": "නොදන්නා",
+    "restaurer_achats": "මිලදී ගැනීම් ප්‍රතිසාධනය කරන්න",
+    "restaurer_achats_error": "ප්‍රතිසාධනය අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+    "restauration_terminee": "ප්‍රතිසාධනය සම්පූර්ණයි. ඔබට සක්‍රිය දායකත්වයක් තිබුණේ නම්, එය දැන් ප්‍රතිසාධනය කර ඇත.",
+    "vocabulaire_type_verbe": "ක්‍රියා පදය"
 }

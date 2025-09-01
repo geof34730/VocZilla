@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposition",
     "vocabulaire_type_verbeModal": "modal verb",
     "vocabulaire_type_verbeInfinitif": "infinitive verb",
-    "vocabulaire_type_inconnu": "unknown"
+    "vocabulaire_type_inconnu": "unknown",
+    "restaurer_achats": "Restore purchases",
+    "restaurer_achats_error": "Restoration failed. Please try again.",
+    "restauration_terminee": "Restoration complete. If you had an active subscription, it is now restored.",
+    "vocabulaire_type_verbe": "verb"
 }

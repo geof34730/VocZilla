@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Präposition",
     "vocabulaire_type_verbeModal": "Modalverb",
     "vocabulaire_type_verbeInfinitif": "Infinitivverb",
-    "vocabulaire_type_inconnu": "unbekannt"
+    "vocabulaire_type_inconnu": "unbekannt",
+    "restaurer_achats": "Käufe wiederherstellen",
+    "restaurer_achats_error": "Wiederherstellung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "restauration_terminee": "Wiederherstellung abgeschlossen. Wenn Sie ein aktives Abonnement hatten, ist es jetzt wiederhergestellt.",
+    "vocabulaire_type_verbe": "Verb"
 }

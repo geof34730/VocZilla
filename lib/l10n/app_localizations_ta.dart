@@ -610,4 +610,16 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'தெரியவில்லை';
+
+  @override
+  String get restaurer_achats => 'வாங்கியவற்றை மீட்டெடு';
+
+  @override
+  String get restaurer_achats_error => 'மீட்டமைக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.';
+
+  @override
+  String get restauration_terminee => 'மீட்டமைப்பு முடிந்தது. உங்களிடம் செயலில் உள்ள சந்தா இருந்தால், அது இப்போது மீட்டமைக்கப்பட்டுள்ளது.';
+
+  @override
+  String get vocabulaire_type_verbe => 'வினை';
 }

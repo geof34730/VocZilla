@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "ಪೂರ್ವಭಾವಿ ಸ್ಥಾನ",
     "vocabulaire_type_verbeModal": "ಮೋಡಲ್ ಕ್ರಿಯಾಪದ",
     "vocabulaire_type_verbeInfinitif": "ಅನಂತ ಕ್ರಿಯಾಪದ",
-    "vocabulaire_type_inconnu": "ತಿಳಿದಿಲ್ಲ"
+    "vocabulaire_type_inconnu": "ತಿಳಿದಿಲ್ಲ",
+    "restaurer_achats": "ಖರೀದಿಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಿ",
+    "restaurer_achats_error": "ಮರುಸ್ಥಾಪನೆ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "restauration_terminee": "ಮರುಸ್ಥಾಪನೆ ಪೂರ್ಣಗೊಂಡಿದೆ. ನೀವು ಸಕ್ರಿಯ ಚಂದಾದಾರಿಕೆಯನ್ನು ಹೊಂದಿದ್ದರೆ, ಅದನ್ನು ಈಗ ಮರುಸ್ಥಾಪಿಸಲಾಗಿದೆ.",
+    "vocabulaire_type_verbe": "ಕ್ರಿಯಾಪದ"
 }

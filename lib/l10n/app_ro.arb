@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Prepoziţie",
     "vocabulaire_type_verbeModal": "verbe modale",
     "vocabulaire_type_verbeInfinitif": "verb la infinitiv",
-    "vocabulaire_type_inconnu": "necunoscut"
+    "vocabulaire_type_inconnu": "necunoscut",
+    "restaurer_achats": "Restaurați achizițiile",
+    "restaurer_achats_error": "Restaurarea a eșuat. Vă rugăm să încercați din nou.",
+    "restauration_terminee": "Restaurare finalizată. Dacă ați avut un abonament activ, acesta este acum restaurat.",
+    "vocabulaire_type_verbe": "verb"
 }

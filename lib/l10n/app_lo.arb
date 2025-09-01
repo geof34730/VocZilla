@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Preposition",
     "vocabulaire_type_verbeModal": "modal verb",
     "vocabulaire_type_verbeInfinitif": "ຄໍາກິລິຍາ infinitive",
-    "vocabulaire_type_inconnu": "ບໍ່ຮູ້ຈັກ"
+    "vocabulaire_type_inconnu": "ບໍ່ຮູ້ຈັກ",
+    "restaurer_achats": "ຟື້ນຟູການຊື້",
+    "restaurer_achats_error": "ການຟື້ນຟູລົ້ມເຫລວ. ກະລຸນາລອງອີກຄັ້ງ.",
+    "restauration_terminee": "ການ​ຟື້ນ​ຟູ​ສໍາ​ເລັດ​. ຖ້າ​ຫາກ​ທ່ານ​ມີ​ການ​ສະ​ຫມັກ​ທີ່​ໃຊ້​ເວ​ລາ​, ມັນ​ຈະ​ໄດ້​ຮັບ​ການ​ຟື້ນ​ຟູ​ໃນ​ປັດ​ຈຸ​ບັນ​.",
+    "vocabulaire_type_verbe": "ຄຳກິລິຍາ"
 }

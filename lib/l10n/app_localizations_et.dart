@@ -610,4 +610,16 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'tundmatu';
+
+  @override
+  String get restaurer_achats => 'Taasta ostud';
+
+  @override
+  String get restaurer_achats_error => 'Taastamine ebaõnnestus. Palun proovige uuesti.';
+
+  @override
+  String get restauration_terminee => 'Taastamine on lõpetatud. Kui teil oli aktiivne tellimus, on see nüüd taastatud.';
+
+  @override
+  String get vocabulaire_type_verbe => 'tegusõna';
 }

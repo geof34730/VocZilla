@@ -26,6 +26,9 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> with WidgetsBin
   /// Indique qu’on attend le retour de la feuille de paiement.
   bool _awaitingSheetClose = false;
 
+  /// Indique que la restauration des achats est en cours.
+  bool _isRestoring = false;
+
   /// Timer pour “débloquer” le loader au retour d’arrière-plan si aucun event n’est reçu.
   Timer? _resumeSafetyTimer;
 
@@ -77,6 +80,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> with WidgetsBin
     WidgetsBinding.instance.removeObserver(this);
     _purchasingProductId = null;
     _awaitingSheetClose = false;
+    _isRestoring = false;
     super.dispose();
   }
 
@@ -289,6 +293,40 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> with WidgetsBin
               // Fallback
               return const SizedBox.shrink();
             },
+          ),
+          // Bouton pour restaurer les achats, conforme aux directives Apple.
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: Center(
+              child: _isRestoring
+                  ? const CircularProgressIndicator()
+                  : ElevatedButton(
+                      onPressed: () async {
+                        setState(() => _isRestoring = true);
+                        try {
+                          await InAppPurchase.instance.restorePurchases();
+                          // Si nous sommes toujours sur cet écran après la tentative de restauration,
+                          // cela signifie soit qu'aucun achat n'a été trouvé, soit que l'utilisateur
+                          // a déjà le statut premium. On affiche un message pour informer l'utilisateur.
+                          // Si un achat est restauré avec succès, le BlocListener fermera l'écran.
+                          if (mounted) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text(context.loc.restauration_terminee)),
+                            );
+                          }
+                        } catch (e) {
+                          if (mounted) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text(context.loc.restaurer_achats_error)),
+                            );
+                          }
+                        } finally {
+                          if (mounted) setState(() => _isRestoring = false);
+                        }
+                      },
+                       child: Text(context.loc.restaurer_achats),
+                    ),
+            ),
           ),
         ],
       ),

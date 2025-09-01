@@ -610,4 +610,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => '未知';
+
+  @override
+  String get restaurer_achats => '恢复购买';
+
+  @override
+  String get restaurer_achats_error => '恢复失败，请重试。';
+
+  @override
+  String get restauration_terminee => '恢复已完成。如果您之前有有效订阅，则现在已恢复。';
+
+  @override
+  String get vocabulaire_type_verbe => '动词';
 }

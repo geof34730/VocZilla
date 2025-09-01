@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Voorsetsel",
     "vocabulaire_type_verbeModal": "modale werkwoord",
     "vocabulaire_type_verbeInfinitif": "infinitiewe werkwoord",
-    "vocabulaire_type_inconnu": "onbekend"
+    "vocabulaire_type_inconnu": "onbekend",
+    "restaurer_achats": "Herstel aankope",
+    "restaurer_achats_error": "Herstel het misluk. Probeer asseblief weer.",
+    "restauration_terminee": "Herstel voltooi. Indien jy 'n aktiewe intekening gehad het, is dit nou herstel.",
+    "vocabulaire_type_verbe": "werkwoord"
 }

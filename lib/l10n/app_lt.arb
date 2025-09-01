@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Prielinksnis",
     "vocabulaire_type_verbeModal": "modalinis veiksmažodis",
     "vocabulaire_type_verbeInfinitif": "bendratis veiksmažodis",
-    "vocabulaire_type_inconnu": "nežinomas"
+    "vocabulaire_type_inconnu": "nežinomas",
+    "restaurer_achats": "Atkurti pirkinius",
+    "restaurer_achats_error": "Atkūrimas nepavyko. Bandykite dar kartą.",
+    "restauration_terminee": "Atkūrimas baigtas. Jei turėjote aktyvią prenumeratą, ji dabar atkurta.",
+    "vocabulaire_type_verbe": "veiksmažodis"
 }

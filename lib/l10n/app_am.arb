@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "ቅድመ ሁኔታ",
     "vocabulaire_type_verbeModal": "ሞዳል ግስ",
     "vocabulaire_type_verbeInfinitif": "ማለቂያ የሌለው ግሥ",
-    "vocabulaire_type_inconnu": "የማይታወቅ"
+    "vocabulaire_type_inconnu": "የማይታወቅ",
+    "restaurer_achats": "ግዢዎችን ወደነበሩበት ይመልሱ",
+    "restaurer_achats_error": "መልሶ ማቋቋም አልተሳካም። እባክህ እንደገና ሞክር።",
+    "restauration_terminee": "መልሶ ማቋቋም ተጠናቅቋል። ንቁ የደንበኝነት ምዝገባ ከነበረ አሁን ወደነበረበት ተመልሷል።",
+    "vocabulaire_type_verbe": "ግስ"
 }

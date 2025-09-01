@@ -610,4 +610,16 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'akwaziwa';
+
+  @override
+  String get restaurer_achats => 'Buyisela okuthengiwe';
+
+  @override
+  String get restaurer_achats_error => 'Ukubuyisela kuhlulekile. Sicela uzame futhi.';
+
+  @override
+  String get restauration_terminee => 'Ukubuyisela kuqedile. Uma ubunokubhalisele okusebenzayo, manje sekubuyisiwe.';
+
+  @override
+  String get vocabulaire_type_verbe => 'isenzo';
 }

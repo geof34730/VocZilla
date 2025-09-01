@@ -610,4 +610,16 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'άγνωστος';
+
+  @override
+  String get restaurer_achats => 'Επαναφορά αγορών';
+
+  @override
+  String get restaurer_achats_error => 'Η επαναφορά απέτυχε. Δοκιμάστε ξανά.';
+
+  @override
+  String get restauration_terminee => 'Η επαναφορά ολοκληρώθηκε. Εάν είχατε ενεργή συνδρομή, αυτή έχει πλέον αποκατασταθεί.';
+
+  @override
+  String get vocabulaire_type_verbe => 'ρήμα';
 }

@@ -610,4 +610,16 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'មិនស្គាល់';
+
+  @override
+  String get restaurer_achats => 'ទិញឡើងវិញ';
+
+  @override
+  String get restaurer_achats_error => 'ការស្ដារឡើងវិញបានបរាជ័យ។ សូមព្យាយាមម្តងទៀត។';
+
+  @override
+  String get restauration_terminee => 'ការស្តារឡើងវិញបានបញ្ចប់។ ប្រសិនបើអ្នកមានការជាវសកម្ម ឥឡូវនេះវាត្រូវបានស្ដារឡើងវិញ។';
+
+  @override
+  String get vocabulaire_type_verbe => 'កិរិយាសព្ទ';
 }

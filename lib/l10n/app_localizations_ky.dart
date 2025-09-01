@@ -610,4 +610,16 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'белгисиз';
+
+  @override
+  String get restaurer_achats => 'Сатып алууларды калыбына келтириңиз';
+
+  @override
+  String get restaurer_achats_error => 'Калыбына келтирүү ишке ашкан жок. Сураныч, кайра аракет кылыңыз.';
+
+  @override
+  String get restauration_terminee => 'Калыбына келтирүү аяктады. Эгер сизде активдүү жазылуу болсо, ал азыр калыбына келтирилди.';
+
+  @override
+  String get vocabulaire_type_verbe => 'этиш';
 }

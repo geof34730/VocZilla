@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "ଅବ୍ୟୟ",
     "vocabulaire_type_verbeModal": "ମୂଖ୍ୟ କ୍ରିୟା",
     "vocabulaire_type_verbeInfinitif": "ଅନନ୍ତ କ୍ରିୟା",
-    "vocabulaire_type_inconnu": "ଅଜଣା"
+    "vocabulaire_type_inconnu": "ଅଜଣା",
+    "restaurer_achats": "କ୍ରୟଗୁଡ଼ିକ ପୁନଃସ୍ଥାପନ କରନ୍ତୁ",
+    "restaurer_achats_error": "ପୁନରୁଦ୍ଧାର ବିଫଳ ହେଲା। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
+    "restauration_terminee": "ପୁନରୁଦ୍ଧାର ସମ୍ପୂର୍ଣ୍ଣ ହୋଇଛି। ଯଦି ଆପଣଙ୍କର ଏକ ସକ୍ରିୟ ସଦସ୍ୟତା ଥିଲା, ତେବେ ଏହା ବର୍ତ୍ତମାନ ପୁନରୁଦ୍ଧାର ହୋଇଛି।",
+    "vocabulaire_type_verbe": "କ୍ରିୟା"
 }

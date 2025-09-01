@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "ਅਗੇਤਰ",
     "vocabulaire_type_verbeModal": "ਮਾਡਲ ਕਿਰਿਆ",
     "vocabulaire_type_verbeInfinitif": "ਅਨੰਤ ਕਿਰਿਆ",
-    "vocabulaire_type_inconnu": "ਅਣਜਾਣ"
+    "vocabulaire_type_inconnu": "ਅਣਜਾਣ",
+    "restaurer_achats": "ਖਰੀਦਾਂ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕਰੋ",
+    "restaurer_achats_error": "ਬਹਾਲੀ ਅਸਫਲ ਰਹੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    "restauration_terminee": "ਬਹਾਲੀ ਪੂਰੀ ਹੋਈ। ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਇੱਕ ਕਿਰਿਆਸ਼ੀਲ ਗਾਹਕੀ ਸੀ, ਤਾਂ ਇਹ ਹੁਣ ਬਹਾਲ ਹੋ ਗਈ ਹੈ।",
+    "vocabulaire_type_verbe": "ਕਿਰਿਆ"
 }

@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Forholdsord",
     "vocabulaire_type_verbeModal": "modalverbum",
     "vocabulaire_type_verbeInfinitif": "infinitivt verbum",
-    "vocabulaire_type_inconnu": "ukendt"
+    "vocabulaire_type_inconnu": "ukendt",
+    "restaurer_achats": "Gendan køb",
+    "restaurer_achats_error": "Gendannelsen mislykkedes. Prøv igen.",
+    "restauration_terminee": "Gendannelsen er fuldført. Hvis du havde et aktivt abonnement, er det nu gendannet.",
+    "vocabulaire_type_verbe": "udsagnsord"
 }

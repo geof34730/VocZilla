@@ -610,4 +610,16 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ບໍ່ຮູ້ຈັກ';
+
+  @override
+  String get restaurer_achats => 'ຟື້ນຟູການຊື້';
+
+  @override
+  String get restaurer_achats_error => 'ການຟື້ນຟູລົ້ມເຫລວ. ກະລຸນາລອງອີກຄັ້ງ.';
+
+  @override
+  String get restauration_terminee => 'ການ​ຟື້ນ​ຟູ​ສໍາ​ເລັດ​. ຖ້າ​ຫາກ​ທ່ານ​ມີ​ການ​ສະ​ຫມັກ​ທີ່​ໃຊ້​ເວ​ລາ​, ມັນ​ຈະ​ໄດ້​ຮັບ​ການ​ຟື້ນ​ຟູ​ໃນ​ປັດ​ຈຸ​ບັນ​.';
+
+  @override
+  String get vocabulaire_type_verbe => 'ຄຳກິລິຍາ';
 }

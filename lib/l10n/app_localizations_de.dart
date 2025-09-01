@@ -610,4 +610,16 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'unbekannt';
+
+  @override
+  String get restaurer_achats => 'Käufe wiederherstellen';
+
+  @override
+  String get restaurer_achats_error => 'Wiederherstellung fehlgeschlagen. Bitte versuchen Sie es erneut.';
+
+  @override
+  String get restauration_terminee => 'Wiederherstellung abgeschlossen. Wenn Sie ein aktives Abonnement hatten, ist es jetzt wiederhergestellt.';
+
+  @override
+  String get vocabulaire_type_verbe => 'Verb';
 }

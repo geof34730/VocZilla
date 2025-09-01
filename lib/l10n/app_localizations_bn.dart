@@ -610,4 +610,16 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'অজানা';
+
+  @override
+  String get restaurer_achats => 'কেনাকাটা পুনরুদ্ধার করুন';
+
+  @override
+  String get restaurer_achats_error => 'পুনরুদ্ধার ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।';
+
+  @override
+  String get restauration_terminee => 'পুনরুদ্ধার সম্পূর্ণ হয়েছে। যদি আপনার একটি সক্রিয় সদস্যতা থাকে, তাহলে এটি এখন পুনরুদ্ধার করা হয়েছে।';
+
+  @override
+  String get vocabulaire_type_verbe => 'ক্রিয়া';
 }

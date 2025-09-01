@@ -610,4 +610,16 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'okänd';
+
+  @override
+  String get restaurer_achats => 'Återställ köp';
+
+  @override
+  String get restaurer_achats_error => 'Återställningen misslyckades. Försök igen.';
+
+  @override
+  String get restauration_terminee => 'Återställningen är klar. Om du hade en aktiv prenumeration är den nu återställd.';
+
+  @override
+  String get vocabulaire_type_verbe => 'verb';
 }

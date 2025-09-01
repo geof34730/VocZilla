@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Πρόθεση",
     "vocabulaire_type_verbeModal": "τροπικό ρήμα",
     "vocabulaire_type_verbeInfinitif": "απαρέμφατο ρήμα",
-    "vocabulaire_type_inconnu": "άγνωστος"
+    "vocabulaire_type_inconnu": "άγνωστος",
+    "restaurer_achats": "Επαναφορά αγορών",
+    "restaurer_achats_error": "Η επαναφορά απέτυχε. Δοκιμάστε ξανά.",
+    "restauration_terminee": "Η επαναφορά ολοκληρώθηκε. Εάν είχατε ενεργή συνδρομή, αυτή έχει πλέον αποκατασταθεί.",
+    "vocabulaire_type_verbe": "ρήμα"
 }

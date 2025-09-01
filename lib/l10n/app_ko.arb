@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "전치사",
     "vocabulaire_type_verbeModal": "모달 동사",
     "vocabulaire_type_verbeInfinitif": "부정사",
-    "vocabulaire_type_inconnu": "알려지지 않은"
+    "vocabulaire_type_inconnu": "알려지지 않은",
+    "restaurer_achats": "구매 복원",
+    "restaurer_achats_error": "복원에 실패했습니다. 다시 시도해 주세요.",
+    "restauration_terminee": "복구가 완료되었습니다. 활성 구독이 있으셨다면 이제 복구되었습니다.",
+    "vocabulaire_type_verbe": "동사"
 }

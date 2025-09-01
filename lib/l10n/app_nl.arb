@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Voorzetsel",
     "vocabulaire_type_verbeModal": "modaal werkwoord",
     "vocabulaire_type_verbeInfinitif": "infinitief werkwoord",
-    "vocabulaire_type_inconnu": "onbekend"
+    "vocabulaire_type_inconnu": "onbekend",
+    "restaurer_achats": "Aankopen herstellen",
+    "restaurer_achats_error": "Herstellen mislukt. Probeer het opnieuw.",
+    "restauration_terminee": "Herstel voltooid. Als u een actief abonnement had, is dit nu hersteld.",
+    "vocabulaire_type_verbe": "werkwoord"
 }

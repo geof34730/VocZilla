@@ -610,4 +610,16 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'የማይታወቅ';
+
+  @override
+  String get restaurer_achats => 'ግዢዎችን ወደነበሩበት ይመልሱ';
+
+  @override
+  String get restaurer_achats_error => 'መልሶ ማቋቋም አልተሳካም። እባክህ እንደገና ሞክር።';
+
+  @override
+  String get restauration_terminee => 'መልሶ ማቋቋም ተጠናቅቋል። ንቁ የደንበኝነት ምዝገባ ከነበረ አሁን ወደነበረበት ተመልሷል።';
+
+  @override
+  String get vocabulaire_type_verbe => 'ግስ';
 }

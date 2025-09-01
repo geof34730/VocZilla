@@ -610,4 +610,16 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'ukendt';
+
+  @override
+  String get restaurer_achats => 'Gendan køb';
+
+  @override
+  String get restaurer_achats_error => 'Gendannelsen mislykkedes. Prøv igen.';
+
+  @override
+  String get restauration_terminee => 'Gendannelsen er fuldført. Hvis du havde et aktivt abonnement, er det nu gendannet.';
+
+  @override
+  String get vocabulaire_type_verbe => 'udsagnsord';
 }

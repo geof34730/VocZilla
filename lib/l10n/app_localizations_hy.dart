@@ -610,4 +610,16 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get vocabulaire_type_inconnu => 'անհայտ';
+
+  @override
+  String get restaurer_achats => 'Վերականգնել գնումները';
+
+  @override
+  String get restaurer_achats_error => 'Վերականգնումը ձախողվեց։ Խնդրում ենք կրկին փորձել։';
+
+  @override
+  String get restauration_terminee => 'Վերականգնումն ավարտված է։ Եթե դուք ակտիվ բաժանորդագրություն եք ունեցել, այն այժմ վերականգնված է։';
+
+  @override
+  String get vocabulaire_type_verbe => 'բայ';
 }

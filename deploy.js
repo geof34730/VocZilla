@@ -85,7 +85,7 @@ function getAppfileInfo(appfilePath) {
     execSync(`flutter clean && flutter gen-l10n && flutter pub get`, { stdio: "inherit" });
 
             console.log(`\n🔐 Compilation Android  avec version: ${versionName} buildNumber: ${buildNumber}...`);
-      /*     execSync(
+           execSync(
                 `flutter build appbundle --release --build-name=${versionName} --build-number=${buildNumber}`,
                 { stdio: "inherit" }
             );
@@ -120,7 +120,7 @@ function getAppfileInfo(appfilePath) {
         console.error("\n❌ Échec du déploiement Android :", error.message);
         process.exit(1);
     }
-*/
+
     console.log("\n✅ Déploiement Android terminé avec succès !");
 
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);

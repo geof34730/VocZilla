@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "บุพบท",
     "vocabulaire_type_verbeModal": "กริยาช่วย",
     "vocabulaire_type_verbeInfinitif": "กริยา infinitive",
-    "vocabulaire_type_inconnu": "ไม่ทราบ"
+    "vocabulaire_type_inconnu": "ไม่ทราบ",
+    "restaurer_achats": "คืนค่าการซื้อ",
+    "restaurer_achats_error": "การคืนค่าล้มเหลว โปรดลองอีกครั้ง",
+    "restauration_terminee": "การกู้คืนเสร็จสมบูรณ์แล้ว หากคุณมีการสมัครใช้งานที่ใช้งานอยู่ คุณจะได้รับการกู้คืนแล้ว",
+    "vocabulaire_type_verbe": "กริยา"
 }

@@ -203,5 +203,9 @@
     "vocabulaire_type_preposition" : "Préposition",
     "vocabulaire_type_verbeModal" : "verbe modal",
     "vocabulaire_type_verbeInfinitif" : "verbe à l'infinitif",
-    "vocabulaire_type_inconnu" : "inconnu"
+    "vocabulaire_type_verbe" : "verbe",
+    "vocabulaire_type_inconnu" : "inconnu",
+    "restaurer_achats": "Restaurer les achats",
+    "restaurer_achats_error": "La restauration a échoué. Veuillez réessayer.",
+    "restauration_terminee": "Restauration terminée. Si vous aviez un abonnement actif, il est maintenant restauré."
 }

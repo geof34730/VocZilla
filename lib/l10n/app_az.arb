@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Ön söz",
     "vocabulaire_type_verbeModal": "modal fel",
     "vocabulaire_type_verbeInfinitif": "məsdər fel",
-    "vocabulaire_type_inconnu": "naməlum"
+    "vocabulaire_type_inconnu": "naməlum",
+    "restaurer_achats": "Satınalmaları bərpa edin",
+    "restaurer_achats_error": "Bərpa uğursuz oldu. Yenidən cəhd edin.",
+    "restauration_terminee": "Bərpa tamamlandı. Əgər aktiv abunəliyiniz varsa, o, indi bərpa olunub.",
+    "vocabulaire_type_verbe": "fel"
 }

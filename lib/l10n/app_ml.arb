@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "പ്രീപോസിഷൻ",
     "vocabulaire_type_verbeModal": "മോഡൽ ക്രിയ",
     "vocabulaire_type_verbeInfinitif": "അനിർവചനീയ ക്രിയ",
-    "vocabulaire_type_inconnu": "അജ്ഞാതം"
+    "vocabulaire_type_inconnu": "അജ്ഞാതം",
+    "restaurer_achats": "വാങ്ങലുകൾ പുനഃസ്ഥാപിക്കുക",
+    "restaurer_achats_error": "പുനഃസ്ഥാപനം പരാജയപ്പെട്ടു. വീണ്ടും ശ്രമിക്കുക.",
+    "restauration_terminee": "പുനഃസ്ഥാപനം പൂർത്തിയായി. നിങ്ങൾക്ക് ഒരു സജീവ സബ്‌സ്‌ക്രിപ്‌ഷൻ ഉണ്ടായിരുന്നെങ്കിൽ, ഇപ്പോൾ അത് പുനഃസ്ഥാപിച്ചു.",
+    "vocabulaire_type_verbe": "ക്രിയ"
 }

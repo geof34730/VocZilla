@@ -29,7 +29,8 @@ getTypeDetaiVocabulaire({required String typeDetail, required BuildContext conte
     case 'verbe modal':
       return context.loc.vocabulaire_type_verbeModal;
     case "verbe à l'infinitif":
-      return context.loc.vocabulaire_type_verbeInfinitif;
+    case "verbe auxiliaire":
+      return context.loc.vocabulaire_type_verbe;
     default:
       return context.loc.vocabulaire_type_inconnu;
   }

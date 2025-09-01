@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "حرف الجر",
     "vocabulaire_type_verbeModal": "فعل مساعد",
     "vocabulaire_type_verbeInfinitif": "فعل المصدر",
-    "vocabulaire_type_inconnu": "مجهول"
+    "vocabulaire_type_inconnu": "مجهول",
+    "restaurer_achats": "استعادة المشتريات",
+    "restaurer_achats_error": "فشلت عملية الاستعادة. يُرجى المحاولة مرة أخرى.",
+    "restauration_terminee": "اكتملت عملية الاستعادة. إذا كان لديك اشتراك نشط، فقد تمت استعادته الآن.",
+    "vocabulaire_type_verbe": "فعل"
 }

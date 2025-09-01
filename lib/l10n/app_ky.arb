@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Предлог",
     "vocabulaire_type_verbeModal": "модалдык этиш",
     "vocabulaire_type_verbeInfinitif": "инфинитив этиш",
-    "vocabulaire_type_inconnu": "белгисиз"
+    "vocabulaire_type_inconnu": "белгисиз",
+    "restaurer_achats": "Сатып алууларды калыбына келтириңиз",
+    "restaurer_achats_error": "Калыбына келтирүү ишке ашкан жок. Сураныч, кайра аракет кылыңыз.",
+    "restauration_terminee": "Калыбына келтирүү аяктады. Эгер сизде активдүү жазылуу болсо, ал азыр калыбына келтирилди.",
+    "vocabulaire_type_verbe": "этиш"
 }

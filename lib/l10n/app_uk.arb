@@ -199,5 +199,9 @@
     "vocabulaire_type_preposition": "Прийменник",
     "vocabulaire_type_verbeModal": "модальне дієслово",
     "vocabulaire_type_verbeInfinitif": "інфінітив дієслова",
-    "vocabulaire_type_inconnu": "невідомий"
+    "vocabulaire_type_inconnu": "невідомий",
+    "restaurer_achats": "Відновити покупки",
+    "restaurer_achats_error": "Відновлення не вдалося. Спробуйте ще раз.",
+    "restauration_terminee": "Відновлення завершено. Якщо у вас була активна підписка, її тепер відновлено.",
+    "vocabulaire_type_verbe": "дієслово"
 }
