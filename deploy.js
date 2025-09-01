@@ -122,6 +122,10 @@ function getAppfileInfo(appfilePath) {
     }
 
     console.log("\n✅ Déploiement Android terminé avec succès !");
+    execSync(
+        `flutter clean && flutter pub get`,
+        { stdio: "inherit" }
+    );
 
     console.log(`\n🔐 Compilation iOS avec version: ${versionName} buildNumber: ${buildNumber}...`);
     execSync(
