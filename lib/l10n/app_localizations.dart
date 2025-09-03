@@ -1470,6 +1470,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'VocZilla is the perfect app to expand your English vocabulary, no matter your level. Discover thousands of words categorized by theme and track your progress!'**
   String get app_description_android;
+
+  /// No description provided for @subscription_header_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock Premium'**
+  String get subscription_header_title;
+
+  /// No description provided for @subscription_header_subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Access all the features of the application.'**
+  String get subscription_header_subtitle;
+
+  /// No description provided for @subscription_free_trial.
+  ///
+  /// In en, this message translates to:
+  /// **'7 days free upon account creation. After that, subscription required.'**
+  String get subscription_free_trial;
+
+  /// No description provided for @subscription_free_trial_end.
+  ///
+  /// In en, this message translates to:
+  /// **'Your \$daysFreeTrial days free trial has ended.'**
+  String get subscription_free_trial_end;
+
+  /// No description provided for @subscription_benefit_full_access.
+  ///
+  /// In en, this message translates to:
+  /// **'Full access to the app'**
+  String get subscription_benefit_full_access;
+
+  /// No description provided for @subscription_benefit_unlimited.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlimited use'**
+  String get subscription_benefit_unlimited;
+
+  /// No description provided for @subscription_benefit_updates.
+  ///
+  /// In en, this message translates to:
+  /// **'Updates and support included'**
+  String get subscription_benefit_updates;
+
+  /// No description provided for @subscription_plan_badge_best_offer.
+  ///
+  /// In en, this message translates to:
+  /// **'2 months free'**
+  String get subscription_plan_badge_best_offer;
+
+  /// No description provided for @subscription_legal_note.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment will be charged to your iTunes account at confirmation of purchase. Subscription automatically renews unless turned off at least 24 hours before the end of the current period. You can manage your subscription and turn off auto-renewal in your Account Settings. The 7-day free trial is managed by the app (new accounts).'**
+  String get subscription_legal_note;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

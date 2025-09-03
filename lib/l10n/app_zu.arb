@@ -204,5 +204,14 @@
     "restaurer_achats_error": "Ukubuyisela kuhlulekile. Sicela uzame futhi.",
     "restauration_terminee": "Ukubuyisela kuqedile. Uma ubunokubhalisele okusebenzayo, manje sekubuyisiwe.",
     "vocabulaire_type_verbe": "isenzo",
-    "app_description_android": "I-VocZilla iwuhlelo lokusebenza oluphelele lokwandisa ulwazimagama lwakho lwesiNgisi, kungakhathaliseki izinga lakho. Zitholele izinkulungwane zamagama ahlukaniswe ngetimu futhi ulandelele ukuqhubeka kwakho!"
+    "app_description_android": "I-VocZilla iwuhlelo lokusebenza oluphelele lokwandisa ulwazimagama lwakho lwesiNgisi, kungakhathaliseki izinga lakho. Zitholele izinkulungwane zamagama ahlukaniswe ngetimu futhi ulandelele ukuqhubeka kwakho!",
+    "subscription_header_title": "Vula i-Premium",
+    "subscription_header_subtitle": "Finyelela kuzo zonke izici zohlelo lokusebenza.",
+    "subscription_free_trial": "Izinsuku ezingu-7 zamahhala ekudalweni kwe-akhawunti. Ngemva kwalokho, ukubhalisa kuyadingeka.",
+    "subscription_free_trial_end": "Isivivinyo sakho samahhala sezinsuku ezingu-$daysFreeTrial siphelile.",
+    "subscription_benefit_full_access": "Ukufinyelela okugcwele kuhlelo lokusebenza",
+    "subscription_benefit_unlimited": "Ukusetshenziswa Unlimited",
+    "subscription_benefit_updates": "Izibuyekezo nokusekelwa kufakiwe",
+    "subscription_plan_badge_best_offer": "2 izinyanga mahhala",
+    "subscription_legal_note": "Inkokhelo izokhokhiswa ku-akhawunti yakho ye-iTunes lapho kuqinisekiswa ukuthi uthenge. Ukubhalisa kuvuselelwa ngokuzenzakalela ngaphandle uma kucishiwe okungenani amahora angama-24 ngaphambi kokuphela kwesikhathi samanje. Ungaphatha ukubhalisa kwakho futhi uvale ukwenza kabusha okuzenzakalelayo kuzilungiselelo ze-akhawunti yakho. Isivivinyo samahhala sezinsuku ezingu-7 siphethwe uhlelo lokusebenza (ama-akhawunti amasha)."
 }

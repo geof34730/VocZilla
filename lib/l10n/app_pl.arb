@@ -204,5 +204,14 @@
     "restaurer_achats_error": "Przywracanie nie powiodło się. Spróbuj ponownie.",
     "restauration_terminee": "Przywracanie zakończone. Jeśli miałeś aktywną subskrypcję, została ona przywrócona.",
     "vocabulaire_type_verbe": "czasownik",
-    "app_description_android": "VocZilla to idealna aplikacja do poszerzania słownictwa angielskiego, niezależnie od poziomu. Odkryj tysiące słówek posegregowanych tematycznie i śledź swoje postępy!"
+    "app_description_android": "VocZilla to idealna aplikacja do poszerzania słownictwa angielskiego, niezależnie od poziomu. Odkryj tysiące słówek posegregowanych tematycznie i śledź swoje postępy!",
+    "subscription_header_title": "Odblokuj Premium",
+    "subscription_header_subtitle": "Uzyskaj dostęp do wszystkich funkcji aplikacji.",
+    "subscription_free_trial": "7 dni gratis po utworzeniu konta. Po tym czasie wymagana jest subskrypcja.",
+    "subscription_free_trial_end": "Twój bezpłatny okres próbny ($daysFreeTrial) dobiegł końca.",
+    "subscription_benefit_full_access": "Pełny dostęp do aplikacji",
+    "subscription_benefit_unlimited": "Nieograniczone użytkowanie",
+    "subscription_benefit_updates": "Aktualizacje i wsparcie w zestawie",
+    "subscription_plan_badge_best_offer": "2 miesiące za darmo",
+    "subscription_legal_note": "Płatność zostanie pobrana z Twojego konta iTunes po potwierdzeniu zakupu. Subskrypcja odnawia się automatycznie, chyba że zostanie wyłączona co najmniej 24 godziny przed końcem bieżącego okresu. Możesz zarządzać subskrypcją i wyłączyć automatyczne odnawianie w Ustawieniach konta. 7-dniowy bezpłatny okres próbny jest zarządzany przez aplikację (nowe konta)."
 }

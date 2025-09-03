@@ -625,4 +625,31 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get app_description_android => 'A VocZilla a tökéletes alkalmazás az angol szókincs bővítésére, szintedtől függetlenül. Fedezz fel több ezer szót témák szerint kategorizálva, és kövesd nyomon a fejlődésedet!';
+
+  @override
+  String get subscription_header_title => 'Oldd fel a Prémiumot';
+
+  @override
+  String get subscription_header_subtitle => 'Hozzáférés az alkalmazás összes funkciójához.';
+
+  @override
+  String get subscription_free_trial => '7 nap ingyenes a fiók létrehozását követően. Utána előfizetés szükséges.';
+
+  @override
+  String get subscription_free_trial_end => 'A \$daysFreeTrial napos ingyenes próbaidőszakod lejárt.';
+
+  @override
+  String get subscription_benefit_full_access => 'Teljes hozzáférés az alkalmazáshoz';
+
+  @override
+  String get subscription_benefit_unlimited => 'Korlátlan használat';
+
+  @override
+  String get subscription_benefit_updates => 'Frissítések és támogatás benne foglaltatik';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 hónap ingyenes';
+
+  @override
+  String get subscription_legal_note => 'A fizetés a vásárlás visszaigazolásakor az iTunes-fiókodra lesz terhelve. Az előfizetés automatikusan megújul, kivéve, ha legalább 24 órával az aktuális időszak vége előtt kikapcsolod. Az előfizetésedet kezelheted és kikapcsolhatod az automatikus megújítást a Fiókbeállításaidban. A 7 napos ingyenes próbaidőszakot az alkalmazás kezeli (új fiókok).';
 }

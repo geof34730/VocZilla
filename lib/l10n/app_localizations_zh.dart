@@ -625,4 +625,31 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla 是一款完美的英语词汇扩展应用，无论您的英语水平如何。探索数千个按主题分类的单词，并追踪您的学习进度！';
+
+  @override
+  String get subscription_header_title => '解锁高级版';
+
+  @override
+  String get subscription_header_subtitle => '访问应用程序的所有功能。';
+
+  @override
+  String get subscription_free_trial => '创建帐户后可免费使用 7 天。之后需要订阅。';
+
+  @override
+  String get subscription_free_trial_end => '您的 \$daysFreeTrial 天免费试用已结束。';
+
+  @override
+  String get subscription_benefit_full_access => '完全访问应用程序';
+
+  @override
+  String get subscription_benefit_unlimited => '无限使用';
+
+  @override
+  String get subscription_benefit_updates => '包含更新和支持';
+
+  @override
+  String get subscription_plan_badge_best_offer => '免费 2 个月';
+
+  @override
+  String get subscription_legal_note => '确认购买后，款项将从您的 iTunes 账户中扣除。除非在当前订阅期结束前至少 24 小时关闭，否则订阅将自动续订。您可以在“账户设置”中管理订阅并关闭自动续订。7 天免费试用期由应用管理（新账户）。';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla is die perfekte toepassing om jou Engelse woordeskat uit te brei, ongeag jou vlak. Ontdek duisende woorde wat volgens tema gekategoriseer is en hou jou vordering dop!';
+
+  @override
+  String get subscription_header_title => 'Ontsluit Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Kry toegang tot al die funksies van die toepassing.';
+
+  @override
+  String get subscription_free_trial => '7 dae gratis na rekeningskepping. Daarna is intekening vereis.';
+
+  @override
+  String get subscription_free_trial_end => 'Jou \$daysFreeTrial dae gratis proeflopie het geëindig.';
+
+  @override
+  String get subscription_benefit_full_access => 'Volle toegang tot die toepassing';
+
+  @override
+  String get subscription_benefit_unlimited => 'Onbeperkte gebruik';
+
+  @override
+  String get subscription_benefit_updates => 'Opdaterings en ondersteuning ingesluit';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 maande gratis';
+
+  @override
+  String get subscription_legal_note => 'Betaling sal van jou iTunes-rekening gedebiteer word met bevestiging van aankoop. Die subskripsie hernu outomaties tensy dit ten minste 24 uur voor die einde van die huidige tydperk afgeskakel word. Jy kan jou subskripsie bestuur en outomatiese hernuwing in jou rekeninginstellings afskakel. Die 7-dae gratis proeflopie word deur die toepassing bestuur (nuwe rekeninge).';
 }

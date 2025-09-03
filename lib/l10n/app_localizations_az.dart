@@ -625,4 +625,31 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla səviyyənizdən asılı olmayaraq ingilis dili lüğətinizi genişləndirmək üçün mükəmməl proqramdır. Mövzuya görə kateqoriyalara bölünmüş minlərlə sözü kəşf edin və tərəqqinizi izləyin!';
+
+  @override
+  String get subscription_header_title => 'Premium kilidini açın';
+
+  @override
+  String get subscription_header_subtitle => 'Tətbiqin bütün xüsusiyyətlərinə daxil olun.';
+
+  @override
+  String get subscription_free_trial => 'Hesab yaratdıqdan sonra 7 gün pulsuzdur. Bundan sonra abunə tələb olunur.';
+
+  @override
+  String get subscription_free_trial_end => '\$daysFreeTrial günlük ödənişsiz sınaq müddətiniz bitdi.';
+
+  @override
+  String get subscription_benefit_full_access => 'Proqrama tam giriş';
+
+  @override
+  String get subscription_benefit_unlimited => 'Limitsiz istifadə';
+
+  @override
+  String get subscription_benefit_updates => 'Yeniləmələr və dəstək daxildir';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 ay pulsuz';
+
+  @override
+  String get subscription_legal_note => 'Ödəniş satınalma təsdiq edildikdən sonra iTunes hesabınızdan tutulacaq. Cari dövrün sonuna ən azı 24 saat qalmış söndürülmədikdə abunə avtomatik olaraq yenilənir. Siz abunəliyinizi idarə edə və Hesab Ayarlarınızda avtomatik yenilənməni söndürə bilərsiniz. 7 günlük pulsuz sınaq tətbiq tərəfindən idarə olunur (yeni hesablar).';
 }

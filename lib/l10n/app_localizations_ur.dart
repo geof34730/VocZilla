@@ -625,4 +625,31 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla آپ کی انگریزی الفاظ کو بڑھانے کے لیے ایک بہترین ایپ ہے، چاہے آپ کی سطح کچھ بھی ہو۔ تھیم کے لحاظ سے درجہ بند ہزاروں الفاظ دریافت کریں اور اپنی پیشرفت کو ٹریک کریں!';
+
+  @override
+  String get subscription_header_title => 'پریمیم کو غیر مقفل کریں۔';
+
+  @override
+  String get subscription_header_subtitle => 'درخواست کی تمام خصوصیات تک رسائی حاصل کریں۔';
+
+  @override
+  String get subscription_free_trial => 'اکاؤنٹ بنانے پر 7 دن مفت۔ اس کے بعد، رکنیت درکار ہے۔';
+
+  @override
+  String get subscription_free_trial_end => 'آپ کی \$daysFreeTrial دنوں کی مفت آزمائش ختم ہو گئی ہے۔';
+
+  @override
+  String get subscription_benefit_full_access => 'ایپ تک مکمل رسائی';
+
+  @override
+  String get subscription_benefit_unlimited => 'لامحدود استعمال';
+
+  @override
+  String get subscription_benefit_updates => 'اپ ڈیٹس اور سپورٹ شامل ہیں۔';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 ماہ مفت';
+
+  @override
+  String get subscription_legal_note => 'خریداری کی تصدیق پر ادائیگی آپ کے iTunes اکاؤنٹ سے وصول کی جائے گی۔ سبسکرپشن خود بخود تجدید ہو جاتی ہے جب تک کہ موجودہ مدت کے اختتام سے کم از کم 24 گھنٹے پہلے بند کر دیا جائے۔ آپ اپنی رکنیت کا نظم کر سکتے ہیں اور اپنے اکاؤنٹ کی ترتیبات میں خودکار تجدید کو بند کر سکتے ہیں۔ 7 دن کی مفت آزمائش کا انتظام ایپ (نئے اکاؤنٹس) کے ذریعے کیا جاتا ہے۔';
 }

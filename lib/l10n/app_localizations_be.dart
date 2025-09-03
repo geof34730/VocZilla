@@ -625,4 +625,31 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla — ідэальнае прыкладанне для пашырэння вашага слоўнікавага запасу англійскай мовы, незалежна ад вашага ўзроўню. Адкрыйце для сябе тысячы слоў, класіфікаваных па тэмах, і адсочвайце свой прагрэс!';
+
+  @override
+  String get subscription_header_title => 'Разблакуйце прэміум-клас';
+
+  @override
+  String get subscription_header_subtitle => 'Доступ да ўсіх функцый прыкладання.';
+
+  @override
+  String get subscription_free_trial => '7 дзён бясплатна пасля стварэння ўліковага запісу. Пасля гэтага патрабуецца падпіска.';
+
+  @override
+  String get subscription_free_trial_end => 'Тэрмін вашага бясплатнага пробнага перыяду (\$daysFreeTrial) скончыўся.';
+
+  @override
+  String get subscription_benefit_full_access => 'Поўны доступ да праграмы';
+
+  @override
+  String get subscription_benefit_unlimited => 'Неабмежаванае выкарыстанне';
+
+  @override
+  String get subscription_benefit_updates => 'Абнаўленні і падтрымка ўключаны';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 месяцы бясплатна';
+
+  @override
+  String get subscription_legal_note => 'Аплата будзе знята з вашага ўліковага запісу iTunes пасля пацверджання пакупкі. Падпіска аўтаматычна падаўжаецца, калі яе не адключыць як мінімум за 24 гадзіны да заканчэння бягучага перыяду. Вы можаце кіраваць сваёй падпіскай і адключыць аўтаматычнае падаўжэнне ў наладах уліковага запісу. 7-дзённы бясплатны пробны перыяд кіруецца праграмай (новыя ўліковыя запісы).';
 }

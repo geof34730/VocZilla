@@ -625,4 +625,31 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla ialah aplikasi yang sempurna untuk mengembangkan perbendaharaan kata bahasa Inggeris anda, tidak kira tahap anda. Temui beribu-ribu perkataan yang dikategorikan mengikut tema dan jejak kemajuan anda!';
+
+  @override
+  String get subscription_header_title => 'Buka kunci Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Akses semua ciri aplikasi.';
+
+  @override
+  String get subscription_free_trial => '7 hari percuma selepas akaun dibuat. Selepas itu, langganan diperlukan.';
+
+  @override
+  String get subscription_free_trial_end => 'Percubaan percuma \$daysFreeTrial days anda telah tamat.';
+
+  @override
+  String get subscription_benefit_full_access => 'Akses penuh kepada apl';
+
+  @override
+  String get subscription_benefit_unlimited => 'Penggunaan tanpa had';
+
+  @override
+  String get subscription_benefit_updates => 'Kemas kini dan sokongan disertakan';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 bulan percuma';
+
+  @override
+  String get subscription_legal_note => 'Pembayaran akan dicaj ke akaun iTunes anda pada pengesahan pembelian. Langganan diperbaharui secara automatik melainkan dimatikan sekurang-kurangnya 24 jam sebelum tamat tempoh semasa. Anda boleh mengurus langganan anda dan mematikan pembaharuan automatik dalam Tetapan Akaun anda. Percubaan percuma selama 7 hari diurus oleh apl (akaun baharu).';
 }

@@ -204,5 +204,14 @@
     "restaurer_achats_error": "Obnovení se nezdařilo. Zkuste to prosím znovu.",
     "restauration_terminee": "Obnovení dokončeno. Pokud jste měli aktivní předplatné, je nyní obnoveno.",
     "vocabulaire_type_verbe": "sloveso",
-    "app_description_android": "VocZilla je perfektní aplikace pro rozšíření vaší anglické slovní zásoby bez ohledu na vaši úroveň. Objevte tisíce slovíček roztříděných podle témat a sledujte svůj pokrok!"
+    "app_description_android": "VocZilla je perfektní aplikace pro rozšíření vaší anglické slovní zásoby bez ohledu na vaši úroveň. Objevte tisíce slovíček roztříděných podle témat a sledujte svůj pokrok!",
+    "subscription_header_title": "Odemknout prémiové",
+    "subscription_header_subtitle": "Získejte přístup ke všem funkcím aplikace.",
+    "subscription_free_trial": "7 dní zdarma po vytvoření účtu. Poté je nutné předplatné.",
+    "subscription_free_trial_end": "Vaše $daysFreeTrial bezplatná zkušební doba skončila.",
+    "subscription_benefit_full_access": "Plný přístup k aplikaci",
+    "subscription_benefit_unlimited": "Neomezené použití",
+    "subscription_benefit_updates": "Aktualizace a podpora zahrnuty",
+    "subscription_plan_badge_best_offer": "2 měsíce zdarma",
+    "subscription_legal_note": "Platba bude stržena z vašeho účtu iTunes po potvrzení nákupu. Předplatné se automaticky obnoví, pokud jej nevypnete alespoň 24 hodin před koncem aktuálního období. Své předplatné můžete spravovat a automatické obnovování vypnout v Nastavení účtu. 7denní bezplatná zkušební verze je spravována aplikací (nové účty)."
 }

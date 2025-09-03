@@ -625,4 +625,31 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get app_description_android => 'فوكزيلا هو التطبيق الأمثل لإثراء مفرداتك الإنجليزية، مهما كان مستواك. اكتشف آلاف الكلمات المصنفة حسب الموضوع، وتابع تقدمك!';
+
+  @override
+  String get subscription_header_title => 'فتح الإصدار المميز';
+
+  @override
+  String get subscription_header_subtitle => 'الوصول إلى كافة ميزات التطبيق.';
+
+  @override
+  String get subscription_free_trial => '٧ أيام مجانية عند إنشاء الحساب. بعد ذلك، يلزم الاشتراك.';
+
+  @override
+  String get subscription_free_trial_end => 'لقد انتهت فترة تجربتك المجانية لمدة \$daysFreeTrial.';
+
+  @override
+  String get subscription_benefit_full_access => 'الوصول الكامل إلى التطبيق';
+
+  @override
+  String get subscription_benefit_unlimited => 'استخدام غير محدود';
+
+  @override
+  String get subscription_benefit_updates => 'التحديثات والدعم المضمن';
+
+  @override
+  String get subscription_plan_badge_best_offer => 'شهرين مجانًا';
+
+  @override
+  String get subscription_legal_note => 'سيتم خصم المبلغ من حساب iTunes الخاص بك عند تأكيد الشراء. يُجدد الاشتراك تلقائيًا ما لم يتم إيقافه قبل 24 ساعة على الأقل من نهاية الفترة الحالية. يمكنك إدارة اشتراكك وإيقاف التجديد التلقائي من إعدادات حسابك. يُدير التطبيق (الحسابات الجديدة) الفترة التجريبية المجانية لمدة 7 أيام.';
 }

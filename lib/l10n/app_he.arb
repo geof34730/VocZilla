@@ -204,5 +204,14 @@
     "restaurer_achats_error": "השחזור נכשל. אנא נסה שוב.",
     "restauration_terminee": "השחזור הושלם. אם היה לך מנוי פעיל, הוא משוחזר כעת.",
     "vocabulaire_type_verbe": "פּוֹעַל",
-    "app_description_android": "VocZilla היא האפליקציה המושלמת להרחבת אוצר המילים שלכם באנגלית, ללא קשר לרמתכם. גלו אלפי מילים המסווגות לפי נושא ועקובו אחר ההתקדמות שלכם!"
+    "app_description_android": "VocZilla היא האפליקציה המושלמת להרחבת אוצר המילים שלכם באנגלית, ללא קשר לרמתכם. גלו אלפי מילים המסווגות לפי נושא ועקובו אחר ההתקדמות שלכם!",
+    "subscription_header_title": "נעילת פרימיום",
+    "subscription_header_subtitle": "גישה לכל התכונות של האפליקציה.",
+    "subscription_free_trial": "7 ימים חינם עם יצירת החשבון. לאחר מכן, נדרשת הרשמה.",
+    "subscription_free_trial_end": "תקופת הניסיון החינמית שלך ב-$daysFreeTrial הסתיימה.",
+    "subscription_benefit_full_access": "גישה מלאה לאפליקציה",
+    "subscription_benefit_unlimited": "שימוש בלתי מוגבל",
+    "subscription_benefit_updates": "עדכונים ותמיכה כלולים",
+    "subscription_plan_badge_best_offer": "חודשיים חינם",
+    "subscription_legal_note": "התשלום יחויב מחשבון iTunes שלך עם אישור הרכישה. המנוי מתחדש אוטומטית אלא אם כן הוא כבוי לפחות 24 שעות לפני תום התקופה הנוכחית. ניתן לנהל את המנוי שלך ולכבות את החידוש האוטומטי בהגדרות החשבון שלך. תקופת הניסיון החינמית ל-7 ימים מנוהלת על ידי האפליקציה (חשבונות חדשים)."
 }

@@ -625,4 +625,31 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get app_description_android => 'तुमची पातळी काहीही असो, तुमचा इंग्रजी शब्दसंग्रह वाढवण्यासाठी VocZilla हे एक परिपूर्ण अॅप आहे. थीमनुसार वर्गीकृत हजारो शब्द शोधा आणि तुमच्या प्रगतीचा मागोवा घ्या!';
+
+  @override
+  String get subscription_header_title => 'प्रीमियम अनलॉक करा';
+
+  @override
+  String get subscription_header_subtitle => 'अनुप्रयोगाच्या सर्व वैशिष्ट्यांमध्ये प्रवेश करा.';
+
+  @override
+  String get subscription_free_trial => 'खाते तयार केल्यावर ७ दिवस मोफत. त्यानंतर, सदस्यता आवश्यक.';
+
+  @override
+  String get subscription_free_trial_end => 'तुमची \$daysFreeTrial दिवसांची मोफत चाचणी संपली आहे.';
+
+  @override
+  String get subscription_benefit_full_access => 'अ‍ॅपवर पूर्ण प्रवेश';
+
+  @override
+  String get subscription_benefit_unlimited => 'अमर्यादित वापर';
+
+  @override
+  String get subscription_benefit_updates => 'अपडेट्स आणि सपोर्ट समाविष्ट आहे';
+
+  @override
+  String get subscription_plan_badge_best_offer => '२ महिने मोफत';
+
+  @override
+  String get subscription_legal_note => 'खरेदीची पुष्टी झाल्यावर तुमच्या iTunes खात्यातून पेमेंट आकारले जाईल. सध्याचा कालावधी संपण्याच्या किमान २४ तास आधी बंद न केल्यास सबस्क्रिप्शन आपोआप रिन्यू होते. तुम्ही तुमचे सबस्क्रिप्शन व्यवस्थापित करू शकता आणि तुमच्या अकाउंट सेटिंग्जमध्ये ऑटो-नूतनीकरण बंद करू शकता. ७ दिवसांची मोफत चाचणी अॅपद्वारे व्यवस्थापित केली जाते (नवीन खाती).';
 }

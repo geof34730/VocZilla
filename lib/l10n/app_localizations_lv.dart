@@ -625,4 +625,31 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla ir lieliska lietotne, lai paplašinātu savu angļu valodas vārdu krājumu neatkarīgi no jūsu līmeņa. Atklājiet tūkstošiem vārdu, kas sakārtoti pēc tēmas, un sekojiet līdzi savam progresam!';
+
+  @override
+  String get subscription_header_title => 'Atbloķēt Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Piekļūstiet visām lietojumprogrammas funkcijām.';
+
+  @override
+  String get subscription_free_trial => '7 dienas bez maksas pēc konta izveides. Pēc tam nepieciešams abonements.';
+
+  @override
+  String get subscription_free_trial_end => 'Jūsu \$daysFreeTrial dienu bezmaksas izmēģinājuma periods ir beidzies.';
+
+  @override
+  String get subscription_benefit_full_access => 'Pilnīga piekļuve lietotnei';
+
+  @override
+  String get subscription_benefit_unlimited => 'Neierobežota lietošana';
+
+  @override
+  String get subscription_benefit_updates => 'Iekļauti atjauninājumi un atbalsts';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 mēneši bez maksas';
+
+  @override
+  String get subscription_legal_note => 'Maksājums tiks iekasēts no jūsu iTunes konta, kad būs apstiprināts pirkums. Abonements tiek automātiski atjaunots, ja vien tas netiek izslēgts vismaz 24 stundas pirms pašreizējā perioda beigām. Jūs varat pārvaldīt savu abonementu un izslēgt automātisko atjaunošanu sava konta iestatījumos. 7 dienu bezmaksas izmēģinājuma periodu pārvalda lietotne (jauni konti).';
 }

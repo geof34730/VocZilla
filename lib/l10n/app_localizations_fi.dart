@@ -625,4 +625,31 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla on täydellinen sovellus englannin sanavarastosi laajentamiseen taitotasostasi riippumatta. Löydä tuhansia sanoja teeman mukaan luokiteltuina ja seuraa edistymistäsi!';
+
+  @override
+  String get subscription_header_title => 'Avaa Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Käytä kaikkia sovelluksen ominaisuuksia.';
+
+  @override
+  String get subscription_free_trial => '7 päivää ilmaiseksi tilin luomisen jälkeen. Sen jälkeen vaaditaan tilaus.';
+
+  @override
+  String get subscription_free_trial_end => '\$daysFreeTrial-päivän ilmainen kokeilujaksosi on päättynyt.';
+
+  @override
+  String get subscription_benefit_full_access => 'Täysi pääsy sovellukseen';
+
+  @override
+  String get subscription_benefit_unlimited => 'Rajoittamaton käyttö';
+
+  @override
+  String get subscription_benefit_updates => 'Päivitykset ja tuki sisältyvät hintaan';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 kuukautta ilmaiseksi';
+
+  @override
+  String get subscription_legal_note => 'Maksu veloitetaan iTunes-tililtäsi ostoksen vahvistamisen yhteydessä. Tilaus uusiutuu automaattisesti, ellei sitä poisteta käytöstä vähintään 24 tuntia ennen nykyisen jakson päättymistä. Voit hallita tilaustasi ja poistaa automaattisen uusimisen käytöstä tilisi asetuksissa. Sovellus hallinnoi 7 päivän ilmaista kokeilujaksoa (uudet tilit).';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla on ideaalne rakendus oma inglise keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid sõnu, mis on teemade kaupa liigitatud, ja jälgige oma edusamme!';
+
+  @override
+  String get subscription_header_title => 'Ava Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Juurdepääs kõigile rakenduse funktsioonidele.';
+
+  @override
+  String get subscription_free_trial => '7 päeva tasuta pärast konto loomist. Pärast seda on vajalik tellimus.';
+
+  @override
+  String get subscription_free_trial_end => 'Teie \$daysFreeTrial päeva pikkune tasuta prooviperiood on lõppenud.';
+
+  @override
+  String get subscription_benefit_full_access => 'Täielik juurdepääs rakendusele';
+
+  @override
+  String get subscription_benefit_unlimited => 'Piiramatu kasutamine';
+
+  @override
+  String get subscription_benefit_updates => 'Värskendused ja tugi on kaasas';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 kuud tasuta';
+
+  @override
+  String get subscription_legal_note => 'Makse debiteeritakse teie iTunes\'i kontolt ostu kinnitamisel. Tellimus uueneb automaatselt, kui seda ei lülitata välja vähemalt 24 tundi enne praeguse perioodi lõppu. Saate oma tellimust hallata ja automaatse uuendamise välja lülitada oma konto seadetes. 7-päevast tasuta prooviperioodi haldab rakendus (uued kontod).';
 }

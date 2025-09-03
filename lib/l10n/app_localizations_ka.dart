@@ -625,4 +625,31 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla იდეალური აპლიკაციაა თქვენი ინგლისური ლექსიკის გასამდიდრებლად, თქვენი დონის მიუხედავად. აღმოაჩინეთ ათასობით სიტყვა, რომლებიც თემის მიხედვით არის კატეგორიზებული და თვალყური ადევნეთ თქვენს პროგრესს!';
+
+  @override
+  String get subscription_header_title => 'განბლოკეთ პრემიუმი';
+
+  @override
+  String get subscription_header_subtitle => 'აპლიკაციის ყველა ფუნქციაზე წვდომა.';
+
+  @override
+  String get subscription_free_trial => 'ანგარიშის შექმნისთანავე 7 დღე უფასოდ. ამის შემდეგ საჭიროა გამოწერა.';
+
+  @override
+  String get subscription_free_trial_end => 'თქვენი \$daysFreeTrial-დღიანი უფასო საცდელი პერიოდი დასრულდა.';
+
+  @override
+  String get subscription_benefit_full_access => 'აპლიკაციაზე სრული წვდომა';
+
+  @override
+  String get subscription_benefit_unlimited => 'შეუზღუდავი გამოყენება';
+
+  @override
+  String get subscription_benefit_updates => 'განახლებები და მხარდაჭერა შედის';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 თვე უფასოდ';
+
+  @override
+  String get subscription_legal_note => 'გადახდა ჩამოიჭრება თქვენი iTunes ანგარიშიდან შეძენის დადასტურებისთანავე. გამოწერა ავტომატურად განახლდება, თუ არ გამორთავთ მიმდინარე პერიოდის დასრულებამდე სულ მცირე 24 საათით ადრე. თქვენ შეგიძლიათ მართოთ თქვენი გამოწერა და გამორთოთ ავტომატური განახლება თქვენი ანგარიშის პარამეტრებში. 7-დღიან უფასო საცდელ პერიოდს მართავს აპლიკაცია (ახალი ანგარიშები).';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema och följ dina framsteg!';
+
+  @override
+  String get subscription_header_title => 'Lås upp Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Få tillgång till alla funktioner i applikationen.';
+
+  @override
+  String get subscription_free_trial => '7 dagar gratis efter att kontot skapats. Därefter krävs prenumeration.';
+
+  @override
+  String get subscription_free_trial_end => 'Din kostnadsfria provperiod på \$daysFreeTrial har slutat.';
+
+  @override
+  String get subscription_benefit_full_access => 'Full åtkomst till appen';
+
+  @override
+  String get subscription_benefit_unlimited => 'Obegränsad användning';
+
+  @override
+  String get subscription_benefit_updates => 'Uppdateringar och support ingår';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 månader gratis';
+
+  @override
+  String get subscription_legal_note => 'Betalningen debiteras ditt iTunes-konto vid köpbekräftelse. Prenumerationen förnyas automatiskt om den inte stängs av minst 24 timmar före slutet av den aktuella perioden. Du kan hantera din prenumeration och stänga av automatisk förnyelse i dina kontoinställningar. Den 7 dagar långa gratis provperioden hanteras av appen (nya konton).';
 }

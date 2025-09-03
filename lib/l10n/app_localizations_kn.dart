@@ -625,4 +625,31 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get app_description_android => 'ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ವಿಸ್ತರಿಸಲು VocZilla ಪರಿಪೂರ್ಣ ಅಪ್ಲಿಕೇಶನ್ ಆಗಿದೆ, ನಿಮ್ಮ ಮಟ್ಟವನ್ನು ಲೆಕ್ಕಿಸದೆ. ಥೀಮ್ ಮೂಲಕ ವರ್ಗೀಕರಿಸಲಾದ ಸಾವಿರಾರು ಪದಗಳನ್ನು ಅನ್ವೇಷಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ!';
+
+  @override
+  String get subscription_header_title => 'ಪ್ರೀಮಿಯಂ ಅನ್‌ಲಾಕ್ ಮಾಡಿ';
+
+  @override
+  String get subscription_header_subtitle => 'ಅಪ್ಲಿಕೇಶನ್‌ನ ಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಪ್ರವೇಶಿಸಿ.';
+
+  @override
+  String get subscription_free_trial => 'ಖಾತೆ ರಚಿಸಿದ ಮೇಲೆ 7 ದಿನಗಳು ಉಚಿತ. ಅದಾದ ನಂತರ, ಚಂದಾದಾರಿಕೆ ಅಗತ್ಯವಿದೆ.';
+
+  @override
+  String get subscription_free_trial_end => 'ನಿಮ್ಮ \$daysFreeTrial ದಿನಗಳ ಉಚಿತ ಪ್ರಯೋಗ ಕೊನೆಗೊಂಡಿದೆ.';
+
+  @override
+  String get subscription_benefit_full_access => 'ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಪೂರ್ಣ ಪ್ರವೇಶ';
+
+  @override
+  String get subscription_benefit_unlimited => 'ಅನಿಯಮಿತ ಬಳಕೆ';
+
+  @override
+  String get subscription_benefit_updates => 'ನವೀಕರಣಗಳು ಮತ್ತು ಬೆಂಬಲವನ್ನು ಒಳಗೊಂಡಿದೆ';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 ತಿಂಗಳು ಉಚಿತ';
+
+  @override
+  String get subscription_legal_note => 'ಖರೀದಿ ದೃಢೀಕರಣದ ನಂತರ ನಿಮ್ಮ iTunes ಖಾತೆಗೆ ಪಾವತಿಯನ್ನು ವಿಧಿಸಲಾಗುತ್ತದೆ. ಪ್ರಸ್ತುತ ಅವಧಿ ಮುಗಿಯುವ ಕನಿಷ್ಠ 24 ಗಂಟೆಗಳ ಮೊದಲು ಆಫ್ ಮಾಡದ ಹೊರತು ಚಂದಾದಾರಿಕೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನವೀಕರಣಗೊಳ್ಳುತ್ತದೆ. ನಿಮ್ಮ ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ನಿಮ್ಮ ಚಂದಾದಾರಿಕೆಯನ್ನು ನೀವು ನಿರ್ವಹಿಸಬಹುದು ಮತ್ತು ಸ್ವಯಂ ನವೀಕರಣವನ್ನು ಆಫ್ ಮಾಡಬಹುದು. 7-ದಿನಗಳ ಉಚಿತ ಪ್ರಯೋಗವನ್ನು ಅಪ್ಲಿಕೇಶನ್ (ಹೊಸ ಖಾತೆಗಳು) ನಿರ್ವಹಿಸುತ್ತದೆ.';
 }

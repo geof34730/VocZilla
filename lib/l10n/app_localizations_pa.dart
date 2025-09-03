@@ -625,4 +625,31 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla ਤੁਹਾਡੀ ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦਾਵਲੀ ਨੂੰ ਵਧਾਉਣ ਲਈ ਇੱਕ ਸੰਪੂਰਨ ਐਪ ਹੈ, ਭਾਵੇਂ ਤੁਹਾਡਾ ਪੱਧਰ ਕੋਈ ਵੀ ਹੋਵੇ। ਥੀਮ ਦੁਆਰਾ ਸ਼੍ਰੇਣੀਬੱਧ ਕੀਤੇ ਹਜ਼ਾਰਾਂ ਸ਼ਬਦਾਂ ਦੀ ਖੋਜ ਕਰੋ ਅਤੇ ਆਪਣੀ ਤਰੱਕੀ ਨੂੰ ਟਰੈਕ ਕਰੋ!';
+
+  @override
+  String get subscription_header_title => 'ਪ੍ਰੀਮੀਅਮ ਅਨਲੌਕ ਕਰੋ';
+
+  @override
+  String get subscription_header_subtitle => 'ਐਪਲੀਕੇਸ਼ਨ ਦੀਆਂ ਸਾਰੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰੋ।';
+
+  @override
+  String get subscription_free_trial => 'ਖਾਤਾ ਬਣਾਉਣ \'ਤੇ 7 ਦਿਨ ਮੁਫ਼ਤ। ਉਸ ਤੋਂ ਬਾਅਦ, ਗਾਹਕੀ ਦੀ ਲੋੜ ਹੈ।';
+
+  @override
+  String get subscription_free_trial_end => 'ਤੁਹਾਡੀ \$daysFreeTrial ਦਿਨਾਂ ਦੀ ਮੁਫ਼ਤ ਅਜ਼ਮਾਇਸ਼ ਖਤਮ ਹੋ ਗਈ ਹੈ।';
+
+  @override
+  String get subscription_benefit_full_access => 'ਐਪ ਤੱਕ ਪੂਰੀ ਪਹੁੰਚ';
+
+  @override
+  String get subscription_benefit_unlimited => 'ਅਸੀਮਤ ਵਰਤੋਂ';
+
+  @override
+  String get subscription_benefit_updates => 'ਅੱਪਡੇਟ ਅਤੇ ਸਹਾਇਤਾ ਸ਼ਾਮਲ ਹੈ';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 ਮਹੀਨੇ ਮੁਫ਼ਤ';
+
+  @override
+  String get subscription_legal_note => 'ਖਰੀਦ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ \'ਤੇ ਤੁਹਾਡੇ iTunes ਖਾਤੇ ਤੋਂ ਭੁਗਤਾਨ ਲਿਆ ਜਾਵੇਗਾ। ਗਾਹਕੀ ਆਪਣੇ ਆਪ ਰੀਨਿਊ ਹੋ ਜਾਂਦੀ ਹੈ ਜਦੋਂ ਤੱਕ ਮੌਜੂਦਾ ਮਿਆਦ ਦੇ ਅੰਤ ਤੋਂ ਘੱਟੋ-ਘੱਟ 24 ਘੰਟੇ ਪਹਿਲਾਂ ਬੰਦ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ। ਤੁਸੀਂ ਆਪਣੀ ਗਾਹਕੀ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਆਪਣੀਆਂ ਖਾਤਾ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਆਟੋ-ਨਵੀਨੀਕਰਨ ਨੂੰ ਬੰਦ ਕਰ ਸਕਦੇ ਹੋ। 7-ਦਿਨਾਂ ਦੀ ਮੁਫ਼ਤ ਅਜ਼ਮਾਇਸ਼ ਐਪ (ਨਵੇਂ ਖਾਤੇ) ਦੁਆਰਾ ਪ੍ਰਬੰਧਿਤ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।';
 }

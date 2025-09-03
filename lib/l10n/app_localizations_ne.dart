@@ -625,4 +625,31 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla तपाईंको स्तरको पर्वाह नगरी तपाईंको अंग्रेजी शब्दावली विस्तार गर्नको लागि उत्तम एप हो। विषयवस्तु अनुसार वर्गीकृत हजारौं शब्दहरू पत्ता लगाउनुहोस् र आफ्नो प्रगति ट्र्याक गर्नुहोस्!';
+
+  @override
+  String get subscription_header_title => 'प्रिमियम अनलक गर्नुहोस्';
+
+  @override
+  String get subscription_header_subtitle => 'अनुप्रयोगका सबै सुविधाहरू पहुँच गर्नुहोस्।';
+
+  @override
+  String get subscription_free_trial => 'खाता सिर्जना गर्दा ७ दिन नि:शुल्क। त्यसपछि, सदस्यता आवश्यक छ।';
+
+  @override
+  String get subscription_free_trial_end => 'तपाईंको \$daysFreeTrial दिनको नि:शुल्क परीक्षण समाप्त भएको छ।';
+
+  @override
+  String get subscription_benefit_full_access => 'एपमा पूर्ण पहुँच';
+
+  @override
+  String get subscription_benefit_unlimited => 'असीमित प्रयोग';
+
+  @override
+  String get subscription_benefit_updates => 'अपडेट र समर्थन समावेश छ';
+
+  @override
+  String get subscription_plan_badge_best_offer => '२ महिना नि:शुल्क';
+
+  @override
+  String get subscription_legal_note => 'खरिद पुष्टि भएपछि तपाईंको iTunes खातामा भुक्तानी शुल्क लगाइनेछ। हालको अवधि समाप्त हुनुभन्दा कम्तिमा २४ घण्टा अघि बन्द नगरिएमा सदस्यता स्वतः नवीकरण हुन्छ। तपाईं आफ्नो खाता सेटिङहरूमा आफ्नो सदस्यता व्यवस्थापन गर्न र स्वतः नवीकरण बन्द गर्न सक्नुहुन्छ। ७-दिनको निःशुल्क परीक्षण एप (नयाँ खाताहरू) द्वारा व्यवस्थित गरिन्छ।';
 }

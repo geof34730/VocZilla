@@ -625,4 +625,31 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla برنامه‌ای بی‌نظیر برای گسترش دایره لغات انگلیسی شماست، صرف نظر از سطحتان. هزاران کلمه را که بر اساس موضوع دسته‌بندی شده‌اند، کشف کنید و پیشرفت خود را پیگیری کنید!';
+
+  @override
+  String get subscription_header_title => 'باز کردن قفل پرمیوم';
+
+  @override
+  String get subscription_header_subtitle => 'به تمام امکانات برنامه دسترسی پیدا کنید.';
+
+  @override
+  String get subscription_free_trial => '۷ روز رایگان پس از ایجاد حساب کاربری. پس از آن، اشتراک لازم است.';
+
+  @override
+  String get subscription_free_trial_end => 'دوره آزمایشی رایگان \$daysFreeTrial شما به پایان رسیده است.';
+
+  @override
+  String get subscription_benefit_full_access => 'دسترسی کامل به برنامه';
+
+  @override
+  String get subscription_benefit_unlimited => 'استفاده نامحدود';
+
+  @override
+  String get subscription_benefit_updates => 'شامل به‌روزرسانی‌ها و پشتیبانی';
+
+  @override
+  String get subscription_plan_badge_best_offer => '۲ ماه رایگان';
+
+  @override
+  String get subscription_legal_note => 'هزینه اشتراک در هنگام تأیید خرید از حساب iTunes شما کسر خواهد شد. اشتراک به طور خودکار تمدید می‌شود، مگر اینکه حداقل ۲۴ ساعت قبل از پایان دوره فعلی آن را غیرفعال کنید. می‌توانید اشتراک خود را مدیریت کرده و تمدید خودکار را در تنظیمات حساب خود غیرفعال کنید. دوره آزمایشی رایگان ۷ روزه توسط برنامه (حساب‌های جدید) مدیریت می‌شود.';
 }

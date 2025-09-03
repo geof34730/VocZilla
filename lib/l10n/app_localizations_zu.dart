@@ -625,4 +625,31 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get app_description_android => 'I-VocZilla iwuhlelo lokusebenza oluphelele lokwandisa ulwazimagama lwakho lwesiNgisi, kungakhathaliseki izinga lakho. Zitholele izinkulungwane zamagama ahlukaniswe ngetimu futhi ulandelele ukuqhubeka kwakho!';
+
+  @override
+  String get subscription_header_title => 'Vula i-Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Finyelela kuzo zonke izici zohlelo lokusebenza.';
+
+  @override
+  String get subscription_free_trial => 'Izinsuku ezingu-7 zamahhala ekudalweni kwe-akhawunti. Ngemva kwalokho, ukubhalisa kuyadingeka.';
+
+  @override
+  String get subscription_free_trial_end => 'Isivivinyo sakho samahhala sezinsuku ezingu-\$daysFreeTrial siphelile.';
+
+  @override
+  String get subscription_benefit_full_access => 'Ukufinyelela okugcwele kuhlelo lokusebenza';
+
+  @override
+  String get subscription_benefit_unlimited => 'Ukusetshenziswa Unlimited';
+
+  @override
+  String get subscription_benefit_updates => 'Izibuyekezo nokusekelwa kufakiwe';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 izinyanga mahhala';
+
+  @override
+  String get subscription_legal_note => 'Inkokhelo izokhokhiswa ku-akhawunti yakho ye-iTunes lapho kuqinisekiswa ukuthi uthenge. Ukubhalisa kuvuselelwa ngokuzenzakalela ngaphandle uma kucishiwe okungenani amahora angama-24 ngaphambi kokuphela kwesikhathi samanje. Ungaphatha ukubhalisa kwakho futhi uvale ukwenza kabusha okuzenzakalelayo kuzilungiselelo ze-akhawunti yakho. Isivivinyo samahhala sezinsuku ezingu-7 siphethwe uhlelo lokusebenza (ama-akhawunti amasha).';
 }

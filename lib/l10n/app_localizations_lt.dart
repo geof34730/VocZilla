@@ -625,4 +625,31 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get app_description_android => '„VocZilla“ yra puiki programėlė, skirta išplėsti savo anglų kalbos žodyną, nesvarbu, koks jūsų lygis. Atraskite tūkstančius žodžių, suskirstytų pagal temas, ir stebėkite savo pažangą!';
+
+  @override
+  String get subscription_header_title => 'Atrakinkite „Premium“';
+
+  @override
+  String get subscription_header_subtitle => 'Pasiekite visas programos funkcijas.';
+
+  @override
+  String get subscription_free_trial => '7 dienos nemokamos susikūrus paskyrą. Po to reikalinga prenumerata.';
+
+  @override
+  String get subscription_free_trial_end => 'Jūsų \$daysFreeTrial dienų nemokamas bandomasis laikotarpis baigėsi.';
+
+  @override
+  String get subscription_benefit_full_access => 'Visiška prieiga prie programėlės';
+
+  @override
+  String get subscription_benefit_unlimited => 'Neribotas naudojimas';
+
+  @override
+  String get subscription_benefit_updates => 'Įtraukti atnaujinimai ir palaikymas';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 mėnesiai nemokamai';
+
+  @override
+  String get subscription_legal_note => 'Mokėjimas bus nuskaičiuotas iš jūsų „iTunes“ paskyros patvirtinus pirkimą. Prenumerata automatiškai atnaujinama, nebent ji būtų išjungta likus bent 24 valandoms iki dabartinio laikotarpio pabaigos. Prenumeratą galite tvarkyti ir išjungti automatinį atnaujinimą paskyros nustatymuose. 7 dienų nemokamą bandomąją versiją tvarko programėlė (naujos paskyros).';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla የእርስዎን ደረጃ ምንም ይሁን ምን የእንግሊዝኛ ቃላትን ለማስፋት ፍጹም መተግበሪያ ነው። በጭብጥ የተከፋፈሉ በሺዎች የሚቆጠሩ ቃላትን ያግኙ እና እድገትዎን ይከታተሉ!';
+
+  @override
+  String get subscription_header_title => 'ፕሪሚየም ይክፈቱ';
+
+  @override
+  String get subscription_header_subtitle => 'ሁሉንም የመተግበሪያውን ባህሪያት ይድረሱ.';
+
+  @override
+  String get subscription_free_trial => 'መለያ ሲፈጠር ለ 7 ቀናት ነፃ። ከዚያ በኋላ የደንበኝነት ምዝገባ ያስፈልጋል።';
+
+  @override
+  String get subscription_free_trial_end => 'የ\$daysFreeTrial ቀናት ነፃ ሙከራዎ አብቅቷል።';
+
+  @override
+  String get subscription_benefit_full_access => 'የመተግበሪያው ሙሉ መዳረሻ';
+
+  @override
+  String get subscription_benefit_unlimited => 'ያልተገደበ አጠቃቀም';
+
+  @override
+  String get subscription_benefit_updates => 'ዝማኔዎች እና ድጋፍ ተካትተዋል።';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 ወራት ነጻ';
+
+  @override
+  String get subscription_legal_note => 'ክፍያው በግዢው ማረጋገጫ ላይ በ iTunes መለያዎ ላይ ይከፈላል. የአሁኑ ጊዜ ከማብቃቱ ቢያንስ 24 ሰዓታት በፊት ካልጠፋ በስተቀር ምዝገባው በራስ-ሰር ይታደሳል። የደንበኝነት ምዝገባዎን ማስተዳደር እና በራስ-እድሳትን በእርስዎ መለያ ቅንብሮች ውስጥ ማጥፋት ይችላሉ። የ7-ቀን ነጻ ሙከራው የሚተዳደረው በመተግበሪያው ነው (አዲስ መለያዎች)።';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla - bu sizning darajangizdan qat\'i nazar, ingliz tilidagi lug\'atingizni kengaytirish uchun mukammal dastur. Mavzu bo\'yicha toifalarga ajratilgan minglab so\'zlarni kashf eting va taraqqiyotingizni kuzatib boring!';
+
+  @override
+  String get subscription_header_title => 'Premium qulfini ochish';
+
+  @override
+  String get subscription_header_subtitle => 'Ilovaning barcha xususiyatlariga kiring.';
+
+  @override
+  String get subscription_free_trial => 'Hisob yaratgandan keyin 7 kun bepul. Shundan so\'ng, obuna talab qilinadi.';
+
+  @override
+  String get subscription_free_trial_end => 'Sizning \$daysFreeTrial kunlik bepul sinov muddati tugadi.';
+
+  @override
+  String get subscription_benefit_full_access => 'Ilovaga to\'liq kirish';
+
+  @override
+  String get subscription_benefit_unlimited => 'Cheksiz foydalanish';
+
+  @override
+  String get subscription_benefit_updates => 'Yangilanishlar va qo\'llab-quvvatlash kiritilgan';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 oy bepul';
+
+  @override
+  String get subscription_legal_note => 'Toʻlov xaridni tasdiqlashda iTunes hisobingizga oʻtkaziladi. Obuna joriy davr tugashiga kamida 24 soat qolganda o\'chirilmasa, avtomatik ravishda yangilanadi. Hisob sozlamalarida obunangizni boshqarishingiz va avtomatik yangilashni o‘chirib qo‘yishingiz mumkin. 7 kunlik bepul sinov muddati ilova (yangi hisoblar) tomonidan boshqariladi.';
 }

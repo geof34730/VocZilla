@@ -625,4 +625,31 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla aplikazio ezin hobea da zure ingeles hiztegia zabaltzeko, zure maila edozein dela ere. Ezagutu gaiaren arabera sailkatutako milaka hitz eta jarraitu zure aurrerapena!';
+
+  @override
+  String get subscription_header_title => 'Desblokeatu Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Sartu aplikazioaren funtzio guztietara.';
+
+  @override
+  String get subscription_free_trial => '7 egun doan kontua sortzean. Horren ondoren, harpidetza beharrezkoa da.';
+
+  @override
+  String get subscription_free_trial_end => 'Zure \$daysFreeTrial eguneko doako proba amaitu da.';
+
+  @override
+  String get subscription_benefit_full_access => 'Aplikaziorako sarbide osoa';
+
+  @override
+  String get subscription_benefit_unlimited => 'Erabilera mugagabea';
+
+  @override
+  String get subscription_benefit_updates => 'Eguneraketak eta laguntza barne';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 hilabete doan';
+
+  @override
+  String get subscription_legal_note => 'Ordainketa zure iTunes kontuan kobratuko da erosketa baieztatzean. Harpidetza automatikoki berritzen da uneko epea amaitu baino gutxienez 24 ordu lehenago desaktibatu ezean. Zure harpidetza kudeatu eta berritze automatikoa desaktibatu dezakezu zure Kontuaren ezarpenetan. 7 eguneko doako proba aplikazioak kudeatzen du (kontu berriak).';
 }

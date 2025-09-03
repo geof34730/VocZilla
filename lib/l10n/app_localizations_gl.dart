@@ -625,4 +625,31 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla é a aplicación perfecta para ampliar o teu vocabulario en inglés, sexa cal sexa o teu nivel. Descubre miles de palabras categorizadas por tema e fai un seguimento do teu progreso!';
+
+  @override
+  String get subscription_header_title => 'Desbloquear Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Accede a todas as funcionalidades da aplicación.';
+
+  @override
+  String get subscription_free_trial => '7 días gratis ao crear a conta. Despois diso, requírese subscrición.';
+
+  @override
+  String get subscription_free_trial_end => 'Rematou a túa proba gratuíta de \$daysFreeTrial.';
+
+  @override
+  String get subscription_benefit_full_access => 'Acceso completo á aplicación';
+
+  @override
+  String get subscription_benefit_unlimited => 'Uso ilimitado';
+
+  @override
+  String get subscription_benefit_updates => 'Actualizacións e soporte incluídos';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 meses gratis';
+
+  @override
+  String get subscription_legal_note => 'O pago cargarase na túa conta de iTunes ao confirmar a compra. A subscrición renóvase automaticamente a menos que se desactive polo menos 24 horas antes do final do período actual. Podes xestionar a túa subscrición e desactivar a renovación automática na Configuración da túa conta. A proba gratuíta de 7 días está xestionada pola aplicación (contas novas).';
 }

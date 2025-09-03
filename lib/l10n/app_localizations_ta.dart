@@ -625,4 +625,31 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get app_description_android => 'உங்கள் ஆங்கில சொற்களஞ்சியத்தை விரிவுபடுத்த VocZilla சரியான பயன்பாடாகும், உங்கள் ஆங்கில நிலை எதுவாக இருந்தாலும் சரி. கருப்பொருளின் அடிப்படையில் வகைப்படுத்தப்பட்ட ஆயிரக்கணக்கான சொற்களைக் கண்டறிந்து உங்கள் முன்னேற்றத்தைக் கண்காணிக்கவும்!';
+
+  @override
+  String get subscription_header_title => 'பிரீமியத்தைத் திற';
+
+  @override
+  String get subscription_header_subtitle => 'பயன்பாட்டின் அனைத்து அம்சங்களையும் அணுகவும்.';
+
+  @override
+  String get subscription_free_trial => 'கணக்கு உருவாக்கும்போது 7 நாட்கள் இலவசம். அதன் பிறகு, சந்தா தேவை.';
+
+  @override
+  String get subscription_free_trial_end => 'உங்கள் \$daysFreeTrial நாட்கள் இலவச சோதனை முடிந்தது.';
+
+  @override
+  String get subscription_benefit_full_access => 'பயன்பாட்டிற்கான முழு அணுகல்';
+
+  @override
+  String get subscription_benefit_unlimited => 'வரம்பற்ற பயன்பாடு';
+
+  @override
+  String get subscription_benefit_updates => 'புதுப்பிப்புகள் மற்றும் ஆதரவு சேர்க்கப்பட்டுள்ளது';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 மாதங்கள் இலவசம்';
+
+  @override
+  String get subscription_legal_note => 'வாங்கியதை உறுதிப்படுத்தியவுடன் உங்கள் iTunes கணக்கில் கட்டணம் வசூலிக்கப்படும். தற்போதைய சந்தா காலம் முடிவதற்கு குறைந்தது 24 மணிநேரத்திற்கு முன்பு முடக்கப்படாவிட்டால், சந்தா தானாகவே புதுப்பிக்கப்படும். உங்கள் கணக்கு அமைப்புகளில் உங்கள் சந்தாவை நிர்வகிக்கலாம் மற்றும் தானியங்கி புதுப்பித்தலை முடக்கலாம். 7 நாள் இலவச சோதனையானது ஆப்ஸால் (புதிய கணக்குகள்) நிர்வகிக்கப்படுகிறது.';
 }

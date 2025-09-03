@@ -625,4 +625,31 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get app_description_android => 'നിങ്ങളുടെ ഇംഗ്ലീഷ് പദാവലി വികസിപ്പിക്കുന്നതിനുള്ള മികച്ച ആപ്പാണ് വോക്‌സില്ല, നിങ്ങളുടെ ലെവൽ എന്തുതന്നെയായാലും. തീം അനുസരിച്ച് തരംതിരിച്ച ആയിരക്കണക്കിന് വാക്കുകൾ കണ്ടെത്തി നിങ്ങളുടെ പുരോഗതി ട്രാക്ക് ചെയ്യുക!';
+
+  @override
+  String get subscription_header_title => 'പ്രീമിയം അൺലോക്ക് ചെയ്യൂ';
+
+  @override
+  String get subscription_header_subtitle => 'ആപ്ലിക്കേഷന്റെ എല്ലാ സവിശേഷതകളും ആക്സസ് ചെയ്യുക.';
+
+  @override
+  String get subscription_free_trial => 'അക്കൗണ്ട് സൃഷ്ടിച്ചാൽ 7 ദിവസം സൗജന്യം. അതിനുശേഷം, സബ്‌സ്‌ക്രിപ്‌ഷൻ ആവശ്യമാണ്.';
+
+  @override
+  String get subscription_free_trial_end => 'നിങ്ങളുടെ \$daysFreeTrial ദിവസത്തെ സൗജന്യ ട്രയൽ അവസാനിച്ചു.';
+
+  @override
+  String get subscription_benefit_full_access => 'ആപ്പിലേക്കുള്ള പൂർണ്ണ ആക്‌സസ്';
+
+  @override
+  String get subscription_benefit_unlimited => 'പരിധിയില്ലാത്ത ഉപയോഗം';
+
+  @override
+  String get subscription_benefit_updates => 'അപ്‌ഡേറ്റുകളും പിന്തുണയും ഉൾപ്പെടുത്തിയിട്ടുണ്ട്';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 മാസം സൗജന്യം';
+
+  @override
+  String get subscription_legal_note => 'വാങ്ങൽ സ്ഥിരീകരിക്കുമ്പോൾ നിങ്ങളുടെ iTunes അക്കൗണ്ടിൽ നിന്ന് പേയ്‌മെന്റ് ഈടാക്കും. നിലവിലെ കാലയളവ് അവസാനിക്കുന്നതിന് കുറഞ്ഞത് 24 മണിക്കൂർ മുമ്പെങ്കിലും ഓഫാക്കിയില്ലെങ്കിൽ സബ്‌സ്‌ക്രിപ്‌ഷൻ സ്വയമേവ പുതുക്കും. നിങ്ങളുടെ അക്കൗണ്ട് ക്രമീകരണങ്ങളിൽ നിങ്ങൾക്ക് സബ്‌സ്‌ക്രിപ്‌ഷൻ മാനേജ് ചെയ്യാനും സ്വയമേവ പുതുക്കൽ ഓഫാക്കാനും കഴിയും. 7 ദിവസത്തെ സൗജന്യ ട്രയൽ ആപ്പ് (പുതിയ അക്കൗണ്ടുകൾ) ആണ് കൈകാര്യം ചെയ്യുന്നത്.';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla е перфектното приложение за разширяване на вашия английски речник, независимо от нивото ви. Открийте хиляди думи, категоризирани по теми, и следете напредъка си!';
+
+  @override
+  String get subscription_header_title => 'Отключи премиум';
+
+  @override
+  String get subscription_header_subtitle => 'Достъп до всички функции на приложението.';
+
+  @override
+  String get subscription_free_trial => '7 дни безплатно след създаване на акаунт. След това е необходим абонамент.';
+
+  @override
+  String get subscription_free_trial_end => 'Вашият безплатен пробен период от \$daysFreeTrial дни приключи.';
+
+  @override
+  String get subscription_benefit_full_access => 'Пълен достъп до приложението';
+
+  @override
+  String get subscription_benefit_unlimited => 'Неограничена употреба';
+
+  @override
+  String get subscription_benefit_updates => 'Включени са актуализации и поддръжка';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 месеца безплатно';
+
+  @override
+  String get subscription_legal_note => 'Плащането ще бъде таксувано от вашия iTunes акаунт при потвърждение на покупката. Абонаментът се подновява автоматично, освен ако не бъде деактивиран поне 24 часа преди края на текущия период. Можете да управлявате абонамента си и да изключите автоматичното подновяване в настройките на акаунта си. 7-дневният безплатен пробен период се управлява от приложението (нови акаунти).';
 }

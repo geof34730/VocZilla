@@ -625,4 +625,31 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla သည် သင်၏အင်္ဂလိပ်ဝေါဟာရကို ချဲ့ထွင်ရန် အကောင်းဆုံးအက်ပ်ဖြစ်သည်။ ခေါင်းစဉ်အလိုက် အမျိုးအစားခွဲထားသော စကားလုံးထောင်ပေါင်းများစွာကို ရှာဖွေပြီး သင့်တိုးတက်မှုကို ခြေရာခံပါ။';
+
+  @override
+  String get subscription_header_title => 'Premium လော့ခ်ဖွင့်ပါ။';
+
+  @override
+  String get subscription_header_subtitle => 'အက်ပ်၏အင်္ဂါရပ်အားလုံးကို ဝင်ရောက်ကြည့်ရှုပါ။';
+
+  @override
+  String get subscription_free_trial => 'အကောင့်ဖန်တီးပြီးနောက် 7 ရက်အခမဲ့။ ထို့နောက် စာရင်းသွင်းရန် လိုအပ်ပါသည်။';
+
+  @override
+  String get subscription_free_trial_end => 'သင်၏ \$daysFreeTrial ရက်များ အခမဲ့ အစမ်းသုံးမှု ပြီးဆုံးသွားပါပြီ။';
+
+  @override
+  String get subscription_benefit_full_access => 'အက်ပ်သို့ အပြည့်အဝဝင်ရောက်ခွင့်';
+
+  @override
+  String get subscription_benefit_unlimited => 'အကန့်အသတ်မရှိ အသုံးပြုခြင်း။';
+
+  @override
+  String get subscription_benefit_updates => 'အပ်ဒိတ်များနှင့် ပံ့ပိုးမှုများ ပါဝင်ပါသည်။';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 လအခမဲ့';
+
+  @override
+  String get subscription_legal_note => 'ဝယ်ယူမှုအတည်ပြုပြီးပါက ငွေပေးချေမှုကို သင်၏ iTunes အကောင့်သို့ ကောက်ခံမည်ဖြစ်ပါသည်။ လက်ရှိကာလမကုန်ဆုံးမီ အနည်းဆုံး 24 နာရီမပိတ်ပါက စာရင်းသွင်းမှုကို အလိုအလျောက်သက်တမ်းတိုးပါ။ သင်၏စာရင်းသွင်းမှုကို စီမံခန့်ခွဲနိုင်ပြီး သင့်အကောင့်ဆက်တင်များတွင် အလိုအလျောက်သက်တမ်းတိုးခြင်းကို ပိတ်နိုင်သည်။ 7 ရက် အခမဲ့ အစမ်းသုံးခြင်းကို အက်ပ် (အကောင့်အသစ်) မှ စီမံခန့်ခွဲပါသည်။';
 }

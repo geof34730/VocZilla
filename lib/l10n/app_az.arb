@@ -204,5 +204,14 @@
     "restaurer_achats_error": "Bərpa uğursuz oldu. Yenidən cəhd edin.",
     "restauration_terminee": "Bərpa tamamlandı. Əgər aktiv abunəliyiniz varsa, o, indi bərpa olunub.",
     "vocabulaire_type_verbe": "fel",
-    "app_description_android": "VocZilla səviyyənizdən asılı olmayaraq ingilis dili lüğətinizi genişləndirmək üçün mükəmməl proqramdır. Mövzuya görə kateqoriyalara bölünmüş minlərlə sözü kəşf edin və tərəqqinizi izləyin!"
+    "app_description_android": "VocZilla səviyyənizdən asılı olmayaraq ingilis dili lüğətinizi genişləndirmək üçün mükəmməl proqramdır. Mövzuya görə kateqoriyalara bölünmüş minlərlə sözü kəşf edin və tərəqqinizi izləyin!",
+    "subscription_header_title": "Premium kilidini açın",
+    "subscription_header_subtitle": "Tətbiqin bütün xüsusiyyətlərinə daxil olun.",
+    "subscription_free_trial": "Hesab yaratdıqdan sonra 7 gün pulsuzdur. Bundan sonra abunə tələb olunur.",
+    "subscription_free_trial_end": "$daysFreeTrial günlük ödənişsiz sınaq müddətiniz bitdi.",
+    "subscription_benefit_full_access": "Proqrama tam giriş",
+    "subscription_benefit_unlimited": "Limitsiz istifadə",
+    "subscription_benefit_updates": "Yeniləmələr və dəstək daxildir",
+    "subscription_plan_badge_best_offer": "2 ay pulsuz",
+    "subscription_legal_note": "Ödəniş satınalma təsdiq edildikdən sonra iTunes hesabınızdan tutulacaq. Cari dövrün sonuna ən azı 24 saat qalmış söndürülmədikdə abunə avtomatik olaraq yenilənir. Siz abunəliyinizi idarə edə və Hesab Ayarlarınızda avtomatik yenilənməni söndürə bilərsiniz. 7 günlük pulsuz sınaq tətbiq tərəfindən idarə olunur (yeni hesablar)."
 }

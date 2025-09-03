@@ -204,5 +204,14 @@
     "restaurer_achats_error": "Gendannelsen mislykkedes. Prøv igen.",
     "restauration_terminee": "Gendannelsen er fuldført. Hvis du havde et aktivt abonnement, er det nu gendannet.",
     "vocabulaire_type_verbe": "udsagnsord",
-    "app_description_android": "VocZilla er den perfekte app til at udvide dit engelske ordforråd, uanset dit niveau. Opdag tusindvis af ord kategoriseret efter tema og følg dine fremskridt!"
+    "app_description_android": "VocZilla er den perfekte app til at udvide dit engelske ordforråd, uanset dit niveau. Opdag tusindvis af ord kategoriseret efter tema og følg dine fremskridt!",
+    "subscription_header_title": "Lås op for Premium",
+    "subscription_header_subtitle": "Få adgang til alle applikationens funktioner.",
+    "subscription_free_trial": "7 dage gratis efter oprettelse af konto. Derefter kræves abonnement.",
+    "subscription_free_trial_end": "Din gratis prøveperiode på $daysFreeTrial dage er slut.",
+    "subscription_benefit_full_access": "Fuld adgang til appen",
+    "subscription_benefit_unlimited": "Ubegrænset brug",
+    "subscription_benefit_updates": "Opdateringer og support inkluderet",
+    "subscription_plan_badge_best_offer": "2 måneder gratis",
+    "subscription_legal_note": "Betalingen vil blive opkrævet på din iTunes-konto ved bekræftelse af købet. Abonnementet fornyes automatisk, medmindre det deaktiveres mindst 24 timer før udgangen af den aktuelle periode. Du kan administrere dit abonnement og deaktivere automatisk fornyelse i dine kontoindstillinger. Den 7-dages gratis prøveperiode administreres af appen (nye konti)."
 }

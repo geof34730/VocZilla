@@ -625,4 +625,31 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZillaは、レベルを問わず英語の語彙力を高めるのに最適なアプリです。テーマ別に分類された数千もの単語を発見し、学習の進捗状況を追跡できます。';
+
+  @override
+  String get subscription_header_title => 'プレミアムのロックを解除';
+
+  @override
+  String get subscription_header_subtitle => 'アプリケーションのすべての機能にアクセスします。';
+
+  @override
+  String get subscription_free_trial => 'アカウント作成後7日間は無料です。その後はサブスクリプションが必要です。';
+
+  @override
+  String get subscription_free_trial_end => '\$daysFreeTrial 日間の無料トライアルが終了しました。';
+
+  @override
+  String get subscription_benefit_full_access => 'アプリへのフルアクセス';
+
+  @override
+  String get subscription_benefit_unlimited => '無制限の使用';
+
+  @override
+  String get subscription_benefit_updates => 'アップデートとサポートが含まれています';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2ヶ月無料';
+
+  @override
+  String get subscription_legal_note => 'お支払いはご購入確定時にiTunesアカウントに請求されます。サブスクリプションは、現在の期間終了の24時間前までにオフにしない限り、自動的に更新されます。アカウント設定でサブスクリプションを管理し、自動更新をオフにすることができます。7日間の無料トライアルはアプリによって管理されます（新規アカウントの場合）。';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla là ứng dụng hoàn hảo để mở rộng vốn từ vựng tiếng Anh của bạn, bất kể trình độ. Khám phá hàng ngàn từ vựng được phân loại theo chủ đề và theo dõi tiến trình học tập của bạn!';
+
+  @override
+  String get subscription_header_title => 'Mở khóa Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Truy cập tất cả các tính năng của ứng dụng.';
+
+  @override
+  String get subscription_free_trial => '7 ngày miễn phí khi tạo tài khoản. Sau đó, cần đăng ký.';
+
+  @override
+  String get subscription_free_trial_end => 'Thời gian dùng thử miễn phí \$daysFreeTrial của bạn đã kết thúc.';
+
+  @override
+  String get subscription_benefit_full_access => 'Truy cập đầy đủ vào ứng dụng';
+
+  @override
+  String get subscription_benefit_unlimited => 'Sử dụng không giới hạn';
+
+  @override
+  String get subscription_benefit_updates => 'Bao gồm cập nhật và hỗ trợ';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 tháng miễn phí';
+
+  @override
+  String get subscription_legal_note => 'Thanh toán sẽ được trừ vào tài khoản iTunes của bạn khi xác nhận mua hàng. Đăng ký sẽ tự động gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kết thúc chu kỳ hiện tại. Bạn có thể quản lý đăng ký và tắt tính năng tự động gia hạn trong Cài đặt Tài khoản. Bản dùng thử miễn phí 7 ngày được quản lý bởi ứng dụng (tài khoản mới).';
 }

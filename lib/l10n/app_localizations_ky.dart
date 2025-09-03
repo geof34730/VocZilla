@@ -625,4 +625,31 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla - деңгээлиңизге карабастан, англисче лексикаңызды кеңейтүү үчүн эң сонун колдонмо. Тема боюнча категорияланган миңдеген сөздөрдү таап, прогрессиңизге көз салыңыз!';
+
+  @override
+  String get subscription_header_title => 'Premium кулпусун ачуу';
+
+  @override
+  String get subscription_header_subtitle => 'Колдонмонун бардык мүмкүнчүлүктөрүнө кириңиз.';
+
+  @override
+  String get subscription_free_trial => 'Эсеп түзүү боюнча 7 күн акысыз. Андан кийин, жазылуу талап кылынат.';
+
+  @override
+  String get subscription_free_trial_end => 'Сиздин \$daysFreeTrial күндүк акысыз сыноо мөөнөтү аяктады.';
+
+  @override
+  String get subscription_benefit_full_access => 'Колдонмого толук мүмкүнчүлүк';
+
+  @override
+  String get subscription_benefit_unlimited => 'Чексиз колдонуу';
+
+  @override
+  String get subscription_benefit_updates => 'Жаңыртуулар жана колдоо камтылган';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 ай бекер';
+
+  @override
+  String get subscription_legal_note => 'Сатып алууну ырастаганда төлөм iTunes эсебиңизден алынат. Жазылуу учурдагы мезгилдин аягына чейин кеминде 24 саат калганда өчүрүлбөсө, автоматтык түрдө жаңыланат. Каттоо эсебиңиздин жөндөөлөрүнөн жазылууңузду башкарып, авто-жаңыртууну өчүрө аласыз. 7 күндүк акысыз сыноону колдонмо башкарат (жаңы аккаунттар).';
 }

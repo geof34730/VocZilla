@@ -625,4 +625,31 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla ndiyo programu bora zaidi ya kupanua msamiati wako wa Kiingereza, haijalishi kiwango chako. Gundua maelfu ya maneno yaliyoainishwa kulingana na mada na ufuatilie maendeleo yako!';
+
+  @override
+  String get subscription_header_title => 'Fungua Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Fikia vipengele vyote vya programu.';
+
+  @override
+  String get subscription_free_trial => 'Siku 7 bila malipo unapofungua akaunti. Baada ya hapo, usajili unahitajika.';
+
+  @override
+  String get subscription_free_trial_end => 'Jaribio lako la bila malipo la siku \$daysFreeTrial limeisha.';
+
+  @override
+  String get subscription_benefit_full_access => 'Ufikiaji kamili wa programu';
+
+  @override
+  String get subscription_benefit_unlimited => 'Matumizi ya ukomo';
+
+  @override
+  String get subscription_benefit_updates => 'Updates na msaada pamoja';
+
+  @override
+  String get subscription_plan_badge_best_offer => 'Miezi 2 bila malipo';
+
+  @override
+  String get subscription_legal_note => 'Malipo yatatozwa kwa akaunti yako ya iTunes baada ya uthibitisho wa ununuzi. Usajili husasishwa kiotomatiki isipokuwa ukizimwa angalau saa 24 kabla ya mwisho wa kipindi cha sasa. Unaweza kudhibiti usajili wako na kuzima usasishaji kiotomatiki katika Mipangilio ya Akaunti yako. Jaribio lisilolipishwa la siku 7 linadhibitiwa na programu (akaunti mpya).';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get app_description_android => 'ඔබේ මට්ටම කුමක් වුවත්, ඔබේ ඉංග්‍රීසි වචන මාලාව පුළුල් කිරීමට VocZilla පරිපූර්ණ යෙදුමකි. තේමාව අනුව වර්ගීකරණය කර ඇති වචන දහස් ගණනක් සොයාගෙන ඔබේ ප්‍රගතිය නිරීක්ෂණය කරන්න!';
+
+  @override
+  String get subscription_header_title => 'වාරිකය අගුළු හරින්න';
+
+  @override
+  String get subscription_header_subtitle => 'යෙදුමේ සියලුම විශේෂාංග වෙත ප්‍රවේශ වන්න.';
+
+  @override
+  String get subscription_free_trial => 'ගිණුම් නිර්මාණයෙන් පසු දින 7ක් නොමිලේ. ඉන්පසු, දායකත්වය අවශ්‍ය වේ.';
+
+  @override
+  String get subscription_free_trial_end => 'ඔබගේ \$daysFreeTrial දින නොමිලේ අත්හදා බැලීම අවසන් වී ඇත.';
+
+  @override
+  String get subscription_benefit_full_access => 'යෙදුමට පූර්ණ ප්‍රවේශය';
+
+  @override
+  String get subscription_benefit_unlimited => 'අසීමිත භාවිතය';
+
+  @override
+  String get subscription_benefit_updates => 'යාවත්කාලීන කිරීම් සහ සහාය ඇතුළත් වේ';
+
+  @override
+  String get subscription_plan_badge_best_offer => 'මාස 2ක් නොමිලේ';
+
+  @override
+  String get subscription_legal_note => 'මිලදී ගැනීම තහවුරු කිරීමේදී ඔබගේ iTunes ගිණුමට ගෙවීම අය කෙරේ. වත්මන් කාල සීමාව අවසන් වීමට අවම වශයෙන් පැය 24කට පෙර අක්‍රිය නොකළහොත් දායකත්වය ස්වයංක්‍රීයව අලුත් වේ. ඔබට ඔබගේ ගිණුම් සැකසුම් තුළ ඔබගේ දායකත්වය කළමනාකරණය කර ස්වයංක්‍රීයව අලුත් කිරීම අක්‍රිය කළ හැකිය. දින 7ක නොමිලේ අත්හදා බැලීම යෙදුම (නව ගිණුම්) මගින් කළමනාකරණය කෙරේ.';
 }

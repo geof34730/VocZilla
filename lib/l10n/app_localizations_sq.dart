@@ -625,4 +625,31 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla është aplikacioni perfekt për të zgjeruar fjalorin tuaj në anglisht, pavarësisht nivelit tuaj. Zbuloni mijëra fjalë të kategorizuara sipas temës dhe ndiqni progresin tuaj!';
+
+  @override
+  String get subscription_header_title => 'Zhbllokoni Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Qasuni në të gjitha veçoritë e aplikacionit.';
+
+  @override
+  String get subscription_free_trial => '7 ditë falas pas krijimit të llogarisë. Pas kësaj, kërkohet abonim.';
+
+  @override
+  String get subscription_free_trial_end => 'Prova juaj falas prej \$daysFreeTrial ditësh ka mbaruar.';
+
+  @override
+  String get subscription_benefit_full_access => 'Qasje e plotë në aplikacion';
+
+  @override
+  String get subscription_benefit_unlimited => 'Përdorim i pakufizuar';
+
+  @override
+  String get subscription_benefit_updates => 'Përditësime dhe mbështetje të përfshira';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 muaj falas';
+
+  @override
+  String get subscription_legal_note => 'Pagesa do të ngarkohet në llogarinë tuaj iTunes pas konfirmimit të blerjes. Abonimi rinovohet automatikisht nëse nuk çaktivizohet të paktën 24 orë para përfundimit të periudhës aktuale. Ju mund ta menaxhoni abonimin tuaj dhe ta çaktivizoni rinovimin automatik në Cilësimet e Llogarisë suaj. Periudha provë falas 7-ditore menaxhohet nga aplikacioni (llogari të reja).';
 }

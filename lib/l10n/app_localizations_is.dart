@@ -625,4 +625,31 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla er hið fullkomna app til að auka enskuorðaforða þinn, óháð því hvaða færni þú ert á. Uppgötvaðu þúsundir orða flokkaða eftir þema og fylgstu með framförum þínum!';
+
+  @override
+  String get subscription_header_title => 'Opnaðu Premium';
+
+  @override
+  String get subscription_header_subtitle => 'Fáðu aðgang að öllum eiginleikum forritsins.';
+
+  @override
+  String get subscription_free_trial => '7 dagar ókeypis eftir stofnun reiknings. Eftir það er áskrift nauðsynleg.';
+
+  @override
+  String get subscription_free_trial_end => 'Ókeypis prufuáskriftin þín, \$daysFreeTrial, er lokið.';
+
+  @override
+  String get subscription_benefit_full_access => 'Fullur aðgangur að appinu';
+
+  @override
+  String get subscription_benefit_unlimited => 'Ótakmörkuð notkun';
+
+  @override
+  String get subscription_benefit_updates => 'Uppfærslur og stuðningur innifalinn';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 mánuðir frítt';
+
+  @override
+  String get subscription_legal_note => 'Greiðsla verður gjaldfærð á iTunes reikninginn þinn við staðfestingu kaupanna. Áskriftin endurnýjast sjálfkrafa nema hún sé slökkt á að minnsta kosti 24 klukkustundum fyrir lok núverandi tímabils. Þú getur stjórnað áskriftinni þinni og slökkt á sjálfvirkri endurnýjun í reikningsstillingunum þínum. 7 daga ókeypis prufuáskriftin er stjórnað af appinu (nýir reikningar).';
 }

@@ -625,4 +625,31 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get app_description_android => 'మీ స్థాయితో సంబంధం లేకుండా, మీ ఆంగ్ల పదజాలాన్ని విస్తరించుకోవడానికి VocZilla సరైన యాప్. థీమ్ ద్వారా వర్గీకరించబడిన వేలాది పదాలను కనుగొనండి మరియు మీ పురోగతిని ట్రాక్ చేయండి!';
+
+  @override
+  String get subscription_header_title => 'ప్రీమియంను అన్‌లాక్ చేయండి';
+
+  @override
+  String get subscription_header_subtitle => 'అప్లికేషన్ యొక్క అన్ని లక్షణాలను యాక్సెస్ చేయండి.';
+
+  @override
+  String get subscription_free_trial => 'ఖాతా సృష్టించిన తర్వాత 7 రోజులు ఉచితం. ఆ తర్వాత, సభ్యత్వం అవసరం.';
+
+  @override
+  String get subscription_free_trial_end => 'మీ \$daysFreeTrial రోజుల ఉచిత ట్రయల్ ముగిసింది.';
+
+  @override
+  String get subscription_benefit_full_access => 'యాప్‌కు పూర్తి యాక్సెస్';
+
+  @override
+  String get subscription_benefit_unlimited => 'అపరిమిత వినియోగం';
+
+  @override
+  String get subscription_benefit_updates => 'నవీకరణలు మరియు మద్దతు చేర్చబడ్డాయి';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 నెలలు ఉచితం';
+
+  @override
+  String get subscription_legal_note => 'కొనుగోలు నిర్ధారణ తర్వాత మీ iTunes ఖాతాకు చెల్లింపు ఛార్జ్ చేయబడుతుంది. ప్రస్తుత వ్యవధి ముగియడానికి కనీసం 24 గంటల ముందు ఆఫ్ చేయకపోతే సభ్యత్వం స్వయంచాలకంగా పునరుద్ధరించబడుతుంది. మీరు మీ ఖాతా సెట్టింగ్‌లలో మీ సభ్యత్వాన్ని నిర్వహించవచ్చు మరియు స్వీయ-పునరుద్ధరణను ఆఫ్ చేయవచ్చు. 7-రోజుల ఉచిత ట్రయల్ యాప్ (కొత్త ఖాతాలు) ద్వారా నిర్వహించబడుతుంది.';
 }

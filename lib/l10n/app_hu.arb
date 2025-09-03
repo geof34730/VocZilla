@@ -204,5 +204,14 @@
     "restaurer_achats_error": "A visszaállítás sikertelen. Próbáld újra.",
     "restauration_terminee": "A visszaállítás befejeződött. Ha volt aktív előfizetése, akkor az most vissza van állítva.",
     "vocabulaire_type_verbe": "ige",
-    "app_description_android": "A VocZilla a tökéletes alkalmazás az angol szókincs bővítésére, szintedtől függetlenül. Fedezz fel több ezer szót témák szerint kategorizálva, és kövesd nyomon a fejlődésedet!"
+    "app_description_android": "A VocZilla a tökéletes alkalmazás az angol szókincs bővítésére, szintedtől függetlenül. Fedezz fel több ezer szót témák szerint kategorizálva, és kövesd nyomon a fejlődésedet!",
+    "subscription_header_title": "Oldd fel a Prémiumot",
+    "subscription_header_subtitle": "Hozzáférés az alkalmazás összes funkciójához.",
+    "subscription_free_trial": "7 nap ingyenes a fiók létrehozását követően. Utána előfizetés szükséges.",
+    "subscription_free_trial_end": "A $daysFreeTrial napos ingyenes próbaidőszakod lejárt.",
+    "subscription_benefit_full_access": "Teljes hozzáférés az alkalmazáshoz",
+    "subscription_benefit_unlimited": "Korlátlan használat",
+    "subscription_benefit_updates": "Frissítések és támogatás benne foglaltatik",
+    "subscription_plan_badge_best_offer": "2 hónap ingyenes",
+    "subscription_legal_note": "A fizetés a vásárlás visszaigazolásakor az iTunes-fiókodra lesz terhelve. Az előfizetés automatikusan megújul, kivéve, ha legalább 24 órával az aktuális időszak vége előtt kikapcsolod. Az előfizetésedet kezelheted és kikapcsolhatod az automatikus megújítást a Fiókbeállításaidban. A 7 napos ingyenes próbaidőszakot az alkalmazás kezeli (új fiókok)."
 }

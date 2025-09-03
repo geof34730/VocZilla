@@ -625,4 +625,31 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla ເປັນ app ທີ່ສົມບູນແບບເພື່ອຂະຫຍາຍຄໍາສັບພາສາອັງກິດຂອງທ່ານ, ບໍ່ວ່າລະດັບຂອງທ່ານ. ຄົ້ນພົບຫລາຍພັນຄໍາທີ່ຖືກຈັດປະເພດຕາມຫົວຂໍ້ແລະຕິດຕາມຄວາມຄືບຫນ້າຂອງທ່ານ!';
+
+  @override
+  String get subscription_header_title => 'ປົດລັອກ Premium';
+
+  @override
+  String get subscription_header_subtitle => 'ເຂົ້າເຖິງຄຸນສົມບັດທັງໝົດຂອງແອັບພລິເຄຊັນ.';
+
+  @override
+  String get subscription_free_trial => '7 ມື້ຟຣີເມື່ອສ້າງບັນຊີ. ຫຼັງຈາກນັ້ນ, ການສະຫມັກຕ້ອງການ.';
+
+  @override
+  String get subscription_free_trial_end => 'ການທົດລອງໃຊ້ຟຣີ \$daysFreeTrial ມື້ຂອງທ່ານໄດ້ສິ້ນສຸດລົງແລ້ວ.';
+
+  @override
+  String get subscription_benefit_full_access => 'ການ​ເຂົ້າ​ເຖິງ app ໄດ້​ຢ່າງ​ເຕັມ​ທີ່​';
+
+  @override
+  String get subscription_benefit_unlimited => 'ການ​ນໍາ​ໃຊ້​ບໍ່​ຈໍາ​ກັດ​';
+
+  @override
+  String get subscription_benefit_updates => 'ການປັບປຸງແລະການສະຫນັບສະຫນູນລວມ';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 ເດືອນຟຣີ';
+
+  @override
+  String get subscription_legal_note => 'ການ​ຊໍາ​ລະ​ເງິນ​ຈະ​ຖືກ​ຄິດ​ຄ່າ​ກັບ​ບັນ​ຊີ iTunes ຂອງ​ທ່ານ​ໃນ​ການ​ຢືນ​ຢັນ​ການ​ຊື້​. ການສະໝັກໃຊ້ຈະຕໍ່ອາຍຸໂດຍອັດຕະໂນມັດເວັ້ນເສຍແຕ່ຈະປິດຢ່າງໜ້ອຍ 24 ຊົ່ວໂມງກ່ອນໝົດໄລຍະເວລາປັດຈຸບັນ. ທ່ານສາມາດຈັດການການສະໝັກໃຊ້ຂອງທ່ານແລະປິດການຕໍ່ອາຍຸອັດຕະໂນມັດໄດ້ໃນການຕັ້ງຄ່າບັນຊີຂອງທ່ານ. ການທົດລອງໃຊ້ຟຣີ 7 ມື້ແມ່ນຈັດການໂດຍແອັບ (ບັນຊີໃໝ່).';
 }

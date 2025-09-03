@@ -625,4 +625,31 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla គឺជាកម្មវិធីដ៏ល្អឥតខ្ចោះដើម្បីពង្រីកវាក្យសព្ទភាសាអង់គ្លេសរបស់អ្នក មិនថាកម្រិតរបស់អ្នកទេ។ ស្វែងរកពាក្យរាប់ពាន់ដែលបែងចែកតាមប្រធានបទ និងតាមដានវឌ្ឍនភាពរបស់អ្នក!';
+
+  @override
+  String get subscription_header_title => 'ដោះសោ Premium';
+
+  @override
+  String get subscription_header_subtitle => 'ចូលប្រើមុខងារទាំងអស់របស់កម្មវិធី។';
+
+  @override
+  String get subscription_free_trial => 'ឥតគិតថ្លៃ 7 ថ្ងៃនៅពេលបង្កើតគណនី។ បន្ទាប់ពីនោះ ការជាវត្រូវបានទាមទារ។';
+
+  @override
+  String get subscription_free_trial_end => 'ការសាកល្បងឥតគិតថ្លៃ \$daysFreeTrial របស់អ្នកបានបញ្ចប់ហើយ។';
+
+  @override
+  String get subscription_benefit_full_access => 'ការចូលដំណើរការពេញលេញទៅកាន់កម្មវិធី';
+
+  @override
+  String get subscription_benefit_unlimited => 'ការប្រើប្រាស់គ្មានដែនកំណត់';
+
+  @override
+  String get subscription_benefit_updates => 'ការអាប់ដេត និងការគាំទ្ររួមបញ្ចូល';
+
+  @override
+  String get subscription_plan_badge_best_offer => 'ឥតគិតថ្លៃ 2 ខែ';
+
+  @override
+  String get subscription_legal_note => 'ការទូទាត់នឹងត្រូវបានគិតប្រាក់ទៅក្នុងគណនី iTunes របស់អ្នកនៅពេលបញ្ជាក់ការទិញ។ ការជាវបន្តដោយស្វ័យប្រវត្តិលុះត្រាតែបិទយ៉ាងហោចណាស់ 24 ម៉ោងមុនពេលចុងបញ្ចប់នៃរយៈពេលបច្ចុប្បន្ន។ អ្នកអាចគ្រប់គ្រងការជាវរបស់អ្នក និងបិទការបន្តដោយស្វ័យប្រវត្តិនៅក្នុងការកំណត់គណនីរបស់អ្នក។ ការសាកល្បងឥតគិតថ្លៃរយៈពេល 7 ថ្ងៃត្រូវបានគ្រប់គ្រងដោយកម្មវិធី (គណនីថ្មី)។';
 }

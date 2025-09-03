@@ -204,5 +204,14 @@
     "restaurer_achats_error": "Restaurimi dështoi. Ju lutemi provoni përsëri.",
     "restauration_terminee": "Restaurimi përfundoi. Nëse keni pasur një abonim aktiv, ai tani është restauruar.",
     "vocabulaire_type_verbe": "folje",
-    "app_description_android": "VocZilla është aplikacioni perfekt për të zgjeruar fjalorin tuaj në anglisht, pavarësisht nivelit tuaj. Zbuloni mijëra fjalë të kategorizuara sipas temës dhe ndiqni progresin tuaj!"
+    "app_description_android": "VocZilla është aplikacioni perfekt për të zgjeruar fjalorin tuaj në anglisht, pavarësisht nivelit tuaj. Zbuloni mijëra fjalë të kategorizuara sipas temës dhe ndiqni progresin tuaj!",
+    "subscription_header_title": "Zhbllokoni Premium",
+    "subscription_header_subtitle": "Qasuni në të gjitha veçoritë e aplikacionit.",
+    "subscription_free_trial": "7 ditë falas pas krijimit të llogarisë. Pas kësaj, kërkohet abonim.",
+    "subscription_free_trial_end": "Prova juaj falas prej $daysFreeTrial ditësh ka mbaruar.",
+    "subscription_benefit_full_access": "Qasje e plotë në aplikacion",
+    "subscription_benefit_unlimited": "Përdorim i pakufizuar",
+    "subscription_benefit_updates": "Përditësime dhe mbështetje të përfshira",
+    "subscription_plan_badge_best_offer": "2 muaj falas",
+    "subscription_legal_note": "Pagesa do të ngarkohet në llogarinë tuaj iTunes pas konfirmimit të blerjes. Abonimi rinovohet automatikisht nëse nuk çaktivizohet të paktën 24 orë para përfundimit të periudhës aktuale. Ju mund ta menaxhoni abonimin tuaj dhe ta çaktivizoni rinovimin automatik në Cilësimet e Llogarisë suaj. Periudha provë falas 7-ditore menaxhohet nga aplikacioni (llogari të reja)."
 }

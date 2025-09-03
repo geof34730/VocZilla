@@ -625,4 +625,31 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla એ તમારા અંગ્રેજી શબ્દભંડોળને વિસ્તૃત કરવા માટે એક સંપૂર્ણ એપ્લિકેશન છે, ભલે તમારું સ્તર ગમે તે હોય. થીમ દ્વારા વર્ગીકૃત કરાયેલા હજારો શબ્દો શોધો અને તમારી પ્રગતિને ટ્રૅક કરો!';
+
+  @override
+  String get subscription_header_title => 'પ્રીમિયમ અનલૉક કરો';
+
+  @override
+  String get subscription_header_subtitle => 'એપ્લિકેશનની બધી સુવિધાઓને ઍક્સેસ કરો.';
+
+  @override
+  String get subscription_free_trial => 'એકાઉન્ટ બનાવ્યા પછી 7 દિવસ મફત. તે પછી, સબ્સ્ક્રિપ્શન જરૂરી.';
+
+  @override
+  String get subscription_free_trial_end => 'તમારી \$daysFreeTrial દિવસની મફત અજમાયશ સમાપ્ત થઈ ગઈ છે.';
+
+  @override
+  String get subscription_benefit_full_access => 'એપ્લિકેશનની સંપૂર્ણ ઍક્સેસ';
+
+  @override
+  String get subscription_benefit_unlimited => 'અમર્યાદિત ઉપયોગ';
+
+  @override
+  String get subscription_benefit_updates => 'અપડેટ્સ અને સપોર્ટ શામેલ છે';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 મહિના મફત';
+
+  @override
+  String get subscription_legal_note => 'ખરીદીની પુષ્ટિ પર તમારા iTunes એકાઉન્ટમાંથી ચુકવણી વસૂલવામાં આવશે. વર્તમાન સમયગાળાના અંતના ઓછામાં ઓછા 24 કલાક પહેલાં બંધ ન કરવામાં આવે તો સબ્સ્ક્રિપ્શન આપમેળે રિન્યૂ થાય છે. તમે તમારા એકાઉન્ટ સેટિંગ્સમાં તમારા સબ્સ્ક્રિપ્શનને મેનેજ કરી શકો છો અને સ્વતઃ-નવીકરણને બંધ કરી શકો છો. 7-દિવસની મફત અજમાયશ એપ્લિકેશન (નવા એકાઉન્ટ્સ) દ્વારા સંચાલિત થાય છે.';
 }

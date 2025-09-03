@@ -625,4 +625,31 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla je perfektná aplikácia na rozšírenie vašej anglickej slovnej zásoby bez ohľadu na vašu úroveň. Objavte tisíce slov zoradených podľa témy a sledujte svoj pokrok!';
+
+  @override
+  String get subscription_header_title => 'Odomknúť prémiový';
+
+  @override
+  String get subscription_header_subtitle => 'Získajte prístup ku všetkým funkciám aplikácie.';
+
+  @override
+  String get subscription_free_trial => '7 dní zadarmo po vytvorení účtu. Potom je potrebné predplatné.';
+
+  @override
+  String get subscription_free_trial_end => 'Vaša \$daysFreeTrial bezplatná skúšobná doba sa skončila.';
+
+  @override
+  String get subscription_benefit_full_access => 'Úplný prístup k aplikácii';
+
+  @override
+  String get subscription_benefit_unlimited => 'Neobmedzené používanie';
+
+  @override
+  String get subscription_benefit_updates => 'Aktualizácie a podpora sú zahrnuté';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 mesiace zadarmo';
+
+  @override
+  String get subscription_legal_note => 'Platba bude zaúčtovaná na váš účet iTunes po potvrdení nákupu. Predplatné sa automaticky obnoví, pokiaľ ho nevypnete najmenej 24 hodín pred koncom aktuálneho obdobia. Svoje predplatné môžete spravovať a vypnúť automatické obnovovanie v nastaveniach účtu. 7-dňovú bezplatnú skúšobnú verziu spravuje aplikácia (nové účty).';
 }

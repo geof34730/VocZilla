@@ -625,4 +625,31 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get app_description_android => 'VocZilla бол таны түвшингээс үл хамааран англи хэлний үгсийн санг тэлэх төгс програм юм. Сэдвийн дагуу ангилсан мянга мянган үгсийг олж, ахиц дэвшлээ хянах!';
+
+  @override
+  String get subscription_header_title => 'Premium-н түгжээг тайл';
+
+  @override
+  String get subscription_header_subtitle => 'Аппликешны бүх функцэд хандах.';
+
+  @override
+  String get subscription_free_trial => 'Бүртгэл үүсгэсний дараа 7 хоног үнэгүй. Үүний дараа захиалга хийх шаардлагатай.';
+
+  @override
+  String get subscription_free_trial_end => 'Таны \$daysFreeTrial өдрийн үнэгүй туршилтын хугацаа дууслаа.';
+
+  @override
+  String get subscription_benefit_full_access => 'Аппликейшнд бүрэн хандах';
+
+  @override
+  String get subscription_benefit_unlimited => 'Хязгааргүй хэрэглээ';
+
+  @override
+  String get subscription_benefit_updates => 'Шинэчлэлт, дэмжлэг орсон';
+
+  @override
+  String get subscription_plan_badge_best_offer => '2 сар үнэгүй';
+
+  @override
+  String get subscription_legal_note => 'Худалдан авалтаа баталгаажуулсны дараа төлбөрийг таны iTunes данснаас авах болно. Тухайн хугацаа дуусахаас дор хаяж 24 цагийн өмнө унтараагүй тохиолдолд захиалга автоматаар шинэчлэгдэнэ. Та бүртгэлийнхээ тохиргооноос бүртгэлээ удирдаж, автоматаар сунгалтыг унтрааж болно. 7 хоногийн үнэгүй туршилтыг апп (шинэ данс) удирддаг.';
 }
