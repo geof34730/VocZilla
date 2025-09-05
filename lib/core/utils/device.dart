@@ -26,6 +26,9 @@ Future<String?> getPlatformDeviceId() async {
     } else if (Platform.isIOS) {
       final iosInfo = await deviceInfo.iosInfo;
       deviceId = iosInfo.identifierForVendor;
+    } else if (Platform.isMacOS) {
+      final macOsInfo = await deviceInfo.macOsInfo;
+      deviceId = macOsInfo.systemGUID;
     }
   } catch (e) {
     Logger.Red.log("Erreur lors de la récupération du Device ID: $e");

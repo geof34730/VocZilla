@@ -20,15 +20,15 @@ _VocabularyBlocLocal _$VocabularyBlocLocalFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$VocabularyBlocLocalToJson(
-        _VocabularyBlocLocal instance) =>
-    <String, dynamic>{
-      'titleList': instance.titleList,
-      'vocabulaireList': instance.vocabulaireList,
-      'dataAllLength': instance.dataAllLength,
-      'vocabulaireBegin': instance.vocabulaireBegin,
-      'vocabulaireEnd': instance.vocabulaireEnd,
-      'isListPerso': instance.isListPerso,
-      'isListTheme': instance.isListTheme,
-      'guid': instance.guid,
-      'isVocabularyNotLearned': instance.isVocabularyNotLearned,
-    };
+  _VocabularyBlocLocal instance,
+) => <String, dynamic>{
+  'titleList': instance.titleList,
+  'vocabulaireList': instance.vocabulaireList,
+  'dataAllLength': instance.dataAllLength,
+  'vocabulaireBegin': instance.vocabulaireBegin,
+  'vocabulaireEnd': instance.vocabulaireEnd,
+  'isListPerso': instance.isListPerso,
+  'isListTheme': instance.isListTheme,
+  'guid': instance.guid,
+  'isVocabularyNotLearned': instance.isVocabularyNotLearned,
+};

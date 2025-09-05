@@ -17,7 +17,7 @@ abstract class VocabulaireUser with _$VocabulaireUser {
     @JsonKey(name: "ListGuidVocabularyLearned")
     @Default([]) List<String> listGuidVocabularyLearned, // MODIFIÉ
 
-    @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
+    @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)
     required int countVocabulaireAll,
   }) = _VocabulaireUser;
 

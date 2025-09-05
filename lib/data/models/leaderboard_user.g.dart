@@ -12,8 +12,8 @@ _LeaderboardUser _$LeaderboardUserFromJson(Map<String, dynamic> json) =>
       createdAt: DateTime.parse(json['createdAt'] as String),
       listPersoCount: (json['listPersoCount'] as num).toInt(),
       imageAvatar: json['imageAvatar'] as String,
-      countGuidVocabularyLearned:
-          (json['countGuidVocabularyLearned'] as num).toInt(),
+      countGuidVocabularyLearned: (json['countGuidVocabularyLearned'] as num)
+          .toInt(),
       rank: (json['rank'] as num).toInt(),
     );
 

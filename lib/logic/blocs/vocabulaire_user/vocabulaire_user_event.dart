@@ -10,6 +10,11 @@ class CheckVocabulaireUserStatus extends VocabulaireUserEvent {
   CheckVocabulaireUserStatus({required this.local});
 }
 
+class VocabulaireUserRefresh extends VocabulaireUserEvent {
+  final String local;
+  VocabulaireUserRefresh({ required this.local});
+
+}
 
 class LoadVocabulaireUserData extends VocabulaireUserEvent {
   final VocabulaireUser data;

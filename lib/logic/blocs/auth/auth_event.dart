@@ -15,6 +15,7 @@ class AppStarted extends AuthEvent {}
 
 class AuthLoggedIn extends AuthEvent {
   final User user;
+
   const AuthLoggedIn(this.user);
   @override
   List<Object?> get props => [user];

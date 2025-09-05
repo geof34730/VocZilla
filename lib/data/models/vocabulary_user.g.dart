@@ -8,19 +8,21 @@ part of 'vocabulary_user.dart';
 
 _VocabulaireUser _$VocabulaireUserFromJson(Map<String, dynamic> json) =>
     _VocabulaireUser(
-      listPerso: (json['ListPerso'] as List<dynamic>?)
+      listPerso:
+          (json['ListPerso'] as List<dynamic>?)
               ?.map((e) => ListPerso.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
-      listTheme: (json['ListTheme'] as List<dynamic>?)
+      listTheme:
+          (json['ListTheme'] as List<dynamic>?)
               ?.map((e) => ListTheme.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       listGuidVocabularyLearned:
           (json['ListGuidVocabularyLearned'] as List<dynamic>?)
-                  ?.map((e) => e as String)
-                  .toList() ??
-              const [],
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
       countVocabulaireAll: (json['CountVocabulaireAll'] as num?)?.toInt() ?? 0,
     );
 
@@ -33,17 +35,18 @@ Map<String, dynamic> _$VocabulaireUserToJson(_VocabulaireUser instance) =>
     };
 
 _ListPerso _$ListPersoFromJson(Map<String, dynamic> json) => _ListPerso(
-      guid: json['guid'] as String,
-      title: json['title'] as String,
-      color: (json['color'] as num).toInt(),
-      listGuidVocabulary: (json['listGuidVocabulary'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const <String>[],
-      isListShare: json['isListShare'] as bool? ?? true,
-      ownListShare: json['ownListShare'] as bool? ?? true,
-      urlShare: json['urlShare'] as String? ?? '',
-    );
+  guid: json['guid'] as String,
+  title: json['title'] as String,
+  color: (json['color'] as num).toInt(),
+  listGuidVocabulary:
+      (json['listGuidVocabulary'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList() ??
+      const <String>[],
+  isListShare: json['isListShare'] as bool? ?? true,
+  ownListShare: json['ownListShare'] as bool? ?? true,
+  urlShare: json['urlShare'] as String? ?? '',
+);
 
 Map<String, dynamic> _$ListPersoToJson(_ListPerso instance) =>
     <String, dynamic>{
@@ -57,13 +60,14 @@ Map<String, dynamic> _$ListPersoToJson(_ListPerso instance) =>
     };
 
 _ListTheme _$ListThemeFromJson(Map<String, dynamic> json) => _ListTheme(
-      guid: json['guid'] as String,
-      title: Map<String, String>.from(json['title'] as Map),
-      listGuidVocabulary: (json['listGuidVocabulary'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-    );
+  guid: json['guid'] as String,
+  title: Map<String, String>.from(json['title'] as Map),
+  listGuidVocabulary:
+      (json['listGuidVocabulary'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList() ??
+      const [],
+);
 
 Map<String, dynamic> _$ListThemeToJson(_ListTheme instance) =>
     <String, dynamic>{

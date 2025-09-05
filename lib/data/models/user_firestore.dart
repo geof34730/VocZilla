@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 import '../repository/fcm_repository.dart';
+import 'vocabulary_user.dart';
 
 part 'user_firestore.freezed.dart';
 part 'user_firestore.g.dart';

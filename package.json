@@ -4,6 +4,7 @@
     "deploy:release": "node deploy.js release",
     "rebuild": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get && flutter run",
     "translate": "flutter clean && flutter pub run build_runner build -d && flutter gen-l10n && flutter pub get",
+    "model": "flutter clean && flutter pub run build_runner build -d && flutter pub get",
     "viewmadataios" : "SH/fastlane-view-meta.sh",
     "fastlaneauth": "SH/fastlane-auth.sh",
     "fastlaneUploadScreenshotsIos": "SH/fastlane_upload_screenshots_ios.sh",

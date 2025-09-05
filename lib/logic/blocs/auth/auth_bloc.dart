@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vobzilla/data/repository/auth_repository.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/models/user_firestore.dart';
+import '../../../data/models/vocabulary_user.dart';
 import '../../../data/repository/data_user_repository.dart';
 import '../../../data/repository/fcm_repository.dart';
 import '../../../data/services/localstorage_service.dart';
@@ -37,7 +38,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
       if (firebaseUser != null) {
         Logger.Pink.log("AuthBloc: User found with UID ${firebaseUser.uid}. Fetching profile...");
-        final userProfile = await _dataUserRepository.getUser(firebaseUser.uid);
+        final userProfile = await _dataUserRepository.getUser(uid:firebaseUser.uid);
         if (userProfile != null) {
           Logger.Pink.log("AuthBloc: User profile found. Emitting AuthAuthenticated.");
           emit(AuthAuthenticated(userProfile));
@@ -79,7 +80,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         );
 
         // Sauvegardez le profil mis à jour dans Firestore
-        await _dataUserRepository.saveUser(updatedProfile);
+        await _dataUserRepository.saveUser(user:updatedProfile,mergeData: true);
 
         // Mettez également à jour le profil dans le stockage local
         await LocalStorageService().saveUser(updatedProfile);
@@ -107,7 +108,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     try {
       final firebaseUser = event.user;
       Logger.Pink.log("AuthBloc: Événement AuthLoggedIn reçu pour l'UID ${firebaseUser.uid}.");
-      UserFirestore? userProfile = await _dataUserRepository.getUser(firebaseUser.uid);
+      UserFirestore? userProfile = await _dataUserRepository.getUser(uid:firebaseUser.uid);
+
+
+
       if (userProfile == null) {
         // Le profil n'existe pas dans Firestore. C'est une VRAIE première connexion pour cet UID.
         Logger.Pink.log("AuthBloc: Aucun profil dans Firestore. Création d'un nouveau profil COMPLET.");
@@ -122,11 +126,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           photoURL: firebaseUser.photoURL ?? '',
           imageAvatar: '', // Pas d'avatar pour un nouvel invité.
           createdAt: firebaseUser.metadata.creationTime ?? DateTime.now(),
-          fcmTokens: fcmTokens, // On inclut le token FCM !
+          fcmTokens: fcmTokens,
         );
         Logger.Pink.log('userProfile : $userProfile');
         // 3. Sauvegarder ce nouveau profil complet.
-        await _dataUserRepository.saveUser(userProfile);
+        await _dataUserRepository.saveUser(user: userProfile, mergeData: false);
         Logger.Pink.log("AuthBloc: Nouveau profil COMPLET sauvegardé pour l'UID ${firebaseUser.uid}.");
 
       } else {
@@ -135,12 +139,19 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         // BONNE PRATIQUE : Mettre à jour le token FCM au cas où il aurait changé.
         Logger.Pink.log("AuthBloc: Profil utilisateur trouvé. Vérification du token FCM.");
         final currentToken = await FcmRepository().geToken();
-        if (currentToken != null && !userProfile.fcmTokens.contains(currentToken)) {
+        if (!userProfile.fcmTokens.contains(currentToken)) {
+          Logger.Cyan.log('condition 1');
           final updatedTokens = List<String>.from(userProfile.fcmTokens)..add(currentToken);
           userProfile = userProfile.copyWith(fcmTokens: updatedTokens);
           // `saveUser` doit utiliser `merge: true` pour ne pas écraser les autres données.
-          await _dataUserRepository.saveUser(userProfile);
+          await _dataUserRepository.saveUser(user: userProfile, mergeData: true);
           Logger.Pink.log("AuthBloc: Token FCM mis à jour pour l'UID ${firebaseUser.uid}.");
+        }
+        else{
+          Logger.Cyan.log('condition 2');
+          Logger.Cyan.log(userProfile);
+
+          await _dataUserRepository.saveUser(user: userProfile, mergeData: true);
         }
       }
       // --- FIN DE LA CORRECTION ---
@@ -173,21 +184,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthError(message: 'auth-error-deconnect'));
     }
   }
-  Future<void> _handleAuthenticationSuccess(UserCredential? userCredential, Emitter<AuthState> emit) async {
-    if (userCredential?.user != null) {
-      UserFirestore? userProfile =
-      await _dataUserRepository.getUser(userCredential!.user!.uid);
-      if (userProfile == null) {
-        userProfile = await UserFirestore.fromUserCredential(userCredential);
-        await _dataUserRepository.saveUser(userProfile);
-      }
-      emit(AuthAuthenticated(userProfile));
-    } else {
-      emit(AuthError(message: "auth_error_echoue"));
-    }
-  }
-
-
 
 
 

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 import '../../core/utils/logger.dart';
@@ -6,19 +8,23 @@ import '../../core/utils/logger.dart';
 class FcmRepository {
   Future<String> geToken() async {
     String token = '';
-    FirebaseMessaging messaging = FirebaseMessaging.instance;
-    String? fcmToken = await messaging.getToken();
-    if (fcmToken != null) {
-      token = fcmToken;
+    if(!Platform.isMacOS) {
+      FirebaseMessaging messaging = FirebaseMessaging.instance;
+      String? fcmToken = await messaging.getToken();
+      if (fcmToken != null) {
+        token = fcmToken;
+      }
     }
-    Logger.Cyan.log("FCM Token: $token");
+    Logger.Cyan.log("FcmRepository FCM Token: $token");
     return token;
   }
 
   Future<List<String>> getListFcmToken() async {
     List<String> list = [];
-    String token = await geToken();
-    list.add(token);
+    if(!Platform.isMacOS) {
+      String token = await geToken();
+      list.add(token);
+    }
     return list;
   }
 

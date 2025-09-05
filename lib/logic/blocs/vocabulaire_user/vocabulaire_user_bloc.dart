@@ -29,6 +29,19 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       final vocabulaireUser = VocabulaireUser.fromJson(event.userData);
       emit(VocabulaireUserLoaded(vocabulaireUser));
     });
+    on<VocabulaireUserRefresh>((event, emit) async {
+      emit(VocabulaireUserLoading());
+      try {
+        final user = await VocabulaireUserRepository().getVocabulaireUserData(local: event.local);
+        if (user != null) {
+          emit(VocabulaireUserLoaded(user));
+        } else {
+          emit(VocabulaireUserEmpty());
+        }
+      } catch (e) {
+        emit(VocabulaireUserError("Erreur lors du rafraîchissement"));
+      }
+    });
 
 
   }

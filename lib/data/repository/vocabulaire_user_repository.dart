@@ -45,7 +45,7 @@ class VocabulaireUserRepository {
   }
 
   Future<VocabulaireUser?> getVocabulaireUserData({required String local}) async {
-   Logger.Green.log("getVocabulaireUserData 222");
+   Logger.Green.log("getVocabulaireUserData ");
     try {
       var userDataJson = await localStorageService.getUserData();
       Logger.Blue.log("getVocabulaireUserData') userData: $userDataJson");
@@ -70,8 +70,7 @@ class VocabulaireUserRepository {
       // Envoyer les données mises à jour au serveur
       await vocabulaireServerService.updateUserData(userData.toJson());
     } catch (e) {
-      Logger.Red.log(
-          'Erreur lors de la mise à jour des données utilisateur : $e');
+      Logger.Red.log('Erreur lors de la mise à jour des données utilisateur : $e');
     }
   }
 
@@ -95,6 +94,9 @@ class VocabulaireUserRepository {
     try {
       Logger.Green.log('Tentative d\'ajout du vocabulaire : $vocabularyGuid');
       final userDataJson = await localStorageService.getUserData();
+
+      print(" addVocabulaireUserDataLearned userDataJson: $userDataJson");
+
       VocabulaireUser userData;
       if (userDataJson != null) {
         userData = VocabulaireUser.fromJson(userDataJson);

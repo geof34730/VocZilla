@@ -12,7 +12,8 @@ _UserFirestore _$UserFirestoreFromJson(Map<String, dynamic> json) =>
       pseudo: json['pseudo'] as String? ?? 'Guest',
       photoURL: json['photoURL'] as String? ?? '',
       imageAvatar: json['imageAvatar'] as String? ?? '',
-      fcmTokens: (json['fcmTokens'] as List<dynamic>?)
+      fcmTokens:
+          (json['fcmTokens'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
           const [],
