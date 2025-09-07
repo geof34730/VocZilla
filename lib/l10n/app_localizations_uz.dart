@@ -9,7 +9,7 @@ class AppLocalizationsUz extends AppLocalizations {
   AppLocalizationsUz([String locale = 'uz']) : super(locale);
 
   @override
-  String get app_release_note => 'Ilova navigatsiyasida Maxfiylik siyosati va foydalanish shartlariga (EULA) havolalar qo\'shildi';
+  String get app_release_note => 'Xatolarni tuzatish: tizimdan chiqqandan keyin shaxsiy roʻyxat endi saqlanmadi';
 
   @override
   String get share_list_perso_alert_disponible => 'Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!';

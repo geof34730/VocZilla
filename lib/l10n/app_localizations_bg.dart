@@ -9,7 +9,7 @@ class AppLocalizationsBg extends AppLocalizations {
   AppLocalizationsBg([String locale = 'bg']) : super(locale);
 
   @override
-  String get app_release_note => 'Добавени са връзки към Политиката за поверителност и Условията за ползване (EULA) в навигацията на приложението';
+  String get app_release_note => 'Поправка на грешка: личният списък вече не се запазваше след излизане от системата';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцията за споделяне на списъци ще бъде достъпна съвсем скоро!';

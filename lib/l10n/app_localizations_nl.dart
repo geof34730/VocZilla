@@ -9,7 +9,7 @@ class AppLocalizationsNl extends AppLocalizations {
   AppLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get app_release_note => 'Links naar het privacybeleid en de gebruiksvoorwaarden (EULA) toegevoegd in de app-navigatie';
+  String get app_release_note => 'Bugfix: persoonlijke lijst werd niet meer bewaard na uitloggen';
 
   @override
   String get share_list_perso_alert_disponible => 'De functie om lijsten te delen zal binnenkort beschikbaar zijn!';

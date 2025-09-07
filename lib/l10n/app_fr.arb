@@ -1,5 +1,5 @@
 {
-  "app_release_note": "Ajout liens vers Politique de confidentialité et Conditions d’utilisation (EULA) dans la navigation de l'application",
+  "app_release_note": "Correction d’un bug : la liste personnelle n’était plus conservée après déconnexion",
   "your_position": "Votre position",
   "nsphotolibraryusagedescription": "Nous avons besoin d'accéder à votre galerie pour vous permettre de choisir une photo de profil.",
   "nscamerausagedescription": "Nous avons besoin d'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.",

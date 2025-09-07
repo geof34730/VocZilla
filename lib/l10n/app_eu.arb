@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Aplikazioaren nabigazioan Pribatutasun Politika eta Zerbitzu Baldintzetarako (EULA) estekak gehitu dira",
+    "app_release_note": "Akatsa konponduta: saioa amaitu ondoren ez zen zerrenda pertsonala gordetzen",
     "share_list_perso_alert_disponible": "Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!",
     "information": "Informazioa",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Erabilera mugagabea",
     "subscription_benefit_updates": "Eguneraketak eta laguntza barne",
     "subscription_plan_badge_best_offer": "2 hilabete doan",
-    "subscription_legal_note": "Ordainketa zure iTunes kontuan kobratuko da erosketa baieztatzean. Harpidetza automatikoki berritzen da uneko epea amaitu baino gutxienez 24 ordu lehenago desaktibatu ezean. Zure harpidetza kudeatu eta berritze automatikoa desaktibatu dezakezu zure Kontuaren ezarpenetan. 7 eguneko doako proba aplikazioak kudeatzen du (kontu berriak)."
+    "subscription_legal_note": "Ordainketa zure iTunes kontuan kobratuko da erosketa baieztatzean. Harpidetza automatikoki berritzen da uneko epea amaitu baino gutxienez 24 ordu lehenago desaktibatu ezean. Zure harpidetza kudeatu eta berritze automatikoa desaktibatu dezakezu zure Kontuaren ezarpenetan. 7 eguneko doako proba aplikazioak kudeatzen du (kontu berriak).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

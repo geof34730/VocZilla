@@ -9,7 +9,7 @@ class AppLocalizationsEu extends AppLocalizations {
   AppLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get app_release_note => 'Aplikazioaren nabigazioan Pribatutasun Politika eta Zerbitzu Baldintzetarako (EULA) estekak gehitu dira';
+  String get app_release_note => 'Akatsa konponduta: saioa amaitu ondoren ez zen zerrenda pertsonala gordetzen';
 
   @override
   String get share_list_perso_alert_disponible => 'Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!';

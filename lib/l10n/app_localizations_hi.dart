@@ -9,7 +9,7 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get app_release_note => 'ऐप नेविगेशन में गोपनीयता नीति और उपयोग की शर्तों (EULA) के लिंक जोड़े गए';
+  String get app_release_note => 'बग फिक्स: लॉग आउट करने के बाद व्यक्तिगत सूची अब नहीं रखी जा रही थी';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझा करने की सुविधा बहुत जल्द उपलब्ध होगी!';

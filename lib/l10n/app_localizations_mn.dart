@@ -9,7 +9,7 @@ class AppLocalizationsMn extends AppLocalizations {
   AppLocalizationsMn([String locale = 'mn']) : super(locale);
 
   @override
-  String get app_release_note => 'Програмын навигаци дахь Нууцлалын бодлого, ашиглалтын нөхцөлийн (EULA) холбоосыг нэмсэн';
+  String get app_release_note => 'Алдаа засах: гарсны дараа хувийн жагсаалтыг хадгалахаа больсон';
 
   @override
   String get share_list_perso_alert_disponible => 'Жагсаалт хуваалцах онцлог тун удахгүй бэлэн болно!';

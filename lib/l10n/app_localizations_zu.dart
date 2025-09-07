@@ -9,7 +9,7 @@ class AppLocalizationsZu extends AppLocalizations {
   AppLocalizationsZu([String locale = 'zu']) : super(locale);
 
   @override
-  String get app_release_note => 'Kwengezwe izixhumanisi kokuthi Inqubomgomo Yobumfihlo kanye Nemigomo Yokusebenzisa (EULA) ekuzulazuleni kohlelo lokusebenza';
+  String get app_release_note => 'Ukulungisa iziphazamisi: uhlu lomuntu siqu alusagcinwa ngemva kokuphuma ngemvume';
 
   @override
   String get share_list_perso_alert_disponible => 'Isici sokwabelana ngohlu sizotholakala maduze!';

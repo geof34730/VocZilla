@@ -9,7 +9,7 @@ class AppLocalizationsGl extends AppLocalizations {
   AppLocalizationsGl([String locale = 'gl']) : super(locale);
 
   @override
-  String get app_release_note => 'Engadíronse ligazóns á Política de privacidade e ás Condicións de servizo (EULA) na navegación da aplicación';
+  String get app_release_note => 'Corrección de erros: a lista persoal xa non se gardaba despois de pechar sesión';
 
   @override
   String get share_list_perso_alert_disponible => 'A función para compartir listas estará dispoñible moi pronto!';

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "在应用程序导航中添加了隐私政策和使用条款 (EULA) 的链接",
+    "app_release_note": "错误修复：退出后不再保留个人列表",
     "share_list_perso_alert_disponible": "列表共享功能即将推出！",
     "information": "信息",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "无限使用",
     "subscription_benefit_updates": "包含更新和支持",
     "subscription_plan_badge_best_offer": "免费 2 个月",
-    "subscription_legal_note": "确认购买后，款项将从您的 iTunes 账户中扣除。除非在当前订阅期结束前至少 24 小时关闭，否则订阅将自动续订。您可以在“账户设置”中管理订阅并关闭自动续订。7 天免费试用期由应用管理（新账户）。"
+    "subscription_legal_note": "确认购买后，款项将从您的 iTunes 账户中扣除。除非在当前订阅期结束前至少 24 小时关闭，否则订阅将自动续订。您可以在“账户设置”中管理订阅并关闭自动续订。7 天免费试用期由应用管理（新账户）。",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

@@ -9,7 +9,7 @@ class AppLocalizationsAm extends AppLocalizations {
   AppLocalizationsAm([String locale = 'am']) : super(locale);
 
   @override
-  String get app_release_note => 'በመተግበሪያው አሰሳ ውስጥ ወደ የግላዊነት መመሪያ እና የአጠቃቀም ውል (EULA) አገናኞች ታክለዋል።';
+  String get app_release_note => 'የሳንካ ጥገና፡ ከመውጣትህ በኋላ የግል ዝርዝር አልተቀመጠም።';
 
   @override
   String get share_list_perso_alert_disponible => 'የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!';

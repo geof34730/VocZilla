@@ -9,7 +9,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get app_release_note => 'એપ્લિકેશન નેવિગેશનમાં ગોપનીયતા નીતિ અને ઉપયોગની શરતો (EULA) ની લિંક્સ ઉમેરી.';
+  String get app_release_note => 'બગ ફિક્સ: લોગ આઉટ કર્યા પછી વ્યક્તિગત સૂચિ રાખવામાં આવતી ન હતી.';
 
   @override
   String get share_list_perso_alert_disponible => 'યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!';

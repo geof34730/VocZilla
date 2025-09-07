@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Đã thêm liên kết đến Chính sách quyền riêng tư và Điều khoản sử dụng (EULA) trong phần điều hướng ứng dụng",
+    "app_release_note": "Sửa lỗi: danh sách cá nhân không còn được lưu giữ sau khi đăng xuất",
     "share_list_perso_alert_disponible": "Tính năng chia sẻ danh sách sẽ sớm có mặt!",
     "information": "Thông tin",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Sử dụng không giới hạn",
     "subscription_benefit_updates": "Bao gồm cập nhật và hỗ trợ",
     "subscription_plan_badge_best_offer": "2 tháng miễn phí",
-    "subscription_legal_note": "Thanh toán sẽ được trừ vào tài khoản iTunes của bạn khi xác nhận mua hàng. Đăng ký sẽ tự động gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kết thúc chu kỳ hiện tại. Bạn có thể quản lý đăng ký và tắt tính năng tự động gia hạn trong Cài đặt Tài khoản. Bản dùng thử miễn phí 7 ngày được quản lý bởi ứng dụng (tài khoản mới)."
+    "subscription_legal_note": "Thanh toán sẽ được trừ vào tài khoản iTunes của bạn khi xác nhận mua hàng. Đăng ký sẽ tự động gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kết thúc chu kỳ hiện tại. Bạn có thể quản lý đăng ký và tắt tính năng tự động gia hạn trong Cài đặt Tài khoản. Bản dùng thử miễn phí 7 ngày được quản lý bởi ứng dụng (tài khoản mới).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

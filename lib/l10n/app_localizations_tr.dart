@@ -9,7 +9,7 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get app_release_note => 'Uygulama navigasyonuna Gizlilik Politikası ve Hizmet Şartları (EULA) bağlantıları eklendi';
+  String get app_release_note => 'Hata düzeltmesi: Oturum kapatıldıktan sonra kişisel liste artık tutulmuyordu';
 
   @override
   String get share_list_perso_alert_disponible => 'Liste paylaşım özelliği çok yakında kullanıma sunulacak!';

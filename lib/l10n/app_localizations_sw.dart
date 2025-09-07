@@ -9,7 +9,7 @@ class AppLocalizationsSw extends AppLocalizations {
   AppLocalizationsSw([String locale = 'sw']) : super(locale);
 
   @override
-  String get app_release_note => 'Umeongeza viungo vya Sera ya Faragha na Sheria na Masharti (EULA) katika urambazaji wa programu';
+  String get app_release_note => 'Kurekebisha hitilafu: orodha ya kibinafsi haikuwekwa tena baada ya kutoka';
 
   @override
   String get share_list_perso_alert_disponible => 'Kipengele cha kushiriki orodha kitapatikana hivi karibuni!';

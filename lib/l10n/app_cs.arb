@@ -1,5 +1,5 @@
 {
-    "app_release_note": "V navigaci aplikace přidány odkazy na Zásady ochrany osobních údajů a Podmínky použití (EULA)",
+    "app_release_note": "Oprava chyby: osobní seznam se již neuchovával po odhlášení",
     "share_list_perso_alert_disponible": "Funkce sdílení seznamů bude k dispozici velmi brzy!",
     "information": "Informace",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Neomezené použití",
     "subscription_benefit_updates": "Aktualizace a podpora zahrnuty",
     "subscription_plan_badge_best_offer": "2 měsíce zdarma",
-    "subscription_legal_note": "Platba bude stržena z vašeho účtu iTunes po potvrzení nákupu. Předplatné se automaticky obnoví, pokud jej nevypnete alespoň 24 hodin před koncem aktuálního období. Své předplatné můžete spravovat a automatické obnovování vypnout v Nastavení účtu. 7denní bezplatná zkušební verze je spravována aplikací (nové účty)."
+    "subscription_legal_note": "Platba bude stržena z vašeho účtu iTunes po potvrzení nákupu. Předplatné se automaticky obnoví, pokud jej nevypnete alespoň 24 hodin před koncem aktuálního období. Své předplatné můžete spravovat a automatické obnovování vypnout v Nastavení účtu. 7denní bezplatná zkušební verze je spravována aplikací (nové účty).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

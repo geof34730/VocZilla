@@ -9,7 +9,7 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get app_release_note => '앱 탐색에 개인정보 보호정책 및 이용약관(EULA) 링크가 추가되었습니다.';
+  String get app_release_note => '버그 수정: 로그아웃 후 개인 목록이 더 이상 유지되지 않습니다.';
 
   @override
   String get share_list_perso_alert_disponible => '목록 공유 기능이 곧 출시됩니다!';

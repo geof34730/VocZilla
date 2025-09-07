@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Adicionados links para a Política de Privacidade e Termos de Uso (EULA) na navegação do aplicativo",
+    "app_release_note": "Correção de bug: a lista pessoal não era mais mantida após o logout",
     "share_list_perso_alert_disponible": "O recurso de compartilhamento de listas estará disponível em breve!",
     "information": "Informação",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Uso ilimitado",
     "subscription_benefit_updates": "Atualizações e suporte incluídos",
     "subscription_plan_badge_best_offer": "2 meses grátis",
-    "subscription_legal_note": "O pagamento será cobrado na sua conta do iTunes na confirmação da compra. A assinatura é renovada automaticamente, a menos que seja desativada pelo menos 24 horas antes do final do período atual. Você pode gerenciar sua assinatura e desativar a renovação automática nas Configurações da sua Conta. O teste gratuito de 7 dias é gerenciado pelo aplicativo (novas contas)."
+    "subscription_legal_note": "O pagamento será cobrado na sua conta do iTunes na confirmação da compra. A assinatura é renovada automaticamente, a menos que seja desativada pelo menos 24 horas antes do final do período atual. Você pode gerenciar sua assinatura e desativar a renovação automática nas Configurações da sua Conta. O teste gratuito de 7 dias é gerenciado pelo aplicativo (novas contas).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

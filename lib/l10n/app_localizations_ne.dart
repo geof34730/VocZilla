@@ -9,7 +9,7 @@ class AppLocalizationsNe extends AppLocalizations {
   AppLocalizationsNe([String locale = 'ne']) : super(locale);
 
   @override
-  String get app_release_note => 'एप नेभिगेसनमा गोपनीयता नीति र प्रयोगका सर्तहरू (EULA) मा लिङ्कहरू थपियो।';
+  String get app_release_note => 'बग समाधान: लग आउट गरेपछि व्यक्तिगत सूची अब राखिएन';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझेदारी सुविधा चाँडै उपलब्ध हुनेछ!';

@@ -9,7 +9,7 @@ class AppLocalizationsLo extends AppLocalizations {
   AppLocalizationsLo([String locale = 'lo']) : super(locale);
 
   @override
-  String get app_release_note => 'ເພີ່ມລິ້ງໃສ່ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ ແລະເງື່ອນໄຂການນຳໃຊ້ (EULA) ໃນການນຳທາງແອັບ';
+  String get app_release_note => 'ການ​ແກ້​ໄຂ​ບັນ​ຫາ​: ບັນ​ຊີ​ລາຍ​ຊື່​ສ່ວນ​ບຸກ​ຄົນ​ບໍ່​ໄດ້​ຖືກ​ເກັບ​ຮັກ​ສາ​ໄວ້​ຕໍ່​ໄປ​ອີກ​ແລ້ວ​ຫຼັງ​ຈາກ​ການ​ອອກ​ຈາກ​ລະ​ບົບ​';
 
   @override
   String get share_list_perso_alert_disponible => 'ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!';

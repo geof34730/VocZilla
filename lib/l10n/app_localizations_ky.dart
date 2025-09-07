@@ -9,7 +9,7 @@ class AppLocalizationsKy extends AppLocalizations {
   AppLocalizationsKy([String locale = 'ky']) : super(locale);
 
   @override
-  String get app_release_note => 'Колдонмонун навигациясында Купуялык саясатына жана колдонуу шарттарына (EULA) шилтемелер кошулду';
+  String get app_release_note => 'Мүчүлүштүктөрдү оңдоо: жеке тизме чыгуудан кийин сакталбай калды';
 
   @override
   String get share_list_perso_alert_disponible => 'Тизме менен бөлүшүү функциясы жакында жеткиликтүү болот!';

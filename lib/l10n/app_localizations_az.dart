@@ -9,7 +9,7 @@ class AppLocalizationsAz extends AppLocalizations {
   AppLocalizationsAz([String locale = 'az']) : super(locale);
 
   @override
-  String get app_release_note => 'Tətbiq naviqasiyasında Məxfilik Siyasəti və İstifadə Şərtlərinə (EULA) keçidlər əlavə edildi';
+  String get app_release_note => 'Baqın düzəldilməsi: sistemdən çıxdıqdan sonra şəxsi siyahı daha saxlanılmadı';
 
   @override
   String get share_list_perso_alert_disponible => 'Siyahı paylaşma xüsusiyyəti çox tezliklə mövcud olacaq!';

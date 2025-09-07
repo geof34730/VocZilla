@@ -1,5 +1,5 @@
 {
-    "app_release_note": "S'han afegit enllaços a la Política de privadesa i les Condicions d'ús (EULA) a la navegació de l'aplicació.",
+    "app_release_note": "Correcció d'errors: la llista personal ja no es conservava després de tancar la sessió.",
     "share_list_perso_alert_disponible": "La funció de compartir llistes estarà disponible molt aviat!",
     "information": "Informació",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Ús il·limitat",
     "subscription_benefit_updates": "Actualitzacions i suport inclòs",
     "subscription_plan_badge_best_offer": "2 mesos gratuïts",
-    "subscription_legal_note": "El pagament es carregarà al vostre compte d'iTunes en confirmar la compra. La subscripció es renova automàticament tret que es desactivi almenys 24 hores abans que finalitzi el període actual. Podeu gestionar la vostra subscripció i desactivar la renovació automàtica a la configuració del compte. La prova gratuïta de 7 dies està gestionada per l'aplicació (comptes nous)."
+    "subscription_legal_note": "El pagament es carregarà al vostre compte d'iTunes en confirmar la compra. La subscripció es renova automàticament tret que es desactivi almenys 24 hores abans que finalitzi el període actual. Podeu gestionar la vostra subscripció i desactivar la renovació automàtica a la configuració del compte. La prova gratuïta de 7 dies està gestionada per l'aplicació (comptes nous).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

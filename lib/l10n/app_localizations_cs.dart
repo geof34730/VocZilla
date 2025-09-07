@@ -9,7 +9,7 @@ class AppLocalizationsCs extends AppLocalizations {
   AppLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get app_release_note => 'V navigaci aplikace přidány odkazy na Zásady ochrany osobních údajů a Podmínky použití (EULA)';
+  String get app_release_note => 'Oprava chyby: osobní seznam se již neuchovával po odhlášení';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkce sdílení seznamů bude k dispozici velmi brzy!';

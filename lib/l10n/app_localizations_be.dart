@@ -9,7 +9,7 @@ class AppLocalizationsBe extends AppLocalizations {
   AppLocalizationsBe([String locale = 'be']) : super(locale);
 
   @override
-  String get app_release_note => 'Дададзены спасылкі на Палітыку прыватнасці і Умовы карыстання (EULA) у навігацыі па праграме';
+  String get app_release_note => 'Выпраўленне памылкі: асабісты спіс больш не захоўваўся пасля выхаду з сістэмы';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцыя сумеснага выкарыстання спісу будзе даступная вельмі хутка!';

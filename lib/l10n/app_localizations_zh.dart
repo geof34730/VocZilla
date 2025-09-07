@@ -9,7 +9,7 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get app_release_note => '在应用程序导航中添加了隐私政策和使用条款 (EULA) 的链接';
+  String get app_release_note => '错误修复：退出后不再保留个人列表';
 
   @override
   String get share_list_perso_alert_disponible => '列表共享功能即将推出！';

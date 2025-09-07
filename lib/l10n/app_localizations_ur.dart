@@ -9,7 +9,7 @@ class AppLocalizationsUr extends AppLocalizations {
   AppLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
-  String get app_release_note => 'ایپ نیویگیشن میں رازداری کی پالیسی اور استعمال کی شرائط (EULA) کے لنکس شامل کیے گئے';
+  String get app_release_note => 'بگ فکس: لاگ آؤٹ کرنے کے بعد ذاتی فہرست کو مزید نہیں رکھا گیا۔';
 
   @override
   String get share_list_perso_alert_disponible => 'لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!';

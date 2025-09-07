@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get app_release_note => 'Добавлены ссылки на Политику конфиденциальности и условия использования (EULA) в навигацию по приложению.';
+  String get app_release_note => 'Исправлена ошибка: личный список больше не сохранялся после выхода из системы.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функция обмена списками станет доступна совсем скоро!';

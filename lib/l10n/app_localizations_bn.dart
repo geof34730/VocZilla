@@ -9,7 +9,7 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get app_release_note => 'অ্যাপ নেভিগেশনে গোপনীয়তা নীতি এবং ব্যবহারের শর্তাবলী (EULA) এর লিঙ্ক যোগ করা হয়েছে।';
+  String get app_release_note => 'বাগ সংশোধন: লগ আউট করার পরে ব্যক্তিগত তালিকা আর রাখা হয়নি।';
 
   @override
   String get share_list_perso_alert_disponible => 'তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!';

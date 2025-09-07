@@ -9,7 +9,7 @@ class AppLocalizationsKa extends AppLocalizations {
   AppLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get app_release_note => 'აპლიკაციის ნავიგაციაში დაემატა ბმულები კონფიდენციალურობის პოლიტიკასა და გამოყენების პირობებზე (EULA)';
+  String get app_release_note => 'შეცდომის გამოსწორება: პირადი სია აღარ ინახებოდა სისტემიდან გასვლის შემდეგ';
 
   @override
   String get share_list_perso_alert_disponible => 'სიის გაზიარების ფუნქცია ძალიან მალე იქნება ხელმისაწვდომი!';

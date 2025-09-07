@@ -9,7 +9,7 @@ class AppLocalizationsMy extends AppLocalizations {
   AppLocalizationsMy([String locale = 'my']) : super(locale);
 
   @override
-  String get app_release_note => 'အက်ပ်လမ်းညွှန်မှုတွင် ကိုယ်ရေးကိုယ်တာမူဝါဒနှင့် ဝန်ဆောင်မှုစည်းမျဉ်းများ (EULA) သို့ လင့်ခ်များထည့်ထားသည်။';
+  String get app_release_note => 'ချွတ်ယွင်းချက်ပြင်ဆင်ခြင်း- ထွက်ပြီးနောက် ကိုယ်ရေးကိုယ်တာစာရင်းကို မသိမ်းဆည်းတော့ပါ။';
 
   @override
   String get share_list_perso_alert_disponible => 'စာရင်းမျှဝေခြင်းအင်္ဂါရပ်ကို မကြာမီ ရနိုင်ပါမည်။';

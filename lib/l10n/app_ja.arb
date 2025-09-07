@@ -1,5 +1,5 @@
 {
-    "app_release_note": "アプリのナビゲーションにプライバシーポリシーと利用規約（EULA）へのリンクを追加しました",
+    "app_release_note": "バグ修正: ログアウト後に個人リストが保持されなくなりました",
     "share_list_perso_alert_disponible": "リスト共有機能はまもなく利用可能になります。",
     "information": "情報",
     "app_title": "ヴォックジラ",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "無制限の使用",
     "subscription_benefit_updates": "アップデートとサポートが含まれています",
     "subscription_plan_badge_best_offer": "2ヶ月無料",
-    "subscription_legal_note": "お支払いはご購入確定時にiTunesアカウントに請求されます。サブスクリプションは、現在の期間終了の24時間前までにオフにしない限り、自動的に更新されます。アカウント設定でサブスクリプションを管理し、自動更新をオフにすることができます。7日間の無料トライアルはアプリによって管理されます（新規アカウントの場合）。"
+    "subscription_legal_note": "お支払いはご購入確定時にiTunesアカウントに請求されます。サブスクリプションは、現在の期間終了の24時間前までにオフにしない限り、自動的に更新されます。アカウント設定でサブスクリプションを管理し、自動更新をオフにすることができます。7日間の無料トライアルはアプリによって管理されます（新規アカウントの場合）。",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

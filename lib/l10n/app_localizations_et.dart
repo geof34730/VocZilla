@@ -9,7 +9,7 @@ class AppLocalizationsEt extends AppLocalizations {
   AppLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get app_release_note => 'Rakenduse navigeerimisribale lisati lingid privaatsuspoliitikale ja kasutustingimustele (EULA).';
+  String get app_release_note => 'Veaparandus: isiklikku nimekirja ei säilitatud enam pärast väljalogimist';
 
   @override
   String get share_list_perso_alert_disponible => 'Loendi jagamise funktsioon on saadaval peagi!';

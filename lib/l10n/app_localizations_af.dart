@@ -9,7 +9,7 @@ class AppLocalizationsAf extends AppLocalizations {
   AppLocalizationsAf([String locale = 'af']) : super(locale);
 
   @override
-  String get app_release_note => 'Skakels na Privaatheidsbeleid en Gebruiksvoorwaardes (EULA) in die toepassingsnavigasie bygevoeg';
+  String get app_release_note => 'Foutoplossing: persoonlike lys is nie meer gehou na uitmelding nie';
 
   @override
   String get share_list_perso_alert_disponible => 'Die lysdelingsfunksie sal binnekort beskikbaar wees!';

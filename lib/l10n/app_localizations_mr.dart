@@ -9,7 +9,7 @@ class AppLocalizationsMr extends AppLocalizations {
   AppLocalizationsMr([String locale = 'mr']) : super(locale);
 
   @override
-  String get app_release_note => 'अ‍ॅप नेव्हिगेशनमध्ये गोपनीयता धोरण आणि वापराच्या अटी (EULA) च्या लिंक्स जोडल्या आहेत.';
+  String get app_release_note => 'बग फिक्स: लॉग आउट केल्यानंतर वैयक्तिक यादी ठेवली जात नव्हती.';
 
   @override
   String get share_list_perso_alert_disponible => 'यादी शेअरिंग वैशिष्ट्य लवकरच उपलब्ध होईल!';

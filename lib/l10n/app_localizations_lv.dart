@@ -9,7 +9,7 @@ class AppLocalizationsLv extends AppLocalizations {
   AppLocalizationsLv([String locale = 'lv']) : super(locale);
 
   @override
-  String get app_release_note => 'Lietotnes navigācijā pievienotas saites uz konfidencialitātes politiku un lietošanas noteikumiem (EULA).';
+  String get app_release_note => 'Kļūdas labojums: personīgais saraksts vairs netika saglabāts pēc izrakstīšanās';
 
   @override
   String get share_list_perso_alert_disponible => 'Saraksta koplietošanas funkcija būs pieejama jau pavisam drīz!';

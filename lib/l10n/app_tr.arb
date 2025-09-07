@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Uygulama navigasyonuna Gizlilik Politikası ve Hizmet Şartları (EULA) bağlantıları eklendi",
+    "app_release_note": "Hata düzeltmesi: Oturum kapatıldıktan sonra kişisel liste artık tutulmuyordu",
     "share_list_perso_alert_disponible": "Liste paylaşım özelliği çok yakında kullanıma sunulacak!",
     "information": "Bilgi",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Sınırsız kullanım",
     "subscription_benefit_updates": "Güncellemeler ve destek dahildir",
     "subscription_plan_badge_best_offer": "2 ay ücretsiz",
-    "subscription_legal_note": "Satın alma işlemi onaylandığında ödeme iTunes hesabınızdan tahsil edilecektir. Abonelik, mevcut dönemin bitiminden en az 24 saat önce kapatılmadığı sürece otomatik olarak yenilenir. Aboneliğinizi yönetebilir ve Hesap Ayarlarınızdan otomatik yenilemeyi kapatabilirsiniz. 7 günlük ücretsiz deneme süresi uygulama tarafından yönetilir (yeni hesaplar)."
+    "subscription_legal_note": "Satın alma işlemi onaylandığında ödeme iTunes hesabınızdan tahsil edilecektir. Abonelik, mevcut dönemin bitiminden en az 24 saat önce kapatılmadığı sürece otomatik olarak yenilenir. Aboneliğinizi yönetebilir ve Hesap Ayarlarınızdan otomatik yenilemeyi kapatabilirsiniz. 7 günlük ücretsiz deneme süresi uygulama tarafından yönetilir (yeni hesaplar).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Programėlės naršymo juostoje pridėtos nuorodos į privatumo politiką ir naudojimo sąlygas (EULA).",
+    "app_release_note": "Klaidos ištaisymas: asmeninis sąrašas nebebuvo saugomas atsijungus",
     "share_list_perso_alert_disponible": "Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!",
     "information": "Informacija",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Neribotas naudojimas",
     "subscription_benefit_updates": "Įtraukti atnaujinimai ir palaikymas",
     "subscription_plan_badge_best_offer": "2 mėnesiai nemokamai",
-    "subscription_legal_note": "Mokėjimas bus nuskaičiuotas iš jūsų „iTunes“ paskyros patvirtinus pirkimą. Prenumerata automatiškai atnaujinama, nebent ji būtų išjungta likus bent 24 valandoms iki dabartinio laikotarpio pabaigos. Prenumeratą galite tvarkyti ir išjungti automatinį atnaujinimą paskyros nustatymuose. 7 dienų nemokamą bandomąją versiją tvarko programėlė (naujos paskyros)."
+    "subscription_legal_note": "Mokėjimas bus nuskaičiuotas iš jūsų „iTunes“ paskyros patvirtinus pirkimą. Prenumerata automatiškai atnaujinama, nebent ji būtų išjungta likus bent 24 valandoms iki dabartinio laikotarpio pabaigos. Prenumeratą galite tvarkyti ir išjungti automatinį atnaujinimą paskyros nustatymuose. 7 dienų nemokamą bandomąją versiją tvarko programėlė (naujos paskyros).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

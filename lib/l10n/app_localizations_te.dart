@@ -9,7 +9,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get app_release_note => 'యాప్ నావిగేషన్‌లో గోప్యతా విధానం మరియు సేవా నిబంధనల (EULA)కి లింక్‌లు జోడించబడ్డాయి.';
+  String get app_release_note => 'బగ్ పరిష్కారం: లాగ్ అవుట్ అయిన తర్వాత వ్యక్తిగత జాబితా ఇకపై ఉంచబడలేదు.';
 
   @override
   String get share_list_perso_alert_disponible => 'జాబితా భాగస్వామ్య ఫీచర్ అతి త్వరలో అందుబాటులోకి వస్తుంది!';

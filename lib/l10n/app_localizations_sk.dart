@@ -9,7 +9,7 @@ class AppLocalizationsSk extends AppLocalizations {
   AppLocalizationsSk([String locale = 'sk']) : super(locale);
 
   @override
-  String get app_release_note => 'V navigácii aplikácie boli pridané odkazy na Zásady ochrany osobných údajov a Podmienky používania (EULA).';
+  String get app_release_note => 'Oprava chyby: osobný zoznam sa už neuchovával po odhlásení';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcia zdieľania zoznamov bude dostupná už čoskoro!';

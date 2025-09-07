@@ -9,7 +9,7 @@ class AppLocalizationsSv extends AppLocalizations {
   AppLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get app_release_note => 'Lade till länkar till sekretesspolicy och användarvillkor (EULA) i appnavigeringen';
+  String get app_release_note => 'Buggfix: personlig lista sparades inte längre efter utloggning';
 
   @override
   String get share_list_perso_alert_disponible => 'Funktionen för att dela listor kommer att finnas tillgänglig mycket snart!';

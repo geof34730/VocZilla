@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Added links to Privacy Policy and Terms of Use (EULA) in the app navigation",
+    "app_release_note": "Bug fix: personal list was no longer kept after logging out",
     "share_list_perso_alert_disponible": "The list sharing feature will be available very soon!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Unlimited use",
     "subscription_benefit_updates": "Updates and support included",
     "subscription_plan_badge_best_offer": "2 months free",
-    "subscription_legal_note": "Payment will be charged to your iTunes account at confirmation of purchase. Subscription automatically renews unless turned off at least 24 hours before the end of the current period. You can manage your subscription and turn off auto-renewal in your Account Settings. The 7-day free trial is managed by the app (new accounts)."
+    "subscription_legal_note": "Payment will be charged to your iTunes account at confirmation of purchase. Subscription automatically renews unless turned off at least 24 hours before the end of the current period. You can manage your subscription and turn off auto-renewal in your Account Settings. The 7-day free trial is managed by the app (new accounts).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

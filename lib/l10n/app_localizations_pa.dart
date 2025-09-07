@@ -9,7 +9,7 @@ class AppLocalizationsPa extends AppLocalizations {
   AppLocalizationsPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get app_release_note => 'ਐਪ ਨੈਵੀਗੇਸ਼ਨ ਵਿੱਚ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਅਤੇ ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ (EULA) ਦੇ ਲਿੰਕ ਜੋੜੇ ਗਏ ਹਨ।';
+  String get app_release_note => 'ਬੱਗ ਫਿਕਸ: ਲੌਗ ਆਊਟ ਕਰਨ ਤੋਂ ਬਾਅਦ ਨਿੱਜੀ ਸੂਚੀ ਨਹੀਂ ਰੱਖੀ ਗਈ ਸੀ।';
 
   @override
   String get share_list_perso_alert_disponible => 'ਸੂਚੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਹੁਤ ਜਲਦੀ ਉਪਲਬਧ ਹੋਵੇਗੀ!';

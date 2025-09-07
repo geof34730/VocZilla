@@ -9,7 +9,7 @@ class AppLocalizationsHr extends AppLocalizations {
   AppLocalizationsHr([String locale = 'hr']) : super(locale);
 
   @override
-  String get app_release_note => 'Dodane su poveznice na Pravila privatnosti i Uvjete korištenja (EULA) u navigaciji aplikacije';
+  String get app_release_note => 'Ispravak greške: osobni popis više se nije čuvao nakon odjave';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija dijeljenja popisa bit će dostupna vrlo brzo!';

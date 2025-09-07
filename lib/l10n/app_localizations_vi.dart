@@ -9,7 +9,7 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get app_release_note => 'Đã thêm liên kết đến Chính sách quyền riêng tư và Điều khoản sử dụng (EULA) trong phần điều hướng ứng dụng';
+  String get app_release_note => 'Sửa lỗi: danh sách cá nhân không còn được lưu giữ sau khi đăng xuất';
 
   @override
   String get share_list_perso_alert_disponible => 'Tính năng chia sẻ danh sách sẽ sớm có mặt!';

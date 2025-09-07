@@ -9,7 +9,7 @@ class AppLocalizationsCa extends AppLocalizations {
   AppLocalizationsCa([String locale = 'ca']) : super(locale);
 
   @override
-  String get app_release_note => 'S\'han afegit enllaços a la Política de privadesa i les Condicions d\'ús (EULA) a la navegació de l\'aplicació.';
+  String get app_release_note => 'Correcció d\'errors: la llista personal ja no es conservava després de tancar la sessió.';
 
   @override
   String get share_list_perso_alert_disponible => 'La funció de compartir llistes estarà disponible molt aviat!';

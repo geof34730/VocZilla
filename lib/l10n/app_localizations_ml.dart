@@ -9,7 +9,7 @@ class AppLocalizationsMl extends AppLocalizations {
   AppLocalizationsMl([String locale = 'ml']) : super(locale);
 
   @override
-  String get app_release_note => 'ആപ്പ് നാവിഗേഷനിൽ സ്വകാര്യതാ നയത്തിലേക്കും ഉപയോഗ നിബന്ധനകളിലേക്കും (EULA) ലിങ്കുകൾ ചേർത്തു.';
+  String get app_release_note => 'ബഗ് പരിഹാരം: ലോഗ് ഔട്ട് ചെയ്തതിനുശേഷം വ്യക്തിഗത ലിസ്റ്റ് ഇനി സൂക്ഷിച്ചിരുന്നില്ല.';
 
   @override
   String get share_list_perso_alert_disponible => 'ലിസ്റ്റ് പങ്കിടൽ സവിശേഷത വളരെ വേഗം ലഭ്യമാകും!';

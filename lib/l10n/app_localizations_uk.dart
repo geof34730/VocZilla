@@ -9,7 +9,7 @@ class AppLocalizationsUk extends AppLocalizations {
   AppLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get app_release_note => 'Додано посилання на Політику конфіденційності та Умови використання (EULA) у навігації застосунку';
+  String get app_release_note => 'Виправлення помилки: особистий список більше не зберігався після виходу з системи';
 
   @override
   String get share_list_perso_alert_disponible => 'Функція спільного доступу до списку буде доступна дуже скоро!';

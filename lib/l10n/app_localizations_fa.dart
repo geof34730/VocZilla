@@ -9,7 +9,7 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get app_release_note => 'پیوندهایی به سیاست حفظ حریم خصوصی و شرایط استفاده (EULA) در ناوبری برنامه اضافه شد';
+  String get app_release_note => 'رفع اشکال: فهرست شخصی پس از خروج از سیستم دیگر نگهداری نمی‌شد';
 
   @override
   String get share_list_perso_alert_disponible => 'قابلیت اشتراک‌گذاری لیست خیلی زود در دسترس قرار خواهد گرفت!';

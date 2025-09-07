@@ -238,7 +238,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_release_note.
   ///
   /// In en, this message translates to:
-  /// **'Added links to Privacy Policy and Terms of Use (EULA) in the app navigation'**
+  /// **'Bug fix: personal list was no longer kept after logging out'**
   String get app_release_note;
 
   /// No description provided for @share_list_perso_alert_disponible.

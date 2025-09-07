@@ -9,7 +9,7 @@ class AppLocalizationsAs extends AppLocalizations {
   AppLocalizationsAs([String locale = 'as']) : super(locale);
 
   @override
-  String get app_release_note => 'এপ নেভিগেচনত গোপনীয়তা নীতি আৰু সেৱাৰ চৰ্তসমূহ (EULA)ৰ লিংক যোগ কৰা হৈছে';
+  String get app_release_note => 'বাগ সমাধান: লগ আউট কৰাৰ পিছত ব্যক্তিগত তালিকা আৰু ৰখা হোৱা নাছিল';
 
   @override
   String get share_list_perso_alert_disponible => 'অতি সোনকালে উপলব্ধ হ’ব তালিকা শ্বেয়াৰিং বৈশিষ্ট্য!';

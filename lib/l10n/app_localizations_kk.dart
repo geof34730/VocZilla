@@ -9,7 +9,7 @@ class AppLocalizationsKk extends AppLocalizations {
   AppLocalizationsKk([String locale = 'kk']) : super(locale);
 
   @override
-  String get app_release_note => 'Қолданба шарлауында Құпиялылық саясаты мен пайдалану шарттарына (EULA) сілтемелер қосылды';
+  String get app_release_note => 'Қатені түзету: жүйеден шыққаннан кейін жеке тізім сақталмады';
 
   @override
   String get share_list_perso_alert_disponible => 'Тізіммен бөлісу мүмкіндігі жақын арада қолжетімді болады!';

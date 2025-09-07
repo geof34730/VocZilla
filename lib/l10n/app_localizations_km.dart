@@ -9,7 +9,7 @@ class AppLocalizationsKm extends AppLocalizations {
   AppLocalizationsKm([String locale = 'km']) : super(locale);
 
   @override
-  String get app_release_note => 'បានបន្ថែមតំណភ្ជាប់ទៅគោលការណ៍ឯកជនភាព និងលក្ខខណ្ឌប្រើប្រាស់ (EULA) នៅក្នុងការរុករកកម្មវិធី';
+  String get app_release_note => 'ជួសជុលកំហុស៖ បញ្ជីផ្ទាល់ខ្លួនមិនត្រូវបានរក្សាទុកទៀតទេ បន្ទាប់ពីចេញពីគណនី';
 
   @override
   String get share_list_perso_alert_disponible => 'មុខងារចែករំលែកបញ្ជីនឹងមានក្នុងពេលឆាប់ៗនេះ!';

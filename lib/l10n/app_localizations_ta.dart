@@ -9,7 +9,7 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get app_release_note => 'பயன்பாட்டு வழிசெலுத்தலில் தனியுரிமைக் கொள்கை மற்றும் பயன்பாட்டு விதிமுறைகளுக்கான (EULA) இணைப்புகள் சேர்க்கப்பட்டன.';
+  String get app_release_note => 'பிழை திருத்தம்: வெளியேறிய பிறகு தனிப்பட்ட பட்டியல் இனி வைக்கப்படவில்லை.';
 
   @override
   String get share_list_perso_alert_disponible => 'பட்டியல் பகிர்வு அம்சம் மிக விரைவில் கிடைக்கும்!';

@@ -9,7 +9,7 @@ class AppLocalizationsHe extends AppLocalizations {
   AppLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get app_release_note => 'נוספו קישורים למדיניות הפרטיות ותנאי השימוש (EULA) בניווט האפליקציה';
+  String get app_release_note => 'תיקון באג: רשימה אישית לא נשמרה עוד לאחר התנתקות';
 
   @override
   String get share_list_perso_alert_disponible => 'תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!';

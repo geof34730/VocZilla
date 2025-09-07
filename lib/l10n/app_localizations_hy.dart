@@ -9,7 +9,7 @@ class AppLocalizationsHy extends AppLocalizations {
   AppLocalizationsHy([String locale = 'hy']) : super(locale);
 
   @override
-  String get app_release_note => 'Հավելվածի նավիգացիայում ավելացվել են հղումներ դեպի Գաղտնիության քաղաքականություն և Օգտագործման պայմաններ (EULA):';
+  String get app_release_note => 'Սխալի ուղղում. անձնական ցուցակը այլևս չէր պահվում դուրս գալուց հետո';
 
   @override
   String get share_list_perso_alert_disponible => 'Ցուցակի համօգտագործման գործառույթը շատ շուտով հասանելի կլինի։';

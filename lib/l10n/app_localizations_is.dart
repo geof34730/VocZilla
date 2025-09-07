@@ -9,7 +9,7 @@ class AppLocalizationsIs extends AppLocalizations {
   AppLocalizationsIs([String locale = 'is']) : super(locale);
 
   @override
-  String get app_release_note => 'Bætt við tenglum á persónuverndarstefnu og notkunarskilmála (EULA) í leiðsögn appsins';
+  String get app_release_note => 'Villuleiðrétting: persónulegur listi var ekki lengur geymdur eftir útskráningu';
 
   @override
   String get share_list_perso_alert_disponible => 'Aðgerðin til að deila listanum verður tiltæk mjög fljótlega!';

@@ -21,39 +21,45 @@ platform :all do
         -e build \
         -e ios/Pods \
         -e android/.gradle \
+        -e macos/Pods \
         -e .env \
         -e voczilla-play.json \
         -e firebase.json \
         -e android/app/key.jks\
         -e android/app/google-services.json \
-        -e ios/Runner/GoogleService-Info.plist || true")
+        -e ios/Runner/GoogleService-Info.plist \
+        -e macos/Runner/GoogleService-Info.plist || true")
   end
 
   #########################################
   # ======= CONFIG IAP REVIEW CAPTURE =====
   #########################################
 
-  # Nom du fichier attendu pour la capture IAP (provenant du run iphone6_7_inch)
-  IAP_REVIEW_SOURCE_FILENAME = "iphone6_7_inch_09.png"
+  #IAP_REVIEW_SOURCE_FILENAME = "iphone6_7_inch_09.png"
 
   #########################################
   # ============ METADATA LANE ============
   #########################################
 
-  desc "📸 Générer les métadonnées Android & iOS"
+  desc "📸 Générer les métadonnées Android, iOS & macOS"
   lane :generate_metadata do
-    project_root = File.expand_path("..", __dir__)
+    project_root        = File.expand_path("..", __dir__)
     dart_script_android = File.join(project_root, "fastlane/generate_metadata_android.dart")
     dart_script_ios     = File.join(project_root, "fastlane/generate_metadata_ios.dart")
+    dart_script_macos   = File.join(project_root, "fastlane/generate_metadata_macos.dart")
 
-    UI.user_error!("❌ Script Dart android introuvable: #{dart_script_android}") unless File.exist?(dart_script_android)
-    UI.user_error!("❌ Script Dart iOS introuvable: #{dart_script_ios}")       unless File.exist?(dart_script_ios)
+    UI.user_error!("❌ Script Dart Android introuvable: #{dart_script_android}") unless File.exist?(dart_script_android)
+    UI.user_error!("❌ Script Dart iOS introuvable: #{dart_script_ios}")         unless File.exist?(dart_script_ios)
+    UI.user_error!("❌ Script Dart macOS introuvable: #{dart_script_macos}")     unless File.exist?(dart_script_macos)
 
     UI.message("🧠 Génération des métadonnées Android...")
     Dir.chdir(project_root) { sh("dart '#{dart_script_android}'") }
 
     UI.message("🧠 Génération des métadonnées iOS...")
     Dir.chdir(project_root) { sh("dart '#{dart_script_ios}'") }
+
+    UI.message("🧠 Génération des métadonnées macOS...")
+    Dir.chdir(project_root) { sh("dart '#{dart_script_macos}'") }
   end
 
   #########################################
@@ -112,10 +118,8 @@ platform :all do
           next
         end
 
-        # Nettoie les captures parasites générées par flutter drive
         clean_driver_artifacts!(shots_dir)
 
-        # Copie les autres captures vers fastlane/metadata
         copy_screenshots_to_metadata(
           platform_store: "ios",
           normalized_locale: normalized_locale,
@@ -155,7 +159,6 @@ platform :all do
     UI.user_error!("❌ Aucune locale trouvée") if locales.empty?
 
     android_folders.each do |dest_folder|
-      # 🔄 Reboot propre de l'émulateur à chaque bucket pour la stabilité (deviceId restera emulator-5554)
       stop_emulator
       start_emulator_once(avd_name)
       emulator_id = get_running_emulator_id
@@ -206,11 +209,94 @@ platform :all do
     UI.success("✅ Screenshots Android terminés")
   end
 
-  desc "📷 Screenshots (iOS + Android) — orchestrateur"
-  lane :screenshots do
+  # --------- LANE MACOS (mise à jour) ----------
+  desc "📷 Screenshots macOS — build warmup + run desktop (taille fenêtre depuis ENV + normalisation 1280x800)"
+  lane :screenshots_macos do |_options|
+    project_root = File.expand_path("..", __dir__)
+    shots_dir    = File.join(project_root, screenshots_dir)
+    FileUtils.mkdir_p(shots_dir)
 
+    clean_build!
+    ensure_firebase_macos_file_present!
+    generate_metadata
+
+    # Paramètres fenêtre (overridables via ENV)
+    mac_w  = (ENV["MACOS_WINDOW_WIDTH"]  || "1280").to_i
+    mac_h  = (ENV["MACOS_WINDOW_HEIGHT"] || "800").to_i
+    mac_pr = (ENV["MACOS_PIXEL_RATIO"]   || "1").to_f
+    UI.message("🖥️ Taille fenêtre macOS demandée: #{mac_w}x#{mac_h} (pixelRatio=#{mac_pr})")
+
+    # Warmup (optionnel) – build debug pour accélérer le 1er run
+    begin
+      sh("flutter build macos --debug -t test_driver/app.dart")
+    rescue => e
+      UI.important("Build warmup macOS échoué (on continue quand même): #{e.message}")
+    end
+
+    macos_folders = ["desktop"]
+    locales = extract_locales
+    UI.user_error!("❌ Aucune locale trouvée") if locales.empty?
+
+    macos_folders.each do |dest_folder|
+      locales.each do |locale|
+        normalized_locale = normalize_locale_or_skip(locale, "macos")
+        next if normalized_locale.nil?
+
+        purge_screenshots_dir!(shots_dir)
+        UI.message("📸 macOS — locale=#{locale}, dest=#{dest_folder}")
+
+        # Variables d'env passées à l'app
+        env = [
+          "PLATFORM=macos",
+          "LOCALE=#{locale}",
+          "DESTFOLDER='#{dest_folder}'",
+          "FOR_FEATURE_GRAPHIC=false",
+          "SCREENSHOTS_DIR='#{shots_dir}'",
+          "MACOS_WINDOW_WIDTH=#{mac_w}",
+          "MACOS_WINDOW_HEIGHT=#{mac_h}",
+          "MACOS_PIXEL_RATIO=#{mac_pr}"
+        ].join(" ")
+
+        cmd = %Q{
+          #{env} caffeinate -s flutter drive \
+            --no-dds \
+            --driver=test_driver/integration_test.dart \
+            --target=test_driver/app.dart \
+            -d macos
+        }.strip
+
+        ok = run_drive_with_retries!(
+          cmd: cmd, retries: 2, locale: locale, dest_folder: dest_folder, shots_dir: shots_dir
+        )
+        unless ok
+          UI.important("⏭️ Skip macOS #{locale}/#{dest_folder} après échecs.")
+          next
+        end
+
+        clean_driver_artifacts!(shots_dir)
+
+        # 🖼️ Normalisation exacte à 1280x800 (si ImageMagick dispo)
+        normalize_macos_screenshots!(shots_dir, width: 1280, height: 800)
+
+        copy_screenshots_to_metadata(
+          platform_store: "macos",
+          normalized_locale: normalized_locale,
+          dest_folder: dest_folder,
+          screenshots_dir: shots_dir,
+          project_root: project_root
+        )
+      end
+    end
+
+    UI.success("✅ Screenshots macOS terminés")
+  end
+  # ----------------------------------------
+
+  desc "📷 Screenshots (iOS + Android + macOS) — orchestrateur"
+  lane :screenshots do
     #screenshots_android
-    screenshots_ios
+    #screenshots_ios
+    screenshots_macos
 
     # Nettoyage disque après exécution
     free = disk_free_gb(".")
@@ -236,13 +322,10 @@ end
 
 require "tmpdir"
 
-# ----- Mapping simulateurs iOS pour garder les bonnes tailles -----
-# Adapte ces UDID si tu veux cibler d'autres devices de ta liste.
+# ----- Mapping simulateurs iOS -----
 def ios_device_for_folder(dest_folder)
   map = {
-    # iPhone 6.7" → iPhone 15 Pro Max (iOS 17.0)
     "iphone6_7_inch" => "DFE799EA-B2F9-4EBA-BEC7-13970400A07E",
-    # iPad 12.9" → iPad Pro (12.9-inch) (6th generation) (iOS 17.0)
     "iPad Pro (12.9-inch) (3rd generation)" => "0F7B7680-E990-4724-9FF8-DF316C3D87CA",
     "ipad_12_9_inch" => "0F7B7680-E990-4724-9FF8-DF316C3D87CA"
   }
@@ -251,7 +334,7 @@ def ios_device_for_folder(dest_folder)
   udid
 end
 
-# ----- Wrapper retries (2) + logs + mitigations -----
+# ----- Wrapper retries -----
 def run_drive_with_retries!(cmd:, retries:, locale:, dest_folder:, shots_dir:, emulator_id: nil)
   attempts = retries.to_i + 1
   (1..attempts).each do |i|
@@ -278,7 +361,7 @@ def run_drive_with_retries!(cmd:, retries:, locale:, dest_folder:, shots_dir:, e
   false
 end
 
-# ----- Nettoyage des captures parasites générées par flutter drive -----
+# ----- Nettoyage captures parasites -----
 def clean_driver_artifacts!(screenshots_dir, patterns: ['driver_*.png', 'drive_*.png'])
   patterns.each do |glob|
     Dir[File.join(screenshots_dir, glob)].each do |f|
@@ -288,20 +371,24 @@ def clean_driver_artifacts!(screenshots_dir, patterns: ['driver_*.png', 'drive_*
   end
 end
 
-# ----- Purge du dossier screenshots (à chaque langue) -----
+# ----- Purge du dossier screenshots -----
 def purge_screenshots_dir!(dir_path)
   UI.message("🧹 Purge du dossier de screenshots: #{dir_path}")
   FileUtils.mkdir_p(dir_path)
   Dir[File.join(dir_path, "*")].each { |f| FileUtils.rm_f(f) }
 end
 
-# ---- Marqueurs de build (garantit target driver) ----
+# ---- Marqueurs de build ----
 def android_driver_marker_path
   File.expand_path("../build/.driver_android_ok", __dir__)
 end
 
 def ios_driver_marker_path
   File.expand_path("../build/.driver_ios_ok", __dir__)
+end
+
+def macos_driver_marker_path
+  File.expand_path("../build/.driver_macos_ok", __dir__)
 end
 
 def write_marker(path)
@@ -332,6 +419,16 @@ def ensure_firebase_files_present!
   UI.message("✅ Fichiers Firebase présents.")
 end
 
+def ensure_firebase_macos_file_present!
+  project_root = File.expand_path("..", __dir__)
+  path = File.join(project_root, "macos/Runner/GoogleService-Info.plist")
+  if File.exist?(path)
+    UI.message("✅ Fichier Firebase macOS présent.")
+  else
+    UI.important("⚠️ Fichier manquant : Firebase macOS (GoogleService-Info.plist) → #{path}")
+  end
+end
+
 # ---- Disque ----
 def disk_free_gb(path=".")
   out = sh(%Q{df -k "#{path}" | tail -1 | awk '{print $4}'}, log: false).strip.to_i
@@ -355,6 +452,10 @@ def android_apk_release_path
   File.expand_path("../build/app/outputs/flutter-apk/app-release.apk", __dir__)
 end
 
+def macos_app_debug_path
+  File.expand_path("../build/macos/Build/Products/Debug/Runner.app", __dir__)
+end
+
 # ---- Identifiants app ----
 def android_package_name
   "com.geoffreypetain.voczilla.voczilla"
@@ -364,7 +465,7 @@ def ios_bundle_id
   "com.geoffreypetain.voczilla.voczilla"
 end
 
-# ---- Builds uniques (target driver) + marqueurs ----
+# ---- Builds uniques ----
 def ensure_ios_simulator_built_once!
   app_path = ios_sim_runner_app_path
   if File.exist?(app_path) && marker_ok?(ios_driver_marker_path)
@@ -375,7 +476,7 @@ def ensure_ios_simulator_built_once!
   no_codesign = (ENV["IOS_CODESIGN"] == "false")
   cmd = "flutter build ios --simulator -t test_driver/app.dart"
   cmd += " --no-codesign" if no_codesign
-  flutter(cmd.gsub(/^flutter /, "")) # via helper
+  flutter(cmd.gsub(/^flutter /, ""))
   write_marker(ios_driver_marker_path)
   app_path
 end
@@ -393,6 +494,18 @@ def ensure_android_built_once!(mode = :debug)
   target_path
 end
 
+def ensure_macos_built_once!
+  app_path = macos_app_debug_path
+  if File.exist?(app_path) && marker_ok?(macos_driver_marker_path)
+    UI.message("🟢 Build macOS déjà présent (driver target) → OK.")
+    return app_path
+  end
+  UI.message("📦 Build macOS depuis test_driver/app.dart...")
+  flutter("build macos -t test_driver/app.dart")
+  write_marker(macos_driver_marker_path)
+  app_path
+end
+
 # ----- iOS Simulators -----
 def start_ios_simulator_by_udid(udid)
   UI.user_error!("❌ UDID iOS vide") if udid.to_s.strip.empty?
@@ -408,7 +521,7 @@ def uninstall_ios_app(udid, bundle_id)
   sh("xcrun simctl uninstall #{udid} #{bundle_id} || true")
 end
 
-# ----- Android emulator (robuste) -----
+# ----- Android emulator -----
 def get_running_emulator_id
   out = sh("adb devices", log: false) rescue ""
   line = out.lines.find { |l| l.start_with?("emulator-") && l.include?("\tdevice") }
@@ -450,12 +563,10 @@ def ensure_android_booted(emulator_id)
   UI.message("⚙️ Attente de boot complet Android pour #{emulator_id}...")
   sh("adb -s #{emulator_id} wait-for-device || true")
 
-  # Couper les animations
   %w[animator_duration_scale transition_animation_scale window_animation_scale].each do |k|
     sh("adb -s #{emulator_id} shell settings put global #{k} 0 || true", log: false)
   end
 
-  # Boucle d'attente tolérante
   120.times do
     boot_status = sh("adb -s #{emulator_id} shell getprop sys.boot_completed || true", log: false).strip
     anim_state  = sh("adb -s #{emulator_id} shell getprop init.svc.bootanim || true", log: false).strip
@@ -484,7 +595,6 @@ def set_emulator_resolution(emulator_id, dest_folder)
     "sevenInchScreenshots"  => ["800x1280",  "213"],
     "tenInchScreenshots"    => ["1600x2560", "320"],
     "FeatureGraphic"        => ["1024x500",  "160"],
-    # clés iOS (ignorées côté Android)
     "iphone6_7_inch"                        => nil,
     "ipad_12_9_inch"                        => nil,
     "iPad Pro (12.9-inch) (3rd generation)" => nil
@@ -535,6 +645,9 @@ end
 
 # ----- Bridge Dart pour normaliser les locales -----
 def get_normalized_locale(locale, platform)
+  # Pour macOS, on réutilise le mapping iOS (App Store Connect: formats identiques)
+  platform = "ios" if platform.to_s.downcase == "macos"
+
   project_root = File.expand_path("..", __dir__)
   map_script   = File.join(project_root, "fastlane/invoke_locale_mapper.dart")
   UI.user_error!("❌ Script de mapping de locale introuvable: #{map_script}") unless File.exist?(map_script)
@@ -557,7 +670,7 @@ end
 
 # ----- Copie des screenshots vers metadata -----
 def copy_screenshots_to_metadata(platform_store:, normalized_locale:, dest_folder:, screenshots_dir:, project_root:)
-  clean_driver_artifacts!(screenshots_dir) # supprime driver_*.png & drive_*.png
+  clean_driver_artifacts!(screenshots_dir)
   screenshots = Dir[File.join(screenshots_dir, "*.png")]
 
   relative_metadata =
@@ -565,7 +678,9 @@ def copy_screenshots_to_metadata(platform_store:, normalized_locale:, dest_folde
       File.join(platform_store, normalized_locale, "images")
     elsif platform_store == "ios"
       File.join(platform_store, normalized_locale)
-    else # android classique
+    elsif platform_store == "macos"
+      File.join(platform_store, normalized_locale)
+    else
       File.join(platform_store, normalized_locale, "images", dest_folder)
     end
 
@@ -579,12 +694,35 @@ def copy_screenshots_to_metadata(platform_store:, normalized_locale:, dest_folde
   end
 end
 
+# ----- Normalisation PNG macOS à 1280x800 (coupe EN BAS, on préserve le haut) -----
+def normalize_macos_screenshots!(dir, width:, height:)
+  files = Dir[File.join(dir, "*.png")]
+  return if files.empty?
+
+  has_im = system("command -v mogrify >/dev/null 2>&1")
+  unless has_im
+    UI.important("⚠️ ImageMagick (mogrify) introuvable → skip normalisation. Installe avec: brew install imagemagick")
+    return
+  end
+
+  UI.message("🖼️ Normalisation des captures macOS → #{width}x#{height} (resize to fill + crop TOP-anchored → coupe en bas)")
+  files.each do |f|
+    # -resize WxH^ : couvre entièrement (peut dépasser)
+    # -gravity north : ancre en HAUT
+    # -extent WxH : recadre à la taille exacte ; l’excédent est retiré en BAS
+    sh(%Q{mogrify -resize #{width}x#{height}^ -gravity north -extent #{width}x#{height} "#{f}"})
+  end
+end
+
 # ----- Nettoyage espace disque -----
 def cleanup_builds(keep_ios_build:, aggressive:)
   UI.message("🧽 Nettoyage (keep_ios_build=#{keep_ios_build}, aggressive=#{aggressive})")
 
   # Android
   sh("rm -rf .dart_tool/ .gradle/ android/.gradle/ build/app || true")
+
+  # macOS
+  sh("rm -rf build/macos || true")
 
   # iOS
   if aggressive

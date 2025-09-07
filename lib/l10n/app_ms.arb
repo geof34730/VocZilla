@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Menambahkan pautan ke Dasar Privasi dan Syarat Penggunaan (EULA) dalam navigasi apl",
+    "app_release_note": "Pembetulan pepijat: senarai peribadi tidak lagi disimpan selepas log keluar",
     "share_list_perso_alert_disponible": "Ciri perkongsian senarai akan tersedia tidak lama lagi!",
     "information": "Maklumat",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Penggunaan tanpa had",
     "subscription_benefit_updates": "Kemas kini dan sokongan disertakan",
     "subscription_plan_badge_best_offer": "2 bulan percuma",
-    "subscription_legal_note": "Pembayaran akan dicaj ke akaun iTunes anda pada pengesahan pembelian. Langganan diperbaharui secara automatik melainkan dimatikan sekurang-kurangnya 24 jam sebelum tamat tempoh semasa. Anda boleh mengurus langganan anda dan mematikan pembaharuan automatik dalam Tetapan Akaun anda. Percubaan percuma selama 7 hari diurus oleh apl (akaun baharu)."
+    "subscription_legal_note": "Pembayaran akan dicaj ke akaun iTunes anda pada pengesahan pembelian. Langganan diperbaharui secara automatik melainkan dimatikan sekurang-kurangnya 24 jam sebelum tamat tempoh semasa. Anda boleh mengurus langganan anda dan mematikan pembaharuan automatik dalam Tetapan Akaun anda. Percubaan percuma selama 7 hari diurus oleh apl (akaun baharu).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

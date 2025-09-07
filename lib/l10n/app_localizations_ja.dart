@@ -9,7 +9,7 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get app_release_note => 'アプリのナビゲーションにプライバシーポリシーと利用規約（EULA）へのリンクを追加しました';
+  String get app_release_note => 'バグ修正: ログアウト後に個人リストが保持されなくなりました';
 
   @override
   String get share_list_perso_alert_disponible => 'リスト共有機能はまもなく利用可能になります。';

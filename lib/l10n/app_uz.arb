@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Ilova navigatsiyasida Maxfiylik siyosati va foydalanish shartlariga (EULA) havolalar qo'shildi",
+    "app_release_note": "Xatolarni tuzatish: tizimdan chiqqandan keyin shaxsiy roʻyxat endi saqlanmadi",
     "share_list_perso_alert_disponible": "Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!",
     "information": "Ma'lumot",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Cheksiz foydalanish",
     "subscription_benefit_updates": "Yangilanishlar va qo'llab-quvvatlash kiritilgan",
     "subscription_plan_badge_best_offer": "2 oy bepul",
-    "subscription_legal_note": "Toʻlov xaridni tasdiqlashda iTunes hisobingizga oʻtkaziladi. Obuna joriy davr tugashiga kamida 24 soat qolganda o'chirilmasa, avtomatik ravishda yangilanadi. Hisob sozlamalarida obunangizni boshqarishingiz va avtomatik yangilashni o‘chirib qo‘yishingiz mumkin. 7 kunlik bepul sinov muddati ilova (yangi hisoblar) tomonidan boshqariladi."
+    "subscription_legal_note": "Toʻlov xaridni tasdiqlashda iTunes hisobingizga oʻtkaziladi. Obuna joriy davr tugashiga kamida 24 soat qolganda o'chirilmasa, avtomatik ravishda yangilanadi. Hisob sozlamalarida obunangizni boshqarishingiz va avtomatik yangilashni o‘chirib qo‘yishingiz mumkin. 7 kunlik bepul sinov muddati ilova (yangi hisoblar) tomonidan boshqariladi.",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

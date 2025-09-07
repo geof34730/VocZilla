@@ -9,7 +9,7 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
-  String get app_release_note => 'La til lenker til personvernregler og bruksvilkår (EULA) i appnavigasjonen';
+  String get app_release_note => 'Feilretting: Personlig liste ble ikke lenger lagret etter utlogging';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksjonen for deling av lister vil være tilgjengelig veldig snart!';

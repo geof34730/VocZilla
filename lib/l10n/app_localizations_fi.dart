@@ -9,7 +9,7 @@ class AppLocalizationsFi extends AppLocalizations {
   AppLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get app_release_note => 'Lisätty linkit tietosuojakäytäntöön ja käyttöehtoihin (EULA) sovelluksen navigointiin';
+  String get app_release_note => 'Virheenkorjaus: henkilökohtaista listaa ei enää säilytetty uloskirjautumisen jälkeen';
 
   @override
   String get share_list_perso_alert_disponible => 'Listan jakamisominaisuus on saatavilla pian!';

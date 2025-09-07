@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get app_release_note => 'Links zu Datenschutzrichtlinien und Nutzungsbedingungen (EULA) in der App-Navigation hinzugefügt';
+  String get app_release_note => 'Fehlerbehebung: Persönliche Liste wurde nach dem Abmelden nicht mehr beibehalten';
 
   @override
   String get share_list_perso_alert_disponible => 'Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!';

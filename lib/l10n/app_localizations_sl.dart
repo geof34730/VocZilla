@@ -9,7 +9,7 @@ class AppLocalizationsSl extends AppLocalizations {
   AppLocalizationsSl([String locale = 'sl']) : super(locale);
 
   @override
-  String get app_release_note => 'V navigaciji aplikacije so bile dodane povezave do pravilnika o zasebnosti in pogojev uporabe (EULA).';
+  String get app_release_note => 'Popravek napake: osebni seznam se po odjavi ni več hranil';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija deljenja seznamov bo kmalu na voljo!';

@@ -9,7 +9,7 @@ class AppLocalizationsLt extends AppLocalizations {
   AppLocalizationsLt([String locale = 'lt']) : super(locale);
 
   @override
-  String get app_release_note => 'Programėlės naršymo juostoje pridėtos nuorodos į privatumo politiką ir naudojimo sąlygas (EULA).';
+  String get app_release_note => 'Klaidos ištaisymas: asmeninis sąrašas nebebuvo saugomas atsijungus';
 
   @override
   String get share_list_perso_alert_disponible => 'Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!';

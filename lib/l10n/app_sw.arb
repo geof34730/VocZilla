@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Umeongeza viungo vya Sera ya Faragha na Sheria na Masharti (EULA) katika urambazaji wa programu",
+    "app_release_note": "Kurekebisha hitilafu: orodha ya kibinafsi haikuwekwa tena baada ya kutoka",
     "share_list_perso_alert_disponible": "Kipengele cha kushiriki orodha kitapatikana hivi karibuni!",
     "information": "Habari",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Matumizi ya ukomo",
     "subscription_benefit_updates": "Updates na msaada pamoja",
     "subscription_plan_badge_best_offer": "Miezi 2 bila malipo",
-    "subscription_legal_note": "Malipo yatatozwa kwa akaunti yako ya iTunes baada ya uthibitisho wa ununuzi. Usajili husasishwa kiotomatiki isipokuwa ukizimwa angalau saa 24 kabla ya mwisho wa kipindi cha sasa. Unaweza kudhibiti usajili wako na kuzima usasishaji kiotomatiki katika Mipangilio ya Akaunti yako. Jaribio lisilolipishwa la siku 7 linadhibitiwa na programu (akaunti mpya)."
+    "subscription_legal_note": "Malipo yatatozwa kwa akaunti yako ya iTunes baada ya uthibitisho wa ununuzi. Usajili husasishwa kiotomatiki isipokuwa ukizimwa angalau saa 24 kabla ya mwisho wa kipindi cha sasa. Unaweza kudhibiti usajili wako na kuzima usasishaji kiotomatiki katika Mipangilio ya Akaunti yako. Jaribio lisilolipishwa la siku 7 linadhibitiwa na programu (akaunti mpya).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

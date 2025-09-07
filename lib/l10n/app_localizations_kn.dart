@@ -9,7 +9,7 @@ class AppLocalizationsKn extends AppLocalizations {
   AppLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get app_release_note => 'ಅಪ್ಲಿಕೇಶನ್ ನ್ಯಾವಿಗೇಷನ್‌ನಲ್ಲಿ ಗೌಪ್ಯತಾ ನೀತಿ ಮತ್ತು ಬಳಕೆಯ ನಿಯಮಗಳಿಗೆ (EULA) ಲಿಂಕ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ.';
+  String get app_release_note => 'ದೋಷ ಪರಿಹಾರ: ಲಾಗ್ ಔಟ್ ಆದ ನಂತರ ವೈಯಕ್ತಿಕ ಪಟ್ಟಿಯನ್ನು ಇನ್ನು ಮುಂದೆ ಇಡಲಾಗಲಿಲ್ಲ.';
 
   @override
   String get share_list_perso_alert_disponible => 'ಪಟ್ಟಿ ಹಂಚಿಕೆ ವೈಶಿಷ್ಟ್ಯವು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಿರುತ್ತದೆ!';

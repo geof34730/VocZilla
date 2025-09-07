@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Links zu Datenschutzrichtlinien und Nutzungsbedingungen (EULA) in der App-Navigation hinzugefügt",
+    "app_release_note": "Fehlerbehebung: Persönliche Liste wurde nach dem Abmelden nicht mehr beibehalten",
     "share_list_perso_alert_disponible": "Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Unbegrenzte Nutzung",
     "subscription_benefit_updates": "Updates und Support inklusive",
     "subscription_plan_badge_best_offer": "2 Monate gratis",
-    "subscription_legal_note": "Die Zahlung wird Ihrem iTunes-Konto nach Kaufbestätigung belastet. Das Abonnement verlängert sich automatisch, sofern es nicht mindestens 24 Stunden vor Ablauf der aktuellen Laufzeit gekündigt wird. Sie können Ihr Abonnement in Ihren Kontoeinstellungen verwalten und die automatische Verlängerung deaktivieren. Die 7-tägige kostenlose Testversion wird über die App verwaltet (neue Konten)."
+    "subscription_legal_note": "Die Zahlung wird Ihrem iTunes-Konto nach Kaufbestätigung belastet. Das Abonnement verlängert sich automatisch, sofern es nicht mindestens 24 Stunden vor Ablauf der aktuellen Laufzeit gekündigt wird. Sie können Ihr Abonnement in Ihren Kontoeinstellungen verwalten und die automatische Verlängerung deaktivieren. Die 7-tägige kostenlose Testversion wird über die App verwaltet (neue Konten).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

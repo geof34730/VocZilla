@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Lisätty linkit tietosuojakäytäntöön ja käyttöehtoihin (EULA) sovelluksen navigointiin",
+    "app_release_note": "Virheenkorjaus: henkilökohtaista listaa ei enää säilytetty uloskirjautumisen jälkeen",
     "share_list_perso_alert_disponible": "Listan jakamisominaisuus on saatavilla pian!",
     "information": "Tiedot",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Rajoittamaton käyttö",
     "subscription_benefit_updates": "Päivitykset ja tuki sisältyvät hintaan",
     "subscription_plan_badge_best_offer": "2 kuukautta ilmaiseksi",
-    "subscription_legal_note": "Maksu veloitetaan iTunes-tililtäsi ostoksen vahvistamisen yhteydessä. Tilaus uusiutuu automaattisesti, ellei sitä poisteta käytöstä vähintään 24 tuntia ennen nykyisen jakson päättymistä. Voit hallita tilaustasi ja poistaa automaattisen uusimisen käytöstä tilisi asetuksissa. Sovellus hallinnoi 7 päivän ilmaista kokeilujaksoa (uudet tilit)."
+    "subscription_legal_note": "Maksu veloitetaan iTunes-tililtäsi ostoksen vahvistamisen yhteydessä. Tilaus uusiutuu automaattisesti, ellei sitä poisteta käytöstä vähintään 24 tuntia ennen nykyisen jakson päättymistä. Voit hallita tilaustasi ja poistaa automaattisen uusimisen käytöstä tilisi asetuksissa. Sovellus hallinnoi 7 päivän ilmaista kokeilujaksoa (uudet tilit).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

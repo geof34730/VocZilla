@@ -9,7 +9,7 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get app_release_note => 'Se agregaron enlaces a la Política de privacidad y los Términos de uso (EULA) en la navegación de la aplicación.';
+  String get app_release_note => 'Corrección de errores: la lista personal ya no se conservaba después de cerrar la sesión';
 
   @override
   String get share_list_perso_alert_disponible => '¡La función para compartir listas estará disponible muy pronto!';

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Lietotnes navigācijā pievienotas saites uz konfidencialitātes politiku un lietošanas noteikumiem (EULA).",
+    "app_release_note": "Kļūdas labojums: personīgais saraksts vairs netika saglabāts pēc izrakstīšanās",
     "share_list_perso_alert_disponible": "Saraksta koplietošanas funkcija būs pieejama jau pavisam drīz!",
     "information": "Informācija",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Neierobežota lietošana",
     "subscription_benefit_updates": "Iekļauti atjauninājumi un atbalsts",
     "subscription_plan_badge_best_offer": "2 mēneši bez maksas",
-    "subscription_legal_note": "Maksājums tiks iekasēts no jūsu iTunes konta, kad būs apstiprināts pirkums. Abonements tiek automātiski atjaunots, ja vien tas netiek izslēgts vismaz 24 stundas pirms pašreizējā perioda beigām. Jūs varat pārvaldīt savu abonementu un izslēgt automātisko atjaunošanu sava konta iestatījumos. 7 dienu bezmaksas izmēģinājuma periodu pārvalda lietotne (jauni konti)."
+    "subscription_legal_note": "Maksājums tiks iekasēts no jūsu iTunes konta, kad būs apstiprināts pirkums. Abonements tiek automātiski atjaunots, ja vien tas netiek izslēgts vismaz 24 stundas pirms pašreizējā perioda beigām. Jūs varat pārvaldīt savu abonementu un izslēgt automātisko atjaunošanu sava konta iestatījumos. 7 dienu bezmaksas izmēģinājuma periodu pārvalda lietotne (jauni konti).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

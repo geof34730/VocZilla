@@ -9,7 +9,7 @@ class AppLocalizationsHu extends AppLocalizations {
   AppLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get app_release_note => 'Hozzáadtunk linkeket az Adatvédelmi irányelvekhez és a Felhasználási feltételekhez (EULA) az alkalmazás navigációjában.';
+  String get app_release_note => 'Hibajavítás: a személyes lista már nem maradt meg kijelentkezés után';
 
   @override
   String get share_list_perso_alert_disponible => 'A listamegosztási funkció hamarosan elérhető lesz!';

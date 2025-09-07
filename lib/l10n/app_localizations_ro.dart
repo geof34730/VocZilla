@@ -9,7 +9,7 @@ class AppLocalizationsRo extends AppLocalizations {
   AppLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
-  String get app_release_note => 'Adăugate linkuri către Politica de confidențialitate și Termenii și condițiile de utilizare (EULA) în navigarea aplicației';
+  String get app_release_note => 'Corecție eroare: lista personală nu mai era păstrată după deconectare';
 
   @override
   String get share_list_perso_alert_disponible => 'Funcția de partajare a listei va fi disponibilă foarte curând!';

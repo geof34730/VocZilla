@@ -57,7 +57,7 @@ void main() {
     String getNameFile(String value) {
       // Log de contrôle
       print("*********************$value   -   $platform - $platform");
-      if (platform == 'ios') {
+      if (platform == 'ios' || platform == 'macos') {
         _iosIndex++;
         return "${destFolder}_0$_iosIndex";
       } else {
@@ -216,6 +216,20 @@ void main() {
         print("  - Retour à l'écran d'accueil des listes");
         await tapBackButton(driver);
 
+
+        print('➡️ Création de "My personal list 4" avec une autre couleur...');
+        await driver.tap(find.byValueKey('button_create_list'));
+        await driver.waitFor(find.byValueKey('perso_list_step1'));
+        await createListWithColor(driver, 'My personal list 4', 9,false); // 11ème couleur (index 10)
+        print("  - Ajout de quelques mots de vocabulaire");
+        await driver.tap(find.byValueKey('button_add_voc_1'));
+        await driver.tap(find.byValueKey('button_add_voc_2'));
+        await driver.tap(find.byValueKey('button_add_voc_4'));
+        print("  - Retour à l'écran d'accueil des listes");
+        await tapBackButton(driver);
+
+
+
         await driver.waitFor(find.byValueKey('home_logged'));
         await takeScreenshot(driver, getNameFile('homepersolist'));
 
@@ -223,7 +237,7 @@ void main() {
         print('➡️ Suppression des 3 listes créées...');
         final deleteButtonFinder = find.byValueKey('buttonDeletePerso1');
 
-        for (int i = 1; i <= 3; i++) {
+        for (int i = 1; i <= 4; i++) {
           print('  - Suppression de la liste $i/3...');
           // Cette logique suppose que le bouton de suppression de la première liste
           // visible a toujours la clé 'buttonDeletePerso1'.

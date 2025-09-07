@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Dodani linkovi do Politike privatnosti i Uslova korištenja (EULA) u navigaciji aplikacije",
+    "app_release_note": "Ispravka greške: lična lista više nije sačuvana nakon odjave",
     "share_list_perso_alert_disponible": "Funkcija dijeljenja liste bit će dostupna vrlo brzo!",
     "information": "Informacije",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Neograničena upotreba",
     "subscription_benefit_updates": "Uključena ažuriranja i podrška",
     "subscription_plan_badge_best_offer": "2 mjeseca besplatno",
-    "subscription_legal_note": "Naplata će biti izvršena s vašeg iTunes računa nakon potvrde kupovine. Pretplata se automatski obnavlja osim ako se ne isključi najmanje 24 sata prije kraja tekućeg perioda. Možete upravljati svojom pretplatom i isključiti automatsko obnavljanje u Postavkama računa. Besplatnim probnim periodom od 7 dana upravlja aplikacija (novi računi)."
+    "subscription_legal_note": "Naplata će biti izvršena s vašeg iTunes računa nakon potvrde kupovine. Pretplata se automatski obnavlja osim ako se ne isključi najmanje 24 sata prije kraja tekućeg perioda. Možete upravljati svojom pretplatom i isključiti automatsko obnavljanje u Postavkama računa. Besplatnim probnim periodom od 7 dana upravlja aplikacija (novi računi).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

@@ -9,7 +9,7 @@ class AppLocalizationsOr extends AppLocalizations {
   AppLocalizationsOr([String locale = 'or']) : super(locale);
 
   @override
-  String get app_release_note => 'ଆପ୍ ନାଭିଗେସନ୍‌ରେ ଗୋପନୀୟତା ନୀତି ଏବଂ ସେବାର ସର୍ତ୍ତାବଳୀ (EULA) ର ଲିଙ୍କ୍‌ଗୁଡ଼ିକ ଯୋଡାଯାଇଛି।';
+  String get app_release_note => 'ତ୍ରୁଟି ସମାଧାନ: ଲଗ୍ ଆଉଟ୍ କରିବା ପରେ ବ୍ୟକ୍ତିଗତ ତାଲିକା ଆଉ ରଖାଯାଇନଥିଲା';
 
   @override
   String get share_list_perso_alert_disponible => 'ତାଲିକା ସେୟାରିଂ ବୈଶିଷ୍ଟ୍ୟ ଖୁବ୍ ଶୀଘ୍ର ଉପଲବ୍ଧ ହେବ!';

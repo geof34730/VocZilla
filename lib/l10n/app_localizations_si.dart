@@ -9,7 +9,7 @@ class AppLocalizationsSi extends AppLocalizations {
   AppLocalizationsSi([String locale = 'si']) : super(locale);
 
   @override
-  String get app_release_note => 'යෙදුම් සංචාලනය තුළ රහස්‍යතා ප්‍රතිපත්තිය සහ භාවිත නියමයන් (EULA) වෙත සබැඳි එක් කරන ලදී';
+  String get app_release_note => 'දෝෂ නිරාකරණය: ලොග් අවුට් වූ පසු පුද්ගලික ලැයිස්තුව තවදුරටත් තබා නොගන්නා ලදී.';
 
   @override
   String get share_list_perso_alert_disponible => 'ලැයිස්තු බෙදාගැනීමේ විශේෂාංගය ඉතා ඉක්මනින් ලබා ගත හැකි වනු ඇත!';

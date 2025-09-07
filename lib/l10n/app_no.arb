@@ -1,5 +1,5 @@
 {
-    "app_release_note": "La til lenker til personvernregler og bruksvilkår (EULA) i appnavigasjonen",
+    "app_release_note": "Feilretting: Personlig liste ble ikke lenger lagret etter utlogging",
     "share_list_perso_alert_disponible": "Funksjonen for deling av lister vil være tilgjengelig veldig snart!",
     "information": "Informasjon",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Ubegrenset bruk",
     "subscription_benefit_updates": "Oppdateringer og støtte inkludert",
     "subscription_plan_badge_best_offer": "2 måneder gratis",
-    "subscription_legal_note": "Betalingen belastes iTunes-kontoen din når kjøpet bekreftes. Abonnementet fornyes automatisk med mindre det slås av minst 24 timer før slutten av inneværende periode. Du kan administrere abonnementet ditt og slå av automatisk fornyelse i kontoinnstillingene dine. Den 7-dagers gratis prøveperioden administreres av appen (nye kontoer)."
+    "subscription_legal_note": "Betalingen belastes iTunes-kontoen din når kjøpet bekreftes. Abonnementet fornyes automatisk med mindre det slås av minst 24 timer før slutten av inneværende periode. Du kan administrere abonnementet ditt og slå av automatisk fornyelse i kontoinnstillingene dine. Den 7-dagers gratis prøveperioden administreres av appen (nye kontoer).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }

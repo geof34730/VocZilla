@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get app_release_note => 'تمت إضافة روابط لسياسة الخصوصية وشروط الاستخدام (EULA) في التنقل بالتطبيق';
+  String get app_release_note => 'إصلاح الخطأ: لم تعد القائمة الشخصية محفوظة بعد تسجيل الخروج';
 
   @override
   String get share_list_perso_alert_disponible => 'ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!';

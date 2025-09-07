@@ -9,7 +9,7 @@ class AppLocalizationsMk extends AppLocalizations {
   AppLocalizationsMk([String locale = 'mk']) : super(locale);
 
   @override
-  String get app_release_note => 'Додадени се врски до Политиката за приватност и Условите за користење (EULA) во навигацијата на апликацијата';
+  String get app_release_note => 'Исправка на грешка: личниот список повеќе не се чуваше по одјавувањето';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцијата за споделување на листа ќе биде достапна многу наскоро!';

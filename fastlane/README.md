@@ -21,7 +21,7 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane all generate_metadata
 ```
 
-📸 Générer les métadonnées Android & iOS
+📸 Générer les métadonnées Android, iOS & macOS
 
 ### all screenshots_ios
 
@@ -39,13 +39,21 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 📷 Screenshots Android — build unique + config runtime + réglage résolution (+ reboot par bucket)
 
+### all screenshots_macos
+
+```sh
+[bundle exec] fastlane all screenshots_macos
+```
+
+📷 Screenshots macOS — build warmup + run desktop (taille fenêtre depuis ENV + normalisation 1280x800)
+
 ### all screenshots
 
 ```sh
 [bundle exec] fastlane all screenshots
 ```
 
-📷 Screenshots (iOS + Android) — orchestrateur
+📷 Screenshots (iOS + Android + macOS) — orchestrateur
 
 ### all cleanup_soft
 

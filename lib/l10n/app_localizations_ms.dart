@@ -9,7 +9,7 @@ class AppLocalizationsMs extends AppLocalizations {
   AppLocalizationsMs([String locale = 'ms']) : super(locale);
 
   @override
-  String get app_release_note => 'Menambahkan pautan ke Dasar Privasi dan Syarat Penggunaan (EULA) dalam navigasi apl';
+  String get app_release_note => 'Pembetulan pepijat: senarai peribadi tidak lagi disimpan selepas log keluar';
 
   @override
   String get share_list_perso_alert_disponible => 'Ciri perkongsian senarai akan tersedia tidak lama lagi!';

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Adăugate linkuri către Politica de confidențialitate și Termenii și condițiile de utilizare (EULA) în navigarea aplicației",
+    "app_release_note": "Corecție eroare: lista personală nu mai era păstrată după deconectare",
     "share_list_perso_alert_disponible": "Funcția de partajare a listei va fi disponibilă foarte curând!",
     "information": "Informaţii",
     "app_title": "VocZilla",
@@ -213,5 +213,11 @@
     "subscription_benefit_unlimited": "Utilizare nelimitată",
     "subscription_benefit_updates": "Actualizări și asistență incluse",
     "subscription_plan_badge_best_offer": "2 luni gratuite",
-    "subscription_legal_note": "Plata va fi debitată din contul dvs. iTunes la confirmarea achiziției. Abonamentul se reînnoiește automat, cu excepția cazului în care este dezactivat cu cel puțin 24 de ore înainte de sfârșitul perioadei curente. Puteți gestiona abonamentul și dezactiva reînnoirea automată din Setările contului. Perioada de încercare gratuită de 7 zile este gestionată de aplicație (conturi noi)."
+    "subscription_legal_note": "Plata va fi debitată din contul dvs. iTunes la confirmarea achiziției. Abonamentul se reînnoiește automat, cu excepția cazului în care este dezactivat cu cel puțin 24 de ore înainte de sfârșitul perioadei curente. Puteți gestiona abonamentul și dezactiva reînnoirea automată din Setările contului. Perioada de încercare gratuită de 7 zile este gestionată de aplicație (conturi noi).",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-07T06:48:05+00:00"
+    }
 }
