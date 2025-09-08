@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:vobzilla/data/repository/user_repository.dart';
+import 'package:voczilla/data/repository/user_repository.dart';
 import '../../core/utils/logger.dart';
 import '../../logic/blocs/purchase/purchase_bloc.dart';
 

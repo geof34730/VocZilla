@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/data/models/vocabulary_user.dart';
-import 'package:vobzilla/data/services/vocabulaires_service.dart';
+import 'package:voczilla/data/models/vocabulary_user.dart';
+import 'package:voczilla/data/services/vocabulaires_service.dart';
 import '../../core/utils/logger.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';

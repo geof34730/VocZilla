@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vobzilla/core/utils/ui.dart';
+import 'package:voczilla/core/utils/ui.dart';
 
 import '../../core/utils/logger.dart';
 import '../../global.dart';

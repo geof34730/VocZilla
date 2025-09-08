@@ -1,10 +1,10 @@
 // lib/logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/data/models/vocabulary_user.dart';
-import 'package:vobzilla/data/repository/vocabulaire_user_repository.dart';
-import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
-import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_state.dart' hide VocabulaireUserUpdate;
+import 'package:voczilla/data/models/vocabulary_user.dart';
+import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
+import 'package:voczilla/logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
+import 'package:voczilla/logic/blocs/vocabulaire_user/vocabulaire_user_state.dart' hide VocabulaireUserUpdate;
 import '../../../core/utils/logger.dart';
 
 class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserState> {

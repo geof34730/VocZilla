@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:vobzilla/ui/screens/offline_screen.dart';
+import 'package:voczilla/ui/screens/offline_screen.dart';
 import 'dart:async'; // Ajoute ceci pour StreamSubscription
 
 class ConnectivityAwareWidget extends StatefulWidget {

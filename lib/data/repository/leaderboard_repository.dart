@@ -1,8 +1,8 @@
 // lib/data/repository/leaderboard_repository.dart
-import 'package:vobzilla/data/models/leaderboard_data.dart';
-import 'package:vobzilla/data/models/leaderboard_user.dart';
-import 'package:vobzilla/data/repository/vocabulaire_user_repository.dart';
-import 'package:vobzilla/data/services/leaderboard_service.dart';
+import 'package:voczilla/data/models/leaderboard_data.dart';
+import 'package:voczilla/data/models/leaderboard_user.dart';
+import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
+import 'package:voczilla/data/services/leaderboard_service.dart';
 
 class LeaderboardRepository {
   final LeaderboardService _leaderboardService;

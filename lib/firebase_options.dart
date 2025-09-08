@@ -77,7 +77,7 @@ class DefaultFirebaseOptions {
     storageBucket: 'voczilla-d2d79.firebasestorage.app',
     androidClientId: '275313479574-n7og0bhk14ib7j43gipmkpe6r9bvuj4p.apps.googleusercontent.com',
     iosClientId: '275313479574-lsdoe1bc971qptt77hdgtudperq53m8i.apps.googleusercontent.com',
-    iosBundleId: 'com.geoffreypetain.voczilla.vobzilla',
+    iosBundleId: 'com.geoffreypetain.voczilla.voczilla',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(

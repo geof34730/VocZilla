@@ -1,9 +1,9 @@
 // lib/data/repository/data_user_repository.dart
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:vobzilla/data/models/user_firestore.dart';
-import 'package:vobzilla/data/services/data_user_service.dart';
-import 'package:vobzilla/data/services/localstorage_service.dart';
+import 'package:voczilla/data/models/user_firestore.dart';
+import 'package:voczilla/data/services/data_user_service.dart';
+import 'package:voczilla/data/services/localstorage_service.dart';
 
 import '../../core/utils/logger.dart';
 

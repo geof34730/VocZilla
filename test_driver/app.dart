@@ -5,8 +5,8 @@ import 'dart:io'; // <-- pour Platform.environment
 
 import 'package:flutter/material.dart';
 import 'package:flutter_driver/driver_extension.dart';
-import 'package:vobzilla/app_route.dart';
-import 'package:vobzilla/main.dart' as app;
+import 'package:voczilla/app_route.dart';
+import 'package:voczilla/main.dart' as app;
 // import '../lib/core/utils/navigatorKey.dart' show navigatorKey; // si besoin
 
 /// Configuration transmise par le test au runtime

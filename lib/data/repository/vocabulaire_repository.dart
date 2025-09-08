@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/data/models/vocabulary_user.dart';
-import 'package:vobzilla/data/repository/vocabulaire_user_repository.dart';
+import 'package:voczilla/data/models/vocabulary_user.dart';
+import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
 
 import '../../core/utils/logger.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';

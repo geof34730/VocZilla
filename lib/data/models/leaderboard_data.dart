@@ -1,7 +1,7 @@
 // lib/data/models/leaderboard_data.dart
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vobzilla/data/models/leaderboard_user.dart'; // Gardez cet import
+import 'package:voczilla/data/models/leaderboard_user.dart'; // Gardez cet import
 
 // Lignes requises par le générateur de code
 part 'leaderboard_data.freezed.dart';

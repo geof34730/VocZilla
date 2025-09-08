@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/core/utils/localization.dart';
+import 'package:voczilla/core/utils/localization.dart';
 
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../core/utils/languageUtils.dart';

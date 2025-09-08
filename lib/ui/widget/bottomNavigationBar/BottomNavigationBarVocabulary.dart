@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/data/repository/vocabulaire_repository.dart';
-import 'package:vobzilla/ui/theme/appColors.dart';
+import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/data/repository/vocabulaire_repository.dart';
+import 'package:voczilla/ui/theme/appColors.dart';
 
 import '../../../core/utils/logger.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';

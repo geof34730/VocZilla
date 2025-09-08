@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:vobzilla/core/utils/localization.dart';
+import 'package:voczilla/core/utils/localization.dart';
 
 getTypeDetaiVocabulaire({required String typeDetail, required BuildContext context}){
 

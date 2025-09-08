@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/logic/cubit/localization_cubit.dart';
+import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/logic/cubit/localization_cubit.dart';
 
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../core/utils/logger.dart';

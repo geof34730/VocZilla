@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
-import 'package:vobzilla/core/utils/localization.dart';
+import 'package:voczilla/core/utils/localization.dart';
 import '../../global.dart';
 import '../../logic/blocs/purchase/purchase_bloc.dart';
 import '../../logic/blocs/purchase/purchase_event.dart';

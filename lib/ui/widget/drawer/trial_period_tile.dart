@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vobzilla/core/utils/localization.dart';
+import 'package:voczilla/core/utils/localization.dart';
 
 class TrialPeriodTile extends StatefulWidget {
   final double progress; // Entre 0.0 et 1.0

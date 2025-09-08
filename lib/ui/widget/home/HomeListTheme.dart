@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vobzilla/core/utils/localization.dart';
+import 'package:voczilla/core/utils/localization.dart';
 
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';

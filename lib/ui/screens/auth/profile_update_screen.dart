@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vobzilla/core/utils/localization.dart';
+import 'package:voczilla/core/utils/localization.dart';
 
 import '../../../core/utils/getFontForLanguage.dart';
 import '../../widget/form/FormProfilUpdate.dart';

@@ -1,6 +1,6 @@
 // lib/logic/blocs/leaderboard/leaderboard_state.dart
 import 'package:equatable/equatable.dart';
-import 'package:vobzilla/data/models/leaderboard_data.dart'; // Assurez-vous que le chemin est correct
+import 'package:voczilla/data/models/leaderboard_data.dart'; // Assurez-vous que le chemin est correct
 
 // Classe de base abstraite pour tous les états.
 abstract class LeaderboardState extends Equatable {

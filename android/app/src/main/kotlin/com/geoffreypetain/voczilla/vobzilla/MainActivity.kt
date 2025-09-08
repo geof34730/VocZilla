@@ -1,4 +1,4 @@
-package com.geoffreypetain.voczilla.vobzilla
+package com.geoffreypetain.voczilla.voczilla
 
 import io.flutter.embedding.android.FlutterActivity
 

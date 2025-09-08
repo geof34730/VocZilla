@@ -2,7 +2,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:vobzilla/core/utils/localization.dart';
+import 'package:voczilla/core/utils/localization.dart';
 
 Widget CongratulationOrErrorData({required int vocabulaireConnu,required BuildContext context}){
 

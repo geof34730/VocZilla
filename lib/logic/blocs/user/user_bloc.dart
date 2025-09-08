@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vobzilla/data/repository/user_repository.dart';
+import 'package:voczilla/data/repository/user_repository.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/services/vocabulaires_service.dart';
 import 'user_event.dart';

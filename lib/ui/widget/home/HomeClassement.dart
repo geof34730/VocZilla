@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:vobzilla/core/utils/device.dart';
-import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/data/models/leaderboard_data.dart';
-import 'package:vobzilla/global.dart';
-import 'package:vobzilla/main.dart'; // NOUVEAU: Importer main.dart pour routeObserver
-import 'package:vobzilla/ui/widget/elements/Loading.dart';
+import 'package:voczilla/core/utils/device.dart';
+import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/data/models/leaderboard_data.dart';
+import 'package:voczilla/global.dart';
+import 'package:voczilla/main.dart'; // NOUVEAU: Importer main.dart pour routeObserver
+import 'package:voczilla/ui/widget/elements/Loading.dart';
 
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/logger.dart';

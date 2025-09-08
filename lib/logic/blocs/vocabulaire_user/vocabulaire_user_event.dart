@@ -1,5 +1,5 @@
-import 'package:vobzilla/core/utils/logger.dart';
-import 'package:vobzilla/data/models/vocabulary_user.dart';
+import 'package:voczilla/core/utils/logger.dart';
+import 'package:voczilla/data/models/vocabulary_user.dart';
 
 import '../../../data/models/vocabulary_bloc_local.dart';
 

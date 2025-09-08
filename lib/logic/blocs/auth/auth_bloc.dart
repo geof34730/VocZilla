@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/data/repository/auth_repository.dart';
+import 'package:voczilla/data/repository/auth_repository.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/models/user_firestore.dart';
 import '../../../data/models/vocabulary_user.dart';

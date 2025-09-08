@@ -4,8 +4,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
+import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../data/repository/vocabulaire_repository.dart';

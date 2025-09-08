@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
-import 'package:vobzilla/ui/widget/appBar/TitleSite.dart';
+import 'package:voczilla/ui/widget/appBar/TitleSite.dart';
 
 import '../../../core/utils/string.dart';
 import '../../../logic/blocs/auth/auth_bloc.dart';

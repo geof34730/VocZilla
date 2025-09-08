@@ -1,4 +1,4 @@
-import 'package:vobzilla/logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import 'package:voczilla/logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 
 import '../../../data/models/vocabulary_user.dart';
 

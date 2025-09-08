@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
-import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/data/models/leaderboard_user.dart';
+import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/data/models/leaderboard_user.dart';
 
 import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';

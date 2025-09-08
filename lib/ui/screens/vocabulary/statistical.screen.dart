@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/logic/cubit/localization_cubit.dart';
+import 'package:voczilla/logic/cubit/localization_cubit.dart';
 
 
 class StatisticalScreen extends StatelessWidget {

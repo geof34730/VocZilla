@@ -1,7 +1,7 @@
 // lib/logic/blocs/leaderboard/leaderboard_bloc.dart
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vobzilla/data/models/leaderboard_data.dart';
+import 'package:voczilla/data/models/leaderboard_data.dart';
 import '../../../data/repository/leaderboard_repository.dart';
 import 'leaderboard_event.dart';
 import 'leaderboard_state.dart';

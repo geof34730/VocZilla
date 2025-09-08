@@ -1,4 +1,4 @@
-import 'package:vobzilla/data/repository/vocabulaire_repository.dart';
+import 'package:voczilla/data/repository/vocabulaire_repository.dart';
 import '../../core/utils/logger.dart';
 import '../models/statistical_length.dart';
 import '../models/vocabulary_user.dart';

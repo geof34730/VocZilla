@@ -4,10 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uuid/uuid.dart';
-import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/data/models/vocabulary_user.dart';
-import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_bloc.dart';
-import 'package:vobzilla/logic/blocs/vocabulaires/vocabulaires_event.dart';
+import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/data/models/vocabulary_user.dart';
+import 'package:voczilla/logic/blocs/vocabulaires/vocabulaires_bloc.dart';
+import 'package:voczilla/logic/blocs/vocabulaires/vocabulaires_event.dart';
 
 import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';

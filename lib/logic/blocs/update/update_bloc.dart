@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:in_app_update/in_app_update.dart';
-import 'package:vobzilla/logic/blocs/update/update_event.dart';
-import 'package:vobzilla/logic/blocs/update/update_state.dart';
+import 'package:voczilla/logic/blocs/update/update_event.dart';
+import 'package:voczilla/logic/blocs/update/update_state.dart';
 
 class UpdateBloc extends Bloc<UpdateEvent, UpdateState> {
   UpdateBloc() : super(UpdateInitial()) {

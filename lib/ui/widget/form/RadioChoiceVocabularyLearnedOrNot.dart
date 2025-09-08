@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vobzilla/core/utils/localization.dart';
-import 'package:vobzilla/ui/theme/appColors.dart';
+import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/ui/theme/appColors.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_event.dart';
