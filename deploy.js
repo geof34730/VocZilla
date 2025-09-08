@@ -176,6 +176,8 @@ function run(cmd, opts = {}) {
         try {
             const commandIOS = `
         fastlane deliver \
+          --app_version "${versionName}" \
+          --username "geoffrey.petain@gmail.com" \
           --ipa build/ios/ipa/voczilla.ipa \
           --force \
           --screenshots_path fastlane/metadata/ios \
@@ -351,6 +353,8 @@ function run(cmd, opts = {}) {
         try {
             const commandMacos = `
   fastlane deliver \
+    --app_version "${versionName}" \
+    --username "geoffrey.petain@gmail.com" \
     --pkg "${pkgPath}" \
     --force \
     --screenshots_path fastlane/metadata/macos \
