@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -37,20 +38,28 @@ class NavigationDrawer extends StatelessWidget {
       elevation: 5,
       child: Container(
         color: Colors.white,
-        child: ListView(
-          padding: EdgeInsets.zero,
+        child: Column(
           children: [
             // ===== HEADER =====
             _buildDrawerHeader(context),
 
             // === PÉRIODE D'ESSAI (ANIMÉE) ===
-            _buildTrialPeriodTile(),
 
-            // ===== MENU ITEMS =====
-            _buildMenuItems(context),
+/*
+            // ===== TOP MENU ITEMS =====
+            _buildMenuItems1(context),
+
+            const Spacer(), // Pousse les widgets suivants vers le bas
+            const Divider(),*/
+            _buildTrialPeriodTile(),
+            _buildMenuItems2(context),
+
+            const _VersionInfoWidget(),
           ],
         ),
+
       ),
+
     );
   }
 }
@@ -153,9 +162,6 @@ Widget _buildDrawerHeader(BuildContext context) {
   );
 }
 
-
-
-
 Widget _buildLanguageDropdown(BuildContext context) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -188,8 +194,6 @@ Widget _buildLanguageDropdown(BuildContext context) {
   );
 }
 
-
-/// Builds the trial period tile if the user is in their trial period.
 Widget _buildTrialPeriodTile() {
   return BlocBuilder<UserBloc, UserState>( // Ce builder va maintenant recevoir correctement le contexte et les mises à jour
     builder: (context, userState) {
@@ -217,14 +221,49 @@ Widget _buildTrialPeriodTile() {
 }
 
 
-Widget _buildMenuItems(BuildContext context) {
+Widget _buildMenuItems1(BuildContext context) {
+  return Column(
+    children: [
+      VocZillaTile(
+        keyParam: ValueKey('my_personnal_list'),
+        icon: Icons.list_alt_outlined,
+        label: "Mes listes personnelles",
+        color: Colors.blue,
+        onTap: () {
+
+        },
+      ),
+      VocZillaTile(
+        keyParam: ValueKey('defined_list'),
+        icon: Icons.list_alt_outlined,
+        label: "Nos listes prédéfinies",
+        color: Colors.green,
+        onTap: () {
+
+        },
+      ),
+      VocZillaTile(
+        keyParam: ValueKey('themmes_list'),
+        icon: Icons.list_alt_outlined,
+        label: "Nos listes des thèmes",
+        color: Colors.green,
+        onTap: () {
+
+        },
+      ),
+
+    ],
+  );
+}
+
+Widget _buildMenuItems2(BuildContext context) {
   return Column(
     children: [
       VocZillaTile(
         keyParam: ValueKey('link_update_profile'),
         icon: Icons.person,
         label: context.loc.drawer_my_profil,
-        color: Colors.green,
+        color: Colors.purple,
         onTap: () {
           Navigator.of(context).pop();
           Navigator.pushNamed(context, AppRoute.updateProfile);
@@ -240,36 +279,33 @@ Widget _buildMenuItems(BuildContext context) {
           Navigator.pushNamed(context, AppRoute.subscription);
         },
       ),
-      if(Platform.isIOS)
-      VocZillaTile(
-        keyParam: ValueKey('link_mention1'),
-        icon: Icons.info,
-        label: context.loc.politique_de_confidentialite,
-        color: Colors.purple,
-        onTap: () async {
-          await openUrl("https://flutter-now.com/voczilla-politique-de-confidentialite/");
-        },
-      ),
-      if(Platform.isIOS)
-      VocZillaTile(
-        keyParam: ValueKey('link_mention2'),
-        icon: Icons.info,
-        label: "${context.loc.conditions_dutilisation} (EULA)",
-        color: Colors.purple,
-        onTap: () async {
-          await openUrl("https://www.apple.com/legal/internet-services/itunes/dev/stdeula/");
-        },
-      ),
 
+
+      if(Platform.isIOS || Platform.isMacOS )
+        VocZillaTile(
+          keyParam: ValueKey('link_mention1'),
+          icon: Icons.info,
+          label: context.loc.politique_de_confidentialite,
+          color: Colors.purple,
+          onTap: () async {
+            await openUrl("https://flutter-now.com/voczilla-politique-de-confidentialite/");
+          },
+        ),
+      if(Platform.isIOS || Platform.isMacOS)
+        VocZillaTile(
+          keyParam: ValueKey('link_mention2'),
+          icon: Icons.info,
+          label: "${context.loc.conditions_dutilisation} (EULA)",
+          color: Colors.purple,
+          onTap: () async {
+            await openUrl("https://www.apple.com/legal/internet-services/itunes/dev/stdeula/");
+          },
+        ),
 
 
       BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
-          // Une fois que l'état est mis à jour comme non authentifié, redirigez vers l'écran de connexion.
           if (state is AuthUnauthenticated) {
-            // Nous utilisons pushNamedAndRemoveUntil pour vider la pile de navigation,
-            // empêchant l'utilisateur de revenir à une page nécessitant une authentification.
-            // Assurez-vous que AppRoute.login pointe vers votre écran d'accueil/connexion.
             Navigator.of(context).pushNamedAndRemoveUntil(AppRoute.home, (route) => false);
           }
         },
@@ -292,6 +328,7 @@ Widget _buildMenuItems(BuildContext context) {
 void closeDrawer(BuildContext context) {
   Navigator.of(context).pop();
 }
+
 Future<void> openUrl(String url) async {
   final uri = Uri.parse(url);
   // Ouvre dans une vue web intégrée (iOS: SFSafariViewController)
@@ -307,10 +344,59 @@ Future<void> openUrl(String url) async {
     }
   }
 }
-/// Helper function to provide a valid name for the Avatar widget.
 
-// L'ancienne fonction est conservée pour la compatibilité mais marquée comme obsolète.
-// Il est recommandé d'utiliser directement le widget NavigationDrawer.
+/// Widget to display the application version from a JSON file.
+///
+/// This is a StatefulWidget to ensure the version is fetched only once and to
+/// handle the asynchronous loading of the version information gracefully.
+class _VersionInfoWidget extends StatefulWidget {
+  const _VersionInfoWidget();
+
+  @override
+  State<_VersionInfoWidget> createState() => _VersionInfoWidgetState();
+}
+
+class _VersionInfoWidgetState extends State<_VersionInfoWidget> {
+  late final Future<String> _versionFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    _versionFuture = _getVersion();
+  }
+
+  Future<String> _getVersion() async {
+    try {
+      final jsonString = await rootBundle.loadString('deploy-info.json');
+      final data = json.decode(jsonString);
+      return data['lastVersionName'] as String? ?? 'N/A';
+    } catch (e) {
+      Logger.Red.log('Failed to load version info: $e');
+      return ''; // Return empty on error to hide the widget
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<String>(
+      future: _versionFuture,
+      builder: (context, snapshot) {
+        if (snapshot.hasData && snapshot.data!.isNotEmpty) {
+          return Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Version ${snapshot.data}',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.grey[600], fontSize: 12),
+            ),
+          );
+        }
+        return const SizedBox.shrink();
+      },
+    );
+  }
+}
+
 @Deprecated('Use NavigationDrawer widget instead for better state management. Will be removed in a future version.')
 Drawer DrawerNavigation({
   required BuildContext context,

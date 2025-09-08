@@ -196,7 +196,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen>
               },
             ),
             const SizedBox(height: 16),
-            if (Platform.isIOS)
+            if (Platform.isIOS || Platform.isMacOS)
               Center(
                 child: _isRestoring
                     ? const CircularProgressIndicator()
@@ -225,7 +225,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen>
                 ),
               ),
             const SizedBox(height: 8),
-            if (Platform.isIOS) const _LegalNote(),
+            if (Platform.isIOS || Platform.isMacOS) const _LegalNote(),
           ],
         ),
       ),
