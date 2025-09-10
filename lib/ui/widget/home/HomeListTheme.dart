@@ -34,6 +34,7 @@ class HomelistThemes extends StatelessWidget {
                       children: data.listTheme.map((listTheme) {
                         return CardHome(
                           keyStringTest: listTheme.guid,
+                          listName: listTheme.guid,
                           isListTheme: true,
                           nbVocabulaire:listTheme.listGuidVocabulary.length,
                           guid: listTheme.guid,

@@ -19,32 +19,30 @@ class VocZillaTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+    final cs = Theme.of(context).colorScheme;
+    return Card(
+      color: color.withOpacity(0.30),
+      elevation: 0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: InkWell(
-        key:keyParam,
+        borderRadius: BorderRadius.circular(16),
         onTap: onTap,
-        borderRadius: BorderRadius.circular(14),
-        child: Container(
-          decoration: BoxDecoration(
-            color: color.withOpacity(0.15),
-            borderRadius: BorderRadius.circular(14),
-          ),
-          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
           child: Row(
             children: [
-              Icon(icon, color: color),
-              SizedBox(width: 16),
+              Icon(icon),
+              const SizedBox(width: 12),
               Expanded(
                 child: Text(
                   label,
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge
+                      ?.copyWith(fontWeight: FontWeight.w600),
                 ),
               ),
+              const Icon(Icons.chevron_right_rounded),
             ],
           ),
         ),

@@ -19,7 +19,9 @@ import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/statistical/global_statisctical_widget.dart'; // Importez ici
 
 class QuizzScreen extends StatefulWidget {
-  QuizzScreen();
+  final String listName;
+  const QuizzScreen({super.key, required this.listName});
+
   @override
   _QuizzScreenState createState() => _QuizzScreenState();
 }
@@ -82,7 +84,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     guidList: state.data.guid,
                     isListPerso : state.data.isListPerso,
                     isListTheme : state.data.isListTheme,
-                    local: LanguageUtils.getSmallCodeLanguage(context: context)
+                    local: LanguageUtils.getSmallCodeLanguage(context: context),
+                    listName:null
                   )
                 :
                   GlobalStatisticalWidget(
@@ -90,9 +93,10 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     vocabulaireEnd: state.data.vocabulaireEnd,
                     isListPerso : false,
                     isListTheme : false,
-                    local:LanguageUtils.getSmallCodeLanguage(context: context)
+                    local:LanguageUtils.getSmallCodeLanguage(context: context),
+                    listName: widget.listName,
                   ),
-
+                Text(widget.listName),
                 Text(context.loc.quizz_progression_title,
                     style: TextStyle(
                         fontSize: 12,

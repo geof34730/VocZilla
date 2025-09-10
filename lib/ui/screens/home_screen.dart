@@ -20,6 +20,7 @@ import '../../logic/blocs/user/user_event.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 
+import '../widget/home/CarHomeListDefinied.dart';
 import '../widget/home/TitleWidget.dart';
 import '../widget/home/CardClassementGamer.dart';
 import '../widget/home/HomeListPerso.dart';
@@ -42,50 +43,12 @@ class HomeScreen extends StatelessWidget {
               isListPerso : false,
               isListTheme : false,
               local: codelang,
+              listName: null,
             ),
-
-
-
             HomelistPerso(),
             titleWidget(text: context.loc.home_title_list_defined,codelang: codelang),
             HorizontalScrollViewCardHome(
-                children: [
-                CardHome(
-                  title: "TOP 20",
-                  keyStringTest: "top20",
-                  vocabulaireBegin: 0,
-                  vocabulaireEnd: 20,
-                  paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                ),
-                CardHome(
-                  title: "TOP 20 / 50",
-                  keyStringTest: "top2050",
-                  vocabulaireBegin: 20,
-                  vocabulaireEnd: 50,
-                  paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                ),
-                CardHome(
-                  title: "TOP 50 / 100",
-                  keyStringTest: "top50100",
-                  vocabulaireBegin: 50,
-                  vocabulaireEnd: 100,
-                  paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                  ),
-                CardHome(
-                  title: "TOP 100 / 200",
-                  keyStringTest: "top100200",
-                  vocabulaireBegin: 100,
-                  vocabulaireEnd: 200,
-                  paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                ),
-                  CardHome(
-                    title: "TOP 200 / 500",
-                    keyStringTest: "top100200",
-                    vocabulaireBegin: 200,
-                    vocabulaireEnd: 500,
-                    paddingLevelBar: EdgeInsets.only(bottom: 10,top:5),
-                  ),
-              ]
+                children: getListDefined(view:"home")
             ),
             titleWidget(text: context.loc.by_themes,codelang: codelang),
             HomelistThemes(),

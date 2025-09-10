@@ -1,5 +1,9 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/data/repository/vocabulaire_repository.dart';
 import '../../core/utils/logger.dart';
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../models/statistical_length.dart';
 import '../models/vocabulary_user.dart';
 import '../services/localstorage_service.dart';
@@ -76,11 +80,10 @@ class VocabulaireUserRepository {
 
   Future<VocabulaireUser> getEmptyVocabulaireUserData({required String local}) async {
     Logger.Pink.log('VocabulaireUserRepository:  getEmptyVocabulaireUserData');
-    final vocabulairesAll = await VocabulaireService().getAllData(local:local);
     final List<ListTheme> userTheme = await VocabulaireService().getThemesData();
     Logger.Yellow.log("LIST PERSO VIDE");
     VocabulaireUser dataEmpty = VocabulaireUser(
-      countVocabulaireAll: vocabulairesAll.length,
+      countVocabulaireAll: await getCountVocabulaireAll(local:local),
       listPerso: [],
       listTheme: userTheme,
       listGuidVocabularyLearned: [],
@@ -197,16 +200,7 @@ class VocabulaireUserRepository {
   }
 
 
-  Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({
-    String? guidList,
-    int? vocabulaireBegin,
-    int? vocabulaireEnd,
-    ListPerso? listPerso,
-    required bool isListPerso,
-    required bool isListTheme,
-    required String local
-
-  }) async {
+  Future<StatisticalLength> getVocabulaireUserDataStatisticalLengthData({String? guidList,int? vocabulaireBegin,int? vocabulaireEnd,ListPerso? listPerso,required bool isListPerso,required bool isListTheme, required String local}) async {
     try {
       var data = [];
       late List<dynamic> dataSlice;
@@ -257,7 +251,6 @@ class VocabulaireUserRepository {
     // Return an empty list if no data is found
     return [];
   }
-
 
   Future<List<dynamic>> getVocabulaireListThemeByGuidList({required String guidList, required String local}) async {
     VocabulaireUser? userData = await getVocabulaireUserData(local: local);
@@ -451,9 +444,89 @@ class VocabulaireUserRepository {
     );
   }
 
+  Future<VocabulaireUser?> addCompletedDefinedList({required String listName, required String local}) async {
+    Logger.Green.log('Tentative d\'ajout de la liste terminée : $listName');
+    try {
+      var userData = await getVocabulaireUserData(local: local);
+      if (userData != null) {
+
+        if (!userData.ListDefinedEnd.contains(listName)) {
+          final updatedUserData = userData.copyWith(
+            ListDefinedEnd: List.from(userData.ListDefinedEnd)..add(listName),
+          );
+          await updateVocabulaireUserData(userData: updatedUserData);
+          Logger.Green.log('Liste terminée ajoutée: $listName');
+          return updatedUserData;
+        } else {
+          Logger.Magenta.log('Cette liste terminée existe déjà.');
+          return userData; // Retourne les données non modifiées
+        }
+      } else {
+        Logger.Red.log('Erreur: Données utilisateur null, impossible d\'ajouter la liste.');
+      }
+    } catch (e) {
+      Logger.Red.log('Erreur lors de l\'ajout de la liste terminée : $e');
+    }
+    return null; // Retourne null en cas d'erreur ou si les données sont null
+  }
+
+  Future<VocabulaireUser?> removeCompletedDefinedList({required String listName, required String local}) async {
+    Logger.Green.log('Tentative de suppression de la liste terminée : $listName');
+    try {
+      var userData = await getVocabulaireUserData(local: local);
+      if (userData != null) {
+        if (userData.ListDefinedEnd.contains(listName)) {
+          final updatedUserData = userData.copyWith(
+            ListDefinedEnd: List.from(userData.ListDefinedEnd)..remove(listName),
+          );
+          await updateVocabulaireUserData(userData: updatedUserData);
+          Logger.Green.log('Liste terminée supprimée: $listName');
+          return updatedUserData;
+        }
+        return userData; // Retourne les données non modifiées si la liste n'a pas été trouvée
+      }
+    } catch (e) {
+      Logger.Red.log('Erreur lors de la suppression de la liste terminée : $e');
+    }
+    return null; // Retourne null en cas d'erreur ou si les données sont null
+  }
+
+  Future<bool> isListEnd({required String listName}) async {
+    final userDataJson = await localStorageService.getUserData();
+    if(userDataJson?['ListDefinedEnd'] != null){
+      return userDataJson?['ListDefinedEnd'].contains(listName);
+    }
+    else{
+      return false;
+    }
+  }
 
 
+  late final VocabulaireUserBloc _bloc;
 
+  // Setter method to inject the bloc
+  void setBloc(VocabulaireUserBloc bloc) {
+    _bloc = bloc;
+  }
+
+  Future<void> checkAndUpdateStatutEndList({required String listName, required double percentage, required BuildContext context}) async {
+    // print('checkStatutEnDefined listName: $listName');
+    bool isInListEnd = await isListEnd(listName: listName);
+    final bloc = BlocProvider.of<VocabulaireUserBloc>(context);
+
+    if (percentage == 1.0) {
+      ////CHECK PRESENCE LIST END
+      if (!isInListEnd) {
+        print("add $listName");
+        // addCompletedDefinedList(listName: listName,local:"fr");
+        bloc.add(AddCompletedDefinedList(listName: listName, local: "fr"));
+      }
+    } else {
+      if (isInListEnd) {
+        print("remove $listName");
+        // removeCompletedDefinedList(listName: listName,local:"fr");
+        bloc.add(RemoveCompletedDefinedList(listName: listName, local: "fr"));
+      }
+    }
+  }
 }
-
-

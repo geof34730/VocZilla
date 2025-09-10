@@ -14,6 +14,7 @@ import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 
 class ListScreen extends StatefulWidget {
+  ListScreen({required String listName});
   @override
   _ListScreenState createState() => _ListScreenState();
 }

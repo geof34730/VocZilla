@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
 
+import '../../../core/utils/logger.dart';
 import '../../../data/models/statistical_length.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../elements/Error.dart';
 
@@ -17,6 +19,7 @@ class GlobalStatisticalWidget extends StatefulWidget {
   final bool isListPerso;
   final bool isListTheme;
   final String local;
+  final String? listName;
 
   const GlobalStatisticalWidget({
     super.key,
@@ -26,6 +29,7 @@ class GlobalStatisticalWidget extends StatefulWidget {
     required this.isListPerso,
     required this.isListTheme,
     required this.local,
+    required this.listName
   });
 
   @override
@@ -68,7 +72,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
   }
 
   void _fetchStatisticalData({required String local}) {
-    _statisticalFuture =
+    final future =
         VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
           vocabulaireBegin: widget.vocabulaireBegin,
           vocabulaireEnd: widget.vocabulaireEnd,
@@ -77,6 +81,33 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
           isListTheme: widget.isListTheme,
           local: local
         );
+
+    // Attache une action à exécuter une fois que le Future est terminé.
+    // C'est ici que nous allons gérer la logique du trophée, en dehors du 'build'.
+    future.then((statisticalData) {
+      if (!mounted || widget.listName == null) return;
+
+      double percentageProgression = 0.0;
+      if (statisticalData.countVocabulaireAll > 0) {
+        percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
+      }
+
+      final bloc = context.read<VocabulaireUserBloc>();
+      if (bloc.state is VocabulaireUserLoaded) {
+        final currentState = bloc.state as VocabulaireUserLoaded;
+        final bool isAlreadyCompleted = currentState.data.ListDefinedEnd.contains(widget.listName);
+
+        // Envoyer l'événement SEULEMENT si l'état doit changer.
+        if (percentageProgression == 1.0 && !isAlreadyCompleted) {
+          bloc.add(AddCompletedDefinedList(listName: widget.listName!, local: widget.local));
+        } else if (percentageProgression < 1.0 && isAlreadyCompleted) {
+          bloc.add(RemoveCompletedDefinedList(listName: widget.listName!, local: widget.local));
+        }
+      }
+    });
+
+    // Met à jour le Future pour que le FutureBuilder se reconstruise.
+    _statisticalFuture = future;
   }
 
   @override
@@ -261,6 +292,11 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     );
   }
 
+
+
+
+
+
   double _getPositionLeftCursor({
     required double percentage,
     required double width, // largeur réelle (après padding)
@@ -275,8 +311,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     isRtl ? width * (1 - percentage) : width * percentage;
 
     // Le logo apparaît visuellement en premier selon le sens + seuil 0.2
-    final bool isLogoVisuallyFirst =
-        (isRtl && percentage > 0.2) || (!isRtl && percentage <= 0.2);
+    final bool isLogoVisuallyFirst = (isRtl && percentage > 0.2) || (!isRtl && percentage <= 0.2);
 
     // Décalage du centre du logo dans la Row (depuis son bord "start")
     final double logoCenterOffsetInRow =

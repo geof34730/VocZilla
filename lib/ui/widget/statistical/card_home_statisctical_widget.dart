@@ -19,6 +19,9 @@ class CardHomeStatisticalWidget extends StatefulWidget {
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
   final String local;
+  final String listName;
+
+
 
   const CardHomeStatisticalWidget({
     super.key,
@@ -31,7 +34,8 @@ class CardHomeStatisticalWidget extends StatefulWidget {
     required this.isListTheme,
     this.vocabulaireBegin,
     this.vocabulaireEnd,
-    required this.local
+    required this.local,
+    required this.listName
   });
 
   @override
@@ -42,6 +46,10 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
   Future<StatisticalLength>? _statisticalFuture;
   StatisticalLength? _lastStatisticalData;
 
+
+
+
+
   @override
   void initState() {
     super.initState();
@@ -49,6 +57,7 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
     if (context.read<VocabulaireUserBloc>().state is VocabulaireUserLoaded) {
       _fetchStatisticalData();
     }
+
   }
 
   @override
@@ -142,7 +151,7 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
   Widget _buildIndicator({required double percentage}) {
     final clampedPercentage = percentage.clamp(0.0, 1.0);
     final bool isRtl = Directionality.of(context) == TextDirection.rtl;
-
+    VocabulaireUserRepository().checkAndUpdateStatutEndList(listName: widget.listName,percentage: clampedPercentage,context: context);
     return Center(
       child: Stack(
         alignment: Alignment.center,

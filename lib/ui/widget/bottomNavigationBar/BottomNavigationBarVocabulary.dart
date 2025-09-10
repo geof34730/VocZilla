@@ -11,8 +11,9 @@ import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 class BottomNavigationBarVocabulary extends StatelessWidget implements PreferredSizeWidget {
   final int itemSelected;
   final String local;
+  final String? listName ;
 
-  const BottomNavigationBarVocabulary({super.key,  required this.itemSelected, required this.local});
+  const BottomNavigationBarVocabulary({super.key,  required this.itemSelected, required this.local, required this.listName});
 
   @override
   Widget build(BuildContext context) {
@@ -68,27 +69,27 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
                   switch (value) {
                     case 0:
                       _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, local: local);
-                      Navigator.pushReplacementNamed(context, '/vocabulary/list');
+                      Navigator.pushReplacementNamed(context, '/vocabulary/list${addListName(listName:listName)}');
                       break;
                     case 1:
                       _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, isVocabularyNotLearned: true, local: local);
-                      Navigator.pushReplacementNamed(context, '/vocabulary/learn');
+                      Navigator.pushReplacementNamed(context, '/vocabulary/learn${addListName(listName:listName)}');
                       break;
                     case 2:
                       _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, local: local);
-                      Navigator.pushReplacementNamed(context, '/vocabulary/voicedictation');
+                      Navigator.pushReplacementNamed(context, '/vocabulary/voicedictation${addListName(listName:listName)}');
                       break;
                     case 3:
                       _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, local: local);
-                      Navigator.pushReplacementNamed( context, '/vocabulary/pronunciation');
+                      Navigator.pushReplacementNamed( context, '/vocabulary/pronunciation${addListName(listName:listName)}');
                       break;
                     case 4:
                       _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, isVocabularyNotLearned: true, local: local);
-                      Navigator.pushReplacementNamed(context, '/vocabulary/quizz');
+                      Navigator.pushReplacementNamed(context, '/vocabulary/quizz${addListName(listName:listName)}');
                       break;
                     case 5:
                       _vocabulaireRepository.goVocabulairesWithState(state:state, context:context, local: local);
-                      Navigator.pushReplacementNamed(context, '/vocabulary/statistical');
+                      Navigator.pushReplacementNamed(context, '/vocabulary/statistical${addListName(listName:listName)}');
                       break;
                   }
                 },
@@ -101,6 +102,13 @@ class BottomNavigationBarVocabulary extends StatelessWidget implements Preferred
         }
       )
    );
+  }
+
+
+  addListName({required String? listName}){
+
+
+    return '/$listName';
   }
 
   BottomNavigationBarItem _buildBottomNavigationBarItem(IconData icon, String label, int index) {

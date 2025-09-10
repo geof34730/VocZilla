@@ -38,28 +38,24 @@ class NavigationDrawer extends StatelessWidget {
       elevation: 5,
       child: Container(
         color: Colors.white,
-        child: Column(
-          children: [
-            // ===== HEADER =====
-            _buildDrawerHeader(context),
-
-            // === PÉRIODE D'ESSAI (ANIMÉE) ===
-
-/*
-            // ===== TOP MENU ITEMS =====
-            _buildMenuItems1(context),
-
-            const Spacer(), // Pousse les widgets suivants vers le bas
-            const Divider(),*/
-            _buildTrialPeriodTile(),
-            _buildMenuItems2(context),
-
-            const _VersionInfoWidget(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _buildDrawerHeader(context),
+                widgetMyPadding(child: _SectionTitle('Mes listes')),
+                widgetMyPadding(child: _buildMenuItems1(context)),
+                const SizedBox(height: 10),
+                const Divider(),
+                _buildTrialPeriodTile(),
+                const SizedBox(height: 5),
+                widgetMyPadding(child: _SectionTitle('Compte')),
+                widgetMyPadding(child: _buildMenuItems2(context)),
+                const Center(child: _VersionInfoWidget()),
+              ]),
         ),
-
       ),
-
     );
   }
 }
@@ -162,6 +158,16 @@ Widget _buildDrawerHeader(BuildContext context) {
   );
 }
 
+
+Padding widgetMyPadding({required Widget child}){
+  return Padding(
+      padding: const EdgeInsets.only(left:10,right:10),
+      child:child
+  );
+}
+
+
+
 Widget _buildLanguageDropdown(BuildContext context) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -204,14 +210,21 @@ Widget _buildTrialPeriodTile() {
         final double progress = (daysFreeTrial > 0)
             ? (daysFreeTrial - daysLeft).clamp(0, daysFreeTrial) / daysFreeTrial
             : 0.0;
-        return TrialPeriodTile(
-          progress: progress,
-          daysRemaining: daysLeft,
-          onTap: () {
-            Navigator.of(context).pop(); // Close the drawer first.
-            DialogHelper()
-                .showFreeTrialDialog(context: context, daysLeft: daysLeft);
-          },
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 10,),
+            widgetMyPadding(child:_SectionTitle("Ma période d'essai")),
+            const SizedBox(height: 5,),
+            TrialPeriodTile(
+              progress: progress,
+              daysRemaining: daysLeft,
+              onTap: () {
+                Navigator.of(context).pop(); // Close the drawer first.
+                DialogHelper().showFreeTrialDialog(context: context, daysLeft: daysLeft);
+              },
+            )
+          ]
         );
       }
       // If not in trial, show nothing.
@@ -230,6 +243,8 @@ Widget _buildMenuItems1(BuildContext context) {
         label: "Mes listes personnelles",
         color: Colors.blue,
         onTap: () {
+          Navigator.of(context).pop();
+          Navigator.pushNamed(context, AppRoute.allListsPerso);
 
         },
       ),
@@ -239,7 +254,8 @@ Widget _buildMenuItems1(BuildContext context) {
         label: "Nos listes prédéfinies",
         color: Colors.green,
         onTap: () {
-
+          Navigator.of(context).pop();
+          Navigator.pushNamed(context, AppRoute.allListsDefined);
         },
       ),
       VocZillaTile(
@@ -248,7 +264,8 @@ Widget _buildMenuItems1(BuildContext context) {
         label: "Nos listes des thèmes",
         color: Colors.green,
         onTap: () {
-
+          Navigator.of(context).pop();
+          Navigator.pushNamed(context, AppRoute.allListsThemes);
         },
       ),
 
@@ -263,7 +280,7 @@ Widget _buildMenuItems2(BuildContext context) {
         keyParam: ValueKey('link_update_profile'),
         icon: Icons.person,
         label: context.loc.drawer_my_profil,
-        color: Colors.purple,
+        color: Colors.grey,
         onTap: () {
           Navigator.of(context).pop();
           Navigator.pushNamed(context, AppRoute.updateProfile);
@@ -273,7 +290,7 @@ Widget _buildMenuItems2(BuildContext context) {
         keyParam: ValueKey('link_subscription'),
         icon: Icons.subscriptions_rounded,
         label: context.loc.my_purchase,
-        color: Colors.purple,
+        color: Colors.grey,
         onTap: () {
           Navigator.of(context).pop();
           Navigator.pushNamed(context, AppRoute.subscription);
@@ -286,7 +303,7 @@ Widget _buildMenuItems2(BuildContext context) {
           keyParam: ValueKey('link_mention1'),
           icon: Icons.info,
           label: context.loc.politique_de_confidentialite,
-          color: Colors.purple,
+          color: Colors.grey,
           onTap: () async {
             await openUrl("https://flutter-now.com/voczilla-politique-de-confidentialite/");
           },
@@ -296,7 +313,7 @@ Widget _buildMenuItems2(BuildContext context) {
           keyParam: ValueKey('link_mention2'),
           icon: Icons.info,
           label: "${context.loc.conditions_dutilisation} (EULA)",
-          color: Colors.purple,
+          color: Colors.grey,
           onTap: () async {
             await openUrl("https://www.apple.com/legal/internet-services/itunes/dev/stdeula/");
           },
@@ -313,7 +330,7 @@ Widget _buildMenuItems2(BuildContext context) {
           keyParam: const ValueKey('link_logout'),
           icon: Icons.logout,
           label: context.loc.drawer_disconnect,
-          color: Colors.grey,
+          color: Colors.red,
           onTap: () {
             Navigator.of(context).pop(); // Ferme le tiroir
             context.read<AuthBloc>().add(SignOutRequested()); // Déclenche l'événement de déconnexion
@@ -345,10 +362,19 @@ Future<void> openUrl(String url) async {
   }
 }
 
-/// Widget to display the application version from a JSON file.
-///
-/// This is a StatefulWidget to ensure the version is fetched only once and to
-/// handle the asynchronous loading of the version information gracefully.
+class _SectionTitle extends StatelessWidget {
+  const _SectionTitle(this.text);
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final style = Theme.of(context)
+        .textTheme
+        .titleMedium
+        ?.copyWith(fontWeight: FontWeight.w700);
+    return Text(text, style: style);
+  }
+}
 class _VersionInfoWidget extends StatefulWidget {
   const _VersionInfoWidget();
 

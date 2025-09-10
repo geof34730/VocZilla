@@ -12,8 +12,10 @@ import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../global.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_bloc.dart';
 import '../../../logic/blocs/leaderboard/leaderboard_event.dart';
+
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_event.dart';
 import '../../theme/appColors.dart';
@@ -22,7 +24,7 @@ import '../statistical/card_home_statisctical_widget.dart';
 import 'ElevatedButtonCardHome.dart';
 import 'package:ribbon_widget/ribbon_widget.dart';
 
-class CardHome extends StatelessWidget {
+class CardHome extends StatefulWidget {
   final String title;
   final bool editMode;
   final EdgeInsetsGeometry paddingLevelBar;
@@ -37,8 +39,8 @@ class CardHome extends StatelessWidget {
   final String guid;
   final int nbVocabulaire;
   final String keyStringTest;
+  final String listName;
 
-  VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
 
   CardHome({
 
@@ -56,18 +58,35 @@ class CardHome extends StatelessWidget {
     this.backgroundColor = AppColors.colorTextTitle,
     this.paddingLevelBar = const EdgeInsets.all(0),
     required this.keyStringTest,
+    required this.listName,
   });
-  final _vocabulaireRepository=VocabulaireRepository();
 
+  @override
+  State<CardHome> createState() => _CardHomeState();
+}
+
+class _CardHomeState extends State<CardHome> {
+  final _vocabulaireRepository = VocabulaireRepository();
 
   @override
   Widget build(BuildContext context) {
     String local = Localizations.localeOf(context).languageCode;
-    return LayoutBuilder(builder: (context, constraints) {
-      double widthWidget = constraints.maxWidth;
-      return  (isListShare  && !ownListShare
-          ?
-          Ribbon(
+    return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
+      builder: (context, state) {
+        bool isListEnd = false;
+        if (state is VocabulaireUserLoaded) {
+          isListEnd = state.data.ListDefinedEnd.contains(widget.listName);
+        }
+
+        return LayoutBuilder(builder: (context, constraints) {
+          double widthWidget = constraints.maxWidth;
+          final cardContent = Container(
+            width: widthWidget,
+            child: BoxCardHome(context: context, widthWidget: widthWidget, local: local, isListEnd: isListEnd),
+          );
+
+          if (widget.isListShare && !widget.ownListShare) {
+            return Ribbon(
               nearLength: 35.00,
               farLength: 50.00,
               title: context.loc.card_home_share.toUpperCase(),
@@ -77,29 +96,41 @@ class CardHome extends StatelessWidget {
                   fontWeight: FontWeight.bold
               ),
               color: Colors.blue,
-              child:Container(
-                  width: widthWidget,
-                  child:BoxCardHome(context: context, widthWidget: widthWidget,local: local)
-                )
-          )
-          :
-          Container(
-            width: widthWidget,
-            child:BoxCardHome(context: context, widthWidget: widthWidget,local: local)
-          )
-        );
-    });
+              child: cardContent,
+            );
+          }
+
+          if (isListEnd) {
+            return Ribbon(
+              nearLength: 35.00,
+              farLength: 50.00,
+              title: "TERMINE",
+              titleStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 9,
+                  fontWeight: FontWeight.bold),
+              color: Colors.green,
+              child: cardContent,
+            );
+          }
+
+          // Affiche la carte sans ruban par défaut ou pendant le chargement de isListEnd
+          return cardContent;
+        });
+      },
+    );
   }
 
-  Card BoxCardHome({required BuildContext context, required double widthWidget, required String local}){
+  Card BoxCardHome({required BuildContext context,required bool isListEnd, required double widthWidget, required String local}){
     return Card(
-      color: backgroundColor,
+      color: isListEnd  ? Colors.grey.shade400 : widget.backgroundColor,
+
       child: Column(
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
-              title.toUpperCase(),
+              widget.title.toUpperCase(),
               textAlign: TextAlign.center,
               maxLines: 1,
               softWrap: false,
@@ -110,12 +141,12 @@ class CardHome extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 // Tu peux ajouter fontWeight si besoin
               ).copyWith(
-                color: backgroundColor == Colors.white ? Colors.black : Colors.white,
+                color: widget.backgroundColor == Colors.white ? Colors.black : Colors.white,
               ),
             ),
           ),
 
-         if(nbVocabulaire==0 && isListPerso)...[
+         if(widget.nbVocabulaire==0 && widget.isListPerso)...[
            Container(
              height: 80,
              padding: EdgeInsets.only(left:5, right:5),
@@ -136,7 +167,7 @@ class CardHome extends StatelessWidget {
            )
          ],
 
-          if((isListPerso ? nbVocabulaire>0 : true))...[
+          if((widget.isListPerso ? widget.nbVocabulaire>0 : true))...[
             Wrap(
             alignment: WrapAlignment.center,
             verticalDirection: VerticalDirection.down,
@@ -148,55 +179,55 @@ class CardHome extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButtonCardHome(
-                    valueKey: "buttonList${keyStringTest}",
-                    colorIcon: Colors.green,
+                    valueKey: "buttonList${widget.keyStringTest}",
+                    colorIcon: isListEnd ? Colors.green.shade300 : Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme  );
-                      Navigator.pushNamed(context, '/vocabulary/list');
+                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: widget.vocabulaireEnd,vocabulaireBegin: widget.vocabulaireBegin,guid: widget.guid,context: context,titleList: widget.title,isListPerso:widget.isListPerso,isListTheme:widget.isListTheme  );
+                      Navigator.pushNamed(context, '/vocabulary/list/${widget.keyStringTest}');
                     },
                     iconContent: Icons.list,
                     context: context,
                     iconSize: IconSize.bigIcon,
                   ),
                   ElevatedButtonCardHome(
-                    valueKey: 'buttonLearn${keyStringTest}',
-                    colorIcon: Colors.green,
+                    valueKey: 'buttonLearn${widget.keyStringTest}',
+                    colorIcon: isListEnd ? Colors.green.shade300 : Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(local:local,isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
-                      Navigator.pushNamed(context, '/vocabulary/learn');
+                      _vocabulaireRepository.goVocabulaires(local:local,isVocabularyNotLearned:true,vocabulaireEnd: widget.vocabulaireEnd,vocabulaireBegin: widget.vocabulaireBegin,guid: widget.guid,context: context,titleList: widget.title,isListPerso:widget.isListPerso,isListTheme:widget.isListTheme );
+                      Navigator.pushNamed(context, '/vocabulary/learn/${widget.keyStringTest}');
                     },
                     iconContent: Icons.school_rounded,
                     context: context,
                     iconSize: IconSize.bigIcon,
                   ),
                   ElevatedButtonCardHome(
-                    valueKey: 'buttonVoiceDictation${keyStringTest}',
-                    colorIcon: Colors.green,
+                    valueKey: 'buttonVoiceDictation${widget.keyStringTest}',
+                    colorIcon: isListEnd ? Colors.green.shade300 : Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
-                      Navigator.pushNamed(context, '/vocabulary/voicedictation');
+                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: widget.vocabulaireEnd,vocabulaireBegin: widget.vocabulaireBegin,guid: widget.guid,context: context,titleList: widget.title,isListPerso:widget.isListPerso,isListTheme:widget.isListTheme );
+                      Navigator.pushNamed(context, '/vocabulary/voicedictation/${widget.keyStringTest}');
                     },
                     iconContent: Icons.play_circle,
                     context: context,
                     iconSize: IconSize.bigIcon,
                   ),
                   ElevatedButtonCardHome(
-                    valueKey: 'buttonPrononciation${keyStringTest}',
-                    colorIcon: Colors.green,
+                    valueKey: 'buttonPrononciation${widget.keyStringTest}',
+                    colorIcon: isListEnd ? Colors.green.shade300 : Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
-                      Navigator.pushNamed(context, '/vocabulary/pronunciation');
+                      _vocabulaireRepository.goVocabulaires(local:local,vocabulaireEnd: widget.vocabulaireEnd,vocabulaireBegin: widget.vocabulaireBegin,guid: widget.guid,context: context,titleList: widget.title,isListPerso:widget.isListPerso,isListTheme:widget.isListTheme );
+                      Navigator.pushNamed(context, '/vocabulary/pronunciation/${widget.keyStringTest}');
                     },
                     iconContent: Icons.mic,
                     context: context,
                     iconSize: IconSize.bigIcon,
                   ),
                   ElevatedButtonCardHome(
-                    valueKey: 'buttonQuizz${keyStringTest}',
-                    colorIcon: Colors.green,
+                    valueKey: 'buttonQuizz${widget.keyStringTest}',
+                    colorIcon: isListEnd ? Colors.green.shade300 : Colors.green,
                     onClickButton: () {
-                      _vocabulaireRepository.goVocabulaires(local:local,isVocabularyNotLearned:true,vocabulaireEnd: vocabulaireEnd,vocabulaireBegin: vocabulaireBegin,guid: guid,context: context,titleList: title,isListPerso:isListPerso,isListTheme:isListTheme );
-                      Navigator.pushNamed(context, '/vocabulary/quizz');
+                      _vocabulaireRepository.goVocabulaires(local:local,isVocabularyNotLearned:true,vocabulaireEnd: widget.vocabulaireEnd,vocabulaireBegin: widget.vocabulaireBegin,guid: widget.guid,context: context,titleList: widget.title,isListPerso:widget.isListPerso,isListTheme:widget.isListTheme );
+                      Navigator.pushNamed(context, '/vocabulary/quizz/${widget.keyStringTest}');
                     },
                     iconContent: Icons.assignment,
                     context: context,
@@ -206,32 +237,31 @@ class CardHome extends StatelessWidget {
               ),
             ],
           ),
-
-
               Padding(
-                padding:EdgeInsets.only(top:5,bottom:editMode ? 0 : 8,left:10,right:10),
+                padding:EdgeInsets.only(top:5,bottom:widget.editMode ? 0 : 8,left:10,right:10),
                 child:CardHomeStatisticalWidget(
+                    listName: widget.listName,
                     widthWidget: widthWidget,
-                    list: list,
-                    isListTheme: isListPerso,
-                    isListPerso: isListTheme,
-                    vocabulaireBegin: vocabulaireBegin,
-                    vocabulaireEnd: vocabulaireEnd,
+                    list: widget.list,
+                    isListTheme: widget.isListPerso,
+                    isListPerso: widget.isListTheme,
+                    vocabulaireBegin: widget.vocabulaireBegin,
+                    vocabulaireEnd: widget.vocabulaireEnd,
                     barColorProgress: Colors.green,
                     barColorLeft:  Colors.orange ,
-                    paddingLevelBar: paddingLevelBar,
+                    paddingLevelBar: widget.paddingLevelBar,
                     local:local
                   ),
               )
           ],
 
-          if (editMode) ...[
+          if (widget.editMode) ...[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
                   padding: EdgeInsets.only(left:15),
-                  child:Text("$nbVocabulaire ${context.loc.card_home_mot}",
+                  child:Text("${widget.nbVocabulaire} ${context.loc.card_home_mot}",
                       style:TextStyle(
                           color:Colors.white,
                           fontWeight: FontWeight.bold
@@ -242,24 +272,24 @@ class CardHome extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    if (ownListShare) ...[
+                    if (widget.ownListShare) ...[
                       ElevatedButtonCardHome(
-                        valueKey: 'buttonPersoStep1${keyStringTest}',
+                        valueKey: 'buttonPersoStep1${widget.keyStringTest}',
                         colorIcon: Colors.green,
                         onClickButton: () {
-                          print(guid);
-                          Navigator.pushNamed(context, '/personnalisation/step1/$guid');
+                          print(widget.guid);
+                          Navigator.pushNamed(context, '/personnalisation/step1/${widget.guid}');
                         },
                         iconContent: Icons.edit,
                         context: context,
                       ),
                     ],
                     ElevatedButtonCardHome(
-                      valueKey: "buttonDeletePerso${keyStringTest}",
+                      valueKey: "buttonDeletePerso${widget.keyStringTest}",
                       colorIcon: Colors.red,
                       onClickButton: () {
                         if(testScreenShot) {
-                          BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(listPersoGuid: guid, local:local));
+                          BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(listPersoGuid: widget.guid, local:local));
                         }
                         else {
                           showDialog(
@@ -271,7 +301,7 @@ class CardHome extends StatelessWidget {
 
                                 content: Text("${context.loc
                                     .alert_dialogue_suppression_list_question
-                                    .replaceAll("?", "")} $title ?"),
+                                    .replaceAll("?", "")} ${widget.title} ?"),
                                 actions: <Widget>[
                                   OutlinedButton(
                                     child: Text(context.loc.non),
@@ -287,7 +317,7 @@ class CardHome extends StatelessWidget {
                                   ElevatedButton(
                                     child: Text(context.loc.oui),
                                     onPressed: () {
-                                      BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(listPersoGuid: guid, local: local));
+                                      BlocProvider.of<VocabulaireUserBloc>(context).add(DeleteListPerso(listPersoGuid: widget.guid, local: local));
                                       Navigator.of(dialogContext).pop();
                                     },
                                     style: ElevatedButton.styleFrom(
@@ -305,16 +335,16 @@ class CardHome extends StatelessWidget {
                       context: context,
                     ),
                     /*ElevatedButtonCardHome(
-                      valueKey: 'buttonSharePerso${keyStringTest}',
+                      valueKey: 'buttonSharePerso${widget.keyStringTest}',
                       colorIcon: Colors.blue,
                       onClickButton: () {
-                        _vocabulaireUserRepository.shareListPerso(guid: guid);
+                        _vocabulaireUserRepository.shareListPerso(guid: widget.guid);
                       },
                       iconContent: Icons.share,
                       context: context,
                     ),*/
                     ElevatedButtonCardHome(
-                      valueKey: 'buttonSharePerso${keyStringTest}',
+                      valueKey: 'buttonSharePerso${widget.keyStringTest}',
                       colorIcon: Colors.blue,
                       onClickButton: () {
                         showDialog(
@@ -349,6 +379,4 @@ class CardHome extends StatelessWidget {
       ),
     );
   }
-
-
 }

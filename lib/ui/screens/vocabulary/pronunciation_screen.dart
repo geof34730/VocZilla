@@ -26,7 +26,7 @@ import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 
 class PronunciationScreen extends StatefulWidget {
-  PronunciationScreen();
+  PronunciationScreen({required String listName});
 
   @override
   _PronunciationScreenState createState() => _PronunciationScreenState();

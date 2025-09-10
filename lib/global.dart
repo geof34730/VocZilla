@@ -1,6 +1,10 @@
 const String titleApp="VocZilla";
 const int titleAppCute1=3;
 String versionApp="1.0.0";
+
+
+
+int globalCountVocabulaireAll=0;
 bool debugMode=false;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';

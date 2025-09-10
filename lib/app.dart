@@ -58,6 +58,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    VocabulaireUserRepository().getCountVocabulaireAll(local: 'fr').then((value){
+      globalCountVocabulaireAll=value;
+    });
     return Material(
       child: MultiBlocProvider(
         providers: [

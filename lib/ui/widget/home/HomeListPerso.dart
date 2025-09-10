@@ -72,6 +72,7 @@ class HomelistPerso extends StatelessWidget {
                             print(i.toString());
                             return CardHome(
                               keyStringTest: i.toString(),
+                              listName: listPerso.guid,
                               nbVocabulaire:listPerso.listGuidVocabulary.length,
                               guid: listPerso.guid,
                               title: listPerso.title,

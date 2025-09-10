@@ -46,9 +46,6 @@ class VocabulaireRepository {
   }
 
    Future<VocabularyBlocLocal> goVocabulaireAllForListPersoList({required bool isVocabularyNotLearned, required String guid, required String local}) async {
-
-     Logger.Yellow.log("goVocabulaireAllForListPersoList with theme: $guid");
-
       var data = await getDataTop(local:local);
       late List<dynamic> listPersoGuidVocabulary=[];
       Logger.Yellow.log("guidListPerso: $guid");

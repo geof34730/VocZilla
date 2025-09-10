@@ -18,6 +18,7 @@ import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 
 
 class LearnScreen extends StatefulWidget {
+  LearnScreen({required String listName});
   @override
   _LearnScreenState createState() => _LearnScreenState();
 }

@@ -52,19 +52,10 @@ class _TrialPeriodTileState extends State<TrialPeriodTile>
     final isWarning = widget.progress >= 0.8;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            context.loc.drawer_free_trial,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-              color: Colors.black,
-            ),
-          ),
-          SizedBox(height: 8),
           GestureDetector(
             onTap: widget.onTap,
             child: Container(

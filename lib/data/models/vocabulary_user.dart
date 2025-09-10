@@ -17,6 +17,10 @@ abstract class VocabulaireUser with _$VocabulaireUser {
     @JsonKey(name: "ListGuidVocabularyLearned")
     @Default([]) List<String> listGuidVocabularyLearned, // MODIFIÉ
 
+
+    @JsonKey(name: "ListDefinedEnd")
+    @Default([]) List<String> ListDefinedEnd, // MODIFIÉ
+
     @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)
     required int countVocabulaireAll,
   }) = _VocabulaireUser;
@@ -59,4 +63,16 @@ abstract class ListTheme with _$ListTheme {
   }) = _ListTheme;
 
   factory ListTheme.fromJson(Map<String, dynamic> json) => _$ListThemeFromJson(json);
+}
+
+
+@freezed
+abstract class ListDefinedEnd with _$ListDefinedEnd {
+  const factory ListDefinedEnd({
+    @JsonKey(name: "listName")
+    required String listName,
+ // MODIFIÉ
+  }) = _ListDefinedEnd;
+
+  factory ListDefinedEnd.fromJson(Map<String, dynamic> json) => _$ListDefinedEndFromJson(json);
 }

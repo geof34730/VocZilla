@@ -15,7 +15,7 @@ import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/form/CustomTextZillaField.dart';
 
 class VoiceDictationScreen extends StatefulWidget {
-  VoiceDictationScreen();
+  VoiceDictationScreen({required String listName});
 
   @override
   _VoiceDictationScreenState createState() => _VoiceDictationScreenState();

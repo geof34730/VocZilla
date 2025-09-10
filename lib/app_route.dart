@@ -7,6 +7,9 @@ import 'package:voczilla/ui/featureGraphic.dart';
 import 'package:voczilla/ui/screens/auth/profile_update_screen.dart';
 import 'package:voczilla/ui/screens/personalisation/step2.dart';
 import 'package:voczilla/ui/screens/update_screen.dart';
+import 'package:voczilla/ui/screens/vocabulary/all_lists_defined.dart';
+import 'package:voczilla/ui/screens/vocabulary/all_lists_perso.dart';
+import 'package:voczilla/ui/screens/vocabulary/all_lists_themes.dart';
 
 import 'global.dart';
 import 'logic/check_connectivity.dart';
@@ -42,6 +45,10 @@ class AppRoute {
   static const String subscription = '/subscription';
   static const String updateScreen = '/update';
   static const String featureGraphic = '/featureGraphic';
+  static const String allListsDefined = '/alllistsdefined';
+  static const String allListsPerso = '/alllistsperso';
+  static const String allListsThemes = '/allliststhemes';
+
 
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -179,45 +186,56 @@ class AppRoute {
         case home:
         case homeLogged:
           return Layout(child: HomeScreen());
+        case allListsDefined:
+          return Layout(child: AllListsDefinedScreen(), titleScreen: "Toute nos listes définies");
+        case allListsPerso:
+          return Layout(child: AllListsPersoScreen(), titleScreen: "Toute vos listes personnalisées");
+        case allListsThemes:
+          return Layout(child: AllListsThemesScreen(), titleScreen: "Toute nos listes de thèmes");
         case updateScreen:
           return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
         case '/vocabulary':
-          if (uri.pathSegments.length == 2) {
+          if (uri.pathSegments.length == 3) {
             switch (uri.pathSegments[1]) {
               case 'list':
                 return Layout(
                   titleScreen: context.loc.liste_title,
                   showBottomNavigationBar: true,
                   itemSelected: 0,
-                  child: ListScreen(),
+                  listName: uri.pathSegments[2],
+                  child: ListScreen(listName: uri.pathSegments[2]),
                 );
               case 'learn':
                 return Layout(
                   titleScreen: context.loc.apprendre_title,
                   showBottomNavigationBar: true,
                   itemSelected: 1,
-                  child: LearnScreen(),
+                  listName: uri.pathSegments[2],
+                  child: LearnScreen(listName: uri.pathSegments[2]),
                 );
               case 'voicedictation':
                 return Layout(
                   titleScreen: context.loc.dictation_title,
                   showBottomNavigationBar: true,
                   itemSelected: 2,
-                  child: VoiceDictationScreen(),
+                  listName: uri.pathSegments[2],
+                  child: VoiceDictationScreen(listName: uri.pathSegments[2]),
                 );
               case 'pronunciation':
                 return Layout(
                   titleScreen: context.loc.pronunciation_title,
                   showBottomNavigationBar: true,
                   itemSelected: 3,
-                  child: PronunciationScreen(),
+                  listName: uri.pathSegments[2],
+                  child: PronunciationScreen(listName: uri.pathSegments[2]),
                 );
               case 'quizz':
                 return Layout(
                   titleScreen: context.loc.tester_title,
                   showBottomNavigationBar: true,
                   itemSelected: 4,
-                  child: QuizzScreen(),
+                  listName: uri.pathSegments[2],
+                  child: QuizzScreen(listName: uri.pathSegments[2]),
                 );
               case 'statistical':
                 return Layout(
