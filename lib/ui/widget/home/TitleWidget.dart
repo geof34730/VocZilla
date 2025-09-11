@@ -5,7 +5,7 @@ import 'package:voczilla/core/utils/localization.dart';
 
 import '../../../core/utils/getFontForLanguage.dart';
 
-Padding titleWidget({required String text, required String codelang}){
+Padding titleWidget({required String text, required String codelang, int maxLine = 2}){
   return Padding(
       padding: EdgeInsets.only(top:10),
       child:AutoSizeText(
@@ -20,7 +20,7 @@ Padding titleWidget({required String text, required String codelang}){
           color: Colors.black,
           decoration: TextDecoration.none,
         ),
-        maxLines: 2,
+        maxLines: maxLine,
 
         minFontSize: 22,
         overflow: TextOverflow.ellipsis,

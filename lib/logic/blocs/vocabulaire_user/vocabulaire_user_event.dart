@@ -13,7 +13,6 @@ class CheckVocabulaireUserStatus extends VocabulaireUserEvent {
 class VocabulaireUserRefresh extends VocabulaireUserEvent {
   final String local;
   VocabulaireUserRefresh({ required this.local});
-
 }
 
 class LoadVocabulaireUserData extends VocabulaireUserEvent {
@@ -68,4 +67,15 @@ class RemoveCompletedDefinedList extends VocabulaireUserEvent {
   final String listName;
   final String local;
    RemoveCompletedDefinedList({required this.listName, required this.local});
+}
+
+
+class FilterShowAllList extends VocabulaireUserEvent {
+  final String local;
+  FilterShowAllList({required this.local});
+}
+
+class FilterHideListFinished extends VocabulaireUserEvent {
+  final String local;
+  FilterHideListFinished({required this.local});
 }

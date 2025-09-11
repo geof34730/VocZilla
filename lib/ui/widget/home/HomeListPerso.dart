@@ -38,10 +38,7 @@ class HomelistPerso extends StatelessWidget {
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Flexible(
-                        fit: FlexFit.loose,
-                        child: titleWidget(text: context.loc.home_title_my_list_perso,codelang: Localizations.localeOf(context).languageCode),
-                      ),
+                       titleWidget(text: context.loc.home_title_my_list_perso,codelang: Localizations.localeOf(context).languageCode),
                       if (listePerso)
                         Padding(
                           padding: EdgeInsets.only(left: 0),
@@ -62,7 +59,10 @@ class HomelistPerso extends StatelessWidget {
                     ],
                   ),
                   if(!listePerso)
-                    descriptionListPersoEmpty(context: context),
+                    Padding(
+                      child: descriptionListPersoEmpty(context: context),
+                      padding: EdgeInsets.only(top: 0),
+                    ),
 
                   if(listePerso)
                     HorizontalScrollViewCardHome(

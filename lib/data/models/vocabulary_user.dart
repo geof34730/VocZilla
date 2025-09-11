@@ -17,6 +17,8 @@ abstract class VocabulaireUser with _$VocabulaireUser {
     @JsonKey(name: "ListGuidVocabularyLearned")
     @Default([]) List<String> listGuidVocabularyLearned, // MODIFIÉ
 
+    @JsonKey(name: "allListView")
+    @Default(true) bool allListView,
 
     @JsonKey(name: "ListDefinedEnd")
     @Default([]) List<String> ListDefinedEnd, // MODIFIÉ
@@ -26,6 +28,8 @@ abstract class VocabulaireUser with _$VocabulaireUser {
   }) = _VocabulaireUser;
 
   factory VocabulaireUser.fromJson(Map<String, dynamic> json) => _$VocabulaireUserFromJson(json);
+
+
 }
 
 @freezed

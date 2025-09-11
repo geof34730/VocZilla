@@ -91,7 +91,7 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
       },
       child: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(0.0),
         child: LayoutBuilder(builder: (context, constraints) {
           final double spacing = 8.0;
           final int crossAxisCount = isTablet(context) ? 2 : 1;

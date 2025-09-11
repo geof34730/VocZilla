@@ -5,7 +5,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'logger.dart';
 
 
-HorizontalScrollView HorizontalScrollViewCardHome({required List<Widget> children,  double itemWidth = 320}) {
+HorizontalScrollView HorizontalScrollViewCardHome({required List<Widget> children,  double itemWidth = 340}) {
   return HorizontalScrollView(
       itemWidth: itemWidth,
       crossAxisSpacing: 8.0,
@@ -14,7 +14,7 @@ HorizontalScrollView HorizontalScrollViewCardHome({required List<Widget> childre
   );
 }
 double itemWidthListPerso({required int nbList, required BuildContext context}) {
-  double largeurCard = 320;
+  double largeurCard = 340;
   double space = 8;
   if(nbList == 1){
     largeurCard = MediaQuery.sizeOf(context).width-(space*2);
@@ -23,28 +23,13 @@ double itemWidthListPerso({required int nbList, required BuildContext context}) 
     largeurCard = (MediaQuery.sizeOf(context).width/2)-(space*2);
   }
   if(nbList > 2){
-    largeurCard = 320;
+    largeurCard = 340;
   }
-  if(largeurCard < 320){
-    largeurCard = 320;
+  if(largeurCard < 340){
+    largeurCard = 340;
   }
   return largeurCard;
 }
 
 
-Future<String> getBuildNumber() async {
-  PackageInfo packageInfo = await PackageInfo.fromPlatform();
-  String buildNumber = packageInfo.buildNumber;
-  return buildNumber;
-}
 
-
-Future<String> getAppVersion() async {
-  PackageInfo packageInfo = await PackageInfo.fromPlatform();
-  String version = packageInfo.version;
-  return version;
-}
-Future<String> getPackageName() async {
-  PackageInfo packageInfo = await PackageInfo.fromPlatform();
-  return packageInfo.packageName;
-}

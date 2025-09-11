@@ -24,6 +24,9 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<VocabulaireUserBlocErrorCleared>(_onVocabulaireUserBlocErrorCleared);
     on<AddCompletedDefinedList>(_onAddCompletedDefinedList);
     on<RemoveCompletedDefinedList>(_onRemoveCompletedDefinedList);
+    on<FilterShowAllList>(_onFilterShowAllList);
+    on<FilterHideListFinished>(_onFilterHideListFinished);
+
     on<VocabulaireUserUpdate>((event, emit) {
       Logger.Blue.log('VocabulaireUserBloc - Traitement de VocabulaireUserUpdate');
       emit(VocabulaireUserLoading());
@@ -174,17 +177,44 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     Emitter<VocabulaireUserState> emit,
   ) async {
     try {
-      final updatedUserData =
-          await _vocabulaireUserRepository.removeCompletedDefinedList(
+      final updatedUserData = await _vocabulaireUserRepository.removeCompletedDefinedList(
         listName: event.listName,
         local: event.local,
       );
-
       if (updatedUserData != null) {
         emit(VocabulaireUserLoaded(updatedUserData));
       }
     } catch (e) {
       emit(VocabulaireUserError("Erreur lors de la suppression de la liste terminée: $e"));
     }
+  }
+
+  Future<void> _onFilterShowAllList(
+      FilterShowAllList event,
+      Emitter<VocabulaireUserState> emit,
+      ) async{
+        try {
+          final updatedUserData = await _vocabulaireUserRepository.filterShowAllList(local: event.local);
+          if (updatedUserData != null) {
+            emit(VocabulaireUserLoaded(updatedUserData));
+          }
+        } catch (e) {
+          emit(VocabulaireUserError("Erreur lors de la suppression de la liste terminée: $e"));
+        }
+    }
+
+  Future<void> _onFilterHideListFinished(
+      FilterHideListFinished event,
+      Emitter<VocabulaireUserState> emit,
+      ) async{
+        try {
+          final updatedUserData = await _vocabulaireUserRepository.filterHidListFinished(local: event.local);
+          if (updatedUserData != null) {
+            emit(VocabulaireUserLoaded(updatedUserData));
+          }
+        } catch (e) {
+          emit(VocabulaireUserError("Erreur lors de la suppression de la liste terminée: $e"));
+        }
+
   }
 }

@@ -18,7 +18,7 @@ mixin _$VocabulaireUser {
 @JsonKey(name: "ListPerso") List<ListPerso> get listPerso;// MODIFIÉ
 @JsonKey(name: "ListTheme") List<ListTheme> get listTheme;// MODIFIÉ
 @JsonKey(name: "ListGuidVocabularyLearned") List<String> get listGuidVocabularyLearned;// MODIFIÉ
-@JsonKey(name: "ListDefinedEnd") List<String> get ListDefinedEnd;// MODIFIÉ
+@JsonKey(name: "AllListView") bool get allListView;@JsonKey(name: "ListDefinedEnd") List<String> get ListDefinedEnd;// MODIFIÉ
 @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) int get countVocabulaireAll;
 /// Create a copy of VocabulaireUser
 /// with the given fields replaced by the non-null parameter values.
@@ -32,16 +32,16 @@ $VocabulaireUserCopyWith<VocabulaireUser> get copyWith => _$VocabulaireUserCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is VocabulaireUser&&const DeepCollectionEquality().equals(other.listPerso, listPerso)&&const DeepCollectionEquality().equals(other.listTheme, listTheme)&&const DeepCollectionEquality().equals(other.listGuidVocabularyLearned, listGuidVocabularyLearned)&&const DeepCollectionEquality().equals(other.ListDefinedEnd, ListDefinedEnd)&&(identical(other.countVocabulaireAll, countVocabulaireAll) || other.countVocabulaireAll == countVocabulaireAll));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is VocabulaireUser&&const DeepCollectionEquality().equals(other.listPerso, listPerso)&&const DeepCollectionEquality().equals(other.listTheme, listTheme)&&const DeepCollectionEquality().equals(other.listGuidVocabularyLearned, listGuidVocabularyLearned)&&(identical(other.allListView, allListView) || other.allListView == allListView)&&const DeepCollectionEquality().equals(other.ListDefinedEnd, ListDefinedEnd)&&(identical(other.countVocabulaireAll, countVocabulaireAll) || other.countVocabulaireAll == countVocabulaireAll));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(listPerso),const DeepCollectionEquality().hash(listTheme),const DeepCollectionEquality().hash(listGuidVocabularyLearned),const DeepCollectionEquality().hash(ListDefinedEnd),countVocabulaireAll);
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(listPerso),const DeepCollectionEquality().hash(listTheme),const DeepCollectionEquality().hash(listGuidVocabularyLearned),allListView,const DeepCollectionEquality().hash(ListDefinedEnd),countVocabulaireAll);
 
 @override
 String toString() {
-  return 'VocabulaireUser(listPerso: $listPerso, listTheme: $listTheme, listGuidVocabularyLearned: $listGuidVocabularyLearned, ListDefinedEnd: $ListDefinedEnd, countVocabulaireAll: $countVocabulaireAll)';
+  return 'VocabulaireUser(listPerso: $listPerso, listTheme: $listTheme, listGuidVocabularyLearned: $listGuidVocabularyLearned, allListView: $allListView, ListDefinedEnd: $ListDefinedEnd, countVocabulaireAll: $countVocabulaireAll)';
 }
 
 
@@ -52,7 +52,7 @@ abstract mixin class $VocabulaireUserCopyWith<$Res>  {
   factory $VocabulaireUserCopyWith(VocabulaireUser value, $Res Function(VocabulaireUser) _then) = _$VocabulaireUserCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: "ListPerso") List<ListPerso> listPerso,@JsonKey(name: "ListTheme") List<ListTheme> listTheme,@JsonKey(name: "ListGuidVocabularyLearned") List<String> listGuidVocabularyLearned,@JsonKey(name: "ListDefinedEnd") List<String> ListDefinedEnd,@JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) int countVocabulaireAll
+@JsonKey(name: "ListPerso") List<ListPerso> listPerso,@JsonKey(name: "ListTheme") List<ListTheme> listTheme,@JsonKey(name: "ListGuidVocabularyLearned") List<String> listGuidVocabularyLearned,@JsonKey(name: "AllListView") bool allListView,@JsonKey(name: "ListDefinedEnd") List<String> ListDefinedEnd,@JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) int countVocabulaireAll
 });
 
 
@@ -69,12 +69,13 @@ class _$VocabulaireUserCopyWithImpl<$Res>
 
 /// Create a copy of VocabulaireUser
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? listPerso = null,Object? listTheme = null,Object? listGuidVocabularyLearned = null,Object? ListDefinedEnd = null,Object? countVocabulaireAll = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? listPerso = null,Object? listTheme = null,Object? listGuidVocabularyLearned = null,Object? allListView = null,Object? ListDefinedEnd = null,Object? countVocabulaireAll = null,}) {
   return _then(_self.copyWith(
 listPerso: null == listPerso ? _self.listPerso : listPerso // ignore: cast_nullable_to_non_nullable
 as List<ListPerso>,listTheme: null == listTheme ? _self.listTheme : listTheme // ignore: cast_nullable_to_non_nullable
 as List<ListTheme>,listGuidVocabularyLearned: null == listGuidVocabularyLearned ? _self.listGuidVocabularyLearned : listGuidVocabularyLearned // ignore: cast_nullable_to_non_nullable
-as List<String>,ListDefinedEnd: null == ListDefinedEnd ? _self.ListDefinedEnd : ListDefinedEnd // ignore: cast_nullable_to_non_nullable
+as List<String>,allListView: null == allListView ? _self.allListView : allListView // ignore: cast_nullable_to_non_nullable
+as bool,ListDefinedEnd: null == ListDefinedEnd ? _self.ListDefinedEnd : ListDefinedEnd // ignore: cast_nullable_to_non_nullable
 as List<String>,countVocabulaireAll: null == countVocabulaireAll ? _self.countVocabulaireAll : countVocabulaireAll // ignore: cast_nullable_to_non_nullable
 as int,
   ));
@@ -161,10 +162,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "AllListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _VocabulaireUser() when $default != null:
-return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
+return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.allListView,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
   return orElse();
 
 }
@@ -182,10 +183,10 @@ return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "AllListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)  $default,) {final _that = this;
 switch (_that) {
 case _VocabulaireUser():
-return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
+return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.allListView,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,10 +203,10 @@ return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "AllListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)?  $default,) {final _that = this;
 switch (_that) {
 case _VocabulaireUser() when $default != null:
-return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
+return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.allListView,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
   return null;
 
 }
@@ -217,7 +218,7 @@ return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,
 @JsonSerializable()
 
 class _VocabulaireUser implements VocabulaireUser {
-  const _VocabulaireUser({@JsonKey(name: "ListPerso") final  List<ListPerso> listPerso = const [], @JsonKey(name: "ListTheme") final  List<ListTheme> listTheme = const [], @JsonKey(name: "ListGuidVocabularyLearned") final  List<String> listGuidVocabularyLearned = const [], @JsonKey(name: "ListDefinedEnd") final  List<String> ListDefinedEnd = const [], @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) required this.countVocabulaireAll}): _listPerso = listPerso,_listTheme = listTheme,_listGuidVocabularyLearned = listGuidVocabularyLearned,_ListDefinedEnd = ListDefinedEnd;
+  const _VocabulaireUser({@JsonKey(name: "ListPerso") final  List<ListPerso> listPerso = const [], @JsonKey(name: "ListTheme") final  List<ListTheme> listTheme = const [], @JsonKey(name: "ListGuidVocabularyLearned") final  List<String> listGuidVocabularyLearned = const [], @JsonKey(name: "AllListView") this.allListView = true, @JsonKey(name: "ListDefinedEnd") final  List<String> ListDefinedEnd = const [], @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) required this.countVocabulaireAll}): _listPerso = listPerso,_listTheme = listTheme,_listGuidVocabularyLearned = listGuidVocabularyLearned,_ListDefinedEnd = ListDefinedEnd;
   factory _VocabulaireUser.fromJson(Map<String, dynamic> json) => _$VocabulaireUserFromJson(json);
 
  final  List<ListPerso> _listPerso;
@@ -246,8 +247,8 @@ class _VocabulaireUser implements VocabulaireUser {
 }
 
 // MODIFIÉ
+@override@JsonKey(name: "AllListView") final  bool allListView;
  final  List<String> _ListDefinedEnd;
-// MODIFIÉ
 @override@JsonKey(name: "ListDefinedEnd") List<String> get ListDefinedEnd {
   if (_ListDefinedEnd is EqualUnmodifiableListView) return _ListDefinedEnd;
   // ignore: implicit_dynamic_type
@@ -270,16 +271,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _VocabulaireUser&&const DeepCollectionEquality().equals(other._listPerso, _listPerso)&&const DeepCollectionEquality().equals(other._listTheme, _listTheme)&&const DeepCollectionEquality().equals(other._listGuidVocabularyLearned, _listGuidVocabularyLearned)&&const DeepCollectionEquality().equals(other._ListDefinedEnd, _ListDefinedEnd)&&(identical(other.countVocabulaireAll, countVocabulaireAll) || other.countVocabulaireAll == countVocabulaireAll));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _VocabulaireUser&&const DeepCollectionEquality().equals(other._listPerso, _listPerso)&&const DeepCollectionEquality().equals(other._listTheme, _listTheme)&&const DeepCollectionEquality().equals(other._listGuidVocabularyLearned, _listGuidVocabularyLearned)&&(identical(other.allListView, allListView) || other.allListView == allListView)&&const DeepCollectionEquality().equals(other._ListDefinedEnd, _ListDefinedEnd)&&(identical(other.countVocabulaireAll, countVocabulaireAll) || other.countVocabulaireAll == countVocabulaireAll));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_listPerso),const DeepCollectionEquality().hash(_listTheme),const DeepCollectionEquality().hash(_listGuidVocabularyLearned),const DeepCollectionEquality().hash(_ListDefinedEnd),countVocabulaireAll);
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_listPerso),const DeepCollectionEquality().hash(_listTheme),const DeepCollectionEquality().hash(_listGuidVocabularyLearned),allListView,const DeepCollectionEquality().hash(_ListDefinedEnd),countVocabulaireAll);
 
 @override
 String toString() {
-  return 'VocabulaireUser(listPerso: $listPerso, listTheme: $listTheme, listGuidVocabularyLearned: $listGuidVocabularyLearned, ListDefinedEnd: $ListDefinedEnd, countVocabulaireAll: $countVocabulaireAll)';
+  return 'VocabulaireUser(listPerso: $listPerso, listTheme: $listTheme, listGuidVocabularyLearned: $listGuidVocabularyLearned, allListView: $allListView, ListDefinedEnd: $ListDefinedEnd, countVocabulaireAll: $countVocabulaireAll)';
 }
 
 
@@ -290,7 +291,7 @@ abstract mixin class _$VocabulaireUserCopyWith<$Res> implements $VocabulaireUser
   factory _$VocabulaireUserCopyWith(_VocabulaireUser value, $Res Function(_VocabulaireUser) _then) = __$VocabulaireUserCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: "ListPerso") List<ListPerso> listPerso,@JsonKey(name: "ListTheme") List<ListTheme> listTheme,@JsonKey(name: "ListGuidVocabularyLearned") List<String> listGuidVocabularyLearned,@JsonKey(name: "ListDefinedEnd") List<String> ListDefinedEnd,@JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) int countVocabulaireAll
+@JsonKey(name: "ListPerso") List<ListPerso> listPerso,@JsonKey(name: "ListTheme") List<ListTheme> listTheme,@JsonKey(name: "ListGuidVocabularyLearned") List<String> listGuidVocabularyLearned,@JsonKey(name: "AllListView") bool allListView,@JsonKey(name: "ListDefinedEnd") List<String> ListDefinedEnd,@JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) int countVocabulaireAll
 });
 
 
@@ -307,12 +308,13 @@ class __$VocabulaireUserCopyWithImpl<$Res>
 
 /// Create a copy of VocabulaireUser
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? listPerso = null,Object? listTheme = null,Object? listGuidVocabularyLearned = null,Object? ListDefinedEnd = null,Object? countVocabulaireAll = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? listPerso = null,Object? listTheme = null,Object? listGuidVocabularyLearned = null,Object? allListView = null,Object? ListDefinedEnd = null,Object? countVocabulaireAll = null,}) {
   return _then(_VocabulaireUser(
 listPerso: null == listPerso ? _self._listPerso : listPerso // ignore: cast_nullable_to_non_nullable
 as List<ListPerso>,listTheme: null == listTheme ? _self._listTheme : listTheme // ignore: cast_nullable_to_non_nullable
 as List<ListTheme>,listGuidVocabularyLearned: null == listGuidVocabularyLearned ? _self._listGuidVocabularyLearned : listGuidVocabularyLearned // ignore: cast_nullable_to_non_nullable
-as List<String>,ListDefinedEnd: null == ListDefinedEnd ? _self._ListDefinedEnd : ListDefinedEnd // ignore: cast_nullable_to_non_nullable
+as List<String>,allListView: null == allListView ? _self.allListView : allListView // ignore: cast_nullable_to_non_nullable
+as bool,ListDefinedEnd: null == ListDefinedEnd ? _self._ListDefinedEnd : ListDefinedEnd // ignore: cast_nullable_to_non_nullable
 as List<String>,countVocabulaireAll: null == countVocabulaireAll ? _self.countVocabulaireAll : countVocabulaireAll // ignore: cast_nullable_to_non_nullable
 as int,
   ));

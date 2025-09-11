@@ -26,7 +26,6 @@ class GlobalStatisticalWidget extends StatefulWidget {
   final String title;
   final bool showTrophy;
 
-
   const GlobalStatisticalWidget({
     super.key,
     this.vocabulaireBegin,
@@ -37,7 +36,7 @@ class GlobalStatisticalWidget extends StatefulWidget {
     required this.isListTheme,
     required this.local,
     required this.listName,
-    required this.title
+    required this.title,
   });
 
   @override
@@ -48,64 +47,65 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
   Future<StatisticalLength>? _statisticalFuture;
   StatisticalLength? _lastStatisticalData;
 
-  // Constantes synchronisées (utilisées partout)
-  static const double _heightIndicator = 50.0;
+  // Dimensions (centralisées)
   static const double _hPadding = 20.0;
-  static const double _lineHeight = 20.0;
-  static const double _textWidth = 60.0;
+  static const double _lineHeight = 20.0; // hauteur de la barre
+  static const double _textWidth = 60.0;  // largeur réservée au %
   static const double _gap = 5.0;
-  static const double _logoWidth = 50.0; // doit correspondre à Image.asset(width: 50)
-  int countTrophyState=0;
+  static const double _cursorSize = 50.0; // taille du logo (carré)
+
+  int countTrophyState = 0;
+
   @override
   void initState() {
     super.initState();
-    // Fetch initial data only if the user data is already loaded.
-    if (context.read<VocabulaireUserBloc>().state is VocabulaireUserLoaded) {
+    final blocState = context.read<VocabulaireUserBloc>().state;
+    if (blocState is VocabulaireUserLoaded) {
       _fetchStatisticalData(local: widget.local);
+      countTrophyState = getTrophyTopLength(dataListDefinedEnd: blocState.data.ListDefinedEnd);
     }
   }
 
   @override
   void didUpdateWidget(GlobalStatisticalWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
-    // Refetch if widget parameters change
+    // Rafraîchir quand les props changent
     if (widget.vocabulaireBegin != oldWidget.vocabulaireBegin ||
         widget.vocabulaireEnd != oldWidget.vocabulaireEnd ||
         widget.guidList != oldWidget.guidList ||
         widget.isListPerso != oldWidget.isListPerso ||
-        widget.isListTheme != oldWidget.isListTheme) {
-
+        widget.isListTheme != oldWidget.isListTheme ||
+        widget.local != oldWidget.local) {
       _fetchStatisticalData(local: widget.local);
     }
   }
 
   void _fetchStatisticalData({required String local}) {
-    final future =
-        VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
-          vocabulaireBegin: widget.vocabulaireBegin,
-          vocabulaireEnd: widget.vocabulaireEnd,
-          guidList: widget.guidList,
-          isListPerso: widget.isListPerso,
-          isListTheme: widget.isListTheme,
-          local: local
-        );
+    final future = VocabulaireUserRepository().getVocabulaireUserDataStatisticalLengthData(
+      vocabulaireBegin: widget.vocabulaireBegin,
+      vocabulaireEnd: widget.vocabulaireEnd,
+      guidList: widget.guidList,
+      isListPerso: widget.isListPerso,
+      isListTheme: widget.isListTheme,
+      local: local,
+    );
 
-    // Attache une action à exécuter une fois que le Future est terminé.
-    // C'est ici que nous allons gérer la logique du trophée, en dehors du 'build'.
+    // Gérer le trophée une fois les données chargées
     future.then((statisticalData) {
       if (!mounted || widget.listName == null) return;
 
       double percentageProgression = 0.0;
       if (statisticalData.countVocabulaireAll > 0) {
-        percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
+        percentageProgression =
+            statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
       }
 
       final bloc = context.read<VocabulaireUserBloc>();
       if (bloc.state is VocabulaireUserLoaded) {
         final currentState = bloc.state as VocabulaireUserLoaded;
-        final bool isAlreadyCompleted = currentState.data.ListDefinedEnd.contains(widget.listName);
+        final bool isAlreadyCompleted =
+        currentState.data.ListDefinedEnd.contains(widget.listName);
 
-        // Envoyer l'événement SEULEMENT si l'état doit changer.
         if (percentageProgression == 1.0 && !isAlreadyCompleted) {
           bloc.add(AddCompletedDefinedList(listName: widget.listName!, local: widget.local));
         } else if (percentageProgression < 1.0 && isAlreadyCompleted) {
@@ -114,10 +114,8 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
       }
     });
 
-    // Met à jour le Future pour que le FutureBuilder se reconstruise.
     _statisticalFuture = future;
   }
-
 
   int getTrophyTopLength({required List<String> dataListDefinedEnd}) {
     return dataListDefinedEnd.where((item) => item.startsWith('top')).length;
@@ -127,11 +125,11 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
   Widget build(BuildContext context) {
     return BlocConsumer<VocabulaireUserBloc, VocabulaireUserState>(
       listener: (context, state) {
-        // When user data changes, refetch statistics.
         if (state is VocabulaireUserLoaded) {
           setState(() {
             _fetchStatisticalData(local: widget.local);
-            countTrophyState = getTrophyTopLength(dataListDefinedEnd:state.data.ListDefinedEnd);
+            countTrophyState =
+                getTrophyTopLength(dataListDefinedEnd: state.data.ListDefinedEnd);
           });
         }
       },
@@ -140,12 +138,10 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
           return FutureBuilder<StatisticalLength>(
             future: _statisticalFuture,
             builder: (context, userDataSnapshot) {
-              // Cache the latest successful data.
               if (userDataSnapshot.hasData) {
                 _lastStatisticalData = userDataSnapshot.data;
               }
 
-              // If an error occurs and we have no cached data, show the error (non bloquant).
               if (userDataSnapshot.hasError && _lastStatisticalData == null) {
                 WidgetsBinding.instance.addPostFrameCallback((_) {
                   ErrorMessage(
@@ -155,43 +151,36 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                 });
               }
 
-              // Déterminer le pourcentage à afficher.
               double percentageProgression = 0.0;
               if (_lastStatisticalData != null) {
                 final statisticalData = _lastStatisticalData!;
                 if (statisticalData.countVocabulaireAll > 0) {
-                  percentageProgression = statisticalData.vocabLearnedCount /
-                      statisticalData.countVocabulaireAll;
+                  percentageProgression =
+                      statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
                 }
               }
 
-              // Toujours construire l'indicateur.
               return LayoutBuilder(
                 builder: (context, constraints) => _buildIndicator(
                   percentage: percentageProgression,
                   width: constraints.maxWidth,
                   context: context,
-                  countTrophy: countTrophyState
+                  countTrophy: countTrophyState,
                 ),
               );
             },
           );
         } else if (state is VocabulaireUserEmpty) {
-          _lastStatisticalData = null; // Clear cache if user data is empty
-          return Column(
-            children: [
-            LayoutBuilder(
+          _lastStatisticalData = null;
+          return LayoutBuilder(
             builder: (context, constraints) => _buildIndicator(
               percentage: 0,
               width: constraints.maxWidth,
               context: context,
-              countTrophy: countTrophyState
+              countTrophy: countTrophyState,
             ),
-            )
-           ]
           );
         }
-        // Default case for other states (initial, error...)
         return const SizedBox.shrink();
       },
     );
@@ -201,7 +190,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     required double percentage,
     required double width,
     required BuildContext context,
-    required int countTrophy
+    required int countTrophy,
   }) {
     final clampedPercentage = percentage.clamp(0.0, 1.0);
     final bool isRtl = Directionality.of(context) == TextDirection.rtl;
@@ -209,8 +198,12 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     final textAlignForBigPercentage = isRtl ? TextAlign.left : TextAlign.right;
     final textAlignForSmallPercentage = isRtl ? TextAlign.right : TextAlign.left;
 
-    // Largeur réellement disponible après padding
+    // Largeur disponible (hors padding horizontal)
     final double availableWidth = (width - (_hPadding * 2)).clamp(0.0, double.infinity);
+
+    // Hauteur réelle du bloc indicateur (barre + curseur)
+    final double heightIndicator = max(_lineHeight, _cursorSize);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -218,33 +211,41 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Padding(
-              padding: EdgeInsets.only(bottom:3),
-              child:titleWidget(text: widget.title,codelang: Localizations.localeOf(context).languageCode),
+              padding: const EdgeInsets.only(bottom: 0),
+                child: Container(
+                  constraints: BoxConstraints(minWidth: 100, maxWidth: MediaQuery.of(context).size.width - 60),
+                  child: titleWidget(
+                    text:  widget.title,
+                    codelang: Localizations.localeOf(context).languageCode,
+                    maxLine: 1
+                  ),
+                )
             ),
-            if(widget.showTrophy)...[
-              SizedBox(width: 10),
+            if (widget.showTrophy) ...[
+              const SizedBox(width: 10),
               Badge.count(
-                offset: const Offset(8, -5),
-                padding: EdgeInsets.only(left:5,right:5),
+                offset: const Offset(8, 0),
+                padding: const EdgeInsets.only(left: 5, right: 5),
                 backgroundColor: Colors.green,
                 count: countTrophy,
                 child: SvgPicture.asset(
                   "assets/svg/achievement-award-medal-icon.svg",
                   height: 30,
-                )
-              )
-              ]
+                ),
+              ),
+            ]
           ],
         ),
         Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: _hPadding),
             child: SizedBox(
-              height: _heightIndicator,
+              height: heightIndicator,
               child: Stack(
                 alignment: Alignment.center,
                 clipBehavior: Clip.none,
                 children: [
+                  // BARRE DE PROGRESSION
                   Container(
                     width: availableWidth,
                     height: _lineHeight,
@@ -257,38 +258,47 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                       child: MultiSegmentLinearIndicator(
                         padding: EdgeInsets.zero,
                         lineHeight: _lineHeight,
-                        segments: [
-                          if (isRtl)
-                            SegmentLinearIndicator(
-                              percent: 1.0 - clampedPercentage,
-                              color: Colors.orange,
-                            ),
-                            SegmentLinearIndicator(
-                              percent: clampedPercentage,
-                              color: Colors.green,
-                              enableStripes: true,
-                            ),
-                          if (!isRtl)
-                            SegmentLinearIndicator(
-                              percent: 1.0 - clampedPercentage,
-                              color: Colors.orange,
-                            ),
+                        segments: isRtl
+                            ? [
+                          // RTL: reste (gauche) puis acquis (droite)
+                          SegmentLinearIndicator(
+                            percent: 1.0 - clampedPercentage,
+                            color: Colors.orange,
+                          ),
+                          SegmentLinearIndicator(
+                            percent: clampedPercentage,
+                            color: Colors.green,
+                            enableStripes: true,
+                          ),
+                        ]
+                            : [
+                          // LTR: acquis (gauche) puis reste (droite)
+                          SegmentLinearIndicator(
+                            percent: clampedPercentage,
+                            color: Colors.green,
+                            enableStripes: true,
+                          ),
+                          SegmentLinearIndicator(
+                            percent: 1.0 - clampedPercentage,
+                            color: Colors.orange,
+                          ),
                         ],
                         barRadius: const Radius.circular(5.0),
                       ),
                     ),
                   ),
 
-                  // Curseur (logo + texte) positionné par rapport à la largeur réelle
+                  // CURSEUR (logo + texte)
                   Positioned(
                     left: _getPositionLeftCursor(
                       percentage: clampedPercentage,
                       width: availableWidth,
                       isRtl: isRtl,
                     ),
+                    // Centre verticalement pour éviter tout "vide" en dessous
+                    top: (heightIndicator - max(_cursorSize, _lineHeight)) / 2,
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
-                      // S'assure que l'ordre visuel suit la Directionality
                       textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
                       children: [
                         if (clampedPercentage > 0.2) ...[
@@ -308,7 +318,9 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                         ],
                         Image.asset(
                           "assets/brand/logo_landing.png",
-                          width: _logoWidth, // synchronisé avec le calcul
+                          width: _cursorSize,
+                          height: _cursorSize,
+                          fit: BoxFit.contain,
                         ),
                         if (clampedPercentage <= 0.2) ...[
                           const SizedBox(width: _gap),
@@ -333,7 +345,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
             ),
           ),
         )
-      ]
+      ],
     );
   }
 
@@ -342,25 +354,20 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     required double width, // largeur réelle (après padding)
     required bool isRtl,
   }) {
-    // Largeurs cohérentes avec le rendu réel
     const double textBlockWidth = _textWidth + _gap;
-    const double halfImageWidth = _logoWidth / 2;
+    const double halfImageWidth = _cursorSize / 2;
 
-    // Position de la jonction (à partir du bord gauche de la barre)
-    final double junctionPoint =
-    isRtl ? width * (1 - percentage) : width * percentage;
+    // Position de la jonction (à partir du bord gauche)
+    final double junctionPoint = isRtl ? width * (1 - percentage) : width * percentage;
 
     // Le logo apparaît visuellement en premier selon le sens + seuil 0.2
     final bool isLogoVisuallyFirst = (isRtl && percentage > 0.2) || (!isRtl && percentage <= 0.2);
 
-    // Décalage du centre du logo dans la Row (depuis son bord "start")
     final double logoCenterOffsetInRow =
     isLogoVisuallyFirst ? halfImageWidth : textBlockWidth + halfImageWidth;
 
-    // Bord gauche de la Row pour centrer le logo exactement sur la jonction
     final double idealLeft = junctionPoint - logoCenterOffsetInRow;
 
-    // Pas de clamp ici pour autoriser le débordement volontaire du logo
-    return idealLeft;
+    return idealLeft; // pas de clamp: débordement volontaire ok
   }
 }

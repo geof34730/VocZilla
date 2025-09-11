@@ -491,6 +491,37 @@ class VocabulaireUserRepository {
     return null; // Retourne null en cas d'erreur ou si les données sont null
   }
 
+
+  Future<VocabulaireUser?> filterShowAllList({required String local}) async {
+    try {
+      var userData = await getVocabulaireUserData(local: local);
+      if (userData != null) {
+        final updatedUserData = userData.copyWith(allListView: true);
+        await updateVocabulaireUserData(userData: updatedUserData);
+        Logger.Green.log('view toutes les listes activé.');
+        return updatedUserData;
+      }
+    } catch (e) {
+      Logger.Red.log('Erreur lors de l\'activation de l\'affichage de toutes les listes : $e');
+    }
+    return null;
+  }
+
+  Future<VocabulaireUser?> filterHidListFinished({required String local}) async {
+    try {
+      var userData = await getVocabulaireUserData(local: local);
+      if (userData != null) {
+        final updatedUserData = userData.copyWith(allListView: false);
+        await updateVocabulaireUserData(userData: updatedUserData);
+        Logger.Green.log('view just listes non terminées activé.');
+        return updatedUserData;
+      }
+    } catch (e) {
+      Logger.Red.log('Erreur lors de l\'activation de l\'affichage des listes non terminées : $e');
+    }
+    return null;
+  }
+
   Future<bool> isListEnd({required String listName}) async {
     final userDataJson = await localStorageService.getUserData();
     if(userDataJson?['ListDefinedEnd'] != null){
@@ -501,8 +532,15 @@ class VocabulaireUserRepository {
     }
   }
 
+  Future<bool> isFilterAllList() async {
+    final userDataJson = await localStorageService.getUserData();
+    return userDataJson?['AllListView'];
+  }
 
-
+  Future<bool> isListEndPresent() async{
+    final userDataJson = await localStorageService.getUserData();
+    return userDataJson?['ListDefinedEnd'].length > 0;
+  }
 
   Future<void> checkAndUpdateStatutEndList({required String listName, required double percentage, required BuildContext context}) async {
    // print('checkStatutEnDefined listName: $listName percentage: $percentage');
