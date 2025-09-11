@@ -652,4 +652,16 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Плащането ще бъде таксувано от вашия iTunes акаунт при потвърждение на покупката. Абонаментът се подновява автоматично, освен ако не бъде деактивиран поне 24 часа преди края на текущия период. Можете да управлявате абонамента си и да изключите автоматичното подновяване в настройките на акаунта си. 7-дневният безплатен пробен период се управлява от приложението (нови акаунти).';
+
+  @override
+  String get card_home_finished => 'завършен';
+
+  @override
+  String get title_all_list_defined => 'Всички наши дефинирани списъци';
+
+  @override
+  String get title_all_list_perso => 'Всички ваши персонализирани списъци';
+
+  @override
+  String get title_all_list_theme => 'Всички наши списъци с теми';
 }

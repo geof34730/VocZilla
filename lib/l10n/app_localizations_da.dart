@@ -652,4 +652,16 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Betalingen vil blive opkrævet på din iTunes-konto ved bekræftelse af købet. Abonnementet fornyes automatisk, medmindre det deaktiveres mindst 24 timer før udgangen af den aktuelle periode. Du kan administrere dit abonnement og deaktivere automatisk fornyelse i dine kontoindstillinger. Den 7-dages gratis prøveperiode administreres af appen (nye konti).';
+
+  @override
+  String get card_home_finished => 'færdig';
+
+  @override
+  String get title_all_list_defined => 'Alle vores definerede lister';
+
+  @override
+  String get title_all_list_perso => 'Alle dine personlige lister';
+
+  @override
+  String get title_all_list_theme => 'Alle vores temalister';
 }

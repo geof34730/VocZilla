@@ -652,4 +652,16 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Плаќањето ќе биде наплатено од вашата iTunes сметка при потврда на купувањето. Претплатата се обновува автоматски освен ако не е исклучена најмалку 24 часа пред крајот на тековниот период. Можете да управувате со вашата претплата и да го исклучите автоматското обновување во поставките на вашата сметка. 7-дневниот бесплатен пробен период го управува апликацијата (нови сметки).';
+
+  @override
+  String get card_home_finished => 'завршено';
+
+  @override
+  String get title_all_list_defined => 'Сите наши дефинирани листи';
+
+  @override
+  String get title_all_list_perso => 'Сите ваши персонализирани листи';
+
+  @override
+  String get title_all_list_theme => 'Сите наши листи со теми';
 }

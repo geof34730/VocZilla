@@ -652,4 +652,16 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Thanh toán sẽ được trừ vào tài khoản iTunes của bạn khi xác nhận mua hàng. Đăng ký sẽ tự động gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kết thúc chu kỳ hiện tại. Bạn có thể quản lý đăng ký và tắt tính năng tự động gia hạn trong Cài đặt Tài khoản. Bản dùng thử miễn phí 7 ngày được quản lý bởi ứng dụng (tài khoản mới).';
+
+  @override
+  String get card_home_finished => 'hoàn thành';
+
+  @override
+  String get title_all_list_defined => 'Tất cả các danh sách đã xác định của chúng tôi';
+
+  @override
+  String get title_all_list_perso => 'Tất cả danh sách cá nhân của bạn';
+
+  @override
+  String get title_all_list_theme => 'Tất cả danh sách chủ đề của chúng tôi';
 }

@@ -652,4 +652,16 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Greiðsla verður gjaldfærð á iTunes reikninginn þinn við staðfestingu kaupanna. Áskriftin endurnýjast sjálfkrafa nema hún sé slökkt á að minnsta kosti 24 klukkustundum fyrir lok núverandi tímabils. Þú getur stjórnað áskriftinni þinni og slökkt á sjálfvirkri endurnýjun í reikningsstillingunum þínum. 7 daga ókeypis prufuáskriftin er stjórnað af appinu (nýir reikningar).';
+
+  @override
+  String get card_home_finished => 'lokið';
+
+  @override
+  String get title_all_list_defined => 'Allir skilgreindir listar okkar';
+
+  @override
+  String get title_all_list_perso => 'Allir þínir sérsniðnu listar';
+
+  @override
+  String get title_all_list_theme => 'Allir þemalistar okkar';
 }

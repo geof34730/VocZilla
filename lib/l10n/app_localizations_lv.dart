@@ -652,4 +652,16 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Maksājums tiks iekasēts no jūsu iTunes konta, kad būs apstiprināts pirkums. Abonements tiek automātiski atjaunots, ja vien tas netiek izslēgts vismaz 24 stundas pirms pašreizējā perioda beigām. Jūs varat pārvaldīt savu abonementu un izslēgt automātisko atjaunošanu sava konta iestatījumos. 7 dienu bezmaksas izmēģinājuma periodu pārvalda lietotne (jauni konti).';
+
+  @override
+  String get card_home_finished => 'pabeigts';
+
+  @override
+  String get title_all_list_defined => 'Visi mūsu definētie saraksti';
+
+  @override
+  String get title_all_list_perso => 'Visi jūsu personalizētie saraksti';
+
+  @override
+  String get title_all_list_theme => 'Visi mūsu tēmu saraksti';
 }

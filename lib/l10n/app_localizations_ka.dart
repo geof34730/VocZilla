@@ -652,4 +652,16 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'გადახდა ჩამოიჭრება თქვენი iTunes ანგარიშიდან შეძენის დადასტურებისთანავე. გამოწერა ავტომატურად განახლდება, თუ არ გამორთავთ მიმდინარე პერიოდის დასრულებამდე სულ მცირე 24 საათით ადრე. თქვენ შეგიძლიათ მართოთ თქვენი გამოწერა და გამორთოთ ავტომატური განახლება თქვენი ანგარიშის პარამეტრებში. 7-დღიან უფასო საცდელ პერიოდს მართავს აპლიკაცია (ახალი ანგარიშები).';
+
+  @override
+  String get card_home_finished => 'დასრულებული';
+
+  @override
+  String get title_all_list_defined => 'ჩვენი ყველა განსაზღვრული სია';
+
+  @override
+  String get title_all_list_perso => 'თქვენი ყველა პერსონალიზებული სია';
+
+  @override
+  String get title_all_list_theme => 'ჩვენი ყველა თემატური სია';
 }

@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Actualizaciones y soporte incluidos",
     "subscription_plan_badge_best_offer": "2 meses gratis",
     "subscription_legal_note": "El pago se cargará a tu cuenta de iTunes al confirmar la compra. La suscripción se renueva automáticamente a menos que la desactives al menos 24 horas antes del final del periodo actual. Puedes gestionar tu suscripción y desactivar la renovación automática en la configuración de tu cuenta. La prueba gratuita de 7 días se gestiona desde la app (cuentas nuevas).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "finalizado",
+    "title_all_list_defined": "Todas nuestras listas definidas",
+    "title_all_list_perso": "Todas tus listas personalizadas",
+    "title_all_list_theme": "Todas nuestras listas de temas"
 }

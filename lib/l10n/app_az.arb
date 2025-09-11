@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Yeniləmələr və dəstək daxildir",
     "subscription_plan_badge_best_offer": "2 ay pulsuz",
     "subscription_legal_note": "Ödəniş satınalma təsdiq edildikdən sonra iTunes hesabınızdan tutulacaq. Cari dövrün sonuna ən azı 24 saat qalmış söndürülmədikdə abunə avtomatik olaraq yenilənir. Siz abunəliyinizi idarə edə və Hesab Ayarlarınızda avtomatik yenilənməni söndürə bilərsiniz. 7 günlük pulsuz sınaq tətbiq tərəfindən idarə olunur (yeni hesablar).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "bitdi",
+    "title_all_list_defined": "Bütün müəyyən edilmiş siyahılarımız",
+    "title_all_list_perso": "Bütün fərdi siyahılarınız",
+    "title_all_list_theme": "Bütün mövzu siyahılarımız"
 }

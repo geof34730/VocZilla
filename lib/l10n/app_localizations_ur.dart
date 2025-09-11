@@ -652,4 +652,16 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'خریداری کی تصدیق پر ادائیگی آپ کے iTunes اکاؤنٹ سے وصول کی جائے گی۔ سبسکرپشن خود بخود تجدید ہو جاتی ہے جب تک کہ موجودہ مدت کے اختتام سے کم از کم 24 گھنٹے پہلے بند کر دیا جائے۔ آپ اپنی رکنیت کا نظم کر سکتے ہیں اور اپنے اکاؤنٹ کی ترتیبات میں خودکار تجدید کو بند کر سکتے ہیں۔ 7 دن کی مفت آزمائش کا انتظام ایپ (نئے اکاؤنٹس) کے ذریعے کیا جاتا ہے۔';
+
+  @override
+  String get card_home_finished => 'ختم';
+
+  @override
+  String get title_all_list_defined => 'ہماری تمام متعین فہرستیں۔';
+
+  @override
+  String get title_all_list_perso => 'آپ کی تمام ذاتی فہرستیں۔';
+
+  @override
+  String get title_all_list_theme => 'ہماری تمام تھیم کی فہرستیں۔';
 }

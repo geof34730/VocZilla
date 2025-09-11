@@ -652,4 +652,16 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Η πληρωμή θα χρεωθεί στον λογαριασμό σας iTunes κατά την επιβεβαίωση της αγοράς. Η συνδρομή ανανεώνεται αυτόματα, εκτός εάν απενεργοποιηθεί τουλάχιστον 24 ώρες πριν από το τέλος της τρέχουσας περιόδου. Μπορείτε να διαχειριστείτε τη συνδρομή σας και να απενεργοποιήσετε την αυτόματη ανανέωση στις Ρυθμίσεις λογαριασμού σας. Η δωρεάν δοκιμαστική περίοδος 7 ημερών διαχειρίζεται από την εφαρμογή (νέοι λογαριασμοί).';
+
+  @override
+  String get card_home_finished => 'πεπερασμένος';
+
+  @override
+  String get title_all_list_defined => 'Όλες οι καθορισμένες λίστες μας';
+
+  @override
+  String get title_all_list_perso => 'Όλες οι εξατομικευμένες λίστες σας';
+
+  @override
+  String get title_all_list_theme => 'Όλες οι λίστες θεμάτων μας';
 }

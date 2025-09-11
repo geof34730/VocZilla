@@ -652,4 +652,16 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'A fizetés a vásárlás visszaigazolásakor az iTunes-fiókodra lesz terhelve. Az előfizetés automatikusan megújul, kivéve, ha legalább 24 órával az aktuális időszak vége előtt kikapcsolod. Az előfizetésedet kezelheted és kikapcsolhatod az automatikus megújítást a Fiókbeállításaidban. A 7 napos ingyenes próbaidőszakot az alkalmazás kezeli (új fiókok).';
+
+  @override
+  String get card_home_finished => 'befejezett';
+
+  @override
+  String get title_all_list_defined => 'Minden definiált listánk';
+
+  @override
+  String get title_all_list_perso => 'Az összes személyre szabott listád';
+
+  @override
+  String get title_all_list_theme => 'Az összes témalistánk';
 }

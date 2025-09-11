@@ -652,4 +652,16 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ખરીદીની પુષ્ટિ પર તમારા iTunes એકાઉન્ટમાંથી ચુકવણી વસૂલવામાં આવશે. વર્તમાન સમયગાળાના અંતના ઓછામાં ઓછા 24 કલાક પહેલાં બંધ ન કરવામાં આવે તો સબ્સ્ક્રિપ્શન આપમેળે રિન્યૂ થાય છે. તમે તમારા એકાઉન્ટ સેટિંગ્સમાં તમારા સબ્સ્ક્રિપ્શનને મેનેજ કરી શકો છો અને સ્વતઃ-નવીકરણને બંધ કરી શકો છો. 7-દિવસની મફત અજમાયશ એપ્લિકેશન (નવા એકાઉન્ટ્સ) દ્વારા સંચાલિત થાય છે.';
+
+  @override
+  String get card_home_finished => 'સમાપ્ત';
+
+  @override
+  String get title_all_list_defined => 'અમારી બધી નિર્ધારિત યાદીઓ';
+
+  @override
+  String get title_all_list_perso => 'તમારી બધી વ્યક્તિગત યાદીઓ';
+
+  @override
+  String get title_all_list_theme => 'અમારી બધી થીમ યાદીઓ';
 }

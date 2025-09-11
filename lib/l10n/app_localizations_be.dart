@@ -652,4 +652,16 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Аплата будзе знята з вашага ўліковага запісу iTunes пасля пацверджання пакупкі. Падпіска аўтаматычна падаўжаецца, калі яе не адключыць як мінімум за 24 гадзіны да заканчэння бягучага перыяду. Вы можаце кіраваць сваёй падпіскай і адключыць аўтаматычнае падаўжэнне ў наладах уліковага запісу. 7-дзённы бясплатны пробны перыяд кіруецца праграмай (новыя ўліковыя запісы).';
+
+  @override
+  String get card_home_finished => 'скончаны';
+
+  @override
+  String get title_all_list_defined => 'Усе нашы вызначаныя спісы';
+
+  @override
+  String get title_all_list_perso => 'Усе вашы персаналізаваныя спісы';
+
+  @override
+  String get title_all_list_theme => 'Усе нашы тэматычныя спісы';
 }

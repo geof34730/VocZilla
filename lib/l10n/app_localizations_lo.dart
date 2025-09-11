@@ -652,4 +652,16 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ການ​ຊໍາ​ລະ​ເງິນ​ຈະ​ຖືກ​ຄິດ​ຄ່າ​ກັບ​ບັນ​ຊີ iTunes ຂອງ​ທ່ານ​ໃນ​ການ​ຢືນ​ຢັນ​ການ​ຊື້​. ການສະໝັກໃຊ້ຈະຕໍ່ອາຍຸໂດຍອັດຕະໂນມັດເວັ້ນເສຍແຕ່ຈະປິດຢ່າງໜ້ອຍ 24 ຊົ່ວໂມງກ່ອນໝົດໄລຍະເວລາປັດຈຸບັນ. ທ່ານສາມາດຈັດການການສະໝັກໃຊ້ຂອງທ່ານແລະປິດການຕໍ່ອາຍຸອັດຕະໂນມັດໄດ້ໃນການຕັ້ງຄ່າບັນຊີຂອງທ່ານ. ການທົດລອງໃຊ້ຟຣີ 7 ມື້ແມ່ນຈັດການໂດຍແອັບ (ບັນຊີໃໝ່).';
+
+  @override
+  String get card_home_finished => 'ສໍາເລັດ';
+
+  @override
+  String get title_all_list_defined => 'ບັນຊີລາຍຊື່ທີ່ກໍານົດໄວ້ທັງຫມົດຂອງພວກເຮົາ';
+
+  @override
+  String get title_all_list_perso => 'ບັນຊີລາຍຊື່ສ່ວນບຸກຄົນທັງຫມົດຂອງທ່ານ';
+
+  @override
+  String get title_all_list_theme => 'ບັນຊີລາຍຊື່ຫົວຂໍ້ຂອງພວກເຮົາທັງຫມົດ';
 }

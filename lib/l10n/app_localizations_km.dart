@@ -652,4 +652,16 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ការទូទាត់នឹងត្រូវបានគិតប្រាក់ទៅក្នុងគណនី iTunes របស់អ្នកនៅពេលបញ្ជាក់ការទិញ។ ការជាវបន្តដោយស្វ័យប្រវត្តិលុះត្រាតែបិទយ៉ាងហោចណាស់ 24 ម៉ោងមុនពេលចុងបញ្ចប់នៃរយៈពេលបច្ចុប្បន្ន។ អ្នកអាចគ្រប់គ្រងការជាវរបស់អ្នក និងបិទការបន្តដោយស្វ័យប្រវត្តិនៅក្នុងការកំណត់គណនីរបស់អ្នក។ ការសាកល្បងឥតគិតថ្លៃរយៈពេល 7 ថ្ងៃត្រូវបានគ្រប់គ្រងដោយកម្មវិធី (គណនីថ្មី)។';
+
+  @override
+  String get card_home_finished => 'បានបញ្ចប់';
+
+  @override
+  String get title_all_list_defined => 'បញ្ជីដែលបានកំណត់ទាំងអស់របស់យើង។';
+
+  @override
+  String get title_all_list_perso => 'បញ្ជីផ្ទាល់ខ្លួនរបស់អ្នកទាំងអស់។';
+
+  @override
+  String get title_all_list_theme => 'បញ្ជីប្រធានបទទាំងអស់របស់យើង។';
 }

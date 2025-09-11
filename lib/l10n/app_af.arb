@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Opdaterings en ondersteuning ingesluit",
     "subscription_plan_badge_best_offer": "2 maande gratis",
     "subscription_legal_note": "Betaling sal van jou iTunes-rekening gedebiteer word met bevestiging van aankoop. Die subskripsie hernu outomaties tensy dit ten minste 24 uur voor die einde van die huidige tydperk afgeskakel word. Jy kan jou subskripsie bestuur en outomatiese hernuwing in jou rekeninginstellings afskakel. Die 7-dae gratis proeflopie word deur die toepassing bestuur (nuwe rekeninge).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "klaar",
+    "title_all_list_defined": "Al ons gedefinieerde lyste",
+    "title_all_list_perso": "Al jou gepersonaliseerde lyste",
+    "title_all_list_theme": "Al ons temalyste"
 }

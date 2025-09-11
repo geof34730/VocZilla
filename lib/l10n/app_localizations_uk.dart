@@ -652,4 +652,16 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Оплата буде стягнута з вашого облікового запису iTunes після підтвердження покупки. Підписка автоматично поновлюється, якщо її не вимкнути принаймні за 24 години до закінчення поточного періоду. Ви можете керувати своєю підпискою та вимкнути автоматичне поновлення в налаштуваннях облікового запису. 7-денний безкоштовний пробний період керується додатком (нові облікові записи).';
+
+  @override
+  String get card_home_finished => 'закінчений';
+
+  @override
+  String get title_all_list_defined => 'Усі наші визначені списки';
+
+  @override
+  String get title_all_list_perso => 'Усі ваші персоналізовані списки';
+
+  @override
+  String get title_all_list_theme => 'Усі наші тематичні списки';
 }

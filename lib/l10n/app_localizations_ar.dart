@@ -652,4 +652,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'سيتم خصم المبلغ من حساب iTunes الخاص بك عند تأكيد الشراء. يُجدد الاشتراك تلقائيًا ما لم يتم إيقافه قبل 24 ساعة على الأقل من نهاية الفترة الحالية. يمكنك إدارة اشتراكك وإيقاف التجديد التلقائي من إعدادات حسابك. يُدير التطبيق (الحسابات الجديدة) الفترة التجريبية المجانية لمدة 7 أيام.';
+
+  @override
+  String get card_home_finished => 'انتهى';
+
+  @override
+  String get title_all_list_defined => 'جميع قوائمنا المحددة';
+
+  @override
+  String get title_all_list_perso => 'جميع قوائمك الشخصية';
+
+  @override
+  String get title_all_list_theme => 'جميع قوائم المواضيع لدينا';
 }

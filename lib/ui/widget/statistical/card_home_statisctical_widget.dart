@@ -130,7 +130,9 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
                   percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
                 }
               }
-
+              if (userDataSnapshot.hasData) {
+                VocabulaireUserRepository().checkAndUpdateStatutEndList(listName: widget.listName,percentage: percentageProgression.clamp(0.0, 1.0),context: context);
+              }
               // Construit toujours l'indicateur, ce qui évite les sauts d'interface.
               return _buildIndicator(percentage: percentageProgression);
             },
@@ -151,7 +153,6 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
   Widget _buildIndicator({required double percentage}) {
     final clampedPercentage = percentage.clamp(0.0, 1.0);
     final bool isRtl = Directionality.of(context) == TextDirection.rtl;
-    VocabulaireUserRepository().checkAndUpdateStatutEndList(listName: widget.listName,percentage: clampedPercentage,context: context);
     return Center(
       child: Stack(
         alignment: Alignment.center,

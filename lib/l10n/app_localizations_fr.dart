@@ -652,4 +652,16 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Paiement débité de votre compte iTunes à la confirmation de l’achat. Abonnement à renouvellement automatique sauf désactivation au moins 24 h avant la fin de la période en cours. Vous pouvez gérer votre abonnement et désactiver le renouvellement automatique dans les réglages de votre compte. Les 7 jours gratuits sont gérés par l’application (nouveaux comptes).';
+
+  @override
+  String get card_home_finished => 'terminé';
+
+  @override
+  String get title_all_list_defined => 'Toute nos listes définies';
+
+  @override
+  String get title_all_list_perso => 'Toute vos listes personnalisées';
+
+  @override
+  String get title_all_list_theme => 'Toute nos listes de thèmes';
 }

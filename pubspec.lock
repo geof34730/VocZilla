@@ -669,6 +669,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.4"
+  flutter_confetti:
+    dependency: "direct main"
+    description:
+      name: flutter_confetti
+      sha256: "7e46b82ea0adc456afc91037652bbfbd52a951804fde0708822fad5d68be6398"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.1"
   flutter_data_table:
     dependency: "direct main"
     description:
@@ -850,10 +858,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_svg
-      sha256: cd57f7969b4679317c17af6fd16ee233c1e60a82ed209d8a475c54fd6fd6f845
+      sha256: b9c2ad5872518a27507ab432d1fb97e8813b05f0fc693f9d40fad06d073e0678
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.0"
+    version: "2.2.1"
   flutter_test:
     dependency: transitive
     description: flutter

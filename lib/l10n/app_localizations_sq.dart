@@ -652,4 +652,16 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Pagesa do të ngarkohet në llogarinë tuaj iTunes pas konfirmimit të blerjes. Abonimi rinovohet automatikisht nëse nuk çaktivizohet të paktën 24 orë para përfundimit të periudhës aktuale. Ju mund ta menaxhoni abonimin tuaj dhe ta çaktivizoni rinovimin automatik në Cilësimet e Llogarisë suaj. Periudha provë falas 7-ditore menaxhohet nga aplikacioni (llogari të reja).';
+
+  @override
+  String get card_home_finished => 'mbaruar';
+
+  @override
+  String get title_all_list_defined => 'Të gjitha listat tona të përcaktuara';
+
+  @override
+  String get title_all_list_perso => 'Të gjitha listat tuaja të personalizuara';
+
+  @override
+  String get title_all_list_theme => 'Të gjitha listat tona të temave';
 }

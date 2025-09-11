@@ -652,4 +652,16 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ক্ৰয় নিশ্চিত কৰাৰ সময়ত আপোনাৰ iTunes একাউণ্টৰ পৰা পেমেন্ট চাৰ্জ কৰা হ\'ব। বৰ্তমানৰ সময়সীমা শেষ হোৱাৰ কমেও ২৪ ঘণ্টা আগতে বন্ধ নকৰালৈকে চাবস্ক্ৰিপচন স্বয়ংক্ৰিয়ভাৱে নবীকৰণ হয়। আপুনি আপোনাৰ স্বাক্ষৰণ ব্যৱস্থাপনা কৰিব পাৰে আৰু আপোনাৰ একাউণ্ট সংহতিসমূহত স্বয়ংক্ৰিয়-নবীকৰণ বন্ধ কৰিব পাৰে। ৭ দিনীয়া বিনামূলীয়া ট্ৰাইলটো এপটোৱে (নতুন একাউণ্ট) পৰিচালনা কৰে।';
+
+  @override
+  String get card_home_finished => 'সমাপ্ত কৰা';
+
+  @override
+  String get title_all_list_defined => 'আমাৰ সকলো নিৰ্ধাৰিত তালিকা';
+
+  @override
+  String get title_all_list_perso => 'আপোনাৰ সকলো ব্যক্তিগতকৃত তালিকা';
+
+  @override
+  String get title_all_list_theme => 'আমাৰ সকলো থিম লিষ্ট';
 }

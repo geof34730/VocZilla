@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Aktualizacje i wsparcie w zestawie",
     "subscription_plan_badge_best_offer": "2 miesiące za darmo",
     "subscription_legal_note": "Płatność zostanie pobrana z Twojego konta iTunes po potwierdzeniu zakupu. Subskrypcja odnawia się automatycznie, chyba że zostanie wyłączona co najmniej 24 godziny przed końcem bieżącego okresu. Możesz zarządzać subskrypcją i wyłączyć automatyczne odnawianie w Ustawieniach konta. 7-dniowy bezpłatny okres próbny jest zarządzany przez aplikację (nowe konta).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "gotowy",
+    "title_all_list_defined": "Wszystkie nasze zdefiniowane listy",
+    "title_all_list_perso": "Wszystkie Twoje spersonalizowane listy",
+    "title_all_list_theme": "Wszystkie nasze listy tematyczne"
 }

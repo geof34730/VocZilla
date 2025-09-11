@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_confetti/flutter_confetti.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voczilla/core/utils/localization.dart';
 import 'package:voczilla/data/repository/vocabulaire_repository.dart';
@@ -31,19 +32,27 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final codelang = Localizations.localeOf(context).languageCode;
+    bool light = false;
     return Column(
           key: ValueKey('home_logged'),
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            titleWidget(text:  context.loc.home_title_progresse,codelang: codelang),
             GlobalStatisticalWidget(
               isListPerso : false,
               isListTheme : false,
               local: codelang,
               listName: null,
+              title: context.loc.home_title_progresse,
+            ),
+            Center(
+              child:Switch(
+                value: light,
+                onChanged: (bool value) {
+                    light = value;
+                },
+              )
             ),
             HomelistPerso(),
             titleWidget(text: context.loc.home_title_list_defined,codelang: codelang),
@@ -55,7 +64,6 @@ class HomeScreen extends StatelessWidget {
             titleWidget(text: context.loc.home_title_classement,codelang: codelang),
             HomeClassement()
           ]
-
     );
   }
 }

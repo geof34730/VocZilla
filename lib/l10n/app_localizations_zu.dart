@@ -652,4 +652,16 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Inkokhelo izokhokhiswa ku-akhawunti yakho ye-iTunes lapho kuqinisekiswa ukuthi uthenge. Ukubhalisa kuvuselelwa ngokuzenzakalela ngaphandle uma kucishiwe okungenani amahora angama-24 ngaphambi kokuphela kwesikhathi samanje. Ungaphatha ukubhalisa kwakho futhi uvale ukwenza kabusha okuzenzakalelayo kuzilungiselelo ze-akhawunti yakho. Isivivinyo samahhala sezinsuku ezingu-7 siphethwe uhlelo lokusebenza (ama-akhawunti amasha).';
+
+  @override
+  String get card_home_finished => 'qedile';
+
+  @override
+  String get title_all_list_defined => 'Zonke izinhlu zethu ezichaziwe';
+
+  @override
+  String get title_all_list_perso => 'Lonke uhlu lwakho oluqondene nawe';
+
+  @override
+  String get title_all_list_theme => 'Lonke uhlu lwetimu yethu';
 }

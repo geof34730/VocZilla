@@ -652,4 +652,16 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'खरेदीची पुष्टी झाल्यावर तुमच्या iTunes खात्यातून पेमेंट आकारले जाईल. सध्याचा कालावधी संपण्याच्या किमान २४ तास आधी बंद न केल्यास सबस्क्रिप्शन आपोआप रिन्यू होते. तुम्ही तुमचे सबस्क्रिप्शन व्यवस्थापित करू शकता आणि तुमच्या अकाउंट सेटिंग्जमध्ये ऑटो-नूतनीकरण बंद करू शकता. ७ दिवसांची मोफत चाचणी अॅपद्वारे व्यवस्थापित केली जाते (नवीन खाती).';
+
+  @override
+  String get card_home_finished => 'पूर्ण झाले';
+
+  @override
+  String get title_all_list_defined => 'आमच्या सर्व परिभाषित याद्या';
+
+  @override
+  String get title_all_list_perso => 'तुमच्या सर्व वैयक्तिकृत सूची';
+
+  @override
+  String get title_all_list_theme => 'आमच्या सर्व थीम याद्या';
 }

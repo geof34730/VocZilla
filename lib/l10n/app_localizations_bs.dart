@@ -652,4 +652,16 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Naplata će biti izvršena s vašeg iTunes računa nakon potvrde kupovine. Pretplata se automatski obnavlja osim ako se ne isključi najmanje 24 sata prije kraja tekućeg perioda. Možete upravljati svojom pretplatom i isključiti automatsko obnavljanje u Postavkama računa. Besplatnim probnim periodom od 7 dana upravlja aplikacija (novi računi).';
+
+  @override
+  String get card_home_finished => 'završeno';
+
+  @override
+  String get title_all_list_defined => 'Sve naše definirane liste';
+
+  @override
+  String get title_all_list_perso => 'Sve vaše personalizirane liste';
+
+  @override
+  String get title_all_list_theme => 'Sve naše tematske liste';
 }

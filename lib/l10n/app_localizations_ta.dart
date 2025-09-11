@@ -652,4 +652,16 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'வாங்கியதை உறுதிப்படுத்தியவுடன் உங்கள் iTunes கணக்கில் கட்டணம் வசூலிக்கப்படும். தற்போதைய சந்தா காலம் முடிவதற்கு குறைந்தது 24 மணிநேரத்திற்கு முன்பு முடக்கப்படாவிட்டால், சந்தா தானாகவே புதுப்பிக்கப்படும். உங்கள் கணக்கு அமைப்புகளில் உங்கள் சந்தாவை நிர்வகிக்கலாம் மற்றும் தானியங்கி புதுப்பித்தலை முடக்கலாம். 7 நாள் இலவச சோதனையானது ஆப்ஸால் (புதிய கணக்குகள்) நிர்வகிக்கப்படுகிறது.';
+
+  @override
+  String get card_home_finished => 'முடிந்தது';
+
+  @override
+  String get title_all_list_defined => 'எங்கள் வரையறுக்கப்பட்ட பட்டியல்கள் அனைத்தும்';
+
+  @override
+  String get title_all_list_perso => 'உங்கள் தனிப்பயனாக்கப்பட்ட பட்டியல்கள் அனைத்தும்';
+
+  @override
+  String get title_all_list_theme => 'எங்கள் அனைத்து தீம் பட்டியல்களும்';
 }

@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Uppfærslur og stuðningur innifalinn",
     "subscription_plan_badge_best_offer": "2 mánuðir frítt",
     "subscription_legal_note": "Greiðsla verður gjaldfærð á iTunes reikninginn þinn við staðfestingu kaupanna. Áskriftin endurnýjast sjálfkrafa nema hún sé slökkt á að minnsta kosti 24 klukkustundum fyrir lok núverandi tímabils. Þú getur stjórnað áskriftinni þinni og slökkt á sjálfvirkri endurnýjun í reikningsstillingunum þínum. 7 daga ókeypis prufuáskriftin er stjórnað af appinu (nýir reikningar).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "lokið",
+    "title_all_list_defined": "Allir skilgreindir listar okkar",
+    "title_all_list_perso": "Allir þínir sérsniðnu listar",
+    "title_all_list_theme": "Allir þemalistar okkar"
 }

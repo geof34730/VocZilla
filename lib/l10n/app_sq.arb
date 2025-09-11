@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Përditësime dhe mbështetje të përfshira",
     "subscription_plan_badge_best_offer": "2 muaj falas",
     "subscription_legal_note": "Pagesa do të ngarkohet në llogarinë tuaj iTunes pas konfirmimit të blerjes. Abonimi rinovohet automatikisht nëse nuk çaktivizohet të paktën 24 orë para përfundimit të periudhës aktuale. Ju mund ta menaxhoni abonimin tuaj dhe ta çaktivizoni rinovimin automatik në Cilësimet e Llogarisë suaj. Periudha provë falas 7-ditore menaxhohet nga aplikacioni (llogari të reja).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "mbaruar",
+    "title_all_list_defined": "Të gjitha listat tona të përcaktuara",
+    "title_all_list_perso": "Të gjitha listat tuaja të personalizuara",
+    "title_all_list_theme": "Të gjitha listat tona të temave"
 }

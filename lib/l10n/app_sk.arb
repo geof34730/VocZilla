@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Aktualizácie a podpora sú zahrnuté",
     "subscription_plan_badge_best_offer": "2 mesiace zadarmo",
     "subscription_legal_note": "Platba bude zaúčtovaná na váš účet iTunes po potvrdení nákupu. Predplatné sa automaticky obnoví, pokiaľ ho nevypnete najmenej 24 hodín pred koncom aktuálneho obdobia. Svoje predplatné môžete spravovať a vypnúť automatické obnovovanie v nastaveniach účtu. 7-dňovú bezplatnú skúšobnú verziu spravuje aplikácia (nové účty).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "hotový",
+    "title_all_list_defined": "Všetky naše definované zoznamy",
+    "title_all_list_perso": "Všetky vaše prispôsobené zoznamy",
+    "title_all_list_theme": "Všetky naše zoznamy tém"
 }

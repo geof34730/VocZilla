@@ -652,4 +652,16 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Betaling sal van jou iTunes-rekening gedebiteer word met bevestiging van aankoop. Die subskripsie hernu outomaties tensy dit ten minste 24 uur voor die einde van die huidige tydperk afgeskakel word. Jy kan jou subskripsie bestuur en outomatiese hernuwing in jou rekeninginstellings afskakel. Die 7-dae gratis proeflopie word deur die toepassing bestuur (nuwe rekeninge).';
+
+  @override
+  String get card_home_finished => 'klaar';
+
+  @override
+  String get title_all_list_defined => 'Al ons gedefinieerde lyste';
+
+  @override
+  String get title_all_list_perso => 'Al jou gepersonaliseerde lyste';
+
+  @override
+  String get title_all_list_theme => 'Al ons temalyste';
 }

@@ -652,4 +652,16 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'මිලදී ගැනීම තහවුරු කිරීමේදී ඔබගේ iTunes ගිණුමට ගෙවීම අය කෙරේ. වත්මන් කාල සීමාව අවසන් වීමට අවම වශයෙන් පැය 24කට පෙර අක්‍රිය නොකළහොත් දායකත්වය ස්වයංක්‍රීයව අලුත් වේ. ඔබට ඔබගේ ගිණුම් සැකසුම් තුළ ඔබගේ දායකත්වය කළමනාකරණය කර ස්වයංක්‍රීයව අලුත් කිරීම අක්‍රිය කළ හැකිය. දින 7ක නොමිලේ අත්හදා බැලීම යෙදුම (නව ගිණුම්) මගින් කළමනාකරණය කෙරේ.';
+
+  @override
+  String get card_home_finished => 'අවසන්';
+
+  @override
+  String get title_all_list_defined => 'අපගේ සියලු අර්ථ දක්වා ඇති ලැයිස්තු';
+
+  @override
+  String get title_all_list_perso => 'ඔබගේ සියලු පුද්ගලාරෝපිත ලැයිස්තු';
+
+  @override
+  String get title_all_list_theme => 'අපගේ සියලුම තේමා ලැයිස්තු';
 }

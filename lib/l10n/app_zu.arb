@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Izibuyekezo nokusekelwa kufakiwe",
     "subscription_plan_badge_best_offer": "2 izinyanga mahhala",
     "subscription_legal_note": "Inkokhelo izokhokhiswa ku-akhawunti yakho ye-iTunes lapho kuqinisekiswa ukuthi uthenge. Ukubhalisa kuvuselelwa ngokuzenzakalela ngaphandle uma kucishiwe okungenani amahora angama-24 ngaphambi kokuphela kwesikhathi samanje. Ungaphatha ukubhalisa kwakho futhi uvale ukwenza kabusha okuzenzakalelayo kuzilungiselelo ze-akhawunti yakho. Isivivinyo samahhala sezinsuku ezingu-7 siphethwe uhlelo lokusebenza (ama-akhawunti amasha).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "qedile",
+    "title_all_list_defined": "Zonke izinhlu zethu ezichaziwe",
+    "title_all_list_perso": "Lonke uhlu lwakho oluqondene nawe",
+    "title_all_list_theme": "Lonke uhlu lwetimu yethu"
 }

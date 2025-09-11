@@ -652,4 +652,16 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'କ୍ରୟ ନିଶ୍ଚିତକରଣ ସମୟରେ ଆପଣଙ୍କ iTunes ଆକାଉଣ୍ଟକୁ ଦେୟ ଆଦାୟ କରାଯିବ। ବର୍ତ୍ତମାନର ଅବଧି ଶେଷ ହେବାର ଅତି କମରେ 24 ଘଣ୍ଟା ପୂର୍ବରୁ ସଦସ୍ୟତା ବନ୍ଦ ନହେଲେ ଏହା ସ୍ୱୟଂଚାଳିତ ଭାବରେ ନବୀକରଣ ହୁଏ। ଆପଣ ଆପଣଙ୍କର ଆକାଉଣ୍ଟ ସେଟିଂସ୍‌ରେ ଆପଣଙ୍କର ସଦସ୍ୟତା ପରିଚାଳନା କରିପାରିବେ ଏବଂ ସ୍ୱୟଂ-ନବୀକରଣ ବନ୍ଦ କରିପାରିବେ। 7-ଦିନର ମାଗଣା ପରୀକ୍ଷଣ ଆପ୍ (ନୂତନ ଆକାଉଣ୍ଟ) ଦ୍ୱାରା ପରିଚାଳିତ ହୁଏ।';
+
+  @override
+  String get card_home_finished => 'ସମାପ୍ତ';
+
+  @override
+  String get title_all_list_defined => 'ଆମର ସମସ୍ତ ପରିଭାଷିତ ତାଲିକା';
+
+  @override
+  String get title_all_list_perso => 'ଆପଣଙ୍କର ସମସ୍ତ ବ୍ୟକ୍ତିଗତ ତାଲିକା';
+
+  @override
+  String get title_all_list_theme => 'ଆମର ସମସ୍ତ ଥିମ୍ ତାଲିକା';
 }

@@ -652,4 +652,16 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Betalningen debiteras ditt iTunes-konto vid köpbekräftelse. Prenumerationen förnyas automatiskt om den inte stängs av minst 24 timmar före slutet av den aktuella perioden. Du kan hantera din prenumeration och stänga av automatisk förnyelse i dina kontoinställningar. Den 7 dagar långa gratis provperioden hanteras av appen (nya konton).';
+
+  @override
+  String get card_home_finished => 'färdig';
+
+  @override
+  String get title_all_list_defined => 'Alla våra definierade listor';
+
+  @override
+  String get title_all_list_perso => 'Alla dina personliga listor';
+
+  @override
+  String get title_all_list_theme => 'Alla våra temalistor';
 }

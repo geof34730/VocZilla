@@ -652,4 +652,16 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'खरिद पुष्टि भएपछि तपाईंको iTunes खातामा भुक्तानी शुल्क लगाइनेछ। हालको अवधि समाप्त हुनुभन्दा कम्तिमा २४ घण्टा अघि बन्द नगरिएमा सदस्यता स्वतः नवीकरण हुन्छ। तपाईं आफ्नो खाता सेटिङहरूमा आफ्नो सदस्यता व्यवस्थापन गर्न र स्वतः नवीकरण बन्द गर्न सक्नुहुन्छ। ७-दिनको निःशुल्क परीक्षण एप (नयाँ खाताहरू) द्वारा व्यवस्थित गरिन्छ।';
+
+  @override
+  String get card_home_finished => 'समाप्त भयो';
+
+  @override
+  String get title_all_list_defined => 'हाम्रा सबै परिभाषित सूचीहरू';
+
+  @override
+  String get title_all_list_perso => 'तपाईंका सबै निजीकृत सूचीहरू';
+
+  @override
+  String get title_all_list_theme => 'हाम्रा सबै विषयवस्तु सूचीहरू';
 }

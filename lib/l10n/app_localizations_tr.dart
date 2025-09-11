@@ -652,4 +652,16 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Satın alma işlemi onaylandığında ödeme iTunes hesabınızdan tahsil edilecektir. Abonelik, mevcut dönemin bitiminden en az 24 saat önce kapatılmadığı sürece otomatik olarak yenilenir. Aboneliğinizi yönetebilir ve Hesap Ayarlarınızdan otomatik yenilemeyi kapatabilirsiniz. 7 günlük ücretsiz deneme süresi uygulama tarafından yönetilir (yeni hesaplar).';
+
+  @override
+  String get card_home_finished => 'bitmiş';
+
+  @override
+  String get title_all_list_defined => 'Tüm tanımlı listelerimiz';
+
+  @override
+  String get title_all_list_perso => 'Tüm kişiselleştirilmiş listeleriniz';
+
+  @override
+  String get title_all_list_theme => 'Tüm tema listelerimiz';
 }

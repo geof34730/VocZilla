@@ -652,4 +652,16 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'El pago se cargará a tu cuenta de iTunes al confirmar la compra. La suscripción se renueva automáticamente a menos que la desactives al menos 24 horas antes del final del periodo actual. Puedes gestionar tu suscripción y desactivar la renovación automática en la configuración de tu cuenta. La prueba gratuita de 7 días se gestiona desde la app (cuentas nuevas).';
+
+  @override
+  String get card_home_finished => 'finalizado';
+
+  @override
+  String get title_all_list_defined => 'Todas nuestras listas definidas';
+
+  @override
+  String get title_all_list_perso => 'Todas tus listas personalizadas';
+
+  @override
+  String get title_all_list_theme => 'Todas nuestras listas de temas';
 }

@@ -652,4 +652,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get subscription_legal_note => '确认购买后，款项将从您的 iTunes 账户中扣除。除非在当前订阅期结束前至少 24 小时关闭，否则订阅将自动续订。您可以在“账户设置”中管理订阅并关闭自动续订。7 天免费试用期由应用管理（新账户）。';
+
+  @override
+  String get card_home_finished => '完成的';
+
+  @override
+  String get title_all_list_defined => '我们所有定义的列表';
+
+  @override
+  String get title_all_list_perso => '您所有的个性化列表';
+
+  @override
+  String get title_all_list_theme => '我们所有的主题列表';
 }

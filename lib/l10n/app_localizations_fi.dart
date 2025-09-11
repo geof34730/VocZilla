@@ -652,4 +652,16 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Maksu veloitetaan iTunes-tililtäsi ostoksen vahvistamisen yhteydessä. Tilaus uusiutuu automaattisesti, ellei sitä poisteta käytöstä vähintään 24 tuntia ennen nykyisen jakson päättymistä. Voit hallita tilaustasi ja poistaa automaattisen uusimisen käytöstä tilisi asetuksissa. Sovellus hallinnoi 7 päivän ilmaista kokeilujaksoa (uudet tilit).';
+
+  @override
+  String get card_home_finished => 'valmis';
+
+  @override
+  String get title_all_list_defined => 'Kaikki määritellyt listamme';
+
+  @override
+  String get title_all_list_perso => 'Kaikki henkilökohtaiset listasi';
+
+  @override
+  String get title_all_list_theme => 'Kaikki teemalistamme';
 }

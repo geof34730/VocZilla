@@ -652,4 +652,16 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Ordainketa zure iTunes kontuan kobratuko da erosketa baieztatzean. Harpidetza automatikoki berritzen da uneko epea amaitu baino gutxienez 24 ordu lehenago desaktibatu ezean. Zure harpidetza kudeatu eta berritze automatikoa desaktibatu dezakezu zure Kontuaren ezarpenetan. 7 eguneko doako proba aplikazioak kudeatzen du (kontu berriak).';
+
+  @override
+  String get card_home_finished => 'amaituta';
+
+  @override
+  String get title_all_list_defined => 'Gure zerrenda definituak guztiak';
+
+  @override
+  String get title_all_list_perso => 'Zure zerrenda pertsonalizatu guztiak';
+
+  @override
+  String get title_all_list_theme => 'Gure gai-zerrenda guztiak';
 }

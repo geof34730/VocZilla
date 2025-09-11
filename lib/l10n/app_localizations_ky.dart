@@ -652,4 +652,16 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Сатып алууну ырастаганда төлөм iTunes эсебиңизден алынат. Жазылуу учурдагы мезгилдин аягына чейин кеминде 24 саат калганда өчүрүлбөсө, автоматтык түрдө жаңыланат. Каттоо эсебиңиздин жөндөөлөрүнөн жазылууңузду башкарып, авто-жаңыртууну өчүрө аласыз. 7 күндүк акысыз сыноону колдонмо башкарат (жаңы аккаунттар).';
+
+  @override
+  String get card_home_finished => 'бүттү';
+
+  @override
+  String get title_all_list_defined => 'Биздин бардык аныкталган тизмелер';
+
+  @override
+  String get title_all_list_perso => 'Бардык жекелештирилген тизмелериңиз';
+
+  @override
+  String get title_all_list_theme => 'Биздин бардык тема тизмелери';
 }

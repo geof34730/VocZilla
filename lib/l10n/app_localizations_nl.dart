@@ -652,4 +652,16 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'De betaling wordt bij bevestiging van de aankoop in rekening gebracht op je iTunes-account. Het abonnement wordt automatisch verlengd, tenzij je het ten minste 24 uur voor het einde van de huidige periode uitschakelt. Je kunt je abonnement beheren en automatische verlenging uitschakelen in je accountinstellingen. De gratis proefperiode van 7 dagen wordt beheerd door de app (nieuwe accounts).';
+
+  @override
+  String get card_home_finished => 'afgerond';
+
+  @override
+  String get title_all_list_defined => 'Al onze gedefinieerde lijsten';
+
+  @override
+  String get title_all_list_perso => 'Al uw gepersonaliseerde lijsten';
+
+  @override
+  String get title_all_list_theme => 'Al onze themalijsten';
 }

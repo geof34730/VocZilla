@@ -502,30 +502,22 @@ class VocabulaireUserRepository {
   }
 
 
-  late final VocabulaireUserBloc _bloc;
 
-  // Setter method to inject the bloc
-  void setBloc(VocabulaireUserBloc bloc) {
-    _bloc = bloc;
-  }
 
   Future<void> checkAndUpdateStatutEndList({required String listName, required double percentage, required BuildContext context}) async {
-    // print('checkStatutEnDefined listName: $listName');
+   // print('checkStatutEnDefined listName: $listName percentage: $percentage');
     bool isInListEnd = await isListEnd(listName: listName);
     final bloc = BlocProvider.of<VocabulaireUserBloc>(context);
-
     if (percentage == 1.0) {
       ////CHECK PRESENCE LIST END
       if (!isInListEnd) {
         print("add $listName");
-        // addCompletedDefinedList(listName: listName,local:"fr");
         bloc.add(AddCompletedDefinedList(listName: listName, local: "fr"));
       }
     } else {
       if (isInListEnd) {
         print("remove $listName");
-        // removeCompletedDefinedList(listName: listName,local:"fr");
-        bloc.add(RemoveCompletedDefinedList(listName: listName, local: "fr"));
+       bloc.add(RemoveCompletedDefinedList(listName: listName, local: "fr"));
       }
     }
   }

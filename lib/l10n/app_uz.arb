@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Yangilanishlar va qo'llab-quvvatlash kiritilgan",
     "subscription_plan_badge_best_offer": "2 oy bepul",
     "subscription_legal_note": "Toʻlov xaridni tasdiqlashda iTunes hisobingizga oʻtkaziladi. Obuna joriy davr tugashiga kamida 24 soat qolganda o'chirilmasa, avtomatik ravishda yangilanadi. Hisob sozlamalarida obunangizni boshqarishingiz va avtomatik yangilashni o‘chirib qo‘yishingiz mumkin. 7 kunlik bepul sinov muddati ilova (yangi hisoblar) tomonidan boshqariladi.",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "tugatdi",
+    "title_all_list_defined": "Barcha belgilangan ro'yxatlarimiz",
+    "title_all_list_perso": "Barcha shaxsiy ro'yxatlaringiz",
+    "title_all_list_theme": "Bizning barcha mavzular ro'yxati"
 }

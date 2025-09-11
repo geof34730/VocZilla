@@ -1524,6 +1524,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Payment will be charged to your iTunes account at confirmation of purchase. Subscription automatically renews unless turned off at least 24 hours before the end of the current period. You can manage your subscription and turn off auto-renewal in your Account Settings. The 7-day free trial is managed by the app (new accounts).'**
   String get subscription_legal_note;
+
+  /// No description provided for @card_home_finished.
+  ///
+  /// In en, this message translates to:
+  /// **'finished'**
+  String get card_home_finished;
+
+  /// No description provided for @title_all_list_defined.
+  ///
+  /// In en, this message translates to:
+  /// **'All our defined lists'**
+  String get title_all_list_defined;
+
+  /// No description provided for @title_all_list_perso.
+  ///
+  /// In en, this message translates to:
+  /// **'All your personalized lists'**
+  String get title_all_list_perso;
+
+  /// No description provided for @title_all_list_theme.
+  ///
+  /// In en, this message translates to:
+  /// **'All our theme lists'**
+  String get title_all_list_theme;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

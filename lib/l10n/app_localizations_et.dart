@@ -652,4 +652,16 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Makse debiteeritakse teie iTunes\'i kontolt ostu kinnitamisel. Tellimus uueneb automaatselt, kui seda ei lülitata välja vähemalt 24 tundi enne praeguse perioodi lõppu. Saate oma tellimust hallata ja automaatse uuendamise välja lülitada oma konto seadetes. 7-päevast tasuta prooviperioodi haldab rakendus (uued kontod).';
+
+  @override
+  String get card_home_finished => 'lõpetanud';
+
+  @override
+  String get title_all_list_defined => 'Kõik meie määratletud loendid';
+
+  @override
+  String get title_all_list_perso => 'Kõik teie isikupärastatud loendid';
+
+  @override
+  String get title_all_list_theme => 'Kõik meie teemade loendid';
 }

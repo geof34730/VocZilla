@@ -652,4 +652,16 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'התשלום יחויב מחשבון iTunes שלך עם אישור הרכישה. המנוי מתחדש אוטומטית אלא אם כן הוא כבוי לפחות 24 שעות לפני תום התקופה הנוכחית. ניתן לנהל את המנוי שלך ולכבות את החידוש האוטומטי בהגדרות החשבון שלך. תקופת הניסיון החינמית ל-7 ימים מנוהלת על ידי האפליקציה (חשבונות חדשים).';
+
+  @override
+  String get card_home_finished => 'גָמוּר';
+
+  @override
+  String get title_all_list_defined => 'כל הרשימות המוגדרות שלנו';
+
+  @override
+  String get title_all_list_perso => 'כל הרשימות המותאמות אישית שלך';
+
+  @override
+  String get title_all_list_theme => 'כל רשימות הנושאים שלנו';
 }

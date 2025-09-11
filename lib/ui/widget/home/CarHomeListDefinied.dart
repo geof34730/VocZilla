@@ -40,16 +40,19 @@ List<Widget> getListDefined({required String view}) {
       keyStringTest = "top$begin$end";
     }
 
-    return SizedBox(
-      width: withCarhome,
-      child: CardHome(
-        title: title,
-        keyStringTest: keyStringTest,
-        listName: keyStringTest,
-        vocabulaireBegin: begin,
-        vocabulaireEnd: end,
-        paddingLevelBar: const EdgeInsets.only(bottom: 10, top: 5),
-      ),
+    return Padding(
+        padding: EdgeInsets.only(top:5),
+        child:SizedBox(
+            width: withCarhome,
+            child: CardHome(
+              title: title,
+              keyStringTest: keyStringTest,
+              listName: keyStringTest,
+              vocabulaireBegin: begin,
+              vocabulaireEnd: end,
+              paddingLevelBar: const EdgeInsets.only(bottom: 10, top: 5),
+            ),
+          )
     );
   }).toList();
 }

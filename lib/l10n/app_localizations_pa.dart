@@ -652,4 +652,16 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ਖਰੀਦ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ \'ਤੇ ਤੁਹਾਡੇ iTunes ਖਾਤੇ ਤੋਂ ਭੁਗਤਾਨ ਲਿਆ ਜਾਵੇਗਾ। ਗਾਹਕੀ ਆਪਣੇ ਆਪ ਰੀਨਿਊ ਹੋ ਜਾਂਦੀ ਹੈ ਜਦੋਂ ਤੱਕ ਮੌਜੂਦਾ ਮਿਆਦ ਦੇ ਅੰਤ ਤੋਂ ਘੱਟੋ-ਘੱਟ 24 ਘੰਟੇ ਪਹਿਲਾਂ ਬੰਦ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ। ਤੁਸੀਂ ਆਪਣੀ ਗਾਹਕੀ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਆਪਣੀਆਂ ਖਾਤਾ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਆਟੋ-ਨਵੀਨੀਕਰਨ ਨੂੰ ਬੰਦ ਕਰ ਸਕਦੇ ਹੋ। 7-ਦਿਨਾਂ ਦੀ ਮੁਫ਼ਤ ਅਜ਼ਮਾਇਸ਼ ਐਪ (ਨਵੇਂ ਖਾਤੇ) ਦੁਆਰਾ ਪ੍ਰਬੰਧਿਤ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।';
+
+  @override
+  String get card_home_finished => 'ਮੁਕੰਮਲ';
+
+  @override
+  String get title_all_list_defined => 'ਸਾਡੀਆਂ ਸਾਰੀਆਂ ਪਰਿਭਾਸ਼ਿਤ ਸੂਚੀਆਂ';
+
+  @override
+  String get title_all_list_perso => 'ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ ਵਿਅਕਤੀਗਤ ਸੂਚੀਆਂ';
+
+  @override
+  String get title_all_list_theme => 'ਸਾਡੀਆਂ ਸਾਰੀਆਂ ਥੀਮ ਸੂਚੀਆਂ';
 }

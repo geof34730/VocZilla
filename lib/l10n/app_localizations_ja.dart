@@ -652,4 +652,16 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'お支払いはご購入確定時にiTunesアカウントに請求されます。サブスクリプションは、現在の期間終了の24時間前までにオフにしない限り、自動的に更新されます。アカウント設定でサブスクリプションを管理し、自動更新をオフにすることができます。7日間の無料トライアルはアプリによって管理されます（新規アカウントの場合）。';
+
+  @override
+  String get card_home_finished => '終了した';
+
+  @override
+  String get title_all_list_defined => '定義済みのすべてのリスト';
+
+  @override
+  String get title_all_list_perso => 'すべてのパーソナライズされたリスト';
+
+  @override
+  String get title_all_list_theme => 'すべてのテーマリスト';
 }

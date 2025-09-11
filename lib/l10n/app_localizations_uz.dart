@@ -652,4 +652,16 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Toʻlov xaridni tasdiqlashda iTunes hisobingizga oʻtkaziladi. Obuna joriy davr tugashiga kamida 24 soat qolganda o\'chirilmasa, avtomatik ravishda yangilanadi. Hisob sozlamalarida obunangizni boshqarishingiz va avtomatik yangilashni o‘chirib qo‘yishingiz mumkin. 7 kunlik bepul sinov muddati ilova (yangi hisoblar) tomonidan boshqariladi.';
+
+  @override
+  String get card_home_finished => 'tugatdi';
+
+  @override
+  String get title_all_list_defined => 'Barcha belgilangan ro\'yxatlarimiz';
+
+  @override
+  String get title_all_list_perso => 'Barcha shaxsiy ro\'yxatlaringiz';
+
+  @override
+  String get title_all_list_theme => 'Bizning barcha mavzular ro\'yxati';
 }

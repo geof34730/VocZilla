@@ -652,4 +652,16 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Վճարումը կգանձվի ձեր iTunes հաշվից՝ գնման հաստատման դեպքում: Բաժանորդագրությունն ավտոմատ կերպով երկարաձգվում է, եթե այն չանջատեք ընթացիկ ժամանակահատվածի ավարտից առնվազն 24 ժամ առաջ: Դուք կարող եք կառավարել ձեր բաժանորդագրությունը և անջատել ավտոմատ երկարաձգումը ձեր հաշվի կարգավորումներում: 7-օրյա անվճար փորձաշրջանը կառավարվում է հավելվածի կողմից (նոր հաշիվներ):';
+
+  @override
+  String get card_home_finished => 'ավարտված';
+
+  @override
+  String get title_all_list_defined => 'Մեր բոլոր սահմանված ցուցակները';
+
+  @override
+  String get title_all_list_perso => 'Ձեր բոլոր անհատականացված ցուցակները';
+
+  @override
+  String get title_all_list_theme => 'Մեր բոլոր թեմաների ցանկերը';
 }

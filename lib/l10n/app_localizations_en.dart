@@ -652,4 +652,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Payment will be charged to your iTunes account at confirmation of purchase. Subscription automatically renews unless turned off at least 24 hours before the end of the current period. You can manage your subscription and turn off auto-renewal in your Account Settings. The 7-day free trial is managed by the app (new accounts).';
+
+  @override
+  String get card_home_finished => 'finished';
+
+  @override
+  String get title_all_list_defined => 'All our defined lists';
+
+  @override
+  String get title_all_list_perso => 'All your personalized lists';
+
+  @override
+  String get title_all_list_theme => 'All our theme lists';
 }

@@ -652,4 +652,16 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'การชำระเงินจะถูกหักจากบัญชี iTunes ของคุณเมื่อยืนยันการสั่งซื้อ การสมัครสมาชิกจะต่ออายุโดยอัตโนมัติ เว้นแต่จะปิดอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดระยะเวลาปัจจุบัน คุณสามารถจัดการการสมัครสมาชิกและปิดการต่ออายุอัตโนมัติได้ในการตั้งค่าบัญชีของคุณ การทดลองใช้ฟรี 7 วันได้รับการจัดการโดยแอป (สำหรับบัญชีใหม่)';
+
+  @override
+  String get card_home_finished => 'ที่เสร็จเรียบร้อย';
+
+  @override
+  String get title_all_list_defined => 'รายการทั้งหมดที่เรากำหนดไว้';
+
+  @override
+  String get title_all_list_perso => 'รายการส่วนบุคคลทั้งหมดของคุณ';
+
+  @override
+  String get title_all_list_theme => 'รายการธีมทั้งหมดของเรา';
 }

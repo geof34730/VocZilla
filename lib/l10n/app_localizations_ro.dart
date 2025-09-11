@@ -652,4 +652,16 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Plata va fi debitată din contul dvs. iTunes la confirmarea achiziției. Abonamentul se reînnoiește automat, cu excepția cazului în care este dezactivat cu cel puțin 24 de ore înainte de sfârșitul perioadei curente. Puteți gestiona abonamentul și dezactiva reînnoirea automată din Setările contului. Perioada de încercare gratuită de 7 zile este gestionată de aplicație (conturi noi).';
+
+  @override
+  String get card_home_finished => 'terminat';
+
+  @override
+  String get title_all_list_defined => 'Toate listele noastre definite';
+
+  @override
+  String get title_all_list_perso => 'Toate listele tale personalizate';
+
+  @override
+  String get title_all_list_theme => 'Toate listele noastre de teme';
 }

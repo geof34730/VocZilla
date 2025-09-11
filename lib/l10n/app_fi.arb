@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Päivitykset ja tuki sisältyvät hintaan",
     "subscription_plan_badge_best_offer": "2 kuukautta ilmaiseksi",
     "subscription_legal_note": "Maksu veloitetaan iTunes-tililtäsi ostoksen vahvistamisen yhteydessä. Tilaus uusiutuu automaattisesti, ellei sitä poisteta käytöstä vähintään 24 tuntia ennen nykyisen jakson päättymistä. Voit hallita tilaustasi ja poistaa automaattisen uusimisen käytöstä tilisi asetuksissa. Sovellus hallinnoi 7 päivän ilmaista kokeilujaksoa (uudet tilit).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "valmis",
+    "title_all_list_defined": "Kaikki määritellyt listamme",
+    "title_all_list_perso": "Kaikki henkilökohtaiset listasi",
+    "title_all_list_theme": "Kaikki teemalistamme"
 }

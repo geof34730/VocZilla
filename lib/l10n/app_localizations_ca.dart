@@ -652,4 +652,16 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'El pagament es carregarà al vostre compte d\'iTunes en confirmar la compra. La subscripció es renova automàticament tret que es desactivi almenys 24 hores abans que finalitzi el període actual. Podeu gestionar la vostra subscripció i desactivar la renovació automàtica a la configuració del compte. La prova gratuïta de 7 dies està gestionada per l\'aplicació (comptes nous).';
+
+  @override
+  String get card_home_finished => 'acabat';
+
+  @override
+  String get title_all_list_defined => 'Totes les nostres llistes definides';
+
+  @override
+  String get title_all_list_perso => 'Totes les teves llistes personalitzades';
+
+  @override
+  String get title_all_list_theme => 'Totes les nostres llistes temàtiques';
 }

@@ -652,4 +652,16 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Płatność zostanie pobrana z Twojego konta iTunes po potwierdzeniu zakupu. Subskrypcja odnawia się automatycznie, chyba że zostanie wyłączona co najmniej 24 godziny przed końcem bieżącego okresu. Możesz zarządzać subskrypcją i wyłączyć automatyczne odnawianie w Ustawieniach konta. 7-dniowy bezpłatny okres próbny jest zarządzany przez aplikację (nowe konta).';
+
+  @override
+  String get card_home_finished => 'gotowy';
+
+  @override
+  String get title_all_list_defined => 'Wszystkie nasze zdefiniowane listy';
+
+  @override
+  String get title_all_list_perso => 'Wszystkie Twoje spersonalizowane listy';
+
+  @override
+  String get title_all_list_theme => 'Wszystkie nasze listy tematyczne';
 }

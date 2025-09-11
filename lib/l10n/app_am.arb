@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "ዝማኔዎች እና ድጋፍ ተካትተዋል።",
     "subscription_plan_badge_best_offer": "2 ወራት ነጻ",
     "subscription_legal_note": "ክፍያው በግዢው ማረጋገጫ ላይ በ iTunes መለያዎ ላይ ይከፈላል. የአሁኑ ጊዜ ከማብቃቱ ቢያንስ 24 ሰዓታት በፊት ካልጠፋ በስተቀር ምዝገባው በራስ-ሰር ይታደሳል። የደንበኝነት ምዝገባዎን ማስተዳደር እና በራስ-እድሳትን በእርስዎ መለያ ቅንብሮች ውስጥ ማጥፋት ይችላሉ። የ7-ቀን ነጻ ሙከራው የሚተዳደረው በመተግበሪያው ነው (አዲስ መለያዎች)።",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "አልቋል",
+    "title_all_list_defined": "ሁሉም የእኛ የተገለጹ ዝርዝሮች",
+    "title_all_list_perso": "ሁሉም የእርስዎ ግላዊነት የተላበሱ ዝርዝሮች",
+    "title_all_list_theme": "ሁሉም የእኛ ጭብጥ ዝርዝሮች"
 }

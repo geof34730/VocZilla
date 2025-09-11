@@ -652,4 +652,16 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Ödəniş satınalma təsdiq edildikdən sonra iTunes hesabınızdan tutulacaq. Cari dövrün sonuna ən azı 24 saat qalmış söndürülmədikdə abunə avtomatik olaraq yenilənir. Siz abunəliyinizi idarə edə və Hesab Ayarlarınızda avtomatik yenilənməni söndürə bilərsiniz. 7 günlük pulsuz sınaq tətbiq tərəfindən idarə olunur (yeni hesablar).';
+
+  @override
+  String get card_home_finished => 'bitdi';
+
+  @override
+  String get title_all_list_defined => 'Bütün müəyyən edilmiş siyahılarımız';
+
+  @override
+  String get title_all_list_perso => 'Bütün fərdi siyahılarınız';
+
+  @override
+  String get title_all_list_theme => 'Bütün mövzu siyahılarımız';
 }

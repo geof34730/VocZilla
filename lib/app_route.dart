@@ -187,11 +187,15 @@ class AppRoute {
         case homeLogged:
           return Layout(child: HomeScreen());
         case allListsDefined:
-          return Layout(child: AllListsDefinedScreen(), titleScreen: "Toute nos listes définies");
+          return Layout(
+              child: AllListsDefinedScreen(),
+          //    titleScreen: context.loc.title_all_list_defined
+
+          );
         case allListsPerso:
-          return Layout(child: AllListsPersoScreen(), titleScreen: "Toute vos listes personnalisées");
+          return Layout(child: AllListsPersoScreen(), titleScreen: context.loc.title_all_list_perso);
         case allListsThemes:
-          return Layout(child: AllListsThemesScreen(), titleScreen: "Toute nos listes de thèmes");
+          return Layout(child: AllListsThemesScreen(), titleScreen: context.loc.title_all_list_theme);
         case updateScreen:
           return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
         case '/vocabulary':
@@ -231,7 +235,7 @@ class AppRoute {
                 );
               case 'quizz':
                 return Layout(
-                  titleScreen: context.loc.tester_title,
+               //   titleScreen: context.loc.tester_title,
                   showBottomNavigationBar: true,
                   itemSelected: 4,
                   listName: uri.pathSegments[2],

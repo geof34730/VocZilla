@@ -84,7 +84,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                           local: LanguageUtils.getSmallCodeLanguage(context: context)
                       ),
                       if (data.isEmpty)...[
-                        CongratulationOrErrorData(vocabulaireConnu:_vocabulaireConnu,context: context)
+                        CongratulationOrErrorData(vocabulaireConnu:_vocabulaireConnu)
                       ],
                       if (data.isNotEmpty)...[
                           Padding(

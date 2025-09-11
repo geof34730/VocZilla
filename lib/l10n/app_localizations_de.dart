@@ -652,4 +652,16 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Die Zahlung wird Ihrem iTunes-Konto nach Kaufbestätigung belastet. Das Abonnement verlängert sich automatisch, sofern es nicht mindestens 24 Stunden vor Ablauf der aktuellen Laufzeit gekündigt wird. Sie können Ihr Abonnement in Ihren Kontoeinstellungen verwalten und die automatische Verlängerung deaktivieren. Die 7-tägige kostenlose Testversion wird über die App verwaltet (neue Konten).';
+
+  @override
+  String get card_home_finished => 'fertig';
+
+  @override
+  String get title_all_list_defined => 'Alle unsere definierten Listen';
+
+  @override
+  String get title_all_list_perso => 'Alle Ihre personalisierten Listen';
+
+  @override
+  String get title_all_list_theme => 'Alle unsere Themenlisten';
 }

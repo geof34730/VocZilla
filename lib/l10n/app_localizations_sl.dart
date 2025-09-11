@@ -652,4 +652,16 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Plačilo bo bremenjeno z vašega računa iTunes ob potrditvi nakupa. Naročnina se samodejno podaljša, razen če je izklopite vsaj 24 ur pred koncem tekočega obdobja. Naročnino lahko upravljate in samodejno podaljšanje izklopite v nastavitvah računa. 7-dnevni brezplačni preizkus upravlja aplikacija (novi računi).';
+
+  @override
+  String get card_home_finished => 'končano';
+
+  @override
+  String get title_all_list_defined => 'Vsi naši definirani seznami';
+
+  @override
+  String get title_all_list_perso => 'Vsi vaši prilagojeni seznami';
+
+  @override
+  String get title_all_list_theme => 'Vsi naši tematski seznami';
 }

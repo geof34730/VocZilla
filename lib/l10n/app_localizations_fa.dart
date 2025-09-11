@@ -652,4 +652,16 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'هزینه اشتراک در هنگام تأیید خرید از حساب iTunes شما کسر خواهد شد. اشتراک به طور خودکار تمدید می‌شود، مگر اینکه حداقل ۲۴ ساعت قبل از پایان دوره فعلی آن را غیرفعال کنید. می‌توانید اشتراک خود را مدیریت کرده و تمدید خودکار را در تنظیمات حساب خود غیرفعال کنید. دوره آزمایشی رایگان ۷ روزه توسط برنامه (حساب‌های جدید) مدیریت می‌شود.';
+
+  @override
+  String get card_home_finished => 'تمام شده';
+
+  @override
+  String get title_all_list_defined => 'تمام لیست‌های تعریف‌شده‌ی ما';
+
+  @override
+  String get title_all_list_perso => 'تمام لیست‌های شخصی‌سازی‌شده‌ی شما';
+
+  @override
+  String get title_all_list_theme => 'همه لیست‌های تم ما';
 }

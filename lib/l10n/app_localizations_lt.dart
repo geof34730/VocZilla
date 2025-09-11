@@ -652,4 +652,16 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Mokėjimas bus nuskaičiuotas iš jūsų „iTunes“ paskyros patvirtinus pirkimą. Prenumerata automatiškai atnaujinama, nebent ji būtų išjungta likus bent 24 valandoms iki dabartinio laikotarpio pabaigos. Prenumeratą galite tvarkyti ir išjungti automatinį atnaujinimą paskyros nustatymuose. 7 dienų nemokamą bandomąją versiją tvarko programėlė (naujos paskyros).';
+
+  @override
+  String get card_home_finished => 'baigtas';
+
+  @override
+  String get title_all_list_defined => 'Visi mūsų apibrėžti sąrašai';
+
+  @override
+  String get title_all_list_perso => 'Visi jūsų suasmeninti sąrašai';
+
+  @override
+  String get title_all_list_theme => 'Visi mūsų temų sąrašai';
 }

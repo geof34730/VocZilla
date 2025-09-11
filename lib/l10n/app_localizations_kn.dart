@@ -652,4 +652,16 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ಖರೀದಿ ದೃಢೀಕರಣದ ನಂತರ ನಿಮ್ಮ iTunes ಖಾತೆಗೆ ಪಾವತಿಯನ್ನು ವಿಧಿಸಲಾಗುತ್ತದೆ. ಪ್ರಸ್ತುತ ಅವಧಿ ಮುಗಿಯುವ ಕನಿಷ್ಠ 24 ಗಂಟೆಗಳ ಮೊದಲು ಆಫ್ ಮಾಡದ ಹೊರತು ಚಂದಾದಾರಿಕೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನವೀಕರಣಗೊಳ್ಳುತ್ತದೆ. ನಿಮ್ಮ ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ನಿಮ್ಮ ಚಂದಾದಾರಿಕೆಯನ್ನು ನೀವು ನಿರ್ವಹಿಸಬಹುದು ಮತ್ತು ಸ್ವಯಂ ನವೀಕರಣವನ್ನು ಆಫ್ ಮಾಡಬಹುದು. 7-ದಿನಗಳ ಉಚಿತ ಪ್ರಯೋಗವನ್ನು ಅಪ್ಲಿಕೇಶನ್ (ಹೊಸ ಖಾತೆಗಳು) ನಿರ್ವಹಿಸುತ್ತದೆ.';
+
+  @override
+  String get card_home_finished => 'ಮುಗಿದಿದೆ';
+
+  @override
+  String get title_all_list_defined => 'ನಮ್ಮ ಎಲ್ಲಾ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ಪಟ್ಟಿಗಳು';
+
+  @override
+  String get title_all_list_perso => 'ನಿಮ್ಮ ಎಲ್ಲಾ ವೈಯಕ್ತಿಕಗೊಳಿಸಿದ ಪಟ್ಟಿಗಳು';
+
+  @override
+  String get title_all_list_theme => 'ನಮ್ಮ ಎಲ್ಲಾ ಥೀಮ್ ಪಟ್ಟಿಗಳು';
 }

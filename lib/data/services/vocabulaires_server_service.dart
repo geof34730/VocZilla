@@ -39,6 +39,7 @@ class VocabulaireServerService {
     final list = userData['ListGuidVocabularyLearned'];
     final int ListGuidVocabularyLearnedLength = (list is List) ? list.length : 0;
     final listLearned = userData['ListGuidVocabularyLearned'];
+    final ListDefinedEnd = userData['ListDefinedEnd'];
 
     final listPerso = userData['ListPerso'];
     List<Map<String, dynamic>>? listPersoJson;
@@ -47,13 +48,17 @@ class VocabulaireServerService {
           .map((e) => (e as ListPerso).toJson())
           .toList();
     }
+
+
+    print("*****GO SERVER********uid: $uid");
     if (uid != null && listLearned != null) {
       await _usersCollection
           .doc(uid)
           .set({
             'ListGuidVocabularyLearned': listLearned,
             'ListPerso': listPersoJson,
-            'countGuidVocabularyLearned' :ListGuidVocabularyLearnedLength
+            'countGuidVocabularyLearned' :ListGuidVocabularyLearnedLength,
+            'ListDefinedEnd':  ListDefinedEnd
           },
         SetOptions(merge: true),
       );

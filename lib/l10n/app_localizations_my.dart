@@ -652,4 +652,16 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ဝယ်ယူမှုအတည်ပြုပြီးပါက ငွေပေးချေမှုကို သင်၏ iTunes အကောင့်သို့ ကောက်ခံမည်ဖြစ်ပါသည်။ လက်ရှိကာလမကုန်ဆုံးမီ အနည်းဆုံး 24 နာရီမပိတ်ပါက စာရင်းသွင်းမှုကို အလိုအလျောက်သက်တမ်းတိုးပါ။ သင်၏စာရင်းသွင်းမှုကို စီမံခန့်ခွဲနိုင်ပြီး သင့်အကောင့်ဆက်တင်များတွင် အလိုအလျောက်သက်တမ်းတိုးခြင်းကို ပိတ်နိုင်သည်။ 7 ရက် အခမဲ့ အစမ်းသုံးခြင်းကို အက်ပ် (အကောင့်အသစ်) မှ စီမံခန့်ခွဲပါသည်။';
+
+  @override
+  String get card_home_finished => 'ပြီးပြီ။';
+
+  @override
+  String get title_all_list_defined => 'ကျွန်ုပ်တို့၏သတ်မှတ်ထားသောစာရင်းများအားလုံး';
+
+  @override
+  String get title_all_list_perso => 'သင့်စိတ်ကြိုက်စာရင်းများအားလုံး';
+
+  @override
+  String get title_all_list_theme => 'ကျွန်ုပ်တို့၏ အဓိကအကြောင်းအရာများစာရင်းများ';
 }

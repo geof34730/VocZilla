@@ -652,4 +652,16 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Сатып алуды растау кезінде төлем iTunes есептік жазбаңыздан алынады. Ағымдағы кезеңнің аяқталуына кемінде 24 сағат қалғанда өшірілмесе, жазылым автоматты түрде жаңартылады. Жазылымды басқаруға және тіркелгі параметрлерінде автоматты жаңартуды өшіруге болады. 7 күндік тегін сынақ нұсқасын қолданба (жаңа тіркелгілер) басқарады.';
+
+  @override
+  String get card_home_finished => 'аяқталды';
+
+  @override
+  String get title_all_list_defined => 'Біздің барлық анықталған тізімдеріміз';
+
+  @override
+  String get title_all_list_perso => 'Барлық жеке тізімдеріңіз';
+
+  @override
+  String get title_all_list_theme => 'Біздің барлық тақырыптар тізімі';
 }

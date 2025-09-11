@@ -652,4 +652,16 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ক্রয় নিশ্চিতকরণের সময় আপনার iTunes অ্যাকাউন্টে অর্থ প্রদান করা হবে। বর্তমান মেয়াদ শেষ হওয়ার কমপক্ষে 24 ঘন্টা আগে বন্ধ না করা হলে সাবস্ক্রিপশন স্বয়ংক্রিয়ভাবে পুনর্নবীকরণ হয়। আপনি আপনার অ্যাকাউন্ট সেটিংসে আপনার সাবস্ক্রিপশন পরিচালনা করতে পারেন এবং স্বয়ংক্রিয় পুনর্নবীকরণ বন্ধ করতে পারেন। 7 দিনের বিনামূল্যের ট্রায়াল অ্যাপ (নতুন অ্যাকাউন্ট) দ্বারা পরিচালিত হয়।';
+
+  @override
+  String get card_home_finished => 'সমাপ্ত';
+
+  @override
+  String get title_all_list_defined => 'আমাদের সমস্ত নির্ধারিত তালিকা';
+
+  @override
+  String get title_all_list_perso => 'আপনার সমস্ত ব্যক্তিগতকৃত তালিকা';
+
+  @override
+  String get title_all_list_theme => 'আমাদের সকল থিম তালিকা';
 }

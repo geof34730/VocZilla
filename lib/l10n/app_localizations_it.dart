@@ -652,4 +652,16 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Il pagamento verrà addebitato sul tuo account iTunes alla conferma dell\'acquisto. L\'abbonamento si rinnova automaticamente a meno che non venga disattivato almeno 24 ore prima della fine del periodo in corso. Puoi gestire il tuo abbonamento e disattivare il rinnovo automatico nelle Impostazioni Account. La prova gratuita di 7 giorni è gestita dall\'app (nuovi account).';
+
+  @override
+  String get card_home_finished => 'finito';
+
+  @override
+  String get title_all_list_defined => 'Tutti i nostri elenchi definiti';
+
+  @override
+  String get title_all_list_perso => 'Tutte le tue liste personalizzate';
+
+  @override
+  String get title_all_list_theme => 'Tutti i nostri elenchi di temi';
 }

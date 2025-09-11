@@ -214,10 +214,8 @@
     "subscription_benefit_updates": "Frissítések és támogatás benne foglaltatik",
     "subscription_plan_badge_best_offer": "2 hónap ingyenes",
     "subscription_legal_note": "A fizetés a vásárlás visszaigazolásakor az iTunes-fiókodra lesz terhelve. Az előfizetés automatikusan megújul, kivéve, ha legalább 24 órával az aktuális időszak vége előtt kikapcsolod. Az előfizetésedet kezelheted és kikapcsolhatod az automatikus megújítást a Fiókbeállításaidban. A 7 napos ingyenes próbaidőszakot az alkalmazás kezeli (új fiókok).",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-07T06:48:05+00:00"
-    }
+    "card_home_finished": "befejezett",
+    "title_all_list_defined": "Minden definiált listánk",
+    "title_all_list_perso": "Az összes személyre szabott listád",
+    "title_all_list_theme": "Az összes témalistánk"
 }

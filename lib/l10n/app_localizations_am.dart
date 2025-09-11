@@ -652,4 +652,16 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'ክፍያው በግዢው ማረጋገጫ ላይ በ iTunes መለያዎ ላይ ይከፈላል. የአሁኑ ጊዜ ከማብቃቱ ቢያንስ 24 ሰዓታት በፊት ካልጠፋ በስተቀር ምዝገባው በራስ-ሰር ይታደሳል። የደንበኝነት ምዝገባዎን ማስተዳደር እና በራስ-እድሳትን በእርስዎ መለያ ቅንብሮች ውስጥ ማጥፋት ይችላሉ። የ7-ቀን ነጻ ሙከራው የሚተዳደረው በመተግበሪያው ነው (አዲስ መለያዎች)።';
+
+  @override
+  String get card_home_finished => 'አልቋል';
+
+  @override
+  String get title_all_list_defined => 'ሁሉም የእኛ የተገለጹ ዝርዝሮች';
+
+  @override
+  String get title_all_list_perso => 'ሁሉም የእርስዎ ግላዊነት የተላበሱ ዝርዝሮች';
+
+  @override
+  String get title_all_list_theme => 'ሁሉም የእኛ ጭብጥ ዝርዝሮች';
 }

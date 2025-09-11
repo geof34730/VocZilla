@@ -652,4 +652,16 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get subscription_legal_note => '구매 확인 시 iTunes 계정으로 요금이 청구됩니다. 현재 구독 기간 종료 최소 24시간 전에 해지하지 않으면 구독이 자동으로 갱신됩니다. 계정 설정에서 구독을 관리하고 자동 갱신을 해제할 수 있습니다. 7일 무료 체험은 앱에서 관리합니다(신규 계정).';
+
+  @override
+  String get card_home_finished => '완성된';
+
+  @override
+  String get title_all_list_defined => '우리의 모든 정의된 목록';
+
+  @override
+  String get title_all_list_perso => '귀하의 모든 개인화된 목록';
+
+  @override
+  String get title_all_list_theme => '우리의 모든 테마 목록';
 }

@@ -652,4 +652,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Оплата будет списана с вашего аккаунта iTunes при подтверждении покупки. Подписка продлевается автоматически, если вы не отключите её как минимум за 24 часа до окончания текущего периода. Вы можете управлять подпиской и отключить автоматическое продление в настройках своей учётной записи. 7-дневный бесплатный пробный период управляется приложением (для новых учётных записей).';
+
+  @override
+  String get card_home_finished => 'законченный';
+
+  @override
+  String get title_all_list_defined => 'Все наши определенные списки';
+
+  @override
+  String get title_all_list_perso => 'Все ваши персонализированные списки';
+
+  @override
+  String get title_all_list_theme => 'Все наши списки тем';
 }

@@ -652,4 +652,16 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'కొనుగోలు నిర్ధారణ తర్వాత మీ iTunes ఖాతాకు చెల్లింపు ఛార్జ్ చేయబడుతుంది. ప్రస్తుత వ్యవధి ముగియడానికి కనీసం 24 గంటల ముందు ఆఫ్ చేయకపోతే సభ్యత్వం స్వయంచాలకంగా పునరుద్ధరించబడుతుంది. మీరు మీ ఖాతా సెట్టింగ్‌లలో మీ సభ్యత్వాన్ని నిర్వహించవచ్చు మరియు స్వీయ-పునరుద్ధరణను ఆఫ్ చేయవచ్చు. 7-రోజుల ఉచిత ట్రయల్ యాప్ (కొత్త ఖాతాలు) ద్వారా నిర్వహించబడుతుంది.';
+
+  @override
+  String get card_home_finished => 'పూర్తయింది';
+
+  @override
+  String get title_all_list_defined => 'మా నిర్వచించిన జాబితాలన్నీ';
+
+  @override
+  String get title_all_list_perso => 'మీ వ్యక్తిగతీకరించిన జాబితాలన్నీ';
+
+  @override
+  String get title_all_list_theme => 'మా అన్ని థీమ్ జాబితాలు';
 }

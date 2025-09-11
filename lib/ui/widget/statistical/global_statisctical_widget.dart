@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
+import 'package:voczilla/core/utils/localization.dart';
 
 import '../../../core/utils/logger.dart';
 import '../../../data/models/statistical_length.dart';
@@ -11,6 +13,7 @@ import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../elements/Error.dart';
+import '../home/TitleWidget.dart';
 
 class GlobalStatisticalWidget extends StatefulWidget {
   final int? vocabulaireBegin;
@@ -20,16 +23,21 @@ class GlobalStatisticalWidget extends StatefulWidget {
   final bool isListTheme;
   final String local;
   final String? listName;
+  final String title;
+  final bool showTrophy;
+
 
   const GlobalStatisticalWidget({
     super.key,
     this.vocabulaireBegin,
     this.vocabulaireEnd,
     this.guidList,
+    this.showTrophy = true,
     required this.isListPerso,
     required this.isListTheme,
     required this.local,
-    required this.listName
+    required this.listName,
+    required this.title
   });
 
   @override
@@ -47,7 +55,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
   static const double _textWidth = 60.0;
   static const double _gap = 5.0;
   static const double _logoWidth = 50.0; // doit correspondre à Image.asset(width: 50)
-
+  int countTrophyState=0;
   @override
   void initState() {
     super.initState();
@@ -110,6 +118,11 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     _statisticalFuture = future;
   }
 
+
+  int getTrophyTopLength({required List<String> dataListDefinedEnd}) {
+    return dataListDefinedEnd.where((item) => item.startsWith('top')).length;
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<VocabulaireUserBloc, VocabulaireUserState>(
@@ -118,6 +131,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
         if (state is VocabulaireUserLoaded) {
           setState(() {
             _fetchStatisticalData(local: widget.local);
+            countTrophyState = getTrophyTopLength(dataListDefinedEnd:state.data.ListDefinedEnd);
           });
         }
       },
@@ -157,18 +171,24 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                   percentage: percentageProgression,
                   width: constraints.maxWidth,
                   context: context,
+                  countTrophy: countTrophyState
                 ),
               );
             },
           );
         } else if (state is VocabulaireUserEmpty) {
           _lastStatisticalData = null; // Clear cache if user data is empty
-          return LayoutBuilder(
+          return Column(
+            children: [
+            LayoutBuilder(
             builder: (context, constraints) => _buildIndicator(
               percentage: 0,
               width: constraints.maxWidth,
               context: context,
+              countTrophy: countTrophyState
             ),
+            )
+           ]
           );
         }
         // Default case for other states (initial, error...)
@@ -181,6 +201,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     required double percentage,
     required double width,
     required BuildContext context,
+    required int countTrophy
   }) {
     final clampedPercentage = percentage.clamp(0.0, 1.0);
     final bool isRtl = Directionality.of(context) == TextDirection.rtl;
@@ -189,113 +210,132 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
     final textAlignForSmallPercentage = isRtl ? TextAlign.right : TextAlign.left;
 
     // Largeur réellement disponible après padding
-    final double availableWidth =
-    (width - (_hPadding * 2)).clamp(0.0, double.infinity);
-
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: _hPadding),
-        child: SizedBox(
-          height: _heightIndicator,
-          child: Stack(
-            alignment: Alignment.center,
-            clipBehavior: Clip.none, // autorise le débordement du logo
-            children: [
-              // Barre d'avancement (utilise availableWidth)
-              Container(
-                width: availableWidth,
-                height: _lineHeight,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 0.5),
-                  borderRadius: BorderRadius.circular(5.0),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(5.0),
-                  child: MultiSegmentLinearIndicator(
-                    padding: EdgeInsets.zero,
-                    lineHeight: _lineHeight,
-                    segments: [
-                      if (isRtl)
-                        SegmentLinearIndicator(
-                          percent: 1.0 - clampedPercentage,
-                          color: Colors.orange,
-                        ),
-                      SegmentLinearIndicator(
-                        percent: clampedPercentage,
-                        color: Colors.green,
-                        enableStripes: true,
-                      ),
-                      if (!isRtl)
-                        SegmentLinearIndicator(
-                          percent: 1.0 - clampedPercentage,
-                          color: Colors.orange,
-                        ),
-                    ],
-                    barRadius: const Radius.circular(5.0),
-                  ),
-                ),
-              ),
-
-              // Curseur (logo + texte) positionné par rapport à la largeur réelle
-              Positioned(
-                left: _getPositionLeftCursor(
-                  percentage: clampedPercentage,
-                  width: availableWidth,
-                  isRtl: isRtl,
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  // S'assure que l'ordre visuel suit la Directionality
-                  textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
-                  children: [
-                    if (clampedPercentage > 0.2) ...[
-                      SizedBox(
-                        width: _textWidth,
-                        child: Text(
-                          "${(clampedPercentage * 100).toStringAsFixed(1)}%",
-                          textAlign: textAlignForBigPercentage,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: _gap),
-                    ],
-                    Image.asset(
-                      "assets/brand/logo_landing.png",
-                      width: _logoWidth, // synchronisé avec le calcul
-                    ),
-                    if (clampedPercentage <= 0.2) ...[
-                      const SizedBox(width: _gap),
-                      SizedBox(
-                        width: _textWidth,
-                        child: Text(
-                          "${(clampedPercentage * 100).toStringAsFixed(1)}%",
-                          textAlign: textAlignForSmallPercentage,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-            ],
-          ),
+    final double availableWidth = (width - (_hPadding * 2)).clamp(0.0, double.infinity);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(bottom:3),
+              child:titleWidget(text: widget.title,codelang: Localizations.localeOf(context).languageCode),
+            ),
+            if(widget.showTrophy)...[
+              SizedBox(width: 10),
+              Badge.count(
+                offset: const Offset(8, -5),
+                padding: EdgeInsets.only(left:5,right:5),
+                backgroundColor: Colors.green,
+                count: countTrophy,
+                child: SvgPicture.asset(
+                  "assets/svg/achievement-award-medal-icon.svg",
+                  height: 30,
+                )
+              )
+              ]
+          ],
         ),
-      ),
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: _hPadding),
+            child: SizedBox(
+              height: _heightIndicator,
+              child: Stack(
+                alignment: Alignment.center,
+                clipBehavior: Clip.none,
+                children: [
+                  Container(
+                    width: availableWidth,
+                    height: _lineHeight,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white, width: 0.5),
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(5.0),
+                      child: MultiSegmentLinearIndicator(
+                        padding: EdgeInsets.zero,
+                        lineHeight: _lineHeight,
+                        segments: [
+                          if (isRtl)
+                            SegmentLinearIndicator(
+                              percent: 1.0 - clampedPercentage,
+                              color: Colors.orange,
+                            ),
+                            SegmentLinearIndicator(
+                              percent: clampedPercentage,
+                              color: Colors.green,
+                              enableStripes: true,
+                            ),
+                          if (!isRtl)
+                            SegmentLinearIndicator(
+                              percent: 1.0 - clampedPercentage,
+                              color: Colors.orange,
+                            ),
+                        ],
+                        barRadius: const Radius.circular(5.0),
+                      ),
+                    ),
+                  ),
+
+                  // Curseur (logo + texte) positionné par rapport à la largeur réelle
+                  Positioned(
+                    left: _getPositionLeftCursor(
+                      percentage: clampedPercentage,
+                      width: availableWidth,
+                      isRtl: isRtl,
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      // S'assure que l'ordre visuel suit la Directionality
+                      textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
+                      children: [
+                        if (clampedPercentage > 0.2) ...[
+                          SizedBox(
+                            width: _textWidth,
+                            child: Text(
+                              "${(clampedPercentage * 100).toStringAsFixed(1)}%",
+                              textAlign: textAlignForBigPercentage,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: _gap),
+                        ],
+                        Image.asset(
+                          "assets/brand/logo_landing.png",
+                          width: _logoWidth, // synchronisé avec le calcul
+                        ),
+                        if (clampedPercentage <= 0.2) ...[
+                          const SizedBox(width: _gap),
+                          SizedBox(
+                            width: _textWidth,
+                            child: Text(
+                              "${(clampedPercentage * 100).toStringAsFixed(1)}%",
+                              textAlign: textAlignForSmallPercentage,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        )
+      ]
     );
   }
-
-
-
-
-
 
   double _getPositionLeftCursor({
     required double percentage,

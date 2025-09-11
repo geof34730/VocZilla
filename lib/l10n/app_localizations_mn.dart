@@ -652,4 +652,16 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Худалдан авалтаа баталгаажуулсны дараа төлбөрийг таны iTunes данснаас авах болно. Тухайн хугацаа дуусахаас дор хаяж 24 цагийн өмнө унтараагүй тохиолдолд захиалга автоматаар шинэчлэгдэнэ. Та бүртгэлийнхээ тохиргооноос бүртгэлээ удирдаж, автоматаар сунгалтыг унтрааж болно. 7 хоногийн үнэгүй туршилтыг апп (шинэ данс) удирддаг.';
+
+  @override
+  String get card_home_finished => 'дууссан';
+
+  @override
+  String get title_all_list_defined => 'Бидний тодорхойлсон бүх жагсаалт';
+
+  @override
+  String get title_all_list_perso => 'Таны бүх хувийн жагсаалт';
+
+  @override
+  String get title_all_list_theme => 'Манай бүх сэдвийн жагсаалт';
 }

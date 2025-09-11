@@ -652,4 +652,16 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Platba bude zaúčtovaná na váš účet iTunes po potvrdení nákupu. Predplatné sa automaticky obnoví, pokiaľ ho nevypnete najmenej 24 hodín pred koncom aktuálneho obdobia. Svoje predplatné môžete spravovať a vypnúť automatické obnovovanie v nastaveniach účtu. 7-dňovú bezplatnú skúšobnú verziu spravuje aplikácia (nové účty).';
+
+  @override
+  String get card_home_finished => 'hotový';
+
+  @override
+  String get title_all_list_defined => 'Všetky naše definované zoznamy';
+
+  @override
+  String get title_all_list_perso => 'Všetky vaše prispôsobené zoznamy';
+
+  @override
+  String get title_all_list_theme => 'Všetky naše zoznamy tém';
 }

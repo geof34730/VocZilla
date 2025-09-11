@@ -652,4 +652,16 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Malipo yatatozwa kwa akaunti yako ya iTunes baada ya uthibitisho wa ununuzi. Usajili husasishwa kiotomatiki isipokuwa ukizimwa angalau saa 24 kabla ya mwisho wa kipindi cha sasa. Unaweza kudhibiti usajili wako na kuzima usasishaji kiotomatiki katika Mipangilio ya Akaunti yako. Jaribio lisilolipishwa la siku 7 linadhibitiwa na programu (akaunti mpya).';
+
+  @override
+  String get card_home_finished => 'kumaliza';
+
+  @override
+  String get title_all_list_defined => 'Orodha zetu zote zilizofafanuliwa';
+
+  @override
+  String get title_all_list_perso => 'Orodha zako zote zilizobinafsishwa';
+
+  @override
+  String get title_all_list_theme => 'Orodha zetu zote za mada';
 }

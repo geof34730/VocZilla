@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_confetti/flutter_confetti.dart';
 import 'package:voczilla/core/utils/localization.dart';
 import 'package:voczilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 import '../../../core/utils/detailTypeVocabulaire.dart';
@@ -44,6 +45,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Center(
         child:Column(
 
@@ -85,7 +87,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     isListPerso : state.data.isListPerso,
                     isListTheme : state.data.isListTheme,
                     local: LanguageUtils.getSmallCodeLanguage(context: context),
-                    listName:null
+                    listName:null,
+                    title: context.loc.tester_title,
+                    showTrophy:false
                   )
                 :
                   GlobalStatisticalWidget(
@@ -95,8 +99,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     isListTheme : false,
                     local:LanguageUtils.getSmallCodeLanguage(context: context),
                     listName: widget.listName,
+                    title: context.loc.tester_title,
+                    showTrophy:false
                   ),
-                Text(widget.listName),
                 Text(context.loc.quizz_progression_title,
                     style: TextStyle(
                         fontSize: 12,
@@ -110,7 +115,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                   local: LanguageUtils.getSmallCodeLanguage(context: context),
                 ),
                   if (data.isEmpty)...[
-                    CongratulationOrErrorData(vocabulaireConnu:_vocabulaireConnu,context: context)
+                    CongratulationOrErrorData(vocabulaireConnu:_vocabulaireConnu)
                   ],
                   if (data.isNotEmpty)...[
                        SingleChildScrollView(

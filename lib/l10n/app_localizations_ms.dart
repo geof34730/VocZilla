@@ -652,4 +652,16 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get subscription_legal_note => 'Pembayaran akan dicaj ke akaun iTunes anda pada pengesahan pembelian. Langganan diperbaharui secara automatik melainkan dimatikan sekurang-kurangnya 24 jam sebelum tamat tempoh semasa. Anda boleh mengurus langganan anda dan mematikan pembaharuan automatik dalam Tetapan Akaun anda. Percubaan percuma selama 7 hari diurus oleh apl (akaun baharu).';
+
+  @override
+  String get card_home_finished => 'selesai';
+
+  @override
+  String get title_all_list_defined => 'Semua senarai kami yang ditentukan';
+
+  @override
+  String get title_all_list_perso => 'Semua senarai peribadi anda';
+
+  @override
+  String get title_all_list_theme => 'Semua senarai tema kami';
 }

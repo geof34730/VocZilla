@@ -46,6 +46,7 @@ class _AllListsDefinedScreenState extends State<AllListsDefinedScreen> {
                               isListTheme : false,
                               local: codelang,
                               listName: null,
+                              title: context.loc.title_all_list_defined,
                             ),
                             Center(
                               child:Wrap(
@@ -58,9 +59,9 @@ class _AllListsDefinedScreenState extends State<AllListsDefinedScreen> {
                           ],
                         );
               } else if (state is VocabulaireUserError) {
-                return Center(child: Text(context.loc.error_loading));
+                  return Center(child: Text(context.loc.error_loading));
               } else {
-                return Center(child: Text(context.loc.unknown_error)); // fallback
+                  return Center(child: Text(context.loc.unknown_error)); // fallback
               }
             }
         );
