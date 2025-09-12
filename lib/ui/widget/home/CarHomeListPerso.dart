@@ -49,6 +49,7 @@ List<Widget> getListPerso({
           list: listPerso,
           isListPerso: true,
           paddingLevelBar: EdgeInsets.only(top: 5),
+          isListEnd: listDefinedEnd.contains(listPerso.guid),
         ),
       ),
     );

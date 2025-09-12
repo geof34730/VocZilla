@@ -80,6 +80,7 @@ List<Widget> getListDefined({
           child: SizedBox(
             width: withCarhome,
             child: CardHome(
+              isListEnd: listDefinedEnd.contains(cardData['keyStringTest']),
               title: cardData['title'] as String,
               keyStringTest: cardData['keyStringTest'] as String,
               listName: cardData['keyStringTest'] as String,

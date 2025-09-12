@@ -43,17 +43,18 @@ List<Widget> getListThemes({
         padding: const EdgeInsets.only(top: 4),
         child: SizedBox(
             width: withCarhome,
-            child:  CardHome(
-          keyStringTest: listTheme.guid,
-          listName: listTheme.guid,
-          isListTheme: true,
-          nbVocabulaire: listTheme.listGuidVocabulary.length,
-          guid: listTheme.guid,
-          title: listTheme.title[LanguageUtils.getSmallCodeLanguage(context: context).toLowerCase()] ?? "Default Title",
-          backgroundColor: Colors.greenAccent,
-          list: listTheme,
-          paddingLevelBar: const EdgeInsets.only(top: 5),
-        )));
+            child: CardHome(
+                keyStringTest: listTheme.guid,
+                listName: listTheme.guid,
+                isListTheme: true,
+                nbVocabulaire: listTheme.listGuidVocabulary.length,
+                guid: listTheme.guid,
+                title: listTheme.title[LanguageUtils.getSmallCodeLanguage(context: context).toLowerCase()] ?? "Default Title",
+                backgroundColor: Colors.greenAccent,
+                list: listTheme,
+                paddingLevelBar: const EdgeInsets.only(top: 5),
+                isListEnd: listDefinedEnd.contains(listTheme.guid),
+              )));
   }).toList();
 
   // 3. Ajouter la carte "Voir plus" si on est sur la page d'accueil

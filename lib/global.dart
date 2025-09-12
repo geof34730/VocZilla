@@ -5,11 +5,12 @@ String versionApp="1.0.0";
 
 
 int globalCountVocabulaireAll=4300;
-bool debugMode=true;
+bool debugMode=false;
+bool byPasSubscription = true;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
-final int daysFreeTrial=debugMode ? 2000 :7;
+final int daysFreeTrial=debugMode || byPasSubscription ? 2000 :7;
 const resetTo=true;
 bool forFeatureGraphic = false;
 bool changeVocabulaireSinceVisiteHome = false;

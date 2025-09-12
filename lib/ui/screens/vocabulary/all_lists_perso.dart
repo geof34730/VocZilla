@@ -89,6 +89,7 @@ class _AllListsPersoScreenState extends State<AllListsPersoScreen> {
                     child: Center(child: SwitchListFinished()),
                   ),
                 ),
+
               ],
             );
           } else if (state is VocabulaireUserError) {
@@ -98,6 +99,7 @@ class _AllListsPersoScreenState extends State<AllListsPersoScreen> {
           }
         }
     );
+
   }
 }
 

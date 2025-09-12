@@ -193,7 +193,7 @@ class AppRoute {
 
           );
         case allListsPerso:
-          return Layout(child: AllListsPersoScreen());
+          return Layout(actionButtonAddListPerso:true, child: AllListsPersoScreen());
         case allListsThemes:
           return Layout(child: AllListsThemesScreen());
         case updateScreen:

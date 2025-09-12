@@ -26,7 +26,8 @@ class Layout extends StatefulWidget {
     this.itemSelected = 0,
     this.id = "0",
     this.titleScreen = null,
-    this.listName=null
+    this.listName=null,
+    this.actionButtonAddListPerso=false
   }) : super(key: key);
 
   final bool appBarNotLogged;
@@ -37,8 +38,7 @@ class Layout extends StatefulWidget {
   final String id;
   final String? titleScreen;
   final String? listName;
-
-
+  final bool actionButtonAddListPerso;
   @override
   State<Layout> createState() => _LayoutState();
 }
@@ -54,26 +54,72 @@ class _LayoutState extends State<Layout> {
       backgroundColor: Colors.white,
       appBar: AuthAppBar(scaffoldKey: _scaffoldKey, appBarNotLogged: widget.appBarNotLogged),
       endDrawer: const NavigationDrawer(),
-      floatingActionButton: (debugMode ? FloatingActionButton(
-          elevation: 15,
-          backgroundColor: Colors.red,
-          onPressed: (){
-            showDialog(
-                context: context,
-                builder: (BuildContext context){
-                  return DebugWidget();
-                }
-            );
-          },
-          child:Text(
-            'DEBUG GEOF',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 10.0,
-                fontWeight: FontWeight.bold
+      floatingActionButton:  Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          if(debugMode)
+            FloatingActionButton(
+              elevation: 15,
+              backgroundColor: Colors.red,
+              onPressed: (){
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context){
+                      return DebugWidget();
+                    }
+                );
+              },
+              child:Text(
+                'DEBUG GEOF',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 10.0,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
             ),
-          )
-      ) : null),
+          if(widget.actionButtonAddListPerso)
+            const SizedBox(height: 8),
+          if(widget.actionButtonAddListPerso)
+            FloatingActionButton(
+              backgroundColor:  Colors.blue,
+              shape: const CircleBorder(),
+              onPressed: (){
+                Navigator.pushNamed(context, "/personnalisation/step1");
+              },
+              child: const Icon(Icons.add, color: Colors.white, size: 28),
+            )
+        ],
+      ),
+
+
+
+
+
+
+
+/*
+        (debugMode ? FloatingActionButton(
+            elevation: 15,
+            backgroundColor: Colors.red,
+            onPressed: (){
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context){
+                    return DebugWidget();
+                  }
+              );
+            },
+            child:Text(
+              'DEBUG GEOF',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 10.0,
+                  fontWeight: FontWeight.bold
+              ),
+            )
+        ) : null)*/
       bottomNavigationBar: (widget.showBottomNavigationBar) ? BottomNavigationBarVocabulary(itemSelected: widget.itemSelected, local: Localizations.localeOf(context).languageCode,listName:widget.listName) : null,
       body:SingleChildScrollView(
           child:Padding(

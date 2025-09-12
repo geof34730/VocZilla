@@ -30,6 +30,7 @@ class CardHome extends StatefulWidget {
   final int nbVocabulaire;
   final String keyStringTest;
   final String listName;
+  final bool isListEnd;
 
 
   CardHome({
@@ -49,6 +50,7 @@ class CardHome extends StatefulWidget {
     this.paddingLevelBar = const EdgeInsets.all(0),
     required this.keyStringTest,
     required this.listName,
+    required this.isListEnd
   });
 
   @override
@@ -61,18 +63,13 @@ class _CardHomeState extends State<CardHome> {
   @override
   Widget build(BuildContext context) {
     String local = Localizations.localeOf(context).languageCode;
-    return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
-      builder: (context, state) {
-        bool isListEnd = false;
-        if (state is VocabulaireUserLoaded) {
-          isListEnd = state.data.ListDefinedEnd.contains(widget.listName);
-        }
+
 
         return LayoutBuilder(builder: (context, constraints) {
           double widthWidget = constraints.maxWidth;
 
           // Le contenu de la carte est maintenant construit ici
-          Widget cardCore = BoxCardHome(context: context, widthWidget: widthWidget, local: local, isListEnd: isListEnd);
+          Widget cardCore = BoxCardHome(context: context, widthWidget: widthWidget, local: local, isListEnd: widget.isListEnd);
 
           // On applique le ruban si nécessaire
           if (widget.isListShare && !widget.ownListShare) {
@@ -87,7 +84,7 @@ class _CardHomeState extends State<CardHome> {
                   overflow: TextOverflow.ellipsis,
                 ),
             );
-          } else if (isListEnd) {
+          } else if (widget.isListEnd) {
             cardCore = CustomRibbon(
                 color: Colors.green,
                 child: cardCore,
@@ -110,7 +107,7 @@ class _CardHomeState extends State<CardHome> {
             children: [
               cardCore,
               // L'icône est maintenant ici, au-dessus de tout
-              if(!widget.isListPerso && widget.listName.startsWith("top") && isListEnd)
+              if(!widget.isListPerso && widget.listName.startsWith("top") && widget.isListEnd)
                 Positioned(
                   top: -5, // Dépasse de 10px en haut
                   right: -5, // Dépasse de 10px à droite
@@ -122,8 +119,7 @@ class _CardHomeState extends State<CardHome> {
             ],
           );
         });
-      },
-    );
+
   }
 
   Card BoxCardHome({required BuildContext context,required bool isListEnd, required double widthWidget, required String local}){
