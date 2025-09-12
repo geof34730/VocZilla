@@ -23,7 +23,7 @@ abstract class VocabulaireUser with _$VocabulaireUser {
     @JsonKey(name: "ListDefinedEnd")
     @Default([]) List<String> ListDefinedEnd, // MODIFIÉ
 
-    @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)
+    @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)
     required int countVocabulaireAll,
   }) = _VocabulaireUser;
 

@@ -23,14 +23,13 @@ _VocabulaireUser _$VocabulaireUserFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList() ??
           const [],
-      allListView: json['AllListView'] as bool? ?? true,
+      allListView: json['allListView'] as bool? ?? true,
       ListDefinedEnd:
           (json['ListDefinedEnd'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
           const [],
-      countVocabulaireAll:
-          (json['CountVocabulaireAll'] as num?)?.toInt() ?? 4500,
+      countVocabulaireAll: (json['CountVocabulaireAll'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$VocabulaireUserToJson(_VocabulaireUser instance) =>
@@ -38,7 +37,7 @@ Map<String, dynamic> _$VocabulaireUserToJson(_VocabulaireUser instance) =>
       'ListPerso': instance.listPerso,
       'ListTheme': instance.listTheme,
       'ListGuidVocabularyLearned': instance.listGuidVocabularyLearned,
-      'AllListView': instance.allListView,
+      'allListView': instance.allListView,
       'ListDefinedEnd': instance.ListDefinedEnd,
       'CountVocabulaireAll': instance.countVocabulaireAll,
     };

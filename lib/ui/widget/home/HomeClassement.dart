@@ -70,10 +70,16 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
     return BlocBuilder<LeaderboardBloc, LeaderboardState>(
       builder: (context, state) {
         if (state is LeaderboardLoading || state is LeaderboardInitial) {
-          return const Loading();
+          return Padding(
+              padding:EdgeInsets.only(top:30,bottom:30),
+              child:Loading()
+            );
         }
         if (state is LeaderboardLoaded) {
-          return _buildLoaded(context, state.leaderboardData);
+          return Padding(
+              padding:EdgeInsets.only(top:4,bottom:15),
+              child:_buildLoaded(context, state.leaderboardData)
+          );
         }
         if (state is LeaderboardError) {
           return _buildError(context, state.message);
@@ -85,44 +91,35 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
 
   Widget _buildLoaded(BuildContext context, LeaderboardData data) {
 
-    return RefreshIndicator(
-      onRefresh: () async {
-        _fetchData();
-      },
-      child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.all(0.0),
-        child: LayoutBuilder(builder: (context, constraints) {
-          final double spacing = 8.0;
-          final int crossAxisCount = isTablet(context) ? 2 : 1;
-          final double cardWidth = (constraints.maxWidth - (spacing * (crossAxisCount - 1))) / crossAxisCount;
+    return LayoutBuilder(builder: (context, constraints) {
+      final double spacing = 6.0;
+      final int crossAxisCount = isTablet(context) ? 2 : 1;
+      final double cardWidth = (constraints.maxWidth - (spacing * (crossAxisCount - 1))) / crossAxisCount;
 
-          final List<Widget> gamerCards = data.topUsers.map((user) {
-            return SizedBox(
-              width: cardWidth,
-              child: CardClassementGamer(
-                position: user.rank,
-                user: user,
-                totalWordsForLevel: data.totalWordsInLevel,
-              ),
-            );
-          }).toList();
+      final List<Widget> gamerCards = data.topUsers.map((user) {
+        return SizedBox(
+          width: cardWidth,
+          child: CardClassementGamer(
+            position: user.rank,
+            user: user,
+            totalWordsForLevel: data.totalWordsInLevel,
+          ),
+        );
+      }).toList();
 
-          gamerCards.add(
-            SizedBox(
-              width: cardWidth,
-              child: CardClassementUser(position: data.currentUserRank),
-            ),
-          );
+      gamerCards.add(
+        SizedBox(
+          width: cardWidth,
+          child: CardClassementUser(position: data.currentUserRank),
+        ),
+      );
 
-          return Wrap(
-            spacing: spacing,
-            runSpacing: spacing,
-            children: gamerCards,
-          );
-        }),
-      ),
-    );
+      return Wrap(
+        spacing: spacing,
+        runSpacing: spacing,
+        children: gamerCards,
+      );
+    });
   }
 
   Widget _buildError(BuildContext context, String message) {

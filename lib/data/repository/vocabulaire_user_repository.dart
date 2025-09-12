@@ -11,18 +11,20 @@ import '../services/vocabulaires_server_service.dart';
 import '../services/vocabulaires_service.dart';
 
 class VocabulaireUserRepository {
-  final LocalStorageService localStorageService = LocalStorageService();
-  final VocabulaireServerService vocabulaireServerService = VocabulaireServerService();
+  final LocalStorageService _localStorageService;
+  final VocabulaireServerService _vocabulaireServerService;
 
-  VocabulaireUserRepository();
+  VocabulaireUserRepository({LocalStorageService? localStorageService, VocabulaireServerService? vocabulaireServerService})
+      : _localStorageService = localStorageService ?? LocalStorageService(),
+        _vocabulaireServerService = vocabulaireServerService ?? VocabulaireServerService();
 
   Future<void> initializeVocabulaireUserData() async {
     Logger.Pink.log('********VocabulaireUserRepository: initializeUserData');
     try {
-      final serverData = await vocabulaireServerService.fetchUserData();
+      final serverData = await _vocabulaireServerService.fetchUserData();
       if (serverData != null) {
         final userData = VocabulaireUser.fromJson(serverData);
-        await localStorageService.saveUserData(userData.toJson());
+        await _localStorageService.saveUserData(userData.toJson());
       }
 
     } catch (e) {
@@ -34,13 +36,13 @@ class VocabulaireUserRepository {
 
   Future<void> updateListTheme() async {
     try {
-      final userDataJson = await localStorageService.getUserData();
+      final userDataJson = await _localStorageService.getUserData();
       Logger.Blue.log("userData: $userDataJson");
       if (userDataJson != null) {
         final List<ListTheme> userTheme = await VocabulaireService().getThemesData();
         userDataJson['listTheme'] = userTheme;
-        await localStorageService.saveUserData(userDataJson);
-        final userDataJsonUpdate = await localStorageService.getUserData();
+        await _localStorageService.saveUserData(userDataJson);
+        final userDataJsonUpdate = await _localStorageService.getUserData();
             Logger.Green.log("userData: $userDataJsonUpdate");
       }
     } catch (e) {
@@ -51,7 +53,7 @@ class VocabulaireUserRepository {
   Future<VocabulaireUser?> getVocabulaireUserData({required String local}) async {
    Logger.Green.log("getVocabulaireUserData ");
     try {
-      var userDataJson = await localStorageService.getUserData();
+      var userDataJson = await _localStorageService.getUserData();
       Logger.Blue.log("getVocabulaireUserData') userData: $userDataJson");
       if (userDataJson != null) {
         return VocabulaireUser.fromJson(userDataJson);
@@ -66,15 +68,20 @@ class VocabulaireUserRepository {
     }
   }
 
-  Future<void> updateVocabulaireUserData({required VocabulaireUser userData}) async {
-    Logger.Pink.log('VocabulaireUserRepository: updateUserData');
+  /// Met à jour les données de l'utilisateur localement et sur le serveur.
+  /// Retourne `true` en cas de succès, `false` sinon.
+  Future<bool> updateVocabulaireUserData({required VocabulaireUser userData}) async {
+    Logger.Red.log('VocabulaireUserRepository: updateVocabulaireUserData ${userData.allListView}');
     try {
+      final userDataMap = userData.toJson();
       // Mettre à jour le stockage local
-      await localStorageService.saveUserData(userData.toJson());
+      await _localStorageService.saveUserData(userDataMap);
       // Envoyer les données mises à jour au serveur
-      await vocabulaireServerService.updateUserData(userData.toJson());
+      await _vocabulaireServerService.updateUserData(userDataMap);
+      return true;
     } catch (e) {
       Logger.Red.log('Erreur lors de la mise à jour des données utilisateur : $e');
+      return false;
     }
   }
 
@@ -88,7 +95,7 @@ class VocabulaireUserRepository {
       listTheme: userTheme,
       listGuidVocabularyLearned: [],
     );
-    await localStorageService.saveUserData(dataEmpty.toJson());
+    await _localStorageService.saveUserData(dataEmpty.toJson());
     return dataEmpty;
   }
 
@@ -96,7 +103,7 @@ class VocabulaireUserRepository {
     Logger.Red.log("addVocabulaireUserDataLearned: vocabularyGuid: $vocabularyGuid ");
     try {
       Logger.Green.log('Tentative d\'ajout du vocabulaire : $vocabularyGuid');
-      final userDataJson = await localStorageService.getUserData();
+      final userDataJson = await _localStorageService.getUserData();
 
       print(" addVocabulaireUserDataLearned userDataJson: $userDataJson");
 
@@ -120,10 +127,10 @@ class VocabulaireUserRepository {
             ..add(vocabularyGuid),
         );
         // Mettre à jour le stockage local
-        await localStorageService.saveUserData(userData.toJson());
+        await _localStorageService.saveUserData(userData.toJson());
         Logger.Green.log('Vocabulaire ajouté au stockage local.');
         // Envoyer les données mises à jour au serveur
-        await vocabulaireServerService.updateUserData(userData.toJson());
+        await _vocabulaireServerService.updateUserData(userData.toJson());
         Logger.Green.log('Données mises à jour envoyées au serveur.');
       } else {
         Logger.Magenta.log('Le vocabulaire est déjà présent dans la liste.');
@@ -138,7 +145,7 @@ class VocabulaireUserRepository {
     Logger.Red.log('Tentative de suppression du vocabulaire : $vocabularyGuid');
     try {
       // Récupérer les données utilisateur actuelles
-      final userDataJson = await localStorageService.getUserData();
+      final userDataJson = await _localStorageService.getUserData();
       if (userDataJson != null) {
         var userData = VocabulaireUser.fromJson(userDataJson);
         // Supprimer le vocabulaire de la liste s'il est présent
@@ -149,18 +156,18 @@ class VocabulaireUserRepository {
               ..remove(vocabularyGuid),
           );
           // Mettre à jour le stockage local
-          await localStorageService.saveUserData(userData.toJson());
+          await _localStorageService.saveUserData(userData.toJson());
           // Envoyer les données mises à jour au serveur
-          await vocabulaireServerService.updateUserData(userData.toJson());
+          await _vocabulaireServerService.updateUserData(userData.toJson());
         }
       }
     } catch (e) {
       Logger.Red.log('Erreur lors de la suppression du vocabulaire de la liste des appris : $e');
     }
   }
-
+  // ... (le reste du fichier utilise `localStorageService` qui doit être remplacé par `_localStorageService`)
   Future<List<dynamic>> getVocabulaireUserDataNotLearned({required dynamic vocabulaireSpecificList}) async {
-    final userDataJson = await localStorageService.getUserData();
+    final userDataJson = await _localStorageService.getUserData();
     final vocabulaireLearned = userDataJson != null
         ? VocabulaireUser
         .fromJson(userDataJson)
@@ -178,7 +185,7 @@ class VocabulaireUserRepository {
   }
 
   Future<List> getVocabulaireUserDataLearned({required dynamic  vocabulaireSpecificList}) async {
-    final userDataJson = await localStorageService.getUserData();
+    final userDataJson = await _localStorageService.getUserData();
     final vocabulaireLearned = userDataJson != null
         ? VocabulaireUser
         .fromJson(userDataJson)
@@ -293,7 +300,7 @@ class VocabulaireUserRepository {
     Logger.Red.log("Tentative de suppression de la liste perso : $guid");
     try {
       // Récupérer les données utilisateur actuelles
-      final userDataJson = await localStorageService.getUserData();
+      final userDataJson = await _localStorageService.getUserData();
       if (userDataJson != null) {
         var userData = VocabulaireUser.fromJson(userDataJson);
         // Supprimer la liste perso de la liste s'il est présent
@@ -302,10 +309,10 @@ class VocabulaireUserRepository {
             listPerso: userData.listPerso.where((listPerso) => listPerso.guid != guid).toList(),
           );
           // Mettre à jour le stockage local
-          await localStorageService.saveUserData(userData.toJson());
+          await _localStorageService.saveUserData(userData.toJson());
           Logger.Green.log('Liste perso supprimée du stockage local.');
           // Envoyer les données mises à jour au serveur
-          await vocabulaireServerService.updateUserData(userData.toJson());
+          await _vocabulaireServerService.updateUserData(userData.toJson());
           Logger.Green.log('Données mises à jour envoyées au serveur.');
         } else {
           Logger.Magenta.log('La liste perso n\'est pas présente dans la liste.');
@@ -497,6 +504,9 @@ class VocabulaireUserRepository {
       var userData = await getVocabulaireUserData(local: local);
       if (userData != null) {
         final updatedUserData = userData.copyWith(allListView: true);
+
+        Logger.Red.log(updatedUserData.allListView);
+
         await updateVocabulaireUserData(userData: updatedUserData);
         Logger.Green.log('view toutes les listes activé.');
         return updatedUserData;
@@ -512,6 +522,8 @@ class VocabulaireUserRepository {
       var userData = await getVocabulaireUserData(local: local);
       if (userData != null) {
         final updatedUserData = userData.copyWith(allListView: false);
+
+        Logger.Red.log(updatedUserData.allListView);
         await updateVocabulaireUserData(userData: updatedUserData);
         Logger.Green.log('view just listes non terminées activé.');
         return updatedUserData;
@@ -523,7 +535,7 @@ class VocabulaireUserRepository {
   }
 
   Future<bool> isListEnd({required String listName}) async {
-    final userDataJson = await localStorageService.getUserData();
+    final userDataJson = await _localStorageService.getUserData();
     if(userDataJson?['ListDefinedEnd'] != null){
       return userDataJson?['ListDefinedEnd'].contains(listName);
     }
@@ -533,12 +545,12 @@ class VocabulaireUserRepository {
   }
 
   Future<bool> isFilterAllList() async {
-    final userDataJson = await localStorageService.getUserData();
-    return userDataJson?['AllListView'];
+    final userDataJson = await _localStorageService.getUserData();
+    return userDataJson?['allListView']=="false" ? false : true;
   }
 
   Future<bool> isListEndPresent() async{
-    final userDataJson = await localStorageService.getUserData();
+    final userDataJson = await _localStorageService.getUserData();
     return userDataJson?['ListDefinedEnd'].length > 0;
   }
 

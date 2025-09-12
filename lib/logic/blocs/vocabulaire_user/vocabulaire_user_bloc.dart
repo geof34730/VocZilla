@@ -61,6 +61,10 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   }
   Future<void> _onCheckVocabulaireUserStatus(
       CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
+    // 1. Émettre explicitement l'état de chargement.
+    // C'est le signal clair que l'interface attend.
+    emit(VocabulaireUserLoading());
+
     try {
       VocabulaireUser? userData = await _vocabulaireUserRepository.getVocabulaireUserData(local: event.local);
       if (userData != null) {

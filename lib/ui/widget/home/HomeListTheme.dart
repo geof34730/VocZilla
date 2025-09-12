@@ -32,17 +32,20 @@ class HomelistThemes extends StatelessWidget {
                   HorizontalScrollViewCardHome(
                       itemWidth: itemWidthListPerso(context: context, nbList: 3),
                       children: data.listTheme.map((listTheme) {
-                        return CardHome(
-                          keyStringTest: listTheme.guid,
-                          listName: listTheme.guid,
-                          isListTheme: true,
-                          nbVocabulaire:listTheme.listGuidVocabulary.length,
-                          guid: listTheme.guid,
-                          title: listTheme.title[LanguageUtils.getSmallCodeLanguage(context: context).toLowerCase()] ?? "Default Title",
-                          backgroundColor: Colors.greenAccent, // Remplacez par la couleur appropriée
-                          list: listTheme,
-                          //isListTheme:true,
-                          paddingLevelBar: EdgeInsets.only(top: 5),
+                        return Padding(
+                          padding:EdgeInsets.only(top:4),
+                            child:CardHome(
+                              keyStringTest: listTheme.guid,
+                              listName: listTheme.guid,
+                              isListTheme: true,
+                              nbVocabulaire:listTheme.listGuidVocabulary.length,
+                              guid: listTheme.guid,
+                              title: listTheme.title[LanguageUtils.getSmallCodeLanguage(context: context).toLowerCase()] ?? "Default Title",
+                              backgroundColor: Colors.greenAccent, // Remplacez par la couleur appropriée
+                              list: listTheme,
+                              //isListTheme:true,
+                              paddingLevelBar: EdgeInsets.only(top: 5),
+                            )
                         );
                       }).toList()
                   ),

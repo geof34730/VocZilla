@@ -4,7 +4,7 @@ String versionApp="1.0.0";
 
 
 
-int globalCountVocabulaireAll=0;
+int globalCountVocabulaireAll=4300;
 bool debugMode=true;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';

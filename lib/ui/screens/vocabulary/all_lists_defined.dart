@@ -15,6 +15,7 @@ import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
+import '../../widget/form/swichListFinished.dart';
 import '../../widget/home/CarHomeListDefinied.dart';
 import '../../widget/home/CardHome.dart';
 import '../../widget/statistical/global_statisctical_widget.dart';
@@ -36,28 +37,45 @@ class _AllListsDefinedScreenState extends State<AllListsDefinedScreen> {
               } else if( state is VocabulaireUserUpdate){
                 return Center(child: CircularProgressIndicator());
               } else if (state is VocabulaireUserLoaded  ) {
-                    return Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            GlobalStatisticalWidget(
-                              isListPerso : false,
-                              isListTheme : false,
-                              local: codelang,
-                              listName: null,
-                              title: context.loc.title_all_list_defined,
-                            ),
-                            Center(
-                              child:Wrap(
+                return Stack(
+                  children: [
+                    SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          GlobalStatisticalWidget(
+                            isListPerso: false,
+                            isListTheme: false,
+                            local: codelang,
+                            listName: null,
+                            title: context.loc.title_all_list_defined,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Wrap(
                                 spacing: 8.0, // Espace horizontal entre les cartes
                                 runSpacing: 8.0, // Espace vertical entre les lignes
-                                alignment: WrapAlignment.start,
-                                children: getListDefined(view:"allList")
-                              )
-                            )
-                          ],
-                        );
+                                alignment: WrapAlignment.center,
+                                children: getListDefined(
+                                  view: "allList",
+                                  allListView: state.data.allListView,
+                                  listDefinedEnd: state.data.ListDefinedEnd.toSet(),
+                                  context:context
+                                ))
+                          ),
+                        ],
+                      ),
+                    ),
+                    Positioned(
+                      top:70,
+                      left: 0,
+                      right: 0,
+                      child: Material(
+                        color: Colors.transparent,
+                        child: Center(child: SwitchListFinished()),
+                      ),
+                    ),
+                  ],
+                );
               } else if (state is VocabulaireUserError) {
                   return Center(child: Text(context.loc.error_loading));
               } else {

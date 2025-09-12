@@ -13,6 +13,7 @@ import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../elements/Error.dart';
+
 import '../home/TitleWidget.dart';
 
 class GlobalStatisticalWidget extends StatefulWidget {
@@ -233,7 +234,8 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                   height: 30,
                 ),
               ),
-            ]
+            ],
+
           ],
         ),
         Center(

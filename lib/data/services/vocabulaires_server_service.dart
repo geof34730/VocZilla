@@ -27,7 +27,7 @@ class VocabulaireServerService {
   }
 
   Future<void> updateUserData(Map<String, dynamic> userData) async {
-    Logger.Pink.log("VocabulaireServerService updateUserData $userData");
+    Logger.Pink.log("VocabulaireServerService updateUserData ${userData["allListView"]}");
     final prefs = await SharedPreferences.getInstance();
     final String? userJson = prefs.getString('current_user');
     String? uid;
@@ -35,11 +35,13 @@ class VocabulaireServerService {
       final Map<String, dynamic> userMap = jsonDecode(userJson);
       uid = userMap['uid'] as String?;
     }
-    userData.remove('ListTheme');
+    userData.remove('listTheme');
     final list = userData['ListGuidVocabularyLearned'];
     final int ListGuidVocabularyLearnedLength = (list is List) ? list.length : 0;
     final listLearned = userData['ListGuidVocabularyLearned'];
-    final ListDefinedEnd = userData['ListDefinedEnd'];
+    final ListDefinedEnd = userData['listDefinedEnd'];
+    final allListView = userData["allListView"];
+
 
     final listPerso = userData['ListPerso'];
     List<Map<String, dynamic>>? listPersoJson;
@@ -50,7 +52,7 @@ class VocabulaireServerService {
     }
 
 
-    print("*****GO SERVER********uid: $uid");
+    print("*****GO SERVER********uid: $uid $allListView");
     if (uid != null && listLearned != null) {
       await _usersCollection
           .doc(uid)
@@ -58,7 +60,8 @@ class VocabulaireServerService {
             'ListGuidVocabularyLearned': listLearned,
             'ListPerso': listPersoJson,
             'countGuidVocabularyLearned' :ListGuidVocabularyLearnedLength,
-            'ListDefinedEnd':  ListDefinedEnd
+            'ListDefinedEnd':  ListDefinedEnd,
+            'allListView': allListView // Note: Firestore keys are often camelCase, but let's keep it consistent with your request for now.
           },
         SetOptions(merge: true),
       );

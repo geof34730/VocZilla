@@ -18,8 +18,8 @@ mixin _$VocabulaireUser {
 @JsonKey(name: "ListPerso") List<ListPerso> get listPerso;// MODIFIÉ
 @JsonKey(name: "ListTheme") List<ListTheme> get listTheme;// MODIFIÉ
 @JsonKey(name: "ListGuidVocabularyLearned") List<String> get listGuidVocabularyLearned;// MODIFIÉ
-@JsonKey(name: "AllListView") bool get allListView;@JsonKey(name: "ListDefinedEnd") List<String> get ListDefinedEnd;// MODIFIÉ
-@JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) int get countVocabulaireAll;
+@JsonKey(name: "allListView") bool get allListView;@JsonKey(name: "ListDefinedEnd") List<String> get ListDefinedEnd;// MODIFIÉ
+@JsonKey(name: "CountVocabulaireAll", defaultValue: 0) int get countVocabulaireAll;
 /// Create a copy of VocabulaireUser
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -52,7 +52,7 @@ abstract mixin class $VocabulaireUserCopyWith<$Res>  {
   factory $VocabulaireUserCopyWith(VocabulaireUser value, $Res Function(VocabulaireUser) _then) = _$VocabulaireUserCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: "ListPerso") List<ListPerso> listPerso,@JsonKey(name: "ListTheme") List<ListTheme> listTheme,@JsonKey(name: "ListGuidVocabularyLearned") List<String> listGuidVocabularyLearned,@JsonKey(name: "AllListView") bool allListView,@JsonKey(name: "ListDefinedEnd") List<String> ListDefinedEnd,@JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) int countVocabulaireAll
+@JsonKey(name: "ListPerso") List<ListPerso> listPerso,@JsonKey(name: "ListTheme") List<ListTheme> listTheme,@JsonKey(name: "ListGuidVocabularyLearned") List<String> listGuidVocabularyLearned,@JsonKey(name: "allListView") bool allListView,@JsonKey(name: "ListDefinedEnd") List<String> ListDefinedEnd,@JsonKey(name: "CountVocabulaireAll", defaultValue: 0) int countVocabulaireAll
 });
 
 
@@ -162,7 +162,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "AllListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "allListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)  int countVocabulaireAll)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _VocabulaireUser() when $default != null:
 return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.allListView,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
@@ -183,7 +183,7 @@ return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "AllListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "allListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)  int countVocabulaireAll)  $default,) {final _that = this;
 switch (_that) {
 case _VocabulaireUser():
 return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.allListView,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
@@ -203,7 +203,7 @@ return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "AllListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500)  int countVocabulaireAll)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: "ListPerso")  List<ListPerso> listPerso, @JsonKey(name: "ListTheme")  List<ListTheme> listTheme, @JsonKey(name: "ListGuidVocabularyLearned")  List<String> listGuidVocabularyLearned, @JsonKey(name: "allListView")  bool allListView, @JsonKey(name: "ListDefinedEnd")  List<String> ListDefinedEnd, @JsonKey(name: "CountVocabulaireAll", defaultValue: 0)  int countVocabulaireAll)?  $default,) {final _that = this;
 switch (_that) {
 case _VocabulaireUser() when $default != null:
 return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,_that.allListView,_that.ListDefinedEnd,_that.countVocabulaireAll);case _:
@@ -218,7 +218,7 @@ return $default(_that.listPerso,_that.listTheme,_that.listGuidVocabularyLearned,
 @JsonSerializable()
 
 class _VocabulaireUser implements VocabulaireUser {
-  const _VocabulaireUser({@JsonKey(name: "ListPerso") final  List<ListPerso> listPerso = const [], @JsonKey(name: "ListTheme") final  List<ListTheme> listTheme = const [], @JsonKey(name: "ListGuidVocabularyLearned") final  List<String> listGuidVocabularyLearned = const [], @JsonKey(name: "AllListView") this.allListView = true, @JsonKey(name: "ListDefinedEnd") final  List<String> ListDefinedEnd = const [], @JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) required this.countVocabulaireAll}): _listPerso = listPerso,_listTheme = listTheme,_listGuidVocabularyLearned = listGuidVocabularyLearned,_ListDefinedEnd = ListDefinedEnd;
+  const _VocabulaireUser({@JsonKey(name: "ListPerso") final  List<ListPerso> listPerso = const [], @JsonKey(name: "ListTheme") final  List<ListTheme> listTheme = const [], @JsonKey(name: "ListGuidVocabularyLearned") final  List<String> listGuidVocabularyLearned = const [], @JsonKey(name: "allListView") this.allListView = true, @JsonKey(name: "ListDefinedEnd") final  List<String> ListDefinedEnd = const [], @JsonKey(name: "CountVocabulaireAll", defaultValue: 0) required this.countVocabulaireAll}): _listPerso = listPerso,_listTheme = listTheme,_listGuidVocabularyLearned = listGuidVocabularyLearned,_ListDefinedEnd = ListDefinedEnd;
   factory _VocabulaireUser.fromJson(Map<String, dynamic> json) => _$VocabulaireUserFromJson(json);
 
  final  List<ListPerso> _listPerso;
@@ -247,7 +247,7 @@ class _VocabulaireUser implements VocabulaireUser {
 }
 
 // MODIFIÉ
-@override@JsonKey(name: "AllListView") final  bool allListView;
+@override@JsonKey(name: "allListView") final  bool allListView;
  final  List<String> _ListDefinedEnd;
 @override@JsonKey(name: "ListDefinedEnd") List<String> get ListDefinedEnd {
   if (_ListDefinedEnd is EqualUnmodifiableListView) return _ListDefinedEnd;
@@ -256,7 +256,7 @@ class _VocabulaireUser implements VocabulaireUser {
 }
 
 // MODIFIÉ
-@override@JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) final  int countVocabulaireAll;
+@override@JsonKey(name: "CountVocabulaireAll", defaultValue: 0) final  int countVocabulaireAll;
 
 /// Create a copy of VocabulaireUser
 /// with the given fields replaced by the non-null parameter values.
@@ -291,7 +291,7 @@ abstract mixin class _$VocabulaireUserCopyWith<$Res> implements $VocabulaireUser
   factory _$VocabulaireUserCopyWith(_VocabulaireUser value, $Res Function(_VocabulaireUser) _then) = __$VocabulaireUserCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: "ListPerso") List<ListPerso> listPerso,@JsonKey(name: "ListTheme") List<ListTheme> listTheme,@JsonKey(name: "ListGuidVocabularyLearned") List<String> listGuidVocabularyLearned,@JsonKey(name: "AllListView") bool allListView,@JsonKey(name: "ListDefinedEnd") List<String> ListDefinedEnd,@JsonKey(name: "CountVocabulaireAll", defaultValue: 4500) int countVocabulaireAll
+@JsonKey(name: "ListPerso") List<ListPerso> listPerso,@JsonKey(name: "ListTheme") List<ListTheme> listTheme,@JsonKey(name: "ListGuidVocabularyLearned") List<String> listGuidVocabularyLearned,@JsonKey(name: "allListView") bool allListView,@JsonKey(name: "ListDefinedEnd") List<String> ListDefinedEnd,@JsonKey(name: "CountVocabulaireAll", defaultValue: 0) int countVocabulaireAll
 });
 
 

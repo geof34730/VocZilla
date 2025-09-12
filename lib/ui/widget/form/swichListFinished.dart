@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
-import 'package:voczilla/logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import 'package:voczilla/ui/theme/appColors.dart';
 
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 
@@ -14,27 +15,7 @@ class SwitchListFinished extends StatefulWidget {
 }
 
 class _SwitchListFinishedState extends State<SwitchListFinished> {
-  // Default to true, will be updated from the repository.
-  bool _showFinished = true;
   bool _isListEndPresent = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _loadInitialFilterState();
-    _checkListEndPresence();
-  }
-
-  void _loadInitialFilterState() async {
-    if (context.read<VocabulaireUserBloc>().state is VocabulaireUserLoaded) {
-      final bool showFinished = await VocabulaireUserRepository().isFilterAllList() ?? true;
-      if (mounted) {
-        setState(() {
-          _showFinished = showFinished;
-        });
-      }
-    }
-  }
 
   void _checkListEndPresence() async {
     final bool isPresent = await VocabulaireUserRepository().isListEndPresent();
@@ -46,38 +27,84 @@ class _SwitchListFinishedState extends State<SwitchListFinished> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    String lang = Localizations.localeOf(context).languageCode;
+  void initState() {
+    super.initState();
+    _checkListEndPresence();
+  }
 
-    return _isListEndPresent ? Column(
-      mainAxisSize: MainAxisSize.min, // ✅ taille naturelle, pas d'espace forcé
-      crossAxisAlignment: CrossAxisAlignment.end,
+  @override
+  Widget build(BuildContext context) {
+    if (!_isListEndPresent) {
+      return const SizedBox.shrink();
+    }
+    return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
+      builder: (context, state) {
+        if (state is VocabulaireUserLoaded) {
+          return _SwitchControl(showFinished: state.data.allListView);
+        }
+        return const SizedBox.shrink();
+      },
+    );
+  }
+}
+
+class _SwitchControl extends StatefulWidget {
+  final bool showFinished;
+  const _SwitchControl({required this.showFinished});
+
+  @override
+  State<_SwitchControl> createState() => _SwitchControlState();
+}
+
+class _SwitchControlState extends State<_SwitchControl> {
+  late bool _currentValue;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentValue = widget.showFinished;
+  }
+
+  @override
+  void didUpdateWidget(covariant _SwitchControl oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Sync with BLoC state if it changes from an external source
+    if (widget.showFinished != _currentValue) {
+      setState(() {
+        _currentValue = widget.showFinished;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final lang = Localizations.localeOf(context).languageCode;
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(
-             "Afficher les listes terminées",
-              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
-            ),
-            Transform.scale(
-              scale: 0.75, // ajuste la taille du switch
-              child: Switch(
-                activeTrackColor: Colors.green,
-                value: _showFinished,
-                onChanged: (val) {
-                  setState(() {
-                    _showFinished = val;
-                  });
-                  final bloc = BlocProvider.of<VocabulaireUserBloc>(context);
-                  val ? bloc.add(FilterShowAllList(local: lang)) : bloc.add(FilterHideListFinished(local: lang));
-                },
-              ),
-            ),
-          ],
+        const Flexible(
+          child: Text(
+            "Cacher les listes terminées",
+            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+          ),
+        ),
+        Transform.scale(
+          scale: 0.75,
+          child: Switch(
+            activeTrackColor: AppColors.colorTextTitle,
+            value: _currentValue,
+            onChanged: (val) {
+              setState(() {
+                _currentValue = val;
+              });
+              final bloc = context.read<VocabulaireUserBloc>();
+              final event = val ? FilterShowAllList(local: lang) : FilterHideListFinished(local: lang);
+              bloc.add(event);
+            },
+          ),
         ),
       ],
-    ) : Container();
+    );
   }
 }

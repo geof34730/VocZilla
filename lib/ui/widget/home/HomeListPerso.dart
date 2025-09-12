@@ -33,6 +33,7 @@ class HomelistPerso extends StatelessWidget {
              final bool listePerso = data.listPerso.length>0;
               return Column(
                 mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -41,23 +42,28 @@ class HomelistPerso extends StatelessWidget {
                        titleWidget(text: context.loc.home_title_my_list_perso,codelang: Localizations.localeOf(context).languageCode),
                       if (listePerso)
                         Padding(
-                          padding: EdgeInsets.only(left: 0),
-                          child: ElevatedButton(
+                          padding: EdgeInsets.only(left: 5,top:8),
+                          // Remplacer ElevatedButton par un Material + IconButton pour un contrôle total de la taille
+                          child: Material(
                             key: ValueKey('button_create_list'),
-                            onPressed: () {
-                              addNewListPerso(context: context);
-                            },
-                            style: ElevatedButton.styleFrom(
-                              shape: CircleBorder(),
-                              elevation: 2,
-                              backgroundColor: Colors.blue,
-                              padding: EdgeInsets.all(0),
+                            color: Colors.blue,
+                            shape: CircleBorder(),
+                            elevation: 5,
+                            child: SizedBox(
+                              width: 28, // Taille souhaitée pour le bouton
+                              height: 28,
+                              child: IconButton(
+                                padding: EdgeInsets.all(0),
+                                iconSize: 14, // Taille de l'icône
+                                icon: Icon(Icons.add, color: Colors.white),
+                                onPressed: () => addNewListPerso(context: context),
+                              ),
                             ),
-                            child: Icon(Icons.add, size: 25, color: Colors.white),
                           ),
                         ),
                     ],
                   ),
+                  SizedBox(height:4),
                   if(!listePerso)
                     Padding(
                       child: descriptionListPersoEmpty(context: context),
@@ -155,4 +161,3 @@ class HomelistPerso extends StatelessWidget {
   }
 
 }
-
