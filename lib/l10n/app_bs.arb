@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Greška pri učitavanju profila",
     "save": "Sačuvaj",
     "card_home_user_day": "dana",
-    "card_home_user_liste_perso": "Izgubljena lista\/e",
     "card_home_share": "podijeljeno",
     "card_home_mot": "protiv",
     "card_home_reessayer": "Pokušajte ponovo",
@@ -217,5 +216,7 @@
     "card_home_finished": "završeno",
     "title_all_list_defined": "Sve naše definirane liste",
     "title_all_list_perso": "Sve vaše personalizirane liste",
-    "title_all_list_theme": "Sve naše tematske liste"
+    "title_all_list_theme": "Sve naše tematske liste",
+    "view_all_list": "Pogledajte sve liste",
+    "card_home_user_liste_perso": "Lična(e) lista(e)"
 }

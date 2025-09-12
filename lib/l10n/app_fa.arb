@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "خطای بارگیری پروفایل",
     "save": "ذخیره",
     "card_home_user_day": "روزها",
-    "card_home_user_liste_perso": "فهرست(ها) گم شده",
     "card_home_share": "به اشتراک گذاشته شده",
     "card_home_mot": "علیه",
     "card_home_reessayer": "دوباره امتحان کنید",
@@ -217,5 +216,7 @@
     "card_home_finished": "تمام شده",
     "title_all_list_defined": "تمام لیست‌های تعریف‌شده‌ی ما",
     "title_all_list_perso": "تمام لیست‌های شخصی‌سازی‌شده‌ی شما",
-    "title_all_list_theme": "همه لیست‌های تم ما"
+    "title_all_list_theme": "همه لیست‌های تم ما",
+    "view_all_list": "مشاهده همه لیست‌ها",
+    "card_home_user_liste_perso": "فهرست(های) شخصی"
 }

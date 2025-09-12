@@ -193,9 +193,9 @@ class AppRoute {
 
           );
         case allListsPerso:
-          return Layout(child: AllListsPersoScreen(), titleScreen: context.loc.title_all_list_perso);
+          return Layout(child: AllListsPersoScreen());
         case allListsThemes:
-          return Layout(child: AllListsThemesScreen(), titleScreen: context.loc.title_all_list_theme);
+          return Layout(child: AllListsThemesScreen());
         case updateScreen:
           return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
         case '/vocabulary':

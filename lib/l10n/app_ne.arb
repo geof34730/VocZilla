@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "प्रोफाइल लोड गर्दा त्रुटि भयो",
     "save": "बचत गर्नुहोस्",
     "card_home_user_day": "दिनहरू",
-    "card_home_user_liste_perso": "सूची(हरू) हराएको",
     "card_home_share": "साझा गरिएको",
     "card_home_mot": "विरुद्ध",
     "card_home_reessayer": "फेरि प्रयास गर्नुहोस्",
@@ -217,5 +216,7 @@
     "card_home_finished": "समाप्त भयो",
     "title_all_list_defined": "हाम्रा सबै परिभाषित सूचीहरू",
     "title_all_list_perso": "तपाईंका सबै निजीकृत सूचीहरू",
-    "title_all_list_theme": "हाम्रा सबै विषयवस्तु सूचीहरू"
+    "title_all_list_theme": "हाम्रा सबै विषयवस्तु सूचीहरू",
+    "view_all_list": "सबै सूचीहरू हेर्नुहोस्",
+    "card_home_user_liste_perso": "व्यक्तिगत सूची(हरू)"
 }

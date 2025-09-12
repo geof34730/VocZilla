@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Грешка при зареждане на профила",
     "save": "Запазване",
     "card_home_user_day": "дни",
-    "card_home_user_liste_perso": "списък(ове) Изгубени",
     "card_home_share": "споделено",
     "card_home_mot": "срещу",
     "card_home_reessayer": "Опитай отново",
@@ -217,5 +216,7 @@
     "card_home_finished": "завършен",
     "title_all_list_defined": "Всички наши дефинирани списъци",
     "title_all_list_perso": "Всички ваши персонализирани списъци",
-    "title_all_list_theme": "Всички наши списъци с теми"
+    "title_all_list_theme": "Всички наши списъци с теми",
+    "view_all_list": "Вижте всички списъци",
+    "card_home_user_liste_perso": "Лични списъци"
 }

@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Iphutha lokulayisha iphrofayela",
     "save": "Londoloza",
     "card_home_user_day": "izinsuku",
-    "card_home_user_liste_perso": "uhlu(izi)lahleko",
     "card_home_share": "okwabiwe",
     "card_home_mot": "ngokumelene",
     "card_home_reessayer": "Zama futhi",
@@ -217,5 +216,7 @@
     "card_home_finished": "qedile",
     "title_all_list_defined": "Zonke izinhlu zethu ezichaziwe",
     "title_all_list_perso": "Lonke uhlu lwakho oluqondene nawe",
-    "title_all_list_theme": "Lonke uhlu lwetimu yethu"
+    "title_all_list_theme": "Lonke uhlu lwetimu yethu",
+    "view_all_list": "Bona zonke izinhlu",
+    "card_home_user_liste_perso": "Uhlu\/uhlu lomuntu siqu"
 }

@@ -483,9 +483,6 @@ class AppLocalizationsLt extends AppLocalizations {
   String get card_home_user_day => 'dienos';
 
   @override
-  String get card_home_user_liste_perso => 'sąrašas(-ai) prarastas';
-
-  @override
   String get card_home_share => 'bendrinamas';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Visi mūsų temų sąrašai';
+
+  @override
+  String get view_all_list => 'Žr. visus sąrašus';
+
+  @override
+  String get card_home_user_liste_perso => 'Asmeninis(-iai) sąrašas(-iai)';
 }

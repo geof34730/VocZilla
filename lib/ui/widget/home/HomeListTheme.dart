@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:voczilla/app_route.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voczilla/core/utils/localization.dart';
 
@@ -12,10 +13,20 @@ import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/cubit/localization_cubit.dart';
+import 'CarHomeListThemes.dart';
 import 'CardHome.dart';
 
 
 class HomelistThemes extends StatelessWidget {
+  final String view;
+  final bool allListView;
+
+  const HomelistThemes({
+    super.key,
+    this.view = "home",
+    this.allListView = false,
+  });
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
@@ -25,32 +36,18 @@ class HomelistThemes extends StatelessWidget {
           } else if( state is VocabulaireUserUpdate){
             return Center(child: CircularProgressIndicator());
           } else if (state is VocabulaireUserLoaded  ) {
-             final VocabulaireUser data = state.data;
-             //final bool listePerso = data.listTheme.length>0;
-              return Column(
-                children: [
-                  HorizontalScrollViewCardHome(
-                      itemWidth: itemWidthListPerso(context: context, nbList: 3),
-                      children: data.listTheme.map((listTheme) {
-                        return Padding(
-                          padding:EdgeInsets.only(top:4),
-                            child:CardHome(
-                              keyStringTest: listTheme.guid,
-                              listName: listTheme.guid,
-                              isListTheme: true,
-                              nbVocabulaire:listTheme.listGuidVocabulary.length,
-                              guid: listTheme.guid,
-                              title: listTheme.title[LanguageUtils.getSmallCodeLanguage(context: context).toLowerCase()] ?? "Default Title",
-                              backgroundColor: Colors.greenAccent, // Remplacez par la couleur appropriée
-                              list: listTheme,
-                              //isListTheme:true,
-                              paddingLevelBar: EdgeInsets.only(top: 5),
-                            )
-                        );
-                      }).toList()
-                  ),
-                ],
-              );
+
+
+             return HorizontalScrollViewCardHome(
+               itemWidth: itemWidthListPerso(context: context, nbList: 3),
+               children: getListThemes(
+                 withCarhome: 340,
+                 context: context,
+                 data: state.data,
+                 view: view,
+                 allListView: allListView,
+               ),
+             );
             } else if (state is VocabulaireUserError) {
               return Center(child: Text(context.loc.error_loading));
             } else {
@@ -59,8 +56,4 @@ class HomelistThemes extends StatelessWidget {
         }
     );
   }
-
-
-
 }
-

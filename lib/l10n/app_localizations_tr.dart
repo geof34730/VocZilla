@@ -483,9 +483,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String get card_home_user_day => 'günler';
 
   @override
-  String get card_home_user_liste_perso => 'Kayıp liste(ler)';
-
-  @override
   String get card_home_share => 'paylaşıldı';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Tüm tema listelerimiz';
+
+  @override
+  String get view_all_list => 'Tüm listeleri görün';
+
+  @override
+  String get card_home_user_liste_perso => 'Kişisel liste(ler)';
 }

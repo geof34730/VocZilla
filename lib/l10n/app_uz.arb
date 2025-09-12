@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profilni yuklashda xatolik yuz berdi",
     "save": "Saqlash",
     "card_home_user_day": "kunlar",
-    "card_home_user_liste_perso": "ro'yxat(lar) yo'qolgan",
     "card_home_share": "birgalikda",
     "card_home_mot": "qarshi",
     "card_home_reessayer": "Qayta urinib ko'ring",
@@ -217,5 +216,7 @@
     "card_home_finished": "tugatdi",
     "title_all_list_defined": "Barcha belgilangan ro'yxatlarimiz",
     "title_all_list_perso": "Barcha shaxsiy ro'yxatlaringiz",
-    "title_all_list_theme": "Bizning barcha mavzular ro'yxati"
+    "title_all_list_theme": "Bizning barcha mavzular ro'yxati",
+    "view_all_list": "Barcha roʻyxatlarni koʻring",
+    "card_home_user_liste_perso": "Shaxsiy ro'yxat(lar)"
 }

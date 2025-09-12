@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "ପ୍ରୋଫାଇଲ୍‌ ଲୋଡ୍ ହେବାରେ ତ୍ରୁଟି",
     "save": "ସେଭ୍ କରନ୍ତୁ",
     "card_home_user_day": "ଦିନଗୁଡିକ",
-    "card_home_user_liste_perso": "ତାଲିକା(ଗୁଡିକ) ହଜିଗଲା",
     "card_home_share": "ସେୟାର୍ କରାଯାଇଛି",
     "card_home_mot": "ବିପକ୍ଷରେ",
     "card_home_reessayer": "ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ",
@@ -217,5 +216,7 @@
     "card_home_finished": "ସମାପ୍ତ",
     "title_all_list_defined": "ଆମର ସମସ୍ତ ପରିଭାଷିତ ତାଲିକା",
     "title_all_list_perso": "ଆପଣଙ୍କର ସମସ୍ତ ବ୍ୟକ୍ତିଗତ ତାଲିକା",
-    "title_all_list_theme": "ଆମର ସମସ୍ତ ଥିମ୍ ତାଲିକା"
+    "title_all_list_theme": "ଆମର ସମସ୍ତ ଥିମ୍ ତାଲିକା",
+    "view_all_list": "ସମସ୍ତ ତାଲିକା ଦେଖନ୍ତୁ",
+    "card_home_user_liste_perso": "ବ୍ୟକ୍ତିଗତ ତାଲିକା(ଗୁଡିକ)"
 }

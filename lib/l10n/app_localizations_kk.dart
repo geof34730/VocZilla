@@ -483,9 +483,6 @@ class AppLocalizationsKk extends AppLocalizations {
   String get card_home_user_day => 'күндер';
 
   @override
-  String get card_home_user_liste_perso => 'Жоғалған тізім(лер).';
-
-  @override
   String get card_home_share => 'бөлісті';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Біздің барлық тақырыптар тізімі';
+
+  @override
+  String get view_all_list => 'Барлық тізімдерді қараңыз';
+
+  @override
+  String get card_home_user_liste_perso => 'Жеке тізім(дер)';
 }

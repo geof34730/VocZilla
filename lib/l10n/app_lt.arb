@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profilio įkėlimo klaida",
     "save": "Išsaugoti",
     "card_home_user_day": "dienos",
-    "card_home_user_liste_perso": "sąrašas(-ai) prarastas",
     "card_home_share": "bendrinamas",
     "card_home_mot": "prieš",
     "card_home_reessayer": "Bandykite dar kartą",
@@ -217,5 +216,7 @@
     "card_home_finished": "baigtas",
     "title_all_list_defined": "Visi mūsų apibrėžti sąrašai",
     "title_all_list_perso": "Visi jūsų suasmeninti sąrašai",
-    "title_all_list_theme": "Visi mūsų temų sąrašai"
+    "title_all_list_theme": "Visi mūsų temų sąrašai",
+    "view_all_list": "Žr. visus sąrašus",
+    "card_home_user_liste_perso": "Asmeninis(-iai) sąrašas(-iai)"
 }

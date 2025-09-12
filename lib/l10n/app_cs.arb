@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Chyba načítání profilu",
     "save": "Uložit",
     "card_home_user_day": "dny",
-    "card_home_user_liste_perso": "seznam(y) Ztracené",
     "card_home_share": "sdílené",
     "card_home_mot": "proti",
     "card_home_reessayer": "Zkuste to znovu",
@@ -217,5 +216,7 @@
     "card_home_finished": "hotovo",
     "title_all_list_defined": "Všechny naše definované seznamy",
     "title_all_list_perso": "Všechny vaše personalizované seznamy",
-    "title_all_list_theme": "Všechny naše seznamy témat"
+    "title_all_list_theme": "Všechny naše seznamy témat",
+    "view_all_list": "Zobrazit všechny seznamy",
+    "card_home_user_liste_perso": "Osobní seznam(y)"
 }

@@ -483,9 +483,6 @@ class AppLocalizationsZu extends AppLocalizations {
   String get card_home_user_day => 'izinsuku';
 
   @override
-  String get card_home_user_liste_perso => 'uhlu(izi)lahleko';
-
-  @override
   String get card_home_share => 'okwabiwe';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Lonke uhlu lwetimu yethu';
+
+  @override
+  String get view_all_list => 'Bona zonke izinhlu';
+
+  @override
+  String get card_home_user_liste_perso => 'Uhlu/uhlu lomuntu siqu';
 }

@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "កំហុសក្នុងការផ្ទុកកម្រងព័ត៌មាន",
     "save": "រក្សាទុក",
     "card_home_user_day": "ថ្ងៃ",
-    "card_home_user_liste_perso": "បញ្ជីដែលបាត់",
     "card_home_share": "ចែករំលែក",
     "card_home_mot": "ប្រឆាំង",
     "card_home_reessayer": "ព្យាយាមម្តងទៀត",
@@ -217,5 +216,7 @@
     "card_home_finished": "បានបញ្ចប់",
     "title_all_list_defined": "បញ្ជីដែលបានកំណត់ទាំងអស់របស់យើង។",
     "title_all_list_perso": "បញ្ជីផ្ទាល់ខ្លួនរបស់អ្នកទាំងអស់។",
-    "title_all_list_theme": "បញ្ជីប្រធានបទទាំងអស់របស់យើង។"
+    "title_all_list_theme": "បញ្ជីប្រធានបទទាំងអស់របស់យើង។",
+    "view_all_list": "មើលបញ្ជីទាំងអស់។",
+    "card_home_user_liste_perso": "បញ្ជី​ផ្ទាល់ខ្លួន"
 }

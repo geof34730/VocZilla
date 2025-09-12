@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "પ્રોફાઇલ લોડ કરવામાં ભૂલ",
     "save": "સાચવો",
     "card_home_user_day": "દિવસો",
-    "card_home_user_liste_perso": "યાદી(ઓ) ખોવાઈ ગઈ",
     "card_home_share": "શેર કરેલ",
     "card_home_mot": "સામે",
     "card_home_reessayer": "ફરી પ્રયાસ કરો",
@@ -217,5 +216,7 @@
     "card_home_finished": "સમાપ્ત",
     "title_all_list_defined": "અમારી બધી નિર્ધારિત યાદીઓ",
     "title_all_list_perso": "તમારી બધી વ્યક્તિગત યાદીઓ",
-    "title_all_list_theme": "અમારી બધી થીમ યાદીઓ"
+    "title_all_list_theme": "અમારી બધી થીમ યાદીઓ",
+    "view_all_list": "બધી યાદીઓ જુઓ",
+    "card_home_user_liste_perso": "વ્યક્તિગત યાદી(ઓ)"
 }

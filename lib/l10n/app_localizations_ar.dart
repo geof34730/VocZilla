@@ -483,9 +483,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get card_home_user_day => 'أيام';
 
   @override
-  String get card_home_user_liste_perso => 'القائمة(القوائم) المفقودة';
-
-  @override
   String get card_home_share => 'مشترك';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'جميع قوائم المواضيع لدينا';
+
+  @override
+  String get view_all_list => 'انظر جميع القوائم';
+
+  @override
+  String get card_home_user_liste_perso => 'القائمة الشخصية';
 }

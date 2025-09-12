@@ -483,9 +483,6 @@ class AppLocalizationsTh extends AppLocalizations {
   String get card_home_user_day => 'วัน';
 
   @override
-  String get card_home_user_liste_perso => 'รายการที่สูญหาย';
-
-  @override
   String get card_home_share => 'แชร์';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'รายการธีมทั้งหมดของเรา';
+
+  @override
+  String get view_all_list => 'ดูรายการทั้งหมด';
+
+  @override
+  String get card_home_user_liste_perso => 'รายชื่อส่วนตัว';
 }

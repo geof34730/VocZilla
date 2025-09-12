@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Villa í hleðslu prófíls",
     "save": "Vista",
     "card_home_user_day": "dagar",
-    "card_home_user_liste_perso": "Listi(ar) týndur",
     "card_home_share": "deilt",
     "card_home_mot": "gegn",
     "card_home_reessayer": "Reyndu aftur",
@@ -217,5 +216,7 @@
     "card_home_finished": "lokið",
     "title_all_list_defined": "Allir skilgreindir listar okkar",
     "title_all_list_perso": "Allir þínir sérsniðnu listar",
-    "title_all_list_theme": "Allir þemalistar okkar"
+    "title_all_list_theme": "Allir þemalistar okkar",
+    "view_all_list": "Sjá alla lista",
+    "card_home_user_liste_perso": "Persónulegir listar"
 }

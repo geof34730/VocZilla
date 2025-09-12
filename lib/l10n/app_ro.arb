@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Eroare la încărcarea profilului",
     "save": "Salva",
     "card_home_user_day": "zile",
-    "card_home_user_liste_perso": "listă(e) pierdută(e)",
     "card_home_share": "partajat",
     "card_home_mot": "împotriva",
     "card_home_reessayer": "Încearcă din nou",
@@ -217,5 +216,7 @@
     "card_home_finished": "terminat",
     "title_all_list_defined": "Toate listele noastre definite",
     "title_all_list_perso": "Toate listele tale personalizate",
-    "title_all_list_theme": "Toate listele noastre de teme"
+    "title_all_list_theme": "Toate listele noastre de teme",
+    "view_all_list": "Vezi toate listele",
+    "card_home_user_liste_perso": "Listă(e) personală(e)"
 }

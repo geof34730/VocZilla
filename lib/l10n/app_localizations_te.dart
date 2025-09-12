@@ -483,9 +483,6 @@ class AppLocalizationsTe extends AppLocalizations {
   String get card_home_user_day => 'రోజులు';
 
   @override
-  String get card_home_user_liste_perso => 'జాబితా(లు) పోయాయి';
-
-  @override
   String get card_home_share => 'పంచుకున్నారు';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'మా అన్ని థీమ్ జాబితాలు';
+
+  @override
+  String get view_all_list => 'అన్ని జాబితాలను చూడండి';
+
+  @override
+  String get card_home_user_liste_perso => 'వ్యక్తిగత జాబితా(లు)';
 }

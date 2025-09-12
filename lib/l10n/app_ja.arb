@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "プロフィール読み込みエラー",
     "save": "保存",
     "card_home_user_day": "日数",
-    "card_home_user_liste_perso": "リストが失われました",
     "card_home_share": "共有",
     "card_home_mot": "に対して",
     "card_home_reessayer": "もう一度やり直してください",
@@ -217,5 +216,7 @@
     "card_home_finished": "終了した",
     "title_all_list_defined": "定義済みのすべてのリスト",
     "title_all_list_perso": "すべてのパーソナライズされたリスト",
-    "title_all_list_theme": "すべてのテーマリスト"
+    "title_all_list_theme": "すべてのテーマリスト",
+    "view_all_list": "すべてのリストを見る",
+    "card_home_user_liste_perso": "個人リスト"
 }

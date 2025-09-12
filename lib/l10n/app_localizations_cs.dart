@@ -483,9 +483,6 @@ class AppLocalizationsCs extends AppLocalizations {
   String get card_home_user_day => 'dny';
 
   @override
-  String get card_home_user_liste_perso => 'seznam(y) Ztracené';
-
-  @override
   String get card_home_share => 'sdílené';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Všechny naše seznamy témat';
+
+  @override
+  String get view_all_list => 'Zobrazit všechny seznamy';
+
+  @override
+  String get card_home_user_liste_perso => 'Osobní seznam(y)';
 }

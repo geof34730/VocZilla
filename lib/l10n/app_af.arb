@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profiel laai fout",
     "save": "Stoor",
     "card_home_user_day": "dae",
-    "card_home_user_liste_perso": "lys(te) Verlore",
     "card_home_share": "gedeel",
     "card_home_mot": "teen",
     "card_home_reessayer": "Probeer weer",
@@ -217,5 +216,7 @@
     "card_home_finished": "klaar",
     "title_all_list_defined": "Al ons gedefinieerde lyste",
     "title_all_list_perso": "Al jou gepersonaliseerde lyste",
-    "title_all_list_theme": "Al ons temalyste"
+    "title_all_list_theme": "Al ons temalyste",
+    "view_all_list": "Sien alle lyste",
+    "card_home_user_liste_perso": "Persoonlike lys(te)"
 }

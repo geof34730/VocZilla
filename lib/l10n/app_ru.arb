@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Ошибка загрузки профиля",
     "save": "Сохранять",
     "card_home_user_day": "дней",
-    "card_home_user_liste_perso": "список(ы) потерянных",
     "card_home_share": "поделился",
     "card_home_mot": "против",
     "card_home_reessayer": "Попробуйте еще раз",
@@ -217,5 +216,7 @@
     "card_home_finished": "законченный",
     "title_all_list_defined": "Все наши определенные списки",
     "title_all_list_perso": "Все ваши персонализированные списки",
-    "title_all_list_theme": "Все наши списки тем"
+    "title_all_list_theme": "Все наши списки тем",
+    "view_all_list": "Посмотреть все списки",
+    "card_home_user_liste_perso": "Личные списки"
 }

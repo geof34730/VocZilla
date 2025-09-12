@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "ಪ್ರೊಫೈಲ್ ಲೋಡ್ ಆಗುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ",
     "save": "ಉಳಿಸಿ",
     "card_home_user_day": "ದಿನಗಳು",
-    "card_home_user_liste_perso": "ಪಟ್ಟಿ(ಗಳು) ಕಳೆದುಹೋಗಿವೆ",
     "card_home_share": "ಹಂಚಿಕೊಂಡಿದ್ದಾರೆ",
     "card_home_mot": "ವಿರುದ್ಧ",
     "card_home_reessayer": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
@@ -217,5 +216,7 @@
     "card_home_finished": "ಮುಗಿದಿದೆ",
     "title_all_list_defined": "ನಮ್ಮ ಎಲ್ಲಾ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ಪಟ್ಟಿಗಳು",
     "title_all_list_perso": "ನಿಮ್ಮ ಎಲ್ಲಾ ವೈಯಕ್ತಿಕಗೊಳಿಸಿದ ಪಟ್ಟಿಗಳು",
-    "title_all_list_theme": "ನಮ್ಮ ಎಲ್ಲಾ ಥೀಮ್ ಪಟ್ಟಿಗಳು"
+    "title_all_list_theme": "ನಮ್ಮ ಎಲ್ಲಾ ಥೀಮ್ ಪಟ್ಟಿಗಳು",
+    "view_all_list": "ಎಲ್ಲಾ ಪಟ್ಟಿಗಳನ್ನು ನೋಡಿ",
+    "card_home_user_liste_perso": "ವೈಯಕ್ತಿಕ ಪಟ್ಟಿ(ಗಳು)"
 }

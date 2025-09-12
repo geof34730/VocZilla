@@ -37,24 +37,34 @@ class HomeScreen extends StatelessWidget {
                   listName: null,
                   title: context.loc.home_title_progresse,
                 ),
-
                 const SizedBox(height: 8),
-                HomelistPerso(),
+                BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
+                  builder: (context, state) {
+                    if (state is VocabulaireUserLoaded) {
+                       return HomelistPerso(
+                        view: "home",
+                        allListView: state.data.allListView,
+                      );
+                    }
+                    // Si l'état est initial, on déclenche le chargement.
+                    if (state is VocabulaireUserInitial) {
+                      context.read<VocabulaireUserBloc>().add(CheckVocabulaireUserStatus(local: codelang));
+                    }
+                    // Pour tous les autres cas (Initial, Loading, Empty, Error), on affiche un loader.
+                    return const Center(child: CircularProgressIndicator());
+                  },
+                ),
                 titleWidget(text: context.loc.home_title_list_defined, codelang: codelang),
                 BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
                   builder: (context, state) {
-
-                    if (state is VocabulaireUserLoaded) {
-                      print("****************************************************");
-                      print(state.data.allListView);
-                      print(state.data.ListDefinedEnd.toSet());
-                      print("****************************************************");
+                  if (state is VocabulaireUserLoaded) {
                       return HorizontalScrollViewCardHome(
                           children: getListDefined(
                               view: "home",
                               allListView: state.data.allListView,
                               listDefinedEnd: state.data.ListDefinedEnd.toSet(),
                               context: context,
+                              withCarhome: 340
                           ));
                     }
                     // Si l'état est initial, on déclenche le chargement.
@@ -66,7 +76,22 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
                 titleWidget(text: context.loc.by_themes, codelang: codelang),
-                HomelistThemes(),
+                BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
+                  builder: (context, state) {
+                    if (state is VocabulaireUserLoaded) {
+                          return HomelistThemes(
+                            view: "home",
+                            allListView: state.data.allListView,
+                          );
+                    }
+                    // Si l'état est initial, on déclenche le chargement.
+                    if (state is VocabulaireUserInitial) {
+                      context.read<VocabulaireUserBloc>().add(CheckVocabulaireUserStatus(local: codelang));
+                    }
+                    // Pour tous les autres cas (Initial, Loading, Empty, Error), on affiche un loader.
+                    return const Center(child: CircularProgressIndicator());
+                  },
+                ),
                 titleWidget(text: context.loc.home_title_classement, codelang: codelang),
                 const HomeClassement(),
               ],

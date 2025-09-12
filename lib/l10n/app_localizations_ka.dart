@@ -483,9 +483,6 @@ class AppLocalizationsKa extends AppLocalizations {
   String get card_home_user_day => 'დღეები';
 
   @override
-  String get card_home_user_liste_perso => 'დაკარგული სია(ები)';
-
-  @override
   String get card_home_share => 'გაზიარებული';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'ჩვენი ყველა თემატური სია';
+
+  @override
+  String get view_all_list => 'ყველა სიის ნახვა';
+
+  @override
+  String get card_home_user_liste_perso => 'პირადი სია(ები)';
 }

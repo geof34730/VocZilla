@@ -483,9 +483,6 @@ class AppLocalizationsFi extends AppLocalizations {
   String get card_home_user_day => 'päivää';
 
   @override
-  String get card_home_user_liste_perso => 'lista(t) Kadonnut';
-
-  @override
   String get card_home_share => 'jaettu';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Kaikki teemalistamme';
+
+  @override
+  String get view_all_list => 'Katso kaikki listat';
+
+  @override
+  String get card_home_user_liste_perso => 'Henkilökohtainen(t) lista(t)';
 }

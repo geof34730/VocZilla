@@ -483,9 +483,6 @@ class AppLocalizationsAz extends AppLocalizations {
   String get card_home_user_day => 'günlər';
 
   @override
-  String get card_home_user_liste_perso => 'İtirilmiş siyahı(lar).';
-
-  @override
   String get card_home_share => 'paylaşdı';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Bütün mövzu siyahılarımız';
+
+  @override
+  String get view_all_list => 'Bütün siyahılara baxın';
+
+  @override
+  String get card_home_user_liste_perso => 'Şəxsi siyahı(lar)';
 }

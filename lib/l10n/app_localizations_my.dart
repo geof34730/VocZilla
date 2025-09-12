@@ -483,9 +483,6 @@ class AppLocalizationsMy extends AppLocalizations {
   String get card_home_user_day => 'နေ့ရက်များ';
 
   @override
-  String get card_home_user_liste_perso => 'ပျောက်ဆုံးစာရင်း';
-
-  @override
   String get card_home_share => 'မျှဝေသည်။';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'ကျွန်ုပ်တို့၏ အဓိကအကြောင်းအရာများစာရင်းများ';
+
+  @override
+  String get view_all_list => 'စာရင်းအားလုံးကိုကြည့်ပါ။';
+
+  @override
+  String get card_home_user_liste_perso => 'ကိုယ်ရေးကိုယ်တာ စာရင်း(များ)';
 }

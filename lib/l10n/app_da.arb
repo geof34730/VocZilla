@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Fejl ved indlæsning af profil",
     "save": "Spare",
     "card_home_user_day": "dage",
-    "card_home_user_liste_perso": "liste(r) Mistet",
     "card_home_share": "delt",
     "card_home_mot": "mod",
     "card_home_reessayer": "Prøv igen",
@@ -217,5 +216,7 @@
     "card_home_finished": "færdig",
     "title_all_list_defined": "Alle vores definerede lister",
     "title_all_list_perso": "Alle dine personlige lister",
-    "title_all_list_theme": "Alle vores temalister"
+    "title_all_list_theme": "Alle vores temalister",
+    "view_all_list": "Se alle lister",
+    "card_home_user_liste_perso": "Personlige liste(r)"
 }

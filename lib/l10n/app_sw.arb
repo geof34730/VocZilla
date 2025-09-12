@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Hitilafu ya upakiaji wa wasifu",
     "save": "Hifadhi",
     "card_home_user_day": "siku",
-    "card_home_user_liste_perso": "orodha(s) Zimepotea",
     "card_home_share": "pamoja",
     "card_home_mot": "dhidi ya",
     "card_home_reessayer": "Jaribu tena",
@@ -217,5 +216,7 @@
     "card_home_finished": "kumaliza",
     "title_all_list_defined": "Orodha zetu zote zilizofafanuliwa",
     "title_all_list_perso": "Orodha zako zote zilizobinafsishwa",
-    "title_all_list_theme": "Orodha zetu zote za mada"
+    "title_all_list_theme": "Orodha zetu zote za mada",
+    "view_all_list": "Tazama orodha zote",
+    "card_home_user_liste_perso": "Orodha za kibinafsi"
 }

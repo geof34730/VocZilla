@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "配置文件加载错误",
     "save": "节省",
     "card_home_user_day": "天",
-    "card_home_user_liste_perso": "遗失清单",
     "card_home_share": "共享",
     "card_home_mot": "反对",
     "card_home_reessayer": "再试一次",
@@ -217,5 +216,7 @@
     "card_home_finished": "完成的",
     "title_all_list_defined": "我们所有定义的列表",
     "title_all_list_perso": "您所有的个性化列表",
-    "title_all_list_theme": "我们所有的主题列表"
+    "title_all_list_theme": "我们所有的主题列表",
+    "view_all_list": "查看所有列表",
+    "card_home_user_liste_perso": "个人名单"
 }

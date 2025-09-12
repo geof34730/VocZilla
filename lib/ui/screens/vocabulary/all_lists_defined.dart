@@ -26,7 +26,7 @@ class AllListsDefinedScreen extends StatefulWidget {
 }
 
 class _AllListsDefinedScreenState extends State<AllListsDefinedScreen> {
-  final double withCarhome=340;
+
   @override
   Widget build(BuildContext context) {
     final codelang = Localizations.localeOf(context).languageCode;
@@ -50,7 +50,7 @@ class _AllListsDefinedScreenState extends State<AllListsDefinedScreen> {
                             title: context.loc.title_all_list_defined,
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(20.0),
+                            padding: const EdgeInsets.only(top:30,bottom: 20),
                             child: Wrap(
                                 spacing: 8.0, // Espace horizontal entre les cartes
                                 runSpacing: 8.0, // Espace vertical entre les lignes
@@ -59,7 +59,8 @@ class _AllListsDefinedScreenState extends State<AllListsDefinedScreen> {
                                   view: "allList",
                                   allListView: state.data.allListView,
                                   listDefinedEnd: state.data.ListDefinedEnd.toSet(),
-                                  context:context
+                                  context:context,
+                                  withCarhome: 360
                                 ))
                           ),
                         ],

@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "پروفائل لوڈ کرنے میں خرابی۔",
     "save": "محفوظ کریں۔",
     "card_home_user_day": "دن",
-    "card_home_user_liste_perso": "فہرست (فہرستیں) گم ہو گئیں۔",
     "card_home_share": "مشترکہ",
     "card_home_mot": "کے خلاف",
     "card_home_reessayer": "دوبارہ کوشش کریں۔",
@@ -217,5 +216,7 @@
     "card_home_finished": "ختم",
     "title_all_list_defined": "ہماری تمام متعین فہرستیں۔",
     "title_all_list_perso": "آپ کی تمام ذاتی فہرستیں۔",
-    "title_all_list_theme": "ہماری تمام تھیم کی فہرستیں۔"
+    "title_all_list_theme": "ہماری تمام تھیم کی فہرستیں۔",
+    "view_all_list": "تمام فہرستیں دیکھیں",
+    "card_home_user_liste_perso": "ذاتی فہرست"
 }

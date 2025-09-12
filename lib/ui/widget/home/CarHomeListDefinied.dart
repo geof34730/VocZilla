@@ -12,8 +12,9 @@ List<Widget> getListDefined({
   required String view,
   required bool allListView,
   required Set<String> listDefinedEnd,
+  required double withCarhome,
 }) {
-  final double withCarhome = 340;
+
   final List<Map<String, int>> cardConfigs = [
     {'begin': 0, 'end': 20},
     {'begin': 20, 'end': 50},
@@ -22,11 +23,9 @@ List<Widget> getListDefined({
     {'begin': 200, 'end': 300},
     {'begin': 300, 'end': 400},
   ];
-
-
   // Toujours générer la liste complète des configurations possibles.
   for (int i = 400; i < globalCountVocabulaireAll; i += 100) {
-    final int endValue = min(i + 200, globalCountVocabulaireAll);
+    final int endValue = min(i + 100, globalCountVocabulaireAll);
     cardConfigs.add({'begin': i, 'end': endValue});
   }
 
@@ -86,8 +85,7 @@ List<Widget> getListDefined({
               listName: cardData['keyStringTest'] as String,
               vocabulaireBegin: cardData['begin'] as int,
               vocabulaireEnd: cardData['end'] as int,
-              paddingLevelBar: const EdgeInsets.only(
-                  bottom: 10, top: 5),
+              paddingLevelBar: const EdgeInsets.only( bottom: 10, top: 5),
             ),
           ),
       );
@@ -99,7 +97,6 @@ List<Widget> getListDefined({
       Padding(
         padding: const EdgeInsets.only(top: 4, left: 0, right: 4),
           child: SizedBox(
-
             height: 125,
             child: GestureDetector(
               onTap: () {
@@ -107,7 +104,7 @@ List<Widget> getListDefined({
               },
               child: Card(
                 color: Colors.green,
-                elevation: 2.0,
+                elevation: 5.0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
@@ -121,7 +118,7 @@ List<Widget> getListDefined({
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      "Voir toutes les listes",
+                      context.loc.view_all_list,
                       textAlign: TextAlign.center,
                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18,color: Colors.white),
                     ),
@@ -131,7 +128,6 @@ List<Widget> getListDefined({
             ),
           ),
         ),
-
     );
   }
   return widgets;

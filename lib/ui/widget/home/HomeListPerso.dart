@@ -12,15 +12,23 @@ import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/cubit/localization_cubit.dart';
+import 'CarHomeListPerso.dart';
 import 'CardHome.dart';
 import 'TitleWidget.dart';
 
 
 class HomelistPerso extends StatelessWidget {
+  final String view;
+  final bool allListView;
+
+  const HomelistPerso({
+    super.key,
+    required this.view,
+    this.allListView = false,
+  });
 
   @override
   Widget build(BuildContext context) {
-
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
         builder: (context, state) {
           if (state is VocabulaireUserLoading) {
@@ -28,9 +36,18 @@ class HomelistPerso extends StatelessWidget {
           } else if( state is VocabulaireUserUpdate){
             return Center(child: CircularProgressIndicator());
           } else if (state is VocabulaireUserLoaded  ) {
-            int i =0;
              final VocabulaireUser data = state.data;
-             final bool listePerso = data.listPerso.length>0;
+             final bool hasAnyPersoLists = data.listPerso.isNotEmpty;
+
+             final List<Widget> persoWidgets = getListPerso(
+                 context: context,
+                 data: data,
+                 view: view,
+                 allListView: allListView,
+                 withCarhome: 340);
+
+             final bool hasVisibleLists = persoWidgets.isNotEmpty;
+
               return Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +57,7 @@ class HomelistPerso extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                        titleWidget(text: context.loc.home_title_my_list_perso,codelang: Localizations.localeOf(context).languageCode),
-                      if (listePerso)
+                      if (hasAnyPersoLists)
                         Padding(
                           padding: EdgeInsets.only(left: 5,top:8),
                           // Remplacer ElevatedButton par un Material + IconButton pour un contrôle total de la taille
@@ -64,33 +81,18 @@ class HomelistPerso extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height:4),
-                  if(!listePerso)
+                  // Si aucune liste n'est visible (soit parce qu'il n'y en a pas, soit parce qu'elles sont toutes filtrées),
+                  // on affiche le message d'accueil.
+                  if(!hasVisibleLists)
                     Padding(
                       child: descriptionListPersoEmpty(context: context),
                       padding: EdgeInsets.only(top: 0),
                     ),
-
-                  if(listePerso)
+                  // Sinon, on affiche la liste horizontale des cartes.
+                  if(hasVisibleLists)
                     HorizontalScrollViewCardHome(
                       itemWidth: itemWidthListPerso(context: context, nbList: 3),
-                          children: data.listPerso.reversed.map((listPerso) {
-                            i=i+1;
-                            print(i.toString());
-                            return CardHome(
-                              keyStringTest: i.toString(),
-                              listName: listPerso.guid,
-                              nbVocabulaire:listPerso.listGuidVocabulary.length,
-                              guid: listPerso.guid,
-                              title: listPerso.title,
-                              backgroundColor: Color(listPerso.color), // Remplacez par la couleur appropriée
-                              editMode: listPerso.ownListShare,
-                              isListShare:listPerso.isListShare,
-                              ownListShare: listPerso.ownListShare,
-                              list: listPerso,
-                              isListPerso:true,
-                              paddingLevelBar: EdgeInsets.only(top: 5),
-                            );
-                          }).toList()
+                          children: persoWidgets,
                     ),
                 ],
               );

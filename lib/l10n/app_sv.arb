@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Fel vid inläsning av profil",
     "save": "Spara",
     "card_home_user_day": "dagar",
-    "card_home_user_liste_perso": "lista(or) Förlorad",
     "card_home_share": "delad",
     "card_home_mot": "mot(s)",
     "card_home_reessayer": "Försök igen",
@@ -217,5 +216,7 @@
     "card_home_finished": "färdig",
     "title_all_list_defined": "Alla våra definierade listor",
     "title_all_list_perso": "Alla dina personliga listor",
-    "title_all_list_theme": "Alla våra temalistor"
+    "title_all_list_theme": "Alla våra temalistor",
+    "view_all_list": "Se alla listor",
+    "card_home_user_liste_perso": "Personliga listor"
 }

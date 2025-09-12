@@ -483,9 +483,6 @@ class AppLocalizationsUz extends AppLocalizations {
   String get card_home_user_day => 'kunlar';
 
   @override
-  String get card_home_user_liste_perso => 'ro\'yxat(lar) yo\'qolgan';
-
-  @override
   String get card_home_share => 'birgalikda';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Bizning barcha mavzular ro\'yxati';
+
+  @override
+  String get view_all_list => 'Barcha roʻyxatlarni koʻring';
+
+  @override
+  String get card_home_user_liste_perso => 'Shaxsiy ro\'yxat(lar)';
 }

@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Профилди жүктөө катасы",
     "save": "Сактоо",
     "card_home_user_day": "күн",
-    "card_home_user_liste_perso": "тизме(лер) жоголду",
     "card_home_share": "бөлүштү",
     "card_home_mot": "каршы",
     "card_home_reessayer": "Кайра аракет кыл",
@@ -217,5 +216,7 @@
     "card_home_finished": "бүттү",
     "title_all_list_defined": "Биздин бардык аныкталган тизмелер",
     "title_all_list_perso": "Бардык жекелештирилген тизмелериңиз",
-    "title_all_list_theme": "Биздин бардык тема тизмелери"
+    "title_all_list_theme": "Биздин бардык тема тизмелери",
+    "view_all_list": "Бардык тизмелерди көрүү",
+    "card_home_user_liste_perso": "Жеке тизме(лер)"
 }

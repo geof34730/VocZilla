@@ -483,9 +483,6 @@ class AppLocalizationsEu extends AppLocalizations {
   String get card_home_user_day => 'egunak';
 
   @override
-  String get card_home_user_liste_perso => 'Galdutako zerrenda(k)';
-
-  @override
   String get card_home_share => 'partekatua';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Gure gai-zerrenda guztiak';
+
+  @override
+  String get view_all_list => 'Ikusi zerrenda guztiak';
+
+  @override
+  String get card_home_user_liste_perso => 'Zerrenda pertsonala(k)';
 }

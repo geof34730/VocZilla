@@ -483,9 +483,6 @@ class AppLocalizationsAf extends AppLocalizations {
   String get card_home_user_day => 'dae';
 
   @override
-  String get card_home_user_liste_perso => 'lys(te) Verlore';
-
-  @override
   String get card_home_share => 'gedeel';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Al ons temalyste';
+
+  @override
+  String get view_all_list => 'Sien alle lyste';
+
+  @override
+  String get card_home_user_liste_perso => 'Persoonlike lys(te)';
 }

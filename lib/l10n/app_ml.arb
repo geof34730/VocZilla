@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "പ്രൊഫൈൽ ലോഡ് ചെയ്യുന്നതിൽ പിശക്",
     "save": "രക്ഷിക്കും",
     "card_home_user_day": "ദിവസങ്ങൾ",
-    "card_home_user_liste_perso": "പട്ടിക(കൾ) നഷ്ടപ്പെട്ടു",
     "card_home_share": "പങ്കിട്ടു",
     "card_home_mot": "എതിരായി",
     "card_home_reessayer": "വീണ്ടും ശ്രമിക്കുക",
@@ -217,5 +216,7 @@
     "card_home_finished": "പൂർത്തിയായി",
     "title_all_list_defined": "ഞങ്ങളുടെ എല്ലാ നിർവചിക്കപ്പെട്ട ലിസ്റ്റുകളും",
     "title_all_list_perso": "നിങ്ങളുടെ എല്ലാ വ്യക്തിഗതമാക്കിയ ലിസ്റ്റുകളും",
-    "title_all_list_theme": "ഞങ്ങളുടെ എല്ലാ തീം ലിസ്റ്റുകളും"
+    "title_all_list_theme": "ഞങ്ങളുടെ എല്ലാ തീം ലിസ്റ്റുകളും",
+    "view_all_list": "എല്ലാ ലിസ്റ്റുകളും കാണുക",
+    "card_home_user_liste_perso": "വ്യക്തിഗത ലിസ്റ്റ്(കൾ)"
 }

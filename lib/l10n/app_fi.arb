@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profiilin latausvirhe",
     "save": "Tallentaa",
     "card_home_user_day": "päivää",
-    "card_home_user_liste_perso": "lista(t) Kadonnut",
     "card_home_share": "jaettu",
     "card_home_mot": "vastaan",
     "card_home_reessayer": "Yritä uudelleen",
@@ -217,5 +216,7 @@
     "card_home_finished": "valmis",
     "title_all_list_defined": "Kaikki määritellyt listamme",
     "title_all_list_perso": "Kaikki henkilökohtaiset listasi",
-    "title_all_list_theme": "Kaikki teemalistamme"
+    "title_all_list_theme": "Kaikki teemalistamme",
+    "view_all_list": "Katso kaikki listat",
+    "card_home_user_liste_perso": "Henkilökohtainen(t) lista(t)"
 }

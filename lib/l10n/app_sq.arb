@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Gabim në ngarkimin e profilit",
     "save": "Ruaj",
     "card_home_user_day": "ditë",
-    "card_home_user_liste_perso": "listë(a) të humbura",
     "card_home_share": "i ndarë",
     "card_home_mot": "kundër",
     "card_home_reessayer": "Provo përsëri",
@@ -217,5 +216,7 @@
     "card_home_finished": "mbaruar",
     "title_all_list_defined": "Të gjitha listat tona të përcaktuara",
     "title_all_list_perso": "Të gjitha listat tuaja të personalizuara",
-    "title_all_list_theme": "Të gjitha listat tona të temave"
+    "title_all_list_theme": "Të gjitha listat tona të temave",
+    "view_all_list": "Shiko të gjitha listat",
+    "card_home_user_liste_perso": "Lista(t) personale"
 }

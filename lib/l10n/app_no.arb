@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Feil ved innlasting av profil",
     "save": "Spare",
     "card_home_user_day": "dager",
-    "card_home_user_liste_perso": "liste(r) Tapt",
     "card_home_share": "delt",
     "card_home_mot": "imot",
     "card_home_reessayer": "Prøv igjen",
@@ -217,5 +216,7 @@
     "card_home_finished": "ferdig",
     "title_all_list_defined": "Alle våre definerte lister",
     "title_all_list_perso": "Alle dine personlige lister",
-    "title_all_list_theme": "Alle temalistene våre"
+    "title_all_list_theme": "Alle temalistene våre",
+    "view_all_list": "Se alle lister",
+    "card_home_user_liste_perso": "Personlige liste(r)"
 }

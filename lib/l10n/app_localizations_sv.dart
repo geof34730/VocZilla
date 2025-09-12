@@ -483,9 +483,6 @@ class AppLocalizationsSv extends AppLocalizations {
   String get card_home_user_day => 'dagar';
 
   @override
-  String get card_home_user_liste_perso => 'lista(or) Förlorad';
-
-  @override
   String get card_home_share => 'delad';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Alla våra temalistor';
+
+  @override
+  String get view_all_list => 'Se alla listor';
+
+  @override
+  String get card_home_user_liste_perso => 'Personliga listor';
 }

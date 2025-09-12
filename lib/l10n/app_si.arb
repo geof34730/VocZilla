@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "පැතිකඩ පූරණය කිරීමේ දෝෂයකි",
     "save": "සුරකින්න",
     "card_home_user_day": "දින",
-    "card_home_user_liste_perso": "නැතිවූ ලැයිස්තුව(ය)",
     "card_home_share": "බෙදාගත්තා",
     "card_home_mot": "විරුද්ධව",
     "card_home_reessayer": "නැවත උත්සාහ කරන්න",
@@ -217,5 +216,7 @@
     "card_home_finished": "අවසන්",
     "title_all_list_defined": "අපගේ සියලු අර්ථ දක්වා ඇති ලැයිස්තු",
     "title_all_list_perso": "ඔබගේ සියලු පුද්ගලාරෝපිත ලැයිස්තු",
-    "title_all_list_theme": "අපගේ සියලුම තේමා ලැයිස්තු"
+    "title_all_list_theme": "අපගේ සියලුම තේමා ලැයිස්තු",
+    "view_all_list": "සියලුම ලැයිස්තු බලන්න",
+    "card_home_user_liste_perso": "පුද්ගලික ලැයිස්තුව(ය)"
 }

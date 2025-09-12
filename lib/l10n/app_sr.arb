@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Грешка при учитавању профила",
     "save": "Сачувај",
     "card_home_user_day": "дана",
-    "card_home_user_liste_perso": "Изгубљена листа(е)",
     "card_home_share": "дељено",
     "card_home_mot": "против",
     "card_home_reessayer": "Покушај поново",
@@ -217,5 +216,7 @@
     "card_home_finished": "завршено",
     "title_all_list_defined": "Све наше дефинисане листе",
     "title_all_list_perso": "Све ваше персонализоване листе",
-    "title_all_list_theme": "Све наше листе тема"
+    "title_all_list_theme": "Све наше листе тема",
+    "view_all_list": "Погледајте све листе",
+    "card_home_user_liste_perso": "Лична(е) листа(е)"
 }

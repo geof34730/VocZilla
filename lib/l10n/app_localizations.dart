@@ -1183,12 +1183,6 @@ abstract class AppLocalizations {
   /// **'days'**
   String get card_home_user_day;
 
-  /// No description provided for @card_home_user_liste_perso.
-  ///
-  /// In en, this message translates to:
-  /// **'list(s) Lost'**
-  String get card_home_user_liste_perso;
-
   /// No description provided for @card_home_share.
   ///
   /// In en, this message translates to:
@@ -1548,6 +1542,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'All our theme lists'**
   String get title_all_list_theme;
+
+  /// No description provided for @view_all_list.
+  ///
+  /// In en, this message translates to:
+  /// **'See all lists'**
+  String get view_all_list;
+
+  /// No description provided for @card_home_user_liste_perso.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal list(s)'**
+  String get card_home_user_liste_perso;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

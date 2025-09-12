@@ -483,9 +483,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String get card_home_user_day => 'дней';
 
   @override
-  String get card_home_user_liste_perso => 'список(ы) потерянных';
-
-  @override
   String get card_home_share => 'поделился';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Все наши списки тем';
+
+  @override
+  String get view_all_list => 'Посмотреть все списки';
+
+  @override
+  String get card_home_user_liste_perso => 'Личные списки';
 }

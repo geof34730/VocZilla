@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "خطأ في تحميل الملف الشخصي",
     "save": "يحفظ",
     "card_home_user_day": "أيام",
-    "card_home_user_liste_perso": "القائمة(القوائم) المفقودة",
     "card_home_share": "مشترك",
     "card_home_mot": "ضد",
     "card_home_reessayer": "حاول ثانية",
@@ -217,5 +216,7 @@
     "card_home_finished": "انتهى",
     "title_all_list_defined": "جميع قوائمنا المحددة",
     "title_all_list_perso": "جميع قوائمك الشخصية",
-    "title_all_list_theme": "جميع قوائم المواضيع لدينا"
+    "title_all_list_theme": "جميع قوائم المواضيع لدينا",
+    "view_all_list": "انظر جميع القوائم",
+    "card_home_user_liste_perso": "القائمة الشخصية"
 }

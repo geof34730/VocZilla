@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "আলেখ্যন লোডিং ত্ৰুটি",
     "save": "সঞ্চয় কৰা",
     "card_home_user_day": "দিন",
-    "card_home_user_liste_perso": "তালিকা(সমূহ) হেৰুৱাই পেলোৱা",
     "card_home_share": "শ্বেয়াৰ কৰা হৈছে",
     "card_home_mot": "বিৰুদ্ধে",
     "card_home_reessayer": "আকৌ এবাৰ চেষ্টা কৰক",
@@ -217,5 +216,7 @@
     "card_home_finished": "সমাপ্ত কৰা",
     "title_all_list_defined": "আমাৰ সকলো নিৰ্ধাৰিত তালিকা",
     "title_all_list_perso": "আপোনাৰ সকলো ব্যক্তিগতকৃত তালিকা",
-    "title_all_list_theme": "আমাৰ সকলো থিম লিষ্ট"
+    "title_all_list_theme": "আমাৰ সকলো থিম লিষ্ট",
+    "view_all_list": "সকলো তালিকা চাওক",
+    "card_home_user_liste_perso": "ব্যক্তিগত তালিকা(সমূহ)"
 }

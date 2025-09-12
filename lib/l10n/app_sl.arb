@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Napaka pri nalaganju profila",
     "save": "Shrani",
     "card_home_user_day": "dni",
-    "card_home_user_liste_perso": "seznam(i) Izgubljeno",
     "card_home_share": "deljeno",
     "card_home_mot": "proti",
     "card_home_reessayer": "Poskusi znova",
@@ -217,5 +216,7 @@
     "card_home_finished": "končano",
     "title_all_list_defined": "Vsi naši definirani seznami",
     "title_all_list_perso": "Vsi vaši prilagojeni seznami",
-    "title_all_list_theme": "Vsi naši tematski seznami"
+    "title_all_list_theme": "Vsi naši tematski seznami",
+    "view_all_list": "Oglejte si vse sezname",
+    "card_home_user_liste_perso": "Osebni seznam(i)"
 }

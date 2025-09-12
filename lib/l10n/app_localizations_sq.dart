@@ -483,9 +483,6 @@ class AppLocalizationsSq extends AppLocalizations {
   String get card_home_user_day => 'ditë';
 
   @override
-  String get card_home_user_liste_perso => 'listë(a) të humbura';
-
-  @override
   String get card_home_share => 'i ndarë';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Të gjitha listat tona të temave';
+
+  @override
+  String get view_all_list => 'Shiko të gjitha listat';
+
+  @override
+  String get card_home_user_liste_perso => 'Lista(t) personale';
 }

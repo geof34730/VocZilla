@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Σφάλμα φόρτωσης προφίλ",
     "save": "Εκτός",
     "card_home_user_day": "ημέρες",
-    "card_home_user_liste_perso": "λίστα(-ες) Χαμένες",
     "card_home_share": "κοινόχρηστο",
     "card_home_mot": "κατά",
     "card_home_reessayer": "Δοκιμάστε ξανά",
@@ -217,5 +216,7 @@
     "card_home_finished": "πεπερασμένος",
     "title_all_list_defined": "Όλες οι καθορισμένες λίστες μας",
     "title_all_list_perso": "Όλες οι εξατομικευμένες λίστες σας",
-    "title_all_list_theme": "Όλες οι λίστες θεμάτων μας"
+    "title_all_list_theme": "Όλες οι λίστες θεμάτων μας",
+    "view_all_list": "Δείτε όλες τις λίστες",
+    "card_home_user_liste_perso": "Προσωπική(ές) λίστα(ες)"
 }

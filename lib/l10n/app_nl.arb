@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Fout bij het laden van het profiel",
     "save": "Redden",
     "card_home_user_day": "dagen",
-    "card_home_user_liste_perso": "lijst(en) Verloren",
     "card_home_share": "gedeeld",
     "card_home_mot": "tegen",
     "card_home_reessayer": "Probeer het opnieuw",
@@ -217,5 +216,7 @@
     "card_home_finished": "afgerond",
     "title_all_list_defined": "Al onze gedefinieerde lijsten",
     "title_all_list_perso": "Al uw gepersonaliseerde lijsten",
-    "title_all_list_theme": "Al onze themalijsten"
+    "title_all_list_theme": "Al onze themalijsten",
+    "view_all_list": "Bekijk alle lijsten",
+    "card_home_user_liste_perso": "Persoonlijke lijst(en)"
 }

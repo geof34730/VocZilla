@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profiili laadimise viga",
     "save": "Salvesta",
     "card_home_user_day": "päevad",
-    "card_home_user_liste_perso": "nimekiri(d) Kadunud",
     "card_home_share": "jagatud",
     "card_home_mot": "vastu",
     "card_home_reessayer": "Proovi uuesti",
@@ -217,5 +216,7 @@
     "card_home_finished": "lõpetanud",
     "title_all_list_defined": "Kõik meie määratletud loendid",
     "title_all_list_perso": "Kõik teie isikupärastatud loendid",
-    "title_all_list_theme": "Kõik meie teemade loendid"
+    "title_all_list_theme": "Kõik meie teemade loendid",
+    "view_all_list": "Kuva kõik nimekirjad",
+    "card_home_user_liste_perso": "Isiklik(ud) nimekiri(d)"
 }

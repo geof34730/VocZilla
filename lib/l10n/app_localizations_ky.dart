@@ -483,9 +483,6 @@ class AppLocalizationsKy extends AppLocalizations {
   String get card_home_user_day => 'күн';
 
   @override
-  String get card_home_user_liste_perso => 'тизме(лер) жоголду';
-
-  @override
   String get card_home_share => 'бөлүштү';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Биздин бардык тема тизмелери';
+
+  @override
+  String get view_all_list => 'Бардык тизмелерди көрүү';
+
+  @override
+  String get card_home_user_liste_perso => 'Жеке тизме(лер)';
 }

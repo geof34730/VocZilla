@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "প্রোফাইল লোড করার সময় ত্রুটি",
     "save": "সংরক্ষণ করুন",
     "card_home_user_day": "দিনগুলি",
-    "card_home_user_liste_perso": "তালিকা(গুলি) হারিয়ে গেছে",
     "card_home_share": "ভাগ করা হয়েছে",
     "card_home_mot": "বিরুদ্ধে",
     "card_home_reessayer": "আবার চেষ্টা করুন",
@@ -217,5 +216,7 @@
     "card_home_finished": "সমাপ্ত",
     "title_all_list_defined": "আমাদের সমস্ত নির্ধারিত তালিকা",
     "title_all_list_perso": "আপনার সমস্ত ব্যক্তিগতকৃত তালিকা",
-    "title_all_list_theme": "আমাদের সকল থিম তালিকা"
+    "title_all_list_theme": "আমাদের সকল থিম তালিকা",
+    "view_all_list": "সব তালিকা দেখুন",
+    "card_home_user_liste_perso": "ব্যক্তিগত তালিকা(গুলি)"
 }

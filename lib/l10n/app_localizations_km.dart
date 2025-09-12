@@ -483,9 +483,6 @@ class AppLocalizationsKm extends AppLocalizations {
   String get card_home_user_day => 'ថ្ងៃ';
 
   @override
-  String get card_home_user_liste_perso => 'បញ្ជីដែលបាត់';
-
-  @override
   String get card_home_share => 'ចែករំលែក';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'បញ្ជីប្រធានបទទាំងអស់របស់យើង។';
+
+  @override
+  String get view_all_list => 'មើលបញ្ជីទាំងអស់។';
+
+  @override
+  String get card_home_user_liste_perso => 'បញ្ជី​ផ្ទាល់ខ្លួន';
 }

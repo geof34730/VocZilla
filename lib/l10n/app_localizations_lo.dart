@@ -483,9 +483,6 @@ class AppLocalizationsLo extends AppLocalizations {
   String get card_home_user_day => 'ມື້';
 
   @override
-  String get card_home_user_liste_perso => 'ລາຍ​ການ​ສູນ​ເສຍ​';
-
-  @override
   String get card_home_share => 'ແບ່ງປັນ';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'ບັນຊີລາຍຊື່ຫົວຂໍ້ຂອງພວກເຮົາທັງຫມົດ';
+
+  @override
+  String get view_all_list => 'ເບິ່ງລາຍການທັງໝົດ';
+
+  @override
+  String get card_home_user_liste_perso => 'ລາຍຊື່ສ່ວນຕົວ';
 }

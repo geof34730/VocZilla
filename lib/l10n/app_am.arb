@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "የመገለጫ ጭነት ስህተት",
     "save": "አስቀምጥ",
     "card_home_user_day": "ቀናት",
-    "card_home_user_liste_perso": "ዝርዝር(ዎች) ጠፍቷል",
     "card_home_share": "ተጋርቷል።",
     "card_home_mot": "መቃወም",
     "card_home_reessayer": "እንደገና ይሞክሩ",
@@ -217,5 +216,7 @@
     "card_home_finished": "አልቋል",
     "title_all_list_defined": "ሁሉም የእኛ የተገለጹ ዝርዝሮች",
     "title_all_list_perso": "ሁሉም የእርስዎ ግላዊነት የተላበሱ ዝርዝሮች",
-    "title_all_list_theme": "ሁሉም የእኛ ጭብጥ ዝርዝሮች"
+    "title_all_list_theme": "ሁሉም የእኛ ጭብጥ ዝርዝሮች",
+    "view_all_list": "ሁሉንም ዝርዝሮች ይመልከቱ",
+    "card_home_user_liste_perso": "የግል ዝርዝር(ዎች)"
 }

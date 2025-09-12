@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Błąd ładowania profilu",
     "save": "Ratować",
     "card_home_user_day": "dni",
-    "card_home_user_liste_perso": "lista(y) Zagubione",
     "card_home_share": "wspólny",
     "card_home_mot": "przeciwko",
     "card_home_reessayer": "Spróbuj ponownie",
@@ -217,5 +216,7 @@
     "card_home_finished": "gotowy",
     "title_all_list_defined": "Wszystkie nasze zdefiniowane listy",
     "title_all_list_perso": "Wszystkie Twoje spersonalizowane listy",
-    "title_all_list_theme": "Wszystkie nasze listy tematyczne"
+    "title_all_list_theme": "Wszystkie nasze listy tematyczne",
+    "view_all_list": "Zobacz wszystkie listy",
+    "card_home_user_liste_perso": "Lista(y) osobista(e)"
 }

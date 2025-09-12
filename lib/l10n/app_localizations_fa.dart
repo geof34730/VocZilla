@@ -483,9 +483,6 @@ class AppLocalizationsFa extends AppLocalizations {
   String get card_home_user_day => 'روزها';
 
   @override
-  String get card_home_user_liste_perso => 'فهرست(ها) گم شده';
-
-  @override
   String get card_home_share => 'به اشتراک گذاشته شده';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'همه لیست‌های تم ما';
+
+  @override
+  String get view_all_list => 'مشاهده همه لیست‌ها';
+
+  @override
+  String get card_home_user_liste_perso => 'فهرست(های) شخصی';
 }

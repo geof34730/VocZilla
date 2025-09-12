@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "प्रोफाइल लोड करताना एरर आली",
     "save": "जतन करा",
     "card_home_user_day": "दिवस",
-    "card_home_user_liste_perso": "यादी(ल्या) हरवल्या",
     "card_home_share": "शेअर केले",
     "card_home_mot": "विरुद्ध",
     "card_home_reessayer": "पुन्हा प्रयत्न करा",
@@ -217,5 +216,7 @@
     "card_home_finished": "पूर्ण झाले",
     "title_all_list_defined": "आमच्या सर्व परिभाषित याद्या",
     "title_all_list_perso": "तुमच्या सर्व वैयक्तिकृत सूची",
-    "title_all_list_theme": "आमच्या सर्व थीम याद्या"
+    "title_all_list_theme": "आमच्या सर्व थीम याद्या",
+    "view_all_list": "सर्व सूची पहा",
+    "card_home_user_liste_perso": "वैयक्तिक यादी(ल्या)"
 }

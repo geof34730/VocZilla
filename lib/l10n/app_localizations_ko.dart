@@ -483,9 +483,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get card_home_user_day => '날';
 
   @override
-  String get card_home_user_liste_perso => '목록(들) 분실';
-
-  @override
   String get card_home_share => '공유';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get title_all_list_theme => '우리의 모든 테마 목록';
+
+  @override
+  String get view_all_list => '모든 목록 보기';
+
+  @override
+  String get card_home_user_liste_perso => '개인 목록';
 }

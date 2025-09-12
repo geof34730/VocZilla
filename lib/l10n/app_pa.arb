@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "ਪ੍ਰੋਫਾਈਲ ਲੋਡ ਕਰਨ ਵਿੱਚ ਗੜਬੜ",
     "save": "ਸੇਵ ਕਰੋ",
     "card_home_user_day": "ਦਿਨ",
-    "card_home_user_liste_perso": "ਸੂਚੀ(ਆਂ) ਗੁੰਮ ਗਈ",
     "card_home_share": "ਸਾਂਝਾ ਕੀਤਾ",
     "card_home_mot": "ਦੇ ਵਿਰੁੱਧ",
     "card_home_reessayer": "ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
@@ -217,5 +216,7 @@
     "card_home_finished": "ਮੁਕੰਮਲ",
     "title_all_list_defined": "ਸਾਡੀਆਂ ਸਾਰੀਆਂ ਪਰਿਭਾਸ਼ਿਤ ਸੂਚੀਆਂ",
     "title_all_list_perso": "ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ ਵਿਅਕਤੀਗਤ ਸੂਚੀਆਂ",
-    "title_all_list_theme": "ਸਾਡੀਆਂ ਸਾਰੀਆਂ ਥੀਮ ਸੂਚੀਆਂ"
+    "title_all_list_theme": "ਸਾਡੀਆਂ ਸਾਰੀਆਂ ਥੀਮ ਸੂਚੀਆਂ",
+    "view_all_list": "ਸਾਰੀਆਂ ਸੂਚੀਆਂ ਵੇਖੋ",
+    "card_home_user_liste_perso": "ਨਿੱਜੀ ਸੂਚੀ(ਵਾਂ)"
 }

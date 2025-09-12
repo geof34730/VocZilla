@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "ပရိုဖိုင်တင်ရာတွင် အမှားအယွင်းရှိသည်။",
     "save": "သိမ်းဆည်းပါ။",
     "card_home_user_day": "နေ့ရက်များ",
-    "card_home_user_liste_perso": "ပျောက်ဆုံးစာရင်း",
     "card_home_share": "မျှဝေသည်။",
     "card_home_mot": "ဆန့်ကျင်ဘက်",
     "card_home_reessayer": "ထပ်ကြိုးစားပါ။",
@@ -217,5 +216,7 @@
     "card_home_finished": "ပြီးပြီ။",
     "title_all_list_defined": "ကျွန်ုပ်တို့၏သတ်မှတ်ထားသောစာရင်းများအားလုံး",
     "title_all_list_perso": "သင့်စိတ်ကြိုက်စာရင်းများအားလုံး",
-    "title_all_list_theme": "ကျွန်ုပ်တို့၏ အဓိကအကြောင်းအရာများစာရင်းများ"
+    "title_all_list_theme": "ကျွန်ုပ်တို့၏ အဓိကအကြောင်းအရာများစာရင်းများ",
+    "view_all_list": "စာရင်းအားလုံးကိုကြည့်ပါ။",
+    "card_home_user_liste_perso": "ကိုယ်ရေးကိုယ်တာ စာရင်း(များ)"
 }

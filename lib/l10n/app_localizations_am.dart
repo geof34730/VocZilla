@@ -483,9 +483,6 @@ class AppLocalizationsAm extends AppLocalizations {
   String get card_home_user_day => 'ቀናት';
 
   @override
-  String get card_home_user_liste_perso => 'ዝርዝር(ዎች) ጠፍቷል';
-
-  @override
   String get card_home_share => 'ተጋርቷል።';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'ሁሉም የእኛ ጭብጥ ዝርዝሮች';
+
+  @override
+  String get view_all_list => 'ሁሉንም ዝርዝሮች ይመልከቱ';
+
+  @override
+  String get card_home_user_liste_perso => 'የግል ዝርዝር(ዎች)';
 }

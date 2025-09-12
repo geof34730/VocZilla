@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Профайлыг ачаалахад алдаа гарлаа",
     "save": "Хадгалах",
     "card_home_user_day": "өдрүүд",
-    "card_home_user_liste_perso": "Жагсаалт(ууд) алдагдсан",
     "card_home_share": "хуваалцсан",
     "card_home_mot": "эсрэг",
     "card_home_reessayer": "Дахин оролдоно уу",
@@ -217,5 +216,7 @@
     "card_home_finished": "дууссан",
     "title_all_list_defined": "Бидний тодорхойлсон бүх жагсаалт",
     "title_all_list_perso": "Таны бүх хувийн жагсаалт",
-    "title_all_list_theme": "Манай бүх сэдвийн жагсаалт"
+    "title_all_list_theme": "Манай бүх сэдвийн жагсаалт",
+    "view_all_list": "Бүх жагсаалтыг харах",
+    "card_home_user_liste_perso": "Хувийн жагсаалт(ууд)"
 }

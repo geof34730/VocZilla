@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Pogreška pri učitavanju profila",
     "save": "Uštedjeti",
     "card_home_user_day": "dana",
-    "card_home_user_liste_perso": "Izgubljeni popis(i)",
     "card_home_share": "podijeljeno",
     "card_home_mot": "protiv",
     "card_home_reessayer": "Pokušajte ponovno",
@@ -217,5 +216,7 @@
     "card_home_finished": "završeno",
     "title_all_list_defined": "Sve naše definirane liste",
     "title_all_list_perso": "Svi vaši personalizirani popisi",
-    "title_all_list_theme": "Svi naši tematski popisi"
+    "title_all_list_theme": "Svi naši tematski popisi",
+    "view_all_list": "Prikaži sve popise",
+    "card_home_user_liste_perso": "Osobni popis(i)"
 }

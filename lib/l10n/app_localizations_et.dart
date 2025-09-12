@@ -483,9 +483,6 @@ class AppLocalizationsEt extends AppLocalizations {
   String get card_home_user_day => 'päevad';
 
   @override
-  String get card_home_user_liste_perso => 'nimekiri(d) Kadunud';
-
-  @override
   String get card_home_share => 'jagatud';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Kõik meie teemade loendid';
+
+  @override
+  String get view_all_list => 'Kuva kõik nimekirjad';
+
+  @override
+  String get card_home_user_liste_perso => 'Isiklik(ud) nimekiri(d)';
 }

@@ -166,7 +166,7 @@
   "erreur_de_chargement_du_profil": "Erreur de chargement du profil",
   "save": "Enregistrer",
   "card_home_user_day": "jours",
-  "card_home_user_liste_perso": "liste(s) Perso",
+  "card_home_user_liste_perso": "liste(s) Personnelle(s)",
   "card_home_share": "partagée",
   "card_home_mot": "mot(s)",
   "card_home_reessayer": "Réessayer",
@@ -217,5 +217,6 @@
   "card_home_finished": "terminé",
   "title_all_list_defined" : "Toute nos listes définies",
   "title_all_list_perso" : "Toute vos listes personnalisées",
-  "title_all_list_theme" : "Toute nos listes de thèmes"
+  "title_all_list_theme" : "Toute nos listes de thèmes",
+  "view_all_list" : "Voir toutes les listes"
 }

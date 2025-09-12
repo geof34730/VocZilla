@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "ການໂຫຼດໂປຣໄຟລ໌ຜິດພາດ",
     "save": "ບັນທຶກ",
     "card_home_user_day": "ມື້",
-    "card_home_user_liste_perso": "ລາຍ​ການ​ສູນ​ເສຍ​",
     "card_home_share": "ແບ່ງປັນ",
     "card_home_mot": "ຕ້ານ",
     "card_home_reessayer": "ລອງອີກຄັ້ງ",
@@ -217,5 +216,7 @@
     "card_home_finished": "ສໍາເລັດ",
     "title_all_list_defined": "ບັນຊີລາຍຊື່ທີ່ກໍານົດໄວ້ທັງຫມົດຂອງພວກເຮົາ",
     "title_all_list_perso": "ບັນຊີລາຍຊື່ສ່ວນບຸກຄົນທັງຫມົດຂອງທ່ານ",
-    "title_all_list_theme": "ບັນຊີລາຍຊື່ຫົວຂໍ້ຂອງພວກເຮົາທັງຫມົດ"
+    "title_all_list_theme": "ບັນຊີລາຍຊື່ຫົວຂໍ້ຂອງພວກເຮົາທັງຫມົດ",
+    "view_all_list": "ເບິ່ງລາຍການທັງໝົດ",
+    "card_home_user_liste_perso": "ລາຍຊື່ສ່ວນຕົວ"
 }

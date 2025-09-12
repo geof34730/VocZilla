@@ -483,9 +483,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get card_home_user_day => 'days';
 
   @override
-  String get card_home_user_liste_perso => 'list(s) Lost';
-
-  @override
   String get card_home_share => 'shared';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'All our theme lists';
+
+  @override
+  String get view_all_list => 'See all lists';
+
+  @override
+  String get card_home_user_liste_perso => 'Personal list(s)';
 }

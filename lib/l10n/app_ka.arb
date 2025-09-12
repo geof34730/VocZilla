@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "პროფილის ჩატვირთვის შეცდომა",
     "save": "შენახვა",
     "card_home_user_day": "დღეები",
-    "card_home_user_liste_perso": "დაკარგული სია(ები)",
     "card_home_share": "გაზიარებული",
     "card_home_mot": "წინააღმდეგ",
     "card_home_reessayer": "ხელახლა სცადეთ",
@@ -217,5 +216,7 @@
     "card_home_finished": "დასრულებული",
     "title_all_list_defined": "ჩვენი ყველა განსაზღვრული სია",
     "title_all_list_perso": "თქვენი ყველა პერსონალიზებული სია",
-    "title_all_list_theme": "ჩვენი ყველა თემატური სია"
+    "title_all_list_theme": "ჩვენი ყველა თემატური სია",
+    "view_all_list": "ყველა სიის ნახვა",
+    "card_home_user_liste_perso": "პირადი სია(ები)"
 }

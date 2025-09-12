@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Պրոֆիլի բեռնման սխալ",
     "save": "Պահպանել",
     "card_home_user_day": "օրեր",
-    "card_home_user_liste_perso": "ցուցակ(ներ) Կորած",
     "card_home_share": "կիսվել",
     "card_home_mot": "դեմ",
     "card_home_reessayer": "Փորձեք կրկին",
@@ -217,5 +216,7 @@
     "card_home_finished": "ավարտված",
     "title_all_list_defined": "Մեր բոլոր սահմանված ցուցակները",
     "title_all_list_perso": "Ձեր բոլոր անհատականացված ցուցակները",
-    "title_all_list_theme": "Մեր բոլոր թեմաների ցանկերը"
+    "title_all_list_theme": "Մեր բոլոր թեմաների ցանկերը",
+    "view_all_list": "Դիտել բոլոր ցուցակները",
+    "card_home_user_liste_perso": "Անձնական ցուցակ(ներ)"
 }

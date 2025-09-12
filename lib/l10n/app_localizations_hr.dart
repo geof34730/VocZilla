@@ -483,9 +483,6 @@ class AppLocalizationsHr extends AppLocalizations {
   String get card_home_user_day => 'dana';
 
   @override
-  String get card_home_user_liste_perso => 'Izgubljeni popis(i)';
-
-  @override
   String get card_home_share => 'podijeljeno';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Svi naši tematski popisi';
+
+  @override
+  String get view_all_list => 'Prikaži sve popise';
+
+  @override
+  String get card_home_user_liste_perso => 'Osobni popis(i)';
 }

@@ -483,9 +483,6 @@ class AppLocalizationsLv extends AppLocalizations {
   String get card_home_user_day => 'dienas';
 
   @override
-  String get card_home_user_liste_perso => 'Pazaudēts(-i) saraksts(-i)';
-
-  @override
   String get card_home_share => 'koplietots';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Visi mūsu tēmu saraksti';
+
+  @override
+  String get view_all_list => 'Skatīt visus sarakstus';
+
+  @override
+  String get card_home_user_liste_perso => 'Personīgais(-ie) saraksts(-i)';
 }

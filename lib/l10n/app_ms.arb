@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Ralat memuatkan profil",
     "save": "Jimat",
     "card_home_user_day": "hari",
-    "card_home_user_liste_perso": "senarai Hilang",
     "card_home_share": "dikongsi bersama",
     "card_home_mot": "terhadap",
     "card_home_reessayer": "Cuba lagi",
@@ -217,5 +216,7 @@
     "card_home_finished": "selesai",
     "title_all_list_defined": "Semua senarai kami yang ditentukan",
     "title_all_list_perso": "Semua senarai peribadi anda",
-    "title_all_list_theme": "Semua senarai tema kami"
+    "title_all_list_theme": "Semua senarai tema kami",
+    "view_all_list": "Lihat semua senarai",
+    "card_home_user_liste_perso": "Senarai peribadi"
 }

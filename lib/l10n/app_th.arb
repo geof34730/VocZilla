@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "ข้อผิดพลาดในการโหลดโปรไฟล์",
     "save": "บันทึก",
     "card_home_user_day": "วัน",
-    "card_home_user_liste_perso": "รายการที่สูญหาย",
     "card_home_share": "แชร์",
     "card_home_mot": "ขัดต่อ",
     "card_home_reessayer": "ลองอีกครั้ง",
@@ -217,5 +216,7 @@
     "card_home_finished": "ที่เสร็จเรียบร้อย",
     "title_all_list_defined": "รายการทั้งหมดที่เรากำหนดไว้",
     "title_all_list_perso": "รายการส่วนบุคคลทั้งหมดของคุณ",
-    "title_all_list_theme": "รายการธีมทั้งหมดของเรา"
+    "title_all_list_theme": "รายการธีมทั้งหมดของเรา",
+    "view_all_list": "ดูรายการทั้งหมด",
+    "card_home_user_liste_perso": "รายชื่อส่วนตัว"
 }

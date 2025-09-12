@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profilin yüklənməsi xətası",
     "save": "Saxla",
     "card_home_user_day": "günlər",
-    "card_home_user_liste_perso": "İtirilmiş siyahı(lar).",
     "card_home_share": "paylaşdı",
     "card_home_mot": "qarşı",
     "card_home_reessayer": "Yenidən cəhd edin",
@@ -217,5 +216,7 @@
     "card_home_finished": "bitdi",
     "title_all_list_defined": "Bütün müəyyən edilmiş siyahılarımız",
     "title_all_list_perso": "Bütün fərdi siyahılarınız",
-    "title_all_list_theme": "Bütün mövzu siyahılarımız"
+    "title_all_list_theme": "Bütün mövzu siyahılarımız",
+    "view_all_list": "Bütün siyahılara baxın",
+    "card_home_user_liste_perso": "Şəxsi siyahı(lar)"
 }

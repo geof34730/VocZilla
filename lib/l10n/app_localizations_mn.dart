@@ -483,9 +483,6 @@ class AppLocalizationsMn extends AppLocalizations {
   String get card_home_user_day => 'өдрүүд';
 
   @override
-  String get card_home_user_liste_perso => 'Жагсаалт(ууд) алдагдсан';
-
-  @override
   String get card_home_share => 'хуваалцсан';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Манай бүх сэдвийн жагсаалт';
+
+  @override
+  String get view_all_list => 'Бүх жагсаалтыг харах';
+
+  @override
+  String get card_home_user_liste_perso => 'Хувийн жагсаалт(ууд)';
 }

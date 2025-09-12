@@ -483,9 +483,6 @@ class AppLocalizationsKn extends AppLocalizations {
   String get card_home_user_day => 'ದಿನಗಳು';
 
   @override
-  String get card_home_user_liste_perso => 'ಪಟ್ಟಿ(ಗಳು) ಕಳೆದುಹೋಗಿವೆ';
-
-  @override
   String get card_home_share => 'ಹಂಚಿಕೊಂಡಿದ್ದಾರೆ';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'ನಮ್ಮ ಎಲ್ಲಾ ಥೀಮ್ ಪಟ್ಟಿಗಳು';
+
+  @override
+  String get view_all_list => 'ಎಲ್ಲಾ ಪಟ್ಟಿಗಳನ್ನು ನೋಡಿ';
+
+  @override
+  String get card_home_user_liste_perso => 'ವೈಯಕ್ತಿಕ ಪಟ್ಟಿ(ಗಳು)';
 }

@@ -483,9 +483,6 @@ class AppLocalizationsSw extends AppLocalizations {
   String get card_home_user_day => 'siku';
 
   @override
-  String get card_home_user_liste_perso => 'orodha(s) Zimepotea';
-
-  @override
   String get card_home_share => 'pamoja';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Orodha zetu zote za mada';
+
+  @override
+  String get view_all_list => 'Tazama orodha zote';
+
+  @override
+  String get card_home_user_liste_perso => 'Orodha za kibinafsi';
 }

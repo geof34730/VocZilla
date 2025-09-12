@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "சுயவிவரத்தை ஏற்றுவதில் பிழை",
     "save": "சேமிக்கவும்",
     "card_home_user_day": "நாட்கள்",
-    "card_home_user_liste_perso": "பட்டியல்(கள்) இழந்தது",
     "card_home_share": "பகிரப்பட்டது",
     "card_home_mot": "எதிராக",
     "card_home_reessayer": "மீண்டும் முயற்சிக்கவும்",
@@ -217,5 +216,7 @@
     "card_home_finished": "முடிந்தது",
     "title_all_list_defined": "எங்கள் வரையறுக்கப்பட்ட பட்டியல்கள் அனைத்தும்",
     "title_all_list_perso": "உங்கள் தனிப்பயனாக்கப்பட்ட பட்டியல்கள் அனைத்தும்",
-    "title_all_list_theme": "எங்கள் அனைத்து தீம் பட்டியல்களும்"
+    "title_all_list_theme": "எங்கள் அனைத்து தீம் பட்டியல்களும்",
+    "view_all_list": "எல்லா பட்டியல்களையும் காண்க",
+    "card_home_user_liste_perso": "தனிப்பட்ட பட்டியல்(கள்)"
 }

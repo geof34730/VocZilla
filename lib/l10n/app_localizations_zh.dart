@@ -483,9 +483,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get card_home_user_day => '天';
 
   @override
-  String get card_home_user_liste_perso => '遗失清单';
-
-  @override
   String get card_home_share => '共享';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get title_all_list_theme => '我们所有的主题列表';
+
+  @override
+  String get view_all_list => '查看所有列表';
+
+  @override
+  String get card_home_user_liste_perso => '个人名单';
 }

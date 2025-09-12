@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profil yükleme hatası",
     "save": "Kaydetmek",
     "card_home_user_day": "günler",
-    "card_home_user_liste_perso": "Kayıp liste(ler)",
     "card_home_share": "paylaşıldı",
     "card_home_mot": "aykırı",
     "card_home_reessayer": "Tekrar deneyin",
@@ -217,5 +216,7 @@
     "card_home_finished": "bitmiş",
     "title_all_list_defined": "Tüm tanımlı listelerimiz",
     "title_all_list_perso": "Tüm kişiselleştirilmiş listeleriniz",
-    "title_all_list_theme": "Tüm tema listelerimiz"
+    "title_all_list_theme": "Tüm tema listelerimiz",
+    "view_all_list": "Tüm listeleri görün",
+    "card_home_user_liste_perso": "Kişisel liste(ler)"
 }

@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "प्रोफ़ाइल लोड करने में त्रुटि",
     "save": "बचाना",
     "card_home_user_day": "दिन",
-    "card_home_user_liste_perso": "सूची(सूचियाँ) खोई हुई",
     "card_home_share": "साझा",
     "card_home_mot": "ख़िलाफ़",
     "card_home_reessayer": "पुनः प्रयास करें",
@@ -217,5 +216,7 @@
     "card_home_finished": "खत्म",
     "title_all_list_defined": "हमारी सभी परिभाषित सूचियाँ",
     "title_all_list_perso": "आपकी सभी वैयक्तिकृत सूचियाँ",
-    "title_all_list_theme": "हमारी सभी थीम सूचियाँ"
+    "title_all_list_theme": "हमारी सभी थीम सूचियाँ",
+    "view_all_list": "सभी सूचियाँ देखें",
+    "card_home_user_liste_perso": "व्यक्तिगत सूची(सूचियाँ)"
 }

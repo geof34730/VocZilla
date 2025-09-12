@@ -483,9 +483,6 @@ class AppLocalizationsEl extends AppLocalizations {
   String get card_home_user_day => 'ημέρες';
 
   @override
-  String get card_home_user_liste_perso => 'λίστα(-ες) Χαμένες';
-
-  @override
   String get card_home_share => 'κοινόχρηστο';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Όλες οι λίστες θεμάτων μας';
+
+  @override
+  String get view_all_list => 'Δείτε όλες τις λίστες';
+
+  @override
+  String get card_home_user_liste_perso => 'Προσωπική(ές) λίστα(ες)';
 }

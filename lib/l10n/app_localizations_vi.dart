@@ -483,9 +483,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get card_home_user_day => 'ngày';
 
   @override
-  String get card_home_user_liste_perso => 'danh sách(các) bị mất';
-
-  @override
   String get card_home_share => 'được chia sẻ';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Tất cả danh sách chủ đề của chúng tôi';
+
+  @override
+  String get view_all_list => 'Xem tất cả danh sách';
+
+  @override
+  String get card_home_user_liste_perso => 'Danh sách cá nhân';
 }

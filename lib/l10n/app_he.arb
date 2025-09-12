@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "שגיאת טעינת פרופיל",
     "save": "לְהַצִיל",
     "card_home_user_day": "ימים",
-    "card_home_user_liste_perso": "רשימה(ות) אבודה",
     "card_home_share": "מְשׁוּתָף",
     "card_home_mot": "נֶגֶד",
     "card_home_reessayer": "נסה שוב",
@@ -217,5 +216,7 @@
     "card_home_finished": "גָמוּר",
     "title_all_list_defined": "כל הרשימות המוגדרות שלנו",
     "title_all_list_perso": "כל הרשימות המותאמות אישית שלך",
-    "title_all_list_theme": "כל רשימות הנושאים שלנו"
+    "title_all_list_theme": "כל רשימות הנושאים שלנו",
+    "view_all_list": "ראה את כל הרשימות",
+    "card_home_user_liste_perso": "רשימה\/ות אישית\/יות"
 }

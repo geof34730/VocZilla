@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "ప్రొఫైల్ లోడ్ కావడంలో లోపం ఏర్పడింది",
     "save": "సేవ్ చేయండి",
     "card_home_user_day": "రోజులు",
-    "card_home_user_liste_perso": "జాబితా(లు) పోయాయి",
     "card_home_share": "పంచుకున్నారు",
     "card_home_mot": "వ్యతిరేకంగా",
     "card_home_reessayer": "మళ్ళీ ప్రయత్నించండి",
@@ -217,5 +216,7 @@
     "card_home_finished": "పూర్తయింది",
     "title_all_list_defined": "మా నిర్వచించిన జాబితాలన్నీ",
     "title_all_list_perso": "మీ వ్యక్తిగతీకరించిన జాబితాలన్నీ",
-    "title_all_list_theme": "మా అన్ని థీమ్ జాబితాలు"
+    "title_all_list_theme": "మా అన్ని థీమ్ జాబితాలు",
+    "view_all_list": "అన్ని జాబితాలను చూడండి",
+    "card_home_user_liste_perso": "వ్యక్తిగత జాబితా(లు)"
 }

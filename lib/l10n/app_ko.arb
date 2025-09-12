@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "프로필 로딩 오류",
     "save": "구하다",
     "card_home_user_day": "날",
-    "card_home_user_liste_perso": "목록(들) 분실",
     "card_home_share": "공유",
     "card_home_mot": "~에 맞서",
     "card_home_reessayer": "다시 시도하세요",
@@ -217,5 +216,7 @@
     "card_home_finished": "완성된",
     "title_all_list_defined": "우리의 모든 정의된 목록",
     "title_all_list_perso": "귀하의 모든 개인화된 목록",
-    "title_all_list_theme": "우리의 모든 테마 목록"
+    "title_all_list_theme": "우리의 모든 테마 목록",
+    "view_all_list": "모든 목록 보기",
+    "card_home_user_liste_perso": "개인 목록"
 }

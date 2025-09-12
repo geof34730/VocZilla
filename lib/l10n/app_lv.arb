@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profila ielādes kļūda",
     "save": "Saglabāt",
     "card_home_user_day": "dienas",
-    "card_home_user_liste_perso": "Pazaudēts(-i) saraksts(-i)",
     "card_home_share": "koplietots",
     "card_home_mot": "pret",
     "card_home_reessayer": "Mēģiniet vēlreiz",
@@ -217,5 +216,7 @@
     "card_home_finished": "pabeigts",
     "title_all_list_defined": "Visi mūsu definētie saraksti",
     "title_all_list_perso": "Visi jūsu personalizētie saraksti",
-    "title_all_list_theme": "Visi mūsu tēmu saraksti"
+    "title_all_list_theme": "Visi mūsu tēmu saraksti",
+    "view_all_list": "Skatīt visus sarakstus",
+    "card_home_user_liste_perso": "Personīgais(-ie) saraksts(-i)"
 }

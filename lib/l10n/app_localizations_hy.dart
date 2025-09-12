@@ -483,9 +483,6 @@ class AppLocalizationsHy extends AppLocalizations {
   String get card_home_user_day => 'օրեր';
 
   @override
-  String get card_home_user_liste_perso => 'ցուցակ(ներ) Կորած';
-
-  @override
   String get card_home_share => 'կիսվել';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Մեր բոլոր թեմաների ցանկերը';
+
+  @override
+  String get view_all_list => 'Դիտել բոլոր ցուցակները';
+
+  @override
+  String get card_home_user_liste_perso => 'Անձնական ցուցակ(ներ)';
 }

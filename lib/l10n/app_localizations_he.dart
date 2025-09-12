@@ -483,9 +483,6 @@ class AppLocalizationsHe extends AppLocalizations {
   String get card_home_user_day => 'ימים';
 
   @override
-  String get card_home_user_liste_perso => 'רשימה(ות) אבודה';
-
-  @override
   String get card_home_share => 'מְשׁוּתָף';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'כל רשימות הנושאים שלנו';
+
+  @override
+  String get view_all_list => 'ראה את כל הרשימות';
+
+  @override
+  String get card_home_user_liste_perso => 'רשימה/ות אישית/יות';
 }

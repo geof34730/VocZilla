@@ -483,9 +483,6 @@ class AppLocalizationsHu extends AppLocalizations {
   String get card_home_user_day => 'napok';
 
   @override
-  String get card_home_user_liste_perso => 'Elveszett lista(k)';
-
-  @override
   String get card_home_share => 'megosztott';
 
   @override
@@ -664,4 +661,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get title_all_list_theme => 'Az összes témalistánk';
+
+  @override
+  String get view_all_list => 'Az összes lista megtekintése';
+
+  @override
+  String get card_home_user_liste_perso => 'Személyes lista(k)';
 }

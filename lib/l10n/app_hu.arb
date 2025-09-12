@@ -156,7 +156,6 @@
     "erreur_de_chargement_du_profil": "Profil betöltési hiba",
     "save": "Megtakarítás",
     "card_home_user_day": "napok",
-    "card_home_user_liste_perso": "Elveszett lista(k)",
     "card_home_share": "megosztott",
     "card_home_mot": "ellen",
     "card_home_reessayer": "Próbáld újra",
@@ -217,5 +216,7 @@
     "card_home_finished": "befejezett",
     "title_all_list_defined": "Minden definiált listánk",
     "title_all_list_perso": "Az összes személyre szabott listád",
-    "title_all_list_theme": "Az összes témalistánk"
+    "title_all_list_theme": "Az összes témalistánk",
+    "view_all_list": "Az összes lista megtekintése",
+    "card_home_user_liste_perso": "Személyes lista(k)"
 }
