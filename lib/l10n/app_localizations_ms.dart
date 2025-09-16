@@ -667,4 +667,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Senarai peribadi';
+
+  @override
+  String get hide_lists_finiched => 'Sembunyikan senarai lengkap';
 }

@@ -218,5 +218,6 @@
   "title_all_list_defined" : "Toute nos listes définies",
   "title_all_list_perso" : "Toute vos listes personnalisées",
   "title_all_list_theme" : "Toute nos listes de thèmes",
-  "view_all_list" : "Voir toutes les listes"
+  "view_all_list" : "Voir toutes les listes",
+  "hide_lists_finiched" : "Cacher les listes terminées"
 }

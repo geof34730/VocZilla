@@ -15,9 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$LeaderboardUser {
 
-// --- Vos champs ---
- String get pseudo; DateTime get createdAt; int get listPersoCount; String get imageAvatar; int get countGuidVocabularyLearned;// --- Champ ajouté pour le classement ---
- int get rank;
+ String get pseudo; DateTime get createdAt; int get listPersoCount; String get imageAvatar; int get countGuidVocabularyLearned; int get countTrophy; int get rank;
 /// Create a copy of LeaderboardUser
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -30,16 +28,16 @@ $LeaderboardUserCopyWith<LeaderboardUser> get copyWith => _$LeaderboardUserCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LeaderboardUser&&(identical(other.pseudo, pseudo) || other.pseudo == pseudo)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.listPersoCount, listPersoCount) || other.listPersoCount == listPersoCount)&&(identical(other.imageAvatar, imageAvatar) || other.imageAvatar == imageAvatar)&&(identical(other.countGuidVocabularyLearned, countGuidVocabularyLearned) || other.countGuidVocabularyLearned == countGuidVocabularyLearned)&&(identical(other.rank, rank) || other.rank == rank));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LeaderboardUser&&(identical(other.pseudo, pseudo) || other.pseudo == pseudo)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.listPersoCount, listPersoCount) || other.listPersoCount == listPersoCount)&&(identical(other.imageAvatar, imageAvatar) || other.imageAvatar == imageAvatar)&&(identical(other.countGuidVocabularyLearned, countGuidVocabularyLearned) || other.countGuidVocabularyLearned == countGuidVocabularyLearned)&&(identical(other.countTrophy, countTrophy) || other.countTrophy == countTrophy)&&(identical(other.rank, rank) || other.rank == rank));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,pseudo,createdAt,listPersoCount,imageAvatar,countGuidVocabularyLearned,rank);
+int get hashCode => Object.hash(runtimeType,pseudo,createdAt,listPersoCount,imageAvatar,countGuidVocabularyLearned,countTrophy,rank);
 
 @override
 String toString() {
-  return 'LeaderboardUser(pseudo: $pseudo, createdAt: $createdAt, listPersoCount: $listPersoCount, imageAvatar: $imageAvatar, countGuidVocabularyLearned: $countGuidVocabularyLearned, rank: $rank)';
+  return 'LeaderboardUser(pseudo: $pseudo, createdAt: $createdAt, listPersoCount: $listPersoCount, imageAvatar: $imageAvatar, countGuidVocabularyLearned: $countGuidVocabularyLearned, countTrophy: $countTrophy, rank: $rank)';
 }
 
 
@@ -50,7 +48,7 @@ abstract mixin class $LeaderboardUserCopyWith<$Res>  {
   factory $LeaderboardUserCopyWith(LeaderboardUser value, $Res Function(LeaderboardUser) _then) = _$LeaderboardUserCopyWithImpl;
 @useResult
 $Res call({
- String pseudo, DateTime createdAt, int listPersoCount, String imageAvatar, int countGuidVocabularyLearned, int rank
+ String pseudo, DateTime createdAt, int listPersoCount, String imageAvatar, int countGuidVocabularyLearned, int countTrophy, int rank
 });
 
 
@@ -67,13 +65,14 @@ class _$LeaderboardUserCopyWithImpl<$Res>
 
 /// Create a copy of LeaderboardUser
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? pseudo = null,Object? createdAt = null,Object? listPersoCount = null,Object? imageAvatar = null,Object? countGuidVocabularyLearned = null,Object? rank = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? pseudo = null,Object? createdAt = null,Object? listPersoCount = null,Object? imageAvatar = null,Object? countGuidVocabularyLearned = null,Object? countTrophy = null,Object? rank = null,}) {
   return _then(_self.copyWith(
 pseudo: null == pseudo ? _self.pseudo : pseudo // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,listPersoCount: null == listPersoCount ? _self.listPersoCount : listPersoCount // ignore: cast_nullable_to_non_nullable
 as int,imageAvatar: null == imageAvatar ? _self.imageAvatar : imageAvatar // ignore: cast_nullable_to_non_nullable
 as String,countGuidVocabularyLearned: null == countGuidVocabularyLearned ? _self.countGuidVocabularyLearned : countGuidVocabularyLearned // ignore: cast_nullable_to_non_nullable
+as int,countTrophy: null == countTrophy ? _self.countTrophy : countTrophy // ignore: cast_nullable_to_non_nullable
 as int,rank: null == rank ? _self.rank : rank // ignore: cast_nullable_to_non_nullable
 as int,
   ));
@@ -160,10 +159,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String pseudo,  DateTime createdAt,  int listPersoCount,  String imageAvatar,  int countGuidVocabularyLearned,  int rank)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String pseudo,  DateTime createdAt,  int listPersoCount,  String imageAvatar,  int countGuidVocabularyLearned,  int countTrophy,  int rank)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _LeaderboardUser() when $default != null:
-return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAvatar,_that.countGuidVocabularyLearned,_that.rank);case _:
+return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAvatar,_that.countGuidVocabularyLearned,_that.countTrophy,_that.rank);case _:
   return orElse();
 
 }
@@ -181,10 +180,10 @@ return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAva
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String pseudo,  DateTime createdAt,  int listPersoCount,  String imageAvatar,  int countGuidVocabularyLearned,  int rank)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String pseudo,  DateTime createdAt,  int listPersoCount,  String imageAvatar,  int countGuidVocabularyLearned,  int countTrophy,  int rank)  $default,) {final _that = this;
 switch (_that) {
 case _LeaderboardUser():
-return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAvatar,_that.countGuidVocabularyLearned,_that.rank);case _:
+return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAvatar,_that.countGuidVocabularyLearned,_that.countTrophy,_that.rank);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,10 +200,10 @@ return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAva
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String pseudo,  DateTime createdAt,  int listPersoCount,  String imageAvatar,  int countGuidVocabularyLearned,  int rank)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String pseudo,  DateTime createdAt,  int listPersoCount,  String imageAvatar,  int countGuidVocabularyLearned,  int countTrophy,  int rank)?  $default,) {final _that = this;
 switch (_that) {
 case _LeaderboardUser() when $default != null:
-return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAvatar,_that.countGuidVocabularyLearned,_that.rank);case _:
+return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAvatar,_that.countGuidVocabularyLearned,_that.countTrophy,_that.rank);case _:
   return null;
 
 }
@@ -216,16 +215,15 @@ return $default(_that.pseudo,_that.createdAt,_that.listPersoCount,_that.imageAva
 @JsonSerializable()
 
 class _LeaderboardUser implements LeaderboardUser {
-  const _LeaderboardUser({required this.pseudo, required this.createdAt, required this.listPersoCount, required this.imageAvatar, required this.countGuidVocabularyLearned, required this.rank});
+  const _LeaderboardUser({required this.pseudo, required this.createdAt, required this.listPersoCount, required this.imageAvatar, required this.countGuidVocabularyLearned, required this.countTrophy, required this.rank});
   factory _LeaderboardUser.fromJson(Map<String, dynamic> json) => _$LeaderboardUserFromJson(json);
 
-// --- Vos champs ---
 @override final  String pseudo;
 @override final  DateTime createdAt;
 @override final  int listPersoCount;
 @override final  String imageAvatar;
 @override final  int countGuidVocabularyLearned;
-// --- Champ ajouté pour le classement ---
+@override final  int countTrophy;
 @override final  int rank;
 
 /// Create a copy of LeaderboardUser
@@ -241,16 +239,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LeaderboardUser&&(identical(other.pseudo, pseudo) || other.pseudo == pseudo)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.listPersoCount, listPersoCount) || other.listPersoCount == listPersoCount)&&(identical(other.imageAvatar, imageAvatar) || other.imageAvatar == imageAvatar)&&(identical(other.countGuidVocabularyLearned, countGuidVocabularyLearned) || other.countGuidVocabularyLearned == countGuidVocabularyLearned)&&(identical(other.rank, rank) || other.rank == rank));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LeaderboardUser&&(identical(other.pseudo, pseudo) || other.pseudo == pseudo)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.listPersoCount, listPersoCount) || other.listPersoCount == listPersoCount)&&(identical(other.imageAvatar, imageAvatar) || other.imageAvatar == imageAvatar)&&(identical(other.countGuidVocabularyLearned, countGuidVocabularyLearned) || other.countGuidVocabularyLearned == countGuidVocabularyLearned)&&(identical(other.countTrophy, countTrophy) || other.countTrophy == countTrophy)&&(identical(other.rank, rank) || other.rank == rank));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,pseudo,createdAt,listPersoCount,imageAvatar,countGuidVocabularyLearned,rank);
+int get hashCode => Object.hash(runtimeType,pseudo,createdAt,listPersoCount,imageAvatar,countGuidVocabularyLearned,countTrophy,rank);
 
 @override
 String toString() {
-  return 'LeaderboardUser(pseudo: $pseudo, createdAt: $createdAt, listPersoCount: $listPersoCount, imageAvatar: $imageAvatar, countGuidVocabularyLearned: $countGuidVocabularyLearned, rank: $rank)';
+  return 'LeaderboardUser(pseudo: $pseudo, createdAt: $createdAt, listPersoCount: $listPersoCount, imageAvatar: $imageAvatar, countGuidVocabularyLearned: $countGuidVocabularyLearned, countTrophy: $countTrophy, rank: $rank)';
 }
 
 
@@ -261,7 +259,7 @@ abstract mixin class _$LeaderboardUserCopyWith<$Res> implements $LeaderboardUser
   factory _$LeaderboardUserCopyWith(_LeaderboardUser value, $Res Function(_LeaderboardUser) _then) = __$LeaderboardUserCopyWithImpl;
 @override @useResult
 $Res call({
- String pseudo, DateTime createdAt, int listPersoCount, String imageAvatar, int countGuidVocabularyLearned, int rank
+ String pseudo, DateTime createdAt, int listPersoCount, String imageAvatar, int countGuidVocabularyLearned, int countTrophy, int rank
 });
 
 
@@ -278,13 +276,14 @@ class __$LeaderboardUserCopyWithImpl<$Res>
 
 /// Create a copy of LeaderboardUser
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? pseudo = null,Object? createdAt = null,Object? listPersoCount = null,Object? imageAvatar = null,Object? countGuidVocabularyLearned = null,Object? rank = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? pseudo = null,Object? createdAt = null,Object? listPersoCount = null,Object? imageAvatar = null,Object? countGuidVocabularyLearned = null,Object? countTrophy = null,Object? rank = null,}) {
   return _then(_LeaderboardUser(
 pseudo: null == pseudo ? _self.pseudo : pseudo // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,listPersoCount: null == listPersoCount ? _self.listPersoCount : listPersoCount // ignore: cast_nullable_to_non_nullable
 as int,imageAvatar: null == imageAvatar ? _self.imageAvatar : imageAvatar // ignore: cast_nullable_to_non_nullable
 as String,countGuidVocabularyLearned: null == countGuidVocabularyLearned ? _self.countGuidVocabularyLearned : countGuidVocabularyLearned // ignore: cast_nullable_to_non_nullable
+as int,countTrophy: null == countTrophy ? _self.countTrophy : countTrophy // ignore: cast_nullable_to_non_nullable
 as int,rank: null == rank ? _self.rank : rank // ignore: cast_nullable_to_non_nullable
 as int,
   ));

@@ -218,5 +218,6 @@
     "title_all_list_perso": "Kõik teie isikupärastatud loendid",
     "title_all_list_theme": "Kõik meie teemade loendid",
     "view_all_list": "Kuva kõik nimekirjad",
-    "card_home_user_liste_perso": "Isiklik(ud) nimekiri(d)"
+    "card_home_user_liste_perso": "Isiklik(ud) nimekiri(d)",
+    "hide_lists_finiched": "Peida lõpetatud loendid"
 }

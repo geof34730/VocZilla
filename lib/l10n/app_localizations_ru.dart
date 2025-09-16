@@ -667,4 +667,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Личные списки';
+
+  @override
+  String get hide_lists_finiched => 'Скрыть завершенные списки';
 }

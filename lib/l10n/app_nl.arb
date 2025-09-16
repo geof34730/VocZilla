@@ -218,5 +218,6 @@
     "title_all_list_perso": "Al uw gepersonaliseerde lijsten",
     "title_all_list_theme": "Al onze themalijsten",
     "view_all_list": "Bekijk alle lijsten",
-    "card_home_user_liste_perso": "Persoonlijke lijst(en)"
+    "card_home_user_liste_perso": "Persoonlijke lijst(en)",
+    "hide_lists_finiched": "Verberg voltooide lijsten"
 }

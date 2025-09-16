@@ -14,6 +14,7 @@ _LeaderboardUser _$LeaderboardUserFromJson(Map<String, dynamic> json) =>
       imageAvatar: json['imageAvatar'] as String,
       countGuidVocabularyLearned: (json['countGuidVocabularyLearned'] as num)
           .toInt(),
+      countTrophy: (json['countTrophy'] as num).toInt(),
       rank: (json['rank'] as num).toInt(),
     );
 
@@ -24,5 +25,6 @@ Map<String, dynamic> _$LeaderboardUserToJson(_LeaderboardUser instance) =>
       'listPersoCount': instance.listPersoCount,
       'imageAvatar': instance.imageAvatar,
       'countGuidVocabularyLearned': instance.countGuidVocabularyLearned,
+      'countTrophy': instance.countTrophy,
       'rank': instance.rank,
     };

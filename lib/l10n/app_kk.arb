@@ -218,5 +218,6 @@
     "title_all_list_perso": "Барлық жеке тізімдеріңіз",
     "title_all_list_theme": "Біздің барлық тақырыптар тізімі",
     "view_all_list": "Барлық тізімдерді қараңыз",
-    "card_home_user_liste_perso": "Жеке тізім(дер)"
+    "card_home_user_liste_perso": "Жеке тізім(дер)",
+    "hide_lists_finiched": "Аяқталған тізімдерді жасыру"
 }

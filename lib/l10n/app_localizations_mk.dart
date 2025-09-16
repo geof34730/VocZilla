@@ -667,4 +667,7 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Личен/и список/и';
+
+  @override
+  String get hide_lists_finiched => 'Сокриј ги завршените листи';
 }

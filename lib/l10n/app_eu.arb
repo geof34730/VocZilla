@@ -218,5 +218,6 @@
     "title_all_list_perso": "Zure zerrenda pertsonalizatu guztiak",
     "title_all_list_theme": "Gure gai-zerrenda guztiak",
     "view_all_list": "Ikusi zerrenda guztiak",
-    "card_home_user_liste_perso": "Zerrenda pertsonala(k)"
+    "card_home_user_liste_perso": "Zerrenda pertsonala(k)",
+    "hide_lists_finiched": "Ezkutatu osatutako zerrendak"
 }

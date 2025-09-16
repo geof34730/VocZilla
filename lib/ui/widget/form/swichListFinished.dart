@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:voczilla/core/utils/localization.dart';
 import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
 import 'package:voczilla/ui/theme/appColors.dart';
 
@@ -83,10 +84,10 @@ class _SwitchControlState extends State<_SwitchControl> {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        const Flexible(
+        Flexible(
           child: Text(
-            "Cacher les listes terminées",
-            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+            context.loc.hide_lists_finiched,
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
           ),
         ),
         Transform.scale(

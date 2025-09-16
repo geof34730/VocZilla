@@ -667,4 +667,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Orodha za kibinafsi';
+
+  @override
+  String get hide_lists_finiched => 'Ficha orodha zilizokamilishwa';
 }

@@ -218,5 +218,6 @@
     "title_all_list_perso": "თქვენი ყველა პერსონალიზებული სია",
     "title_all_list_theme": "ჩვენი ყველა თემატური სია",
     "view_all_list": "ყველა სიის ნახვა",
-    "card_home_user_liste_perso": "პირადი სია(ები)"
+    "card_home_user_liste_perso": "პირადი სია(ები)",
+    "hide_lists_finiched": "დასრულებული სიების დამალვა"
 }

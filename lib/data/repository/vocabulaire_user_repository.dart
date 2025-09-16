@@ -19,7 +19,7 @@ class VocabulaireUserRepository {
         _vocabulaireServerService = vocabulaireServerService ?? VocabulaireServerService();
 
   Future<void> initializeVocabulaireUserData() async {
-    Logger.Pink.log('********VocabulaireUserRepository: initializeUserData');
+  //  Logger.Pink.log('********VocabulaireUserRepository: initializeUserData');
     try {
       final serverData = await _vocabulaireServerService.fetchUserData();
       if (serverData != null) {
@@ -29,7 +29,7 @@ class VocabulaireUserRepository {
 
     } catch (e) {
       // Gérer les erreurs de récupération de données
-      print('Erreur lors de la récupération des données utilisateur : $e');
+      Logger.Red.log('Erreur lors de la récupération des données utilisateur : $e');
     }
   }
 
@@ -51,7 +51,7 @@ class VocabulaireUserRepository {
   }
 
   Future<VocabulaireUser?> getVocabulaireUserData({required String local}) async {
-   Logger.Green.log("getVocabulaireUserData ");
+  // Logger.Green.log("getVocabulaireUserData ");
     try {
       var userDataJson = await _localStorageService.getUserData();
       Logger.Blue.log("getVocabulaireUserData') userData: $userDataJson");
@@ -77,6 +77,10 @@ class VocabulaireUserRepository {
       // Mettre à jour le stockage local
       await _localStorageService.saveUserData(userDataMap);
       // Envoyer les données mises à jour au serveur
+
+
+
+      Logger.Pink.log("ListDefinedEnd: ${userData.ListDefinedEnd}");
       await _vocabulaireServerService.updateUserData(userDataMap);
       return true;
     } catch (e) {
@@ -86,7 +90,7 @@ class VocabulaireUserRepository {
   }
 
   Future<VocabulaireUser> getEmptyVocabulaireUserData({required String local}) async {
-    Logger.Pink.log('VocabulaireUserRepository:  getEmptyVocabulaireUserData');
+ //   Logger.Pink.log('VocabulaireUserRepository:  getEmptyVocabulaireUserData');
     final List<ListTheme> userTheme = await VocabulaireService().getThemesData();
     Logger.Yellow.log("LIST PERSO VIDE");
     VocabulaireUser dataEmpty = VocabulaireUser(
@@ -100,7 +104,7 @@ class VocabulaireUserRepository {
   }
 
   Future<void> addVocabulaireUserDataLearned({required String vocabularyGuid,required String local}) async {
-    Logger.Red.log("addVocabulaireUserDataLearned: vocabularyGuid: $vocabularyGuid ");
+  //  Logger.Red.log("addVocabulaireUserDataLearned: vocabularyGuid: $vocabularyGuid ");
     try {
       Logger.Green.log('Tentative d\'ajout du vocabulaire : $vocabularyGuid');
       final userDataJson = await _localStorageService.getUserData();

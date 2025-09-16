@@ -218,5 +218,6 @@
     "title_all_list_perso": "আপনার সমস্ত ব্যক্তিগতকৃত তালিকা",
     "title_all_list_theme": "আমাদের সকল থিম তালিকা",
     "view_all_list": "সব তালিকা দেখুন",
-    "card_home_user_liste_perso": "ব্যক্তিগত তালিকা(গুলি)"
+    "card_home_user_liste_perso": "ব্যক্তিগত তালিকা(গুলি)",
+    "hide_lists_finiched": "সম্পন্ন তালিকা লুকান"
 }

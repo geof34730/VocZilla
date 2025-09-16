@@ -218,5 +218,6 @@
     "title_all_list_perso": "Todas as suas listas personalizadas",
     "title_all_list_theme": "Todas as nossas listas de temas",
     "view_all_list": "Ver todas as listas",
-    "card_home_user_liste_perso": "Lista(s) pessoal(is)"
+    "card_home_user_liste_perso": "Lista(s) pessoal(is)",
+    "hide_lists_finiched": "Ocultar listas concluídas"
 }

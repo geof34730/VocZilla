@@ -218,5 +218,6 @@
     "title_all_list_perso": "รายการส่วนบุคคลทั้งหมดของคุณ",
     "title_all_list_theme": "รายการธีมทั้งหมดของเรา",
     "view_all_list": "ดูรายการทั้งหมด",
-    "card_home_user_liste_perso": "รายชื่อส่วนตัว"
+    "card_home_user_liste_perso": "รายชื่อส่วนตัว",
+    "hide_lists_finiched": "ซ่อนรายการที่เสร็จสมบูรณ์"
 }

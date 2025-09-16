@@ -7,14 +7,12 @@ part 'leaderboard_user.g.dart';
 @freezed
 abstract class LeaderboardUser with _$LeaderboardUser {
   const factory LeaderboardUser({
-    // --- Vos champs ---
     required String pseudo,
     required DateTime createdAt,
     required int listPersoCount,
     required String imageAvatar,
     required int countGuidVocabularyLearned,
-
-    // --- Champ ajouté pour le classement ---
+    required int countTrophy,
     required int rank,
   }) = _LeaderboardUser;
 

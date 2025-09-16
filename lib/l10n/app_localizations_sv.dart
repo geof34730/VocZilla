@@ -667,4 +667,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Personliga listor';
+
+  @override
+  String get hide_lists_finiched => 'Dölj ifyllda listor';
 }

@@ -667,4 +667,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'వ్యక్తిగత జాబితా(లు)';
+
+  @override
+  String get hide_lists_finiched => 'పూర్తయిన జాబితాలను దాచు';
 }

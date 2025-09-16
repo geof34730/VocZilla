@@ -218,5 +218,6 @@
     "title_all_list_perso": "Toate listele tale personalizate",
     "title_all_list_theme": "Toate listele noastre de teme",
     "view_all_list": "Vezi toate listele",
-    "card_home_user_liste_perso": "Listă(e) personală(e)"
+    "card_home_user_liste_perso": "Listă(e) personală(e)",
+    "hide_lists_finiched": "Ascundeți listele completate"
 }

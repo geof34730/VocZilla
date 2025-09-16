@@ -667,4 +667,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'ਨਿੱਜੀ ਸੂਚੀ(ਵਾਂ)';
+
+  @override
+  String get hide_lists_finiched => 'ਪੂਰੀਆਂ ਹੋਈਆਂ ਸੂਚੀਆਂ ਲੁਕਾਓ';
 }

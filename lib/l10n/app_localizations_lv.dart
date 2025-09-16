@@ -667,4 +667,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Personīgais(-ie) saraksts(-i)';
+
+  @override
+  String get hide_lists_finiched => 'Slēpt pabeigtos sarakstus';
 }

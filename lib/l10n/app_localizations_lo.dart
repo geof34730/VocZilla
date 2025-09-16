@@ -667,4 +667,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'ລາຍຊື່ສ່ວນຕົວ';
+
+  @override
+  String get hide_lists_finiched => 'ເຊື່ອງລາຍຊື່ທີ່ເຮັດແລ້ວ';
 }

@@ -667,4 +667,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Zerrenda pertsonala(k)';
+
+  @override
+  String get hide_lists_finiched => 'Ezkutatu osatutako zerrendak';
 }

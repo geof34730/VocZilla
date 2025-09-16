@@ -218,5 +218,6 @@
     "title_all_list_perso": "Visi jūsu personalizētie saraksti",
     "title_all_list_theme": "Visi mūsu tēmu saraksti",
     "view_all_list": "Skatīt visus sarakstus",
-    "card_home_user_liste_perso": "Personīgais(-ie) saraksts(-i)"
+    "card_home_user_liste_perso": "Personīgais(-ie) saraksts(-i)",
+    "hide_lists_finiched": "Slēpt pabeigtos sarakstus"
 }

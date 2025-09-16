@@ -667,4 +667,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'ವೈಯಕ್ತಿಕ ಪಟ್ಟಿ(ಗಳು)';
+
+  @override
+  String get hide_lists_finiched => 'ಪೂರ್ಣಗೊಂಡ ಪಟ್ಟಿಗಳನ್ನು ಮರೆಮಾಡಿ';
 }

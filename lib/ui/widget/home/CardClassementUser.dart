@@ -29,7 +29,7 @@ class CardClassementUser extends StatelessWidget {
           final String pseudo = userProfile.pseudo ?? '';
 
           return SizedBox(
-            height: 89,
+            height: 145,
             // Vous pouvez ajuster cette valeur selon vos besoins.
             child: Card(
                 clipBehavior: Clip.antiAlias, // Ceci agira comme un "overflow: hidden"

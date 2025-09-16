@@ -667,4 +667,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Uhlu/uhlu lomuntu siqu';
+
+  @override
+  String get hide_lists_finiched => 'Fihla izinhlu eziqediwe';
 }

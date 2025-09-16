@@ -667,4 +667,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Şəxsi siyahı(lar)';
+
+  @override
+  String get hide_lists_finiched => 'Tamamlanmış siyahıları gizlədin';
 }

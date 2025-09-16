@@ -218,5 +218,6 @@
     "title_all_list_perso": "جميع قوائمك الشخصية",
     "title_all_list_theme": "جميع قوائم المواضيع لدينا",
     "view_all_list": "انظر جميع القوائم",
-    "card_home_user_liste_perso": "القائمة الشخصية"
+    "card_home_user_liste_perso": "القائمة الشخصية",
+    "hide_lists_finiched": "إخفاء القوائم المكتملة"
 }

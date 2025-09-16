@@ -6,6 +6,7 @@ import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
 import 'package:voczilla/core/utils/localization.dart';
@@ -18,12 +19,15 @@ class CardClassementGamer extends StatelessWidget {
   final int position;
   final LeaderboardUser user;
   final int totalWordsForLevel;
+  final int countTrophy;
+
 
   const CardClassementGamer({
     super.key,
     required this.position,
     required this.user,
     required this.totalWordsForLevel,
+    required this.countTrophy
   });
 
   /// Helper pour construire l'avatar à partir d'une image Base64 ou d'un fallback.
@@ -33,14 +37,14 @@ class CardClassementGamer extends StatelessWidget {
       try {
         final imageBytes = base64Decode(user.imageAvatar);
         return CircleAvatar(
-          radius: 15,
+          radius: 30,
           backgroundImage: MemoryImage(imageBytes),
           backgroundColor: Colors.white, // Couleur de fond si l'image est transparente
         );
       } catch (e) {
         // En cas d'erreur de décodage, on utilise le fallback
         return Avatar(
-          radius: 15,
+          radius: 30,
           name: user.pseudo,
           fontsize: 20,
         );
@@ -48,7 +52,7 @@ class CardClassementGamer extends StatelessWidget {
     }
     // Si la chaîne est vide, on utilise directement le fallback.
     return Avatar(
-      radius: 15,
+      radius: 30,
       name: user.pseudo,
       fontsize: 20,
     );
@@ -61,84 +65,176 @@ class CardClassementGamer extends StatelessWidget {
         ? user.countGuidVocabularyLearned / totalWordsForLevel
         : 0.0;
 
-    return LayoutBuilder(builder: (context, constraints) {
-      return Card(
-          color: Colors.green,
-          child: ListTile(
-            leading: SizedBox(
-              width: 60,
-              // Simplifié pour un meilleur centrage
-                child: AutoSizeText(
-                  position.toString(),
-                  style: getFontForLanguage(
-                    codelang: Localizations.localeOf(context).languageCode,
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                  ).copyWith(
-                    color: Colors.white,
-                    decoration: TextDecoration.none,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SizedBox(
+          width: 280,
+
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              Card(
+                clipBehavior: Clip.hardEdge, // coupe ce qui dépasse
+                elevation: 8,
+                color: Colors.green,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: SizedBox(
+                  height: 135,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Ligne du haut
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10,left:8),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const SizedBox(width: 5),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8),
+                              child: SvgPicture.asset(
+                                  "assets/svg/trophy_${position.toString()}.svg",
+                                  width: 50,
+                                ),
+                            ),
+                            const SizedBox(width: 10),
+                            Padding(
+                              padding: const EdgeInsets.only(right:5,top: 5),
+                              child: _buildAvatar(),
+                            ),
+                            const SizedBox(width: 5),
+                            // Zone texte compressible
+                            Expanded(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 5),
+                                    child: Text(
+                                      "${user.pseudo}",
+                                      maxLines: 1,
+                                      textAlign: TextAlign.start,
+                                      style: getFontForLanguage(
+                                        codelang: Localizations.localeOf(context).languageCode,
+                                        fontSize: 20,
+                                      ).copyWith(color: Colors.white),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Flexible(
+                                        child: Text(
+                                          '$daysSinceCreation ${context.loc.card_home_user_day}',
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: const TextStyle(
+                                            fontSize: 10,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Flexible(
+                                        child: Text(
+                                          '${user.listPersoCount} ${context.loc.card_home_user_liste_perso}',
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: const TextStyle(
+                                            fontSize: 10,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Center(
+                        child:Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 40),
+                        child: LayoutBuilder(
+                          builder: (ctx, innerConstraints) {
+                            return Center(
+                              child: getLinearPercentIndicator(
+                                percentage: percentage,
+                                width: innerConstraints.maxWidth,
+                                context: context,
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                      ),
+
+
+                    ],
                   ),
-                  maxLines: 1,
-                  minFontSize: 10,
+                ),
 
               ),
-            ),
-            title: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,// Meilleur alignement vertical
-                  children: [
-                    _buildAvatar(), // Utilisation de l'avatar dynamique
-                    const SizedBox(width: 5),
-                    Expanded(
-                      child: Text(
-                        user.pseudo,
-                        textAlign: TextAlign.start,
-                        style: getFontForLanguage(
-                          codelang: Localizations.localeOf(context).languageCode,
-                          fontSize: 20,
-                        ).copyWith(
-                          color: Colors.white,
-                        ),
-                        overflow: TextOverflow.ellipsis,
+              Positioned(
+                top: -6, // ajuste selon besoin
+                right: -6,
+                child: SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: Stack(
+                    clipBehavior: Clip.hardEdge,
+                    children: [
+                      SvgPicture.asset(
+                        "assets/svg/achievement-award-medal-icon.svg",
+                        height: 40,
                       ),
-                    ),
-                    Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Text(
-                              '$daysSinceCreation ${context.loc.card_home_user_day}', // Ancienneté dynamique
-                              style: const TextStyle(
-                                fontSize: 10,
-                                color: Colors.white,
-                              )),
-                          Text(
-                              '${user.listPersoCount} ${context.loc.card_home_user_liste_perso}', // Listes dynamiques
-                              style: const TextStyle(
-                                fontSize: 10,
-                                color: Colors.white,
-                              )),
-                        ]),
-                  ],
+                      Positioned(
+                        right: 0,
+                        top: 0,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            border: Border.all(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                          child:  Text(
+                            countTrophy.toString(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 4),
-                LayoutBuilder(builder: (context, constraints) {
-                  return getLinearPercentIndicator(
-                      percentage: percentage, // Pourcentage dynamique
-                      width: constraints.maxWidth,
-                      context:context
-                  );
-                })
-              ],
-            ),
-          ));
-    });
+              ),
+            ],
+          ),
+        );
+      },
+
+    );
   }
+// ... existing code ...
 
   // Le reste de votre code (getLinearPercentIndicator, getPositionLeftCursor) reste inchangé
   Widget getLinearPercentIndicator({required double percentage, required double width, required BuildContext context}) {
@@ -254,14 +350,10 @@ class CardClassementGamer extends StatelessWidget {
     final bool isLogoVisuallyFirst = (isRtl && percentage > 0.2) || (!isRtl && percentage <= 0.2);
     final double logoCenterOffsetInRow = isLogoVisuallyFirst ? halfImageWidth : textBlockWidth + halfImageWidth;
 
-    // Calculer le point de jonction idéal sur la barre
     final double junctionPoint = isRtl ? width * (1 - percentage) : width * percentage;
 
-    // Calculer la position de départ idéale pour la Row pour centrer le logo sur la jonction
     final double idealPosition = junctionPoint - logoCenterOffsetInRow;
 
-    // Pour que le centre du logo soit sur le point de jonction, la Row doit commencer à: position = point de jonction - décalage du centre du logo.
-    // On ne contraint plus la position pour permettre au logo de déborder.
     return idealPosition;
   }
 }

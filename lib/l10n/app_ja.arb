@@ -218,5 +218,6 @@
     "title_all_list_perso": "すべてのパーソナライズされたリスト",
     "title_all_list_theme": "すべてのテーマリスト",
     "view_all_list": "すべてのリストを見る",
-    "card_home_user_liste_perso": "個人リスト"
+    "card_home_user_liste_perso": "個人リスト",
+    "hide_lists_finiched": "完了したリストを非表示にする"
 }

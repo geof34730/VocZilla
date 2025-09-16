@@ -218,5 +218,6 @@
     "title_all_list_perso": "Бардык жекелештирилген тизмелериңиз",
     "title_all_list_theme": "Биздин бардык тема тизмелери",
     "view_all_list": "Бардык тизмелерди көрүү",
-    "card_home_user_liste_perso": "Жеке тизме(лер)"
+    "card_home_user_liste_perso": "Жеке тизме(лер)",
+    "hide_lists_finiched": "Аякталган тизмелерди жашыруу"
 }

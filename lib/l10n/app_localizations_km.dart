@@ -667,4 +667,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'បញ្ជី​ផ្ទាល់ខ្លួន';
+
+  @override
+  String get hide_lists_finiched => 'លាក់បញ្ជីដែលបានបញ្ចប់';
 }

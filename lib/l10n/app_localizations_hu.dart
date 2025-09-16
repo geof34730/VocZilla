@@ -667,4 +667,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Személyes lista(k)';
+
+  @override
+  String get hide_lists_finiched => 'Elrejti a kitöltött listákat';
 }

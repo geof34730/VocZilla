@@ -667,4 +667,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => '개인 목록';
+
+  @override
+  String get hide_lists_finiched => '완료된 목록 숨기기';
 }

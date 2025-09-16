@@ -218,5 +218,6 @@
     "title_all_list_perso": "Az összes személyre szabott listád",
     "title_all_list_theme": "Az összes témalistánk",
     "view_all_list": "Az összes lista megtekintése",
-    "card_home_user_liste_perso": "Személyes lista(k)"
+    "card_home_user_liste_perso": "Személyes lista(k)",
+    "hide_lists_finiched": "Elrejti a kitöltött listákat"
 }

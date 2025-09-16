@@ -218,5 +218,6 @@
     "title_all_list_perso": "Všechny vaše personalizované seznamy",
     "title_all_list_theme": "Všechny naše seznamy témat",
     "view_all_list": "Zobrazit všechny seznamy",
-    "card_home_user_liste_perso": "Osobní seznam(y)"
+    "card_home_user_liste_perso": "Osobní seznam(y)",
+    "hide_lists_finiched": "Skrýt dokončené seznamy"
 }

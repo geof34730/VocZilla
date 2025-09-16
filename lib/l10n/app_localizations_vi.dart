@@ -667,4 +667,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Danh sách cá nhân';
+
+  @override
+  String get hide_lists_finiched => 'Ẩn danh sách đã hoàn thành';
 }

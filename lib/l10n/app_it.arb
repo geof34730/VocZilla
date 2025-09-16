@@ -218,5 +218,6 @@
     "title_all_list_perso": "Tutte le tue liste personalizzate",
     "title_all_list_theme": "Tutti i nostri elenchi di temi",
     "view_all_list": "Vedi tutti gli elenchi",
-    "card_home_user_liste_perso": "Elenco\/i personale\/i"
+    "card_home_user_liste_perso": "Elenco\/i personale\/i",
+    "hide_lists_finiched": "Nascondi elenchi completati"
 }

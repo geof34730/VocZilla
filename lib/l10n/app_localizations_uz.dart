@@ -667,4 +667,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Shaxsiy ro\'yxat(lar)';
+
+  @override
+  String get hide_lists_finiched => 'Tugallangan roʻyxatlarni yashirish';
 }

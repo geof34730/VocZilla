@@ -667,4 +667,7 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Лична(е) листа(е)';
+
+  @override
+  String get hide_lists_finiched => 'Сакриј попуњене листе';
 }

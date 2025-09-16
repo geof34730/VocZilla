@@ -218,5 +218,6 @@
     "title_all_list_perso": "Све ваше персонализоване листе",
     "title_all_list_theme": "Све наше листе тема",
     "view_all_list": "Погледајте све листе",
-    "card_home_user_liste_perso": "Лична(е) листа(е)"
+    "card_home_user_liste_perso": "Лична(е) листа(е)",
+    "hide_lists_finiched": "Сакриј попуњене листе"
 }

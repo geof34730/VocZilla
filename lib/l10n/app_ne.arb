@@ -218,5 +218,6 @@
     "title_all_list_perso": "तपाईंका सबै निजीकृत सूचीहरू",
     "title_all_list_theme": "हाम्रा सबै विषयवस्तु सूचीहरू",
     "view_all_list": "सबै सूचीहरू हेर्नुहोस्",
-    "card_home_user_liste_perso": "व्यक्तिगत सूची(हरू)"
+    "card_home_user_liste_perso": "व्यक्तिगत सूची(हरू)",
+    "hide_lists_finiched": "पूरा भएका सूचीहरू लुकाउनुहोस्"
 }

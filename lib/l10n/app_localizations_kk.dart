@@ -667,4 +667,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Жеке тізім(дер)';
+
+  @override
+  String get hide_lists_finiched => 'Аяқталған тізімдерді жасыру';
 }

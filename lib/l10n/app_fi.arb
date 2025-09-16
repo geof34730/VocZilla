@@ -218,5 +218,6 @@
     "title_all_list_perso": "Kaikki henkilökohtaiset listasi",
     "title_all_list_theme": "Kaikki teemalistamme",
     "view_all_list": "Katso kaikki listat",
-    "card_home_user_liste_perso": "Henkilökohtainen(t) lista(t)"
+    "card_home_user_liste_perso": "Henkilökohtainen(t) lista(t)",
+    "hide_lists_finiched": "Piilota valmiit listat"
 }

@@ -667,4 +667,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'فهرست(های) شخصی';
+
+  @override
+  String get hide_lists_finiched => 'پنهان کردن لیست‌های تکمیل‌شده';
 }

@@ -667,4 +667,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Isiklik(ud) nimekiri(d)';
+
+  @override
+  String get hide_lists_finiched => 'Peida lõpetatud loendid';
 }

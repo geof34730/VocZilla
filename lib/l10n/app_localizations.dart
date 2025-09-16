@@ -1554,6 +1554,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Personal list(s)'**
   String get card_home_user_liste_perso;
+
+  /// No description provided for @hide_lists_finiched.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide completed lists'**
+  String get hide_lists_finiched;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

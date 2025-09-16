@@ -667,4 +667,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Henkilökohtainen(t) lista(t)';
+
+  @override
+  String get hide_lists_finiched => 'Piilota valmiit listat';
 }

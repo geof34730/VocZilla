@@ -667,4 +667,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'รายชื่อส่วนตัว';
+
+  @override
+  String get hide_lists_finiched => 'ซ่อนรายการที่เสร็จสมบูรณ์';
 }

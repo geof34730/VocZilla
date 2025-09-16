@@ -218,5 +218,6 @@
     "title_all_list_perso": "All your personalized lists",
     "title_all_list_theme": "All our theme lists",
     "view_all_list": "See all lists",
-    "card_home_user_liste_perso": "Personal list(s)"
+    "card_home_user_liste_perso": "Personal list(s)",
+    "hide_lists_finiched": "Hide completed lists"
 }

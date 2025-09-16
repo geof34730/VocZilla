@@ -218,5 +218,6 @@
     "title_all_list_perso": "귀하의 모든 개인화된 목록",
     "title_all_list_theme": "우리의 모든 테마 목록",
     "view_all_list": "모든 목록 보기",
-    "card_home_user_liste_perso": "개인 목록"
+    "card_home_user_liste_perso": "개인 목록",
+    "hide_lists_finiched": "완료된 목록 숨기기"
 }

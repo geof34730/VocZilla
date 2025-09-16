@@ -218,5 +218,6 @@
     "title_all_list_perso": "ඔබගේ සියලු පුද්ගලාරෝපිත ලැයිස්තු",
     "title_all_list_theme": "අපගේ සියලුම තේමා ලැයිස්තු",
     "view_all_list": "සියලුම ලැයිස්තු බලන්න",
-    "card_home_user_liste_perso": "පුද්ගලික ලැයිස්තුව(ය)"
+    "card_home_user_liste_perso": "පුද්ගලික ලැයිස්තුව(ය)",
+    "hide_lists_finiched": "සම්පූර්ණ කළ ලැයිස්තු සඟවන්න"
 }

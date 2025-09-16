@@ -667,4 +667,7 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Personlige liste(r)';
+
+  @override
+  String get hide_lists_finiched => 'Skjul fullførte lister';
 }

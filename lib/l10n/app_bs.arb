@@ -218,5 +218,6 @@
     "title_all_list_perso": "Sve vaše personalizirane liste",
     "title_all_list_theme": "Sve naše tematske liste",
     "view_all_list": "Pogledajte sve liste",
-    "card_home_user_liste_perso": "Lična(e) lista(e)"
+    "card_home_user_liste_perso": "Lična(e) lista(e)",
+    "hide_lists_finiched": "Sakrij popunjene liste"
 }

@@ -667,4 +667,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'വ്യക്തിഗത ലിസ്റ്റ്(കൾ)';
+
+  @override
+  String get hide_lists_finiched => 'പൂർത്തിയാക്കിയ ലിസ്റ്റുകൾ മറയ്ക്കുക';
 }

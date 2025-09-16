@@ -667,4 +667,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Persoonlike lys(te)';
+
+  @override
+  String get hide_lists_finiched => 'Versteek voltooide lyste';
 }

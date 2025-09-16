@@ -667,4 +667,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => '個人リスト';
+
+  @override
+  String get hide_lists_finiched => '完了したリストを非表示にする';
 }

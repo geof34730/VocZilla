@@ -218,5 +218,6 @@
     "title_all_list_perso": "Alla dina personliga listor",
     "title_all_list_theme": "Alla våra temalistor",
     "view_all_list": "Se alla listor",
-    "card_home_user_liste_perso": "Personliga listor"
+    "card_home_user_liste_perso": "Personliga listor",
+    "hide_lists_finiched": "Dölj ifyllda listor"
 }

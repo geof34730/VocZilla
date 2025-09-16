@@ -218,5 +218,6 @@
     "title_all_list_perso": "Totes les teves llistes personalitzades",
     "title_all_list_theme": "Totes les nostres llistes temàtiques",
     "view_all_list": "Veure totes les llistes",
-    "card_home_user_liste_perso": "Llista(es) personal(s)"
+    "card_home_user_liste_perso": "Llista(es) personal(s)",
+    "hide_lists_finiched": "Amaga les llistes completades"
 }

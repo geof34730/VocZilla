@@ -218,5 +218,6 @@
     "title_all_list_perso": "Të gjitha listat tuaja të personalizuara",
     "title_all_list_theme": "Të gjitha listat tona të temave",
     "view_all_list": "Shiko të gjitha listat",
-    "card_home_user_liste_perso": "Lista(t) personale"
+    "card_home_user_liste_perso": "Lista(t) personale",
+    "hide_lists_finiched": "Fshih listat e përfunduara"
 }

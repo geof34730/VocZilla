@@ -667,4 +667,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'ကိုယ်ရေးကိုယ်တာ စာရင်း(များ)';
+
+  @override
+  String get hide_lists_finiched => 'ပြီးမြောက်သောစာရင်းများကို ဝှက်ထားပါ။';
 }

@@ -667,4 +667,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'தனிப்பட்ட பட்டியல்(கள்)';
+
+  @override
+  String get hide_lists_finiched => 'முடிக்கப்பட்ட பட்டியல்களை மறை';
 }

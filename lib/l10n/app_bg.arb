@@ -218,5 +218,6 @@
     "title_all_list_perso": "Всички ваши персонализирани списъци",
     "title_all_list_theme": "Всички наши списъци с теми",
     "view_all_list": "Вижте всички списъци",
-    "card_home_user_liste_perso": "Лични списъци"
+    "card_home_user_liste_perso": "Лични списъци",
+    "hide_lists_finiched": "Скриване на попълнените списъци"
 }

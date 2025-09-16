@@ -667,4 +667,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'පුද්ගලික ලැයිස්තුව(ය)';
+
+  @override
+  String get hide_lists_finiched => 'සම්පූර්ණ කළ ලැයිස්තු සඟවන්න';
 }

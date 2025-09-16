@@ -667,4 +667,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Osobni popis(i)';
+
+  @override
+  String get hide_lists_finiched => 'Sakrij dovršene popise';
 }

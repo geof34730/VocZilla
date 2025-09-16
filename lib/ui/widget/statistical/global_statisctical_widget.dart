@@ -346,7 +346,8 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
               ),
             ),
           ),
-        )
+        ),
+        if (widget.showTrophy)SizedBox(height:10)
       ],
     );
   }

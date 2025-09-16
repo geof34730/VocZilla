@@ -218,5 +218,6 @@
     "title_all_list_perso": "Таны бүх хувийн жагсаалт",
     "title_all_list_theme": "Манай бүх сэдвийн жагсаалт",
     "view_all_list": "Бүх жагсаалтыг харах",
-    "card_home_user_liste_perso": "Хувийн жагсаалт(ууд)"
+    "card_home_user_liste_perso": "Хувийн жагсаалт(ууд)",
+    "hide_lists_finiched": "Дууссан жагсаалтыг нуух"
 }

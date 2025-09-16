@@ -667,4 +667,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'वैयक्तिक यादी(ल्या)';
+
+  @override
+  String get hide_lists_finiched => 'पूर्ण झालेल्या याद्या लपवा';
 }

@@ -667,4 +667,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Lista(t) personale';
+
+  @override
+  String get hide_lists_finiched => 'Fshih listat e përfunduara';
 }

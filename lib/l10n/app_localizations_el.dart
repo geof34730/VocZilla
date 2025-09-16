@@ -667,4 +667,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'Προσωπική(ές) λίστα(ες)';
+
+  @override
+  String get hide_lists_finiched => 'Απόκρυψη ολοκληρωμένων λιστών';
 }

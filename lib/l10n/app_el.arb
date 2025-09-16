@@ -218,5 +218,6 @@
     "title_all_list_perso": "Όλες οι εξατομικευμένες λίστες σας",
     "title_all_list_theme": "Όλες οι λίστες θεμάτων μας",
     "view_all_list": "Δείτε όλες τις λίστες",
-    "card_home_user_liste_perso": "Προσωπική(ές) λίστα(ες)"
+    "card_home_user_liste_perso": "Προσωπική(ές) λίστα(ες)",
+    "hide_lists_finiched": "Απόκρυψη ολοκληρωμένων λιστών"
 }

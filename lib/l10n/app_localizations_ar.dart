@@ -667,4 +667,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'القائمة الشخصية';
+
+  @override
+  String get hide_lists_finiched => 'إخفاء القوائم المكتملة';
 }

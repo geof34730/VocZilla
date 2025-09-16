@@ -218,5 +218,6 @@
     "title_all_list_perso": "Vsi vaši prilagojeni seznami",
     "title_all_list_theme": "Vsi naši tematski seznami",
     "view_all_list": "Oglejte si vse sezname",
-    "card_home_user_liste_perso": "Osebni seznam(i)"
+    "card_home_user_liste_perso": "Osebni seznam(i)",
+    "hide_lists_finiched": "Skrij dokončane sezname"
 }

@@ -39,7 +39,7 @@ class VocabulaireServerService {
     final list = userData['ListGuidVocabularyLearned'];
     final int ListGuidVocabularyLearnedLength = (list is List) ? list.length : 0;
     final listLearned = userData['ListGuidVocabularyLearned'];
-    final ListDefinedEnd = userData['listDefinedEnd'];
+    final ListDefinedEnd = userData['ListDefinedEnd'];
     final allListView = userData["allListView"];
 
 
@@ -52,7 +52,7 @@ class VocabulaireServerService {
     }
 
 
-    print("*****GO SERVER********uid: $uid $allListView");
+    print("*****GO SERVER********uid: $uid $ListDefinedEnd");
     if (uid != null && listLearned != null) {
       await _usersCollection
           .doc(uid)

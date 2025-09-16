@@ -14,6 +14,9 @@ class LeaderboardService {
       final response = await _dio.get(serverLeaderBoardUrl);
       if (response.statusCode == 200 && response.data is List) {
         final List<dynamic> rawUserList = response.data;
+
+
+        Logger.Blue.log("rawUserList: $rawUserList");
         return rawUserList.asMap().entries.map((entry) {
               int rank = entry.key + 1; // index 0 -> rank 1, etc.
               Map<String, dynamic> userJson = entry.value;

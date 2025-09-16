@@ -103,6 +103,7 @@ class _HomeClassementState extends State<HomeClassement> with RouteAware {
             position: user.rank,
             user: user,
             totalWordsForLevel: data.totalWordsInLevel,
+            countTrophy: user.countTrophy,
           ),
         );
       }).toList();

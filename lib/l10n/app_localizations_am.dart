@@ -667,4 +667,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get card_home_user_liste_perso => 'የግል ዝርዝር(ዎች)';
+
+  @override
+  String get hide_lists_finiched => 'የተጠናቀቁ ዝርዝሮችን ደብቅ';
 }

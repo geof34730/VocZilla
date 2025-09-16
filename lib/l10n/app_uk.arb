@@ -218,5 +218,6 @@
     "title_all_list_perso": "Усі ваші персоналізовані списки",
     "title_all_list_theme": "Усі наші тематичні списки",
     "view_all_list": "Переглянути всі списки",
-    "card_home_user_liste_perso": "Особистий(і) список(и)"
+    "card_home_user_liste_perso": "Особистий(і) список(и)",
+    "hide_lists_finiched": "Приховати завершені списки"
 }

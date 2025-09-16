@@ -218,5 +218,6 @@
     "title_all_list_perso": "Tüm kişiselleştirilmiş listeleriniz",
     "title_all_list_theme": "Tüm tema listelerimiz",
     "view_all_list": "Tüm listeleri görün",
-    "card_home_user_liste_perso": "Kişisel liste(ler)"
+    "card_home_user_liste_perso": "Kişisel liste(ler)",
+    "hide_lists_finiched": "Tamamlanan listeleri gizle"
 }

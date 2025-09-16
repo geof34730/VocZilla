@@ -218,5 +218,6 @@
     "title_all_list_perso": "您所有的个性化列表",
     "title_all_list_theme": "我们所有的主题列表",
     "view_all_list": "查看所有列表",
-    "card_home_user_liste_perso": "个人名单"
+    "card_home_user_liste_perso": "个人名单",
+    "hide_lists_finiched": "隐藏已完成列表"
 }

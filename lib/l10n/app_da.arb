@@ -218,5 +218,6 @@
     "title_all_list_perso": "Alle dine personlige lister",
     "title_all_list_theme": "Alle vores temalister",
     "view_all_list": "Se alle lister",
-    "card_home_user_liste_perso": "Personlige liste(r)"
+    "card_home_user_liste_perso": "Personlige liste(r)",
+    "hide_lists_finiched": "Skjul færdige lister"
 }
