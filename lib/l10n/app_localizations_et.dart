@@ -9,7 +9,7 @@ class AppLocalizationsEt extends AppLocalizations {
   AppLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get app_release_note => 'Veaparandus: isiklikku nimekirja ei säilitatud enam pärast väljalogimist';
+  String get app_release_note => 'Lisatud trofeed lõpetatud nimekirjade eest, uus filter lõpetatud nimekirjade peitmiseks, parandatud viga filtriga \"Õpitav sõnavara\". Täiustatud TeamZilla edetabeli kuvamine.';
 
   @override
   String get share_list_perso_alert_disponible => 'Loendi jagamise funktsioon on saadaval peagi!';

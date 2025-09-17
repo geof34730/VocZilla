@@ -9,7 +9,7 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get app_release_note => '错误修复：退出后不再保留个人列表';
+  String get app_release_note => '新增已完成列表的奖杯，新增隐藏已完成列表的过滤器，并修复“待学习词汇”过滤器的错误。改进了 TeamZilla 排行榜的显示。';
 
   @override
   String get share_list_perso_alert_disponible => '列表共享功能即将推出！';

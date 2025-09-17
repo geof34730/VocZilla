@@ -9,7 +9,7 @@ class AppLocalizationsBe extends AppLocalizations {
   AppLocalizationsBe([String locale = 'be']) : super(locale);
 
   @override
-  String get app_release_note => 'Выпраўленне памылкі: асабісты спіс больш не захоўваўся пасля выхаду з сістэмы';
+  String get app_release_note => 'Дададзены трафеі за запоўненыя спісы, новы фільтр для схавання запоўненых спісаў, выпраўлена памылка з фільтрам «Слоўнік для вывучэння». Палепшана адлюстраванне табліцы лідэраў TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцыя сумеснага выкарыстання спісу будзе даступная вельмі хутка!';

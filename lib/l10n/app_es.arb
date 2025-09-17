@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Corrección de errores: la lista personal ya no se conservaba después de cerrar la sesión",
+    "app_release_note": "Se añadieron trofeos por listas completadas, se agregó un nuevo filtro para ocultarlas y se corrigió un error con el filtro \"Vocabulario para aprender\". Se mejoró la visualización de la tabla de clasificación de TeamZilla.",
     "share_list_perso_alert_disponible": "¡La función para compartir listas estará disponible muy pronto!",
     "information": "Información",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Ocultar listas completadas",
     "app_promotion_ios": "Enriquece tu vocabulario en inglés con 4.400 palabras esenciales para hablar y comprender fácilmente.",
     "app_feature_graphic_FeatureItem1": "4.400 palabras",
-    "home_notlogged_accroche4": "4.400 palabras esenciales"
+    "home_notlogged_accroche4": "4.400 palabras esenciales",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

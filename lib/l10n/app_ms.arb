@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Pembetulan pepijat: senarai peribadi tidak lagi disimpan selepas log keluar",
+    "app_release_note": "Menambah trofi untuk senarai lengkap, penapis baharu untuk menyembunyikan senarai lengkap, membetulkan pepijat dengan penapis \"Perbendaharaan Kata untuk Belajar\". Paparan papan pendahulu TeamZilla yang dipertingkatkan.",
     "share_list_perso_alert_disponible": "Ciri perkongsian senarai akan tersedia tidak lama lagi!",
     "information": "Maklumat",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Sembunyikan senarai lengkap",
     "app_promotion_ios": "Perkaya perbendaharaan kata bahasa Inggeris anda dengan 4,400 perkataan penting untuk pertuturan dan pemahaman yang mudah.",
     "app_feature_graphic_FeatureItem1": "4,400 patah perkataan",
-    "home_notlogged_accroche4": "4,400 perkataan penting"
+    "home_notlogged_accroche4": "4,400 perkataan penting",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

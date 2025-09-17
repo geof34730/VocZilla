@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Foutoplossing: persoonlike lys is nie meer gehou na uitmelding nie",
+    "app_release_note": "Trofeë vir voltooide lyste bygevoeg, nuwe filter om voltooide lyste weg te steek, 'n fout met die \"Woordeskat om te Leer\"-filter reggestel. TeamZilla-leierbordvertoning verbeter.",
     "share_list_perso_alert_disponible": "Die lysdelingsfunksie sal binnekort beskikbaar wees!",
     "information": "Inligting",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Versteek voltooide lyste",
     "app_promotion_ios": "Verryk jou Engelse woordeskat met 4 400 noodsaaklike woorde vir maklike praat en begrip.",
     "app_feature_graphic_FeatureItem1": "4 400 woorde",
-    "home_notlogged_accroche4": "4 400 noodsaaklike woorde"
+    "home_notlogged_accroche4": "4 400 noodsaaklike woorde",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Ispravka greške: lična lista više nije sačuvana nakon odjave",
+    "app_release_note": "Dodani su trofeji za popunjene liste, novi filter za skrivanje popunjenih lista, ispravljena je greška s filterom \"Vokabular za učenje\". Poboljšan prikaz TeamZilla rang liste.",
     "share_list_perso_alert_disponible": "Funkcija dijeljenja liste bit će dostupna vrlo brzo!",
     "information": "Informacije",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Sakrij popunjene liste",
     "app_promotion_ios": "Obogatite svoj engleski vokabular sa 4.400 ključnih riječi za lak govor i razumijevanje.",
     "app_feature_graphic_FeatureItem1": "4.400 riječi",
-    "home_notlogged_accroche4": "4.400 bitnih riječi"
+    "home_notlogged_accroche4": "4.400 bitnih riječi",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

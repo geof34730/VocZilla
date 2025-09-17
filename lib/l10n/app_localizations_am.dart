@@ -9,7 +9,7 @@ class AppLocalizationsAm extends AppLocalizations {
   AppLocalizationsAm([String locale = 'am']) : super(locale);
 
   @override
-  String get app_release_note => 'የሳንካ ጥገና፡ ከመውጣትህ በኋላ የግል ዝርዝር አልተቀመጠም።';
+  String get app_release_note => 'ለተጠናቀቁ ዝርዝሮች የታከሉ ዋንጫዎች፣ የተጠናቀቁ ዝርዝሮችን ለመደበቅ አዲስ ማጣሪያ፣ ስህተት በ\"ለመማር የቃላት ዝርዝር\" አስተካክሏል። የተሻሻለ የTeamZilla መሪ ሰሌዳ ማሳያ።';
 
   @override
   String get share_list_perso_alert_disponible => 'የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!';

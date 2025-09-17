@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Popravek napake: osebni seznam se po odjavi ni več hranil",
+    "app_release_note": "Dodani pokali za dokončane sezname, nov filter za skrivanje dokončanih seznamov, odpravljena napaka s filtrom »Besedišče za učenje«. Izboljšan prikaz lestvice najboljših v TeamZilli.",
     "share_list_perso_alert_disponible": "Funkcija deljenja seznamov bo kmalu na voljo!",
     "information": "Informacije",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Skrij dokončane sezname",
     "app_promotion_ios": "Obogatite svoj angleški besednjak s 4400 bistvenimi besedami za lažje govorjenje in razumevanje.",
     "app_feature_graphic_FeatureItem1": "4.400 besed",
-    "home_notlogged_accroche4": "4.400 bistvenih besed"
+    "home_notlogged_accroche4": "4.400 bistvenih besed",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

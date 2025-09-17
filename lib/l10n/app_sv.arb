@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Buggfix: personlig lista sparades inte längre efter utloggning",
+    "app_release_note": "Lade till troféer för färdiga listor, nytt filter för att dölja färdiga listor, fixade ett fel med filtret \"Vokabulär att lära sig\". Förbättrad visning av TeamZilla-topplistan.",
     "share_list_perso_alert_disponible": "Funktionen för att dela listor kommer att finnas tillgänglig mycket snart!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Dölj ifyllda listor",
     "app_promotion_ios": "Berika ditt engelska ordförråd med 4 400 viktiga ord för enkel talförståelse.",
     "app_feature_graphic_FeatureItem1": "4 400 ord",
-    "home_notlogged_accroche4": "4 400 viktiga ord"
+    "home_notlogged_accroche4": "4 400 viktiga ord",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Corecție eroare: lista personală nu mai era păstrată după deconectare",
+    "app_release_note": "Adăugate trofee pentru listele completate, filtru nou pentru ascunderea listelor completate, remediată o eroare cu filtrul „Vocabular de învățat”. Afișaj îmbunătățit în clasamentul TeamZilla.",
     "share_list_perso_alert_disponible": "Funcția de partajare a listei va fi disponibilă foarte curând!",
     "information": "Informaţii",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Ascundeți listele completate",
     "app_promotion_ios": "Îmbogățiți-vă vocabularul englez cu 4.400 de cuvinte esențiale pentru o vorbire și o înțelegere ușoară.",
     "app_feature_graphic_FeatureItem1": "4.400 de cuvinte",
-    "home_notlogged_accroche4": "4.400 de cuvinte esențiale"
+    "home_notlogged_accroche4": "4.400 de cuvinte esențiale",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

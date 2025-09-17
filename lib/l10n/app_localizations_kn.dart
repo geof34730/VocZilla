@@ -9,7 +9,7 @@ class AppLocalizationsKn extends AppLocalizations {
   AppLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get app_release_note => 'ದೋಷ ಪರಿಹಾರ: ಲಾಗ್ ಔಟ್ ಆದ ನಂತರ ವೈಯಕ್ತಿಕ ಪಟ್ಟಿಯನ್ನು ಇನ್ನು ಮುಂದೆ ಇಡಲಾಗಲಿಲ್ಲ.';
+  String get app_release_note => 'ಪೂರ್ಣಗೊಂಡ ಪಟ್ಟಿಗಳಿಗೆ ಟ್ರೋಫಿಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ, ಪೂರ್ಣಗೊಂಡ ಪಟ್ಟಿಗಳನ್ನು ಮರೆಮಾಡಲು ಹೊಸ ಫಿಲ್ಟರ್, \"ಕಲಿಯಲು ಶಬ್ದಕೋಶ\" ಫಿಲ್ಟರ್‌ನೊಂದಿಗೆ ದೋಷವನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ. ಸುಧಾರಿತ TeamZilla ಲೀಡರ್‌ಬೋರ್ಡ್ ಪ್ರದರ್ಶನ.';
 
   @override
   String get share_list_perso_alert_disponible => 'ಪಟ್ಟಿ ಹಂಚಿಕೆ ವೈಶಿಷ್ಟ್ಯವು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಿರುತ್ತದೆ!';

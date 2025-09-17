@@ -9,7 +9,7 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get app_release_note => 'Corrección de errores: la lista personal ya no se conservaba después de cerrar la sesión';
+  String get app_release_note => 'Se añadieron trofeos por listas completadas, se agregó un nuevo filtro para ocultarlas y se corrigió un error con el filtro \"Vocabulario para aprender\". Se mejoró la visualización de la tabla de clasificación de TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => '¡La función para compartir listas estará disponible muy pronto!';

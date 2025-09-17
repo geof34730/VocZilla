@@ -1,5 +1,5 @@
 {
-    "app_release_note": "버그 수정: 로그아웃 후 개인 목록이 더 이상 유지되지 않습니다.",
+    "app_release_note": "완료 목록에 트로피 추가, 완료 목록 숨기기 필터 추가, \"학습 어휘\" 필터 버그 수정, TeamZilla 리더보드 표시 개선.",
     "share_list_perso_alert_disponible": "목록 공유 기능이 곧 출시됩니다!",
     "information": "정보",
     "app_title": "보크질라",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "완료된 목록 숨기기",
     "app_promotion_ios": "쉽게 말하고 이해하는 데 필요한 4,400개의 필수 단어로 영어 어휘력을 키우세요.",
     "app_feature_graphic_FeatureItem1": "4,400 단어",
-    "home_notlogged_accroche4": "4,400개의 필수 단어"
+    "home_notlogged_accroche4": "4,400개의 필수 단어",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

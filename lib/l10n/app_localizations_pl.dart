@@ -9,7 +9,7 @@ class AppLocalizationsPl extends AppLocalizations {
   AppLocalizationsPl([String locale = 'pl']) : super(locale);
 
   @override
-  String get app_release_note => 'Naprawiono błąd: lista osobista nie była już zachowywana po wylogowaniu';
+  String get app_release_note => 'Dodano trofea za ukończone listy, nowy filtr ukrywający ukończone listy, naprawiono błąd w filtrze „Słownictwo do nauczenia”. Ulepszono wyświetlanie tabeli wyników TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcja udostępniania list będzie dostępna już wkrótce!';

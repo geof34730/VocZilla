@@ -9,7 +9,7 @@ class AppLocalizationsSk extends AppLocalizations {
   AppLocalizationsSk([String locale = 'sk']) : super(locale);
 
   @override
-  String get app_release_note => 'Oprava chyby: osobný zoznam sa už neuchovával po odhlásení';
+  String get app_release_note => 'Pridané trofeje za dokončené zoznamy, nový filter na skrytie dokončených zoznamov, opravená chyba s filtrom „Slovná zásoba na učenie“. Vylepšené zobrazenie rebríčka TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcia zdieľania zoznamov bude dostupná už čoskoro!';

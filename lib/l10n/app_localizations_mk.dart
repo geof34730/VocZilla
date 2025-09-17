@@ -9,7 +9,7 @@ class AppLocalizationsMk extends AppLocalizations {
   AppLocalizationsMk([String locale = 'mk']) : super(locale);
 
   @override
-  String get app_release_note => 'Исправка на грешка: личниот список повеќе не се чуваше по одјавувањето';
+  String get app_release_note => 'Додадени се трофеи за завршени листи, нов филтер за криење на завршените листи, поправена е грешка со филтерот „Вокабулар за учење“. Подобрен приказ на табелата со водачи на TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцијата за споделување на листа ќе биде достапна многу наскоро!';

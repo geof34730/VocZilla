@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Bugfix: persoonlijke lijst werd niet meer bewaard na uitloggen",
+    "app_release_note": "Trofeeën toegevoegd voor voltooide lijsten, nieuw filter om voltooide lijsten te verbergen, bug opgelost met het filter 'Te leren woordenschat'. Verbeterde weergave van het TeamZilla-klassement.",
     "share_list_perso_alert_disponible": "De functie om lijsten te delen zal binnenkort beschikbaar zijn!",
     "information": "Informatie",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Verberg voltooide lijsten",
     "app_promotion_ios": "Verrijk uw Engelse woordenschat met 4.400 essentiële woorden voor eenvoudig spreken en begrijpen.",
     "app_feature_graphic_FeatureItem1": "4.400 woorden",
-    "home_notlogged_accroche4": "4.400 essentiële woorden"
+    "home_notlogged_accroche4": "4.400 essentiële woorden",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

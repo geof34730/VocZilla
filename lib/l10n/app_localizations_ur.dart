@@ -9,7 +9,7 @@ class AppLocalizationsUr extends AppLocalizations {
   AppLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
-  String get app_release_note => 'بگ فکس: لاگ آؤٹ کرنے کے بعد ذاتی فہرست کو مزید نہیں رکھا گیا۔';
+  String get app_release_note => 'مکمل فہرستوں کے لیے ٹرافیاں شامل کی گئیں، مکمل فہرستوں کو چھپانے کے لیے نیا فلٹر، \"سیکھنے کے لیے الفاظ\" کے فلٹر کے ساتھ ایک بگ طے کیا۔ بہتر ٹیم زیلا لیڈر بورڈ ڈسپلے۔';
 
   @override
   String get share_list_perso_alert_disponible => 'لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!';

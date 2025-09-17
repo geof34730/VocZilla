@@ -9,7 +9,7 @@ class AppLocalizationsBs extends AppLocalizations {
   AppLocalizationsBs([String locale = 'bs']) : super(locale);
 
   @override
-  String get app_release_note => 'Ispravka greške: lična lista više nije sačuvana nakon odjave';
+  String get app_release_note => 'Dodani su trofeji za popunjene liste, novi filter za skrivanje popunjenih lista, ispravljena je greška s filterom \"Vokabular za učenje\". Poboljšan prikaz TeamZilla rang liste.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija dijeljenja liste bit će dostupna vrlo brzo!';

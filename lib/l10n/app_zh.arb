@@ -1,5 +1,5 @@
 {
-    "app_release_note": "错误修复：退出后不再保留个人列表",
+    "app_release_note": "新增已完成列表的奖杯，新增隐藏已完成列表的过滤器，并修复“待学习词汇”过滤器的错误。改进了 TeamZilla 排行榜的显示。",
     "share_list_perso_alert_disponible": "列表共享功能即将推出！",
     "information": "信息",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "隐藏已完成列表",
     "app_promotion_ios": "使用 4,400 个基本单词丰富您的英语词汇量，以便轻松说话和理解。",
     "app_feature_graphic_FeatureItem1": "4,400 字",
-    "home_notlogged_accroche4": "4,400 个必备词汇"
+    "home_notlogged_accroche4": "4,400 个必备词汇",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

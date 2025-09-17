@@ -9,7 +9,7 @@ class AppLocalizationsNe extends AppLocalizations {
   AppLocalizationsNe([String locale = 'ne']) : super(locale);
 
   @override
-  String get app_release_note => 'बग समाधान: लग आउट गरेपछि व्यक्तिगत सूची अब राखिएन';
+  String get app_release_note => 'पूरा भएका सूचीहरूको लागि ट्रफीहरू थपियो, पूरा भएका सूचीहरू लुकाउन नयाँ फिल्टर, \"सिक्नको लागि शब्दावली\" फिल्टरको साथ बग समाधान गरियो। सुधारिएको TeamZilla लिडरबोर्ड प्रदर्शन।';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझेदारी सुविधा चाँडै उपलब्ध हुनेछ!';

@@ -9,7 +9,7 @@ class AppLocalizationsLt extends AppLocalizations {
   AppLocalizationsLt([String locale = 'lt']) : super(locale);
 
   @override
-  String get app_release_note => 'Klaidos ištaisymas: asmeninis sąrašas nebebuvo saugomas atsijungus';
+  String get app_release_note => 'Pridėti trofėjai už užbaigtus sąrašus, naujas filtras užbaigtiems sąrašams slėpti, ištaisyta klaida su filtru „Žodynas, kurį reikia išmokti“. Patobulintas „TeamZilla“ lyderių lentelės rodymas.';
 
   @override
   String get share_list_perso_alert_disponible => 'Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!';

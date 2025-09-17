@@ -9,7 +9,7 @@ class AppLocalizationsIs extends AppLocalizations {
   AppLocalizationsIs([String locale = 'is']) : super(locale);
 
   @override
-  String get app_release_note => 'Villuleiðrétting: persónulegur listi var ekki lengur geymdur eftir útskráningu';
+  String get app_release_note => 'Bætt við verðlaunum fyrir lokið lista, nýtt síu til að fela lokið lista, lagað villu í síunni „Orðaforði til að læra“. Bætt birting á stigatöflu TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'Aðgerðin til að deila listanum verður tiltæk mjög fljótlega!';

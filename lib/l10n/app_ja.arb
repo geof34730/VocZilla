@@ -1,5 +1,5 @@
 {
-    "app_release_note": "バグ修正: ログアウト後に個人リストが保持されなくなりました",
+    "app_release_note": "完了リストにトロフィーを追加し、完了リストを非表示にする新しいフィルターを追加し、「学習すべき語彙」フィルターのバグを修正しました。TeamZillaのリーダーボード表示を改善しました。",
     "share_list_perso_alert_disponible": "リスト共有機能はまもなく利用可能になります。",
     "information": "情報",
     "app_title": "ヴォックジラ",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "完了したリストを非表示にする",
     "app_promotion_ios": "簡単に話したり理解したりできるように、4,400 語の必須単語で英語の語彙を豊かにします。",
     "app_feature_graphic_FeatureItem1": "4,400語",
-    "home_notlogged_accroche4": "必須語4,400語"
+    "home_notlogged_accroche4": "必須語4,400語",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

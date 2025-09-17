@@ -69,7 +69,7 @@ List<Widget> getListThemes({
               Navigator.pushNamed(context, AppRoute.allListsThemes);
             },
             child: Card(
-              color: Colors.green,
+              color: Colors.blue,
               elevation: 5.0,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
               child: Column(

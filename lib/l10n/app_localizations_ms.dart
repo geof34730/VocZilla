@@ -9,7 +9,7 @@ class AppLocalizationsMs extends AppLocalizations {
   AppLocalizationsMs([String locale = 'ms']) : super(locale);
 
   @override
-  String get app_release_note => 'Pembetulan pepijat: senarai peribadi tidak lagi disimpan selepas log keluar';
+  String get app_release_note => 'Menambah trofi untuk senarai lengkap, penapis baharu untuk menyembunyikan senarai lengkap, membetulkan pepijat dengan penapis \"Perbendaharaan Kata untuk Belajar\". Paparan papan pendahulu TeamZilla yang dipertingkatkan.';
 
   @override
   String get share_list_perso_alert_disponible => 'Ciri perkongsian senarai akan tersedia tidak lama lagi!';

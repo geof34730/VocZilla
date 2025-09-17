@@ -9,7 +9,7 @@ class AppLocalizationsPa extends AppLocalizations {
   AppLocalizationsPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get app_release_note => 'ਬੱਗ ਫਿਕਸ: ਲੌਗ ਆਊਟ ਕਰਨ ਤੋਂ ਬਾਅਦ ਨਿੱਜੀ ਸੂਚੀ ਨਹੀਂ ਰੱਖੀ ਗਈ ਸੀ।';
+  String get app_release_note => 'ਪੂਰੀਆਂ ਹੋਈਆਂ ਸੂਚੀਆਂ ਲਈ ਟਰਾਫੀਆਂ ਜੋੜੀਆਂ ਗਈਆਂ, ਪੂਰੀਆਂ ਹੋਈਆਂ ਸੂਚੀਆਂ ਨੂੰ ਲੁਕਾਉਣ ਲਈ ਨਵਾਂ ਫਿਲਟਰ, \"ਸਿੱਖਣ ਲਈ ਸ਼ਬਦਾਵਲੀ\" ਫਿਲਟਰ ਨਾਲ ਇੱਕ ਬੱਗ ਠੀਕ ਕੀਤਾ ਗਿਆ। ਟੀਮਜ਼ਿਲਾ ਲੀਡਰਬੋਰਡ ਡਿਸਪਲੇ ਵਿੱਚ ਸੁਧਾਰ ਕੀਤਾ ਗਿਆ।';
 
   @override
   String get share_list_perso_alert_disponible => 'ਸੂਚੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਹੁਤ ਜਲਦੀ ਉਪਲਬਧ ਹੋਵੇਗੀ!';

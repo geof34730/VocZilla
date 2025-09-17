@@ -155,6 +155,9 @@ class UserRepository {
 
   Future<bool> checkSubscriptionStatus() async {
     // Reset the completer for this new check operation.
+
+
+
     if (_purchaseCompleter.isCompleted) {
       _purchaseCompleter = Completer<void>();
     }

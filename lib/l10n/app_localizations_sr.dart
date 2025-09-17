@@ -9,7 +9,7 @@ class AppLocalizationsSr extends AppLocalizations {
   AppLocalizationsSr([String locale = 'sr']) : super(locale);
 
   @override
-  String get app_release_note => 'Исправка грешке: лична листа више није чувана након одјаве';
+  String get app_release_note => 'Додати су трофеји за попуњене листе, нови филтер за скривање попуњених листа, исправљена је грешка са филтером „Речник за учење“. Побољшан је приказ TeamZilla табеле.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функција дељења листе биће доступна ускоро!';

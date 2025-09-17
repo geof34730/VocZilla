@@ -9,7 +9,7 @@ class AppLocalizationsEl extends AppLocalizations {
   AppLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get app_release_note => 'Διόρθωση σφάλματος: η προσωπική λίστα δεν διατηρούνταν πλέον μετά την αποσύνδεση';
+  String get app_release_note => 'Προστέθηκαν τρόπαια για ολοκληρωμένες λίστες, νέο φίλτρο για την απόκρυψη ολοκληρωμένων λιστών, διορθώθηκε ένα σφάλμα με το φίλτρο \"Λεξιλόγιο προς εκμάθηση\". Βελτιωμένη εμφάνιση του πίνακα κατάταξης TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'Η λειτουργία κοινής χρήσης λίστας θα είναι διαθέσιμη πολύ σύντομα!';

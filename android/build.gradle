@@ -1,22 +1,3 @@
-buildscript {
-    // Définit la version de Kotlin à utiliser dans tout le projet Android.
-    // La version 1.9.23 est compatible avec les outils récents.
-    ext.kotlin_version = '2.1.0'
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        // START: FlutterFire Configuration
-        classpath 'com.google.gms:google-services:4.3.10'
-        // END: FlutterFire Configuration
-        // Définit la version du plugin Android pour Gradle (AGP).
-        // La version 8.4.0 est compatible avec Gradle 8.6 et le SDK 35.
-        classpath 'com.android.tools.build:gradle:8.6.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
 allprojects {
     repositories {
         google()

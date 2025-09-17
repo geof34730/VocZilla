@@ -9,7 +9,7 @@ class AppLocalizationsGl extends AppLocalizations {
   AppLocalizationsGl([String locale = 'gl']) : super(locale);
 
   @override
-  String get app_release_note => 'Corrección de erros: a lista persoal xa non se gardaba despois de pechar sesión';
+  String get app_release_note => 'Engadíronse trofeos para as listas completadas, novo filtro para ocultar as listas completadas, corrixiuse un erro co filtro \"Vocabulario para aprender\". Mellorouse a visualización da táboa de clasificación de TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'A función para compartir listas estará dispoñible moi pronto!';

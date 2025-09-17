@@ -9,7 +9,7 @@ class AppLocalizationsUz extends AppLocalizations {
   AppLocalizationsUz([String locale = 'uz']) : super(locale);
 
   @override
-  String get app_release_note => 'Xatolarni tuzatish: tizimdan chiqqandan keyin shaxsiy roʻyxat endi saqlanmadi';
+  String get app_release_note => 'Tugallangan roʻyxatlar uchun sovrinlar qoʻshildi, tugallangan roʻyxatlarni yashirish uchun yangi filtr, “Oʻrganiladigan lugʻat” filtridagi xatolik tuzatildi. Yaxshilangan TeamZilla peshqadamlar jadvali displeyi.';
 
   @override
   String get share_list_perso_alert_disponible => 'Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!';

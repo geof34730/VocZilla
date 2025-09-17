@@ -9,7 +9,7 @@ class AppLocalizationsLv extends AppLocalizations {
   AppLocalizationsLv([String locale = 'lv']) : super(locale);
 
   @override
-  String get app_release_note => 'Kļūdas labojums: personīgais saraksts vairs netika saglabāts pēc izrakstīšanās';
+  String get app_release_note => 'Pievienotas trofejas par pabeigtajiem sarakstiem, jauns filtrs pabeigto sarakstu paslēpšanai, izlabota kļūda ar filtru \"Vārdu krājums, kas jāapgūst\". Uzlabots TeamZilla līderu saraksta attēlojums.';
 
   @override
   String get share_list_perso_alert_disponible => 'Saraksta koplietošanas funkcija būs pieejama jau pavisam drīz!';

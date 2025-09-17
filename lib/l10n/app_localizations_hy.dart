@@ -9,7 +9,7 @@ class AppLocalizationsHy extends AppLocalizations {
   AppLocalizationsHy([String locale = 'hy']) : super(locale);
 
   @override
-  String get app_release_note => 'Սխալի ուղղում. անձնական ցուցակը այլևս չէր պահվում դուրս գալուց հետո';
+  String get app_release_note => 'Ավելացվել են ավարտված ցուցակների համար նախատեսված գավաթներ, լրացված ցուցակները թաքցնելու նոր ֆիլտր, ուղղվել է «Սովորելու բառապաշար» ֆիլտրի հետ կապված սխալը: Բարելավվել է TeamZilla-ի վարկանիշային աղյուսակի ցուցադրումը:';
 
   @override
   String get share_list_perso_alert_disponible => 'Ցուցակի համօգտագործման գործառույթը շատ շուտով հասանելի կլինի։';

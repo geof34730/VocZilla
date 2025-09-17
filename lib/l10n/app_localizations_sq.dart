@@ -9,7 +9,7 @@ class AppLocalizationsSq extends AppLocalizations {
   AppLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
-  String get app_release_note => 'Korrigjim i gabimit: lista personale nuk mbahej më pas daljes nga llogaria';
+  String get app_release_note => 'U shtuan trofe për listat e përfunduara, u rregullua një gabim me filtrin \"Fjalor për të mësuar\". Shfaqja e tabelës së renditjes në TeamZilla u përmirësua.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksioni i ndarjes së listës do të jetë i disponueshëm shumë shpejt!';

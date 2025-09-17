@@ -9,7 +9,7 @@ class AppLocalizationsHu extends AppLocalizations {
   AppLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get app_release_note => 'Hibajavítás: a személyes lista már nem maradt meg kijelentkezés után';
+  String get app_release_note => 'Trófeák kerültek hozzáadásra a teljesített listákhoz, új szűrő a teljesített listák elrejtéséhez, kijavítottunk egy hibát a „Tanulandó szókincs” szűrővel. Továbbfejlesztettük a TeamZilla ranglista megjelenítését.';
 
   @override
   String get share_list_perso_alert_disponible => 'A listamegosztási funkció hamarosan elérhető lesz!';

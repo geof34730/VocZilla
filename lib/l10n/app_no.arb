@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Feilretting: Personlig liste ble ikke lenger lagret etter utlogging",
+    "app_release_note": "La til trofeer for fullførte lister, nytt filter for å skjule fullførte lister, fikset en feil med filteret «Vokabular å lære». Forbedret visning av TeamZilla-ledertavlen.",
     "share_list_perso_alert_disponible": "Funksjonen for deling av lister vil være tilgjengelig veldig snart!",
     "information": "Informasjon",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Skjul fullførte lister",
     "app_promotion_ios": "Berik ditt engelske ordforråd med 4400 viktige ord for enkel tale og forståelse.",
     "app_feature_graphic_FeatureItem1": "4400 ord",
-    "home_notlogged_accroche4": "4400 essensielle ord"
+    "home_notlogged_accroche4": "4400 essensielle ord",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

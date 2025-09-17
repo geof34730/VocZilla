@@ -9,7 +9,7 @@ class AppLocalizationsDa extends AppLocalizations {
   AppLocalizationsDa([String locale = 'da']) : super(locale);
 
   @override
-  String get app_release_note => 'Fejlrettelse: Personlig liste blev ikke længere gemt efter udlogning';
+  String get app_release_note => 'Tilføjede trofæer for færdige lister, nyt filter til at skjule færdige lister, rettet en fejl med filteret \"Ordforråd at lære\". Forbedret visning af TeamZilla-ranglisten.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funktionen til deling af lister vil være tilgængelig meget snart!';

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Hata düzeltmesi: Oturum kapatıldıktan sonra kişisel liste artık tutulmuyordu",
+    "app_release_note": "Tamamlanan listeler için kupalar eklendi, tamamlanan listeleri gizlemek için yeni bir filtre eklendi, \"Öğrenilmesi Gereken Kelime Bilgisi\" filtresindeki bir hata düzeltildi. TeamZilla liderlik tablosunun gösterimi iyileştirildi.",
     "share_list_perso_alert_disponible": "Liste paylaşım özelliği çok yakında kullanıma sunulacak!",
     "information": "Bilgi",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Tamamlanan listeleri gizle",
     "app_promotion_ios": "Kolay konuşma ve anlama için 4.400 temel kelimeyle İngilizce kelime dağarcığınızı zenginleştirin.",
     "app_feature_graphic_FeatureItem1": "4.400 kelime",
-    "home_notlogged_accroche4": "4.400 temel kelime"
+    "home_notlogged_accroche4": "4.400 temel kelime",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

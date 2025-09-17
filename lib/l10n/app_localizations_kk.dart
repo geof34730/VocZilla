@@ -9,7 +9,7 @@ class AppLocalizationsKk extends AppLocalizations {
   AppLocalizationsKk([String locale = 'kk']) : super(locale);
 
   @override
-  String get app_release_note => 'Қатені түзету: жүйеден шыққаннан кейін жеке тізім сақталмады';
+  String get app_release_note => 'Аяқталған тізімдер үшін жүлделер қосылды, аяқталған тізімдерді жасыру үшін жаңа сүзгі, «Үйренетін сөздік» сүзгісімен қате түзетілді. Жетілдірілген TeamZilla көшбасшылар тақтасының дисплейі.';
 
   @override
   String get share_list_perso_alert_disponible => 'Тізіммен бөлісу мүмкіндігі жақын арада қолжетімді болады!';

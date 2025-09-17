@@ -9,7 +9,7 @@ class AppLocalizationsMl extends AppLocalizations {
   AppLocalizationsMl([String locale = 'ml']) : super(locale);
 
   @override
-  String get app_release_note => 'ബഗ് പരിഹാരം: ലോഗ് ഔട്ട് ചെയ്തതിനുശേഷം വ്യക്തിഗത ലിസ്റ്റ് ഇനി സൂക്ഷിച്ചിരുന്നില്ല.';
+  String get app_release_note => 'പൂർത്തിയാക്കിയ ലിസ്റ്റുകൾക്കായി ട്രോഫികൾ ചേർത്തു, പൂർത്തിയാക്കിയ ലിസ്റ്റുകൾ മറയ്ക്കാൻ പുതിയ ഫിൽട്ടർ, \"പഠിക്കാനുള്ള പദാവലി\" ഫിൽട്ടർ ഉപയോഗിച്ച് ഒരു ബഗ് പരിഹരിച്ചു. മെച്ചപ്പെടുത്തിയ TeamZilla ലീഡർബോർഡ് ഡിസ്പ്ലേ.';
 
   @override
   String get share_list_perso_alert_disponible => 'ലിസ്റ്റ് പങ്കിടൽ സവിശേഷത വളരെ വേഗം ലഭ്യമാകും!';

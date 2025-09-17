@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get app_release_note => 'Исправлена ошибка: личный список больше не сохранялся после выхода из системы.';
+  String get app_release_note => 'Добавлены трофеи за выполненные списки, новый фильтр для скрытия выполненных списков, исправлена ошибка фильтра «Словарь для изучения». Улучшено отображение таблицы лидеров TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функция обмена списками станет доступна совсем скоро!';

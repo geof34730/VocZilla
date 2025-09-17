@@ -104,7 +104,7 @@ List<Widget> getListDefined({
                 Navigator.pushNamed(context, AppRoute.allListsDefined);
               },
               child: Card(
-                color: Colors.green,
+                color: Colors.blue,
                 elevation: 5.0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),

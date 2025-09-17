@@ -9,7 +9,7 @@ class AppLocalizationsOr extends AppLocalizations {
   AppLocalizationsOr([String locale = 'or']) : super(locale);
 
   @override
-  String get app_release_note => 'ତ୍ରୁଟି ସମାଧାନ: ଲଗ୍ ଆଉଟ୍ କରିବା ପରେ ବ୍ୟକ୍ତିଗତ ତାଲିକା ଆଉ ରଖାଯାଇନଥିଲା';
+  String get app_release_note => 'ସମ୍ପୂର୍ଣ୍ଣ ତାଲିକା ପାଇଁ ଟ୍ରଫି ଯୋଡାଯାଇଛି, ସମ୍ପୂର୍ଣ୍ଣ ତାଲିକା ଲୁଚାଇବା ପାଇଁ ନୂତନ ଫିଲ୍ଟର, \"ଶିଖିବା ପାଇଁ ଶବ୍ଦାବଳୀ\" ଫିଲ୍ଟର ସହିତ ଏକ ତ୍ରୁଟି ସମାଧାନ କରାଯାଇଛି। ଉନ୍ନତ TeamZilla ଲିଡରବୋର୍ଡ ପ୍ରଦର୍ଶନ।';
 
   @override
   String get share_list_perso_alert_disponible => 'ତାଲିକା ସେୟାରିଂ ବୈଶିଷ୍ଟ୍ୟ ଖୁବ୍ ଶୀଘ୍ର ଉପଲବ୍ଧ ହେବ!';

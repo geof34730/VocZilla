@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Sửa lỗi: danh sách cá nhân không còn được lưu giữ sau khi đăng xuất",
+    "app_release_note": "Đã thêm danh hiệu cho các danh sách đã hoàn thành, bộ lọc mới để ẩn các danh sách đã hoàn thành, sửa lỗi với bộ lọc \"Từ vựng cần học\". Cải thiện hiển thị bảng xếp hạng TeamZilla.",
     "share_list_perso_alert_disponible": "Tính năng chia sẻ danh sách sẽ sớm có mặt!",
     "information": "Thông tin",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Ẩn danh sách đã hoàn thành",
     "app_promotion_ios": "Làm giàu vốn từ vựng tiếng Anh của bạn với 4.400 từ vựng thiết yếu để nói và hiểu dễ dàng.",
     "app_feature_graphic_FeatureItem1": "4.400 từ",
-    "home_notlogged_accroche4": "4.400 từ vựng thiết yếu"
+    "home_notlogged_accroche4": "4.400 từ vựng thiết yếu",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

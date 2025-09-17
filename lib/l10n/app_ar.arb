@@ -1,5 +1,5 @@
 {
-    "app_release_note": "إصلاح الخطأ: لم تعد القائمة الشخصية محفوظة بعد تسجيل الخروج",
+    "app_release_note": "أُضيفت جوائز للقوائم المكتملة، وفلتر جديد لإخفاء القوائم المكتملة، وأُصلح خلل في فلتر \"المفردات التي يجب تعلمها\". كما تم تحسين عرض قائمة المتصدرين في TeamZilla.",
     "share_list_perso_alert_disponible": "ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!",
     "information": "معلومة",
     "app_title": "فوكزيلا",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "إخفاء القوائم المكتملة",
     "app_promotion_ios": "قم بإثراء مفرداتك الإنجليزية بـ 4400 كلمة أساسية لتسهيل التحدث والفهم.",
     "app_feature_graphic_FeatureItem1": "4400 كلمة",
-    "home_notlogged_accroche4": "4400 كلمة أساسية"
+    "home_notlogged_accroche4": "4400 كلمة أساسية",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

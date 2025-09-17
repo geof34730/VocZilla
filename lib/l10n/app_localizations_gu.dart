@@ -9,7 +9,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get app_release_note => 'બગ ફિક્સ: લોગ આઉટ કર્યા પછી વ્યક્તિગત સૂચિ રાખવામાં આવતી ન હતી.';
+  String get app_release_note => 'પૂર્ણ થયેલી યાદીઓ માટે ટ્રોફી ઉમેરી, પૂર્ણ થયેલી યાદીઓ છુપાવવા માટે નવું ફિલ્ટર, \"શીખવા માટે શબ્દભંડોળ\" ફિલ્ટર સાથેની ભૂલ સુધારી. ટીમઝિલા લીડરબોર્ડ ડિસ્પ્લેમાં સુધારો.';
 
   @override
   String get share_list_perso_alert_disponible => 'યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!';

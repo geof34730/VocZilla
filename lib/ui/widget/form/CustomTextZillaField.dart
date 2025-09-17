@@ -43,6 +43,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
   @override
   void initState() {
     widget.buttonNotifier?.updateButtonState(false);
+    // On utilise un listener pour un contrôle fin de la saisie
     widget.ControlerField.addListener(_onTextChanged);
     super.initState();
   }
@@ -87,6 +88,8 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
         text: newText,
         selection: TextSelection.fromPosition(TextPosition(offset: newText.length)),
       );
+      // Le listener sera rappelé par cette modification, donc on sort pour éviter de faire le travail deux fois
+      return;
     }
 
     // On met à jour l'état pour que l'interface (icônes, bordures) se redessine.
@@ -97,6 +100,9 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
       // On utilise un post-frame callback pour s'assurer que le build est terminé
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (mounted) {
+          // On verrouille le champ en cas de succès
+          setState(() {});
+
           if (widget.AnswerNotifier) {
             AnswerNotifier(context).markAsAnsweredCorrectly(
                 isAnswerUser: true,
@@ -120,7 +126,6 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
         padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.00),
         child: TextFormField(
           // Le listener manuel remplace le onChanged
-          // onChanged: (value) => _onTextChanged(value),
           readOnly: getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField),
           enabled:true,
           controller: widget.ControlerField,
@@ -154,20 +159,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
                 icon: Icon(Icons.visibility, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField)),
                 onPressed: () {
                   widget.ControlerField.text = widget.resulteField;
-                  if(widget.AnswerNotifier) {
-                    AnswerNotifier(context).markAsAnsweredCorrectly(
-                        isAnswerUser: false,
-                        guidVocabulaire: widget.GUID,
-                        local: Localizations.localeOf(context).languageCode
-                    );
-                  }
-                  if(widget.ButtonNextNotifier) {
-                    widget.buttonNotifier?.updateButtonState(true);
-                  }
-                  if(widget.voidCallBack != null){
-                    widget.voidCallBack!();
-                  }
-                  setState(() {});
+                  // Le listener va se déclencher et gérer la logique de succès
                 },
               ))),
         ));

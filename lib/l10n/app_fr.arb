@@ -1,5 +1,5 @@
 {
-  "app_release_note": "Correction d’un bug : la liste personnelle n’était plus conservée après déconnexion",
+  "app_release_note": "Ajout de trophées pour les listes terminées, nouveau filtre pour masquer les listes terminées, correction d’un bug du filtre « Vocabulaire à apprendre ». Amélioration de l’affichage du classement TeamZilla.",
   "your_position": "Votre position",
   "nsphotolibraryusagedescription": "Nous avons besoin d'accéder à votre galerie pour vous permettre de choisir une photo de profil.",
   "nscamerausagedescription": "Nous avons besoin d'accéder à votre appareil photo pour vous permettre de prendre une nouvelle photo de profil.",

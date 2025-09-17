@@ -238,7 +238,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_release_note.
   ///
   /// In en, this message translates to:
-  /// **'Bug fix: personal list was no longer kept after logging out'**
+  /// **'Added trophies for completed lists, new filter to hide completed lists, fixed a bug with the \"Vocabulary to Learn\" filter. Improved TeamZilla leaderboard display.'**
   String get app_release_note;
 
   /// No description provided for @share_list_perso_alert_disponible.

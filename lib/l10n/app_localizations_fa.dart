@@ -9,7 +9,7 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get app_release_note => 'رفع اشکال: فهرست شخصی پس از خروج از سیستم دیگر نگهداری نمی‌شد';
+  String get app_release_note => 'اضافه شدن تروفی برای لیست‌های تکمیل‌شده، فیلتر جدید برای مخفی کردن لیست‌های تکمیل‌شده، رفع اشکال فیلتر «واژگانی که باید یاد بگیرید». بهبود نمایش جدول امتیازات TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'قابلیت اشتراک‌گذاری لیست خیلی زود در دسترس قرار خواهد گرفت!';

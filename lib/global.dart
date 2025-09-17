@@ -2,21 +2,19 @@ const String titleApp="VocZilla";
 const int titleAppCute1=3;
 String versionApp="1.0.0";
 
-
-
-int globalCountVocabulaireAll=4300;
+int globalCountVocabulaireAll=4399;
 bool debugMode=false;
-bool byPasSubscription = true;
+bool byPasSubscription = false;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
-final int daysFreeTrial=debugMode || byPasSubscription ? 2000 :7;
+final int daysFreeTrial= byPasSubscription ? 2000 :7;
 const resetTo=true;
 bool forFeatureGraphic = false;
 bool changeVocabulaireSinceVisiteHome = false;
 
-const  String serveurUrl="http://192.168.0.34:8080";
-//const  String serveurUrl="https://subscription-v1-275313479574.europe-central2.run.app";
+//const  String serveurUrl="http://192.168.0.34:8080";
+const  String serveurUrl="https://subscription-v1-275313479574.europe-central2.run.app";
 
 final String serverSubcriptionStaturUrl = '$serveurUrl/verify-subscription';
 final String serverVocabulaireUserUrl = '$serveurUrl/vocabulaires-user';

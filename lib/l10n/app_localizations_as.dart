@@ -9,7 +9,7 @@ class AppLocalizationsAs extends AppLocalizations {
   AppLocalizationsAs([String locale = 'as']) : super(locale);
 
   @override
-  String get app_release_note => 'বাগ সমাধান: লগ আউট কৰাৰ পিছত ব্যক্তিগত তালিকা আৰু ৰখা হোৱা নাছিল';
+  String get app_release_note => 'সম্পূৰ্ণ তালিকাৰ বাবে ট্ৰফী যোগ কৰা হৈছে, সম্পূৰ্ণ তালিকা লুকুৱাবলৈ নতুন ফিল্টাৰ, \"শিকিবলৈ শব্দভাণ্ডাৰ\" ফিল্টাৰৰ সৈতে এটা বাগ সমাধান কৰা হৈছে। উন্নত TeamZilla লিডাৰবৰ্ড প্ৰদৰ্শন।';
 
   @override
   String get share_list_perso_alert_disponible => 'অতি সোনকালে উপলব্ধ হ’ব তালিকা শ্বেয়াৰিং বৈশিষ্ট্য!';

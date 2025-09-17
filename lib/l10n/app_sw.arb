@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Kurekebisha hitilafu: orodha ya kibinafsi haikuwekwa tena baada ya kutoka",
+    "app_release_note": "Vikombe vilivyoongezwa kwa orodha zilizokamilika, kichujio kipya cha kuficha orodha zilizokamilishwa, kimerekebisha hitilafu kwa kichujio cha \"Msamiati wa Kujifunza\". Onyesho lililoboreshwa la ubao wa wanaoongoza wa TeamZilla.",
     "share_list_perso_alert_disponible": "Kipengele cha kushiriki orodha kitapatikana hivi karibuni!",
     "information": "Habari",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Ficha orodha zilizokamilishwa",
     "app_promotion_ios": "Boresha msamiati wako wa Kiingereza kwa maneno 4,400 muhimu kwa kuzungumza na kuelewa kwa urahisi.",
     "app_feature_graphic_FeatureItem1": "Maneno 4,400",
-    "home_notlogged_accroche4": "4,400 maneno muhimu"
+    "home_notlogged_accroche4": "4,400 maneno muhimu",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

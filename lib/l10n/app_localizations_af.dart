@@ -9,7 +9,7 @@ class AppLocalizationsAf extends AppLocalizations {
   AppLocalizationsAf([String locale = 'af']) : super(locale);
 
   @override
-  String get app_release_note => 'Foutoplossing: persoonlike lys is nie meer gehou na uitmelding nie';
+  String get app_release_note => 'Trofeë vir voltooide lyste bygevoeg, nuwe filter om voltooide lyste weg te steek, \'n fout met die \"Woordeskat om te Leer\"-filter reggestel. TeamZilla-leierbordvertoning verbeter.';
 
   @override
   String get share_list_perso_alert_disponible => 'Die lysdelingsfunksie sal binnekort beskikbaar wees!';

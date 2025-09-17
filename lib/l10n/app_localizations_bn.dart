@@ -9,7 +9,7 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get app_release_note => 'বাগ সংশোধন: লগ আউট করার পরে ব্যক্তিগত তালিকা আর রাখা হয়নি।';
+  String get app_release_note => 'সম্পূর্ণ তালিকার জন্য ট্রফি যোগ করা হয়েছে, সম্পূর্ণ তালিকা লুকানোর জন্য নতুন ফিল্টার, \"শিখতে শব্দভান্ডার\" ফিল্টারের সাথে একটি বাগ সংশোধন করা হয়েছে। উন্নত TeamZilla লিডারবোর্ড প্রদর্শন।';
 
   @override
   String get share_list_perso_alert_disponible => 'তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!';

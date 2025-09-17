@@ -9,7 +9,7 @@ class AppLocalizationsIt extends AppLocalizations {
   AppLocalizationsIt([String locale = 'it']) : super(locale);
 
   @override
-  String get app_release_note => 'Correzione bug: l\'elenco personale non veniva più mantenuto dopo la disconnessione';
+  String get app_release_note => 'Aggiunti trofei per gli elenchi completati, nuovo filtro per nascondere gli elenchi completati, risolto un bug con il filtro \"Vocabolario da imparare\". Migliorata la visualizzazione della classifica di TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'La funzionalità di condivisione degli elenchi sarà disponibile molto presto!';

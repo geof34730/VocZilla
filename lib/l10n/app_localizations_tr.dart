@@ -9,7 +9,7 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get app_release_note => 'Hata düzeltmesi: Oturum kapatıldıktan sonra kişisel liste artık tutulmuyordu';
+  String get app_release_note => 'Tamamlanan listeler için kupalar eklendi, tamamlanan listeleri gizlemek için yeni bir filtre eklendi, \"Öğrenilmesi Gereken Kelime Bilgisi\" filtresindeki bir hata düzeltildi. TeamZilla liderlik tablosunun gösterimi iyileştirildi.';
 
   @override
   String get share_list_perso_alert_disponible => 'Liste paylaşım özelliği çok yakında kullanıma sunulacak!';

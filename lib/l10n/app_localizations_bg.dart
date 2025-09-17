@@ -9,7 +9,7 @@ class AppLocalizationsBg extends AppLocalizations {
   AppLocalizationsBg([String locale = 'bg']) : super(locale);
 
   @override
-  String get app_release_note => 'Поправка на грешка: личният списък вече не се запазваше след излизане от системата';
+  String get app_release_note => 'Добавени са трофеи за попълнени списъци, нов филтър за скриване на попълнени списъци, отстранен е бъг с филтъра „Речник за изучаване“. Подобрено е показването на класацията на TeamZilla.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцията за споделяне на списъци ще бъде достъпна съвсем скоро!';

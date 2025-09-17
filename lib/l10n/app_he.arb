@@ -1,5 +1,5 @@
 {
-    "app_release_note": "תיקון באג: רשימה אישית לא נשמרה עוד לאחר התנתקות",
+    "app_release_note": "נוספו גביעים לרשימות שהושלמו, מסנן חדש להסתרת רשימות שהושלמו, תוקן באג במסנן \"אוצר מילים ללמידה\". שיפור תצוגת טבלת המובילים של TeamZilla.",
     "share_list_perso_alert_disponible": "תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!",
     "information": "מֵידָע",
     "app_title": "ווקסילה",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "הסתר רשימות שהושלמו",
     "app_promotion_ios": "העשירו את אוצר המילים שלכם באנגלית עם 4,400 מילים חיוניות לדיבור והבנה קלים.",
     "app_feature_graphic_FeatureItem1": "4,400 מילים",
-    "home_notlogged_accroche4": "4,400 מילים חיוניות"
+    "home_notlogged_accroche4": "4,400 מילים חיוניות",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

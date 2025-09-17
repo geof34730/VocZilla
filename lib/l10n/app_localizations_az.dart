@@ -9,7 +9,7 @@ class AppLocalizationsAz extends AppLocalizations {
   AppLocalizationsAz([String locale = 'az']) : super(locale);
 
   @override
-  String get app_release_note => 'Baqın düzəldilməsi: sistemdən çıxdıqdan sonra şəxsi siyahı daha saxlanılmadı';
+  String get app_release_note => 'Tamamlanmış siyahılar üçün kuboklar əlavə edildi, tamamlanmış siyahıları gizlətmək üçün yeni filtr, \"Öyrənmək üçün lüğət\" filtri ilə səhvi düzəltdi. Təkmilləşdirilmiş TeamZilla liderlər lövhəsi ekranı.';
 
   @override
   String get share_list_perso_alert_disponible => 'Siyahı paylaşma xüsusiyyəti çox tezliklə mövcud olacaq!';

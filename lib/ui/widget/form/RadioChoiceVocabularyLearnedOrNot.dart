@@ -13,6 +13,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
   final int vocabulaireConnu; // 0: à apprendre, 1: tous/appris
   final String? guidListPerso;
   final String local;
+  final VoidCallback? onPressed;
 
   const RadioChoiceVocabularyLearnedOrNot({
     Key? key,
@@ -20,7 +21,8 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
     required this.state,
     required this.vocabulaireConnu,
     this.guidListPerso,
-    required this.local
+    required this.local,
+    this.onPressed
   }) : super(key: key);
 
   @override
@@ -50,6 +52,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
                   state: state, local: Localizations.localeOf(context).languageCode,
                 );
               }
+              onPressed?.call();
             },
           ),
           const SizedBox(width: 8),
@@ -60,7 +63,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
             isSelected: vocabulaireConnu == 1,
             onTap: () {
               if(guidListPerso != null) {
-                BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire( isVocabularyNotLearned: false, guid: guidListPerso!, local: Localizations.localeOf(context).languageCode ));
+                 BlocProvider.of<VocabulairesBloc>(context).add(getAllVocabulaire( isVocabularyNotLearned: false, guid: guidListPerso!, local: Localizations.localeOf(context).languageCode ));
               }
               else {
                 vocabulaireRepository.goVocabulairesWithState(
@@ -70,6 +73,7 @@ class RadioChoiceVocabularyLearnedOrNot extends StatelessWidget {
                   local: Localizations.localeOf(context).languageCode
                 );
               }
+              onPressed?.call();
             },
           ),
         ],

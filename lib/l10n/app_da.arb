@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Fejlrettelse: Personlig liste blev ikke længere gemt efter udlogning",
+    "app_release_note": "Tilføjede trofæer for færdige lister, nyt filter til at skjule færdige lister, rettet en fejl med filteret \"Ordforråd at lære\". Forbedret visning af TeamZilla-ranglisten.",
     "share_list_perso_alert_disponible": "Funktionen til deling af lister vil være tilgængelig meget snart!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -219,5 +219,11 @@
     "hide_lists_finiched": "Skjul færdige lister",
     "app_promotion_ios": "Berig dit engelske ordforråd med 4.400 essentielle ord, der gør det nemt at tale og forstå.",
     "app_feature_graphic_FeatureItem1": "4.400 ord",
-    "home_notlogged_accroche4": "4.400 essentielle ord"
+    "home_notlogged_accroche4": "4.400 essentielle ord",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-17T15:32:13+00:00"
+    }
 }

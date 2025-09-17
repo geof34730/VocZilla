@@ -9,7 +9,7 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get app_release_note => 'バグ修正: ログアウト後に個人リストが保持されなくなりました';
+  String get app_release_note => '完了リストにトロフィーを追加し、完了リストを非表示にする新しいフィルターを追加し、「学習すべき語彙」フィルターのバグを修正しました。TeamZillaのリーダーボード表示を改善しました。';
 
   @override
   String get share_list_perso_alert_disponible => 'リスト共有機能はまもなく利用可能になります。';
