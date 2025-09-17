@@ -6,7 +6,7 @@ String versionApp="1.0.0";
 
 int globalCountVocabulaireAll=4300;
 bool debugMode=false;
-bool byPasSubscription = false;
+bool byPasSubscription = true;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
