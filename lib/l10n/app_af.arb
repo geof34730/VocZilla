@@ -6,10 +6,8 @@
     "app_subtitle": "Engelse woordeskat",
     "app_description": "VocZilla is die perfekte toepassing om jou Engelse woordeskat uit te brei, ongeag jou vlak. Ontdek duisende woorde gekategoriseer volgens tema, speel prettige vasvrae, hou jou vordering dop en daag jou vriende uit!",
     "app_short_description": "Leer en hersien Engelse woordeskat!",
-    "app_promotion_ios": "Verryk jou Engelse woordeskat met 4 400 noodsaaklike woorde vir maklike praat en begrip.",
     "app_keywords": "woordeskat, leer, Engels, woorde, taal, diktee, uitspraak, vasvra, geheue, leer, maklik, luister",
     "app_feature_graphic_title": "Verbeter jou Engelse woordeskat",
-    "app_feature_graphic_FeatureItem1": "4 400 woorde",
     "app_feature_graphic_FeatureItem2": "Interaktiewe oudio-vasvrae en toetse",
     "app_feature_graphic_FeatureItem3": "Volg jou vordering intyds",
     "app_feature_graphic_FeatureItem4": "Gepersonaliseerde en deelbare lyste",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Versterk jou Engels!",
     "home_notlogged_accroche2": "Wil jy jou Engelse woordeskat verryk?",
     "home_notlogged_accroche3": "Toegang tot ",
-    "home_notlogged_accroche4": "4 400 noodsaaklike woorde",
     "home_notlogged_accroche5": "gesorteer volgens gebruiksfrekwensie om die woorde te leer wat werklik saak maak.",
     "home_notlogged_accroche6": "Vinnige en effektiewe metode",
     "home_notlogged_accroche7": "Leer eers die nuttigste woorde",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Al ons temalyste",
     "view_all_list": "Sien alle lyste",
     "card_home_user_liste_perso": "Persoonlike lys(te)",
-    "hide_lists_finiched": "Versteek voltooide lyste"
+    "hide_lists_finiched": "Versteek voltooide lyste",
+    "app_promotion_ios": "Verryk jou Engelse woordeskat met 4 400 noodsaaklike woorde vir maklike praat en begrip.",
+    "app_feature_graphic_FeatureItem1": "4 400 woorde",
+    "home_notlogged_accroche4": "4 400 noodsaaklike woorde"
 }

@@ -30,16 +30,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get app_short_description => 'تعلم وراجع المفردات الإنجليزية!';
 
   @override
-  String get app_promotion_ios => 'قم بإثراء مفرداتك الإنجليزية بـ 5600 كلمة أساسية لتسهيل التحدث والفهم.';
-
-  @override
   String get app_keywords => 'المفردات، التعلم، الإنجليزية، الكلمات، اللغة، الإملاء، النطق، الاختبار، الذاكرة، التعلم، سهل، الاستماع';
 
   @override
   String get app_feature_graphic_title => 'تحسين مفرداتك الإنجليزية';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 كلمة';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'اختبارات صوتية تفاعلية';
@@ -178,9 +172,6 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'الوصول إلى ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 كلمة أساسية';
 
   @override
   String get home_notlogged_accroche5 => 'تم تصنيفها حسب تكرار الاستخدام لتعلم الكلمات المهمة حقًا.';
@@ -670,4 +661,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'إخفاء القوائم المكتملة';
+
+  @override
+  String get app_promotion_ios => 'قم بإثراء مفرداتك الإنجليزية بـ 4400 كلمة أساسية لتسهيل التحدث والفهم.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 كلمة';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 كلمة أساسية';
 }

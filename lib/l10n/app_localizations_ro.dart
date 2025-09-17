@@ -30,16 +30,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get app_short_description => 'Învață și recapitulează vocabularul englezesc!';
 
   @override
-  String get app_promotion_ios => 'Îmbogățiți-vă vocabularul englez cu 5.600 de cuvinte esențiale pentru o vorbire și o înțelegere ușoară.';
-
-  @override
   String get app_keywords => 'vocabular, învățare, engleză, cuvinte, limbă, dictare, pronunție, test, memorie, învățare, ușor, ascultare';
 
   @override
   String get app_feature_graphic_title => 'Îmbunătățește-ți vocabularul în limba engleză';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 de cuvinte';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Teste și chestionare audio interactive';
@@ -178,9 +172,6 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Acces la ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 de cuvinte esențiale';
 
   @override
   String get home_notlogged_accroche5 => 'sortate după frecvența de utilizare pentru a învăța cuvintele care contează cu adevărat.';
@@ -670,4 +661,13 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Ascundeți listele completate';
+
+  @override
+  String get app_promotion_ios => 'Îmbogățiți-vă vocabularul englez cu 4.400 de cuvinte esențiale pentru o vorbire și o înțelegere ușoară.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 de cuvinte';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 de cuvinte esențiale';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get app_short_description => 'અંગ્રેજી શબ્દભંડોળ શીખો અને તેની સમીક્ષા કરો!';
 
   @override
-  String get app_promotion_ios => 'સરળતાથી બોલવા અને સમજવા માટે 5,600 આવશ્યક શબ્દોથી તમારા અંગ્રેજી શબ્દભંડોળને સમૃદ્ધ બનાવો.';
-
-  @override
   String get app_keywords => 'શબ્દભંડોળ, શિક્ષણ, અંગ્રેજી, શબ્દો, ભાષા, શ્રુતલેખન, ઉચ્ચારણ, ક્વિઝ, મેમરી, શીખો, સરળ, શ્રવણ';
 
   @override
   String get app_feature_graphic_title => 'તમારી અંગ્રેજી શબ્દભંડોળ સુધારો';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '૫,૬૦૦ શબ્દો';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ઇન્ટરેક્ટિવ ઓડિયો ક્વિઝ અને પરીક્ષણો';
@@ -178,9 +172,6 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ઍક્સેસ ';
-
-  @override
-  String get home_notlogged_accroche4 => '૫,૬૦૦ આવશ્યક શબ્દો';
 
   @override
   String get home_notlogged_accroche5 => 'ખરેખર મહત્વના શબ્દો શીખવા માટે ઉપયોગની આવર્તન દ્વારા ક્રમાંકિત.';
@@ -670,4 +661,13 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'પૂર્ણ થયેલી યાદીઓ છુપાવો';
+
+  @override
+  String get app_promotion_ios => 'સરળતાથી બોલવા અને સમજવા માટે 4,400 આવશ્યક શબ્દોથી તમારા અંગ્રેજી શબ્દભંડોળને સમૃદ્ધ બનાવો.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '૪,૪૦૦ શબ્દો';
+
+  @override
+  String get home_notlogged_accroche4 => '૪,૪૦૦ આવશ્યક શબ્દો';
 }

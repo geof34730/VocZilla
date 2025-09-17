@@ -30,16 +30,10 @@ class AppLocalizationsGl extends AppLocalizations {
   String get app_short_description => 'Aprende e repasa vocabulario inglés!';
 
   @override
-  String get app_promotion_ios => 'Enriquece o teu vocabulario inglés con 5.600 palabras esenciais para falar e comprender facilmente.';
-
-  @override
   String get app_keywords => 'vocabulario, aprendizaxe, inglés, palabras, lingua, ditado, pronuncia, cuestionario, memoria, aprender, fácil, escoita';
 
   @override
   String get app_feature_graphic_title => 'Mellora o teu vocabulario inglés';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 palabras';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Probas e cuestionarios de audio interactivos';
@@ -178,9 +172,6 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Acceso a ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 palabras esenciais';
 
   @override
   String get home_notlogged_accroche5 => 'ordenadas por frecuencia de uso para aprender as palabras que realmente importan.';
@@ -670,4 +661,13 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Ocultar listas completadas';
+
+  @override
+  String get app_promotion_ios => 'Enriquece o teu vocabulario inglés con 4.400 palabras esenciais para falar e comprender facilmente.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 palabras';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 palabras esenciais';
 }

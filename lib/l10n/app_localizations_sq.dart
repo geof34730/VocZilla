@@ -30,16 +30,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get app_short_description => 'Mësoni dhe rishikoni fjalorin në anglisht!';
 
   @override
-  String get app_promotion_ios => 'Pasuroni fjalorin tuaj në anglisht me 5,600 fjalë thelbësore për të folur dhe kuptuar lehtë.';
-
-  @override
   String get app_keywords => 'fjalor, mësim, anglisht, fjalë, gjuhë, diktim, shqiptim, kuiz, kujtesë, mëso, lehtë, dëgjim';
 
   @override
   String get app_feature_graphic_title => 'Përmirësoni fjalorin tuaj në anglisht';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 fjalë';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Kuize dhe teste audio interaktive';
@@ -178,9 +172,6 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Qasje në ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 fjalë thelbësore';
 
   @override
   String get home_notlogged_accroche5 => 'të renditura sipas frekuencës së përdorimit për të mësuar fjalët që kanë vërtet rëndësi.';
@@ -670,4 +661,13 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Fshih listat e përfunduara';
+
+  @override
+  String get app_promotion_ios => 'Pasuroni fjalorin tuaj në anglisht me 4,400 fjalë thelbësore për të folur dhe kuptuar lehtë.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 fjalë';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 fjalë thelbësore';
 }

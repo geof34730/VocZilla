@@ -6,10 +6,8 @@
     "app_subtitle": "Vocabulari anglès",
     "app_description": "VocZilla és l'aplicació perfecta per ampliar el teu vocabulari anglès, independentment del teu nivell. Descobreix milers de paraules classificades per tema, juga a divertits qüestionaris, fes un seguiment del teu progrés i desafia els teus amics!",
     "app_short_description": "Aprèn i repassa el vocabulari anglès!",
-    "app_promotion_ios": "Enriqueix el teu vocabulari anglès amb 4.400 paraules essencials per parlar i entendre fàcilment.",
     "app_keywords": "vocabulari, aprenentatge, anglès, paraules, idioma, dictat, pronunciació, qüestionari, memòria, aprendre, fàcil, escoltar",
     "app_feature_graphic_title": "Millora el teu vocabulari anglès",
-    "app_feature_graphic_FeatureItem1": "4.400 paraules",
     "app_feature_graphic_FeatureItem2": "Qüestionaris i proves d'àudio interactives",
     "app_feature_graphic_FeatureItem3": "Fes un seguiment del teu progrés en temps real",
     "app_feature_graphic_FeatureItem4": "Llistes personalitzades i compartibles",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Millora el teu anglès!",
     "home_notlogged_accroche2": "Vols enriquir el teu vocabulari anglès?",
     "home_notlogged_accroche3": "Accés a ",
-    "home_notlogged_accroche4": "4.400 paraules essencials",
     "home_notlogged_accroche5": "ordenats per freqüència d'ús per aprendre les paraules que realment importen.",
     "home_notlogged_accroche6": "Mètode ràpid i eficaç",
     "home_notlogged_accroche7": "Aprèn primer les paraules més útils",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Totes les nostres llistes temàtiques",
     "view_all_list": "Veure totes les llistes",
     "card_home_user_liste_perso": "Llista(es) personal(s)",
-    "hide_lists_finiched": "Amaga les llistes completades"
+    "hide_lists_finiched": "Amaga les llistes completades",
+    "app_promotion_ios": "Enriqueix el teu vocabulari anglès amb 4.400 paraules essencials per parlar i entendre fàcilment.",
+    "app_feature_graphic_FeatureItem1": "4.400 paraules",
+    "home_notlogged_accroche4": "4.400 paraules essencials"
 }

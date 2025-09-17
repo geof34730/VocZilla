@@ -6,10 +6,8 @@
     "app_subtitle": "Ingliz tili lug'ati",
     "app_description": "VocZilla - bu sizning darajangizdan qat'i nazar, ingliz tilidagi lug'atingizni kengaytirish uchun mukammal dastur. Mavzu bo'yicha toifalarga ajratilgan minglab so'zlarni kashf eting, qiziqarli viktorinalar o'ynang, taraqqiyotingizni kuzatib boring va do'stlaringizni chaqiring!",
     "app_short_description": "Ingliz tili lug'atini o'rganing va ko'rib chiqing!",
-    "app_promotion_ios": "Oson gapirish va tushunish uchun ingliz tilidagi lug'atingizni 4400 ta muhim so'z bilan boyiting.",
     "app_keywords": "lug'at, o'rganish, ingliz tili, so'zlar, til, diktant, talaffuz, viktorina, xotira, o'rganish, oson, tinglash",
     "app_feature_graphic_title": "Ingliz tilidagi so'z boyligingizni yaxshilang",
-    "app_feature_graphic_FeatureItem1": "4400 so'z",
     "app_feature_graphic_FeatureItem2": "Interaktiv audio viktorinalar va testlar",
     "app_feature_graphic_FeatureItem3": "Taraqqiyotingizni real vaqtda kuzatib boring",
     "app_feature_graphic_FeatureItem4": "Shaxsiylashtirilgan va almashish mumkin bo'lgan ro'yxatlar",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Ingliz tilini rivojlantiring!",
     "home_notlogged_accroche2": "Ingliz tilidagi so'z boyligingizni boyitmoqchimisiz?",
     "home_notlogged_accroche3": "ga kirish ",
-    "home_notlogged_accroche4": "4400 ta muhim so'z",
     "home_notlogged_accroche5": "Haqiqatan ham muhim bo'lgan so'zlarni o'rganish uchun foydalanish chastotasi bo'yicha tartiblangan.",
     "home_notlogged_accroche6": "Tez va samarali usul",
     "home_notlogged_accroche7": "Avval eng foydali so'zlarni bilib oling",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Bizning barcha mavzular ro'yxati",
     "view_all_list": "Barcha roʻyxatlarni koʻring",
     "card_home_user_liste_perso": "Shaxsiy ro'yxat(lar)",
-    "hide_lists_finiched": "Tugallangan roʻyxatlarni yashirish"
+    "hide_lists_finiched": "Tugallangan roʻyxatlarni yashirish",
+    "app_promotion_ios": "Oson gapirish va tushunish uchun ingliz tilidagi lug'atingizni 4400 ta muhim so'z bilan boyiting.",
+    "app_feature_graphic_FeatureItem1": "4400 so'z",
+    "home_notlogged_accroche4": "4400 ta muhim so'z"
 }

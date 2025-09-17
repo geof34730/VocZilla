@@ -6,10 +6,8 @@
     "app_subtitle": "અંગ્રેજી શબ્દભંડોળ",
     "app_description": "VocZilla એ તમારા અંગ્રેજી શબ્દભંડોળને વિસ્તૃત કરવા માટે એક સંપૂર્ણ એપ્લિકેશન છે, ભલે તમારું સ્તર ગમે તે હોય. થીમ દ્વારા વર્ગીકૃત હજારો શબ્દો શોધો, મનોરંજક ક્વિઝ રમો, તમારી પ્રગતિને ટ્રૅક કરો અને તમારા મિત્રોને પડકાર આપો!",
     "app_short_description": "અંગ્રેજી શબ્દભંડોળ શીખો અને તેની સમીક્ષા કરો!",
-    "app_promotion_ios": "સરળતાથી બોલવા અને સમજવા માટે 4.400 આવશ્યક શબ્દોથી તમારા અંગ્રેજી શબ્દભંડોળને સમૃદ્ધ બનાવો.",
     "app_keywords": "શબ્દભંડોળ, શિક્ષણ, અંગ્રેજી, શબ્દો, ભાષા, શ્રુતલેખન, ઉચ્ચારણ, ક્વિઝ, મેમરી, શીખો, સરળ, શ્રવણ",
     "app_feature_graphic_title": "તમારી અંગ્રેજી શબ્દભંડોળ સુધારો",
-    "app_feature_graphic_FeatureItem1": "૫,૬૦૦ શબ્દો",
     "app_feature_graphic_FeatureItem2": "ઇન્ટરેક્ટિવ ઓડિયો ક્વિઝ અને પરીક્ષણો",
     "app_feature_graphic_FeatureItem3": "રીઅલ ટાઇમમાં તમારી પ્રગતિને ટ્રૅક કરો",
     "app_feature_graphic_FeatureItem4": "વ્યક્તિગત અને શેર કરી શકાય તેવી યાદીઓ",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "તમારા અંગ્રેજીને બુસ્ટ કરો!",
     "home_notlogged_accroche2": "શું તમે તમારા અંગ્રેજી શબ્દભંડોળને સમૃદ્ધ બનાવવા માંગો છો?",
     "home_notlogged_accroche3": "ઍક્સેસ ",
-    "home_notlogged_accroche4": "૫,૬૦૦ આવશ્યક શબ્દો",
     "home_notlogged_accroche5": "ખરેખર મહત્વના શબ્દો શીખવા માટે ઉપયોગની આવર્તન દ્વારા ક્રમાંકિત.",
     "home_notlogged_accroche6": "ઝડપી અને અસરકારક પદ્ધતિ",
     "home_notlogged_accroche7": "પહેલા સૌથી ઉપયોગી શબ્દો શીખો",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "અમારી બધી થીમ યાદીઓ",
     "view_all_list": "બધી યાદીઓ જુઓ",
     "card_home_user_liste_perso": "વ્યક્તિગત યાદી(ઓ)",
-    "hide_lists_finiched": "પૂર્ણ થયેલી યાદીઓ છુપાવો"
+    "hide_lists_finiched": "પૂર્ણ થયેલી યાદીઓ છુપાવો",
+    "app_promotion_ios": "સરળતાથી બોલવા અને સમજવા માટે 4,400 આવશ્યક શબ્દોથી તમારા અંગ્રેજી શબ્દભંડોળને સમૃદ્ધ બનાવો.",
+    "app_feature_graphic_FeatureItem1": "૪,૪૦૦ શબ્દો",
+    "home_notlogged_accroche4": "૪,૪૦૦ આવશ્યક શબ્દો"
 }

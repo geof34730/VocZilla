@@ -6,10 +6,8 @@
     "app_subtitle": "אוצר מילים באנגלית",
     "app_description": "VocZilla היא האפליקציה המושלמת להרחבת אוצר המילים שלכם באנגלית, לא משנה מה הרמה שלכם. גלו אלפי מילים המסווגות לפי נושא, שחקו בחידונים מהנים, עקבו אחר ההתקדמות שלכם ואתגרו את חבריכם!",
     "app_short_description": "למד וחזור על אוצר מילים באנגלית!",
-    "app_promotion_ios": "העשירו את אוצר המילים שלכם באנגלית עם 4.400 מילים חיוניות לדיבור והבנה קלים.",
     "app_keywords": "אוצר מילים, למידה, אנגלית, מילים, שפה, הכתבה, הגייה, חידון, זיכרון, למידה, קל, האזנה",
     "app_feature_graphic_title": "שפרו את אוצר המילים שלכם באנגלית",
-    "app_feature_graphic_FeatureItem1": "4.400 מילים",
     "app_feature_graphic_FeatureItem2": "חידונים ומבחנים אינטראקטיביים באודיו",
     "app_feature_graphic_FeatureItem3": "עקוב אחר ההתקדמות שלך בזמן אמת",
     "app_feature_graphic_FeatureItem4": "רשימות מותאמות אישית וניתנות לשיתוף",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "שפרו את האנגלית שלכם!",
     "home_notlogged_accroche2": "האם אתה רוצה להעשיר את אוצר המילים שלך באנגלית?",
     "home_notlogged_accroche3": "גישה ל ",
-    "home_notlogged_accroche4": "4.400 מילים חיוניות",
     "home_notlogged_accroche5": "ממוינים לפי תדירות השימוש כדי ללמוד את המילים שחשובות באמת.",
     "home_notlogged_accroche6": "שיטה מהירה ויעילה",
     "home_notlogged_accroche7": "למד קודם את המילים הכי שימושיות",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "כל רשימות הנושאים שלנו",
     "view_all_list": "ראה את כל הרשימות",
     "card_home_user_liste_perso": "רשימה\/ות אישית\/יות",
-    "hide_lists_finiched": "הסתר רשימות שהושלמו"
+    "hide_lists_finiched": "הסתר רשימות שהושלמו",
+    "app_promotion_ios": "העשירו את אוצר המילים שלכם באנגלית עם 4,400 מילים חיוניות לדיבור והבנה קלים.",
+    "app_feature_graphic_FeatureItem1": "4,400 מילים",
+    "home_notlogged_accroche4": "4,400 מילים חיוניות"
 }

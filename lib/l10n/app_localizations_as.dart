@@ -30,16 +30,10 @@ class AppLocalizationsAs extends AppLocalizations {
   String get app_short_description => 'ইংৰাজী শব্দভাণ্ডাৰ শিকিব আৰু পৰ্যালোচনা কৰক!';
 
   @override
-  String get app_promotion_ios => 'সহজভাৱে ক’ব পৰা আৰু বুজিব পৰাকৈ ৫,৬০০টা প্ৰয়োজনীয় শব্দৰে আপোনাৰ ইংৰাজী শব্দভাণ্ডাৰ সমৃদ্ধ কৰক।';
-
-  @override
   String get app_keywords => 'শব্দভাণ্ডাৰ, শিক্ষণ, ইংৰাজী, শব্দ, ভাষা, অভিধান, উচ্চাৰণ, কুইজ, স্মৃতিশক্তি, শিকিব, সহজ, শুনা';
 
   @override
   String get app_feature_graphic_title => 'আপোনাৰ ইংৰাজী শব্দভাণ্ডাৰ উন্নত কৰক';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '৫৬০০ শব্দ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ইন্টাৰেক্টিভ অডিঅ\' কুইজ আৰু পৰীক্ষা';
@@ -178,9 +172,6 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'প্ৰৱেশৰ... ';
-
-  @override
-  String get home_notlogged_accroche4 => '৫৬০০ টা অত্যাৱশ্যকীয় শব্দ';
 
   @override
   String get home_notlogged_accroche5 => 'ব্যৱহাৰৰ কম্পাঙ্ক অনুসৰি সজাই পৰাই প্ৰকৃততে গুৰুত্বপূৰ্ণ শব্দবোৰ শিকিব পাৰি।';
@@ -670,4 +661,13 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'সম্পূৰ্ণ কৰা তালিকাসমূহ লুকুৱাওক';
+
+  @override
+  String get app_promotion_ios => 'সহজে ক\'ব পৰা আৰু বুজিব পৰাকৈ ৪,৪০০ টা অত্যাৱশ্যকীয় শব্দৰে আপোনাৰ ইংৰাজী শব্দভাণ্ডাৰ সমৃদ্ধ কৰক।';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '৪৪০০ শব্দ';
+
+  @override
+  String get home_notlogged_accroche4 => '৪৪০০ টা অত্যাৱশ্যকীয় শব্দ';
 }

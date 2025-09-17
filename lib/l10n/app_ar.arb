@@ -6,10 +6,8 @@
     "app_subtitle": "المفردات الانجليزية",
     "app_description": "فوكزيلا هو التطبيق الأمثل لإثراء مفرداتك الإنجليزية، مهما كان مستواك. اكتشف آلاف الكلمات المصنفة حسب الموضوع، وشارك في اختبارات ممتعة، وتابع تقدمك، وتحدَّ أصدقاءك!",
     "app_short_description": "تعلم وراجع المفردات الإنجليزية!",
-    "app_promotion_ios": "قم بإثراء مفرداتك الإنجليزية بـ 4400 كلمة أساسية لتسهيل التحدث والفهم.",
     "app_keywords": "المفردات، التعلم، الإنجليزية، الكلمات، اللغة، الإملاء، النطق، الاختبار، الذاكرة، التعلم، سهل، الاستماع",
     "app_feature_graphic_title": "تحسين مفرداتك الإنجليزية",
-    "app_feature_graphic_FeatureItem1": "4400 كلمة",
     "app_feature_graphic_FeatureItem2": "اختبارات صوتية تفاعلية",
     "app_feature_graphic_FeatureItem3": "تتبع تقدمك في الوقت الحقيقي",
     "app_feature_graphic_FeatureItem4": "قوائم مخصصة وقابلة للمشاركة",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "عزز لغتك الإنجليزية!",
     "home_notlogged_accroche2": "هل تريد إثراء مفرداتك الإنجليزية؟",
     "home_notlogged_accroche3": "الوصول إلى ",
-    "home_notlogged_accroche4": "4400 كلمة أساسية",
     "home_notlogged_accroche5": "تم تصنيفها حسب تكرار الاستخدام لتعلم الكلمات المهمة حقًا.",
     "home_notlogged_accroche6": "طريقة سريعة وفعالة",
     "home_notlogged_accroche7": "تعلم الكلمات الأكثر فائدة أولاً",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "جميع قوائم المواضيع لدينا",
     "view_all_list": "انظر جميع القوائم",
     "card_home_user_liste_perso": "القائمة الشخصية",
-    "hide_lists_finiched": "إخفاء القوائم المكتملة"
+    "hide_lists_finiched": "إخفاء القوائم المكتملة",
+    "app_promotion_ios": "قم بإثراء مفرداتك الإنجليزية بـ 4400 كلمة أساسية لتسهيل التحدث والفهم.",
+    "app_feature_graphic_FeatureItem1": "4400 كلمة",
+    "home_notlogged_accroche4": "4400 كلمة أساسية"
 }

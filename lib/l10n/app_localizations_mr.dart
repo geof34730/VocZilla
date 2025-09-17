@@ -30,16 +30,10 @@ class AppLocalizationsMr extends AppLocalizations {
   String get app_short_description => 'इंग्रजी शब्दसंग्रह शिका आणि त्याचे पुनरावलोकन करा!';
 
   @override
-  String get app_promotion_ios => 'सहज बोलण्यासाठी आणि समजण्यासाठी ५,६०० आवश्यक शब्दांनी तुमचा इंग्रजी शब्दसंग्रह समृद्ध करा.';
-
-  @override
   String get app_keywords => 'शब्दसंग्रह, शिक्षण, इंग्रजी, शब्द, भाषा, श्रुतलेखन, उच्चार, क्विझ, स्मृती, शिका, सोपे, ऐकणे';
 
   @override
   String get app_feature_graphic_title => 'तुमचा इंग्रजी शब्दसंग्रह सुधारा';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '५,६०० शब्द';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'परस्परसंवादी ऑडिओ क्विझ आणि चाचण्या';
@@ -178,9 +172,6 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'प्रवेश ';
-
-  @override
-  String get home_notlogged_accroche4 => '५,६०० आवश्यक शब्द';
 
   @override
   String get home_notlogged_accroche5 => 'खरोखर महत्त्वाचे शब्द शिकण्यासाठी वापराच्या वारंवारतेनुसार क्रमवारी लावली.';
@@ -670,4 +661,13 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'पूर्ण झालेल्या याद्या लपवा';
+
+  @override
+  String get app_promotion_ios => 'सहज बोलण्यासाठी आणि समजण्यासाठी ४,४०० आवश्यक शब्दांनी तुमचा इंग्रजी शब्दसंग्रह समृद्ध करा.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '४,४०० शब्द';
+
+  @override
+  String get home_notlogged_accroche4 => '४,४०० आवश्यक शब्द';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get app_short_description => 'เรียนรู้และทบทวนคำศัพท์ภาษาอังกฤษ!';
 
   @override
-  String get app_promotion_ios => 'เสริมสร้างคำศัพท์ภาษาอังกฤษของคุณด้วยคำศัพท์สำคัญ 5,600 คำเพื่อการพูดและความเข้าใจที่ง่ายดาย';
-
-  @override
   String get app_keywords => 'คำศัพท์, การเรียนรู้, ภาษาอังกฤษ, คำ, ภาษา, การบอกตามคำบอก, การออกเสียง, แบบทดสอบ, ความจำ, เรียนรู้, ง่าย, การฟัง';
 
   @override
   String get app_feature_graphic_title => 'ปรับปรุงคำศัพท์ภาษาอังกฤษของคุณ';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 คำ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'แบบทดสอบและแบบทดสอบเสียงแบบโต้ตอบ';
@@ -178,9 +172,6 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'การเข้าถึง ';
-
-  @override
-  String get home_notlogged_accroche4 => 'คำศัพท์สำคัญ 5,600 คำ';
 
   @override
   String get home_notlogged_accroche5 => 'จัดเรียงตามความถี่ในการใช้งานเพื่อเรียนรู้คำศัพท์ที่มีความสำคัญจริงๆ';
@@ -670,4 +661,13 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'ซ่อนรายการที่เสร็จสมบูรณ์';
+
+  @override
+  String get app_promotion_ios => 'เสริมสร้างคำศัพท์ภาษาอังกฤษของคุณด้วยคำศัพท์สำคัญ 4,400 คำเพื่อการพูดและความเข้าใจที่ง่ายดาย';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 คำ';
+
+  @override
+  String get home_notlogged_accroche4 => 'คำศัพท์สำคัญ 4,400 คำ';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get app_short_description => 'Học và ôn tập từ vựng tiếng Anh!';
 
   @override
-  String get app_promotion_ios => 'Làm giàu vốn từ vựng tiếng Anh của bạn với 5.600 từ vựng thiết yếu để nói và hiểu dễ dàng.';
-
-  @override
   String get app_keywords => 'từ vựng, học tập, tiếng Anh, từ ngữ, ngôn ngữ, chính tả, phát âm, câu đố, trí nhớ, học, dễ, nghe';
 
   @override
   String get app_feature_graphic_title => 'Cải thiện vốn từ vựng tiếng Anh của bạn';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 từ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Các bài kiểm tra và câu đố âm thanh tương tác';
@@ -178,9 +172,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Truy cập vào ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 từ vựng thiết yếu';
 
   @override
   String get home_notlogged_accroche5 => 'được sắp xếp theo tần suất sử dụng để học những từ thực sự quan trọng.';
@@ -670,4 +661,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Ẩn danh sách đã hoàn thành';
+
+  @override
+  String get app_promotion_ios => 'Làm giàu vốn từ vựng tiếng Anh của bạn với 4.400 từ vựng thiết yếu để nói và hiểu dễ dàng.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 từ';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 từ vựng thiết yếu';
 }

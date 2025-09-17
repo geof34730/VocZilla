@@ -30,16 +30,10 @@ class AppLocalizationsBe extends AppLocalizations {
   String get app_short_description => 'Вывучайце і паўтарайце англійскую лексіку!';
 
   @override
-  String get app_promotion_ios => 'Папаўніце свой англійскі слоўнікавы запас 5600 важнымі словамі для лёгкага маўлення і разумення.';
-
-  @override
   String get app_keywords => 'слоўнікавы запас, навучанне, англійская мова, словы, мова, дыктоўка, вымаўленне, віктарына, памяць, вучыцца, лёгка, аўдзіраванне';
 
   @override
   String get app_feature_graphic_title => 'Палепшыце свой слоўнікавы запас англійскай мовы';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 слоў';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Інтэрактыўныя аўдыё-віктарыны і тэсты';
@@ -178,9 +172,6 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Доступ да ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 важных слоў';
 
   @override
   String get home_notlogged_accroche5 => 'адсартаваныя па частаце выкарыстання, каб вывучыць сапраўды важныя словы.';
@@ -670,4 +661,13 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Схаваць запоўненыя спісы';
+
+  @override
+  String get app_promotion_ios => 'Папоўніце свой слоўнікавы запас англійскай мовы 4400 важнымі словамі для лёгкага маўлення і разумення.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 слоў';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 важных слоў';
 }

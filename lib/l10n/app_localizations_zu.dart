@@ -30,16 +30,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get app_short_description => 'Funda futhi ubuyekeze silulumagama English!';
 
   @override
-  String get app_promotion_ios => 'Thuthukisa isilulumagama sakho sesiNgisi ngamagama angu-5,600 abalulekile ukuze ukhulume kalula nokuqonda.';
-
-  @override
   String get app_keywords => 'silulumagama, ukufunda, isiNgisi, amagama, ulimi, ukubizela, ukubiza amagama, imibuzo, inkumbulo, funda, kulula, ukulalela';
 
   @override
   String get app_feature_graphic_title => 'Thuthukisa isilulumagama sakho sesiNgisi';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 amagama';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Imibuzo nezivivinyo ezilalelwayo ezisebenzayo';
@@ -178,9 +172,6 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Ukufinyelela ku ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 amagama abalulekile';
 
   @override
   String get home_notlogged_accroche5 => 'ihlungwe ngokuphindaphindiwe kokusetshenziswa ukuze kufundwe amagama abaluleke ngempela.';
@@ -670,4 +661,13 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Fihla izinhlu eziqediwe';
+
+  @override
+  String get app_promotion_ios => 'Thuthukisa isilulumagama sakho sesiNgisi ngamagama angu-4,400 abalulekile ukuze ukhulume kalula nokuqonda.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 amagama';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 amagama abalulekile';
 }

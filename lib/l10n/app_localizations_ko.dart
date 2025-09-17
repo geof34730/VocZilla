@@ -30,16 +30,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get app_short_description => '영어 어휘를 배우고 복습하세요!';
 
   @override
-  String get app_promotion_ios => '쉽게 말하고 이해하는 데 필요한 5,600개의 필수 단어로 영어 어휘력을 키우세요.';
-
-  @override
   String get app_keywords => '어휘, 학습, 영어, 단어, 언어, 받아쓰기, 발음, 퀴즈, 기억력, 학습, 쉬움, 듣기';
 
   @override
   String get app_feature_graphic_title => '영어 어휘력을 향상시키세요';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 단어';
 
   @override
   String get app_feature_graphic_FeatureItem2 => '대화형 오디오 퀴즈 및 테스트';
@@ -178,9 +172,6 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => '에 대한 접근 ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600개의 필수 단어';
 
   @override
   String get home_notlogged_accroche5 => '실제로 중요한 단어를 배우기 위해 사용 빈도별로 정렬했습니다.';
@@ -670,4 +661,13 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => '완료된 목록 숨기기';
+
+  @override
+  String get app_promotion_ios => '쉽게 말하고 이해하는 데 필요한 4,400개의 필수 단어로 영어 어휘력을 키우세요.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 단어';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400개의 필수 단어';
 }

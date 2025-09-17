@@ -30,16 +30,10 @@ class AppLocalizationsUr extends AppLocalizations {
   String get app_short_description => 'انگریزی الفاظ سیکھیں اور اس کا جائزہ لیں!';
 
   @override
-  String get app_promotion_ios => 'آسانی سے بولنے اور سمجھنے کے لیے اپنی انگریزی الفاظ کو 5,600 ضروری الفاظ کے ساتھ مزیدار بنائیں۔';
-
-  @override
   String get app_keywords => 'الفاظ، سیکھنا، انگریزی، الفاظ، زبان، ڈکٹیشن، تلفظ، کوئز، میموری، سیکھنا، آسان، سننا';
 
   @override
   String get app_feature_graphic_title => 'اپنی انگریزی الفاظ کو بہتر بنائیں';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 الفاظ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'انٹرایکٹو آڈیو کوئز اور ٹیسٹ';
@@ -178,9 +172,6 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'تک رسائی ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 ضروری الفاظ';
 
   @override
   String get home_notlogged_accroche5 => 'ان الفاظ کو سیکھنے کے لیے استعمال کی تعدد کے لحاظ سے ترتیب دیا گیا ہے جو واقعی اہمیت رکھتے ہیں۔';
@@ -670,4 +661,13 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'مکمل فہرستیں چھپائیں۔';
+
+  @override
+  String get app_promotion_ios => 'آسانی سے بولنے اور سمجھنے کے لیے 4,400 ضروری الفاظ کے ساتھ اپنی انگریزی الفاظ کو مزید تقویت دیں۔';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 الفاظ';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 ضروری الفاظ';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get app_short_description => 'ຮຽນຮູ້ ແລະທົບທວນຄຳສັບພາສາອັງກິດ!';
 
   @override
-  String get app_promotion_ios => 'ເພີ່ມຄໍາສັບພາສາອັງກິດຂອງທ່ານດ້ວຍ 5,600 ຄໍາສໍາຄັນສໍາລັບການເວົ້າແລະຄວາມເຂົ້າໃຈງ່າຍ.';
-
-  @override
   String get app_keywords => 'ຄໍາ​ສັບ​ຕ່າງໆ​, ການ​ຮຽນ​ຮູ້​, ພາ​ສາ​ອັງ​ກິດ​, ຄໍາ​ສັບ​ຕ່າງໆ​, ພາ​ສາ​, dictation​, ການ​ອອກ​ສຽງ​, ແບບ​ທົດ​ສອບ​, ຄວາມ​ຊົງ​ຈໍາ​, ຮຽນ​ຮູ້​, ງ່າຍ​, ການ​ຟັງ';
 
   @override
   String get app_feature_graphic_title => 'ປັບປຸງຄໍາສັບພາສາອັງກິດຂອງທ່ານ';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 ຄໍາ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ແບບສອບຖາມສຽງແບບໂຕ້ຕອບ ແລະການທົດສອບ';
@@ -178,9 +172,6 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ການເຂົ້າເຖິງ ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 ຄໍາ​ສັບ​ຕ່າງໆ​ທີ່​ສໍາ​ຄັນ​';
 
   @override
   String get home_notlogged_accroche5 => 'ຈັດຮຽງຕາມຄວາມຖີ່ຂອງການໃຊ້ເພື່ອຮຽນຮູ້ຄຳສັບທີ່ສຳຄັນແທ້ໆ.';
@@ -670,4 +661,13 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'ເຊື່ອງລາຍຊື່ທີ່ເຮັດແລ້ວ';
+
+  @override
+  String get app_promotion_ios => 'ເພີ່ມຄໍາສັບພາສາອັງກິດຂອງທ່ານດ້ວຍ 4,400 ຄໍາສໍາຄັນສໍາລັບການເວົ້າແລະຄວາມເຂົ້າໃຈງ່າຍ.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 ຄໍາ';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 ຄໍາ​ສັບ​ຕ່າງໆ​ທີ່​ສໍາ​ຄັນ​';
 }

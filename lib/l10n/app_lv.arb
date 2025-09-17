@@ -6,10 +6,8 @@
     "app_subtitle": "Angļu valodas vārdu krājums",
     "app_description": "VocZilla ir lieliska lietotne, lai paplašinātu savu angļu valodas vārdu krājumu neatkarīgi no jūsu līmeņa. Atklājiet tūkstošiem vārdu, kas kategorizēti pēc tēmas, piedalieties jautrās viktorīnās, sekojiet līdzi savam progresam un izaiciniet savus draugus!",
     "app_short_description": "Mācies un atkārtoj angļu valodas vārdu krājumu!",
-    "app_promotion_ios": "Bagātiniet savu angļu valodas vārdu krājumu ar 4400 svarīgiem vārdiem, lai atvieglotu runāšanu un izpratni.",
     "app_keywords": "vārdu krājums, mācīšanās, angļu valoda, vārdi, valoda, diktāts, izruna, viktorīna, atmiņa, mācīties, viegli, klausīšanās",
     "app_feature_graphic_title": "Uzlabojiet savu angļu valodas vārdu krājumu",
-    "app_feature_graphic_FeatureItem1": "4400 vārdi",
     "app_feature_graphic_FeatureItem2": "Interaktīvas audio viktorīnas un testi",
     "app_feature_graphic_FeatureItem3": "Sekojiet līdzi savam progresam reāllaikā",
     "app_feature_graphic_FeatureItem4": "Personalizēti un koplietojami saraksti",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Uzlabojiet savu angļu valodas prasmi!",
     "home_notlogged_accroche2": "Vai vēlaties bagātināt savu angļu valodas vārdu krājumu?",
     "home_notlogged_accroche3": "Piekļuve ",
-    "home_notlogged_accroche4": "4400 svarīgi vārdi",
     "home_notlogged_accroche5": "sakārtoti pēc lietošanas biežuma, lai apgūtu vārdus, kuriem patiešām ir nozīme.",
     "home_notlogged_accroche6": "Ātra un efektīva metode",
     "home_notlogged_accroche7": "Vispirms iemācieties visnoderīgākos vārdus",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Visi mūsu tēmu saraksti",
     "view_all_list": "Skatīt visus sarakstus",
     "card_home_user_liste_perso": "Personīgais(-ie) saraksts(-i)",
-    "hide_lists_finiched": "Slēpt pabeigtos sarakstus"
+    "hide_lists_finiched": "Slēpt pabeigtos sarakstus",
+    "app_promotion_ios": "Bagātiniet savu angļu valodas vārdu krājumu ar 4400 svarīgiem vārdiem, lai atvieglotu runāšanu un izpratni.",
+    "app_feature_graphic_FeatureItem1": "4400 vārdi",
+    "home_notlogged_accroche4": "4400 svarīgi vārdi"
 }

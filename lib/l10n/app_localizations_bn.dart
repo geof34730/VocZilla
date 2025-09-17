@@ -30,16 +30,10 @@ class AppLocalizationsBn extends AppLocalizations {
   String get app_short_description => 'ইংরেজি শব্দভান্ডার শিখুন এবং পর্যালোচনা করুন!';
 
   @override
-  String get app_promotion_ios => 'সহজে কথা বলা এবং বোঝার জন্য ৫,৬০০টি প্রয়োজনীয় শব্দ দিয়ে আপনার ইংরেজি শব্দভাণ্ডার সমৃদ্ধ করুন।';
-
-  @override
   String get app_keywords => 'শব্দভান্ডার, শেখা, ইংরেজি, শব্দ, ভাষা, শ্রুতিলিপি, উচ্চারণ, কুইজ, স্মৃতি, শেখা, সহজ, শোনা';
 
   @override
   String get app_feature_graphic_title => 'আপনার ইংরেজি শব্দভান্ডার উন্নত করুন';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '৫,৬০০ শব্দ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ইন্টারেক্টিভ অডিও কুইজ এবং পরীক্ষা';
@@ -178,9 +172,6 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'অ্যাক্সেস ';
-
-  @override
-  String get home_notlogged_accroche4 => '৫,৬০০টি প্রয়োজনীয় শব্দ';
 
   @override
   String get home_notlogged_accroche5 => 'ব্যবহারের ফ্রিকোয়েন্সি অনুসারে সাজানো হয়েছে যাতে সত্যিই গুরুত্বপূর্ণ শব্দগুলি শেখা যায়।';
@@ -670,4 +661,13 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'সম্পন্ন তালিকা লুকান';
+
+  @override
+  String get app_promotion_ios => 'সহজে কথা বলা এবং বোঝার জন্য ৪,৪০০টি প্রয়োজনীয় শব্দ দিয়ে আপনার ইংরেজি শব্দভাণ্ডার সমৃদ্ধ করুন।';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '৪,৪০০ শব্দ';
+
+  @override
+  String get home_notlogged_accroche4 => '৪,৪০০টি প্রয়োজনীয় শব্দ';
 }

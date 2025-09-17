@@ -30,16 +30,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get app_short_description => 'Ingliz tili lug\'atini o\'rganing va ko\'rib chiqing!';
 
   @override
-  String get app_promotion_ios => 'Oson gapirish va tushunish uchun ingliz tilidagi lug\'atingizni 5600 ta muhim so\'z bilan boyiting.';
-
-  @override
   String get app_keywords => 'lug\'at, o\'rganish, ingliz tili, so\'zlar, til, diktant, talaffuz, viktorina, xotira, o\'rganish, oson, tinglash';
 
   @override
   String get app_feature_graphic_title => 'Ingliz tilidagi so\'z boyligingizni yaxshilang';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 so\'z';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktiv audio viktorinalar va testlar';
@@ -178,9 +172,6 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ga kirish ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 ta muhim so\'z';
 
   @override
   String get home_notlogged_accroche5 => 'Haqiqatan ham muhim bo\'lgan so\'zlarni o\'rganish uchun foydalanish chastotasi bo\'yicha tartiblangan.';
@@ -670,4 +661,13 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Tugallangan roʻyxatlarni yashirish';
+
+  @override
+  String get app_promotion_ios => 'Oson gapirish va tushunish uchun ingliz tilidagi lug\'atingizni 4400 ta muhim so\'z bilan boyiting.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 so\'z';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 ta muhim so\'z';
 }

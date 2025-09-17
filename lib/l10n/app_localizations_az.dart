@@ -30,16 +30,10 @@ class AppLocalizationsAz extends AppLocalizations {
   String get app_short_description => 'İngilis dili lüğətini öyrənin və nəzərdən keçirin!';
 
   @override
-  String get app_promotion_ios => 'Asan danışmaq və başa düşmək üçün ingilis dili lüğətinizi 5600 əsas sözlə zənginləşdirin.';
-
-  @override
   String get app_keywords => 'lüğət, öyrənmə, ingilis dili, sözlər, dil, diktə, tələffüz, viktorina, yaddaş, öyrənmək, asan, dinləmə';
 
   @override
   String get app_feature_graphic_title => 'İngilis dili lüğətinizi təkmilləşdirin';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 söz';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'İnteraktiv audio testlər və testlər';
@@ -178,9 +172,6 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Giriş ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 əsas söz';
 
   @override
   String get home_notlogged_accroche5 => 'həqiqətən vacib olan sözləri öyrənmək üçün istifadə tezliyinə görə sıralanır.';
@@ -670,4 +661,13 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Tamamlanmış siyahıları gizlədin';
+
+  @override
+  String get app_promotion_ios => 'Asan danışmaq və başa düşmək üçün ingilis dili lüğətinizi 4400 əsas sözlə zənginləşdirin.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 söz';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 əsas söz';
 }

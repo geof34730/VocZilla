@@ -6,10 +6,8 @@
     "app_subtitle": "Engelskt ordförråd",
     "app_description": "VocZilla är den perfekta appen för att utöka ditt engelska ordförråd, oavsett din nivå. Upptäck tusentals ord kategoriserade efter tema, spela roliga frågesporter, följ dina framsteg och utmana dina vänner!",
     "app_short_description": "Lär dig och repetera engelska ord!",
-    "app_promotion_ios": "Berika ditt engelska ordförråd med 4 400 viktiga ord för enkel talförståelse.",
     "app_keywords": "ordförråd, lärande, engelska, ord, språk, diktering, uttal, frågesport, minne, lära sig, enkelt, lyssnande",
     "app_feature_graphic_title": "Förbättra ditt engelska ordförråd",
-    "app_feature_graphic_FeatureItem1": "4 400 ord",
     "app_feature_graphic_FeatureItem2": "Interaktiva ljudquiz och tester",
     "app_feature_graphic_FeatureItem3": "Följ dina framsteg i realtid",
     "app_feature_graphic_FeatureItem4": "Anpassade och delbara listor",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Förbättra din engelska!",
     "home_notlogged_accroche2": "Vill du berika ditt engelska ordförråd?",
     "home_notlogged_accroche3": "Tillgång till ",
-    "home_notlogged_accroche4": "4 400 viktiga ord",
     "home_notlogged_accroche5": "sorterade efter användningsfrekvens för att lära sig de ord som verkligen betyder något.",
     "home_notlogged_accroche6": "Snabb och effektiv metod",
     "home_notlogged_accroche7": "Lär dig de mest användbara orden först",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Alla våra temalistor",
     "view_all_list": "Se alla listor",
     "card_home_user_liste_perso": "Personliga listor",
-    "hide_lists_finiched": "Dölj ifyllda listor"
+    "hide_lists_finiched": "Dölj ifyllda listor",
+    "app_promotion_ios": "Berika ditt engelska ordförråd med 4 400 viktiga ord för enkel talförståelse.",
+    "app_feature_graphic_FeatureItem1": "4 400 ord",
+    "home_notlogged_accroche4": "4 400 viktiga ord"
 }

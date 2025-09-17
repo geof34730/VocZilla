@@ -30,16 +30,10 @@ class AppLocalizationsCa extends AppLocalizations {
   String get app_short_description => 'Aprèn i repassa el vocabulari anglès!';
 
   @override
-  String get app_promotion_ios => 'Enriqueix el teu vocabulari anglès amb 5.600 paraules essencials per parlar i entendre fàcilment.';
-
-  @override
   String get app_keywords => 'vocabulari, aprenentatge, anglès, paraules, idioma, dictat, pronunciació, qüestionari, memòria, aprendre, fàcil, escoltar';
 
   @override
   String get app_feature_graphic_title => 'Millora el teu vocabulari anglès';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 paraules';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Qüestionaris i proves d\'àudio interactives';
@@ -178,9 +172,6 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Accés a ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 paraules essencials';
 
   @override
   String get home_notlogged_accroche5 => 'ordenats per freqüència d\'ús per aprendre les paraules que realment importen.';
@@ -670,4 +661,13 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Amaga les llistes completades';
+
+  @override
+  String get app_promotion_ios => 'Enriqueix el teu vocabulari anglès amb 4.400 paraules essencials per parlar i entendre fàcilment.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 paraules';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 paraules essencials';
 }

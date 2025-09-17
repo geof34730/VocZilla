@@ -6,10 +6,8 @@
     "app_subtitle": "Engelse woordenschat",
     "app_description": "VocZilla is de perfecte app om je Engelse woordenschat uit te breiden, ongeacht je niveau. Ontdek duizenden woorden gecategoriseerd per thema, doe mee aan leuke quizzen, houd je voortgang bij en daag je vrienden uit!",
     "app_short_description": "Leer en herhaal Engelse woordenschat!",
-    "app_promotion_ios": "Verrijk uw Engelse woordenschat met 4.400 essentiële woorden voor eenvoudig spreken en begrijpen.",
     "app_keywords": "woordenschat, leren, Engels, woorden, taal, dictee, uitspraak, quiz, geheugen, leren, gemakkelijk, luisteren",
     "app_feature_graphic_title": "Verbeter uw Engelse woordenschat",
-    "app_feature_graphic_FeatureItem1": "4.400 woorden",
     "app_feature_graphic_FeatureItem2": "Interactieve audioquizzen en tests",
     "app_feature_graphic_FeatureItem3": "Volg uw voortgang in realtime",
     "app_feature_graphic_FeatureItem4": "Gepersonaliseerde en deelbare lijsten",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Verbeter je Engels!",
     "home_notlogged_accroche2": "Wilt u uw Engelse woordenschat verrijken?",
     "home_notlogged_accroche3": "Toegang tot ",
-    "home_notlogged_accroche4": "4.400 essentiële woorden",
     "home_notlogged_accroche5": "Gesorteerd op gebruiksfrequentie, zodat u de woorden leert die er echt toe doen.",
     "home_notlogged_accroche6": "Snelle en effectieve methode",
     "home_notlogged_accroche7": "Leer eerst de meest nuttige woorden",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Al onze themalijsten",
     "view_all_list": "Bekijk alle lijsten",
     "card_home_user_liste_perso": "Persoonlijke lijst(en)",
-    "hide_lists_finiched": "Verberg voltooide lijsten"
+    "hide_lists_finiched": "Verberg voltooide lijsten",
+    "app_promotion_ios": "Verrijk uw Engelse woordenschat met 4.400 essentiële woorden voor eenvoudig spreken en begrijpen.",
+    "app_feature_graphic_FeatureItem1": "4.400 woorden",
+    "home_notlogged_accroche4": "4.400 essentiële woorden"
 }

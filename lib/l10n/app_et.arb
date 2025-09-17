@@ -6,10 +6,8 @@
     "app_subtitle": "Inglise keele sõnavara",
     "app_description": "VocZilla on ideaalne rakendus oma inglise keele sõnavara laiendamiseks, olenemata teie tasemest. Avastage tuhandeid teemade kaupa liigitatud sõnu, mängige lõbusaid viktoriine, jälgige oma edusamme ja esitage oma sõpradele väljakutseid!",
     "app_short_description": "Õpi ja korda inglise keele sõnavara!",
-    "app_promotion_ios": "Rikasta oma inglise keele sõnavara 4400 olulise sõnaga, et hõlbustada rääkimist ja arusaamist.",
     "app_keywords": "sõnavara, õppimine, inglise keel, sõnad, keel, dikteerimine, hääldus, viktoriin, mälu, õppimine, lihtne, kuulamine",
     "app_feature_graphic_title": "Täienda oma inglise keele sõnavara",
-    "app_feature_graphic_FeatureItem1": "4400 sõna",
     "app_feature_graphic_FeatureItem2": "Interaktiivsed audioviktoriinid ja testid",
     "app_feature_graphic_FeatureItem3": "Jälgige oma edusamme reaalajas",
     "app_feature_graphic_FeatureItem4": "Isikupärastatud ja jagatavad nimekirjad",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Tõsta oma inglise keelt!",
     "home_notlogged_accroche2": "Kas soovite oma inglise keele sõnavara rikastada?",
     "home_notlogged_accroche3": "Juurdepääs ",
-    "home_notlogged_accroche4": "4400 olulist sõna",
     "home_notlogged_accroche5": "sorteeritud kasutussageduse järgi, et õppida selgeks sõnad, mis on tõeliselt olulised.",
     "home_notlogged_accroche6": "Kiire ja tõhus meetod",
     "home_notlogged_accroche7": "Õpi kõigepealt kõige kasulikumad sõnad",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Kõik meie teemade loendid",
     "view_all_list": "Kuva kõik nimekirjad",
     "card_home_user_liste_perso": "Isiklik(ud) nimekiri(d)",
-    "hide_lists_finiched": "Peida lõpetatud loendid"
+    "hide_lists_finiched": "Peida lõpetatud loendid",
+    "app_promotion_ios": "Rikasta oma inglise keele sõnavara 4400 olulise sõnaga, et hõlbustada rääkimist ja arusaamist.",
+    "app_feature_graphic_FeatureItem1": "4400 sõna",
+    "home_notlogged_accroche4": "4400 olulist sõna"
 }

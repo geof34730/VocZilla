@@ -30,16 +30,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get app_short_description => 'Μάθετε και επανεξετάστε το αγγλικό λεξιλόγιο!';
 
   @override
-  String get app_promotion_ios => 'Εμπλουτίστε το αγγλικό λεξιλόγιό σας με 5.600 βασικές λέξεις για εύκολη ομιλία και κατανόηση.';
-
-  @override
   String get app_keywords => 'λεξιλόγιο, μάθηση, αγγλικά, λέξεις, γλώσσα, υπαγόρευση, προφορά, κουίζ, μνήμη, μάθηση, εύκολο, ακρόαση';
 
   @override
   String get app_feature_graphic_title => 'Βελτιώστε το αγγλικό σας λεξιλόγιο';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 λέξεις';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Διαδραστικά ηχητικά κουίζ και τεστ';
@@ -178,9 +172,6 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Δικαίωμα χρησιμοποίησης ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 βασικές λέξεις';
 
   @override
   String get home_notlogged_accroche5 => 'ταξινομημένα κατά συχνότητα χρήσης για να μάθετε τις λέξεις που πραγματικά έχουν σημασία.';
@@ -670,4 +661,13 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Απόκρυψη ολοκληρωμένων λιστών';
+
+  @override
+  String get app_promotion_ios => 'Εμπλουτίστε το αγγλικό λεξιλόγιό σας με 4.400 βασικές λέξεις για εύκολη ομιλία και κατανόηση.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 λέξεις';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 βασικές λέξεις';
 }

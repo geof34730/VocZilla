@@ -6,10 +6,8 @@
     "app_subtitle": "Anglų kalbos žodynas",
     "app_description": "„VocZilla“ – puiki programėlė, skirta praplėsti anglų kalbos žodyną, nesvarbu, koks jūsų lygis. Atraskite tūkstančius žodžių, suskirstytų pagal temas, žaiskite smagius viktorinas, stebėkite savo pažangą ir meskite iššūkį draugams!",
     "app_short_description": "Mokykitės ir kartokite anglų kalbos žodyną!",
-    "app_promotion_ios": "Praturtinkite savo anglų kalbos žodyną 4400 esminių žodžių, kad būtų lengva kalbėti ir suprasti.",
     "app_keywords": "žodynas, mokymasis, anglų kalba, žodžiai, kalba, diktavimas, tarimas, viktorina, atmintis, mokytis, lengva, klausymasis",
     "app_feature_graphic_title": "Pagerinkite savo anglų kalbos žodyną",
-    "app_feature_graphic_FeatureItem1": "4400 žodžių",
     "app_feature_graphic_FeatureItem2": "Interaktyvūs garso testai ir viktorinos",
     "app_feature_graphic_FeatureItem3": "Stebėkite savo pažangą realiuoju laiku",
     "app_feature_graphic_FeatureItem4": "Suasmeninti ir bendrinami sąrašai",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Patobulinkite savo anglų kalbos žinias!",
     "home_notlogged_accroche2": "Ar norite praturtinti savo anglų kalbos žodyną?",
     "home_notlogged_accroche3": "Prieiga prie ",
-    "home_notlogged_accroche4": "4400 esminių žodžių",
     "home_notlogged_accroche5": "surūšiuoti pagal vartojimo dažnumą, kad būtų galima išmokti žodžius, kurie iš tiesų svarbūs.",
     "home_notlogged_accroche6": "Greitas ir efektyvus metodas",
     "home_notlogged_accroche7": "Pirmiausia išmokite naudingiausius žodžius",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Visi mūsų temų sąrašai",
     "view_all_list": "Žr. visus sąrašus",
     "card_home_user_liste_perso": "Asmeninis(-iai) sąrašas(-iai)",
-    "hide_lists_finiched": "Slėpti užbaigtus sąrašus"
+    "hide_lists_finiched": "Slėpti užbaigtus sąrašus",
+    "app_promotion_ios": "Praturtinkite savo anglų kalbos žodyną 4400 esminių žodžių, kad būtų lengva kalbėti ir suprasti.",
+    "app_feature_graphic_FeatureItem1": "4400 žodžių",
+    "home_notlogged_accroche4": "4400 esminių žodžių"
 }

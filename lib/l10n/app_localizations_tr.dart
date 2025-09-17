@@ -30,16 +30,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get app_short_description => 'İngilizce kelime bilgisini öğrenin ve tekrar edin!';
 
   @override
-  String get app_promotion_ios => 'Kolay konuşma ve anlama için 5.600 temel kelimeyle İngilizce kelime dağarcığınızı zenginleştirin.';
-
-  @override
   String get app_keywords => 'kelime bilgisi, öğrenme, ingilizce, kelimeler, dil, dikte, telaffuz, sınav, hafıza, öğrenme, kolay, dinleme';
 
   @override
   String get app_feature_graphic_title => 'İngilizce kelime dağarcığınızı geliştirin';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 kelime';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Etkileşimli sesli sınavlar ve testler';
@@ -178,9 +172,6 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Erişim ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 temel kelime';
 
   @override
   String get home_notlogged_accroche5 => 'Gerçekten önemli olan kelimeleri öğrenmek için kullanım sıklığına göre sıralanmıştır.';
@@ -670,4 +661,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Tamamlanan listeleri gizle';
+
+  @override
+  String get app_promotion_ios => 'Kolay konuşma ve anlama için 4.400 temel kelimeyle İngilizce kelime dağarcığınızı zenginleştirin.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 kelime';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 temel kelime';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsHi extends AppLocalizations {
   String get app_short_description => 'अंग्रेजी शब्दावली सीखें और उसकी समीक्षा करें!';
 
   @override
-  String get app_promotion_ios => 'आसानी से बोलने और समझने के लिए 5,600 आवश्यक शब्दों के साथ अपनी अंग्रेजी शब्दावली को समृद्ध करें।';
-
-  @override
   String get app_keywords => 'शब्दावली, सीखना, अंग्रेज़ी, शब्द, भाषा, श्रुतलेख, उच्चारण, प्रश्नोत्तरी, स्मृति, सीखना, आसान, सुनना';
 
   @override
   String get app_feature_graphic_title => 'अपनी अंग्रेजी शब्दावली में सुधार करें';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 शब्द';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'इंटरैक्टिव ऑडियो क्विज़ और परीक्षण';
@@ -178,9 +172,6 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'तक पहुंच ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 आवश्यक शब्द';
 
   @override
   String get home_notlogged_accroche5 => 'वास्तव में महत्वपूर्ण शब्दों को सीखने के लिए उपयोग की आवृत्ति के आधार पर क्रमबद्ध करें।';
@@ -670,4 +661,13 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'पूर्ण सूचियाँ छिपाएँ';
+
+  @override
+  String get app_promotion_ios => 'आसानी से बोलने और समझने के लिए 4,400 आवश्यक शब्दों के साथ अपनी अंग्रेजी शब्दावली को समृद्ध करें।';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 शब्द';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 आवश्यक शब्द';
 }

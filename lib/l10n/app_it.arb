@@ -6,10 +6,8 @@
     "app_subtitle": "vocabolario inglese",
     "app_description": "VocZilla è l'app perfetta per ampliare il tuo vocabolario inglese, indipendentemente dal tuo livello. Scopri migliaia di parole suddivise per tema, gioca a divertenti quiz, monitora i tuoi progressi e sfida i tuoi amici!",
     "app_short_description": "Impara e ripassa il vocabolario inglese!",
-    "app_promotion_ios": "Arricchisci il tuo vocabolario inglese con 4.400 parole essenziali per parlare e capire facilmente.",
     "app_keywords": "vocabolario, apprendimento, inglese, parole, lingua, dettato, pronuncia, quiz, memoria, imparare, facile, ascolto",
     "app_feature_graphic_title": "Migliora il tuo vocabolario inglese",
-    "app_feature_graphic_FeatureItem1": "4.400 parole",
     "app_feature_graphic_FeatureItem2": "Quiz e test audio interattivi",
     "app_feature_graphic_FeatureItem3": "Tieni traccia dei tuoi progressi in tempo reale",
     "app_feature_graphic_FeatureItem4": "Liste personalizzate e condivisibili",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Migliora il tuo inglese!",
     "home_notlogged_accroche2": "Vuoi arricchire il tuo vocabolario inglese?",
     "home_notlogged_accroche3": "Accesso a ",
-    "home_notlogged_accroche4": "4.400 parole essenziali",
     "home_notlogged_accroche5": "ordinati in base alla frequenza d'uso per imparare le parole che contano davvero.",
     "home_notlogged_accroche6": "Metodo veloce ed efficace",
     "home_notlogged_accroche7": "Impara prima le parole più utili",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Tutti i nostri elenchi di temi",
     "view_all_list": "Vedi tutti gli elenchi",
     "card_home_user_liste_perso": "Elenco\/i personale\/i",
-    "hide_lists_finiched": "Nascondi elenchi completati"
+    "hide_lists_finiched": "Nascondi elenchi completati",
+    "app_promotion_ios": "Arricchisci il tuo vocabolario inglese con 4.400 parole essenziali per parlare e capire facilmente.",
+    "app_feature_graphic_FeatureItem1": "4.400 parole",
+    "home_notlogged_accroche4": "4.400 parole essenziali"
 }

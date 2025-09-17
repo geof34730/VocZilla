@@ -30,16 +30,10 @@ class AppLocalizationsPa extends AppLocalizations {
   String get app_short_description => 'ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦਾਵਲੀ ਸਿੱਖੋ ਅਤੇ ਸਮੀਖਿਆ ਕਰੋ!';
 
   @override
-  String get app_promotion_ios => 'ਆਸਾਨੀ ਨਾਲ ਬੋਲਣ ਅਤੇ ਸਮਝਣ ਲਈ 5,600 ਜ਼ਰੂਰੀ ਸ਼ਬਦਾਂ ਨਾਲ ਆਪਣੀ ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦਾਵਲੀ ਨੂੰ ਅਮੀਰ ਬਣਾਓ।';
-
-  @override
   String get app_keywords => 'ਸ਼ਬਦਾਵਲੀ, ਸਿੱਖਣਾ, ਅੰਗਰੇਜ਼ੀ, ਸ਼ਬਦ, ਭਾਸ਼ਾ, ਡਿਕਟੇਸ਼ਨ, ਉਚਾਰਨ, ਕਵਿਜ਼, ਯਾਦਦਾਸ਼ਤ, ਸਿੱਖੋ, ਆਸਾਨ, ਸੁਣਨਾ';
 
   @override
   String get app_feature_graphic_title => 'ਆਪਣੀ ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦਾਵਲੀ ਵਿੱਚ ਸੁਧਾਰ ਕਰੋ';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 ਸ਼ਬਦ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ਇੰਟਰਐਕਟਿਵ ਆਡੀਓ ਕਵਿਜ਼ ਅਤੇ ਟੈਸਟ';
@@ -178,9 +172,6 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ਤੱਕ ਪਹੁੰਚ ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 ਜ਼ਰੂਰੀ ਸ਼ਬਦ';
 
   @override
   String get home_notlogged_accroche5 => 'ਅਸਲ ਵਿੱਚ ਮਾਇਨੇ ਰੱਖਣ ਵਾਲੇ ਸ਼ਬਦਾਂ ਨੂੰ ਸਿੱਖਣ ਲਈ ਵਰਤੋਂ ਦੀ ਬਾਰੰਬਾਰਤਾ ਅਨੁਸਾਰ ਕ੍ਰਮਬੱਧ।';
@@ -670,4 +661,13 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'ਪੂਰੀਆਂ ਹੋਈਆਂ ਸੂਚੀਆਂ ਲੁਕਾਓ';
+
+  @override
+  String get app_promotion_ios => 'ਆਸਾਨੀ ਨਾਲ ਬੋਲਣ ਅਤੇ ਸਮਝਣ ਲਈ 4,400 ਜ਼ਰੂਰੀ ਸ਼ਬਦਾਂ ਨਾਲ ਆਪਣੀ ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦਾਵਲੀ ਨੂੰ ਅਮੀਰ ਬਣਾਓ।';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 ਸ਼ਬਦ';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 ਜ਼ਰੂਰੀ ਸ਼ਬਦ';
 }

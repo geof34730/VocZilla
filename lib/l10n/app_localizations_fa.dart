@@ -30,16 +30,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get app_short_description => 'یادگیری و مرور واژگان انگلیسی!';
 
   @override
-  String get app_promotion_ios => 'دایره لغات انگلیسی خود را با ۵۶۰۰ کلمه ضروری برای صحبت کردن و فهمیدن آسان، غنی کنید.';
-
-  @override
   String get app_keywords => 'واژگان، یادگیری، انگلیسی، کلمات، زبان، دیکته، تلفظ، آزمون، حافظه، یادگیری، آسان، گوش دادن';
 
   @override
   String get app_feature_graphic_title => 'دایره لغات انگلیسی خود را بهبود ببخشید';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '۵۶۰۰ کلمه';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'آزمون‌ها و تست‌های صوتی تعاملی';
@@ -178,9 +172,6 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'دسترسی به ';
-
-  @override
-  String get home_notlogged_accroche4 => '۵۶۰۰ کلمه ضروری';
 
   @override
   String get home_notlogged_accroche5 => 'بر اساس میزان استفاده مرتب شده‌اند تا کلماتی که واقعاً مهم هستند را یاد بگیرید.';
@@ -670,4 +661,13 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'پنهان کردن لیست‌های تکمیل‌شده';
+
+  @override
+  String get app_promotion_ios => 'دایره لغات انگلیسی خود را با ۴۴۰۰ کلمه ضروری برای صحبت کردن و فهمیدن آسان، غنی کنید.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '۴۴۰۰ کلمه';
+
+  @override
+  String get home_notlogged_accroche4 => '۴۴۰۰ کلمه ضروری';
 }

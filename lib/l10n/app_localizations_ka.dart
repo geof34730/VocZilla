@@ -30,16 +30,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get app_short_description => 'ისწავლეთ და გაიმეორეთ ინგლისური ლექსიკა!';
 
   @override
-  String get app_promotion_ios => 'გაამდიდრეთ თქვენი ინგლისური ლექსიკა 5,600 აუცილებელი სიტყვით, რათა მარტივად ისაუბროთ და გაიგოთ.';
-
-  @override
   String get app_keywords => 'ლექსიკა, სწავლა, ინგლისური, სიტყვები, ენა, დიქტატი, გამოთქმა, ვიქტორინა, მეხსიერება, სწავლა, მარტივი, მოსმენა';
 
   @override
   String get app_feature_graphic_title => 'გააუმჯობესეთ თქვენი ინგლისური ლექსიკა';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 სიტყვა';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ინტერაქტიული აუდიო ვიქტორინები და ტესტები';
@@ -178,9 +172,6 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'წვდომა ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 აუცილებელი სიტყვა';
 
   @override
   String get home_notlogged_accroche5 => 'დალაგებულია გამოყენების სიხშირის მიხედვით, რათა ისწავლოთ ნამდვილად მნიშვნელოვანი სიტყვები.';
@@ -670,4 +661,13 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'დასრულებული სიების დამალვა';
+
+  @override
+  String get app_promotion_ios => 'გაამდიდრეთ თქვენი ინგლისური ლექსიკა 4,400 აუცილებელი სიტყვით, რათა მარტივად ისაუბროთ და გაიგოთ.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 სიტყვა';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 აუცილებელი სიტყვა';
 }

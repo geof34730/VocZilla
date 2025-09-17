@@ -30,16 +30,10 @@ class AppLocalizationsPl extends AppLocalizations {
   String get app_short_description => 'Poznaj i powtórz angielskie słownictwo!';
 
   @override
-  String get app_promotion_ios => 'Wzbogać swoje słownictwo w języku angielskim o 5600 niezbędnych słów, które ułatwią Ci mówienie i zrozumienie.';
-
-  @override
   String get app_keywords => 'słownictwo, nauka, angielski, słowa, język, dyktando, wymowa, quiz, pamięć, nauka, łatwy, słuchanie';
 
   @override
   String get app_feature_graphic_title => 'Popraw swoje słownictwo angielskie';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 słów';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktywne quizy i testy audio';
@@ -178,9 +172,6 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Dostęp do ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 niezbędnych słów';
 
   @override
   String get home_notlogged_accroche5 => 'posortowane według częstotliwości użycia, aby nauczyć się słów, które naprawdę mają znaczenie.';
@@ -670,4 +661,13 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Ukryj ukończone listy';
+
+  @override
+  String get app_promotion_ios => 'Wzbogać swoje słownictwo w języku angielskim o 4400 niezbędnych słów, które ułatwią Ci mówienie i zrozumienie.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 słów';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 niezbędnych słów';
 }

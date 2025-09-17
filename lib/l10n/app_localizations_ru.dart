@@ -30,16 +30,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get app_short_description => 'Изучайте и повторяйте английскую лексику!';
 
   @override
-  String get app_promotion_ios => 'Обогатите свой словарный запас английского языка 5600 необходимыми словами для легкого общения и понимания.';
-
-  @override
   String get app_keywords => 'словарный запас, изучение, английский, слова, язык, диктант, произношение, тест, память, изучать, легко, аудирование';
 
   @override
   String get app_feature_graphic_title => 'Улучшите свой словарный запас английского языка';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 слов';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Интерактивные аудиовикторины и тесты';
@@ -178,9 +172,6 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Доступ к ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 основных слов';
 
   @override
   String get home_notlogged_accroche5 => 'отсортированы по частоте использования, чтобы выучить действительно важные слова.';
@@ -670,4 +661,13 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Скрыть завершенные списки';
+
+  @override
+  String get app_promotion_ios => 'Обогатите свой словарный запас английского языка 4400 необходимыми словами для легкого общения и понимания.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 слов';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 основных слов';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get app_short_description => 'រៀននិងពិនិត្យវាក្យសព្ទភាសាអង់គ្លេស!';
 
   @override
-  String get app_promotion_ios => 'បង្កើនវាក្យសព្ទភាសាអង់គ្លេសរបស់អ្នកជាមួយនឹងពាក្យសំខាន់ៗចំនួន 5,600 សម្រាប់ងាយស្រួលនិយាយ និងយល់។';
-
-  @override
   String get app_keywords => 'វាក្យសព្ទ, ការរៀន, ភាសាអង់គ្លេស, ពាក្យ, ភាសា, ការសរសេរតាមអាន, ការបញ្ចេញសំឡេង, សំណួរ, ការចងចាំ, រៀន, ងាយស្រួល, ស្តាប់';
 
   @override
   String get app_feature_graphic_title => 'កែលម្អវាក្យសព្ទភាសាអង់គ្លេសរបស់អ្នក។';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 ពាក្យ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'កម្រងសំណួរ និងតេស្តសំឡេងអន្តរកម្ម';
@@ -178,9 +172,6 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ការចូលប្រើ ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 ពាក្យសំខាន់ៗ';
 
   @override
   String get home_notlogged_accroche5 => 'តម្រៀបតាមភាពញឹកញាប់នៃការប្រើប្រាស់ ដើម្បីរៀនពាក្យដែលពិតជាសំខាន់។';
@@ -670,4 +661,13 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'លាក់បញ្ជីដែលបានបញ្ចប់';
+
+  @override
+  String get app_promotion_ios => 'បង្កើនវាក្យសព្ទភាសាអង់គ្លេសរបស់អ្នកជាមួយនឹងពាក្យសំខាន់ៗចំនួន 4,400 សម្រាប់ងាយស្រួលនិយាយ និងយល់។';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 ពាក្យ';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 ពាក្យសំខាន់ៗ';
 }

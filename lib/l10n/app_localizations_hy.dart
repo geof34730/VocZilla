@@ -30,16 +30,10 @@ class AppLocalizationsHy extends AppLocalizations {
   String get app_short_description => 'Սովորեք և վերանայեք անգլերեն բառապաշարը։';
 
   @override
-  String get app_promotion_ios => 'Հարստացրեք ձեր անգլերեն բառապաշարը 5,600 կարևոր բառերով՝ հեշտ խոսելու և հասկանալու համար։';
-
-  @override
   String get app_keywords => 'բառապաշար, ուսուցում, անգլերեն, բառեր, լեզու, թելադրություն, արտասանություն, վիկտորինա, հիշողություն, սովորել, հեշտ, լսել';
 
   @override
   String get app_feature_graphic_title => 'Բարելավեք ձեր անգլերենի բառապաշարը';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 բառ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Ինտերակտիվ աուդիո վիկտորինաներ և թեստեր';
@@ -178,9 +172,6 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Մուտք դեպի ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 կարևոր բառեր';
 
   @override
   String get home_notlogged_accroche5 => 'տեսակավորված ըստ օգտագործման հաճախականության՝ իսկապես կարևոր բառերը սովորելու համար։';
@@ -670,4 +661,13 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Թաքցնել լրացված ցուցակները';
+
+  @override
+  String get app_promotion_ios => 'Հարստացրեք ձեր անգլերեն բառապաշարը 4400 անհրաժեշտ բառերով՝ հեշտ խոսելու և հասկանալու համար։';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 բառ';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 կարևոր բառեր';
 }

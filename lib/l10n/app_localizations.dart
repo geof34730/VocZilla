@@ -277,12 +277,6 @@ abstract class AppLocalizations {
   /// **'Learn and review English vocabulary!'**
   String get app_short_description;
 
-  /// No description provided for @app_promotion_ios.
-  ///
-  /// In en, this message translates to:
-  /// **'Enrich your English vocabulary with 5,600 essential words for easy speaking and understanding.'**
-  String get app_promotion_ios;
-
   /// No description provided for @app_keywords.
   ///
   /// In en, this message translates to:
@@ -294,12 +288,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Improve your English vocabulary'**
   String get app_feature_graphic_title;
-
-  /// No description provided for @app_feature_graphic_FeatureItem1.
-  ///
-  /// In en, this message translates to:
-  /// **'5,600 words'**
-  String get app_feature_graphic_FeatureItem1;
 
   /// No description provided for @app_feature_graphic_FeatureItem2.
   ///
@@ -576,12 +564,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Access to '**
   String get home_notlogged_accroche3;
-
-  /// No description provided for @home_notlogged_accroche4.
-  ///
-  /// In en, this message translates to:
-  /// **'5,600 essential words'**
-  String get home_notlogged_accroche4;
 
   /// No description provided for @home_notlogged_accroche5.
   ///
@@ -1560,6 +1542,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hide completed lists'**
   String get hide_lists_finiched;
+
+  /// No description provided for @app_promotion_ios.
+  ///
+  /// In en, this message translates to:
+  /// **'Enrich your English vocabulary with 4,400 essential words for easy speaking and understanding.'**
+  String get app_promotion_ios;
+
+  /// No description provided for @app_feature_graphic_FeatureItem1.
+  ///
+  /// In en, this message translates to:
+  /// **'4,400 words'**
+  String get app_feature_graphic_FeatureItem1;
+
+  /// No description provided for @home_notlogged_accroche4.
+  ///
+  /// In en, this message translates to:
+  /// **'4,400 essential words'**
+  String get home_notlogged_accroche4;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

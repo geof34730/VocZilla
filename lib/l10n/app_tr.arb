@@ -6,10 +6,8 @@
     "app_subtitle": "İngilizce kelime bilgisi",
     "app_description": "VocZilla, seviyeniz ne olursa olsun İngilizce kelime dağarcığınızı genişletmek için mükemmel bir uygulamadır. Temalara göre kategorilendirilmiş binlerce kelimeyi keşfedin, eğlenceli testler yapın, ilerlemenizi takip edin ve arkadaşlarınıza meydan okuyun!",
     "app_short_description": "İngilizce kelime bilgisini öğrenin ve tekrar edin!",
-    "app_promotion_ios": "Kolay konuşma ve anlama için 4.400 temel kelimeyle İngilizce kelime dağarcığınızı zenginleştirin.",
     "app_keywords": "kelime bilgisi, öğrenme, ingilizce, kelimeler, dil, dikte, telaffuz, sınav, hafıza, öğrenme, kolay, dinleme",
     "app_feature_graphic_title": "İngilizce kelime dağarcığınızı geliştirin",
-    "app_feature_graphic_FeatureItem1": "4.400 kelime",
     "app_feature_graphic_FeatureItem2": "Etkileşimli sesli sınavlar ve testler",
     "app_feature_graphic_FeatureItem3": "İlerlemenizi gerçek zamanlı olarak takip edin",
     "app_feature_graphic_FeatureItem4": "Kişiselleştirilmiş ve paylaşılabilir listeler",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "İngilizcenizi geliştirin!",
     "home_notlogged_accroche2": "İngilizce kelime dağarcığınızı zenginleştirmek ister misiniz?",
     "home_notlogged_accroche3": "Erişim ",
-    "home_notlogged_accroche4": "4.400 temel kelime",
     "home_notlogged_accroche5": "Gerçekten önemli olan kelimeleri öğrenmek için kullanım sıklığına göre sıralanmıştır.",
     "home_notlogged_accroche6": "Hızlı ve etkili yöntem",
     "home_notlogged_accroche7": "Önce en faydalı kelimeleri öğrenin",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Tüm tema listelerimiz",
     "view_all_list": "Tüm listeleri görün",
     "card_home_user_liste_perso": "Kişisel liste(ler)",
-    "hide_lists_finiched": "Tamamlanan listeleri gizle"
+    "hide_lists_finiched": "Tamamlanan listeleri gizle",
+    "app_promotion_ios": "Kolay konuşma ve anlama için 4.400 temel kelimeyle İngilizce kelime dağarcığınızı zenginleştirin.",
+    "app_feature_graphic_FeatureItem1": "4.400 kelime",
+    "home_notlogged_accroche4": "4.400 temel kelime"
 }

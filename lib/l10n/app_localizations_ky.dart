@@ -30,16 +30,10 @@ class AppLocalizationsKy extends AppLocalizations {
   String get app_short_description => 'Англисче лексиканы үйрөнүңүз жана карап көрүңүз!';
 
   @override
-  String get app_promotion_ios => 'Оңой сүйлөө жана түшүнүү үчүн англисче лексикаңызды 5600 маанилүү сөз менен байытыңыз.';
-
-  @override
   String get app_keywords => 'лексика, үйрөнүү, англисче, сөздөр, тил, диктант, айтылуу, тест, эс тутум, үйрөнүү, жеңил, угуу';
 
   @override
   String get app_feature_graphic_title => 'Англисче сөз байлыгыңызды өркүндөтүңүз';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 сөз';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Интерактивдүү аудио тесттер жана тесттер';
@@ -178,9 +172,6 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'кирүү мүмкүнчүлүгү ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 маанилүү сөздөр';
 
   @override
   String get home_notlogged_accroche5 => 'чындап маанилүү сөздөрдү үйрөнүү үчүн колдонуу жыштыгы боюнча сорттолгон.';
@@ -670,4 +661,13 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Аякталган тизмелерди жашыруу';
+
+  @override
+  String get app_promotion_ios => 'Оңой сүйлөө жана түшүнүү үчүн англисче лексикаңызды 4400 маанилүү сөз менен байытыңыз.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 сөз';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 маанилүү сөздөр';
 }

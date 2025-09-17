@@ -30,16 +30,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get app_short_description => 'ఆంగ్ల పదజాలం నేర్చుకోండి మరియు సమీక్షించండి!';
 
   @override
-  String get app_promotion_ios => 'సులభంగా మాట్లాడటం మరియు అర్థం చేసుకోవడానికి 5,600 ముఖ్యమైన పదాలతో మీ ఆంగ్ల పదజాలాన్ని మెరుగుపరచుకోండి.';
-
-  @override
   String get app_keywords => 'పదజాలం, నేర్చుకోవడం, ఇంగ్లీష్, పదాలు, భాష, డిక్టేషన్, ఉచ్చారణ, క్విజ్, జ్ఞాపకశక్తి, నేర్చుకోండి, సులభం, వినడం';
 
   @override
   String get app_feature_graphic_title => 'మీ ఆంగ్ల పదజాలాన్ని మెరుగుపరచండి';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 పదాలు';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ఇంటరాక్టివ్ ఆడియో క్విజ్‌లు మరియు పరీక్షలు';
@@ -178,9 +172,6 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'యాక్సెస్ ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 ముఖ్యమైన పదాలు';
 
   @override
   String get home_notlogged_accroche5 => 'నిజంగా ముఖ్యమైన పదాలను తెలుసుకోవడానికి వాడుక యొక్క ఫ్రీక్వెన్సీ ద్వారా క్రమబద్ధీకరించబడింది.';
@@ -670,4 +661,13 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'పూర్తయిన జాబితాలను దాచు';
+
+  @override
+  String get app_promotion_ios => 'సులభంగా మాట్లాడటానికి మరియు అర్థం చేసుకోవడానికి 4,400 ముఖ్యమైన పదాలతో మీ ఆంగ్ల పదజాలాన్ని మెరుగుపరచుకోండి.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 పదాలు';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 ముఖ్యమైన పదాలు';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get app_short_description => 'Õpi ja korda inglise keele sõnavara!';
 
   @override
-  String get app_promotion_ios => 'Rikasta oma inglise keele sõnavara 5600 olulise sõnaga, et hõlbustada rääkimist ja arusaamist.';
-
-  @override
   String get app_keywords => 'sõnavara, õppimine, inglise keel, sõnad, keel, dikteerimine, hääldus, viktoriin, mälu, õppimine, lihtne, kuulamine';
 
   @override
   String get app_feature_graphic_title => 'Täienda oma inglise keele sõnavara';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 sõna';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktiivsed audioviktoriinid ja testid';
@@ -178,9 +172,6 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Juurdepääs ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 olulist sõna';
 
   @override
   String get home_notlogged_accroche5 => 'sorteeritud kasutussageduse järgi, et õppida selgeks sõnad, mis on tõeliselt olulised.';
@@ -670,4 +661,13 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Peida lõpetatud loendid';
+
+  @override
+  String get app_promotion_ios => 'Rikasta oma inglise keele sõnavara 4400 olulise sõnaga, et hõlbustada rääkimist ja arusaamist.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 sõna';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 olulist sõna';
 }

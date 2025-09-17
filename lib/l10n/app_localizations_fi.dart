@@ -30,16 +30,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get app_short_description => 'Opi ja kertaa englannin sanastoa!';
 
   @override
-  String get app_promotion_ios => 'Rikasta englannin sanastoasi 5 600 olennaisella sanalla helppoa puhumista ja ymmärtämistä varten.';
-
-  @override
   String get app_keywords => 'sanasto, oppiminen, englanti, sanat, kieli, sanelu, ääntäminen, tietokilpailu, muisti, oppia, helppo, kuunteleminen';
 
   @override
   String get app_feature_graphic_title => 'Paranna englannin sanastoasi';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5 600 sanaa';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktiivisia äänivisoja ja -testejä';
@@ -178,9 +172,6 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Pääsy ';
-
-  @override
-  String get home_notlogged_accroche4 => '5 600 olennaista sanaa';
 
   @override
   String get home_notlogged_accroche5 => 'lajiteltuna käyttötiheyden mukaan, jotta oppii sanat, joilla on todella merkitystä.';
@@ -670,4 +661,13 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Piilota valmiit listat';
+
+  @override
+  String get app_promotion_ios => 'Rikasta englannin sanastoasi 4 400 olennaisella sanalla helppoa puhumista ja ymmärtämistä varten.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4 400 sanaa';
+
+  @override
+  String get home_notlogged_accroche4 => '4 400 olennaista sanaa';
 }

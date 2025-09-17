@@ -30,16 +30,10 @@ class AppLocalizationsSl extends AppLocalizations {
   String get app_short_description => 'Naučite se in ponovite angleški besednjak!';
 
   @override
-  String get app_promotion_ios => 'Obogatite svoj angleški besednjak s 5600 bistvenimi besedami za lažje govorjenje in razumevanje.';
-
-  @override
   String get app_keywords => 'besedišče, učenje, angleščina, besede, jezik, narekovanje, izgovorjava, kviz, spomin, učenje, enostavno, poslušanje';
 
   @override
   String get app_feature_graphic_title => 'Izboljšajte svoj angleški besednjak';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 besed';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktivni zvočni kvizi in testi';
@@ -178,9 +172,6 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Dostop do ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 bistvenih besed';
 
   @override
   String get home_notlogged_accroche5 => 'razvrščeno po pogostosti uporabe, da se naučite besed, ki so resnično pomembne.';
@@ -670,4 +661,13 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Skrij dokončane sezname';
+
+  @override
+  String get app_promotion_ios => 'Obogatite svoj angleški besednjak s 4400 bistvenimi besedami za lažje govorjenje in razumevanje.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 besed';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 bistvenih besed';
 }

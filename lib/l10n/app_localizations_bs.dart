@@ -30,16 +30,10 @@ class AppLocalizationsBs extends AppLocalizations {
   String get app_short_description => 'Naučite i ponovite engleski vokabular!';
 
   @override
-  String get app_promotion_ios => 'Obogatite svoj engleski vokabular sa 5.600 ključnih riječi za lak govor i razumijevanje.';
-
-  @override
   String get app_keywords => 'vokabular, učenje, engleski, riječi, jezik, diktiranje, izgovor, kviz, pamćenje, učiti, lako, slušanje';
 
   @override
   String get app_feature_graphic_title => 'Poboljšajte svoj engleski vokabular';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 riječi';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktivni audio kvizovi i testovi';
@@ -178,9 +172,6 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Pristup do ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 bitnih riječi';
 
   @override
   String get home_notlogged_accroche5 => 'sortirano po učestalosti upotrebe kako biste naučili riječi koje su zaista važne.';
@@ -670,4 +661,13 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Sakrij popunjene liste';
+
+  @override
+  String get app_promotion_ios => 'Obogatite svoj engleski vokabular sa 4.400 ključnih riječi za lak govor i razumijevanje.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 riječi';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 bitnih riječi';
 }

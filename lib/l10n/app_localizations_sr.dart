@@ -30,16 +30,10 @@ class AppLocalizationsSr extends AppLocalizations {
   String get app_short_description => 'Учите и понављајте енглески речник!';
 
   @override
-  String get app_promotion_ios => 'Обогатите свој енглески речник са 5.600 основних речи за лак говор и разумевање.';
-
-  @override
   String get app_keywords => 'вокабулар, учење, енглески, речи, језик, диктат, изговор, квиз, памћење, учити, лако, слушање';
 
   @override
   String get app_feature_graphic_title => 'Побољшајте свој енглески речник';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 речи';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Интерактивни аудио квизови и тестови';
@@ -178,9 +172,6 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Приступ до ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 основних речи';
 
   @override
   String get home_notlogged_accroche5 => 'сортирано по учесталости употребе да бисте научили речи које су заиста важне.';
@@ -670,4 +661,13 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Сакриј попуњене листе';
+
+  @override
+  String get app_promotion_ios => 'Обогатите свој енглески речник са 4.400 основних речи за лак говор и разумевање.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 речи';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 основних речи';
 }

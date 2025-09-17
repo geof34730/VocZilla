@@ -6,10 +6,8 @@
     "app_subtitle": "Ingelesezko hiztegia",
     "app_description": "VocZilla aplikazio ezin hobea da zure ingeles hiztegia zabaltzeko, zure maila edozein dela ere. Ezagutu gaiaren arabera sailkatutako milaka hitz, egin galdetegi dibertigarrietan, jarraitu zure aurrerapena eta erronka egin zure lagunei!",
     "app_short_description": "Ikasi eta berrikusi ingelesezko hiztegia!",
-    "app_promotion_ios": "Aberastu zure ingeles hiztegia 4.400 hitz esentzialekin, erraz hitz egiteko eta ulertzeko.",
     "app_keywords": "hiztegia, ikaskuntza, ingelesa, hitzak, hizkuntza, diktaketa, ahoskera, galdetegia, memoria, ikasi, erraza, entzutea",
     "app_feature_graphic_title": "Hobetu zure ingelesezko hiztegia",
-    "app_feature_graphic_FeatureItem1": "4.400 hitz",
     "app_feature_graphic_FeatureItem2": "Audio-galdetegi eta proba interaktiboak",
     "app_feature_graphic_FeatureItem3": "Jarrai ezazu zure aurrerapena denbora errealean",
     "app_feature_graphic_FeatureItem4": "Zerrenda pertsonalizatuak eta partekagarriak",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Hobetu zure ingelesa!",
     "home_notlogged_accroche2": "Zure ingelesezko hiztegia aberastu nahi al duzu?",
     "home_notlogged_accroche3": "Sarbidea ",
-    "home_notlogged_accroche4": "4.400 hitz garrantzitsu",
     "home_notlogged_accroche5": "Benetan garrantzitsuak diren hitzak ikasteko erabilera-maiztasunaren arabera ordenatuta.",
     "home_notlogged_accroche6": "Metodo azkarra eta eraginkorra",
     "home_notlogged_accroche7": "Ikasi lehenengo hitz erabilgarrienak",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Gure gai-zerrenda guztiak",
     "view_all_list": "Ikusi zerrenda guztiak",
     "card_home_user_liste_perso": "Zerrenda pertsonala(k)",
-    "hide_lists_finiched": "Ezkutatu osatutako zerrendak"
+    "hide_lists_finiched": "Ezkutatu osatutako zerrendak",
+    "app_promotion_ios": "Aberastu zure ingeles hiztegia 4.400 hitz ezinbestekorekin, erraz hitz egiteko eta ulertzeko.",
+    "app_feature_graphic_FeatureItem1": "4.400 hitz",
+    "home_notlogged_accroche4": "4.400 hitz garrantzitsu"
 }

@@ -30,16 +30,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get app_short_description => 'ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ವಿಮರ್ಶಿಸಿ!';
 
   @override
-  String get app_promotion_ios => 'ಸುಲಭವಾಗಿ ಮಾತನಾಡಲು ಮತ್ತು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು 5,600 ಅಗತ್ಯ ಪದಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ಉತ್ಕೃಷ್ಟಗೊಳಿಸಿ.';
-
-  @override
   String get app_keywords => 'ಶಬ್ದಕೋಶ, ಕಲಿಕೆ, ಇಂಗ್ಲಿಷ್, ಪದಗಳು, ಭಾಷೆ, ಉಕ್ತಲೇಖನ, ಉಚ್ಚಾರಣೆ, ರಸಪ್ರಶ್ನೆ, ಸ್ಮರಣೆ, ಕಲಿಯಿರಿ, ಸುಲಭ, ಆಲಿಸುವುದು';
 
   @override
   String get app_feature_graphic_title => 'ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ಸುಧಾರಿಸಿ';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 ಪದಗಳು';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ಸಂವಾದಾತ್ಮಕ ಆಡಿಯೊ ರಸಪ್ರಶ್ನೆಗಳು ಮತ್ತು ಪರೀಕ್ಷೆಗಳು';
@@ -178,9 +172,6 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ಪ್ರವೇಶ ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 ಅಗತ್ಯ ಪದಗಳು';
 
   @override
   String get home_notlogged_accroche5 => 'ನಿಜವಾಗಿಯೂ ಮುಖ್ಯವಾದ ಪದಗಳನ್ನು ಕಲಿಯಲು ಬಳಕೆಯ ಆವರ್ತನದ ಮೂಲಕ ವಿಂಗಡಿಸಲಾಗಿದೆ.';
@@ -670,4 +661,13 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'ಪೂರ್ಣಗೊಂಡ ಪಟ್ಟಿಗಳನ್ನು ಮರೆಮಾಡಿ';
+
+  @override
+  String get app_promotion_ios => 'ಸುಲಭವಾಗಿ ಮಾತನಾಡಲು ಮತ್ತು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು 4,400 ಅಗತ್ಯ ಪದಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ಉತ್ಕೃಷ್ಟಗೊಳಿಸಿ.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 ಪದಗಳು';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 ಅಗತ್ಯ ಪದಗಳು';
 }

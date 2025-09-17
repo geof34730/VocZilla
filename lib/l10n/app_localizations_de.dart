@@ -30,16 +30,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get app_short_description => 'Lernen und wiederholen Sie den englischen Wortschatz!';
 
   @override
-  String get app_promotion_ios => 'Bereichern Sie Ihren englischen Wortschatz mit 5.600 wichtigen Wörtern für einfaches Sprechen und Verstehen.';
-
-  @override
   String get app_keywords => 'Wortschatz, Lernen, Englisch, Wörter, Sprache, Diktat, Aussprache, Quiz, Gedächtnis, Lernen, einfach, Zuhören';
 
   @override
   String get app_feature_graphic_title => 'Verbessern Sie Ihren englischen Wortschatz';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 Wörter';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktive Audio-Quizze und Tests';
@@ -178,9 +172,6 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Zugang zu ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 wichtige Wörter';
 
   @override
   String get home_notlogged_accroche5 => 'sortiert nach Verwendungshäufigkeit, um die Wörter zu lernen, die wirklich wichtig sind.';
@@ -670,4 +661,13 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Ausgefüllte Listen ausblenden';
+
+  @override
+  String get app_promotion_ios => 'Bereichern Sie Ihren englischen Wortschatz mit 4.400 wichtigen Wörtern für einfaches Sprechen und Verstehen.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 Wörter';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 wichtige Wörter';
 }

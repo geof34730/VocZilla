@@ -30,16 +30,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get app_short_description => 'ஆங்கில சொற்களஞ்சியத்தைக் கற்றுக்கொண்டு மதிப்பாய்வு செய்யுங்கள்!';
 
   @override
-  String get app_promotion_ios => 'எளிதாகப் பேசுவதற்கும் புரிந்துகொள்வதற்கும் 5,600 அத்தியாவசிய வார்த்தைகளால் உங்கள் ஆங்கிலச் சொற்களஞ்சியத்தை வளப்படுத்துங்கள்.';
-
-  @override
   String get app_keywords => 'சொல்லகராதி, கற்றல், ஆங்கிலம், வார்த்தைகள், மொழி, சொல்லெழுத்து, உச்சரிப்பு, வினாடி வினா, நினைவகம், கற்றுக்கொள், எளிதானது, கேட்பது';
 
   @override
   String get app_feature_graphic_title => 'உங்கள் ஆங்கில சொற்களஞ்சியத்தை மேம்படுத்தவும்';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 வார்த்தைகள்';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ஊடாடும் ஆடியோ வினாடி வினாக்கள் மற்றும் சோதனைகள்';
@@ -178,9 +172,6 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'அணுகல் ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 அத்தியாவசிய வார்த்தைகள்';
 
   @override
   String get home_notlogged_accroche5 => 'உண்மையில் முக்கியமான சொற்களைக் கற்றுக்கொள்ள, பயன்பாட்டின் அதிர்வெண்ணின் அடிப்படையில் வரிசைப்படுத்தப்பட்டுள்ளது.';
@@ -670,4 +661,13 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'முடிக்கப்பட்ட பட்டியல்களை மறை';
+
+  @override
+  String get app_promotion_ios => 'எளிதாகப் பேசுவதற்கும் புரிந்துகொள்வதற்கும் 4,400 அத்தியாவசிய வார்த்தைகளால் உங்கள் ஆங்கிலச் சொற்களஞ்சியத்தை வளப்படுத்துங்கள்.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 வார்த்தைகள்';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 அத்தியாவசிய வார்த்தைகள்';
 }

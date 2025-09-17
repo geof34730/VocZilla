@@ -30,16 +30,10 @@ class AppLocalizationsSw extends AppLocalizations {
   String get app_short_description => 'Jifunze na uhakiki msamiati wa Kiingereza!';
 
   @override
-  String get app_promotion_ios => 'Boresha msamiati wako wa Kiingereza kwa maneno 5,600 muhimu kwa kuzungumza na kuelewa kwa urahisi.';
-
-  @override
   String get app_keywords => 'msamiati, kujifunza, Kiingereza, maneno, lugha, imla, matamshi, chemsha bongo, kumbukumbu, jifunze, rahisi, kusikiliza';
 
   @override
   String get app_feature_graphic_title => 'Boresha msamiati wako wa Kiingereza';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => 'Maneno 5,600';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Maswali shirikishi ya sauti na majaribio';
@@ -178,9 +172,6 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Ufikiaji wa ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 maneno muhimu';
 
   @override
   String get home_notlogged_accroche5 => 'yamepangwa kulingana na marudio ya matumizi ili kujifunza maneno ambayo ni muhimu sana.';
@@ -670,4 +661,13 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Ficha orodha zilizokamilishwa';
+
+  @override
+  String get app_promotion_ios => 'Boresha msamiati wako wa Kiingereza kwa maneno 4,400 muhimu kwa kuzungumza na kuelewa kwa urahisi.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => 'Maneno 4,400';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 maneno muhimu';
 }

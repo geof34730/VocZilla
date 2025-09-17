@@ -6,10 +6,8 @@
     "app_subtitle": "angol szókincs",
     "app_description": "A VocZilla a tökéletes alkalmazás az angol szókincs bővítésére, szintedtől függetlenül. Fedezz fel több ezer szót témák szerint kategorizálva, játssz szórakoztató kvízeket, kövesd nyomon a fejlődésedet, és hívd ki a barátaidat!",
     "app_short_description": "Tanulj és ismételd át az angol szókincset!",
-    "app_promotion_ios": "Gazdagítsd angol szókincsedet 4400 alapvető szóval a könnyű beszéd és megértés érdekében.",
     "app_keywords": "szókincs, tanulás, angol, szavak, nyelv, diktálás, kiejtés, kvíz, memória, tanulás, könnyű, hallgatás",
     "app_feature_graphic_title": "Javítsd az angol szókincsedet",
-    "app_feature_graphic_FeatureItem1": "4400 szó",
     "app_feature_graphic_FeatureItem2": "Interaktív hangos kvízek és tesztek",
     "app_feature_graphic_FeatureItem3": "Kövesse nyomon a haladását valós időben",
     "app_feature_graphic_FeatureItem4": "Személyre szabott és megosztható listák",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Turbózd fel az angoltudásod!",
     "home_notlogged_accroche2": "Szeretnéd gazdagítani az angol szókincsedet?",
     "home_notlogged_accroche3": "Hozzáférés a következőhöz: ",
-    "home_notlogged_accroche4": "4400 alapvető szó",
     "home_notlogged_accroche5": "használati gyakoriság szerint rendezve, hogy megtanulja a valóban fontos szavakat.",
     "home_notlogged_accroche6": "Gyors és hatékony módszer",
     "home_notlogged_accroche7": "Először is tanuld meg a leghasznosabb szavakat",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Az összes témalistánk",
     "view_all_list": "Az összes lista megtekintése",
     "card_home_user_liste_perso": "Személyes lista(k)",
-    "hide_lists_finiched": "Elrejti a kitöltött listákat"
+    "hide_lists_finiched": "Elrejti a kitöltött listákat",
+    "app_promotion_ios": "Gazdagítsd angol szókincsedet 4400 alapvető szóval a könnyű beszéd és megértés érdekében.",
+    "app_feature_graphic_FeatureItem1": "4400 szó",
+    "home_notlogged_accroche4": "4400 alapvető szó"
 }

@@ -92,6 +92,7 @@ dependencies:
   path_provider: ^2.1.4
   firebase_storage: ^12.4.10
   flutter_confetti: ^0.5.1
+  diacritic: ^0.1.6
 
 
 flutter_launcher_icons:

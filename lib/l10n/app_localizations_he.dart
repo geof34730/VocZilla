@@ -30,16 +30,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get app_short_description => 'למד וחזור על אוצר מילים באנגלית!';
 
   @override
-  String get app_promotion_ios => 'העשירו את אוצר המילים שלכם באנגלית עם 5,600 מילים חיוניות לדיבור והבנה קלים.';
-
-  @override
   String get app_keywords => 'אוצר מילים, למידה, אנגלית, מילים, שפה, הכתבה, הגייה, חידון, זיכרון, למידה, קל, האזנה';
 
   @override
   String get app_feature_graphic_title => 'שפרו את אוצר המילים שלכם באנגלית';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 מילים';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'חידונים ומבחנים אינטראקטיביים באודיו';
@@ -178,9 +172,6 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'גישה ל ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 מילים חיוניות';
 
   @override
   String get home_notlogged_accroche5 => 'ממוינים לפי תדירות השימוש כדי ללמוד את המילים שחשובות באמת.';
@@ -670,4 +661,13 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'הסתר רשימות שהושלמו';
+
+  @override
+  String get app_promotion_ios => 'העשירו את אוצר המילים שלכם באנגלית עם 4,400 מילים חיוניות לדיבור והבנה קלים.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 מילים';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 מילים חיוניות';
 }

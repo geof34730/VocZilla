@@ -30,16 +30,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get app_short_description => 'ഇംഗ്ലീഷ് പദാവലി പഠിക്കുകയും അവലോകനം ചെയ്യുകയും ചെയ്യുക!';
 
   @override
-  String get app_promotion_ios => 'എളുപ്പത്തിൽ സംസാരിക്കാനും മനസ്സിലാക്കാനും 5,600 അവശ്യ വാക്കുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ ഇംഗ്ലീഷ് പദാവലി സമ്പന്നമാക്കുക.';
-
-  @override
   String get app_keywords => 'പദാവലി, പഠനം, ഇംഗ്ലീഷ്, വാക്കുകൾ, ഭാഷ, കേട്ടെഴുതൽ, ഉച്ചാരണം, ക്വിസ്, മെമ്മറി, പഠിക്കുക, എളുപ്പമാണ്, കേൾക്കൽ';
 
   @override
   String get app_feature_graphic_title => 'നിങ്ങളുടെ ഇംഗ്ലീഷ് പദാവലി മെച്ചപ്പെടുത്തുക';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 വാക്കുകൾ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'സംവേദനാത്മക ഓഡിയോ ക്വിസുകളും ടെസ്റ്റുകളും';
@@ -178,9 +172,6 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ആക്സസ് ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 അവശ്യ വാക്കുകൾ';
 
   @override
   String get home_notlogged_accroche5 => 'ശരിക്കും പ്രാധാന്യമുള്ള വാക്കുകൾ പഠിക്കാൻ ഉപയോഗത്തിന്റെ ആവൃത്തി അനുസരിച്ച് അടുക്കിയിരിക്കുന്നു.';
@@ -670,4 +661,13 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'പൂർത്തിയാക്കിയ ലിസ്റ്റുകൾ മറയ്ക്കുക';
+
+  @override
+  String get app_promotion_ios => 'എളുപ്പത്തിൽ സംസാരിക്കാനും മനസ്സിലാക്കാനും 4,400 അവശ്യ വാക്കുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ ഇംഗ്ലീഷ് പദാവലി സമ്പന്നമാക്കുക.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 വാക്കുകൾ';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 അവശ്യ വാക്കുകൾ';
 }

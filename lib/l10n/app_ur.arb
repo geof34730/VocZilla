@@ -6,10 +6,8 @@
     "app_subtitle": "انگریزی الفاظ",
     "app_description": "VocZilla آپ کی انگریزی الفاظ کو بڑھانے کے لیے ایک بہترین ایپ ہے، چاہے آپ کی سطح کچھ بھی ہو۔ تھیم کے لحاظ سے درجہ بندی کردہ ہزاروں الفاظ دریافت کریں، تفریحی کوئز کھیلیں، اپنی پیشرفت کو ٹریک کریں، اور اپنے دوستوں کو چیلنج کریں!",
     "app_short_description": "انگریزی الفاظ سیکھیں اور اس کا جائزہ لیں!",
-    "app_promotion_ios": "آسانی سے بولنے اور سمجھنے کے لیے اپنی انگریزی الفاظ کو 4.400 ضروری الفاظ کے ساتھ مزیدار بنائیں۔",
     "app_keywords": "الفاظ، سیکھنا، انگریزی، الفاظ، زبان، ڈکٹیشن، تلفظ، کوئز، میموری، سیکھنا، آسان، سننا",
     "app_feature_graphic_title": "اپنی انگریزی الفاظ کو بہتر بنائیں",
-    "app_feature_graphic_FeatureItem1": "4.400 الفاظ",
     "app_feature_graphic_FeatureItem2": "انٹرایکٹو آڈیو کوئز اور ٹیسٹ",
     "app_feature_graphic_FeatureItem3": "حقیقی وقت میں اپنی پیشرفت کو ٹریک کریں۔",
     "app_feature_graphic_FeatureItem4": "ذاتی نوعیت کی اور قابل اشتراک فہرستیں۔",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "اپنی انگریزی کو فروغ دیں!",
     "home_notlogged_accroche2": "کیا آپ اپنی انگریزی الفاظ کو بہتر بنانا چاہتے ہیں؟",
     "home_notlogged_accroche3": "تک رسائی ",
-    "home_notlogged_accroche4": "4.400 ضروری الفاظ",
     "home_notlogged_accroche5": "ان الفاظ کو سیکھنے کے لیے استعمال کی تعدد کے لحاظ سے ترتیب دیا گیا ہے جو واقعی اہمیت رکھتے ہیں۔",
     "home_notlogged_accroche6": "تیز اور موثر طریقہ",
     "home_notlogged_accroche7": "پہلے سب سے مفید الفاظ سیکھیں۔",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "ہماری تمام تھیم کی فہرستیں۔",
     "view_all_list": "تمام فہرستیں دیکھیں",
     "card_home_user_liste_perso": "ذاتی فہرست",
-    "hide_lists_finiched": "مکمل فہرستیں چھپائیں۔"
+    "hide_lists_finiched": "مکمل فہرستیں چھپائیں۔",
+    "app_promotion_ios": "آسانی سے بولنے اور سمجھنے کے لیے 4,400 ضروری الفاظ کے ساتھ اپنی انگریزی الفاظ کو مزید تقویت دیں۔",
+    "app_feature_graphic_FeatureItem1": "4,400 الفاظ",
+    "home_notlogged_accroche4": "4,400 ضروری الفاظ"
 }

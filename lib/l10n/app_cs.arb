@@ -6,10 +6,8 @@
     "app_subtitle": "Anglická slovní zásoba",
     "app_description": "VocZilla je perfektní aplikace pro rozšíření vaší anglické slovní zásoby bez ohledu na vaši úroveň. Objevte tisíce slovíček rozdělených podle témat, hrajte zábavné kvízy, sledujte svůj pokrok a vyzvěte své přátele!",
     "app_short_description": "Učte se a opakujte anglickou slovní zásobu!",
-    "app_promotion_ios": "Obohaťte si svou anglickou slovní zásobu o 4 400 základních slov pro snadnou mluvu a porozumění.",
     "app_keywords": "slovní zásoba, učení, angličtina, slova, jazyk, diktát, výslovnost, kvíz, paměť, učit se, snadné, poslech",
     "app_feature_graphic_title": "Vylepšete si anglickou slovní zásobu",
-    "app_feature_graphic_FeatureItem1": "4 400 slov",
     "app_feature_graphic_FeatureItem2": "Interaktivní audio kvízy a testy",
     "app_feature_graphic_FeatureItem3": "Sledujte svůj pokrok v reálném čase",
     "app_feature_graphic_FeatureItem4": "Personalizované a sdílené seznamy",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Zlepšete si angličtinu!",
     "home_notlogged_accroche2": "Chcete si obohatit anglickou slovní zásobu?",
     "home_notlogged_accroche3": "Přístup k ",
-    "home_notlogged_accroche4": "4 400 základních slov",
     "home_notlogged_accroche5": "seřazeno podle četnosti používání, abyste se naučili slova, na kterých skutečně záleží.",
     "home_notlogged_accroche6": "Rychlá a účinná metoda",
     "home_notlogged_accroche7": "Nejprve se naučte nejužitečnější slova",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Všechny naše seznamy témat",
     "view_all_list": "Zobrazit všechny seznamy",
     "card_home_user_liste_perso": "Osobní seznam(y)",
-    "hide_lists_finiched": "Skrýt dokončené seznamy"
+    "hide_lists_finiched": "Skrýt dokončené seznamy",
+    "app_promotion_ios": "Obohaťte si svou anglickou slovní zásobu o 4 400 základních slov pro snadnou mluvu a porozumění.",
+    "app_feature_graphic_FeatureItem1": "4 400 slov",
+    "home_notlogged_accroche4": "4 400 základních slov"
 }

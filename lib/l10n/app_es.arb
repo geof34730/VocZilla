@@ -6,10 +6,8 @@
     "app_subtitle": "Vocabulario inglés",
     "app_description": "VocZilla es la app perfecta para ampliar tu vocabulario de inglés, sin importar tu nivel. Descubre miles de palabras clasificadas por tema, participa en divertidos cuestionarios, sigue tu progreso y reta a tus amigos.",
     "app_short_description": "¡Aprende y repasa vocabulario en inglés!",
-    "app_promotion_ios": "Enriquece tu vocabulario en inglés con 4.400 palabras esenciales para hablar y comprender fácilmente.",
     "app_keywords": "vocabulario, aprendizaje, inglés, palabras, idioma, dictado, pronunciación, cuestionario, memoria, aprender, fácil, escuchar",
     "app_feature_graphic_title": "Mejora tu vocabulario en inglés",
-    "app_feature_graphic_FeatureItem1": "4.400 palabras",
     "app_feature_graphic_FeatureItem2": "Pruebas y cuestionarios de audio interactivos",
     "app_feature_graphic_FeatureItem3": "Sigue tu progreso en tiempo real",
     "app_feature_graphic_FeatureItem4": "Listas personalizadas y compartibles",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "¡Mejora tu inglés!",
     "home_notlogged_accroche2": "¿Quieres enriquecer tu vocabulario en inglés?",
     "home_notlogged_accroche3": "Acceso a ",
-    "home_notlogged_accroche4": "4.400 palabras esenciales",
     "home_notlogged_accroche5": "ordenados por frecuencia de uso para aprender las palabras que realmente importan.",
     "home_notlogged_accroche6": "Método rápido y eficaz",
     "home_notlogged_accroche7": "Aprende primero las palabras más útiles",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Todas nuestras listas de temas",
     "view_all_list": "Ver todas las listas",
     "card_home_user_liste_perso": "Lista(s) personal(es)",
-    "hide_lists_finiched": "Ocultar listas completadas"
+    "hide_lists_finiched": "Ocultar listas completadas",
+    "app_promotion_ios": "Enriquece tu vocabulario en inglés con 4.400 palabras esenciales para hablar y comprender fácilmente.",
+    "app_feature_graphic_FeatureItem1": "4.400 palabras",
+    "home_notlogged_accroche4": "4.400 palabras esenciales"
 }

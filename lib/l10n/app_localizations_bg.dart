@@ -30,16 +30,10 @@ class AppLocalizationsBg extends AppLocalizations {
   String get app_short_description => 'Научете и преговорете английския речник!';
 
   @override
-  String get app_promotion_ios => 'Обогатете английския си речник с 5600 основни думи за лесно говорене и разбиране.';
-
-  @override
   String get app_keywords => 'речник, учене, английски, думи, език, диктовка, произношение, викторина, памет, учене, лесно, слушане';
 
   @override
   String get app_feature_graphic_title => 'Подобрете английския си речник';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 думи';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Интерактивни аудио викторини и тестове';
@@ -178,9 +172,6 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Достъп до ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 основни думи';
 
   @override
   String get home_notlogged_accroche5 => 'сортирани по честота на употреба, за да научите думите, които наистина имат значение.';
@@ -670,4 +661,13 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Скриване на попълнените списъци';
+
+  @override
+  String get app_promotion_ios => 'Обогатете английския си речник с 4400 основни думи за лесно говорене и разбиране.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 думи';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 основни думи';
 }

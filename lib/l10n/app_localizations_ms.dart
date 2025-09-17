@@ -30,16 +30,10 @@ class AppLocalizationsMs extends AppLocalizations {
   String get app_short_description => 'Belajar dan semak perbendaharaan kata bahasa Inggeris!';
 
   @override
-  String get app_promotion_ios => 'Perkaya perbendaharaan kata bahasa Inggeris anda dengan 5,600 perkataan penting untuk pertuturan dan pemahaman yang mudah.';
-
-  @override
   String get app_keywords => 'perbendaharaan kata, pembelajaran, bahasa Inggeris, perkataan, bahasa, imlak, sebutan, kuiz, ingatan, belajar, mudah, mendengar';
 
   @override
   String get app_feature_graphic_title => 'Tingkatkan perbendaharaan kata bahasa Inggeris anda';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 patah perkataan';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Kuiz dan ujian audio interaktif';
@@ -178,9 +172,6 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Akses kepada ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 perkataan penting';
 
   @override
   String get home_notlogged_accroche5 => 'disusun mengikut kekerapan penggunaan untuk mempelajari perkataan yang benar-benar penting.';
@@ -670,4 +661,13 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Sembunyikan senarai lengkap';
+
+  @override
+  String get app_promotion_ios => 'Perkaya perbendaharaan kata bahasa Inggeris anda dengan 4,400 perkataan penting untuk pertuturan dan pemahaman yang mudah.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 patah perkataan';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 perkataan penting';
 }

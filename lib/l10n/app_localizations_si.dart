@@ -30,16 +30,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get app_short_description => 'ඉංග්‍රීසි වචන මාලාව ඉගෙන ගෙන සමාලෝචනය කරන්න!';
 
   @override
-  String get app_promotion_ios => 'පහසුවෙන් කතා කිරීමට සහ තේරුම් ගැනීමට අත්‍යවශ්‍ය වචන 5,600 කින් ඔබේ ඉංග්‍රීසි වචන මාලාව පොහොසත් කරන්න.';
-
-  @override
   String get app_keywords => 'වචන මාලාව, ඉගෙනීම, ඉංග්‍රීසි, වචන, භාෂාව, අනුලේඛනය, උච්චාරණය, ප්‍රශ්නාවලිය, මතකය, ඉගෙනීම, පහසු, සවන්දීම';
 
   @override
   String get app_feature_graphic_title => 'ඔබේ ඉංග්‍රීසි වචන මාලාව වැඩි දියුණු කරන්න';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => 'වචන 5,600 යි';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'අන්තර්ක්‍රියාකාරී ශ්‍රව්‍ය ප්‍රශ්නාවලිය සහ පරීක්ෂණ';
@@ -178,9 +172,6 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ප්‍රවේශය ';
-
-  @override
-  String get home_notlogged_accroche4 => 'අත්‍යවශ්‍ය වචන 5,600ක්';
 
   @override
   String get home_notlogged_accroche5 => 'සැබවින්ම වැදගත් වචන ඉගෙන ගැනීමට භාවිත වාර ගණන අනුව වර්ග කර ඇත.';
@@ -670,4 +661,13 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'සම්පූර්ණ කළ ලැයිස්තු සඟවන්න';
+
+  @override
+  String get app_promotion_ios => 'පහසුවෙන් කතා කිරීමට සහ තේරුම් ගැනීමට අත්‍යවශ්‍ය වචන 4,400 කින් ඔබේ ඉංග්‍රීසි වචන මාලාව පොහොසත් කරන්න.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => 'වචන 4,400 යි';
+
+  @override
+  String get home_notlogged_accroche4 => 'අත්‍යවශ්‍ය වචන 4,400ක්';
 }

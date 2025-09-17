@@ -30,16 +30,10 @@ class AppLocalizationsNl extends AppLocalizations {
   String get app_short_description => 'Leer en herhaal Engelse woordenschat!';
 
   @override
-  String get app_promotion_ios => 'Verrijk uw Engelse woordenschat met 5.600 essentiële woorden voor eenvoudig spreken en begrijpen.';
-
-  @override
   String get app_keywords => 'woordenschat, leren, Engels, woorden, taal, dictee, uitspraak, quiz, geheugen, leren, gemakkelijk, luisteren';
 
   @override
   String get app_feature_graphic_title => 'Verbeter uw Engelse woordenschat';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 woorden';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interactieve audioquizzen en tests';
@@ -178,9 +172,6 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Toegang tot ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 essentiële woorden';
 
   @override
   String get home_notlogged_accroche5 => 'Gesorteerd op gebruiksfrequentie, zodat u de woorden leert die er echt toe doen.';
@@ -670,4 +661,13 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Verberg voltooide lijsten';
+
+  @override
+  String get app_promotion_ios => 'Verrijk uw Engelse woordenschat met 4.400 essentiële woorden voor eenvoudig spreken en begrijpen.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 woorden';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 essentiële woorden';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get app_short_description => 'የእንግሊዝኛ ቃላትን ይማሩ እና ይገምግሙ!';
 
   @override
-  String get app_promotion_ios => 'በቀላሉ ለመናገር እና ለመረዳት የእንግሊዝኛ ቃላትን በ5,600 አስፈላጊ ቃላት ያበልጽጉ።';
-
-  @override
   String get app_keywords => 'መዝገበ ቃላት፣ መማር፣ እንግሊዘኛ፣ ቃላት፣ ቋንቋ፣ መዝገበ ቃላት፣ አነባበብ፣ ጥያቄ፣ ትውስታ፣ መማር፣ ቀላል፣ ማዳመጥ';
 
   @override
   String get app_feature_graphic_title => 'የእንግሊዝኛ መዝገበ ቃላትዎን ያሻሽሉ።';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 ቃላት';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'በይነተገናኝ የድምጽ ጥያቄዎች እና ሙከራዎች';
@@ -178,9 +172,6 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'መዳረሻ ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 አስፈላጊ ቃላት';
 
   @override
   String get home_notlogged_accroche5 => 'በጣም አስፈላጊ የሆኑትን ቃላት ለመማር በአጠቃቀም ድግግሞሽ የተደረደሩ።';
@@ -670,4 +661,13 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'የተጠናቀቁ ዝርዝሮችን ደብቅ';
+
+  @override
+  String get app_promotion_ios => 'በቀላሉ ለመናገር እና ለመረዳት የእንግሊዝኛ ቃላትን በ4,400 አስፈላጊ ቃላት ያበልጽጉ።';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 ቃላት';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 አስፈላጊ ቃላት';
 }

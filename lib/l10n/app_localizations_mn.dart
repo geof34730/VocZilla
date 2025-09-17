@@ -30,16 +30,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get app_short_description => 'Англи хэлний үгсийн санг сурч, хянана уу!';
 
   @override
-  String get app_promotion_ios => 'Англи хэлний үгсийн санг хялбархан ярьж, ойлгоход шаардлагатай 5600 үгээр баяжуулаарай.';
-
-  @override
   String get app_keywords => 'үгсийн сан, сурах, англи хэл, үг, хэл, диктант, дуудлага, шалгалт, санах ой, сурах, хялбар, сонсох';
 
   @override
   String get app_feature_graphic_title => 'Англи хэлний үгсийн сангаа сайжруул';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 үг';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Интерактив аудио асуулт хариултууд болон тестүүд';
@@ -178,9 +172,6 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'хандах ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 чухал үг';
 
   @override
   String get home_notlogged_accroche5 => 'үнэхээр чухал үгсийг сурахын тулд хэрэглээний давтамжаар эрэмбэлсэн.';
@@ -670,4 +661,13 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Дууссан жагсаалтыг нуух';
+
+  @override
+  String get app_promotion_ios => 'Англи хэлний үгсийн санг хялбархан ярьж, ойлгоход шаардлагатай 4400 үгээр баяжуулаарай.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 үг';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 чухал үг';
 }

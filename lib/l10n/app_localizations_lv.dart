@@ -30,16 +30,10 @@ class AppLocalizationsLv extends AppLocalizations {
   String get app_short_description => 'Mācies un atkārtoj angļu valodas vārdu krājumu!';
 
   @override
-  String get app_promotion_ios => 'Bagātiniet savu angļu valodas vārdu krājumu ar 5600 svarīgiem vārdiem, lai atvieglotu runāšanu un izpratni.';
-
-  @override
   String get app_keywords => 'vārdu krājums, mācīšanās, angļu valoda, vārdi, valoda, diktāts, izruna, viktorīna, atmiņa, mācīties, viegli, klausīšanās';
 
   @override
   String get app_feature_graphic_title => 'Uzlabojiet savu angļu valodas vārdu krājumu';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 vārdi';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktīvas audio viktorīnas un testi';
@@ -178,9 +172,6 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Piekļuve ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 svarīgi vārdi';
 
   @override
   String get home_notlogged_accroche5 => 'sakārtoti pēc lietošanas biežuma, lai apgūtu vārdus, kuriem patiešām ir nozīme.';
@@ -670,4 +661,13 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Slēpt pabeigtos sarakstus';
+
+  @override
+  String get app_promotion_ios => 'Bagātiniet savu angļu valodas vārdu krājumu ar 4400 svarīgiem vārdiem, lai atvieglotu runāšanu un izpratni.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 vārdi';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 svarīgi vārdi';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get app_short_description => 'Learn and review English vocabulary!';
 
   @override
-  String get app_promotion_ios => 'Enrich your English vocabulary with 5,600 essential words for easy speaking and understanding.';
-
-  @override
   String get app_keywords => 'vocabulary, learning, english, words, language, dictation, pronunciation, quiz, memory, learn, easy, listening';
 
   @override
   String get app_feature_graphic_title => 'Improve your English vocabulary';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 words';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interactive audio quizzes and tests';
@@ -178,9 +172,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Access to ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 essential words';
 
   @override
   String get home_notlogged_accroche5 => 'sorted by frequency of use to learn the words that really matter.';
@@ -670,4 +661,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Hide completed lists';
+
+  @override
+  String get app_promotion_ios => 'Enrich your English vocabulary with 4,400 essential words for easy speaking and understanding.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 words';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 essential words';
 }

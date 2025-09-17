@@ -30,16 +30,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get app_short_description => '学习并复习英语词汇！';
 
   @override
-  String get app_promotion_ios => '使用 5,600 个基本单词丰富您的英语词汇量，以便于说话和理解。';
-
-  @override
   String get app_keywords => '词汇, 学习, 英语, 单词, 语言, 听写, 发音, 测验, 记忆, 轻松, 听力';
 
   @override
   String get app_feature_graphic_title => '提高你的英语词汇量';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600 字';
 
   @override
   String get app_feature_graphic_FeatureItem2 => '交互式音频测验和测试';
@@ -178,9 +172,6 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => '访问 ';
-
-  @override
-  String get home_notlogged_accroche4 => '5,600 个基本词汇';
 
   @override
   String get home_notlogged_accroche5 => '按使用频率排序来学习真正重要的单词。';
@@ -670,4 +661,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => '隐藏已完成列表';
+
+  @override
+  String get app_promotion_ios => '使用 4,400 个基本单词丰富您的英语词汇量，以便轻松说话和理解。';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400 字';
+
+  @override
+  String get home_notlogged_accroche4 => '4,400 个必备词汇';
 }

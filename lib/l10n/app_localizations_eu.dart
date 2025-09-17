@@ -30,16 +30,10 @@ class AppLocalizationsEu extends AppLocalizations {
   String get app_short_description => 'Ikasi eta berrikusi ingelesezko hiztegia!';
 
   @override
-  String get app_promotion_ios => 'Aberastu zure ingeles hiztegia 5.600 hitz esentzialekin, erraz hitz egiteko eta ulertzeko.';
-
-  @override
   String get app_keywords => 'hiztegia, ikaskuntza, ingelesa, hitzak, hizkuntza, diktaketa, ahoskera, galdetegia, memoria, ikasi, erraza, entzutea';
 
   @override
   String get app_feature_graphic_title => 'Hobetu zure ingelesezko hiztegia';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 hitz';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Audio-galdetegi eta proba interaktiboak';
@@ -178,9 +172,6 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Sarbidea ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 hitz garrantzitsu';
 
   @override
   String get home_notlogged_accroche5 => 'Benetan garrantzitsuak diren hitzak ikasteko erabilera-maiztasunaren arabera ordenatuta.';
@@ -670,4 +661,13 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Ezkutatu osatutako zerrendak';
+
+  @override
+  String get app_promotion_ios => 'Aberastu zure ingeles hiztegia 4.400 hitz ezinbestekorekin, erraz hitz egiteko eta ulertzeko.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 hitz';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 hitz garrantzitsu';
 }

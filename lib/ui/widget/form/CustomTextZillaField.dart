@@ -38,16 +38,80 @@ class CustomTextZillaField extends StatefulWidget {
 }
 
 class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
+  String _previousValue = "";
 
   @override
   void initState() {
     widget.buttonNotifier?.updateButtonState(false);
+    widget.ControlerField.addListener(_onTextChanged);
     super.initState();
   }
+
   @override
   void dispose() {
-    // TODO: implement dispose
+    widget.ControlerField.removeListener(_onTextChanged);
     super.dispose();
+  }
+
+  void _onTextChanged() {
+    final value = widget.ControlerField.text;
+
+    // Si l'utilisateur efface du texte, on met juste à jour l'état et on sort.
+    if (value.length < _previousValue.length) {
+      _previousValue = value;
+      setState(() {});
+      return;
+    }
+
+    String correctText = widget.resulteField;
+    String newText = value;
+
+    // --- Logique d'auto-correction des accents ---
+    // On l'applique seulement s'il n'y a pas de réponses multiples (pas de "/")
+    if (!correctText.contains("/") && value.isNotEmpty) {
+      String normalizedInput = removeDiacritics(value.toUpperCase());
+      String normalizedCorrect = removeDiacritics(correctText.toUpperCase());
+
+      // Si le début de la saisie normalisée correspond au début de la réponse normalisée
+      if (normalizedCorrect.startsWith(normalizedInput)) {
+        // On remplace la saisie par la version correctement accentuée
+        newText = correctText.substring(0, value.length);
+      }
+    }
+
+    _previousValue = newText;
+
+    // On met à jour le contrôleur seulement si le texte a changé, pour éviter une boucle infinie.
+    if (widget.ControlerField.text != newText) {
+      widget.ControlerField.value = TextEditingValue(
+        text: newText,
+        selection: TextSelection.fromPosition(TextPosition(offset: newText.length)),
+      );
+    }
+
+    // On met à jour l'état pour que l'interface (icônes, bordures) se redessine.
+    setState(() {});
+
+    // --- Logique de succès ---
+    if (getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField)) {
+      // On utilise un post-frame callback pour s'assurer que le build est terminé
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) {
+          if (widget.AnswerNotifier) {
+            AnswerNotifier(context).markAsAnsweredCorrectly(
+                isAnswerUser: true,
+                guidVocabulaire: widget.GUID,
+                local: Localizations.localeOf(context).languageCode);
+          }
+          if (widget.ButtonNextNotifier) {
+            widget.buttonNotifier?.updateButtonState(true);
+          }
+          if (widget.voidCallBack != null) {
+            widget.voidCallBack!();
+          }
+        }
+      });
+    }
   }
 
   @override
@@ -55,43 +119,15 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
     return Padding(
         padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.00),
         child: TextFormField(
-          readOnly: widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase(),
+          // Le listener manuel remplace le onChanged
+          // onChanged: (value) => _onTextChanged(value),
+          readOnly: getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField),
           enabled:true,
           controller: widget.ControlerField,
           maxLength: widget.resulteField.length,
           maxLengthEnforcement: MaxLengthEnforcement.enforced,
-          onChanged: (value) {
-            // On appelle setState pour déclencher une reconstruction, ce qui mettra à jour l'icône et la couleur de la bordure.
-            setState(() {});
-
-            if (getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField)) {
-              // Utiliser un post-frame callback pour mettre à jour le contrôleur en toute sécurité après le build.
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                if (mounted) {
-                  // Compléter avec le texte correct, y compris les descriptions.
-                  widget.ControlerField.text = widget.resulteField;
-                  widget.ControlerField.selection = TextSelection.fromPosition(
-                    TextPosition(offset: widget.resulteField.length),
-                  );
-                }
-              });
-
-              if (widget.AnswerNotifier) {
-                AnswerNotifier(context).markAsAnsweredCorrectly(
-                    isAnswerUser: true,
-                    guidVocabulaire: widget.GUID,
-                    local: Localizations.localeOf(context).languageCode);
-              }
-              if (widget.ButtonNextNotifier) {
-                widget.buttonNotifier?.updateButtonState(true);
-              }
-              if (widget.voidCallBack != null) {
-                widget.voidCallBack!();
-              }
-            }
-          },
           style: TextStyle(
-            color: Colors.black, // Changez la couleur ici
+            color: Colors.black,
           ),
           keyboardType: TextInputType.text,
           decoration: InputDecoration(
@@ -99,7 +135,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
               hintText: widget.labelText,
               labelText: widget.labelText,
               labelStyle: TextStyle(
-                color: Colors.grey // Utilisez la couleur du label ici
+                  color: Colors.grey
               ),
               contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
               enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 2, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField))),
@@ -107,40 +143,31 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
               disabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(width: 2, color: Colors.green),
                 borderRadius: BorderRadius.circular(5),
-
               ),
-              suffixIcon: (widget.ControlerField.text.toUpperCase() == widget.resulteField.toUpperCase()
+              suffixIcon: (getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField)
                   ? (
                   widget.resultSound
-                      ?
-                      PlaySoond(guidVocabulaire: widget.GUID, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
-                      :
-
-                      null
+                      ? PlaySoond(guidVocabulaire: widget.GUID, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
+                      : null
               )
                   : IconButton(
                 icon: Icon(Icons.visibility, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField)),
                 onPressed: () {
                   widget.ControlerField.text = widget.resulteField;
                   if(widget.AnswerNotifier) {
-                    AnswerNotifier(
-                        context
-                      ).markAsAnsweredCorrectly(
+                    AnswerNotifier(context).markAsAnsweredCorrectly(
                         isAnswerUser: false,
                         guidVocabulaire: widget.GUID,
                         local: Localizations.localeOf(context).languageCode
-                      );
+                    );
                   }
                   if(widget.ButtonNextNotifier) {
                     widget.buttonNotifier?.updateButtonState(true);
                   }
-
                   if(widget.voidCallBack != null){
                     widget.voidCallBack!();
                   }
-                  setState(() {
-                    //widget.updateStateParent();
-                  });
+                  setState(() {});
                 },
               ))),
         ));
@@ -148,165 +175,87 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
 
 
   Icon writeContentAndStyleIcon({required TextEditingController controllerField, required String stockValue}) {
-    if (controllerField.text != '') {
+    if (controllerField.text.isNotEmpty) {
       if (getErrorField(controllerField: controllerField, stockValue: stockValue)) {
         return const Icon(Icons.error, color: Colors.red);
       }
     }
-    if (controllerField.text == "") {
-      return const Icon(Icons.question_answer, color: Colors.blue);
-    }
     if (getSuccesField(controllerField: controllerField, stockValue: stockValue)) {
       return const Icon(Icons.check, color: Colors.green);
-    } else {
-      return const Icon(Icons.question_answer, color: Colors.blue);
     }
+    return const Icon(Icons.question_answer, color: Colors.blue);
   }
 
   Color getBorderColor({required TextEditingController controllerField, required String stockValue}) {
-    if (controllerField.text != '') {
+    if (controllerField.text.isNotEmpty) {
       if (getErrorField(controllerField: controllerField, stockValue: stockValue)) {
         return Colors.red;
       }
     }
-    if (controllerField.text == "") {
-      return Colors.blue;
-    }
     if (getSuccesField(controllerField: controllerField, stockValue: stockValue)) {
       return Colors.green;
-    } else {
-      return Colors.blue;
     }
+    return Colors.blue;
+  }
+
+  String removeDiacritics(String str) {
+    const withDia =    'ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+    const withoutDia = 'AAAAAAaaaaaaOOOOOOooooooEEEEeeeedCcDIIIIiiiiUUUUuuuuNnSsYyyZz';
+
+    for (int i = 0; i < withDia.length; i++) {
+      str = str.replaceAll(withDia[i], withoutDia[i]);
+    }
+    return str;
+  }
+
+  String stockValueNoDescription({required String stockValue}) {
+    String newStockValue = stockValue;
+    if (newStockValue.contains('(')) {
+      // Supprime tout ce qui se trouve entre parenthèses
+      newStockValue = newStockValue.replaceAll(RegExp(r'\s*\([^)]*\)\s*'), ' ').trim();
+    }
+    return newStockValue;
   }
 
   bool getErrorField({required TextEditingController controllerField, required String stockValue}) {
-    String controllerValue = controllerField.text.toUpperCase();
-    stockValue = stockValue.toUpperCase();
-    dynamic arrayVerb = stockValueNoDescription(stockValue: stockValue).split(" / ");
-    if (stockValue.contains("/")) {
-      if (!controllerField.text.contains("/")) {
-        ///FIRST VERB EN SAISIE IN THE FIELD
-        for (var verb in arrayVerb) {
-          if (verb.length >= stockValueNoDescription(stockValue: controllerValue).length) {
-            if (verb.substring(0, stockValueNoDescription(stockValue: controllerValue).length) == stockValueNoDescription(stockValue: controllerValue)) {
-              return false;
-            }
-          }
-        }
-        return true;
-      } else {
-        dynamic arrayVerbControllerField = stockValueNoDescription(stockValue: controllerField.text).split(" / ");
+    String controllerValue = controllerField.text;
+    if (controllerValue.isEmpty) return false; // Pas d'erreur si le champ est vide
 
-        ///SECOND VERB EN SAISIE IN THE FIELD
-        for (var verb in arrayVerb) {
-          int positionSaisie2 = stockValueNoDescription(stockValue: controllerValue).indexOf(' / ') + 3;
-          if (controllerValue.length > positionSaisie2) {
-            String saisie2 = stockValueNoDescription(stockValue: controllerValue).substring(positionSaisie2, stockValueNoDescription(stockValue: controllerValue).length);
-            if (saisie2.indexOf('/') > 0) {
-              // saisie 3
-              int positionSaisie3 = saisie2.indexOf(' / ') + 3;
-              String saisie3 = saisie2.substring(positionSaisie3, saisie2.length);
-              for (var verb in arrayVerb) {
-                if (verb.indexOf(saisie3) >= 0) {
-                  return false;
-                }
-              }
-              return true;
-            } else {
-              //saisie 2
-              for (var verb in arrayVerb) {
-                if (verb.indexOf(saisie2) >= 0) {
-                  int nbSeparatorVerb = '/'.allMatches(stockValue).length;
-                  return false;
-                }
-              }
-              return true;
-            }
-          } else {
-            return false;
+    // Nettoie les réponses (enlève les descriptions et les accents)
+    String cleanStock = removeDiacritics(stockValueNoDescription(stockValue: stockValue).toUpperCase());
+    String cleanController = removeDiacritics(stockValueNoDescription(stockValue: controllerValue).toUpperCase());
+
+    // Gère les réponses multiples séparées par "/"
+    if (cleanStock.contains('/')) {
+      List<String> stockParts = cleanStock.split('/').map((p) => p.trim()).toList();
+      List<String> controllerParts = cleanController.split('/').map((p) => p.trim()).toList();
+
+      if (controllerParts.length > stockParts.length) return true; // Plus de parties que possible
+
+      for (int i = 0; i < controllerParts.length; i++) {
+        // La dernière partie peut être une saisie partielle
+        if (i == controllerParts.length - 1) {
+          if (!stockParts[i].startsWith(controllerParts[i])) {
+            return true; // La saisie partielle ne correspond pas
+          }
+        } else {
+          // Les parties précédentes doivent correspondre exactement
+          if (stockParts[i] != controllerParts[i]) {
+            return true;
           }
         }
       }
-    } else {
-      String cleanControllerValue = stockValueNoDescription(stockValue: controllerValue);
-      String cleanStockValue = stockValueNoDescription(stockValue: stockValue);
-      if (cleanControllerValue.length > cleanStockValue.length) {
-        return true;
-      }
-      return cleanStockValue.substring(0, cleanControllerValue.length) != cleanControllerValue;
+      return false; // Tout va bien jusqu'ici
     }
-    return false;
+
+    // Cas simple (une seule réponse)
+    return !cleanStock.startsWith(cleanController);
   }
 
   bool getSuccesField({required TextEditingController controllerField, required String stockValue}) {
-
-    String controllerValue = controllerField.text.toUpperCase();
-    stockValue = stockValue.toUpperCase();
-    dynamic arrayVerb = stockValueNoDescription(stockValue: stockValue).split(" / ");
-    if (stockValue.contains("/")) {
-      if (!controllerField.text.contains("/")) {
-        ///FIRST VERB EN SAISIE IN THE FIELD
-        for (var verb in arrayVerb) {
-          if (verb.length >= stockValueNoDescription(stockValue: controllerValue).length) {
-            if (verb.substring(0, stockValueNoDescription(stockValue: controllerValue).length) == stockValueNoDescription(stockValue: controllerValue)) {
-              return false;
-            }
-          }
-        }
-      } else {
-        ///SECOND VERB EN SAISIE IN THE FIELD
-        dynamic arrayVerbControllerField = stockValueNoDescription(stockValue: controllerField.text).split(" / ");
-        for (var verb in arrayVerb) {
-          int positionSaisie2 = stockValueNoDescription(stockValue: controllerValue).indexOf(' / ') + 3;
-          if (controllerValue.length > positionSaisie2) {
-            String saisie2 = stockValueNoDescription(stockValue: controllerValue).substring(positionSaisie2, stockValueNoDescription(stockValue: controllerValue).length);
-            if (saisie2.indexOf('/') > 0) {
-              //saisie 3
-              int positionSaisie3 = saisie2.indexOf(' / ') + 3;
-              String saisie3 = saisie2.substring(positionSaisie3, saisie2.length);
-              for (var verb in arrayVerb) {
-                if (saisie3 != "" && verb.toUpperCase() == saisie3.toUpperCase()) {
-                  return true;
-                }
-              }
-              return false;
-            } else {
-              for (var verb in arrayVerb) {
-                if (verb.toUpperCase() == saisie2.toUpperCase()) {
-                  int nbSeparatorVerb = '/'.allMatches(stockValue).length;
-                  if (nbSeparatorVerb == 1) {
-                    return true;
-                  }
-                }
-              }
-            }
-            return false;
-          } else {
-            return false;
-          }
-        }
-        return false;
-      }
-      return false;
-    }
-    return stockValueNoDescription(stockValue: controllerValue) == stockValueNoDescription(stockValue: stockValue);
-  }
-
-  String stockValueNoDescription({required stockValue}) {
-    if (stockValue.indexOf('(') >= 0) {
-      int nbDescriptionVerb = '('.allMatches(stockValue).length;
-      String newStockValue = stockValue;
-      for (var i = 0; i < nbDescriptionVerb; i = i + 1) {
-        int positionBeginDescription = newStockValue.indexOf('(') - 1;
-        int positionEndDescription = newStockValue.indexOf(')') + 1;
-        String stringDelete = newStockValue.substring(positionBeginDescription, positionEndDescription);
-        newStockValue = newStockValue.replaceAll(stringDelete, '');
-      }
-      return newStockValue;
-      //return removeDiacritics(newStockValue);
-    } else {
-      return stockValue;
-      //return removeDiacritics(stockValue);
-    }
+    // Le succès est atteint quand les versions nettoyées (sans description ni accent) sont identiques.
+    String cleanStock = removeDiacritics(stockValueNoDescription(stockValue: stockValue).toUpperCase());
+    String cleanController = removeDiacritics(stockValueNoDescription(stockValue: controllerField.text).toUpperCase());
+    return cleanStock == cleanController;
   }
 }

@@ -30,16 +30,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get app_short_description => 'Učte sa a opakujte anglickú slovnú zásobu!';
 
   @override
-  String get app_promotion_ios => 'Obohaťte si svoju anglickú slovnú zásobu o 5 600 základných slov pre ľahkú komunikáciu a porozumenie.';
-
-  @override
   String get app_keywords => 'slovná zásoba, učenie, angličtina, slová, jazyk, diktát, výslovnosť, kvíz, pamäť, učiť sa, jednoduché, počúvanie';
 
   @override
   String get app_feature_graphic_title => 'Zlepšite si svoju anglickú slovnú zásobu';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5 600 slov';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktívne zvukové kvízy a testy';
@@ -178,9 +172,6 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Prístup k ';
-
-  @override
-  String get home_notlogged_accroche4 => '5 600 základných slov';
 
   @override
   String get home_notlogged_accroche5 => 'zoradené podľa frekvencie používania, aby ste sa naučili slová, na ktorých skutočne záleží.';
@@ -670,4 +661,13 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Skryť dokončené zoznamy';
+
+  @override
+  String get app_promotion_ios => 'Obohaťte si svoju anglickú slovnú zásobu o 4 400 základných slov pre ľahkú komunikáciu a porozumenie.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4 400 slov';
+
+  @override
+  String get home_notlogged_accroche4 => '4 400 základných slov';
 }

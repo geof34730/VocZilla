@@ -30,16 +30,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get app_short_description => 'Mokykitės ir kartokite anglų kalbos žodyną!';
 
   @override
-  String get app_promotion_ios => 'Praturtinkite savo anglų kalbos žodyną 5600 esminių žodžių, kad būtų lengva kalbėti ir suprasti.';
-
-  @override
   String get app_keywords => 'žodynas, mokymasis, anglų kalba, žodžiai, kalba, diktavimas, tarimas, viktorina, atmintis, mokytis, lengva, klausymasis';
 
   @override
   String get app_feature_graphic_title => 'Pagerinkite savo anglų kalbos žodyną';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 žodžių';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktyvūs garso testai ir viktorinos';
@@ -178,9 +172,6 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Prieiga prie ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 esminių žodžių';
 
   @override
   String get home_notlogged_accroche5 => 'surūšiuoti pagal vartojimo dažnumą, kad būtų galima išmokti žodžius, kurie iš tiesų svarbūs.';
@@ -670,4 +661,13 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Slėpti užbaigtus sąrašus';
+
+  @override
+  String get app_promotion_ios => 'Praturtinkite savo anglų kalbos žodyną 4400 esminių žodžių, kad būtų lengva kalbėti ir suprasti.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 žodžių';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 esminių žodžių';
 }

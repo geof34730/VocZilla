@@ -30,16 +30,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get app_short_description => 'Lär dig och repetera engelska ord!';
 
   @override
-  String get app_promotion_ios => 'Berika ditt engelska ordförråd med 5 600 viktiga ord för enkel talförståelse.';
-
-  @override
   String get app_keywords => 'ordförråd, lärande, engelska, ord, språk, diktering, uttal, frågesport, minne, lära sig, enkelt, lyssnande';
 
   @override
   String get app_feature_graphic_title => 'Förbättra ditt engelska ordförråd';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5 600 ord';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktiva ljudquiz och tester';
@@ -178,9 +172,6 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Tillgång till ';
-
-  @override
-  String get home_notlogged_accroche4 => '5 600 viktiga ord';
 
   @override
   String get home_notlogged_accroche5 => 'sorterade efter användningsfrekvens för att lära sig de ord som verkligen betyder något.';
@@ -670,4 +661,13 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Dölj ifyllda listor';
+
+  @override
+  String get app_promotion_ios => 'Berika ditt engelska ordförråd med 4 400 viktiga ord för enkel talförståelse.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4 400 ord';
+
+  @override
+  String get home_notlogged_accroche4 => '4 400 viktiga ord';
 }

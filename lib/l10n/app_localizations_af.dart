@@ -30,16 +30,10 @@ class AppLocalizationsAf extends AppLocalizations {
   String get app_short_description => 'Leer en hersien Engelse woordeskat!';
 
   @override
-  String get app_promotion_ios => 'Verryk jou Engelse woordeskat met 5 600 noodsaaklike woorde vir maklike praat en begrip.';
-
-  @override
   String get app_keywords => 'woordeskat, leer, Engels, woorde, taal, diktee, uitspraak, vasvra, geheue, leer, maklik, luister';
 
   @override
   String get app_feature_graphic_title => 'Verbeter jou Engelse woordeskat';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5 600 woorde';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktiewe oudio-vasvrae en toetse';
@@ -178,9 +172,6 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Toegang tot ';
-
-  @override
-  String get home_notlogged_accroche4 => '5 600 noodsaaklike woorde';
 
   @override
   String get home_notlogged_accroche5 => 'gesorteer volgens gebruiksfrekwensie om die woorde te leer wat werklik saak maak.';
@@ -670,4 +661,13 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Versteek voltooide lyste';
+
+  @override
+  String get app_promotion_ios => 'Verryk jou Engelse woordeskat met 4 400 noodsaaklike woorde vir maklike praat en begrip.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4 400 woorde';
+
+  @override
+  String get home_notlogged_accroche4 => '4 400 noodsaaklike woorde';
 }

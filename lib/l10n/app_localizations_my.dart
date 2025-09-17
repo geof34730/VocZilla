@@ -30,16 +30,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get app_short_description => 'အင်္ဂလိပ်ဝေါဟာရကို လေ့လာပြီး ပြန်လည်သုံးသပ်ပါ။';
 
   @override
-  String get app_promotion_ios => 'လွယ်ကူစွာပြောနိုင်ပြီး နားလည်နိုင်စေရန်အတွက် မရှိမဖြစ်လိုအပ်သော စကားလုံး 5,600 ဖြင့် သင်၏ အင်္ဂလိပ်ဝေါဟာရကို ကြွယ်ဝစေပါသည်။';
-
-  @override
   String get app_keywords => 'ဝေါဟာရ၊ သင်ယူမှု၊ အင်္ဂလိပ်၊ စကားလုံးများ၊ ဘာသာစကား၊ သတ်ပုံ၊ အသံထွက်၊ ပဟေဠိ၊ မှတ်ဉာဏ်၊ လေ့လာရန်၊ လွယ်ကူသော၊ နားထောင်ခြင်း';
 
   @override
   String get app_feature_graphic_title => 'သင်၏အင်္ဂလိပ်ဝေါဟာရကိုတိုးတက်စေပါ။';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => 'စကားလုံး ၅၆၀၀';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'အပြန်အလှန်တုံ့ပြန်သောအသံပဟေဠိများနှင့်စမ်းသပ်မှုများ';
@@ -178,9 +172,6 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'လက်လှမ်းမီရန် ';
-
-  @override
-  String get home_notlogged_accroche4 => 'မရှိမဖြစ် စကားလုံး ၅၆၀၀';
 
   @override
   String get home_notlogged_accroche5 => 'အမှန်တကယ်အရေးကြီးသော စကားလုံးများကို လေ့လာရန် အသုံးပြုသည့် အကြိမ်ရေအလိုက် စီထားသည်။';
@@ -670,4 +661,13 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'ပြီးမြောက်သောစာရင်းများကို ဝှက်ထားပါ။';
+
+  @override
+  String get app_promotion_ios => 'လွယ်ကူစွာပြောနိုင်ပြီး နားလည်နိုင်စေရန်အတွက် မရှိမဖြစ်လိုအပ်သော စကားလုံး 4,400 ဖြင့် သင်၏ အင်္ဂလိပ်ဝေါဟာရကို ကြွယ်ဝစေပါသည်။';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => 'စကားလုံး ၄၄၀၀';
+
+  @override
+  String get home_notlogged_accroche4 => 'မရှိမဖြစ် စကားလုံး ၄၄၀၀';
 }

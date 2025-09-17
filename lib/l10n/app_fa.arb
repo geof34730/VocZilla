@@ -6,10 +6,8 @@
     "app_subtitle": "واژگان انگلیسی",
     "app_description": "وُکزیلا (VocZilla) اپلیکیشن بی‌نظیری برای گسترش دایره لغات انگلیسی شماست، صرف نظر از سطحتان. هزاران کلمه را که بر اساس موضوع دسته‌بندی شده‌اند، کشف کنید، آزمون‌های سرگرم‌کننده انجام دهید، پیشرفت خود را پیگیری کنید و دوستانتان را به چالش بکشید!",
     "app_short_description": "یادگیری و مرور واژگان انگلیسی!",
-    "app_promotion_ios": "دایره لغات انگلیسی خود را با ۵۶۰۰ کلمه ضروری برای صحبت کردن و فهمیدن آسان، غنی کنید.",
     "app_keywords": "واژگان، یادگیری، انگلیسی، کلمات، زبان، دیکته، تلفظ، آزمون، حافظه، یادگیری، آسان، گوش دادن",
     "app_feature_graphic_title": "دایره لغات انگلیسی خود را بهبود ببخشید",
-    "app_feature_graphic_FeatureItem1": "۵۶۰۰ کلمه",
     "app_feature_graphic_FeatureItem2": "آزمون‌ها و تست‌های صوتی تعاملی",
     "app_feature_graphic_FeatureItem3": "پیشرفت خود را در زمان واقعی پیگیری کنید",
     "app_feature_graphic_FeatureItem4": "لیست‌های شخصی‌سازی‌شده و قابل اشتراک‌گذاری",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "انگلیسی خود را تقویت کنید!",
     "home_notlogged_accroche2": "آیا می‌خواهید دایره لغات انگلیسی خود را غنی کنید؟",
     "home_notlogged_accroche3": "دسترسی به ",
-    "home_notlogged_accroche4": "۵۶۰۰ کلمه ضروری",
     "home_notlogged_accroche5": "بر اساس میزان استفاده مرتب شده‌اند تا کلماتی که واقعاً مهم هستند را یاد بگیرید.",
     "home_notlogged_accroche6": "روش سریع و موثر",
     "home_notlogged_accroche7": "ابتدا کلمات پرکاربرد را یاد بگیرید",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "همه لیست‌های تم ما",
     "view_all_list": "مشاهده همه لیست‌ها",
     "card_home_user_liste_perso": "فهرست(های) شخصی",
-    "hide_lists_finiched": "پنهان کردن لیست‌های تکمیل‌شده"
+    "hide_lists_finiched": "پنهان کردن لیست‌های تکمیل‌شده",
+    "app_promotion_ios": "دایره لغات انگلیسی خود را با ۴۴۰۰ کلمه ضروری برای صحبت کردن و فهمیدن آسان، غنی کنید.",
+    "app_feature_graphic_FeatureItem1": "۴۴۰۰ کلمه",
+    "home_notlogged_accroche4": "۴۴۰۰ کلمه ضروری"
 }

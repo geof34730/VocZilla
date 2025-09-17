@@ -30,16 +30,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get app_short_description => 'Вивчайте та повторюйте англійську лексику!';
 
   @override
-  String get app_promotion_ios => 'Збагатьте свій англійський словниковий запас 5600 важливими словами для легкого мовлення та розуміння.';
-
-  @override
   String get app_keywords => 'словниковий запас, навчання, англійська, слова, мова, диктант, вимова, вікторина, пам\'ять, вчитися, легко, аудіювання';
 
   @override
   String get app_feature_graphic_title => 'Покращте свій словниковий запас англійської мови';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 слів';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Інтерактивні аудіовікторини та тести';
@@ -178,9 +172,6 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Доступ до ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 важливих слів';
 
   @override
   String get home_notlogged_accroche5 => 'відсортовано за частотою використання, щоб вивчити слова, які дійсно важливі.';
@@ -670,4 +661,13 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Приховати завершені списки';
+
+  @override
+  String get app_promotion_ios => 'Збагатьте свій англійський словниковий запас 4400 важливими словами для легкого мовлення та розуміння.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 слів';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 важливих слів';
 }

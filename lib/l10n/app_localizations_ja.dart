@@ -30,16 +30,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get app_short_description => '英語の語彙を学んで復習しましょう！';
 
   @override
-  String get app_promotion_ios => '簡単に話したり理解したりできるように、5,600 語の必須単語で英語の語彙を充実させます。';
-
-  @override
   String get app_keywords => '語彙、学習、英語、単語、言語、ディクテーション、発音、クイズ、記憶、学習、簡単、リスニング';
 
   @override
   String get app_feature_graphic_title => '英語の語彙力を向上させる';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5,600語';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'インタラクティブな音声クイズとテスト';
@@ -178,9 +172,6 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'アクセス ';
-
-  @override
-  String get home_notlogged_accroche4 => '必須語5,600語';
 
   @override
   String get home_notlogged_accroche5 => '使用頻度順に並べることで、本当に重要な単語を学ぶことができます。';
@@ -670,4 +661,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => '完了したリストを非表示にする';
+
+  @override
+  String get app_promotion_ios => '簡単に話したり理解したりできるように、4,400 語の必須単語で英語の語彙を豊かにします。';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4,400語';
+
+  @override
+  String get home_notlogged_accroche4 => '必須語4,400語';
 }

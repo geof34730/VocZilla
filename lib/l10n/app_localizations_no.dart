@@ -30,16 +30,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get app_short_description => 'Lær og repeter engelsk vokabular!';
 
   @override
-  String get app_promotion_ios => 'Berik ditt engelske ordforråd med 5600 viktige ord for enkel tale og forståelse.';
-
-  @override
   String get app_keywords => 'vokabular, læring, engelsk, ord, språk, diktering, uttale, quiz, hukommelse, lær, lett, lytting';
 
   @override
   String get app_feature_graphic_title => 'Forbedre ditt engelske ordforråd';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 ord';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktive lydquizer og tester';
@@ -178,9 +172,6 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Tilgang til ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 essensielle ord';
 
   @override
   String get home_notlogged_accroche5 => 'sortert etter bruksfrekvens for å lære ordene som virkelig betyr noe.';
@@ -670,4 +661,13 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Skjul fullførte lister';
+
+  @override
+  String get app_promotion_ios => 'Berik ditt engelske ordforråd med 4400 viktige ord for enkel tale og forståelse.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 ord';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 essensielle ord';
 }

@@ -30,16 +30,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get app_short_description => 'Lærðu og rifja upp ensku orðaforða!';
 
   @override
-  String get app_promotion_ios => 'Auðgaðu enskuorðaforða þinn með 5.600 nauðsynlegum orðum sem auðvelda þér að tala og skilja enskuna.';
-
-  @override
   String get app_keywords => 'orðaforði, nám, enska, orð, tungumál, upplestur, framburður, próf, minni, læra, auðvelt, hlustun';
 
   @override
   String get app_feature_graphic_title => 'Bættu enskuorðaforða þinn';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5.600 orð';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Gagnvirk hljóðpróf og spurningakeppnir';
@@ -178,9 +172,6 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Aðgangur að ';
-
-  @override
-  String get home_notlogged_accroche4 => '5.600 nauðsynleg orð';
 
   @override
   String get home_notlogged_accroche5 => 'Raðað eftir notkunartíðni til að læra orðin sem skipta raunverulega máli.';
@@ -670,4 +661,13 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Fela lokið lista';
+
+  @override
+  String get app_promotion_ios => 'Auðgaðu enskuorðaforða þinn með 4.400 nauðsynlegum orðum sem auðvelda þér að tala og skilja.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4.400 orð';
+
+  @override
+  String get home_notlogged_accroche4 => '4.400 nauðsynleg orð';
 }

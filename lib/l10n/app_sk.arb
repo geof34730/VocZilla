@@ -6,10 +6,8 @@
     "app_subtitle": "Anglická slovná zásoba",
     "app_description": "VocZilla je perfektná aplikácia na rozšírenie vašej anglickej slovnej zásoby bez ohľadu na vašu úroveň. Objavte tisíce slov rozdelených podľa témy, hrajte zábavné kvízy, sledujte svoj pokrok a vyzvite svojich priateľov!",
     "app_short_description": "Učte sa a opakujte anglickú slovnú zásobu!",
-    "app_promotion_ios": "Obohaťte si svoju anglickú slovnú zásobu o 4 400 základných slov pre ľahkú komunikáciu a porozumenie.",
     "app_keywords": "slovná zásoba, učenie, angličtina, slová, jazyk, diktát, výslovnosť, kvíz, pamäť, učiť sa, jednoduché, počúvanie",
     "app_feature_graphic_title": "Zlepšite si svoju anglickú slovnú zásobu",
-    "app_feature_graphic_FeatureItem1": "4 400 slov",
     "app_feature_graphic_FeatureItem2": "Interaktívne zvukové kvízy a testy",
     "app_feature_graphic_FeatureItem3": "Sledujte svoj pokrok v reálnom čase",
     "app_feature_graphic_FeatureItem4": "Prispôsobené a zdieľateľné zoznamy",
@@ -55,7 +53,6 @@
     "home_notlogged_accroche1": "Zlepšite si svoju angličtinu!",
     "home_notlogged_accroche2": "Chcete si obohatiť slovnú zásobu v angličtine?",
     "home_notlogged_accroche3": "Prístup k ",
-    "home_notlogged_accroche4": "4 400 základných slov",
     "home_notlogged_accroche5": "zoradené podľa frekvencie používania, aby ste sa naučili slová, na ktorých skutočne záleží.",
     "home_notlogged_accroche6": "Rýchla a účinná metóda",
     "home_notlogged_accroche7": "Najprv sa naučte najužitočnejšie slová",
@@ -219,5 +216,8 @@
     "title_all_list_theme": "Všetky naše zoznamy tém",
     "view_all_list": "Zobraziť všetky zoznamy",
     "card_home_user_liste_perso": "Osobný zoznam(y)",
-    "hide_lists_finiched": "Skryť dokončené zoznamy"
+    "hide_lists_finiched": "Skryť dokončené zoznamy",
+    "app_promotion_ios": "Obohaťte si svoju anglickú slovnú zásobu o 4 400 základných slov pre ľahkú komunikáciu a porozumenie.",
+    "app_feature_graphic_FeatureItem1": "4 400 slov",
+    "home_notlogged_accroche4": "4 400 základných slov"
 }

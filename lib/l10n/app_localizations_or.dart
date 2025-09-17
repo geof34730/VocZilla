@@ -30,16 +30,10 @@ class AppLocalizationsOr extends AppLocalizations {
   String get app_short_description => 'ଇଂରାଜୀ ଶବ୍ଦାବଳୀ ଶିଖନ୍ତୁ ଏବଂ ସମୀକ୍ଷା କରନ୍ତୁ!';
 
   @override
-  String get app_promotion_ios => 'ସହଜରେ କହିବା ଏବଂ ବୁଝିବା ପାଇଁ 5,600ଟି ଜରୁରୀ ଶବ୍ଦ ସହିତ ଆପଣଙ୍କର ଇଂରାଜୀ ଶବ୍ଦକୋଷକୁ ସମୃଦ୍ଧ କରନ୍ତୁ।';
-
-  @override
   String get app_keywords => 'ଶବ୍ଦାବଳୀ, ଶିକ୍ଷା, ଇଂରାଜୀ, ଶବ୍ଦ, ଭାଷା, ଶ୍ରୁତଲେଖା, ଉଚ୍ଚାରଣ, ପ୍ରଶ୍ନୋତ୍ତର, ସ୍ମୃତି, ଶିଖନ୍ତୁ, ସହଜ, ଶୁଣିବା';
 
   @override
   String get app_feature_graphic_title => 'ଆପଣଙ୍କର ଇଂରାଜୀ ଶବ୍ଦାବଳୀ ଉନ୍ନତ କରନ୍ତୁ';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '୫,୬୦୦ ଶବ୍ଦ';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'ଇଣ୍ଟରାକ୍ଟିଭ୍ ଅଡିଓ କ୍ୱିଜ୍ ଏବଂ ପରୀକ୍ଷା';
@@ -178,9 +172,6 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'ପ୍ରବେଶ ';
-
-  @override
-  String get home_notlogged_accroche4 => '୫,୬୦୦ଟି ଜରୁରୀ ଶବ୍ଦ';
 
   @override
   String get home_notlogged_accroche5 => 'ପ୍ରକୃତରେ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଶବ୍ଦଗୁଡ଼ିକୁ ଶିଖିବା ପାଇଁ ବ୍ୟବହାରର ବାରମ୍ବାରତା ଅନୁସାରେ ସଜାଯାଇଛି।';
@@ -670,4 +661,13 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'ସମ୍ପୂର୍ଣ୍ଣ ହୋଇଥିବା ତାଲିକାଗୁଡ଼ିକୁ ଲୁଚାନ୍ତୁ';
+
+  @override
+  String get app_promotion_ios => 'ସହଜରେ କହିବା ଏବଂ ବୁଝିବା ପାଇଁ 4,400ଟି ଜରୁରୀ ଶବ୍ଦ ସହିତ ଆପଣଙ୍କର ଇଂରାଜୀ ଶବ୍ଦକୋଷକୁ ସମୃଦ୍ଧ କରନ୍ତୁ।';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '୪,୪୦୦ ଶବ୍ଦ';
+
+  @override
+  String get home_notlogged_accroche4 => '୪,୪୦୦ଟି ଜରୁରୀ ଶବ୍ଦ';
 }

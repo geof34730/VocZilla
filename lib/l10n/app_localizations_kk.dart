@@ -30,16 +30,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get app_short_description => 'Ағылшын тілінің сөздік қорын үйреніңіз және қайталаңыз!';
 
   @override
-  String get app_promotion_ios => 'Оңай сөйлеу және түсіну үшін ағылшын тіліндегі сөздік қорыңызды 5600 маңызды сөзбен байытыңыз.';
-
-  @override
   String get app_keywords => 'сөздік, үйрену, ағылшын тілі, сөздер, тіл, диктант, айтылу, викторина, есте сақтау, үйрену, оңай, тыңдау';
 
   @override
   String get app_feature_graphic_title => 'Ағылшын тіліндегі сөздік қорыңызды жетілдіріңіз';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 сөз';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Интерактивті аудио викториналар мен тесттер';
@@ -178,9 +172,6 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'қол жеткізу ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 маңызды сөз';
 
   @override
   String get home_notlogged_accroche5 => 'шын мәнінде маңызды сөздерді үйрену үшін пайдалану жиілігі бойынша сұрыпталған.';
@@ -670,4 +661,13 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Аяқталған тізімдерді жасыру';
+
+  @override
+  String get app_promotion_ios => 'Оңай сөйлеу және түсіну үшін ағылшын тіліндегі сөздік қорыңызды 4400 маңызды сөзбен байытыңыз.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 сөз';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 маңызды сөз';
 }

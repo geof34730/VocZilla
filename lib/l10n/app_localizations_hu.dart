@@ -30,16 +30,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get app_short_description => 'Tanulj és ismételd át az angol szókincset!';
 
   @override
-  String get app_promotion_ios => 'Gazdagítsd angol szókincsedet 5600 alapvető szóval a könnyű beszéd és megértés érdekében.';
-
-  @override
   String get app_keywords => 'szókincs, tanulás, angol, szavak, nyelv, diktálás, kiejtés, kvíz, memória, tanulás, könnyű, hallgatás';
 
   @override
   String get app_feature_graphic_title => 'Javítsd az angol szókincsedet';
-
-  @override
-  String get app_feature_graphic_FeatureItem1 => '5600 szó';
 
   @override
   String get app_feature_graphic_FeatureItem2 => 'Interaktív hangos kvízek és tesztek';
@@ -178,9 +172,6 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche3 => 'Hozzáférés a következőhöz: ';
-
-  @override
-  String get home_notlogged_accroche4 => '5600 alapvető szó';
 
   @override
   String get home_notlogged_accroche5 => 'használati gyakoriság szerint rendezve, hogy megtanulja a valóban fontos szavakat.';
@@ -670,4 +661,13 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get hide_lists_finiched => 'Elrejti a kitöltött listákat';
+
+  @override
+  String get app_promotion_ios => 'Gazdagítsd angol szókincsedet 4400 alapvető szóval a könnyű beszéd és megértés érdekében.';
+
+  @override
+  String get app_feature_graphic_FeatureItem1 => '4400 szó';
+
+  @override
+  String get home_notlogged_accroche4 => '4400 alapvető szó';
 }
