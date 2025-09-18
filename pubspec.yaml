@@ -93,6 +93,8 @@ dependencies:
   firebase_storage: ^12.4.10
   flutter_confetti: ^0.5.1
   diacritic: ^0.1.6
+  app_links: ^3.4.1
+  firebase_app_check: ^0.3.2+10
 
 
 flutter_launcher_icons:

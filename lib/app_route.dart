@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/ui/featureGraphic.dart';
 import 'package:voczilla/ui/screens/auth/profile_update_screen.dart';
 import 'package:voczilla/ui/screens/personalisation/step2.dart';
+import 'package:voczilla/ui/screens/share_screen.dart';
 import 'package:voczilla/ui/screens/update_screen.dart';
 import 'package:voczilla/ui/screens/vocabulary/all_lists_defined.dart';
 import 'package:voczilla/ui/screens/vocabulary/all_lists_perso.dart';
@@ -48,6 +49,7 @@ class AppRoute {
   static const String allListsDefined = '/alllistsdefined';
   static const String allListsPerso = '/alllistsperso';
   static const String allListsThemes = '/allliststhemes';
+  static const String share = '/share';
 
 
 
@@ -75,7 +77,7 @@ class AppRoute {
                 if (authState is AuthAuthenticated && authState is! AuthProfileUpdated) {
                   // On vérifie le statut de l'utilisateur UNE SEULE FOIS, ici.
                   UserRepository().checkUserStatusOncePerDay(context);
-                  final userProfile = authState.userProfile;
+                  //final userProfile = authState.userProfile;
                   final firebaseUser = FirebaseAuth.instance.currentUser;
                   if (firebaseUser == null) {
                     //_redirectTo(context, settings, login);
@@ -159,15 +161,22 @@ class AppRoute {
       parameters: {'screen': settings.name ?? ''},
     );
 
+    final uri = Uri.parse(settings.name ?? '');
+    final rootPath = uri.pathSegments.isNotEmpty ? '/${uri.pathSegments[0]}' : '/';
+    switch (rootPath) {
 
-    switch (settings.name) {
       case home:
         return HomeLogoutScreen();
       case featureGraphic:
         return FeatureGraphic();
       case updateScreen:
         return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
-      default:
+      case '/share':
+        if (uri.pathSegments.length == 2) {
+          return (Layout(titleScreen: "param 2",child: ShareScreen(guidlist: uri.pathSegments[1])));
+        }
+        return _errorPage(settings, secure: false);
+     default:
         return _errorPage(settings, secure: false);
     }
   }
@@ -186,6 +195,12 @@ class AppRoute {
         case home:
         case homeLogged:
           return Layout(child: HomeScreen());
+        case '/share':
+          if (uri.pathSegments.length == 2) {
+            return (Layout(titleScreen: "param 2",child: ShareScreen(guidlist: uri.pathSegments[1])));
+          }
+          return _errorPage(settings, secure: false);
+
         case allListsDefined:
           return Layout(
               child: AllListsDefinedScreen(),
