@@ -11,6 +11,7 @@ import 'package:voczilla/ui/widget/statistical/global_statisctical_widget.dart';
 
 import '../../core/utils/logger.dart';
 import '../../core/utils/ui.dart';
+import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../global.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
@@ -54,7 +55,6 @@ class ShareScreen extends StatelessWidget {
         }
 
         if (snapshot.hasError) {
-          // Message d’erreur plus parlant
           return Center(child: Text("Erreur: ${snapshot.error}"));
         }
 
@@ -62,14 +62,15 @@ class ShareScreen extends StatelessWidget {
         if (data == null) {
           return Center(child: Text("Liste introuvable ou accès non autorisé.\n$guidlist"));
         }
-
-        // ⚠️ Ton champ s’appelle sûrement "title" et pas "name"
-        final title = (data['title'] ?? data['name'] ?? 'Sans titre').toString();
-
+        final title = (data['title']  ?? 'Sans titre').toString();
+        var dataListPerso = ListPerso.fromJson(data);
+        dataListPerso= dataListPerso.copyWith(ownListShare: false);
+        Logger.Yellow.log(dataListPerso);
+        VocabulaireUserRepository().addListPersoShareTemp(listPerso: dataListPerso, local: "fr");
         return Center(child: Text("Nom de la liste : $title"));
       },
     );
   }
 }
 
-//6e7cf30a-47b8-4128-8223-7a749801178e
+//409fcd6a-a6ff-48e1-9459-10f0f746dddf

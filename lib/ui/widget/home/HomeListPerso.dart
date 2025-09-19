@@ -27,6 +27,9 @@ class HomelistPerso extends StatelessWidget {
     this.allListView = false,
   });
 
+
+
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(

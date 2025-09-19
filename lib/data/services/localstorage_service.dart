@@ -63,8 +63,14 @@ class LocalStorageService {
     await prefs.setString('userData', jsonEncode(userData));
   }
 
-  Future<Map<String, dynamic>?> getUserData() async {
 
+  Future<void> saveListPersoTemp(Map<String, dynamic> userData) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('listpersosharetemp', jsonEncode(userData));
+  }
+
+
+  Future<Map<String, dynamic>?> getUserData() async {
     final prefs = await SharedPreferences.getInstance();
     final userDataString = prefs.getString('userData');
     if (userDataString != null) {

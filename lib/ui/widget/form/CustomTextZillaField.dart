@@ -8,30 +8,29 @@ import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/notifiers/answer_notifier.dart';
 import '../../../logic/notifiers/button_notifier.dart';
 
-
 class CustomTextZillaField extends StatefulWidget {
   final TextEditingController ControlerField;
   final String labelText;
   final String resulteField;
   final String GUID;
   final dynamic Function()? voidCallBack;
-  bool resultSound;
-  bool AnswerNotifier;
-  bool ButtonNextNotifier;
-
+  final bool resultSound;
+  final bool AnswerNotifier;
+  final bool ButtonNextNotifier;
   final ButtonNotifier? buttonNotifier;
 
-  CustomTextZillaField({
+  const CustomTextZillaField({
+    Key? key,
     required this.ControlerField,
     required this.labelText,
     required this.resulteField,
     this.buttonNotifier,
     this.voidCallBack,
-    required this.GUID ,
+    required this.GUID,
     this.resultSound = false,
-    this.AnswerNotifier =false,
-    this.ButtonNextNotifier =false,
-  });
+    this.AnswerNotifier = false,
+    this.ButtonNextNotifier = false,
+  }) : super(key: key);
 
   @override
   _CustomTextZillaFieldState createState() => _CustomTextZillaFieldState();
@@ -39,13 +38,22 @@ class CustomTextZillaField extends StatefulWidget {
 
 class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
   String _previousValue = "";
+  bool _answeredByUser = true;
+  bool _isAutoFill = false;
+  bool _isInitializing = true;
 
   @override
   void initState() {
-    widget.buttonNotifier?.updateButtonState(false);
-    // On utilise un listener pour un contrôle fin de la saisie
-    widget.ControlerField.addListener(_onTextChanged);
     super.initState();
+    _answeredByUser = true;
+    _isAutoFill = false;
+    _isInitializing = true;
+    _previousValue = "";
+    widget.buttonNotifier?.updateButtonState(false);
+    widget.ControlerField.addListener(_onTextChanged);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _isInitializing = false;
+    });
   }
 
   @override
@@ -55,7 +63,16 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
   }
 
   void _onTextChanged() {
+    if (_isInitializing) return;
+
     final value = widget.ControlerField.text;
+
+    if (_isAutoFill) {
+      _answeredByUser = false;
+      _isAutoFill = false;
+    } else {
+      _answeredByUser = true;
+    }
 
     // Si l'utilisateur efface du texte, on met juste à jour l'état et on sort.
     if (value.length < _previousValue.length) {
@@ -100,14 +117,13 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
       // On utilise un post-frame callback pour s'assurer que le build est terminé
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (mounted) {
-          // On verrouille le champ en cas de succès
           setState(() {});
-
           if (widget.AnswerNotifier) {
             AnswerNotifier(context).markAsAnsweredCorrectly(
-                isAnswerUser: true,
-                guidVocabulaire: widget.GUID,
-                local: Localizations.localeOf(context).languageCode);
+              isAnswerUser: _answeredByUser,
+              guidVocabulaire: widget.GUID,
+              local: Localizations.localeOf(context).languageCode,
+            );
           }
           if (widget.ButtonNextNotifier) {
             widget.buttonNotifier?.updateButtonState(true);
@@ -123,48 +139,58 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.00),
-        child: TextFormField(
-          // Le listener manuel remplace le onChanged
-          readOnly: getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField),
-          enabled:true,
-          controller: widget.ControlerField,
-          maxLength: widget.resulteField.length,
-          maxLengthEnforcement: MaxLengthEnforcement.enforced,
-          style: TextStyle(
-            color: Colors.black,
+      padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.00),
+      child: TextFormField(
+        readOnly: getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField),
+        enabled: true,
+        controller: widget.ControlerField,
+        maxLength: widget.resulteField.length,
+        maxLengthEnforcement: MaxLengthEnforcement.enforced,
+        style: TextStyle(
+          color: Colors.black,
+        ),
+        keyboardType: TextInputType.text,
+        decoration: InputDecoration(
+          icon: writeContentAndStyleIcon(controllerField: widget.ControlerField, stockValue: widget.resulteField),
+          hintText: widget.labelText,
+          labelText: widget.labelText,
+          labelStyle: TextStyle(
+            color: Colors.grey,
           ),
-          keyboardType: TextInputType.text,
-          decoration: InputDecoration(
-              icon: writeContentAndStyleIcon(controllerField: widget.ControlerField, stockValue: widget.resulteField),
-              hintText: widget.labelText,
-              labelText: widget.labelText,
-              labelStyle: TextStyle(
-                  color: Colors.grey
-              ),
-              contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-              enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 2, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField))),
-              focusedBorder: OutlineInputBorder(borderSide: BorderSide(width: 2, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField))),
-              disabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(width: 2, color: Colors.green),
-                borderRadius: BorderRadius.circular(5),
-              ),
-              suffixIcon: (getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField)
-                  ? (
-                  widget.resultSound
-                      ? PlaySoond(guidVocabulaire: widget.GUID, sizeButton: 20,buttonColor: Colors.transparent,iconColor: Colors.black).buttonPlay()
-                      : null
-              )
-                  : IconButton(
-                icon: Icon(Icons.visibility, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField)),
-                onPressed: () {
-                  widget.ControlerField.text = widget.resulteField;
-                  // Le listener va se déclencher et gérer la logique de succès
-                },
-              ))),
-        ));
+          contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(width: 2, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField)),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(width: 2, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField)),
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderSide: const BorderSide(width: 2, color: Colors.green),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          suffixIcon: (getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField)
+              ? (
+              widget.resultSound
+                  ? PlaySoond(
+                guidVocabulaire: widget.GUID,
+                sizeButton: 20,
+                buttonColor: Colors.transparent,
+                iconColor: Colors.black,
+              ).buttonPlay()
+                  : null
+          )
+              : IconButton(
+            icon: Icon(Icons.visibility, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField)),
+            onPressed: () {
+              _isAutoFill = true;
+              widget.ControlerField.text = widget.resulteField;
+            },
+          )
+          ),
+        ),
+      ),
+    );
   }
-
 
   Icon writeContentAndStyleIcon({required TextEditingController controllerField, required String stockValue}) {
     if (controllerField.text.isNotEmpty) {

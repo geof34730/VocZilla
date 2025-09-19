@@ -1,6 +1,7 @@
 // lib/logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:voczilla/data/models/vocabulary_user.dart';
 import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
 import 'package:voczilla/logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
@@ -11,6 +12,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   final VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
   VocabulaireUserState? _lastStateBeforeError;
   VocabulaireUserBloc() : super(VocabulaireUserInitial()) {
+    //_checkAndImportListPersoFromSharePref();
     on<VocabulaireUserEvent>((event, emit) {
       Logger.Blue.log("VocabulaireUserBloc - Event: $event, Current State: $state");
     });
@@ -37,6 +39,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       emit(VocabulaireUserLoaded(vocabulaireUser));
     });
     on<VocabulaireUserRefresh>((event, emit) async {
+
+      print('sssssssssssss');
       emit(VocabulaireUserLoading());
       try {
         final user = await _vocabulaireUserRepository.getVocabulaireUserData(local: event.local);
@@ -219,6 +223,13 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
         } catch (e) {
           emit(VocabulaireUserError("Erreur lors de la suppression de la liste terminée: $e"));
         }
-
   }
+
+/*
+  Future<void> _checkAndImportListPersoFromSharePref() async {
+    final ListPerso? listPerso = await _vocabulaireUserRepository.importListPersoFromSharePref();
+    if (listPerso != null) {
+      add(AddListPerso(listPerso: listPerso, local: "fr")); // adapte "true" si besoin
+    }
+  }*/
 }

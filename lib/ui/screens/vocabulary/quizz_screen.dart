@@ -28,12 +28,22 @@ class QuizzScreen extends StatefulWidget {
 }
 
 class _QuizzScreenState extends State<QuizzScreen> {
-  late TextEditingController customeTextZillaControllerLearnLocalLanguage = TextEditingController();
-  late TextEditingController customeTextZillaControllerLearnEnglishLanguage = TextEditingController();
+  late TextEditingController customeTextZillaControllerLearnLocalLanguage;
+  late TextEditingController customeTextZillaControllerLearnEnglishLanguage;
   late ButtonNotifier buttonNotifier = ButtonNotifier();
   late bool refrechRandom = true;
   int randomItemData = 0;
+  int refreshCount = 0;
   final _vocabulaireRepository=VocabulaireRepository();
+
+  @override
+  void initState() {
+    super.initState();
+    customeTextZillaControllerLearnLocalLanguage = TextEditingController();
+    customeTextZillaControllerLearnEnglishLanguage = TextEditingController();
+    buttonNotifier = ButtonNotifier();
+  }
+
   @override
   void dispose() {
     customeTextZillaControllerLearnLocalLanguage.dispose();
@@ -43,7 +53,6 @@ class _QuizzScreenState extends State<QuizzScreen> {
   }
 
   void _refrechRandom() {
-    print("_refrechRandom");
     next();
   }
 
@@ -130,6 +139,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                   child: Column(
                                     children: [
                                       CustomTextZillaField(
+                                        key: ValueKey("${data[randomItemData]['GUID']}1_$refreshCount"),
                                         AnswerNotifier: true,
                                         ButtonNextNotifier: true,
                                         buttonNotifier: buttonNotifier,
@@ -145,6 +155,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                       ),
 
                                       CustomTextZillaField(
+                                        key: ValueKey("${data[randomItemData]['GUID']}2_$refreshCount"),
                                         AnswerNotifier: true,
                                         ButtonNextNotifier: true,
                                         buttonNotifier: buttonNotifier,
@@ -217,9 +228,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
   void reset(){
     setState(() {
+      refreshCount++;
       refrechRandom = true;
-      customeTextZillaControllerLearnLocalLanguage.clear();
-      customeTextZillaControllerLearnEnglishLanguage.clear();
+      customeTextZillaControllerLearnLocalLanguage.dispose();
+      customeTextZillaControllerLearnEnglishLanguage.dispose();
+      customeTextZillaControllerLearnLocalLanguage = TextEditingController();
+      customeTextZillaControllerLearnEnglishLanguage = TextEditingController();
     });
   }
 

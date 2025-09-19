@@ -190,15 +190,14 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
                   ElevatedButton(
                     key: ValueKey('test_share'),
                     onPressed: (){
-
-                      Navigator.pushReplacementNamed(context, "/share/dc26908f-c6f8-4491-ae1e-2c033132a94d");
+                      Navigator.pushReplacementNamed(context, "/share/409fcd6a-a6ff-48e1-9459-10f0f746dddf");
 
                     },
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                     ),
                     child:  Text(
-                     "test share dc26908f-c6f8-4491-ae1e-2c033132a94d",
+                     "test share 409fcd6a-a6ff-48e1-9459-10f0f746dddf",
                       style: getFontForLanguage(
                         codelang: codelang,
                         fontSize: 16,

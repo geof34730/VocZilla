@@ -10,11 +10,9 @@ import '../models/vocabulary_user.dart';
 
 
 class VocabulaireServerService {
-  //VocabulaireServerService();
   VocabulaireServerService._privateConstructor();
   final _db = FirebaseFirestore.instance;
   final CollectionReference _usersCollection = FirebaseFirestore.instance.collection('users');
-  final CollectionReference _listPersoCollection = FirebaseFirestore.instance.collection('listperso');
   static final VocabulaireServerService _instance = VocabulaireServerService._privateConstructor();
   factory VocabulaireServerService() {
     return _instance;
@@ -28,10 +26,21 @@ class VocabulaireServerService {
     return null;
   }
 
-
-
+  Future<Map<String, dynamic>?> fetchSharedListPerso(String guid) async {
+    try {
+      final doc = await _db.collection('listsPerso').doc(guid).get();
+      if (doc.exists) {
+        return doc.data();
+      }
+      return null;
+    } catch (e) {
+      Logger.Red.log('Error fetching shared list: $e');
+      return null;
+    }
+  }
 
   Future<void> updateUserData(Map<String, dynamic> userData) async {
+    Logger.Blue.log("updateUserData");
     final prefs = await SharedPreferences.getInstance();
     final String? userJson = prefs.getString('current_user');
     String? uid;
@@ -48,8 +57,7 @@ class VocabulaireServerService {
     userData.remove('listTheme');
 
     final listLearned = userData['ListGuidVocabularyLearned'];
-    final int learnedLen =
-    (listLearned is List) ? listLearned.length : 0;
+    final int learnedLen = (listLearned is List) ? listLearned.length : 0;
     final listDefinedEnd = userData['ListDefinedEnd'];
     final allListView = userData['allListView'];
 
@@ -81,10 +89,7 @@ class VocabulaireServerService {
 
   /// Upsert toutes les listes actuelles de l'utilisateur dans `lists/`,
   /// supprime celles disparues, et met à jour users/{uid}.listIds.
-  Future<void> _syncGlobalLists({
-    required String uid,
-    required List<Map<String, dynamic>> listsFromClient,
-  }) async {
+  Future<void> _syncGlobalLists({required String uid,required List<Map<String, dynamic>> listsFromClient}) async {
     // Récupère l'état actuel côté "global" pour calculer le diff
     final existingSnap = await _db
         .collection('listsPerso')

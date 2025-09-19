@@ -43,7 +43,7 @@ List<Widget> getListPerso({
           guid: listPerso.guid,
           title: listPerso.title,
           backgroundColor: Color(listPerso.color),
-          editMode: listPerso.ownListShare,
+          editMode: true,
           isListShare: listPerso.isListShare,
           ownListShare: listPerso.ownListShare,
           list: listPerso,
