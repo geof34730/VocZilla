@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:percent_indicator/multi_segment_linear_indicator.dart';
 
+import '../../../core/utils/logger.dart';
 import '../../../data/models/statistical_length.dart';
 import '../../../data/repository/vocabulaire_user_repository.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../elements/Error.dart';
 
@@ -16,6 +18,7 @@ class CardHomeStatisticalWidget extends StatefulWidget {
   final dynamic list;
   final bool isListPerso;
   final bool isListTheme;
+  final bool listIsEnd;
   final int? vocabulaireBegin;
   final int? vocabulaireEnd;
   final String local;
@@ -35,7 +38,8 @@ class CardHomeStatisticalWidget extends StatefulWidget {
     this.vocabulaireBegin,
     this.vocabulaireEnd,
     required this.local,
-    required this.listName
+    required this.listName,
+    required this.listIsEnd,
   });
 
   @override
@@ -121,17 +125,23 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
                   ErrorMessage(context: context, message: 'Erreur de statistique: ${userDataSnapshot.error}');
                 });
               }
-
               // Calcule le pourcentage à afficher en se basant sur les données en cache.
               double percentageProgression = 0.0;
               if (_lastStatisticalData != null) {
                 final statisticalData = _lastStatisticalData!;
                 if (statisticalData.countVocabulaireAll > 0) {
                   percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
+
+                  if (userDataSnapshot.hasData) {
+                    VocabulaireUserRepository().checkAndUpdateStatutEndList(listName: widget.listName,percentage: percentageProgression.clamp(0.0, 1.0),context: context);
+                  }
+                  Future<bool> isInListEnd() => VocabulaireUserRepository().isListEnd(listName: widget.listName);
+                  if(percentageProgression.clamp(0.0, 1.0)!=1.0 && widget.listIsEnd){
+                    Logger.Green.log("IL Y UN SOUCIS AVEC ${widget.listName} ${percentageProgression.clamp(0.0, 1.0)}");
+                    final bloc = BlocProvider.of<VocabulaireUserBloc>(context);
+                    bloc.add(RemoveCompletedDefinedList(listName: widget.listName, local: "fr"));
+                  }
                 }
-              }
-              if (userDataSnapshot.hasData) {
-                VocabulaireUserRepository().checkAndUpdateStatutEndList(listName: widget.listName,percentage: percentageProgression.clamp(0.0, 1.0),context: context);
               }
               // Construit toujours l'indicateur, ce qui évite les sauts d'interface.
               return _buildIndicator(percentage: percentageProgression);

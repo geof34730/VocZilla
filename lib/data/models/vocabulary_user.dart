@@ -37,8 +37,10 @@ abstract class ListPerso with _$ListPerso {
   const factory ListPerso({
     @JsonKey(name: "guid")
     required String guid,
+    @JsonKey(name: "ownerUid")
+    @Default('') String ownerUid,
     @JsonKey(name: "title")
-    required String title,
+    @Default('') String title,
     @JsonKey(name: "color")
     required int color,
     @JsonKey(name: "listGuidVocabulary")
@@ -48,7 +50,7 @@ abstract class ListPerso with _$ListPerso {
     @JsonKey(name: "ownListShare")
     @Default(true) bool ownListShare,
     @JsonKey(name: "urlShare")
-    @Default('') String urlShare,
+    @Default('') String? urlShare,
   }) = _ListPerso;
 
   factory ListPerso.fromJson(Map<String, dynamic> json) => _$ListPersoFromJson(json);

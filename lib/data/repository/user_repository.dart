@@ -14,6 +14,7 @@ import '../../global.dart';
 import '../../logic/blocs/user/user_bloc.dart';
 import '../../logic/blocs/user/user_event.dart';
 import '../../ui/widget/elements/DialogHelper.dart';
+import '../services/vocabulaires_server_service.dart';
 
 
 class UserRepository {
@@ -29,16 +30,9 @@ class UserRepository {
   Completer<void> _purchaseCompleter = Completer<void>();
   StreamSubscription<List<PurchaseDetails>>? _purchaseSubscription;
 
-  Future<Map<String, dynamic>> fetchUserData(String userId) async {
-    final doc = await _firestore
-        .collection('users')
-        .doc(userId)
-        .get();
-    if (doc.exists) {
-      return doc.data()!;
-    } else {
-      throw Exception("User not found");
-    }
+  Future<Map<String, dynamic>?> fetchUserData(String userId) async {
+    final serverData = await VocabulaireServerService().fetchUserData();
+    return serverData;
   }
 
 

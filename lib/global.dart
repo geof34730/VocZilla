@@ -1,6 +1,11 @@
+import 'package:cloud_functions/cloud_functions.dart';
+
 const String titleApp="VocZilla";
 const int titleAppCute1=3;
 String versionApp="1.0.0";
+
+// Instance globale pour Cloud Functions
+final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
 
 int globalCountVocabulaireAll=4399;
 bool debugMode=true;

@@ -12,7 +12,10 @@ import 'package:voczilla/ui/screens/vocabulary/all_lists_defined.dart';
 import 'package:voczilla/ui/screens/vocabulary/all_lists_perso.dart';
 import 'package:voczilla/ui/screens/vocabulary/all_lists_themes.dart';
 
+import 'data/repository/vocabulaire_user_repository.dart';
 import 'global.dart';
+import 'logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import 'logic/check_connectivity.dart';
 import 'core/utils/logger.dart';
 import 'logic/blocs/update/update_state.dart';
@@ -155,6 +158,7 @@ class AppRoute {
 
   static Widget _getUnauthenticatedPage(RouteSettings settings, BuildContext context) {
     Logger.Blue.log("_getUnauthenticatedPage settings.name: ${settings.name}");
+
     final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
     analytics.logEvent(
       name: 'screen',

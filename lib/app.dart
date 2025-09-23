@@ -155,9 +155,9 @@ class MyApp extends StatelessWidget {
                                     'UserBloc', state);
                                 if (state is UserSessionLoaded) {
                                   context.read<VocabulaireUserBloc>().add(
-                                      VocabulaireUserUpdate(
-                                          userData: state.userData));
-                                }
+                                      VocabulaireUserUpdate(userData: state.userData));
+                                  }
+
                               },
                             ),
                             BlocListener<

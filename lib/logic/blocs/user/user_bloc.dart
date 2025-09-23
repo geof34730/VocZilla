@@ -54,8 +54,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
           trialEndDate != null && trialEndDate.isAfter(now);
 
       // 5. Émettre l'état final et complet
-      Logger.Green.log(
-          "UserSessionLoaded: isSubscribed=$isSubscribed, isTrialActive=$isTrialActive, daysLeft=$trialLeftDays");
+      Logger.Green.log("UserSessionLoaded: isSubscribed=$isSubscribed, isTrialActive=$isTrialActive, daysLeft=$trialLeftDays");
       emit(UserSessionLoaded(
         userData: userData,
         isSubscribed: isSubscribed,

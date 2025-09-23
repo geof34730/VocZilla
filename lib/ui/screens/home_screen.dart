@@ -7,7 +7,10 @@ import 'package:voczilla/ui/widget/home/HomeClassement.dart';
 import 'package:voczilla/ui/widget/home/HomeListTheme.dart';
 import 'package:voczilla/ui/widget/statistical/global_statisctical_widget.dart';
 
+import '../../core/utils/getFontForLanguage.dart';
+import '../../core/utils/logger.dart';
 import '../../core/utils/ui.dart';
+import '../../data/services/vocabulaires_server_service.dart';
 import '../../global.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
@@ -19,10 +22,12 @@ import '../widget/home/HomeListPerso.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  @override
+
   @override
   Widget build(BuildContext context) {
     final codelang = Localizations.localeOf(context).languageCode;
+
+
     return Stack(
         children: [
           SingleChildScrollView(
@@ -30,6 +35,72 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+    /*            ElevatedButton(
+                  key: ValueKey('test_share'),
+                  onPressed: (){
+                    Navigator.pushReplacementNamed(context, "/share/21020ca0-31f9-4fdc-9e5a-4894028fb5ee");
+
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  ),
+                  child:  Text(
+                    "test share 21020ca0-31f9-4fdc-9e5a-4894028fb5ee",
+                    style: getFontForLanguage(
+                      codelang: codelang,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+*/
+
+                Row(
+                  children: [
+
+                ElevatedButton(
+                  key: ValueKey('test_share333'),
+                  onPressed: (){
+                    print("1");
+                    VocabulaireServerService().getListPersoUser().then((value) => Logger.Green.log(value.toString()));
+                    print("2");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  ),
+                  child:  Text(
+                    "getListPersoUser",
+                    style: getFontForLanguage(
+                      codelang: codelang,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+
+                ElevatedButton(
+                  key: ValueKey('fetchUserData'),
+                  onPressed: (){
+                    print("1");
+                    VocabulaireServerService().fetchUserData().then((value) => Logger.Green.log(value.toString()));
+                    print("2");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  ),
+                  child:  Text(
+                    "fetchUserData",
+                    style: getFontForLanguage(
+                      codelang: codelang,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+    ]
+                ),
+
+
                 GlobalStatisticalWidget(
                   isListPerso: false,
                   isListTheme: false,

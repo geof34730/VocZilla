@@ -12,6 +12,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   final VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
   VocabulaireUserState? _lastStateBeforeError;
   VocabulaireUserBloc() : super(VocabulaireUserInitial()) {
+    _vocabulaireUserRepository.initializeVocabulaireUserData();
     //_checkAndImportListPersoFromSharePref();
     on<VocabulaireUserEvent>((event, emit) {
       Logger.Blue.log("VocabulaireUserBloc - Event: $event, Current State: $state");
@@ -33,14 +34,16 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       Logger.Blue.log('VocabulaireUserBloc - Traitement de VocabulaireUserUpdate');
       emit(VocabulaireUserLoading());
       // Convertir Map<String, dynamic> en VocabulaireUser// dans vocabulaire_user_event.dart
-
-
       final vocabulaireUser = VocabulaireUser.fromJson(event.userData);
       emit(VocabulaireUserLoaded(vocabulaireUser));
     });
     on<VocabulaireUserRefresh>((event, emit) async {
+     //await VocabulaireUserRepository().importListPersoFromSharePref();
 
-      print('sssssssssssss');
+      // Rafraîchis le bloc pour mettre à jour l'UI
+     // context.read<VocabulaireUserBloc>().add(CheckVocabulaireUserStatus(local: Localizations.localeOf(context).languageCode));
+
+      Logger.Yellow.log('VocabulaireUserRefresh');
       emit(VocabulaireUserLoading());
       try {
         final user = await _vocabulaireUserRepository.getVocabulaireUserData(local: event.local);
@@ -55,6 +58,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     });
   }
   void _onVocabulaireUserBlocErrorCleared(VocabulaireUserBlocErrorCleared event, Emitter<VocabulaireUserState> emit,) {
+    Logger.Yellow.log('VocabulaireUserBlocErrorCleared');
       if (state is VocabulaireUserError) {
         if (_lastStateBeforeError != null) {
           emit(_lastStateBeforeError!);
@@ -63,10 +67,10 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
       }
     }
   }
-  Future<void> _onCheckVocabulaireUserStatus(
-      CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
+  Future<void> _onCheckVocabulaireUserStatus(CheckVocabulaireUserStatus event, Emitter<VocabulaireUserState> emit) async {
     // 1. Émettre explicitement l'état de chargement.
     // C'est le signal clair que l'interface attend.
+    Logger.Yellow.log('_onCheckVocabulaireUserStatus');
     emit(VocabulaireUserLoading());
 
     try {
@@ -81,9 +85,9 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     }
   }
 
-  Future<void> _onLoadVocabulaireUserData(
-      LoadVocabulaireUserData event, Emitter<VocabulaireUserState> emit) async {
+  Future<void> _onLoadVocabulaireUserData(LoadVocabulaireUserData event, Emitter<VocabulaireUserState> emit) async {
     emit(VocabulaireUserLoading());
+    Logger.Yellow.log('_onLoadVocabulaireUserData');
     try {
       emit(VocabulaireUserLoaded(event.data));
     } catch (e) {
@@ -92,8 +96,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     }
   }
 
-  Future<void> _onDeleteListPerso(
-      DeleteListPerso event, Emitter<VocabulaireUserState> emit) async {
+  Future<void> _onDeleteListPerso(DeleteListPerso event, Emitter<VocabulaireUserState> emit) async {
+    Logger.Yellow.log('_onDeleteListPerso');
     try {
       await _vocabulaireUserRepository.deleteListPerso(guid: event.listPersoGuid);
       emit(ListPersoDeletionSuccess(event.listPersoGuid));
@@ -104,8 +108,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   }
 
   /// Gère l'ajout d'une nouvelle liste personnelle.
-  Future<void> _onAddListPerso(
-      AddListPerso event, Emitter<VocabulaireUserState> emit) async {
+  Future<void> _onAddListPerso(AddListPerso event, Emitter<VocabulaireUserState> emit) async {
+    Logger.Yellow.log('_onAddListPerso');
     try {
       await _vocabulaireUserRepository.addListPerso(listPerso: event.listPerso, local: event.local);
       // Rafraîchit les données après l'action
@@ -116,8 +120,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   }
 
   /// Gère la mise à jour d'une liste personnelle.
-  Future<void> _onUpdateListPerso(
-      UpdateListPerso event, Emitter<VocabulaireUserState> emit) async {
+  Future<void> _onUpdateListPerso(UpdateListPerso event, Emitter<VocabulaireUserState> emit) async {
+    Logger.Yellow.log('_onUpdateListPerso');
     try {
       await _vocabulaireUserRepository.updateListPerso(listPerso: event.listPerso, local: event.local);
       // Rafraîchit les données après l'action
@@ -128,8 +132,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   }
 
   /// Gère l'ajout d'un mot de vocabulaire à une liste personnelle.
-  Future<void> _onAddVocabulaireListPerso(
-      AddVocabulaireListPerso event, Emitter<VocabulaireUserState> emit) async {
+  Future<void> _onAddVocabulaireListPerso( AddVocabulaireListPerso event, Emitter<VocabulaireUserState> emit) async {
+    Logger.Yellow.log('_onAddVocabulaireListPerso');
     try {
       await _vocabulaireUserRepository.addVocabulaireListPerso(
           guidListPerso: event.guidListPerso,
@@ -144,8 +148,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   }
 
   /// Gère la suppression d'un mot de vocabulaire d'une liste personnelle.
-  Future<void> _onDeleteVocabulaireListPerso(
-      DeleteVocabulaireListPerso event, Emitter<VocabulaireUserState> emit) async {
+  Future<void> _onDeleteVocabulaireListPerso(DeleteVocabulaireListPerso event, Emitter<VocabulaireUserState> emit) async {
+    Logger.Yellow.log('_onDeleteVocabulaireListPerso');
     try {
       await _vocabulaireUserRepository.deleteVocabulaireListPerso(
           guidListPerso: event.guidListPerso,
@@ -160,10 +164,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   }
 
   /// Gère l'ajout d'une liste définie comme terminée.
-  Future<void> _onAddCompletedDefinedList(
-    AddCompletedDefinedList event,
-    Emitter<VocabulaireUserState> emit,
-  ) async {
+  Future<void> _onAddCompletedDefinedList(AddCompletedDefinedList event,Emitter<VocabulaireUserState> emit,) async {
+    Logger.Yellow.log('_onAddCompletedDefinedList');
     try {
       final updatedUserData =
           await _vocabulaireUserRepository.addCompletedDefinedList(
@@ -180,10 +182,9 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   }
 
   /// Gère la suppression d'une liste définie comme terminée.
-  Future<void> _onRemoveCompletedDefinedList(
-    RemoveCompletedDefinedList event,
-    Emitter<VocabulaireUserState> emit,
+  Future<void> _onRemoveCompletedDefinedList(RemoveCompletedDefinedList event,Emitter<VocabulaireUserState> emit,
   ) async {
+    Logger.Yellow.log('_onRemoveCompletedDefinedList');
     try {
       final updatedUserData = await _vocabulaireUserRepository.removeCompletedDefinedList(
         listName: event.listName,
@@ -197,10 +198,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     }
   }
 
-  Future<void> _onFilterShowAllList(
-      FilterShowAllList event,
-      Emitter<VocabulaireUserState> emit,
-      ) async{
+  Future<void> _onFilterShowAllList(FilterShowAllList event,Emitter<VocabulaireUserState> emit) async{
+    Logger.Yellow.log('_onFilterShowAllList');
         try {
           final updatedUserData = await _vocabulaireUserRepository.filterShowAllList(local: event.local);
           if (updatedUserData != null) {
@@ -211,10 +210,8 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
         }
     }
 
-  Future<void> _onFilterHideListFinished(
-      FilterHideListFinished event,
-      Emitter<VocabulaireUserState> emit,
-      ) async{
+  Future<void> _onFilterHideListFinished(FilterHideListFinished event, Emitter<VocabulaireUserState> emit,) async{
+    Logger.Yellow.log('_onFilterHideListFinished');
         try {
           final updatedUserData = await _vocabulaireUserRepository.filterHidListFinished(local: event.local);
           if (updatedUserData != null) {
@@ -227,6 +224,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
 
 /*
   Future<void> _checkAndImportListPersoFromSharePref() async {
+    Logger.Yellow.log('_checkAndImportListPersoFromSharePref');
     final ListPerso? listPerso = await _vocabulaireUserRepository.importListPersoFromSharePref();
     if (listPerso != null) {
       add(AddListPerso(listPerso: listPerso, local: "fr")); // adapte "true" si besoin

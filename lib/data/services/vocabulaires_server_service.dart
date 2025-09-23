@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_functions/cloud_functions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
@@ -18,16 +20,9 @@ class VocabulaireServerService {
     return _instance;
   }
 
-  Future<Map<String, dynamic>?> fetchUserData() async {
-    final response = await http.get(Uri.parse(serverVocabulaireUserUrl));
-    if (response.statusCode == 200) {
-      return jsonDecode(response.body);
-    }
-    return null;
-  }
 
   Future<Map<String, dynamic>?> fetchSharedListPerso(String guid) async {
-    try {
+   /* try {
       final doc = await _db.collection('listsPerso').doc(guid).get();
       if (doc.exists) {
         return doc.data();
@@ -36,24 +31,85 @@ class VocabulaireServerService {
     } catch (e) {
       Logger.Red.log('Error fetching shared list: $e');
       return null;
+    }*/
+  }
+
+  Future<List<dynamic>> getListPersoUser() async {
+    Logger.Green.log('getListPersoUser');
+
+    try {
+      final HttpsCallable callable = functions.httpsCallable('getListPersoUser');
+      final result = await callable.call();
+
+      Logger.Green.log('Successfully called getListPersoUser function : ${result.data}');
+
+      if (result.data is List) {
+        final jsonString = jsonEncode(result.data);
+        final correctedList = jsonDecode(jsonString) as List;
+        return correctedList.map((item) => ListPerso.fromJson(item as Map<String, dynamic>)).toList();
+      }
+
+      return [];
+    } on FirebaseFunctionsException catch (e) {
+      Logger.Red.log('FirebaseFunctionsException in getListPersoUser: ${e.code} - ${e.message}');
+      return [];
+    } catch (e) {
+      Logger.Red.log('An unexpected error occurred in getListPersoUser: $e');
+      return [];
+    }
+  }
+
+  Future<Map<String, dynamic>?> fetchUserData() async {
+    Logger.Blue.log("Attempting to fetch user data...");
+
+    final currentUser = FirebaseAuth.instance.currentUser;
+    if (currentUser == null) {
+      Logger.Red.log("CRITICAL: No user is signed in according to FirebaseAuth. Aborting.");
+      return null;
+    }
+
+    try {
+
+      final HttpsCallable callable = functions.httpsCallable('getUserData');
+      final result = await callable.call();
+      Logger.Green.log('Successfully called and executed getUserData function');
+
+      final data = result.data;
+      if (data == null) {
+        return null;
+      }
+
+      // Conversion profonde et sûre en utilisant jsonEncode/Decode
+      final jsonString = jsonEncode(data);
+      Logger.Red.log("User data before deserialization: $jsonString");
+      final correctedData = jsonDecode(jsonString) as Map<String, dynamic>;
+
+      Logger.Red.log("correctedData: $correctedData");
+
+      return correctedData;
+
+    } on FirebaseFunctionsException catch (e) {
+      Logger.Red.log("FirebaseFunctionsException caught: Code [${e.code}], Message [${e.message}]");
+      return null;
+    } catch (e) {
+      Logger.Red.log('Erreur lors de la récupération des données utilisateur : $e');
+      return null;
     }
   }
 
   Future<void> updateUserData(Map<String, dynamic> userData) async {
-    Logger.Blue.log("updateUserData");
-    final prefs = await SharedPreferences.getInstance();
-    final String? userJson = prefs.getString('current_user');
-    String? uid;
-    if (userJson != null) {
-      final Map<String, dynamic> userMap = jsonDecode(userJson);
-      uid = userMap['uid'] as String?;
-    }
-    if (uid == null) {
-      // log/throw si besoin
-      return;
+    Logger.Yellow.log("updateUserData with Cloud Function");
+
+
+    Logger.Pink.log("server service updateUserData userData: $userData");
+
+
+    if (FirebaseAuth.instance.currentUser == null) {
+      Logger.Red.log("User not authenticated, aborting updateUserData call.");
+      throw Exception("User must be authenticated to update data.");
     }
 
-    // --- Prépare les champs "users" ---
+    // --- Prépare les champs ---
     userData.remove('listTheme');
 
     final listLearned = userData['ListGuidVocabularyLearned'];
@@ -61,102 +117,35 @@ class VocabulaireServerService {
     final listDefinedEnd = userData['ListDefinedEnd'];
     final allListView = userData['allListView'];
 
-    // --- Normalise ListPerso venant de ton modèle Flutter ---
+    // --- Normalise ListPerso venant du modèle Flutter ---
     final listPerso = userData['ListPerso'];
     List<Map<String, dynamic>> listsFromClient = [];
     if (listPerso != null) {
-      // si listPerso est déjà une List<Map> -> garde, sinon appelle toJson()
       listsFromClient = (listPerso as List).map<Map<String, dynamic>>((e) {
         if (e is Map<String, dynamic>) return e;
-        // e est probablement un objet ListPerso avec toJson()
-        // ignore: avoid_dynamic_calls
         return (e as dynamic).toJson() as Map<String, dynamic>;
       }).toList();
     }
 
-    // 1) Écrit le document user
-    await _usersCollection.doc(uid).set({
+    final Map<String, dynamic> payload = {
       'ListGuidVocabularyLearned': listLearned,
-      'ListPerso': listsFromClient, // tu peux le garder durant la transition
+      'ListPerso': listsFromClient,
       'countGuidVocabularyLearned': learnedLen,
       'ListDefinedEnd': listDefinedEnd,
       'allListView': allListView,
-    }, SetOptions(merge: true));
+    };
 
-    // 2) Synchronise la collection globale `lists`
-    await _syncGlobalLists(uid: uid, listsFromClient: listsFromClient);
-  }
-
-  /// Upsert toutes les listes actuelles de l'utilisateur dans `lists/`,
-  /// supprime celles disparues, et met à jour users/{uid}.listIds.
-  Future<void> _syncGlobalLists({required String uid,required List<Map<String, dynamic>> listsFromClient}) async {
-    // Récupère l'état actuel côté "global" pour calculer le diff
-    final existingSnap = await _db
-        .collection('listsPerso')
-        .where('ownerUid', isEqualTo: uid)
-        .get();
-
-    final existingIds = existingSnap.docs.map((d) => d.id).toSet();
-    final currentIds = listsFromClient
-        .map((m) => (m['guid'] ?? m['id'] ?? '').toString().trim())
-        .where((id) => id.isNotEmpty)
-        .toSet();
-
-    final toDelete = existingIds.difference(currentIds);
-
-    // Batch pour rester atomique (< 500 écritures par batch)
-    WriteBatch batch = _db.batch();
-    int opCount = 0;
-    Future<void> commitIfNeeded() async {
-      if (opCount >= 450) { // marge de sécu
-        await batch.commit();
-        batch = _db.batch();
-        opCount = 0;
-      }
+    try {
+      // Utilise l'instance globale 'functions'
+      final HttpsCallable callable = functions.httpsCallable('updateUserData');
+      final result = await callable.call(payload);
+      Logger.Green.log('Successfully called updateUserData function: ${result.data}');
+    } on FirebaseFunctionsException catch (e) {
+      Logger.Red.log('Failed to call updateUserData function: ${e.code} - ${e.message}');
+      throw Exception('Failed to update user data via cloud function');
+    } catch (e) {
+      Logger.Red.log('An unexpected error occurred while calling updateUserData: $e');
+      throw Exception('An unexpected error occurred during user data update');
     }
-
-    // Upsert des listes courantes
-    for (final raw in listsFromClient) {
-      final guid = (raw['guid'] ?? raw['id'] ?? '').toString().trim();
-      if (guid.isEmpty) continue;
-
-      final ref = _db.collection('listsPerso').doc(guid);
-
-
-      final payload = <String, dynamic>{
-        'guid': guid,
-        'ownerUid': uid,
-        'title': raw['title'] ?? '',
-        'isListShare': (raw['isListShare'] ?? raw['isListShare'] ?? false) == true,
-        'ownListShare': (raw['ownListShare'] ?? false) == true,
-        'urlShare': raw['urlShare'] ?? '',
-        'color': raw['color'],
-        'listGuidVocabulary': (raw['listGuidVocabulary'] is List)
-            ? List<String>.from(raw['listGuidVocabulary'])
-            : <String>[],
-        'countGuidVocabularyLearned':
-        (raw['countGuidVocabularyLearned'] ?? 0) as int,
-        'createdAt': FieldValue.serverTimestamp(),
-        'updatedAt': FieldValue.serverTimestamp(),
-      };
-
-      batch.set(ref, payload, SetOptions(merge: true));
-      opCount++;
-      await commitIfNeeded();
-    }
-
-    // Suppression des listes obsolètes (celles qui n'existent plus côté client)
-    for (final id in toDelete) {
-      batch.delete(_db.collection('listsPerso').doc(id));
-      opCount++;
-      await commitIfNeeded();
-    }
-
-    // Met à jour l'index léger côté user
-    final userRef = _usersCollection.doc(uid);
-    batch.set(userRef, {'listIds': currentIds.toList()}, SetOptions(merge: true));
-    opCount++;
-
-    await batch.commit();
   }
 }

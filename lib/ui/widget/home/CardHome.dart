@@ -251,7 +251,8 @@ class _CardHomeState extends State<CardHome> {
                         barColorProgress: Colors.green,
                         barColorLeft:  Colors.orange ,
                         paddingLevelBar: widget.paddingLevelBar,
-                        local:local
+                        local:local,
+                        listIsEnd: widget.isListEnd,
                       ),
                   )
               ],

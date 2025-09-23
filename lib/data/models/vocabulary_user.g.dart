@@ -44,7 +44,8 @@ Map<String, dynamic> _$VocabulaireUserToJson(_VocabulaireUser instance) =>
 
 _ListPerso _$ListPersoFromJson(Map<String, dynamic> json) => _ListPerso(
   guid: json['guid'] as String,
-  title: json['title'] as String,
+  ownerUid: json['ownerUid'] as String? ?? '',
+  title: json['title'] as String? ?? '',
   color: (json['color'] as num).toInt(),
   listGuidVocabulary:
       (json['listGuidVocabulary'] as List<dynamic>?)
@@ -59,6 +60,7 @@ _ListPerso _$ListPersoFromJson(Map<String, dynamic> json) => _ListPerso(
 Map<String, dynamic> _$ListPersoToJson(_ListPerso instance) =>
     <String, dynamic>{
       'guid': instance.guid,
+      'ownerUid': instance.ownerUid,
       'title': instance.title,
       'color': instance.color,
       'listGuidVocabulary': instance.listGuidVocabulary,

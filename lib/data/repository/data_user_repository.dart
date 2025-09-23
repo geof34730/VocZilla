@@ -21,23 +21,25 @@ class DataUserRepository {
     if (user != null && user.uid == uid) {
       return user;
     }
+    Logger.Yellow.log('**** DataUserRepository  => getUser 2 => ${user.toString()}');
     // 2. Si non trouvé dans le cache, récupérer depuis Firestore
     user = await _dataUserService.getUserFromFirestore(uid: uid);
     // 3. Si trouvé sur Firestore, le sauvegarder dans le cache local pour les prochains accès
 
-    Logger.Yellow.log('**** DataUserRepository  => getUser 2 => ${user.toString()}');
+
+
+
+    Logger.Yellow.log('**** DataUserRepository  => getUser 3 => ${user.toString()}');
     if (user != null) {
       await _localStorageService.saveUser(user);
     }
 
-    Logger.Yellow.log('**** DataUserRepository  => getUser 3 => ${user.toString()}');
+    Logger.Yellow.log('**** DataUserRepository  => getUser 4 => ${user.toString()}');
     return user;
   }
 
   /// Sauvegarde un nouvel utilisateur sur Firestore et dans le cache local.
   Future<void> saveUser({required UserFirestore user,required bool mergeData}) async {
-
-
     Logger.Yellow.log('DataUserRepository => saveUser => ${user}');
     await _dataUserService.saveUserToFirestore(user:user);
     await _localStorageService.saveUser(user);

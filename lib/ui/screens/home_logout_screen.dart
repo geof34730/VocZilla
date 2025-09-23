@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:voczilla/core/utils/localization.dart';
 import 'package:voczilla/global.dart';
 
@@ -10,8 +11,11 @@ import '../../core/utils/device.dart';
 import '../../core/utils/errorMessage.dart';
 import '../../core/utils/getFontForLanguage.dart';
 import '../../core/utils/logger.dart';
+import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../logic/blocs/auth/auth_bloc.dart';
 import '../../logic/blocs/auth/auth_event.dart';
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../theme/appColors.dart';
 import '../backgroundBlueLinear.dart';
 import '../widget/elements/Error.dart';
@@ -43,7 +47,7 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
       Logger.Green.log('Device ID récupéré = $deviceId');
 
       // 2. Appeler la Cloud Function
-      final callable = FirebaseFunctions.instance.httpsCallable('signInOrRegisterWithDevice');
+      final callable = functions.httpsCallable('signInOrRegisterWithDevice');
       final parameters = <String, dynamic>{'deviceId': deviceId};
 
       Logger.Yellow.log('Envoi des paramètres à la Cloud Function: $parameters');
@@ -61,6 +65,7 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
 
       if (mounted) {
         context.read<AuthBloc>().add(AuthLoggedIn(user));
+
       }
     } on FirebaseFunctionsException catch (e) {
       debugPrint('Erreur Cloud Function [${e.code}]: ${e.message}');
@@ -83,6 +88,7 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
   Widget build(BuildContext context) {
     final codelang = Localizations.localeOf(context).languageCode;
     final baseStyle = Theme.of(context).textTheme.bodyMedium;
+
     return Scaffold(
       body: SafeArea(
         child: BackgroundBlueLinear(
@@ -190,14 +196,14 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
                   ElevatedButton(
                     key: ValueKey('test_share'),
                     onPressed: (){
-                      Navigator.pushReplacementNamed(context, "/share/409fcd6a-a6ff-48e1-9459-10f0f746dddf");
+                      Navigator.pushReplacementNamed(context, "/share/21020ca0-31f9-4fdc-9e5a-4894028fb5ee");
 
                     },
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                     ),
                     child:  Text(
-                     "test share 409fcd6a-a6ff-48e1-9459-10f0f746dddf",
+                     "test share 21020ca0-31f9-4fdc-9e5a-4894028fb5ee",
                       style: getFontForLanguage(
                         codelang: codelang,
                         fontSize: 16,
