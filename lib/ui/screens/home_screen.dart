@@ -67,13 +67,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ElevatedButton(
                 key: ValueKey('test_share'),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, "/share/6dba61f6-6607-4ed5-9a74-70e8bb6bbfc0");
+                  Navigator.pushReplacementNamed(context, "/share/9073138f-df22-469f-8f20-c47cea2ac74f");
                 },
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 ),
                 child: Text(
-                  "test share 6dba61f6-6607-4ed5-9a74-70e8bb6bbfc0",
+                  "test share 9073138f-df22-469f-8f20-c47cea2ac74f",
                   style: getFontForLanguage(
                     codelang: codelang,
                     fontSize: 16,

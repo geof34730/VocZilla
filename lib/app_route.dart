@@ -173,7 +173,7 @@ class AppRoute {
         return Layout(titleScreen: context.loc.title_app_update, child: UpdateScreen());
       case '/share':
         if (uri.pathSegments.length == 2) {
-          return (Layout(titleScreen: "param 2",child: ShareScreen(guidlist: uri.pathSegments[1])));
+          return (Layout(child: ShareScreen(guidlist: uri.pathSegments[1])));
         }
         return _errorPage(settings, secure: false);
      default:
@@ -197,7 +197,7 @@ class AppRoute {
           return Layout(child: HomeScreen());
         case '/share':
           if (uri.pathSegments.length == 2) {
-            return (Layout(titleScreen: "param 2",child: ShareScreen(guidlist: uri.pathSegments[1])));
+            return (Layout(child: ShareScreen(guidlist: uri.pathSegments[1])));
           }
           return _errorPage(settings, secure: false);
 

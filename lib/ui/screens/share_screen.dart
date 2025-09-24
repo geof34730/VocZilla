@@ -1,12 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:voczilla/data/models/vocabulary_user.dart';
 import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
-import 'package:voczilla/logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
-import 'package:voczilla/logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
-import 'package:voczilla/logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../core/utils/logger.dart';
 
@@ -57,8 +54,6 @@ class _ShareScreenState extends State<ShareScreen> {
 
         Future.delayed(Duration(seconds: 4)).then((value ) =>{
           Navigator.of(context).pushNamedAndRemoveUntil("/", (route) => false)
-
-
         });
 
       }
@@ -71,7 +66,7 @@ class _ShareScreenState extends State<ShareScreen> {
         future: _future,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: Text("Chargement..."));
+            return LoaderList();
           }
           if (snapshot.hasError) {
             return Center(child: Text("Erreur: ${snapshot.error}"));
@@ -82,14 +77,40 @@ class _ShareScreenState extends State<ShareScreen> {
               child: Text("Liste introuvable ou accès non autorisé.\n${widget.guidlist}"),
             );
           }
-          final title = (data['title'] ?? 'Sans titre').toString();
+
 
           // Déclenche l'import et la navigation une seule fois
           _handleImportAndNavigation(data);
+          return LoaderList();
 
-          return Center(child: Text("Nom de la liste : $title"));
         },
 
     );
   }
+
+  Widget LoaderList(){
+     return Padding(
+          padding: EdgeInsets.only(top:150),
+         child:Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              LoadingAnimationWidget.dotsTriangle(
+                color: Colors.blue,
+                size: 150.0,
+              ),
+              Padding(
+                  padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 30.0),
+                  child: Text(
+                    "Chargement de votre liste personnalis\u00e9e partag\u00e9e.",
+                    textAlign: TextAlign.center,
+                  )
+              )
+            ],
+         )
+     );
+
+  }
+
 }
