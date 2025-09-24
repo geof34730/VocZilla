@@ -106,12 +106,6 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
         final currentState = bloc.state as VocabulaireUserLoaded;
         final bool isAlreadyCompleted =
         currentState.data.ListDefinedEnd.contains(widget.listName);
-
-        if (percentageProgression == 1.0 && !isAlreadyCompleted) {
-          bloc.add(AddCompletedDefinedList(listName: widget.listName!, local: widget.local));
-        } else if (percentageProgression < 1.0 && isAlreadyCompleted) {
-          bloc.add(RemoveCompletedDefinedList(listName: widget.listName!, local: widget.local));
-        }
       }
     });
 

@@ -131,16 +131,10 @@ class _CardHomeStatisticalWidgetState extends State<CardHomeStatisticalWidget> {
                 final statisticalData = _lastStatisticalData!;
                 if (statisticalData.countVocabulaireAll > 0) {
                   percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
-
                   if (userDataSnapshot.hasData) {
-                    VocabulaireUserRepository().checkAndUpdateStatutEndList(listName: widget.listName,percentage: percentageProgression.clamp(0.0, 1.0),context: context);
+                   // VocabulaireUserRepository().checkAndUpdateStatutEndList(listName: widget.listName,percentage: percentageProgression.clamp(0.0, 1.0),context: context);
                   }
-                  Future<bool> isInListEnd() => VocabulaireUserRepository().isListEnd(listName: widget.listName);
-                  if(percentageProgression.clamp(0.0, 1.0)!=1.0 && widget.listIsEnd){
-                    Logger.Green.log("IL Y UN SOUCIS AVEC ${widget.listName} ${percentageProgression.clamp(0.0, 1.0)}");
-                    final bloc = BlocProvider.of<VocabulaireUserBloc>(context);
-                    bloc.add(RemoveCompletedDefinedList(listName: widget.listName, local: "fr"));
-                  }
+
                 }
               }
               // Construit toujours l'indicateur, ce qui évite les sauts d'interface.

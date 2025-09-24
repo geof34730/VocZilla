@@ -63,8 +63,23 @@ class LocalStorageService {
     await prefs.setString('userData', jsonEncode(userData));
   }
 
+  Future<void> removeListInListDefined({required String listName}) async {
+    final prefs = await SharedPreferences.getInstance();
+    final userDataString = prefs.getString('userData');
+    if (userDataString != null) {
+      Map<String, dynamic> userData = jsonDecode(userDataString);
+      if (userData['ListDefinedEnd'] != null &&
+          userData['ListDefinedEnd'] is List) {
+        (userData['ListDefinedEnd'] as List).remove(listName);
+        await prefs.setString('userData', jsonEncode(userData));
+      }
+    }
+  }
 
-  Future<void> saveListPersoTemp(Map<String, dynamic> userData) async {
+
+
+
+    Future<void> saveListPersoTemp(Map<String, dynamic> userData) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('listpersosharetemp', jsonEncode(userData));
   }

@@ -1,9 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/data/models/vocabulary_user.dart';
 import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
 
 import '../../core/utils/logger.dart';
+import '../../global.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../logic/blocs/vocabulaires/vocabulaires_event.dart';
 import '../../ui/screens/vocabulary/list_screen.dart';
@@ -191,6 +194,23 @@ class VocabulaireRepository {
       var dataAll=_vocabulaireService.getAllData(local: local);
       return dataAll;
    }
+
+  List<Map<String, int>> cartConfigDefined() {
+    final List<Map<String, int>> cardConfigs = [
+      {'begin': 0, 'end': 20},
+      {'begin': 20, 'end': 50},
+      {'begin': 50, 'end': 100},
+      {'begin': 100, 'end': 200},
+      {'begin': 200, 'end': 300},
+      {'begin': 300, 'end': 400},
+    ];
+    // Toujours générer la liste complète des configurations possibles.
+    for (int i = 400; i < globalCountVocabulaireAll; i += 100) {
+      final int endValue = min(i + 100, globalCountVocabulaireAll);
+      cardConfigs.add({'begin': i, 'end': endValue});
+    }
+    return cardConfigs;
+  }
 
 }
 

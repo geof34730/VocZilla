@@ -56,19 +56,8 @@ class VocabulaireUserUpdate extends VocabulaireUserEvent {
   final Map<String, dynamic> userData;
   VocabulaireUserUpdate({required this.userData});
 }
+
 class VocabulaireUserBlocErrorCleared extends VocabulaireUserEvent {}
-class AddCompletedDefinedList extends VocabulaireUserEvent {
-  final String listName;
-  final String local;
-   AddCompletedDefinedList({required this.listName, required this.local});
-}
-
-class RemoveCompletedDefinedList extends VocabulaireUserEvent {
-  final String listName;
-  final String local;
-   RemoveCompletedDefinedList({required this.listName, required this.local});
-}
-
 
 class FilterShowAllList extends VocabulaireUserEvent {
   final String local;

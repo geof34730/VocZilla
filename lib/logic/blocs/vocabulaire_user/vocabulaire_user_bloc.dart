@@ -25,8 +25,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<AddVocabulaireListPerso>(_onAddVocabulaireListPerso);
     on<DeleteVocabulaireListPerso>(_onDeleteVocabulaireListPerso);
     on<VocabulaireUserBlocErrorCleared>(_onVocabulaireUserBlocErrorCleared);
-    on<AddCompletedDefinedList>(_onAddCompletedDefinedList);
-    on<RemoveCompletedDefinedList>(_onRemoveCompletedDefinedList);
+
     on<FilterShowAllList>(_onFilterShowAllList);
     on<FilterHideListFinished>(_onFilterHideListFinished);
 
@@ -163,40 +162,6 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     }
   }
 
-  /// Gère l'ajout d'une liste définie comme terminée.
-  Future<void> _onAddCompletedDefinedList(AddCompletedDefinedList event,Emitter<VocabulaireUserState> emit,) async {
-    Logger.Yellow.log('_onAddCompletedDefinedList');
-    try {
-      final updatedUserData =
-          await _vocabulaireUserRepository.addCompletedDefinedList(
-        listName: event.listName,
-        local: event.local,
-      );
-
-      if (updatedUserData != null) {
-        emit(VocabulaireUserLoaded(updatedUserData));
-      }
-    } catch (e) {
-      emit(VocabulaireUserError("Erreur lors de l'ajout de la liste terminée: $e"));
-    }
-  }
-
-  /// Gère la suppression d'une liste définie comme terminée.
-  Future<void> _onRemoveCompletedDefinedList(RemoveCompletedDefinedList event,Emitter<VocabulaireUserState> emit,
-  ) async {
-    Logger.Yellow.log('_onRemoveCompletedDefinedList');
-    try {
-      final updatedUserData = await _vocabulaireUserRepository.removeCompletedDefinedList(
-        listName: event.listName,
-        local: event.local,
-      );
-      if (updatedUserData != null) {
-        emit(VocabulaireUserLoaded(updatedUserData));
-      }
-    } catch (e) {
-      emit(VocabulaireUserError("Erreur lors de la suppression de la liste terminée: $e"));
-    }
-  }
 
   Future<void> _onFilterShowAllList(FilterShowAllList event,Emitter<VocabulaireUserState> emit) async{
     Logger.Yellow.log('_onFilterShowAllList');

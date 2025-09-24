@@ -9,6 +9,7 @@ import 'dart:convert';
 import '../../core/utils/logger.dart';
 import '../../global.dart';
 import '../models/vocabulary_user.dart';
+import '../repository/vocabulaire_user_repository.dart';
 
 
 class VocabulaireServerService {
@@ -97,12 +98,20 @@ class VocabulaireServerService {
     }
   }
 
+
+
+
+
+
+
+
   Future<void> updateUserData(Map<String, dynamic> userData) async {
     Logger.Yellow.log("updateUserData with Cloud Function");
-
-
     Logger.Pink.log("server service updateUserData userData: $userData");
 
+    var lisFinished = await VocabulaireUserRepository().getListFinished(local:'fr');
+
+    Logger.Green.log("getListFinished: $lisFinished");
 
     if (FirebaseAuth.instance.currentUser == null) {
       Logger.Red.log("User not authenticated, aborting updateUserData call.");
@@ -114,7 +123,7 @@ class VocabulaireServerService {
 
     final listLearned = userData['ListGuidVocabularyLearned'];
     final int learnedLen = (listLearned is List) ? listLearned.length : 0;
-    final listDefinedEnd = userData['ListDefinedEnd'];
+    final listDefinedEnd = lisFinished;
     final allListView = userData['allListView'];
 
     // --- Normalise ListPerso venant du modèle Flutter ---

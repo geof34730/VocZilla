@@ -4,6 +4,7 @@ import 'package:voczilla/ui/widget/home/CardHome.dart';
 import 'dart:math';
 
 import '../../../app_route.dart';
+import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../global.dart';
 
 
@@ -15,22 +16,9 @@ List<Widget> getListDefined({
   required double withCarhome,
 }) {
 
-  final List<Map<String, int>> cardConfigs = [
-    {'begin': 0, 'end': 20},
-    {'begin': 20, 'end': 50},
-    {'begin': 50, 'end': 100},
-    {'begin': 100, 'end': 200},
-    {'begin': 200, 'end': 300},
-    {'begin': 300, 'end': 400},
-  ];
-  // Toujours générer la liste complète des configurations possibles.
-  for (int i = 400; i < globalCountVocabulaireAll; i += 100) {
-    final int endValue = min(i + 100, globalCountVocabulaireAll);
-    cardConfigs.add({'begin': i, 'end': endValue});
-  }
 
   // 1. Transformer toutes les configurations en données de carte.
-  final allCards = cardConfigs.map((config) {
+  final allCards = VocabulaireRepository().cartConfigDefined().map((config) {
       final int begin = config['begin']!;
       final int end = config['end']!;
       String title;

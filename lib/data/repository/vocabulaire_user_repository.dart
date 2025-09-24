@@ -50,6 +50,7 @@ class VocabulaireUserRepository {
 
 
 
+
   Future<void> updateListTheme() async {
     try {
       final userDataJson = await _localStorageService.getUserData();
@@ -518,69 +519,14 @@ class VocabulaireUserRepository {
     );
   }
 
-  Future<VocabulaireUser?> addCompletedDefinedList({required String listName, required String local}) async {
-    Logger.Green.log('Tentative d\'ajout de la liste terminée : $listName');
-    try {
-      var userData = await getVocabulaireUserData(local: local);
-      if (userData != null) {
 
-        if (!userData.ListDefinedEnd.contains(listName)) {
-          final updatedUserData = userData.copyWith(ListDefinedEnd: List.from(userData.ListDefinedEnd)..add(listName),
-          );
-          await updateVocabulaireUserData(userData: updatedUserData);
-          Logger.Green.log('Liste terminée ajoutée: $listName');
-          return updatedUserData;
-        } else {
-          Logger.Magenta.log('Cette liste terminée existe déjà.');
-          return userData; // Retourne les données non modifiées
-        }
-      } else {
-        Logger.Red.log('Erreur: Données utilisateur null, impossible d\'ajouter la liste.');
-      }
-    } catch (e) {
-      Logger.Red.log('Erreur lors de l\'ajout de la liste terminée : $e');
-    }
-    return null; // Retourne null en cas d'erreur ou si les données sont null
+
+
+  Future<bool> isListEndPresent() async{
+    final userDataJson = await _localStorageService.getUserData();
+    return userDataJson?['ListDefinedEnd'].length > 0;
   }
 
-  Future<VocabulaireUser?> removeCompletedDefinedList({required String listName, required String local}) async {
-    Logger.Green.log('Tentative de suppression de la liste terminée : $listName');
-    try {
-      var userData = await getVocabulaireUserData(local: local);
-      if (userData != null) {
-        if (userData.ListDefinedEnd.contains(listName)) {
-          final updatedUserData = userData.copyWith(
-            ListDefinedEnd: List.from(userData.ListDefinedEnd)..remove(listName),
-          );
-          await updateVocabulaireUserData(userData: updatedUserData);
-          Logger.Green.log('Liste terminée supprimée: $listName');
-          return updatedUserData;
-        }
-        return userData; // Retourne les données non modifiées si la liste n'a pas été trouvée
-      }
-    } catch (e) {
-      Logger.Red.log('Erreur lors de la suppression de la liste terminée : $e');
-    }
-    return null; // Retourne null en cas d'erreur ou si les données sont null
-  }
-
-  Future<VocabulaireUser?> filterShowAllList({required String local}) async {
-    try {
-      var userData = await getVocabulaireUserData(local: local);
-      if (userData != null) {
-        final updatedUserData = userData.copyWith(allListView: true);
-
-        Logger.Red.log(updatedUserData.allListView);
-
-        await updateVocabulaireUserData(userData: updatedUserData);
-        Logger.Green.log('view toutes les listes activé.');
-        return updatedUserData;
-      }
-    } catch (e) {
-      Logger.Red.log('Erreur lors de l\'activation de l\'affichage de toutes les listes : $e');
-    }
-    return null;
-  }
 
   Future<VocabulaireUser?> filterHidListFinished({required String local}) async {
     try {
@@ -599,49 +545,84 @@ class VocabulaireUserRepository {
     return null;
   }
 
-  Future<bool> isListEnd({required String listName}) async {
-    final userDataJson = await _localStorageService.getUserData();
-    if(userDataJson?['ListDefinedEnd'] != null){
-      Logger.Green.log("isListEnd :");
-      Logger.Green.log(userDataJson?['ListDefinedEnd']);
-      Logger.Green.log(listName);
-      Logger.Green.log(userDataJson?['ListDefinedEnd'].contains(listName));
 
-      return userDataJson?['ListDefinedEnd'].contains(listName);
-    }
-    else{
-      return false;
-    }
+  Future<void> removeListEnd({required String listName}) async {
+    LocalStorageService().removeListInListDefined(listName: 'listName');
   }
 
+
+  Future<VocabulaireUser?> filterShowAllList({required String local}) async {
+    try {
+      var userData = await getVocabulaireUserData(local: local);
+      if (userData != null) {
+        final updatedUserData = userData.copyWith(allListView: true);
+
+        Logger.Red.log(updatedUserData.allListView);
+
+        await updateVocabulaireUserData(userData: updatedUserData);
+        Logger.Green.log('view toutes les listes activé.');
+        return updatedUserData;
+      }
+    } catch (e) {
+      Logger.Red.log('Erreur lors de l\'activation de l\'affichage de toutes les listes : $e');
+    }
+    return null;
+  }
   Future<bool> isFilterAllList() async {
     final userDataJson = await _localStorageService.getUserData();
     return userDataJson?['allListView']=="false" ? false : true;
   }
 
-  Future<bool> isListEndPresent() async{
-    final userDataJson = await _localStorageService.getUserData();
-    return userDataJson?['ListDefinedEnd'].length > 0;
-  }
+  Future<List<String>> getListFinished({required String local}) async {
+    VocabulaireUser? userData = await getVocabulaireUserData(local: local);
+    if (userData == null) {
+      return [];
+    }
 
-  Future<void> checkAndUpdateStatutEndList({required String listName, required double percentage, required BuildContext context}) async {
+    final learnedGuids = userData.listGuidVocabularyLearned.toSet();
+    final allVocabularies = await VocabulaireRepository().getDataTop(local: local);
+    final Set<String> allFinishedGuids = {};
 
-    Logger.Green.log("***********checkAndUpdateStatutEndList: $listName");
+    // 1. Calculer les listes "définies" qui sont terminées
+    final cardConfigs = VocabulaireRepository().cartConfigDefined();
+    for (var config in cardConfigs) {
+      final int begin = config['begin']!;
+      final int end = config['end']!;
+      String keyStringTest = (begin == 0) ? "top$end" : "top$begin$end";
 
-    bool isInListEnd = await isListEnd(listName: listName);
-    final bloc = BlocProvider.of<VocabulaireUserBloc>(context);
-    if (percentage == 1.0) {
-      ////CHECK PRESENCE LIST END
-      if (!isInListEnd) {
-        Logger.Green.log("***********checkAndUpdateStatutEndList:ADD");
-        bloc.add(AddCompletedDefinedList(listName: listName, local: "fr"));
-      }
-    } else {
-      if (isInListEnd) {
-        Logger.Green.log("***********checkAndUpdateStatutEndList:DELETE");
-        bloc.add(RemoveCompletedDefinedList(listName: listName, local: "fr"));
+      if (end <= allVocabularies.length) {
+        final sublist = allVocabularies.sublist(begin, end);
+        final allGuidsInSublist = sublist.map((v) => v['GUID'] as String).toSet();
+        if (allGuidsInSublist.isNotEmpty && learnedGuids.containsAll(allGuidsInSublist)) {
+          allFinishedGuids.add(keyStringTest);
+        }
       }
     }
+
+    // 2. Calculer les listes personnelles terminées
+    for (var list in userData.listPerso) {
+      if (list.listGuidVocabulary.isNotEmpty && list.listGuidVocabulary.every((guid) => learnedGuids.contains(guid))) {
+        allFinishedGuids.add(list.guid);
+      }
+    }
+
+    // 3. Calculer les listes thématiques terminées
+    for (var list in userData.listTheme) {
+      if (list.listGuidVocabulary.isNotEmpty && list.listGuidVocabulary.every((guid) => learnedGuids.contains(guid))) {
+        allFinishedGuids.add(list.guid);
+      }
+    }
+
+    // 4. Mettre à jour ListDefinedEnd avec TOUTES les listes terminées, si la liste a changé
+    final existingDefinedEnd = userData.ListDefinedEnd.toSet();
+    bool areSetsEqual = existingDefinedEnd.length == allFinishedGuids.length && existingDefinedEnd.containsAll(allFinishedGuids);
+
+    if (!areSetsEqual) {
+      final updatedUserData = userData.copyWith(ListDefinedEnd: allFinishedGuids.toList());
+      await updateVocabulaireUserData(userData: updatedUserData);
+    }
+
+    // 5. Retourner le résultat combiné
+    return allFinishedGuids.toList();
   }
 }
-

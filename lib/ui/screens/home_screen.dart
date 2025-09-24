@@ -55,50 +55,6 @@ class HomeScreen extends StatelessWidget {
                 ),
 */
 
-                Row(
-                  children: [
-
-                ElevatedButton(
-                  key: ValueKey('test_share333'),
-                  onPressed: (){
-                    print("1");
-                    VocabulaireServerService().getListPersoUser().then((value) => Logger.Green.log(value.toString()));
-                    print("2");
-                  },
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                  ),
-                  child:  Text(
-                    "getListPersoUser",
-                    style: getFontForLanguage(
-                      codelang: codelang,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-
-                ElevatedButton(
-                  key: ValueKey('fetchUserData'),
-                  onPressed: (){
-                    print("1");
-                    VocabulaireServerService().fetchUserData().then((value) => Logger.Green.log(value.toString()));
-                    print("2");
-                  },
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                  ),
-                  child:  Text(
-                    "fetchUserData",
-                    style: getFontForLanguage(
-                      codelang: codelang,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-    ]
-                ),
 
 
                 GlobalStatisticalWidget(
