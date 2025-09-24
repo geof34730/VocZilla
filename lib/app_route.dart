@@ -92,10 +92,6 @@ class AppRoute {
             BlocListener<UserBloc, UserState>(
               listener: (context, userState) {
                 final userBlocInstance = context.read<UserBloc>();
-                Logger.Red.log(
-                    "Listener<UserBloc> HashCode: ${userBlocInstance.hashCode}, State: $userState");
-
-                // userRepository.showDialogueFreeTrialOnceByDay(context: context);
                 if (settings.name != subscription) {
                   if (userState is UserSessionLoaded) {
                     // User is in trial and not subscribed, show the dialog

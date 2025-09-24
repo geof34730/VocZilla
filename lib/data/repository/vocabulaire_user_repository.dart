@@ -26,17 +26,17 @@ class VocabulaireUserRepository {
 
 
   Future<void> initializeVocabulaireUserData() async {
-    Logger.Pink.log('********VocabulaireUserRepository: initializeUserData');
+    Logger.Red.log('********VocabulaireUserRepository: initializeUserData');
     try {
       final serverData = await _vocabulaireServerService.fetchUserData();
       if (serverData != null) {
         // AFFICHE LES DONNÉES BRUTES DU SERVEUR
         Logger.Red.log("----------------- RAW SERVER DATA -----------------");
-        Logger.Red.log(jsonEncode(serverData));
+       Logger.Red.log(jsonEncode(serverData));
         Logger.Red.log("-------------------------------------------------");
 
         final userData = VocabulaireUser.fromJson(serverData);
-        Logger.Pink.log('********data: $userData');
+        //Logger.Pink.log('********data: $userData');
         await _localStorageService.saveUserData(userData.toJson());
       }
 
@@ -45,11 +45,6 @@ class VocabulaireUserRepository {
       Logger.Red.log('Erreur lors de la récupération des données utilisateur : $e');
     }
   }
-
-
-
-
-
 
   Future<void> updateListTheme() async {
     try {
@@ -67,14 +62,11 @@ class VocabulaireUserRepository {
     }
   }
 
-
-
-
   Future<VocabulaireUser?> getVocabulaireUserData({required String local}) async {
     Logger.Green.log( "getVocabulaireUserData ");
     try {
       var userDataJson = await _localStorageService.getUserData();
-      Logger.Pink.log("getVocabulaireUserData: $userDataJson");
+      //Logger.Pink.log("getVocabulaireUserData: $userDataJson");
       if (userDataJson != null) {
         Logger.Pink.log("userDataJson: ${userDataJson['ListPerso']} ");
         //var dataSyncListPersoShare=syncListPersoShare(userData:VocabulaireUser.fromJson(userDataJson));
@@ -90,14 +82,10 @@ class VocabulaireUserRepository {
     }
   }
 
-  /// Met à jour les données de l'utilisateur localement et sur le serveur.
-  /// Retourne `true` en cas de succès, `false` sinon.
   Future<bool> updateVocabulaireUserData({required VocabulaireUser userData}) async {
     Logger.Red.log('VocabulaireUserRepository: updateVocabulaireUserData ${userData.allListView}');
     try {
-
       Logger.Green.log("updateVocabulaireUserData: ${userData.toJson()}");
-
       final userDataJson = userData.toJson();
       await _localStorageService.saveUserData(userDataJson);
       await _vocabulaireServerService.updateUserData(userDataJson);
@@ -107,7 +95,6 @@ class VocabulaireUserRepository {
       return false;
     }
   }
-
 
   Future<VocabulaireUser> getEmptyVocabulaireUserData({required String local}) async {
     final List<ListTheme> userTheme = await VocabulaireService().getThemesData();
@@ -319,6 +306,7 @@ class VocabulaireUserRepository {
   Future<void> addListPersoShareTemp({required ListPerso listPerso, required String local}) async {
     final prefs = await SharedPreferences.getInstance();
     //delete sharePreference before add
+    Logger.Green.log("addListPersoShareTemp $listPerso");
     await saveListPersoShareTemp(listPersoShareData:listPerso);
   }
 
@@ -328,40 +316,39 @@ class VocabulaireUserRepository {
 
   }
 
-  Future<ListPerso?> importListPersoFromSharePref() async {
+  Future<bool> importListPersoFromSharePref() async {
+    Logger.Green.log("importListPersoFromSharePref");
     final prefs = await SharedPreferences.getInstance();
-    Logger.Yellow.log("importListPersoFromSharePref");
-    Logger.Yellow.log(prefs.containsKey('listpersosharetemp'));
 
     if (prefs.containsKey('listpersosharetemp')) {
       final String? listPersoShareJson = prefs.getString('listpersosharetemp');
-      Logger.Yellow.log("importListPersoFromSharePref: listPersoShareJson $listPersoShareJson");
       if (listPersoShareJson != null) {
         try {
           final Map<String, dynamic> decodedMap = jsonDecode(listPersoShareJson);
           final ListPerso listPerso = ListPerso.fromJson(decodedMap);
 
-          // Vérifier si la liste existe déjà
           VocabulaireUser? userData = await getVocabulaireUserData(local: "fr");
           bool alreadyExists = userData?.listPerso.any((l) => l.guid == listPerso.guid) ?? false;
 
+          // Toujours supprimer la clé temporaire pour éviter les réimportations
+          await prefs.remove('listpersosharetemp');
+
           if (!alreadyExists) {
-            VocabulaireUserBloc().add(AddListPerso( listPerso: listPerso, local: "fr"));
+            Logger.Green.log("Nouvelle liste perso à importer. Ajout en cours...");
+            await addListPerso(listPerso: listPerso, local: "fr");
+            Logger.Yellow.log("importListPersoFromSharePref: liste importée.");
+            return true; // Importation réussie
           } else {
             Logger.Yellow.log("La liste existe déjà, on ne l'ajoute pas.");
           }
-
-          // Supprimer la clé temporaire
-           await prefs.remove('listpersosharetemp');
-          Logger.Yellow.log("importListPersoFromSharePref: $listPerso");
-          return listPerso;
         } catch (e) {
-          Logger.Red.log("Erreur lors de l'import de listpersosharetemp listPersoShareJson: $e");
-          return null;
+          Logger.Red.log("Erreur lors de l'import de listpersosharetemp: $e");
+          // S'assurer que la clé est supprimée même en cas d'erreur de parsing
+          await prefs.remove('listpersosharetemp');
         }
       }
     }
-    return null;
+    return false; // Aucune importation n'a eu lieu
   }
 
   Future<void> deleteListPerso({required String guid}) async {
@@ -519,14 +506,18 @@ class VocabulaireUserRepository {
     );
   }
 
-
-
-
-  Future<bool> isListEndPresent() async{
+  Future<bool> isListEndPresent() async {
     final userDataJson = await _localStorageService.getUserData();
-    return userDataJson?['ListDefinedEnd'].length > 0;
-  }
 
+    if (userDataJson != null &&
+        userDataJson['ListDefinedEnd'] != null &&
+        userDataJson['ListDefinedEnd'] is List &&
+        (userDataJson['ListDefinedEnd'] as List).isNotEmpty) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   Future<VocabulaireUser?> filterHidListFinished({required String local}) async {
     try {
@@ -545,11 +536,9 @@ class VocabulaireUserRepository {
     return null;
   }
 
-
   Future<void> removeListEnd({required String listName}) async {
     LocalStorageService().removeListInListDefined(listName: 'listName');
   }
-
 
   Future<VocabulaireUser?> filterShowAllList({required String local}) async {
     try {
@@ -568,6 +557,7 @@ class VocabulaireUserRepository {
     }
     return null;
   }
+  
   Future<bool> isFilterAllList() async {
     final userDataJson = await _localStorageService.getUserData();
     return userDataJson?['allListView']=="false" ? false : true;

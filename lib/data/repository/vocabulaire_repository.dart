@@ -32,10 +32,7 @@ class VocabulaireRepository {
   }
 
    goVocabulairesWithState({required BuildContext context, required dynamic state, bool isVocabularyNotLearned = false, required String local}){
-      Logger.Yellow.log("goVocabulairesWithState state ${state.data}");
-      Logger.Yellow.log("goVocabulairesWithState isListTheme ${state.data.isListTheme}");
-      Logger.Yellow.log("goVocabulairesWithState isListPerso ${state.data.isListPerso}");
-      goVocabulaires(
+       goVocabulaires(
           isVocabularyNotLearned: isVocabularyNotLearned,
           vocabulaireEnd: state.data.vocabulaireEnd,
           vocabulaireBegin:  state.data.vocabulaireBegin,
@@ -51,7 +48,6 @@ class VocabulaireRepository {
    Future<VocabularyBlocLocal> goVocabulaireAllForListPersoList({required bool isVocabularyNotLearned, required String guid, required String local}) async {
       var data = await getDataTop(local:local);
       late List<dynamic> listPersoGuidVocabulary=[];
-      Logger.Yellow.log("guidListPerso: $guid");
       final List<dynamic> dataSlice = data;
       final List<dynamic> learnedVocabularies = await _vocabulaireUserRepository.getVocabulaireUserDataLearned(vocabulaireSpecificList: dataSlice);
       final Set<String> learnedVocabulariesGuids = learnedVocabularies.map((vocabulaire) => vocabulaire['GUID'] as String).toSet();
@@ -133,7 +129,6 @@ class VocabulaireRepository {
           guid: guid,
         );
       } else if(isListTheme) {
-          Logger.Yellow.log("go guidListTheme: $guid");
           VocabulaireUser? userData = await _vocabulaireUserRepository.getVocabulaireUserData(local: local);
           ListTheme? listTheme = userData?.listTheme.firstWhere((listTheme) => listTheme.guid == guid,
             orElse: () => ListTheme(guid: "", title: {"fr" : ""}, listGuidVocabulary: []),

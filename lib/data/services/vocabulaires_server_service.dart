@@ -62,6 +62,7 @@ class VocabulaireServerService {
 
   Future<Map<String, dynamic>?> fetchUserData() async {
     Logger.Blue.log("Attempting to fetch user data...");
+    //await VocabulaireUserRepository().importListPersoFromSharePref();
 
     final currentUser = FirebaseAuth.instance.currentUser;
     if (currentUser == null) {
@@ -82,10 +83,10 @@ class VocabulaireServerService {
 
       // Conversion profonde et sûre en utilisant jsonEncode/Decode
       final jsonString = jsonEncode(data);
-      Logger.Red.log("User data before deserialization: $jsonString");
+     // Logger.Red.log("User data before deserialization: $jsonString");
       final correctedData = jsonDecode(jsonString) as Map<String, dynamic>;
 
-      Logger.Red.log("correctedData: $correctedData");
+     // Logger.Red.log("correctedData: $correctedData");
 
       return correctedData;
 

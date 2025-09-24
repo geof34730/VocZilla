@@ -12,7 +12,9 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
   final VocabulaireUserRepository _vocabulaireUserRepository = VocabulaireUserRepository();
   VocabulaireUserState? _lastStateBeforeError;
   VocabulaireUserBloc() : super(VocabulaireUserInitial()) {
-    _vocabulaireUserRepository.initializeVocabulaireUserData();
+    //VocabulaireUserRepository().importListPersoFromSharePref();
+
+    //_vocabulaireUserRepository.initializeVocabulaireUserData();
     //_checkAndImportListPersoFromSharePref();
     on<VocabulaireUserEvent>((event, emit) {
       Logger.Blue.log("VocabulaireUserBloc - Event: $event, Current State: $state");
@@ -32,18 +34,13 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
     on<VocabulaireUserUpdate>((event, emit) {
       Logger.Blue.log('VocabulaireUserBloc - Traitement de VocabulaireUserUpdate');
       emit(VocabulaireUserLoading());
-      // Convertir Map<String, dynamic> en VocabulaireUser// dans vocabulaire_user_event.dart
       final vocabulaireUser = VocabulaireUser.fromJson(event.userData);
       emit(VocabulaireUserLoaded(vocabulaireUser));
     });
     on<VocabulaireUserRefresh>((event, emit) async {
-     //await VocabulaireUserRepository().importListPersoFromSharePref();
-
-      // Rafraîchis le bloc pour mettre à jour l'UI
-     // context.read<VocabulaireUserBloc>().add(CheckVocabulaireUserStatus(local: Localizations.localeOf(context).languageCode));
-
       Logger.Yellow.log('VocabulaireUserRefresh');
       emit(VocabulaireUserLoading());
+
       try {
         final user = await _vocabulaireUserRepository.getVocabulaireUserData(local: event.local);
         if (user != null) {
@@ -86,6 +83,7 @@ class VocabulaireUserBloc extends Bloc<VocabulaireUserEvent, VocabulaireUserStat
 
   Future<void> _onLoadVocabulaireUserData(LoadVocabulaireUserData event, Emitter<VocabulaireUserState> emit) async {
     emit(VocabulaireUserLoading());
+
     Logger.Yellow.log('_onLoadVocabulaireUserData');
     try {
       emit(VocabulaireUserLoaded(event.data));

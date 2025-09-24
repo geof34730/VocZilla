@@ -64,6 +64,8 @@ class DebugWidget extends StatelessWidget {
                     child:Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
+
+
                         Text("CUBIT",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -118,6 +120,37 @@ class DebugWidget extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        Container(
+                            width: double.infinity,
+                            color: Colors.black,
+                            padding: const EdgeInsets.all(5.00),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                FutureBuilder<String?>(
+                                  future: _getListPersoShareTemp(),
+                                  builder: (context, snapshot) {
+                                    if (snapshot.connectionState == ConnectionState.waiting) {
+                                      return Text('sharelistPerso => Chargement...', style: TextStyle(color: Colors.yellow));
+                                    } else if (snapshot.hasError) {
+                                      return Text('sharelistPerso => Erreur: ${snapshot.error}', style: TextStyle(color: Colors.red));
+                                    } else {
+                                      final value = snapshot.data;
+                                      return Text(
+                                        'sharelistPerso => ${value ?? "Aucune valeur"}',
+                                        style: TextStyle(color: Colors.yellow),
+                                      );
+                                    }
+                                  },
+                                )
+
+
+                              ],
+                            )
+                        ),
+
+
                         FutureBuilder<Map<String, dynamic>>(
                           future: _getAllSharedPreferences(),
                           builder: (context, snapshot) {
@@ -157,6 +190,13 @@ class DebugWidget extends StatelessWidget {
             ),
           ],
         ));
+  }
+
+
+
+  Future<String?> _getListPersoShareTemp() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('listpersosharetemp');
   }
 
   Future<void> _clearSharedPreferences(BuildContext context) async {
