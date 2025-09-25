@@ -61,7 +61,7 @@ class _ShareScreenState extends State<ShareScreen> {
         future: _future,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return LoaderList();
+            return Center(child:LoaderList());
           }
           if (snapshot.hasError) {
             return Center(
@@ -79,7 +79,7 @@ class _ShareScreenState extends State<ShareScreen> {
 
           // Déclenche l'import et la navigation une seule fois
           _handleImportAndNavigation(data);
-          return LoaderList();
+          return Center(child:LoaderList());
 
         },
 

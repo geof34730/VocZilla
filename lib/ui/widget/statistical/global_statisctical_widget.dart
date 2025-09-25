@@ -97,15 +97,13 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
 
       double percentageProgression = 0.0;
       if (statisticalData.countVocabulaireAll > 0) {
-        percentageProgression =
-            statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
+        percentageProgression =  statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
       }
 
       final bloc = context.read<VocabulaireUserBloc>();
       if (bloc.state is VocabulaireUserLoaded) {
         final currentState = bloc.state as VocabulaireUserLoaded;
-        final bool isAlreadyCompleted =
-        currentState.data.ListDefinedEnd.contains(widget.listName);
+        final bool isAlreadyCompleted = currentState.data.ListDefinedEnd.contains(widget.listName);
       }
     });
 
@@ -123,8 +121,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
         if (state is VocabulaireUserLoaded) {
           setState(() {
             _fetchStatisticalData(local: widget.local);
-            countTrophyState =
-                getTrophyTopLength(dataListDefinedEnd: state.data.ListDefinedEnd);
+            countTrophyState = getTrophyTopLength(dataListDefinedEnd: state.data.ListDefinedEnd);
           });
         }
       },
@@ -150,8 +147,7 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
               if (_lastStatisticalData != null) {
                 final statisticalData = _lastStatisticalData!;
                 if (statisticalData.countVocabulaireAll > 0) {
-                  percentageProgression =
-                      statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
+                  percentageProgression = statisticalData.vocabLearnedCount / statisticalData.countVocabulaireAll;
                 }
               }
 
@@ -229,7 +225,6 @@ class _GlobalStatisticalWidgetState extends State<GlobalStatisticalWidget> {
                 ),
               ),
             ],
-
           ],
         ),
         Center(

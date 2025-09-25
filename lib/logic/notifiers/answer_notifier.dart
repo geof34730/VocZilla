@@ -16,6 +16,9 @@ class AnswerNotifier extends ChangeNotifier {
   Future<void> markAsAnsweredCorrectly({required bool isAnswerUser, required String guidVocabulaire, required String local}) async {
     final VocabulaireUserRepository vocabulaireUserRepository=VocabulaireUserRepository();
     final vocabulaireUserBloc = BlocProvider.of<VocabulaireUserBloc>(context);
+
+
+    Logger.Green.log("isAnswerUser: $isAnswerUser");
     if (isAnswerUser) {
       await vocabulaireUserRepository.addVocabulaireUserDataLearned(vocabularyGuid: guidVocabulaire, local:local);
     } else {

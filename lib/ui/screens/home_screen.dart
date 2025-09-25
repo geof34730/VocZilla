@@ -15,7 +15,7 @@ import '../../core/utils/ui.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../global.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
-import '../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart' hide VocabulaireUserUpdate;
 import '../widget/form/swichListFinished.dart';
 import '../widget/home/CarHomeListDefinied.dart';
 import '../widget/home/TitleWidget.dart';
@@ -148,7 +148,9 @@ class _HomeScreenState extends State<HomeScreen> {
           right: 0,
           child: Material(
             color: Colors.transparent,
-            child: Center(child: SwitchListFinished()),
+            child: Center(child:
+                 SwitchListFinished()
+            ),
           ),
         ),
       ],

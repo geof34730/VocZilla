@@ -6,7 +6,7 @@ import 'package:voczilla/ui/theme/appColors.dart';
 
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
-import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
+import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart' hide VocabulaireUserUpdate;
 
 class SwitchListFinished extends StatefulWidget {
   const SwitchListFinished({super.key});
@@ -16,15 +16,10 @@ class SwitchListFinished extends StatefulWidget {
 }
 
 class _SwitchListFinishedState extends State<SwitchListFinished> {
-  bool _isListEndPresent = false;
 
-  void _checkListEndPresence() async {
+  Future<bool> _checkListEndPresence() async {
     final bool isPresent = await VocabulaireUserRepository().isListEndPresent();
-    if (mounted) {
-      setState(() {
-        _isListEndPresent = isPresent;
-      });
-    }
+    return isPresent;
   }
 
   @override
@@ -35,15 +30,31 @@ class _SwitchListFinishedState extends State<SwitchListFinished> {
 
   @override
   Widget build(BuildContext context) {
-    if (!_isListEndPresent) {
-      return const SizedBox.shrink();
-    }
+
     return BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
       builder: (context, state) {
         if (state is VocabulaireUserLoaded) {
-          return _SwitchControl(showFinished: state.data.allListView);
+          // Ici, tu peux décider d'afficher ou non le switch selon les données de l'état
+          // Par exemple, si tu veux l'afficher seulement s'il y a des listes terminées :
+          // We need to handle this as a FutureBuilder since _checkListEndPresence is async
+          return FutureBuilder<bool>(
+            future: _checkListEndPresence(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const SizedBox.shrink();
+              }
+              final bool isListEndPresent = snapshot.data ?? false;
+              if (!isListEndPresent) return const SizedBox.shrink();
+              return _SwitchControl(showFinished: state.data.allListView);
+            },
+          );
+
         }
-        return const SizedBox.shrink();
+        // Affiche un loader ou rien selon tes besoins
+        if (state is VocabulaireUserLoading || state is VocabulaireUserUpdate) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        return SizedBox.shrink();
       },
     );
   }

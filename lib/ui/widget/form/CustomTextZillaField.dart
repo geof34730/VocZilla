@@ -37,6 +37,7 @@ class CustomTextZillaField extends StatefulWidget {
 }
 
 class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
+  final FocusNode _focusNode = FocusNode();
   String _previousValue = "";
   bool _answeredByUser = true;
   bool _isAutoFill = false;
@@ -59,6 +60,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
   @override
   void dispose() {
     widget.ControlerField.removeListener(_onTextChanged);
+    _focusNode.dispose();
     super.dispose();
   }
 
@@ -67,11 +69,19 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
 
     final value = widget.ControlerField.text;
 
+    // Si c'est un événement d'auto-remplissage, réinitialiser le flag et s'assurer que _answeredByUser est false.
     if (_isAutoFill) {
-      _answeredByUser = false;
-      _isAutoFill = false;
+      _isAutoFill = false; // Réinitialiser pour les événements futurs
+      // _answeredByUser est déjà défini sur false dans onPressed, donc pas besoin de le redéfinir ici.
     } else {
-      _answeredByUser = true;
+      // Ce n'est pas un événement d'auto-remplissage.
+      // Si le texte a réellement changé par rapport à la valeur précédente, c'est une saisie utilisateur.
+      if (value != _previousValue) {
+        _answeredByUser = true;
+      }
+      // Si value == _previousValue, cela signifie qu'il n'y a pas eu de changement de texte initié par l'utilisateur,
+      // ou qu'il s'agit d'une correction interne qui a abouti au même texte.
+      // Dans ce cas, _answeredByUser conserve son état précédent.
     }
 
     // Si l'utilisateur efface du texte, on met juste à jour l'état et on sort.
@@ -120,7 +130,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
           setState(() {});
           if (widget.AnswerNotifier) {
             AnswerNotifier(context).markAsAnsweredCorrectly(
-              isAnswerUser: _answeredByUser,
+              isAnswerUser: _answeredByUser, // Utilise l'état correct de _answeredByUser
               guidVocabulaire: widget.GUID,
               local: Localizations.localeOf(context).languageCode,
             );
@@ -141,6 +151,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
     return Padding(
       padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.00),
       child: TextFormField(
+        focusNode: _focusNode,
         readOnly: getSuccesField(controllerField: widget.ControlerField, stockValue: widget.resulteField),
         enabled: true,
         controller: widget.ControlerField,
@@ -182,7 +193,9 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
               : IconButton(
             icon: Icon(Icons.visibility, color: getBorderColor(controllerField: widget.ControlerField, stockValue: widget.resulteField)),
             onPressed: () {
+              _focusNode.unfocus();
               _isAutoFill = true;
+              _answeredByUser = false; // Explicitement défini sur false pour l'auto-remplissage
               widget.ControlerField.text = widget.resulteField;
             },
           )
@@ -200,7 +213,7 @@ class _CustomTextZillaFieldState extends State<CustomTextZillaField> {
     }
     if (getSuccesField(controllerField: controllerField, stockValue: stockValue)) {
       return const Icon(Icons.check, color: Colors.green);
-    }
+    };
     return const Icon(Icons.question_answer, color: Colors.blue);
   }
 
