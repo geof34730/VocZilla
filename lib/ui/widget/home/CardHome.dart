@@ -10,6 +10,7 @@ import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart';
 import '../../theme/appColors.dart';
+import '../elements/DialogHelper.dart';
 import '../statistical/card_home_statisctical_widget.dart';
 import 'ElevatedButtonCardHome.dart';
 import 'custom_ribbon.dart';
@@ -349,23 +350,7 @@ class _CardHomeState extends State<CardHome> {
                           valueKey: 'buttonSharePerso${widget.keyStringTest}',
                           colorIcon: Colors.blue,
                           onClickButton: () {
-                            showDialog(
-                              context: context,
-                              builder: (BuildContext dialogContext) {
-                                return AlertDialog(
-                                  title: Text(context.loc.information),
-                                  content: Text(context.loc.share_list_perso_alert_disponible),
-                                  actions: <Widget>[
-                                    TextButton(
-                                      child: Text("OK"),
-                                      onPressed: () {
-                                        Navigator.of(dialogContext).pop();
-                                      },
-                                    ),
-                                  ],
-                                );
-                              },
-                            );
+                            DialogHelper().dialogBuilderShare(context: context,guidListPerso: widget.guid);
                           },
                           iconContent: Icons.share,
                           context: context,

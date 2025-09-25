@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voczilla/core/utils/localization.dart';
@@ -10,6 +11,7 @@ import '../../../app_route.dart';
 import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';
 import '../../../global.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class DialogHelper {
    Future<void> showFreeTrialDialog({required BuildContext context, int daysLeft = 0}) async {
@@ -22,8 +24,7 @@ class DialogHelper {
                 elevation: 5,
                 actionsOverflowAlignment: OverflowBarAlignment.center,
                 actionsAlignment: MainAxisAlignment.center,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                shape: RoundedRectangleBorder( borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 contentPadding: EdgeInsets.only(top: 10.0),
                 title: Text(
                   context.loc.widget_dialogHelper_showfreetrialdialog_description1,
@@ -37,8 +38,7 @@ class DialogHelper {
                   child: ListBody(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(
-                            top: 10, bottom: 10, left: 20, right: 20),
+                        padding: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
                         child: RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
@@ -86,8 +86,7 @@ class DialogHelper {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(
-                            top: 0, bottom: 0, left: 20, right: 20),
+                        padding: EdgeInsets.only(top: 0, bottom: 0, left: 20, right: 20),
                         child: Text(
                           context.loc.widget_dialogHelper_showfreetrialdialog_description5,
                           textAlign: TextAlign.center,
@@ -101,20 +100,19 @@ class DialogHelper {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(
-                            top: 20, bottom: 20, left: 20, right: 20),
-                        child: Text(
-                          textAlign: TextAlign.center,
-                          "${context.loc.widget_dialogHelper_showfreetrialdialog_description6} :",
-                          style: TextStyle(
-                            height: 1.2,
-                            fontSize: 15,
-                            fontFamily: GoogleFonts
-                                .roboto()
-                                .fontFamily,
-                            color: Colors.black,
-                          ),
-                        ),
+                        padding: EdgeInsets.only( top: 20, bottom: 20, left: 20, right: 20),
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              "${context.loc.widget_dialogHelper_showfreetrialdialog_description6} :",
+                              style: TextStyle(
+                                height: 1.2,
+                                fontSize: 15,
+                                fontFamily: GoogleFonts
+                                    .roboto()
+                                    .fontFamily,
+                                color: Colors.black,
+                              ),
+                            ),
                       ),
                     ],
                   ),
@@ -139,5 +137,98 @@ class DialogHelper {
         );
       }
   }
-}
 
+
+   Future<void> dialogBuilderShare({required BuildContext context,required String guidListPerso }) {
+     return showDialog<void>(
+       context: context,
+       builder: (BuildContext context) {
+         return SingleChildScrollView(
+           //  scrollDirection: Axis.vertical,
+             child: AlertDialog(
+               insetPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+               contentPadding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+               clipBehavior: Clip.antiAliasWithSaveLayer,
+               icon: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.end, crossAxisAlignment: CrossAxisAlignment.end, children: [
+                 InkWell(
+                     onTap: () {
+                       Navigator.of(context).pop();
+                     },
+                     child: const Icon(
+                       Icons.close,
+                     ))
+               ]),
+               title:  Text(
+                 'Partager votre liste personnalisée',
+                 textAlign: TextAlign.center,
+                 style: TextStyle(fontSize: 18.00),
+               ),
+               content: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+                  SizedBox(
+                     width: 360,
+                     height: 40,
+                     child: Text(
+                       'En faisant scanner le QR code ci-dessous à la personne avec qui vous souhaitez partager cette liste',
+                       textAlign: TextAlign.center,
+                       style: TextStyle(fontSize: 14.00),
+                     )),
+                 Padding(
+                   padding: const EdgeInsets.only(top: 10.00, bottom: 10.0),
+                   child: Container(
+                       width: 280,
+                       height: 280,
+                       color: Colors.blue,
+                       child: QrImageView(
+                         data: "https://links.voczilla.com/share/$guidListPerso",
+                         version: 10,
+                         size: 280,
+                         gapless: true,
+                         backgroundColor: Colors.white,
+                       )),
+                 ),
+                 const Padding(
+                     padding: EdgeInsets.only(bottom: 10.0),
+                     child: Text(
+                       'OU',
+                       textAlign: TextAlign.center,
+                       style: TextStyle(fontSize: 18.00, fontWeight: FontWeight.bold),
+                     )),
+                SizedBox(
+                     width: 360,
+                     child:Text(
+                       "En copiant l'adresse suivante et la fournir à la personne avec qui vous souhaitez partager cette liste",
+                       textAlign: TextAlign.center,
+                       style: TextStyle(fontSize: 14.00),
+                     ),
+                 ),
+               SizedBox(
+                   width: 360,
+                   child:Row(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center, children: [
+                       Padding(
+                           padding: const EdgeInsets.only(top: 10.0),
+                           child:Text(
+                               "https://links.voczilla.com/share/${guidListPerso.substring(0,5)}...",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 14.00,
+                                    color:Colors.blue
+                                ),
+                           )
+                       ),
+                       IconButton(
+                         icon: const Icon(Icons.copy),
+                         onPressed: () {
+                           Clipboard.setData(ClipboardData(text: "https://links.voczilla.com/share/$guidListPerso"));
+                         },
+                       )
+                     ])
+               )
+               ]),
+             ));
+       },
+     );
+   }
+
+
+
+}
