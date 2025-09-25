@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ElevatedButton(
+              /*ElevatedButton(
                 key: ValueKey('test_share'),
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, "/share/9073138f-df22-469f-8f20-c47cea2ac74f");
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
+              ),*/
               GlobalStatisticalWidget(
                 isListPerso: false,
                 isListTheme: false,

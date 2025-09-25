@@ -193,7 +193,7 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
                       ),
                     ),
                   ),
-                  ElevatedButton(
+                  /*ElevatedButton(
                     key: ValueKey('test_share'),
                     onPressed: (){
                       Navigator.pushReplacementNamed(context, "/share/9073138f-df22-469f-8f20-c47cea2ac74f");
@@ -210,7 +210,7 @@ class _HomeLogoutScreenState extends State<HomeLogoutScreen> {
                       ),
                     ),
                   ),
-
+*/
                 ],
               ),
             ),

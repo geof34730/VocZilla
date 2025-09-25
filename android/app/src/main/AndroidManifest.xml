@@ -15,7 +15,7 @@
         <activity
                 android:name=".MainActivity"
                 android:exported="true"
-                android:launchMode="singleTop"
+                android:launchMode="singleTask"
                 android:taskAffinity=""
                 android:theme="@style/LaunchTheme"
                 android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -26,12 +26,13 @@
                     android:name="io.flutter.embedding.android.NormalTheme"
                     android:resource="@style/NormalTheme"/>
 
+            <!-- Launcher -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
-            <!-- Deep linking -->
+            <!-- Schéma personnalisé (existant) -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -39,12 +40,15 @@
                 <data android:scheme="voczilla" />
             </intent-filter>
 
-            <!-- App Links -->
+            <!-- App Links HTTPS vers links.voczilla.com/share/... -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https" android:host="voczilla.app" />
+                <data
+                        android:scheme="https"
+                        android:host="links.voczilla.com"
+                        android:pathPrefix="/share" />
             </intent-filter>
         </activity>
 
@@ -56,7 +60,6 @@
 
     <!-- Package visibility queries -->
     <queries>
-        <!-- Ajout pour autoriser la visibilité de Google Play Services -->
         <package android:name="com.google.android.gms" />
 
         <intent>

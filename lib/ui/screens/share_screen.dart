@@ -44,20 +44,15 @@ class _ShareScreenState extends State<ShareScreen> {
 
     var dataListPerso = ListPerso.fromJson(data);
     dataListPerso = dataListPerso.copyWith(ownListShare: false);
-
-
       await VocabulaireUserRepository().addListPersoShareTemp(
         listPerso: dataListPerso,
         local: "fr",
       );
       if (mounted) {
-
         Future.delayed(Duration(seconds: 4)).then((value ) =>{
           Navigator.of(context).pushNamedAndRemoveUntil("/", (route) => false)
         });
-
       }
-
   }
 
   @override
@@ -69,6 +64,9 @@ class _ShareScreenState extends State<ShareScreen> {
             return LoaderList();
           }
           if (snapshot.hasError) {
+            return Center(
+              child: Text("Liste introuvable ou accès non autorisé.\n${widget.guidlist}"),
+            );
             return Center(child: Text("Erreur: ${snapshot.error}"));
           }
           final data = snapshot.data;
