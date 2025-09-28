@@ -670,4 +670,40 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '४,४०० आवश्यक शब्दहरू';
+
+  @override
+  String get share_loading_list_share => 'तपाईंको साझा गरिएको अनुकूलन सूची लोड गर्दै।';
+
+  @override
+  String get share_list_not_found => 'सूची फेला परेन वा अनधिकृत पहुँच।';
+
+  @override
+  String get share_dialogue_builder_title => 'आफ्नो व्यक्तिगत सूची साझा गर्नुहोस्';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'तपाईंले यो सूची साझा गर्न चाहनुभएको व्यक्तिलाई तलको QR कोड स्क्यान गर्न लगाएर';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'निम्न ठेगाना प्रतिलिपि गर्नुहोस् र तपाईंले यो सूची साझा गर्न चाहनुभएको व्यक्तिलाई प्रदान गर्नुहोस्।';
+
+  @override
+  String get drawer_my_lists => 'मेरा सूचीहरू';
+
+  @override
+  String get drawer_account => 'खाता';
+
+  @override
+  String get drawer_trial_period => 'मेरो परीक्षण अवधि';
+
+  @override
+  String get drawer_my_personnal_list => 'मेरा व्यक्तिगत सूचीहरू';
+
+  @override
+  String get drawer_defined_list => 'हाम्रा पूर्वनिर्धारित सूचीहरू';
+
+  @override
+  String get drawer_themes_list => 'हाम्रा विषयवस्तुहरूको सूची';
+
+  @override
+  String get subscription_benefit_no_pub => 'अनुप्रयोगमा कुनै विज्ञापन देखिँदैन';
 }

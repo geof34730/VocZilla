@@ -670,4 +670,40 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 აუცილებელი სიტყვა';
+
+  @override
+  String get share_loading_list_share => 'თქვენი გაზიარებული მორგებული სიის ჩატვირთვა.';
+
+  @override
+  String get share_list_not_found => 'სია ვერ მოიძებნა ან წვდომა არაავტორიზებულია.';
+
+  @override
+  String get share_dialogue_builder_title => 'გააზიარეთ თქვენი პერსონალიზებული სია';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ქვემოთ მოცემული QR კოდის სკანირებით, იმ პირს, ვისთანაც გსურთ ამ სიის გაზიარება, სთხოვეთ';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'დააკოპირეთ შემდეგი მისამართი და მიაწოდეთ ის იმ პირს, ვისთანაც გსურთ ამ სიის გაზიარება';
+
+  @override
+  String get drawer_my_lists => 'ჩემი სიები';
+
+  @override
+  String get drawer_account => 'ანგარიში';
+
+  @override
+  String get drawer_trial_period => 'ჩემი საცდელი პერიოდი';
+
+  @override
+  String get drawer_my_personnal_list => 'ჩემი პირადი სიები';
+
+  @override
+  String get drawer_defined_list => 'ჩვენი წინასწარ განსაზღვრული სიები';
+
+  @override
+  String get drawer_themes_list => 'ჩვენი თემების სიები';
+
+  @override
+  String get subscription_benefit_no_pub => 'აპლიკაციაში რეკლამა არ ჩანს';
 }

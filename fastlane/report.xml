@@ -5,22 +5,22 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000175">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.00018">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="2.837945">
+      <testcase classname="fastlane.lanes" name="1: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="7.345906">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="0.901566">
+      <testcase classname="fastlane.lanes" name="2: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="1.08351">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_macos.dart&apos;" time="0.740098">
+      <testcase classname="fastlane.lanes" name="3: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_macos.dart&apos;" time="1.288189">
         
       </testcase>
     

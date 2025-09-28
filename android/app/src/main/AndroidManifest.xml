@@ -12,6 +12,10 @@
             android:enableOnBackInvokedCallback="true"
             android:fullBackupContent="@xml/backup_rules">
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1439580806237607~9445579592"/>
+
         <activity
                 android:name=".MainActivity"
                 android:exported="true"

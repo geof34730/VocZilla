@@ -670,4 +670,40 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 ಅಗತ್ಯ ಪದಗಳು';
+
+  @override
+  String get share_loading_list_share => 'ನಿಮ್ಮ ಹಂಚಿಕೊಂಡ ಕಸ್ಟಮ್ ಪಟ್ಟಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ.';
+
+  @override
+  String get share_list_not_found => 'ಪಟ್ಟಿ ಕಂಡುಬಂದಿಲ್ಲ ಅಥವಾ ಪ್ರವೇಶ ಅನಧಿಕೃತವಾಗಿದೆ.';
+
+  @override
+  String get share_dialogue_builder_title => 'ನಿಮ್ಮ ವೈಯಕ್ತಿಕಗೊಳಿಸಿದ ಪಟ್ಟಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ನೀವು ಈ ಪಟ್ಟಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ಬಯಸುವ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಕೆಳಗಿನ QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡುವ ಮೂಲಕ';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'ಕೆಳಗಿನ ವಿಳಾಸವನ್ನು ನಕಲಿಸಿ ಮತ್ತು ನೀವು ಈ ಪಟ್ಟಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ಬಯಸುವ ವ್ಯಕ್ತಿಗೆ ಒದಗಿಸಿ.';
+
+  @override
+  String get drawer_my_lists => 'ನನ್ನ ಪಟ್ಟಿಗಳು';
+
+  @override
+  String get drawer_account => 'ಖಾತೆ';
+
+  @override
+  String get drawer_trial_period => 'ನನ್ನ ಪ್ರಾಯೋಗಿಕ ಅವಧಿ';
+
+  @override
+  String get drawer_my_personnal_list => 'ನನ್ನ ವೈಯಕ್ತಿಕ ಪಟ್ಟಿಗಳು';
+
+  @override
+  String get drawer_defined_list => 'ನಮ್ಮ ಪೂರ್ವನಿರ್ಧರಿತ ಪಟ್ಟಿಗಳು';
+
+  @override
+  String get drawer_themes_list => 'ನಮ್ಮ ಥೀಮ್‌ಗಳ ಪಟ್ಟಿಗಳು';
+
+  @override
+  String get subscription_benefit_no_pub => 'ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಯಾವುದೇ ಜಾಹೀರಾತು ಗೋಚರಿಸುವುದಿಲ್ಲ.';
 }

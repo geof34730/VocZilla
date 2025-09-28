@@ -220,10 +220,16 @@
     "app_promotion_ios": "ਆਸਾਨੀ ਨਾਲ ਬੋਲਣ ਅਤੇ ਸਮਝਣ ਲਈ 4,400 ਜ਼ਰੂਰੀ ਸ਼ਬਦਾਂ ਨਾਲ ਆਪਣੀ ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦਾਵਲੀ ਨੂੰ ਅਮੀਰ ਬਣਾਓ।",
     "app_feature_graphic_FeatureItem1": "4,400 ਸ਼ਬਦ",
     "home_notlogged_accroche4": "4,400 ਜ਼ਰੂਰੀ ਸ਼ਬਦ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "ਤੁਹਾਡੀ ਸਾਂਝੀ ਕੀਤੀ ਵਿਉਂਤਬੱਧ ਸੂਚੀ ਲੋਡ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।",
+    "share_list_not_found": "ਸੂਚੀ ਨਹੀਂ ਮਿਲੀ ਜਾਂ ਅਣਅਧਿਕਾਰਤ ਪਹੁੰਚ।",
+    "share_dialogue_builder_title": "ਆਪਣੀ ਵਿਅਕਤੀਗਤ ਸੂਚੀ ਸਾਂਝੀ ਕਰੋ",
+    "share_dialogue_builder_description_qrcode": "ਜਿਸ ਵਿਅਕਤੀ ਨਾਲ ਤੁਸੀਂ ਇਹ ਸੂਚੀ ਸਾਂਝੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਉਸਨੂੰ ਹੇਠਾਂ ਦਿੱਤੇ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰਨ ਲਈ ਕਹਿ ਕੇ।",
+    "share_dialogue_builder_description_copy_url": "ਹੇਠ ਦਿੱਤੇ ਪਤੇ ਦੀ ਕਾਪੀ ਕਰੋ ਅਤੇ ਇਸਨੂੰ ਉਸ ਵਿਅਕਤੀ ਨੂੰ ਦਿਓ ਜਿਸ ਨਾਲ ਤੁਸੀਂ ਇਹ ਸੂਚੀ ਸਾਂਝੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ।",
+    "drawer_my_lists": "ਮੇਰੀਆਂ ਸੂਚੀਆਂ",
+    "drawer_account": "ਖਾਤਾ",
+    "drawer_trial_period": "ਮੇਰੀ ਪਰਖ ਦੀ ਮਿਆਦ",
+    "drawer_my_personnal_list": "ਮੇਰੀਆਂ ਨਿੱਜੀ ਸੂਚੀਆਂ",
+    "drawer_defined_list": "ਸਾਡੀਆਂ ਪਹਿਲਾਂ ਤੋਂ ਪਰਿਭਾਸ਼ਿਤ ਸੂਚੀਆਂ",
+    "drawer_themes_list": "ਸਾਡੇ ਥੀਮਾਂ ਦੀਆਂ ਸੂਚੀਆਂ",
+    "subscription_benefit_no_pub": "ਐਪਲੀਕੇਸ਼ਨ 'ਤੇ ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਦਿਖਾਈ ਨਹੀਂ ਦੇ ਰਿਹਾ ਹੈ।"
 }

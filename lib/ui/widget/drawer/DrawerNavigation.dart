@@ -44,13 +44,12 @@ class NavigationDrawer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _buildDrawerHeader(context),
-                widgetMyPadding(child: _SectionTitle('Mes listes')),
+                widgetMyPadding(child: _SectionTitle(context.loc.drawer_my_lists)),
                 widgetMyPadding(child: _buildMenuItems1(context)),
                 const SizedBox(height: 10),
                 const Divider(),
-                _buildTrialPeriodTile(),
                 const SizedBox(height: 5),
-                widgetMyPadding(child: _SectionTitle('Compte')),
+                widgetMyPadding(child: _SectionTitle(context.loc.drawer_account)),
                 widgetMyPadding(child: _buildMenuItems2(context)),
                 const Center(child: _VersionInfoWidget()),
               ]),
@@ -200,38 +199,7 @@ Widget _buildLanguageDropdown(BuildContext context) {
   );
 }
 
-Widget _buildTrialPeriodTile() {
-  return BlocBuilder<UserBloc, UserState>( // Ce builder va maintenant recevoir correctement le contexte et les mises à jour
-    builder: (context, userState) {
-      Logger.Pink.log("********* Drawer userState: $userState");
-      if (userState is UserSessionLoaded && userState.isTrialActive && !userState.isSubscribed) {
-        Logger.Pink.log("Drawer: Affichage de la tuile de période d'essai.");
-        final int daysLeft = userState.trialDaysLeft;
-        final double progress = (daysFreeTrial > 0)
-            ? (daysFreeTrial - daysLeft).clamp(0, daysFreeTrial) / daysFreeTrial
-            : 0.0;
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 10,),
-            widgetMyPadding(child:_SectionTitle("Ma période d'essai")),
-            const SizedBox(height: 5,),
-            TrialPeriodTile(
-              progress: progress,
-              daysRemaining: daysLeft,
-              onTap: () {
-                Navigator.of(context).pop(); // Close the drawer first.
-                DialogHelper().showFreeTrialDialog(context: context, daysLeft: daysLeft);
-              },
-            )
-          ]
-        );
-      }
-      // If not in trial, show nothing.
-      return const SizedBox.shrink();
-    },
-  );
-}
+
 
 
 Widget _buildMenuItems1(BuildContext context) {
@@ -240,7 +208,7 @@ Widget _buildMenuItems1(BuildContext context) {
       VocZillaTile(
         keyParam: ValueKey('my_personnal_list'),
         icon: Icons.list_alt_outlined,
-        label: "Mes listes personnelles",
+        label: context.loc.drawer_my_personnal_list,
         color: Colors.blue,
         onTap: () {
           Navigator.of(context).pop();
@@ -251,7 +219,7 @@ Widget _buildMenuItems1(BuildContext context) {
       VocZillaTile(
         keyParam: ValueKey('defined_list'),
         icon: Icons.list_alt_outlined,
-        label: "Nos listes prédéfinies",
+        label: context.loc.drawer_defined_list,
         color: Colors.green,
         onTap: () {
           Navigator.of(context).pop();
@@ -261,7 +229,7 @@ Widget _buildMenuItems1(BuildContext context) {
       VocZillaTile(
         keyParam: ValueKey('themmes_list'),
         icon: Icons.list_alt_outlined,
-        label: "Nos listes des thèmes",
+        label: context.loc.drawer_themes_list,
         color: Colors.green,
         onTap: () {
           Navigator.of(context).pop();

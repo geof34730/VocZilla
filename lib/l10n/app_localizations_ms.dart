@@ -670,4 +670,40 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 perkataan penting';
+
+  @override
+  String get share_loading_list_share => 'Memuatkan senarai tersuai kongsi anda.';
+
+  @override
+  String get share_list_not_found => 'Senarai tidak ditemui atau akses tanpa kebenaran.';
+
+  @override
+  String get share_dialogue_builder_title => 'Kongsi senarai peribadi anda';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Dengan meminta orang yang anda ingin kongsi senarai ini mengimbas kod QR di bawah';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Salin alamat berikut dan berikan kepada orang yang anda ingin kongsi senarai ini';
+
+  @override
+  String get drawer_my_lists => 'senarai saya';
+
+  @override
+  String get drawer_account => 'Akaun';
+
+  @override
+  String get drawer_trial_period => 'Tempoh percubaan saya';
+
+  @override
+  String get drawer_my_personnal_list => 'Senarai peribadi saya';
+
+  @override
+  String get drawer_defined_list => 'Senarai pratakrif kami';
+
+  @override
+  String get drawer_themes_list => 'Senarai tema kami';
+
+  @override
+  String get subscription_benefit_no_pub => 'Tiada pengiklanan kelihatan pada aplikasi';
 }

@@ -220,10 +220,16 @@
     "app_promotion_ios": "قم بإثراء مفرداتك الإنجليزية بـ 4400 كلمة أساسية لتسهيل التحدث والفهم.",
     "app_feature_graphic_FeatureItem1": "4400 كلمة",
     "home_notlogged_accroche4": "4400 كلمة أساسية",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "تحميل القائمة المخصصة المشتركة الخاصة بك.",
+    "share_list_not_found": "لم يتم العثور على القائمة أو الوصول غير مصرح به.",
+    "share_dialogue_builder_title": "شارك قائمتك الشخصية",
+    "share_dialogue_builder_description_qrcode": "من خلال جعل الشخص الذي ترغب في مشاركة هذه القائمة معه يقوم بمسح رمز الاستجابة السريعة أدناه",
+    "share_dialogue_builder_description_copy_url": "انسخ العنوان التالي وقدمه للشخص الذي ترغب في مشاركة هذه القائمة معه",
+    "drawer_my_lists": "قوائمي",
+    "drawer_account": "حساب",
+    "drawer_trial_period": "فترة تجربتي",
+    "drawer_my_personnal_list": "قوائمي الشخصية",
+    "drawer_defined_list": "قوائمنا المحددة مسبقًا",
+    "drawer_themes_list": "قوائم المواضيع لدينا",
+    "subscription_benefit_no_pub": "لا يوجد إعلانات مرئية على التطبيق"
 }

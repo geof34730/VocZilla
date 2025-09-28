@@ -33,15 +33,26 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         repository.fetchUserData(firebaseUser.uid),
         VocabulaireService().getThemesData(),
         userRepository.checkSubscriptionStatus(),
-        userRepository.getTrialEndDate(),
-        userRepository.getLeftDaysEndDate(),
       ]);
 
       final userData = results[0] as Map<String, dynamic>;
       final themes = results[1] as List<dynamic>;
       final isSubscribed = results[2] as bool;
-      final trialEndDate = results[3] as DateTime?;
-      final trialLeftDays = results[4] as int;
+
+      // Extraire les informations de la période d'essai de userData
+      DateTime? trialEndDate;
+      int trialLeftDays = 0;
+
+      if (userData.containsKey('trialEndDate') && userData['trialEndDate'] != null) {
+        try {
+          trialEndDate = DateTime.parse(userData['trialEndDate'] as String);
+        } catch (e) {
+          Logger.Red.log("Error parsing trialEndDate from userData: $e");
+        }
+      }
+      if (userData.containsKey('trialDaysLeft') && userData['trialDaysLeft'] != null) {
+        trialLeftDays = userData['trialDaysLeft'] as int;
+      }
 
       // 3. Enrichir les données utilisateur et les sauvegarder
       userData["ListTheme"] = themes.map((theme) => theme.toJson()).toList();
@@ -50,8 +61,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
 
       // 4. Déterminer le statut de la période d'essai
       final now = DateTime.now().toUtc();
-      final bool isTrialActive =
-          trialEndDate != null && trialEndDate.isAfter(now);
+      final bool isTrialActive = trialEndDate != null && trialEndDate.isAfter(now);
 
       // 5. Émettre l'état final et complet
       Logger.Green.log("UserSessionLoaded: isSubscribed=$isSubscribed, isTrialActive=$isTrialActive, daysLeft=$trialLeftDays");

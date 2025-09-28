@@ -220,10 +220,16 @@
     "app_promotion_ios": "എളുപ്പത്തിൽ സംസാരിക്കാനും മനസ്സിലാക്കാനും 4,400 അവശ്യ വാക്കുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ ഇംഗ്ലീഷ് പദാവലി സമ്പന്നമാക്കുക.",
     "app_feature_graphic_FeatureItem1": "4,400 വാക്കുകൾ",
     "home_notlogged_accroche4": "4,400 അവശ്യ വാക്കുകൾ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "നിങ്ങളുടെ പങ്കിട്ട ഇഷ്ടാനുസൃത ലിസ്റ്റ് ലോഡ് ചെയ്യുന്നു.",
+    "share_list_not_found": "ലിസ്റ്റ് കണ്ടെത്തിയില്ല അല്ലെങ്കിൽ അനധികൃതമായി ആക്‌സസ് ചെയ്‌തു.",
+    "share_dialogue_builder_title": "നിങ്ങളുടെ വ്യക്തിഗതമാക്കിയ ലിസ്റ്റ് പങ്കിടുക",
+    "share_dialogue_builder_description_qrcode": "ഈ ലിസ്റ്റ് പങ്കിടാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്ന വ്യക്തിയോട് താഴെയുള്ള QR കോഡ് സ്കാൻ ചെയ്യിപ്പിക്കുന്നതിലൂടെ",
+    "share_dialogue_builder_description_copy_url": "ഇനിപ്പറയുന്ന വിലാസം പകർത്തി ഈ ലിസ്റ്റ് പങ്കിടാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്ന വ്യക്തിക്ക് നൽകുക.",
+    "drawer_my_lists": "എന്റെ ലിസ്റ്റുകൾ",
+    "drawer_account": "അക്കൗണ്ട്",
+    "drawer_trial_period": "എന്റെ പരീക്ഷണ കാലയളവ്",
+    "drawer_my_personnal_list": "എന്റെ സ്വകാര്യ ലിസ്റ്റുകൾ",
+    "drawer_defined_list": "ഞങ്ങളുടെ മുൻനിശ്ചയിച്ച ലിസ്റ്റുകൾ",
+    "drawer_themes_list": "ഞങ്ങളുടെ തീമുകളുടെ പട്ടികകൾ",
+    "subscription_benefit_no_pub": "ആപ്ലിക്കേഷനിൽ പരസ്യങ്ങളൊന്നും ദൃശ്യമല്ല."
 }

@@ -220,10 +220,16 @@
     "app_promotion_ios": "Berika ditt engelska ordförråd med 4 400 viktiga ord för enkel talförståelse.",
     "app_feature_graphic_FeatureItem1": "4 400 ord",
     "home_notlogged_accroche4": "4 400 viktiga ord",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Läser in din delade anpassade lista.",
+    "share_list_not_found": "Listan hittades inte eller så är åtkomsten obehörig.",
+    "share_dialogue_builder_title": "Dela din personliga lista",
+    "share_dialogue_builder_description_qrcode": "Genom att be personen du vill dela den här listan med att skanna QR-koden nedan",
+    "share_dialogue_builder_description_copy_url": "Kopiera följande adress och ge den till personen du vill dela listan med",
+    "drawer_my_lists": "Mina listor",
+    "drawer_account": "Konto",
+    "drawer_trial_period": "Min provperiod",
+    "drawer_my_personnal_list": "Mina personliga listor",
+    "drawer_defined_list": "Våra fördefinierade listor",
+    "drawer_themes_list": "Våra listor över teman",
+    "subscription_benefit_no_pub": "Ingen reklam syns i appen"
 }

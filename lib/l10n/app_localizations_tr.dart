@@ -670,4 +670,40 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 temel kelime';
+
+  @override
+  String get share_loading_list_share => 'Paylaşılan özel listeniz yükleniyor.';
+
+  @override
+  String get share_list_not_found => 'Liste bulunamadı veya erişim yetkisi yok.';
+
+  @override
+  String get share_dialogue_builder_title => 'Kişiselleştirilmiş listenizi paylaşın';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Bu listeyi paylaşmak istediğiniz kişinin aşağıdaki QR kodunu taramasını sağlayın';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Aşağıdaki adresi kopyalayın ve bu listeyi paylaşmak istediğiniz kişiye verin';
+
+  @override
+  String get drawer_my_lists => 'Listelerim';
+
+  @override
+  String get drawer_account => 'Hesap';
+
+  @override
+  String get drawer_trial_period => 'Deneme sürem';
+
+  @override
+  String get drawer_my_personnal_list => 'Kişisel listelerim';
+
+  @override
+  String get drawer_defined_list => 'Önceden tanımlanmış listelerimiz';
+
+  @override
+  String get drawer_themes_list => 'Tema listelerimiz';
+
+  @override
+  String get subscription_benefit_no_pub => 'Uygulamada hiçbir reklam görünmüyor';
 }

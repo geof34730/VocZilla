@@ -220,10 +220,16 @@
     "app_promotion_ios": "Oson gapirish va tushunish uchun ingliz tilidagi lug'atingizni 4400 ta muhim so'z bilan boyiting.",
     "app_feature_graphic_FeatureItem1": "4400 so'z",
     "home_notlogged_accroche4": "4400 ta muhim so'z",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Umumiy shaxsiy roʻyxatingiz yuklanmoqda.",
+    "share_list_not_found": "Ro'yxat topilmadi yoki ruxsatsiz kirish.",
+    "share_dialogue_builder_title": "Shaxsiylashtirilgan roʻyxatingizni baham koʻring",
+    "share_dialogue_builder_description_qrcode": "Quyidagi QR kodni skanerlash orqali ushbu roʻyxatni baham koʻrmoqchi boʻlgan odamga ega boʻlsangiz",
+    "share_dialogue_builder_description_copy_url": "Quyidagi manzildan nusxa ko'chiring va uni ushbu ro'yxatni baham ko'rmoqchi bo'lgan odamga taqdim eting",
+    "drawer_my_lists": "Mening ro'yxatlarim",
+    "drawer_account": "Hisob",
+    "drawer_trial_period": "Mening sinov muddatim",
+    "drawer_my_personnal_list": "Mening shaxsiy ro'yxatlarim",
+    "drawer_defined_list": "Bizning oldindan belgilangan ro'yxatlarimiz",
+    "drawer_themes_list": "Bizning mavzular ro'yxati",
+    "subscription_benefit_no_pub": "Ilovada hech qanday reklama ko'rinmaydi"
 }

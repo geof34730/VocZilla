@@ -220,10 +220,16 @@
     "app_promotion_ios": "Obogatite svoj engleski vokabular sa 4.400 ključnih riječi za lak govor i razumijevanje.",
     "app_feature_graphic_FeatureItem1": "4.400 riječi",
     "home_notlogged_accroche4": "4.400 bitnih riječi",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Učitavanje vaše dijeljene prilagođene liste.",
+    "share_list_not_found": "Lista nije pronađena ili pristup nije dozvoljen.",
+    "share_dialogue_builder_title": "Podijelite svoju personaliziranu listu",
+    "share_dialogue_builder_description_qrcode": "Tako što ćete osobu s kojom želite podijeliti ovu listu skenirati ispod QR koda",
+    "share_dialogue_builder_description_copy_url": "Kopirajte sljedeću adresu i dostavite je osobi s kojom želite podijeliti ovu listu",
+    "drawer_my_lists": "Moje liste",
+    "drawer_account": "Račun",
+    "drawer_trial_period": "Moj probni period",
+    "drawer_my_personnal_list": "Moje lične liste",
+    "drawer_defined_list": "Naše unaprijed definirane liste",
+    "drawer_themes_list": "Naše liste tema",
+    "subscription_benefit_no_pub": "Na aplikaciji se ne prikazuju reklame"
 }

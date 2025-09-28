@@ -670,4 +670,40 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 essentiële woorden';
+
+  @override
+  String get share_loading_list_share => 'Uw gedeelde aangepaste lijst wordt geladen.';
+
+  @override
+  String get share_list_not_found => 'Lijst niet gevonden of toegang niet geautoriseerd.';
+
+  @override
+  String get share_dialogue_builder_title => 'Deel uw persoonlijke lijst';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Laat de persoon met wie u deze lijst wilt delen de onderstaande QR-code scannen';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopieer het volgende adres en geef het aan de persoon met wie u deze lijst wilt delen';
+
+  @override
+  String get drawer_my_lists => 'Mijn lijsten';
+
+  @override
+  String get drawer_account => 'Rekening';
+
+  @override
+  String get drawer_trial_period => 'Mijn proefperiode';
+
+  @override
+  String get drawer_my_personnal_list => 'Mijn persoonlijke lijsten';
+
+  @override
+  String get drawer_defined_list => 'Onze vooraf gedefinieerde lijsten';
+
+  @override
+  String get drawer_themes_list => 'Onze themalijsten';
+
+  @override
+  String get subscription_benefit_no_pub => 'Er is geen reclame zichtbaar op de applicatie';
 }

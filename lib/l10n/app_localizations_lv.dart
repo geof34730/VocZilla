@@ -670,4 +670,40 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 svarīgi vārdi';
+
+  @override
+  String get share_loading_list_share => 'Notiek jūsu koplietotā pielāgotā saraksta ielāde.';
+
+  @override
+  String get share_list_not_found => 'Saraksts nav atrasts vai piekļuve tam nav atļauta.';
+
+  @override
+  String get share_dialogue_builder_title => 'Kopīgojiet savu personalizēto sarakstu';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Noskenējiet tālāk norādīto QR kodu personai, ar kuru vēlaties kopīgot šo sarakstu.';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Nokopējiet šo adresi un nododiet to personai, ar kuru vēlaties kopīgot šo sarakstu.';
+
+  @override
+  String get drawer_my_lists => 'Mani saraksti';
+
+  @override
+  String get drawer_account => 'Konts';
+
+  @override
+  String get drawer_trial_period => 'Mans izmēģinājuma periods';
+
+  @override
+  String get drawer_my_personnal_list => 'Mani personīgie saraksti';
+
+  @override
+  String get drawer_defined_list => 'Mūsu iepriekš definētie saraksti';
+
+  @override
+  String get drawer_themes_list => 'Mūsu tēmu saraksti';
+
+  @override
+  String get subscription_benefit_no_pub => 'Lietotnē nav redzama reklāma';
 }

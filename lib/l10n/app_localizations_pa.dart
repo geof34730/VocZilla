@@ -670,4 +670,40 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 ਜ਼ਰੂਰੀ ਸ਼ਬਦ';
+
+  @override
+  String get share_loading_list_share => 'ਤੁਹਾਡੀ ਸਾਂਝੀ ਕੀਤੀ ਵਿਉਂਤਬੱਧ ਸੂਚੀ ਲੋਡ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।';
+
+  @override
+  String get share_list_not_found => 'ਸੂਚੀ ਨਹੀਂ ਮਿਲੀ ਜਾਂ ਅਣਅਧਿਕਾਰਤ ਪਹੁੰਚ।';
+
+  @override
+  String get share_dialogue_builder_title => 'ਆਪਣੀ ਵਿਅਕਤੀਗਤ ਸੂਚੀ ਸਾਂਝੀ ਕਰੋ';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ਜਿਸ ਵਿਅਕਤੀ ਨਾਲ ਤੁਸੀਂ ਇਹ ਸੂਚੀ ਸਾਂਝੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਉਸਨੂੰ ਹੇਠਾਂ ਦਿੱਤੇ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰਨ ਲਈ ਕਹਿ ਕੇ।';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'ਹੇਠ ਦਿੱਤੇ ਪਤੇ ਦੀ ਕਾਪੀ ਕਰੋ ਅਤੇ ਇਸਨੂੰ ਉਸ ਵਿਅਕਤੀ ਨੂੰ ਦਿਓ ਜਿਸ ਨਾਲ ਤੁਸੀਂ ਇਹ ਸੂਚੀ ਸਾਂਝੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ।';
+
+  @override
+  String get drawer_my_lists => 'ਮੇਰੀਆਂ ਸੂਚੀਆਂ';
+
+  @override
+  String get drawer_account => 'ਖਾਤਾ';
+
+  @override
+  String get drawer_trial_period => 'ਮੇਰੀ ਪਰਖ ਦੀ ਮਿਆਦ';
+
+  @override
+  String get drawer_my_personnal_list => 'ਮੇਰੀਆਂ ਨਿੱਜੀ ਸੂਚੀਆਂ';
+
+  @override
+  String get drawer_defined_list => 'ਸਾਡੀਆਂ ਪਹਿਲਾਂ ਤੋਂ ਪਰਿਭਾਸ਼ਿਤ ਸੂਚੀਆਂ';
+
+  @override
+  String get drawer_themes_list => 'ਸਾਡੇ ਥੀਮਾਂ ਦੀਆਂ ਸੂਚੀਆਂ';
+
+  @override
+  String get subscription_benefit_no_pub => 'ਐਪਲੀਕੇਸ਼ਨ \'ਤੇ ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਦਿਖਾਈ ਨਹੀਂ ਦੇ ਰਿਹਾ ਹੈ।';
 }

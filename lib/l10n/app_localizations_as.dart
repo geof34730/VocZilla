@@ -670,4 +670,40 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '৪৪০০ টা অত্যাৱশ্যকীয় শব্দ';
+
+  @override
+  String get share_loading_list_share => 'আপোনাৰ অংশীদাৰী স্বনিৰ্বাচিত তালিকা লোড কৰা হৈছে।';
+
+  @override
+  String get share_list_not_found => 'তালিকা পোৱা নগ\'ল বা প্ৰৱেশ অকৰ্তৃত্বশীল।';
+
+  @override
+  String get share_dialogue_builder_title => 'আপোনাৰ ব্যক্তিগতকৃত তালিকাখন শ্বেয়াৰ কৰক';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'আপুনি এই তালিকাখন শ্বেয়াৰ কৰিব বিচৰা ব্যক্তিজনক তলৰ QR ক\'ডটো স্কেন কৰি';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'তলৰ ঠিকনাটো কপি কৰক আৰু আপুনি এই তালিকাখন শ্বেয়াৰ কৰিব বিচৰা ব্যক্তিজনক প্ৰদান কৰক';
+
+  @override
+  String get drawer_my_lists => 'মোৰ তালিকাবোৰ';
+
+  @override
+  String get drawer_account => 'একাউণ্ট';
+
+  @override
+  String get drawer_trial_period => 'মোৰ ট্ৰাইল পিৰিয়ড';
+
+  @override
+  String get drawer_my_personnal_list => 'মোৰ ব্যক্তিগত তালিকাবোৰ';
+
+  @override
+  String get drawer_defined_list => 'আমাৰ পূৰ্বনিৰ্ধাৰিত তালিকাসমূহ';
+
+  @override
+  String get drawer_themes_list => 'আমাৰ থিমৰ তালিকা';
+
+  @override
+  String get subscription_benefit_no_pub => 'এপ্লিকেচনত কোনো বিজ্ঞাপন দেখা নাযায়';
 }

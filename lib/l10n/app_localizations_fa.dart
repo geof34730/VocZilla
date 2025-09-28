@@ -670,4 +670,40 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '۴۴۰۰ کلمه ضروری';
+
+  @override
+  String get share_loading_list_share => 'در حال بارگیری لیست سفارشی مشترک شما.';
+
+  @override
+  String get share_list_not_found => 'فهرستی یافت نشد یا دسترسی غیرمجاز است.';
+
+  @override
+  String get share_dialogue_builder_title => 'فهرست شخصی‌سازی‌شده خود را به اشتراک بگذارید';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'با درخواست از شخصی که می‌خواهید این لیست را با او به اشتراک بگذارید، کد QR زیر را اسکن کنید';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'آدرس زیر را کپی کنید و آن را به شخصی که می‌خواهید این لیست را با او به اشتراک بگذارید، بدهید.';
+
+  @override
+  String get drawer_my_lists => 'لیست‌های من';
+
+  @override
+  String get drawer_account => 'حساب کاربری';
+
+  @override
+  String get drawer_trial_period => 'دوره آزمایشی من';
+
+  @override
+  String get drawer_my_personnal_list => 'فهرست‌های شخصی من';
+
+  @override
+  String get drawer_defined_list => 'لیست‌های از پیش تعریف‌شده‌ی ما';
+
+  @override
+  String get drawer_themes_list => 'لیست‌های تم‌های ما';
+
+  @override
+  String get subscription_benefit_no_pub => 'هیچ تبلیغی در برنامه قابل مشاهده نیست';
 }

@@ -220,10 +220,16 @@
     "app_promotion_ios": "Wzbogać swoje słownictwo w języku angielskim o 4400 niezbędnych słów, które ułatwią Ci mówienie i zrozumienie.",
     "app_feature_graphic_FeatureItem1": "4400 słów",
     "home_notlogged_accroche4": "4400 niezbędnych słów",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Ładowanie udostępnionej listy niestandardowej.",
+    "share_list_not_found": "Lista nie została znaleziona lub dostęp jest nieautoryzowany.",
+    "share_dialogue_builder_title": "Udostępnij swoją spersonalizowaną listę",
+    "share_dialogue_builder_description_qrcode": "Poproś osobę, z którą chcesz udostępnić tę listę, o zeskanowanie poniższego kodu QR",
+    "share_dialogue_builder_description_copy_url": "Skopiuj poniższy adres i przekaż go osobie, której chcesz udostępnić tę listę",
+    "drawer_my_lists": "Moje listy",
+    "drawer_account": "Konto",
+    "drawer_trial_period": "Mój okres próbny",
+    "drawer_my_personnal_list": "Moje osobiste listy",
+    "drawer_defined_list": "Nasze predefiniowane listy",
+    "drawer_themes_list": "Nasze listy tematów",
+    "subscription_benefit_no_pub": "W aplikacji nie widać żadnych reklam"
 }

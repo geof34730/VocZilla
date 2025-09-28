@@ -220,10 +220,16 @@
     "app_promotion_ios": "လွယ်ကူစွာပြောနိုင်ပြီး နားလည်နိုင်စေရန်အတွက် မရှိမဖြစ်လိုအပ်သော စကားလုံး 4,400 ဖြင့် သင်၏ အင်္ဂလိပ်ဝေါဟာရကို ကြွယ်ဝစေပါသည်။",
     "app_feature_graphic_FeatureItem1": "စကားလုံး ၄၄၀၀",
     "home_notlogged_accroche4": "မရှိမဖြစ် စကားလုံး ၄၄၀၀",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "သင်၏မျှဝေထားသော စိတ်ကြိုက်စာရင်းကို တင်နေသည်။",
+    "share_list_not_found": "စာရင်းကို ရှာမတွေ့ပါ သို့မဟုတ် ခွင့်ပြုချက်မရှိဘဲ ဝင်ရောက်ပါ။",
+    "share_dialogue_builder_title": "သင့်စိတ်ကြိုက်စာရင်းကို မျှဝေပါ။",
+    "share_dialogue_builder_description_qrcode": "ဤစာရင်းကိုမျှဝေလိုသူအား အောက်ပါ QR ကုဒ်ကို စကင်န်ဖတ်ခြင်းဖြင့် ဤစာရင်းကို မျှဝေလိုပါသည်။",
+    "share_dialogue_builder_description_copy_url": "အောက်ပါလိပ်စာကို မိတ္တူကူးပြီး ဤစာရင်းကို သင်မျှဝေလိုသော ပုဂ္ဂိုလ်အား ပေးဆောင်ပါ။",
+    "drawer_my_lists": "ငါ့စာရင်းများ",
+    "drawer_account": "အကောင့်",
+    "drawer_trial_period": "ငါ့အစမ်းကာလ",
+    "drawer_my_personnal_list": "ကျွန်ုပ်၏ကိုယ်ရေးကိုယ်တာစာရင်းများ",
+    "drawer_defined_list": "ကျွန်ုပ်တို့၏ ကြိုတင်သတ်မှတ်ထားသော စာရင်းများ",
+    "drawer_themes_list": "ကျွန်ုပ်တို့၏အကြောင်းအရာများစာရင်းများ",
+    "subscription_benefit_no_pub": "အပလီကေးရှင်းတွင် ကြော်ငြာများကို မတွေ့ရ။"
 }

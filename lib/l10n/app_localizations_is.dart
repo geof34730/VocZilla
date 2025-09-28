@@ -670,4 +670,40 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 nauðsynleg orð';
+
+  @override
+  String get share_loading_list_share => 'Hleður inn sameiginlegan sérsniðinn lista.';
+
+  @override
+  String get share_list_not_found => 'Listi fannst ekki eða aðgangur óheimill.';
+
+  @override
+  String get share_dialogue_builder_title => 'Deildu persónulega listanum þínum';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Með því að láta þann sem þú vilt deila þessum lista með skanna QR kóðann hér að neðan';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Afritaðu eftirfarandi heimilisfang og gefðu það þeim sem þú vilt deila þessum lista með';
+
+  @override
+  String get drawer_my_lists => 'Listarnir mínir';
+
+  @override
+  String get drawer_account => 'Reikningur';
+
+  @override
+  String get drawer_trial_period => 'Reynslutímabilið mitt';
+
+  @override
+  String get drawer_my_personnal_list => 'Mínir persónulegu listar';
+
+  @override
+  String get drawer_defined_list => 'Fyrirfram skilgreinda lista okkar';
+
+  @override
+  String get drawer_themes_list => 'Þemalistar okkar';
+
+  @override
+  String get subscription_benefit_no_pub => 'Engar auglýsingar eru sýnilegar í forritinu';
 }

@@ -43,7 +43,7 @@ class SubscriptionService {
         // Extract the receipt data
         String receiptData = purchaseDetails.verificationData.serverVerificationData;
         Logger.Green.log('Receipt Data: $receiptData');
-        //UserRepository().checkUserStatusForce();
+        UserRepository().checkUserStatusForce();
       }
     }
   }

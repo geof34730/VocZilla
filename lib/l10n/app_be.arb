@@ -220,10 +220,16 @@
     "app_promotion_ios": "Папоўніце свой слоўнікавы запас англійскай мовы 4400 важнымі словамі для лёгкага маўлення і разумення.",
     "app_feature_graphic_FeatureItem1": "4400 слоў",
     "home_notlogged_accroche4": "4400 важных слоў",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Загрузка вашага агульнага карыстальніцкага спісу.",
+    "share_list_not_found": "Спіс не знойдзены або доступ несанкцыянаваны.",
+    "share_dialogue_builder_title": "Падзяліцеся сваім персаналізаваным спісам",
+    "share_dialogue_builder_description_qrcode": "Папрасіце чалавека, з якім вы хочаце падзяліцца гэтым спісам, адсканаваць QR-код ніжэй",
+    "share_dialogue_builder_description_copy_url": "Скапіруйце наступны адрас і паведаміце яго чалавеку, з якім вы хочаце падзяліцца гэтым спісам",
+    "drawer_my_lists": "Мае спісы",
+    "drawer_account": "Рахунак",
+    "drawer_trial_period": "Мой выпрабавальны тэрмін",
+    "drawer_my_personnal_list": "Мае асабістыя спісы",
+    "drawer_defined_list": "Нашы загадзя падрыхтаваныя спісы",
+    "drawer_themes_list": "Нашы спісы тэм",
+    "subscription_benefit_no_pub": "У дадатку не бачная рэклама"
 }

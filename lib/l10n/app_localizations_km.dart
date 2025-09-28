@@ -670,4 +670,40 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 ពាក្យសំខាន់ៗ';
+
+  @override
+  String get share_loading_list_share => 'កំពុងផ្ទុកបញ្ជីផ្ទាល់ខ្លួនដែលបានចែករំលែករបស់អ្នក។';
+
+  @override
+  String get share_list_not_found => 'រកមិនឃើញបញ្ជី ឬចូលប្រើដោយគ្មានការអនុញ្ញាត។';
+
+  @override
+  String get share_dialogue_builder_title => 'ចែករំលែកបញ្ជីផ្ទាល់ខ្លួនរបស់អ្នក។';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ដោយ​មាន​មនុស្ស​ដែល​អ្នក​ចង់​ចែករំលែក​បញ្ជី​នេះ​ដោយ​ស្កែន​កូដ QR ខាងក្រោម';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'ចម្លងអាសយដ្ឋានខាងក្រោម ហើយផ្តល់វាទៅមនុស្សដែលអ្នកចង់ចែករំលែកបញ្ជីនេះជាមួយ';
+
+  @override
+  String get drawer_my_lists => 'បញ្ជីរបស់ខ្ញុំ';
+
+  @override
+  String get drawer_account => 'គណនី';
+
+  @override
+  String get drawer_trial_period => 'រយៈពេលសាកល្បងរបស់ខ្ញុំ';
+
+  @override
+  String get drawer_my_personnal_list => 'បញ្ជីផ្ទាល់ខ្លួនរបស់ខ្ញុំ';
+
+  @override
+  String get drawer_defined_list => 'បញ្ជីដែលបានកំណត់ជាមុនរបស់យើង។';
+
+  @override
+  String get drawer_themes_list => 'បញ្ជីប្រធានបទរបស់យើង។';
+
+  @override
+  String get subscription_benefit_no_pub => 'គ្មានការផ្សាយពាណិជ្ជកម្មអាចមើលឃើញនៅលើកម្មវិធីនោះទេ។';
 }

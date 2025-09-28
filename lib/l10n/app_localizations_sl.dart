@@ -670,4 +670,40 @@ class AppLocalizationsSl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 bistvenih besed';
+
+  @override
+  String get share_loading_list_share => 'Nalaganje vašega skupnega seznama po meri.';
+
+  @override
+  String get share_list_not_found => 'Seznama ni bilo mogoče najti ali pa dostop ni bil dovoljen.';
+
+  @override
+  String get share_dialogue_builder_title => 'Delite svoj prilagojeni seznam';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Tako, da oseba, s katero želite deliti ta seznam, skenira spodnjo kodo QR.';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopirajte naslednji naslov in ga posredujte osebi, s katero želite deliti ta seznam';
+
+  @override
+  String get drawer_my_lists => 'Moji seznami';
+
+  @override
+  String get drawer_account => 'Račun';
+
+  @override
+  String get drawer_trial_period => 'Moje poskusno obdobje';
+
+  @override
+  String get drawer_my_personnal_list => 'Moji osebni seznami';
+
+  @override
+  String get drawer_defined_list => 'Naši vnaprej določeni seznami';
+
+  @override
+  String get drawer_themes_list => 'Naši seznami tem';
+
+  @override
+  String get subscription_benefit_no_pub => 'V aplikaciji ni vidnih oglasov';
 }

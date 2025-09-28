@@ -670,4 +670,40 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 маңызды сөз';
+
+  @override
+  String get share_loading_list_share => 'Ортақ пайдаланушы тізіміңіз жүктелуде.';
+
+  @override
+  String get share_list_not_found => 'Тізім табылмады немесе рұқсатсыз кіру.';
+
+  @override
+  String get share_dialogue_builder_title => 'Жеке тізіміңізді бөлісіңіз';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Төмендегі QR кодын сканерлеу арқылы осы тізімді бөліскіңіз келетін адамға ие болу арқылы';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Төмендегі мекенжайды көшіріп алып, оны осы тізімді бөліскіңіз келетін адамға беріңіз';
+
+  @override
+  String get drawer_my_lists => 'Менің тізімдерім';
+
+  @override
+  String get drawer_account => 'Есептік жазба';
+
+  @override
+  String get drawer_trial_period => 'Менің сынақ мерзімім';
+
+  @override
+  String get drawer_my_personnal_list => 'Менің жеке тізімдерім';
+
+  @override
+  String get drawer_defined_list => 'Біздің алдын ала анықталған тізімдеріміз';
+
+  @override
+  String get drawer_themes_list => 'Біздің тақырыптар тізімі';
+
+  @override
+  String get subscription_benefit_no_pub => 'Қолданбада ешқандай жарнама көрінбейді';
 }

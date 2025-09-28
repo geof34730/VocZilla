@@ -670,4 +670,40 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '必須語4,400語';
+
+  @override
+  String get share_loading_list_share => '共有されたカスタム リストを読み込んでいます。';
+
+  @override
+  String get share_list_not_found => 'リストが見つからないか、アクセスが許可されていません。';
+
+  @override
+  String get share_dialogue_builder_title => 'パーソナライズされたリストを共有する';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'このリストを共有したい相手に以下のQRコードをスキャンしてもらうことで';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => '次のアドレスをコピーして、このリストを共有したい相手に提供してください。';
+
+  @override
+  String get drawer_my_lists => '私のリスト';
+
+  @override
+  String get drawer_account => 'アカウント';
+
+  @override
+  String get drawer_trial_period => '私の試用期間';
+
+  @override
+  String get drawer_my_personnal_list => '私の個人リスト';
+
+  @override
+  String get drawer_defined_list => '定義済みリスト';
+
+  @override
+  String get drawer_themes_list => 'テーマリスト';
+
+  @override
+  String get subscription_benefit_no_pub => 'アプリケーションには広告は表示されません';
 }

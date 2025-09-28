@@ -670,4 +670,40 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 amagama abalulekile';
+
+  @override
+  String get share_loading_list_share => 'Ilayisha uhlu lwakho lwangokwezifiso olwabiwe.';
+
+  @override
+  String get share_list_not_found => 'Uhlu alutholakali noma ukufinyelela okungagunyaziwe.';
+
+  @override
+  String get share_dialogue_builder_title => 'Yabelana ngohlu lwakho lomuntu siqu';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Ngokuba nomuntu ofisa ukwabelana naye ngalolu hlu scan ikhodi ye-QR engezansi';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopisha ikheli elilandelayo bese ulinikeza umuntu ofisa ukwabelana naye ngalolu hlu';
+
+  @override
+  String get drawer_my_lists => 'Uhlu lwami';
+
+  @override
+  String get drawer_account => 'I-akhawunti';
+
+  @override
+  String get drawer_trial_period => 'Isikhathi sami sesivivinyo';
+
+  @override
+  String get drawer_my_personnal_list => 'Uhlu lwami lomuntu siqu';
+
+  @override
+  String get drawer_defined_list => 'Uhlu lwethu oluchazwe ngaphambilini';
+
+  @override
+  String get drawer_themes_list => 'Uhlu lwethu lwetimu';
+
+  @override
+  String get subscription_benefit_no_pub => 'Akukho ukukhangisa okubonakalayo kuhlelo lokusebenza';
 }

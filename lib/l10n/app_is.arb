@@ -220,10 +220,16 @@
     "app_promotion_ios": "Auðgaðu enskuorðaforða þinn með 4.400 nauðsynlegum orðum sem auðvelda þér að tala og skilja.",
     "app_feature_graphic_FeatureItem1": "4.400 orð",
     "home_notlogged_accroche4": "4.400 nauðsynleg orð",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Hleður inn sameiginlegan sérsniðinn lista.",
+    "share_list_not_found": "Listi fannst ekki eða aðgangur óheimill.",
+    "share_dialogue_builder_title": "Deildu persónulega listanum þínum",
+    "share_dialogue_builder_description_qrcode": "Með því að láta þann sem þú vilt deila þessum lista með skanna QR kóðann hér að neðan",
+    "share_dialogue_builder_description_copy_url": "Afritaðu eftirfarandi heimilisfang og gefðu það þeim sem þú vilt deila þessum lista með",
+    "drawer_my_lists": "Listarnir mínir",
+    "drawer_account": "Reikningur",
+    "drawer_trial_period": "Reynslutímabilið mitt",
+    "drawer_my_personnal_list": "Mínir persónulegu listar",
+    "drawer_defined_list": "Fyrirfram skilgreinda lista okkar",
+    "drawer_themes_list": "Þemalistar okkar",
+    "subscription_benefit_no_pub": "Engar auglýsingar eru sýnilegar í forritinu"
 }

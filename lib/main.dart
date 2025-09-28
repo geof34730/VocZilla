@@ -17,6 +17,7 @@ import 'package:voczilla/app.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import 'global.dart';
+import 'services/admob_service.dart';
 
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
@@ -38,6 +39,9 @@ void main({
   }
 
   WidgetsFlutterBinding.ensureInitialized();
+  if(!testScreenShot) {
+    AdMobService.instance.initialize();
+  }
   forFeatureGraphic=forFeatureGraphicParam;
   if(!testScreenShot) {
     await SystemChrome.setPreferredOrientations([

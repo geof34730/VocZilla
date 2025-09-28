@@ -220,10 +220,16 @@
     "app_promotion_ios": "সহজে ক'ব পৰা আৰু বুজিব পৰাকৈ ৪,৪০০ টা অত্যাৱশ্যকীয় শব্দৰে আপোনাৰ ইংৰাজী শব্দভাণ্ডাৰ সমৃদ্ধ কৰক।",
     "app_feature_graphic_FeatureItem1": "৪৪০০ শব্দ",
     "home_notlogged_accroche4": "৪৪০০ টা অত্যাৱশ্যকীয় শব্দ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "আপোনাৰ অংশীদাৰী স্বনিৰ্বাচিত তালিকা লোড কৰা হৈছে।",
+    "share_list_not_found": "তালিকা পোৱা নগ'ল বা প্ৰৱেশ অকৰ্তৃত্বশীল।",
+    "share_dialogue_builder_title": "আপোনাৰ ব্যক্তিগতকৃত তালিকাখন শ্বেয়াৰ কৰক",
+    "share_dialogue_builder_description_qrcode": "আপুনি এই তালিকাখন শ্বেয়াৰ কৰিব বিচৰা ব্যক্তিজনক তলৰ QR ক'ডটো স্কেন কৰি",
+    "share_dialogue_builder_description_copy_url": "তলৰ ঠিকনাটো কপি কৰক আৰু আপুনি এই তালিকাখন শ্বেয়াৰ কৰিব বিচৰা ব্যক্তিজনক প্ৰদান কৰক",
+    "drawer_my_lists": "মোৰ তালিকাবোৰ",
+    "drawer_account": "একাউণ্ট",
+    "drawer_trial_period": "মোৰ ট্ৰাইল পিৰিয়ড",
+    "drawer_my_personnal_list": "মোৰ ব্যক্তিগত তালিকাবোৰ",
+    "drawer_defined_list": "আমাৰ পূৰ্বনিৰ্ধাৰিত তালিকাসমূহ",
+    "drawer_themes_list": "আমাৰ থিমৰ তালিকা",
+    "subscription_benefit_no_pub": "এপ্লিকেচনত কোনো বিজ্ঞাপন দেখা নাযায়"
 }

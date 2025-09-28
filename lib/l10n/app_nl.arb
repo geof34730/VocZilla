@@ -220,10 +220,16 @@
     "app_promotion_ios": "Verrijk uw Engelse woordenschat met 4.400 essentiële woorden voor eenvoudig spreken en begrijpen.",
     "app_feature_graphic_FeatureItem1": "4.400 woorden",
     "home_notlogged_accroche4": "4.400 essentiële woorden",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Uw gedeelde aangepaste lijst wordt geladen.",
+    "share_list_not_found": "Lijst niet gevonden of toegang niet geautoriseerd.",
+    "share_dialogue_builder_title": "Deel uw persoonlijke lijst",
+    "share_dialogue_builder_description_qrcode": "Laat de persoon met wie u deze lijst wilt delen de onderstaande QR-code scannen",
+    "share_dialogue_builder_description_copy_url": "Kopieer het volgende adres en geef het aan de persoon met wie u deze lijst wilt delen",
+    "drawer_my_lists": "Mijn lijsten",
+    "drawer_account": "Rekening",
+    "drawer_trial_period": "Mijn proefperiode",
+    "drawer_my_personnal_list": "Mijn persoonlijke lijsten",
+    "drawer_defined_list": "Onze vooraf gedefinieerde lijsten",
+    "drawer_themes_list": "Onze themalijsten",
+    "subscription_benefit_no_pub": "Er is geen reclame zichtbaar op de applicatie"
 }

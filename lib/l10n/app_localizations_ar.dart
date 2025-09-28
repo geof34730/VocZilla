@@ -670,4 +670,40 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 كلمة أساسية';
+
+  @override
+  String get share_loading_list_share => 'تحميل القائمة المخصصة المشتركة الخاصة بك.';
+
+  @override
+  String get share_list_not_found => 'لم يتم العثور على القائمة أو الوصول غير مصرح به.';
+
+  @override
+  String get share_dialogue_builder_title => 'شارك قائمتك الشخصية';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'من خلال جعل الشخص الذي ترغب في مشاركة هذه القائمة معه يقوم بمسح رمز الاستجابة السريعة أدناه';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'انسخ العنوان التالي وقدمه للشخص الذي ترغب في مشاركة هذه القائمة معه';
+
+  @override
+  String get drawer_my_lists => 'قوائمي';
+
+  @override
+  String get drawer_account => 'حساب';
+
+  @override
+  String get drawer_trial_period => 'فترة تجربتي';
+
+  @override
+  String get drawer_my_personnal_list => 'قوائمي الشخصية';
+
+  @override
+  String get drawer_defined_list => 'قوائمنا المحددة مسبقًا';
+
+  @override
+  String get drawer_themes_list => 'قوائم المواضيع لدينا';
+
+  @override
+  String get subscription_benefit_no_pub => 'لا يوجد إعلانات مرئية على التطبيق';
 }

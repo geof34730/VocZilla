@@ -220,10 +220,16 @@
     "app_promotion_ios": "Berig dit engelske ordforråd med 4.400 essentielle ord, der gør det nemt at tale og forstå.",
     "app_feature_graphic_FeatureItem1": "4.400 ord",
     "home_notlogged_accroche4": "4.400 essentielle ord",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Indlæser din delte brugerdefinerede liste.",
+    "share_list_not_found": "Listen blev ikke fundet, eller adgangen var uautoriseret.",
+    "share_dialogue_builder_title": "Del din personlige liste",
+    "share_dialogue_builder_description_qrcode": "Ved at få den person, du ønsker at dele denne liste med, til at scanne QR-koden nedenfor",
+    "share_dialogue_builder_description_copy_url": "Kopiér følgende adresse og giv den til den person, du ønsker at dele denne liste med",
+    "drawer_my_lists": "Mine lister",
+    "drawer_account": "Konto",
+    "drawer_trial_period": "Min prøveperiode",
+    "drawer_my_personnal_list": "Mine personlige lister",
+    "drawer_defined_list": "Vores foruddefinerede lister",
+    "drawer_themes_list": "Vores lister over temaer",
+    "subscription_benefit_no_pub": "Der er ingen synlig reklame i applikationen"
 }

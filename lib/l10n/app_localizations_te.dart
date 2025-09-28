@@ -670,4 +670,40 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 ముఖ్యమైన పదాలు';
+
+  @override
+  String get share_loading_list_share => 'మీ షేర్డ్ కస్టమ్ లిస్ట్ లోడ్ అవుతోంది.';
+
+  @override
+  String get share_list_not_found => 'జాబితా కనుగొనబడలేదు లేదా అనుమతి లేకుండా యాక్సెస్ చేయబడింది.';
+
+  @override
+  String get share_dialogue_builder_title => 'మీ వ్యక్తిగతీకరించిన జాబితాను పంచుకోండి';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'మీరు ఈ జాబితాను షేర్ చేయాలనుకుంటున్న వ్యక్తితో కింద ఉన్న QR కోడ్‌ను స్కాన్ చేయించుకోవడం ద్వారా';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'కింది చిరునామాను కాపీ చేసి, మీరు ఈ జాబితాను ఎవరితో పంచుకోవాలనుకుంటున్నారో వారికి అందించండి.';
+
+  @override
+  String get drawer_my_lists => 'నా జాబితాలు';
+
+  @override
+  String get drawer_account => 'ఖాతా';
+
+  @override
+  String get drawer_trial_period => 'నా ట్రయల్ పీరియడ్';
+
+  @override
+  String get drawer_my_personnal_list => 'నా వ్యక్తిగత జాబితాలు';
+
+  @override
+  String get drawer_defined_list => 'మా ముందే నిర్వచించిన జాబితాలు';
+
+  @override
+  String get drawer_themes_list => 'మా థీమ్‌ల జాబితాలు';
+
+  @override
+  String get subscription_benefit_no_pub => 'అప్లికేషన్‌లో ఎటువంటి ప్రకటనలు కనిపించవు.';
 }

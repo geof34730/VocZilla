@@ -220,10 +220,16 @@
     "app_promotion_ios": "បង្កើនវាក្យសព្ទភាសាអង់គ្លេសរបស់អ្នកជាមួយនឹងពាក្យសំខាន់ៗចំនួន 4,400 សម្រាប់ងាយស្រួលនិយាយ និងយល់។",
     "app_feature_graphic_FeatureItem1": "4,400 ពាក្យ",
     "home_notlogged_accroche4": "4,400 ពាក្យសំខាន់ៗ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "កំពុងផ្ទុកបញ្ជីផ្ទាល់ខ្លួនដែលបានចែករំលែករបស់អ្នក។",
+    "share_list_not_found": "រកមិនឃើញបញ្ជី ឬចូលប្រើដោយគ្មានការអនុញ្ញាត។",
+    "share_dialogue_builder_title": "ចែករំលែកបញ្ជីផ្ទាល់ខ្លួនរបស់អ្នក។",
+    "share_dialogue_builder_description_qrcode": "ដោយ​មាន​មនុស្ស​ដែល​អ្នក​ចង់​ចែករំលែក​បញ្ជី​នេះ​ដោយ​ស្កែន​កូដ QR ខាងក្រោម",
+    "share_dialogue_builder_description_copy_url": "ចម្លងអាសយដ្ឋានខាងក្រោម ហើយផ្តល់វាទៅមនុស្សដែលអ្នកចង់ចែករំលែកបញ្ជីនេះជាមួយ",
+    "drawer_my_lists": "បញ្ជីរបស់ខ្ញុំ",
+    "drawer_account": "គណនី",
+    "drawer_trial_period": "រយៈពេលសាកល្បងរបស់ខ្ញុំ",
+    "drawer_my_personnal_list": "បញ្ជីផ្ទាល់ខ្លួនរបស់ខ្ញុំ",
+    "drawer_defined_list": "បញ្ជីដែលបានកំណត់ជាមុនរបស់យើង។",
+    "drawer_themes_list": "បញ្ជីប្រធានបទរបស់យើង។",
+    "subscription_benefit_no_pub": "គ្មានការផ្សាយពាណិជ្ជកម្មអាចមើលឃើញនៅលើកម្មវិធីនោះទេ។"
 }

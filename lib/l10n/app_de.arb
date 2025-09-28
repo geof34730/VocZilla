@@ -220,10 +220,16 @@
     "app_promotion_ios": "Bereichern Sie Ihren englischen Wortschatz mit 4.400 wichtigen Wörtern für einfaches Sprechen und Verstehen.",
     "app_feature_graphic_FeatureItem1": "4.400 Wörter",
     "home_notlogged_accroche4": "4.400 wichtige Wörter",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Ihre freigegebene benutzerdefinierte Liste wird geladen.",
+    "share_list_not_found": "Liste nicht gefunden oder Zugriff nicht autorisiert.",
+    "share_dialogue_builder_title": "Teilen Sie Ihre personalisierte Liste",
+    "share_dialogue_builder_description_qrcode": "Lassen Sie die Person, mit der Sie diese Liste teilen möchten, den untenstehenden QR-Code scannen",
+    "share_dialogue_builder_description_copy_url": "Kopieren Sie die folgende Adresse und geben Sie sie an die Person weiter, mit der Sie diese Liste teilen möchten",
+    "drawer_my_lists": "Meine Listen",
+    "drawer_account": "Konto",
+    "drawer_trial_period": "Meine Probezeit",
+    "drawer_my_personnal_list": "Meine persönlichen Listen",
+    "drawer_defined_list": "Unsere vordefinierten Listen",
+    "drawer_themes_list": "Unsere Themenlisten",
+    "subscription_benefit_no_pub": "Auf der Anwendung ist keine Werbung sichtbar"
 }

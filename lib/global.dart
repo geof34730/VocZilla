@@ -8,12 +8,12 @@ String versionApp="1.0.0";
 final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
 
 int globalCountVocabulaireAll=4399;
-bool debugMode=true;
-bool byPasSubscription = true;
+bool debugMode=false;
+//bool byPasSubscription = true;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
-final int daysFreeTrial= byPasSubscription ? 2000 :7;
+//final int daysFreeTrial= byPasSubscription ? 2000 :7;
 const resetTo=true;
 bool forFeatureGraphic = false;
 bool changeVocabulaireSinceVisiteHome = false;

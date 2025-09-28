@@ -1560,6 +1560,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'4,400 essential words'**
   String get home_notlogged_accroche4;
+
+  /// No description provided for @share_loading_list_share.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading your shared custom list.'**
+  String get share_loading_list_share;
+
+  /// No description provided for @share_list_not_found.
+  ///
+  /// In en, this message translates to:
+  /// **'List not found or access unauthorized.'**
+  String get share_list_not_found;
+
+  /// No description provided for @share_dialogue_builder_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Share your personalized list'**
+  String get share_dialogue_builder_title;
+
+  /// No description provided for @share_dialogue_builder_description_qrcode.
+  ///
+  /// In en, this message translates to:
+  /// **'By having the person you wish to share this list with scan the QR code below'**
+  String get share_dialogue_builder_description_qrcode;
+
+  /// No description provided for @share_dialogue_builder_description_copy_url.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy the following address and provide it to the person you wish to share this list with'**
+  String get share_dialogue_builder_description_copy_url;
+
+  /// No description provided for @drawer_my_lists.
+  ///
+  /// In en, this message translates to:
+  /// **'My lists'**
+  String get drawer_my_lists;
+
+  /// No description provided for @drawer_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get drawer_account;
+
+  /// No description provided for @drawer_trial_period.
+  ///
+  /// In en, this message translates to:
+  /// **'My trial period'**
+  String get drawer_trial_period;
+
+  /// No description provided for @drawer_my_personnal_list.
+  ///
+  /// In en, this message translates to:
+  /// **'My personal lists'**
+  String get drawer_my_personnal_list;
+
+  /// No description provided for @drawer_defined_list.
+  ///
+  /// In en, this message translates to:
+  /// **'Our predefined lists'**
+  String get drawer_defined_list;
+
+  /// No description provided for @drawer_themes_list.
+  ///
+  /// In en, this message translates to:
+  /// **'Our lists of themes'**
+  String get drawer_themes_list;
+
+  /// No description provided for @subscription_benefit_no_pub.
+  ///
+  /// In en, this message translates to:
+  /// **'No advertising is visible on the application'**
+  String get subscription_benefit_no_pub;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

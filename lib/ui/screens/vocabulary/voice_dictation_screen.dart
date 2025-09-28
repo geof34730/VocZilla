@@ -7,13 +7,14 @@ import 'package:voczilla/logic/cubit/localization_cubit.dart';
 
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../global.dart';
+import '../../widget/ads/banner_ad_widget.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/form/CustomTextZillaField.dart';
-
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 class VoiceDictationScreen extends StatefulWidget {
   VoiceDictationScreen({required String listName});
 
@@ -124,6 +125,8 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                         : Container();
                   },
                 ),
+                AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
+
               ],
             )),
           );

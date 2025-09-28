@@ -220,10 +220,16 @@
     "app_promotion_ios": "Bagātiniet savu angļu valodas vārdu krājumu ar 4400 svarīgiem vārdiem, lai atvieglotu runāšanu un izpratni.",
     "app_feature_graphic_FeatureItem1": "4400 vārdi",
     "home_notlogged_accroche4": "4400 svarīgi vārdi",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Notiek jūsu koplietotā pielāgotā saraksta ielāde.",
+    "share_list_not_found": "Saraksts nav atrasts vai piekļuve tam nav atļauta.",
+    "share_dialogue_builder_title": "Kopīgojiet savu personalizēto sarakstu",
+    "share_dialogue_builder_description_qrcode": "Noskenējiet tālāk norādīto QR kodu personai, ar kuru vēlaties kopīgot šo sarakstu.",
+    "share_dialogue_builder_description_copy_url": "Nokopējiet šo adresi un nododiet to personai, ar kuru vēlaties kopīgot šo sarakstu.",
+    "drawer_my_lists": "Mani saraksti",
+    "drawer_account": "Konts",
+    "drawer_trial_period": "Mans izmēģinājuma periods",
+    "drawer_my_personnal_list": "Mani personīgie saraksti",
+    "drawer_defined_list": "Mūsu iepriekš definētie saraksti",
+    "drawer_themes_list": "Mūsu tēmu saraksti",
+    "subscription_benefit_no_pub": "Lietotnē nav redzama reklāma"
 }

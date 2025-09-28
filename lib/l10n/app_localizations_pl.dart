@@ -670,4 +670,40 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 niezbędnych słów';
+
+  @override
+  String get share_loading_list_share => 'Ładowanie udostępnionej listy niestandardowej.';
+
+  @override
+  String get share_list_not_found => 'Lista nie została znaleziona lub dostęp jest nieautoryzowany.';
+
+  @override
+  String get share_dialogue_builder_title => 'Udostępnij swoją spersonalizowaną listę';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Poproś osobę, z którą chcesz udostępnić tę listę, o zeskanowanie poniższego kodu QR';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Skopiuj poniższy adres i przekaż go osobie, której chcesz udostępnić tę listę';
+
+  @override
+  String get drawer_my_lists => 'Moje listy';
+
+  @override
+  String get drawer_account => 'Konto';
+
+  @override
+  String get drawer_trial_period => 'Mój okres próbny';
+
+  @override
+  String get drawer_my_personnal_list => 'Moje osobiste listy';
+
+  @override
+  String get drawer_defined_list => 'Nasze predefiniowane listy';
+
+  @override
+  String get drawer_themes_list => 'Nasze listy tematów';
+
+  @override
+  String get subscription_benefit_no_pub => 'W aplikacji nie widać żadnych reklam';
 }

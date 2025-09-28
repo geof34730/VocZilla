@@ -670,4 +670,40 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 կարևոր բառեր';
+
+  @override
+  String get share_loading_list_share => 'Ձեր համօգտագործվող անհատականացված ցուցակը բեռնվում է։';
+
+  @override
+  String get share_list_not_found => 'Ցանկը չի գտնվել կամ մուտքը թույլատրված չէ։';
+
+  @override
+  String get share_dialogue_builder_title => 'Կիսվեք ձեր անհատականացված ցանկով';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Այս ցուցակը կիսելու համար խնդրեք այն անձին, ում հետ ցանկանում եք կիսվել, սկանավորել ստորև նշված QR կոդը';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Պատճենեք հետևյալ հասցեն և տրամադրեք այն անձին, ում հետ ցանկանում եք կիսվել այս ցուցակով';
+
+  @override
+  String get drawer_my_lists => 'Իմ ցուցակները';
+
+  @override
+  String get drawer_account => 'Հաշիվ';
+
+  @override
+  String get drawer_trial_period => 'Իմ փորձաշրջանը';
+
+  @override
+  String get drawer_my_personnal_list => 'Իմ անձնական ցուցակները';
+
+  @override
+  String get drawer_defined_list => 'Մեր նախապես սահմանված ցուցակները';
+
+  @override
+  String get drawer_themes_list => 'Մեր թեմաների ցանկերը';
+
+  @override
+  String get subscription_benefit_no_pub => 'Դիմումում գովազդը տեսանելի չէ';
 }

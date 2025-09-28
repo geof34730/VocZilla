@@ -9,6 +9,7 @@ import 'package:voczilla/data/services/leaderboard_service.dart';
 
 import 'package:voczilla/logic/blocs/auth/auth_event.dart';
 import 'package:voczilla/logic/blocs/vocabulaires/vocabulaires_state.dart';
+import 'package:voczilla/services/global_ad_manager.dart';
 import 'package:voczilla/ui/theme/theme.dart';
 import 'package:voczilla/logic/cubit/localization_cubit.dart';
 import 'app_route.dart';
@@ -36,6 +37,7 @@ import 'logic/blocs/notification/notification_event.dart';
 import 'logic/blocs/notification/notification_state.dart';
 import 'logic/blocs/purchase/purchase_bloc.dart';
 import 'logic/blocs/purchase/purchase_event.dart';
+import 'logic/blocs/purchase/purchase_is_subscribed_bloc.dart';
 import 'logic/blocs/purchase/purchase_state.dart';
 import 'logic/blocs/update/update_event.dart';
 import 'logic/blocs/update/update_state.dart';
@@ -83,6 +85,12 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => VocabulairesBloc()),
           BlocProvider(create: (context) => UpdateBloc()..add(CheckForUpdate())),
           BlocProvider(create: (context) => NotificationBloc()),
+          // Dans votre MultiBlocProvider
+          BlocProvider<PurchaseIsSubscribedBloc>(
+            create: (context) => PurchaseIsSubscribedBloc(
+              userRepository: RepositoryProvider.of<UserRepository>(context), // ou userRepository
+            )..add(CheckPurchaseSubscriptionStatus()), // Déclenche la vérification au démarrage
+          ),
           // NE PAS mettre VocabulaireUserBloc et LeaderboardBloc ici !
         ],
         child: BlocBuilder<LocalizationCubit, Locale>(
@@ -92,7 +100,8 @@ class MyApp extends StatelessWidget {
                 : locale;
             FirebaseAuth.instance.setLanguageCode(locale.languageCode);
 
-            return MaterialApp(
+            return GlobalAdManager(
+              child: MaterialApp(
               navigatorObservers: [routeObserver],
               navigatorKey: navigatorKey,
               theme: VobdzillaTheme.lightTheme,
@@ -238,6 +247,7 @@ class MyApp extends StatelessWidget {
                     )
                 );
               },
+            )
             );
           },
         ),

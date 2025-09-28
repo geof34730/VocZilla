@@ -670,4 +670,40 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => 'අත්‍යවශ්‍ය වචන 4,400ක්';
+
+  @override
+  String get share_loading_list_share => 'ඔබගේ බෙදාගත් අභිරුචි ලැයිස්තුව පූරණය වෙමින් පවතී.';
+
+  @override
+  String get share_list_not_found => 'ලැයිස්තුව හමු නොවීය හෝ අනවසරයෙන් ප්‍රවේශ විය.';
+
+  @override
+  String get share_dialogue_builder_title => 'ඔබේ පුද්ගලීකරණය කළ ලැයිස්තුව බෙදා ගන්න';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ඔබට මෙම ලැයිස්තුව බෙදා ගැනීමට අවශ්‍ය පුද්ගලයාට පහත QR කේතය ස්කෑන් කිරීමට සැලැස්වීමෙන්';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'පහත ලිපිනය පිටපත් කර ඔබට මෙම ලැයිස්තුව බෙදා ගැනීමට අවශ්‍ය පුද්ගලයාට එය ලබා දෙන්න.';
+
+  @override
+  String get drawer_my_lists => 'මගේ ලැයිස්තු';
+
+  @override
+  String get drawer_account => 'ගිණුම';
+
+  @override
+  String get drawer_trial_period => 'මගේ අත්හදා බැලීමේ කාලය';
+
+  @override
+  String get drawer_my_personnal_list => 'මගේ පුද්ගලික ලැයිස්තු';
+
+  @override
+  String get drawer_defined_list => 'අපගේ පූර්ව නිශ්චිත ලැයිස්තු';
+
+  @override
+  String get drawer_themes_list => 'අපගේ තේමා ලැයිස්තු';
+
+  @override
+  String get subscription_benefit_no_pub => 'යෙදුමේ කිසිදු වෙළඳ දැන්වීමක් නොපෙනේ.';
 }

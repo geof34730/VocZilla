@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:voczilla/core/utils/localization.dart';
 
 import 'package:voczilla/data/models/vocabulary_user.dart';
 import 'package:voczilla/data/repository/vocabulaire_user_repository.dart';
@@ -22,7 +23,6 @@ Future<Map<String, dynamic>?> getSharedListFromFirestore(String guid) async {
 class ShareScreen extends StatefulWidget {
   final String guidlist;
   const ShareScreen({super.key, required this.guidlist});
-
   @override
   State<ShareScreen> createState() => _ShareScreenState();
 }
@@ -65,14 +65,14 @@ class _ShareScreenState extends State<ShareScreen> {
           }
           if (snapshot.hasError) {
             return Center(
-              child: Text("Liste introuvable ou accès non autorisé.\n${widget.guidlist}"),
+              child: Text(context.loc.share_list_not_found),
             );
             return Center(child: Text("Erreur: ${snapshot.error}"));
           }
           final data = snapshot.data;
           if (data == null) {
             return Center(
-              child: Text("Liste introuvable ou accès non autorisé.\n${widget.guidlist}"),
+              child: Text(context.loc.share_list_not_found),
             );
           }
 
@@ -101,7 +101,7 @@ class _ShareScreenState extends State<ShareScreen> {
               Padding(
                   padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 30.0),
                   child: Text(
-                    "Chargement de votre liste personnalis\u00e9e partag\u00e9e.",
+                    context.loc.share_loading_list_share,
                     textAlign: TextAlign.center,
                   )
               )

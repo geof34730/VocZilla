@@ -670,4 +670,40 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4 400 noodsaaklike woorde';
+
+  @override
+  String get share_loading_list_share => 'Laai tans jou gedeelde persoonlike lys.';
+
+  @override
+  String get share_list_not_found => 'Lys nie gevind nie of toegang ongemagtig.';
+
+  @override
+  String get share_dialogue_builder_title => 'Deel jou gepersonaliseerde lys';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Deur die persoon met wie jy hierdie lys wil deel, die QR-kode hieronder te laat skandeer';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopieer die volgende adres en verskaf dit aan die persoon met wie jy hierdie lys wil deel';
+
+  @override
+  String get drawer_my_lists => 'My lyste';
+
+  @override
+  String get drawer_account => 'Rekening';
+
+  @override
+  String get drawer_trial_period => 'My proeftydperk';
+
+  @override
+  String get drawer_my_personnal_list => 'My persoonlike lyste';
+
+  @override
+  String get drawer_defined_list => 'Ons voorafbepaalde lyste';
+
+  @override
+  String get drawer_themes_list => 'Ons lyste van temas';
+
+  @override
+  String get subscription_benefit_no_pub => 'Geen advertensies is op die toepassing sigbaar nie';
 }

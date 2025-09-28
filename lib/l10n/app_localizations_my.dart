@@ -670,4 +670,40 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => 'မရှိမဖြစ် စကားလုံး ၄၄၀၀';
+
+  @override
+  String get share_loading_list_share => 'သင်၏မျှဝေထားသော စိတ်ကြိုက်စာရင်းကို တင်နေသည်။';
+
+  @override
+  String get share_list_not_found => 'စာရင်းကို ရှာမတွေ့ပါ သို့မဟုတ် ခွင့်ပြုချက်မရှိဘဲ ဝင်ရောက်ပါ။';
+
+  @override
+  String get share_dialogue_builder_title => 'သင့်စိတ်ကြိုက်စာရင်းကို မျှဝေပါ။';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ဤစာရင်းကိုမျှဝေလိုသူအား အောက်ပါ QR ကုဒ်ကို စကင်န်ဖတ်ခြင်းဖြင့် ဤစာရင်းကို မျှဝေလိုပါသည်။';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'အောက်ပါလိပ်စာကို မိတ္တူကူးပြီး ဤစာရင်းကို သင်မျှဝေလိုသော ပုဂ္ဂိုလ်အား ပေးဆောင်ပါ။';
+
+  @override
+  String get drawer_my_lists => 'ငါ့စာရင်းများ';
+
+  @override
+  String get drawer_account => 'အကောင့်';
+
+  @override
+  String get drawer_trial_period => 'ငါ့အစမ်းကာလ';
+
+  @override
+  String get drawer_my_personnal_list => 'ကျွန်ုပ်၏ကိုယ်ရေးကိုယ်တာစာရင်းများ';
+
+  @override
+  String get drawer_defined_list => 'ကျွန်ုပ်တို့၏ ကြိုတင်သတ်မှတ်ထားသော စာရင်းများ';
+
+  @override
+  String get drawer_themes_list => 'ကျွန်ုပ်တို့၏အကြောင်းအရာများစာရင်းများ';
+
+  @override
+  String get subscription_benefit_no_pub => 'အပလီကေးရှင်းတွင် ကြော်ငြာများကို မတွေ့ရ။';
 }

@@ -220,10 +220,16 @@
     "app_promotion_ios": "Kolay konuşma ve anlama için 4.400 temel kelimeyle İngilizce kelime dağarcığınızı zenginleştirin.",
     "app_feature_graphic_FeatureItem1": "4.400 kelime",
     "home_notlogged_accroche4": "4.400 temel kelime",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Paylaşılan özel listeniz yükleniyor.",
+    "share_list_not_found": "Liste bulunamadı veya erişim yetkisi yok.",
+    "share_dialogue_builder_title": "Kişiselleştirilmiş listenizi paylaşın",
+    "share_dialogue_builder_description_qrcode": "Bu listeyi paylaşmak istediğiniz kişinin aşağıdaki QR kodunu taramasını sağlayın",
+    "share_dialogue_builder_description_copy_url": "Aşağıdaki adresi kopyalayın ve bu listeyi paylaşmak istediğiniz kişiye verin",
+    "drawer_my_lists": "Listelerim",
+    "drawer_account": "Hesap",
+    "drawer_trial_period": "Deneme sürem",
+    "drawer_my_personnal_list": "Kişisel listelerim",
+    "drawer_defined_list": "Önceden tanımlanmış listelerimiz",
+    "drawer_themes_list": "Tema listelerimiz",
+    "subscription_benefit_no_pub": "Uygulamada hiçbir reklam görünmüyor"
 }

@@ -69,39 +69,11 @@ class UserRepository {
     Logger.Green.log("checkUserStatusForce triggered.");
     final prefs = await SharedPreferences.getInstance();
     // Forcing a check by setting the last check date to the past.
-    final yesterday =
-    DateTime.now().subtract(const Duration(days: 1)).toIso8601String().substring(0, 10);
+    final yesterday = DateTime.now().subtract(const Duration(days: 1)).toIso8601String().substring(0, 10);
     await prefs.setString('lastCheckStatusDate', yesterday);
   }
 
-  Future<void> showDialogueFreeTrialOnceByDay({required BuildContext context}) async {
 
-    Logger.Blue.log("Go view freetrial dialogue");
-
-    // AUTHENTICATION GUARD: Do nothing if no user is signed in.
-    if (_firebaseAuth.currentUser == null) {
-      Logger.Yellow.log("showDialogueFreeTrialOnceByDay cancelled: user not authenticated.");
-      return;
-    }
-
-    final prefs = await SharedPreferences.getInstance();
-    final today = DateTime.now().toIso8601String().substring(0, 10);
-    final lastShownDate = prefs.getString('lastFreeTrialDialogDate');
-
-    if (lastShownDate != today) {
-      await prefs.setString('lastFreeTrialDialogDate', today);
-      Logger.Green.log("Showing free trial dialog for UserFreeTrialPeriodAndNotSubscribed.");
-      final daysLeft = await getLeftDaysFreeTrial();
-      // Ensure the widget is built before showing a dialog.
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (context.mounted) {
-          DialogHelper().showFreeTrialDialog(context: context, daysLeft: daysLeft);
-        }
-      });
-    } else {
-      Logger.Cyan.log("Free trial dialog already shown today.");
-    }
-  }
 
   Future<void> restorePurchases() async {
     // Cancel any existing subscription to avoid leaks before starting a new one.
@@ -116,8 +88,7 @@ class UserRepository {
     }
 
     // Listen to the purchase stream to get results from the restore operation.
-    _purchaseSubscription =
-        _inAppPurchase.purchaseStream.listen((purchaseDetailsList) {
+    _purchaseSubscription = _inAppPurchase.purchaseStream.listen((purchaseDetailsList) {
           if (purchaseDetailsList.isEmpty && !_purchaseCompleter.isCompleted) {
             _purchaseCompleter.complete();
             return;
@@ -140,7 +111,8 @@ class UserRepository {
         }, onDone: () {
           if (!_purchaseCompleter.isCompleted) _purchaseCompleter.complete();
         }, onError: (error) {
-          if (!_purchaseCompleter.isCompleted) _purchaseCompleter.completeError(error);
+          if (!_purchaseCompleter.isCompleted) _purchaseCompleter.completeError(
+              error);
         });
 
     // This triggers the restore. Results will be delivered to the listener above.
@@ -150,7 +122,7 @@ class UserRepository {
   Future<bool> checkSubscriptionStatus() async {
     // Reset the completer for this new check operation.
 
-
+    Logger.Green.log("**********************************checkSubscriptionStatus");
 
     if (_purchaseCompleter.isCompleted) {
       _purchaseCompleter = Completer<void>();
@@ -177,22 +149,26 @@ class UserRepository {
 
     Logger.Magenta.log("Verifying subscription with backend...");
     try {
+      final dataParmeter= {
+        'userId': _firebaseAuth.currentUser?.uid,
+        'purchaseToken': _purchaseToken,
+        'platform': _platform,
+        'subscriptionId': _subscriptionId
+      };
+
+      Logger.Green.log(dataParmeter);
       final response = await _dio.post(
         serverSubcriptionStaturUrl,
         options: Options(headers: {'Content-Type': 'application/json'}),
-        data: {
-          'userId': _firebaseAuth.currentUser?.uid,
-          'purchaseToken': _purchaseToken,
-          'platform': _platform,
-          'subscriptionId': _subscriptionId
-        },
+        data: dataParmeter,
       );
 
       if (response.statusCode == 200 && response.data is bool) {
         Logger.Blue.log("Subscription status from backend: ${response.data}");
         return response.data;
       } else {
-        Logger.Red.log("Failed to verify subscription. Status: ${response.statusCode}, Body: ${response.data}");
+        Logger.Red.log("Failed to verify subscription. Status: ${response
+            .statusCode}, Body: ${response.data}");
         return false;
       }
     } catch (e) {
@@ -201,30 +177,6 @@ class UserRepository {
     }
   }
 
-  Future<DateTime?> getTrialEndDate() async {
-    return await _getDaysEndFreetrial();
-  }
-
-  Future<int> getLeftDaysEndDate() async {
-    return await getLeftDaysFreeTrial();
-  }
-
-  Future<DateTime?> _getDaysEndFreetrial() async {
-    // The user object from FirebaseAuth contains the metadata.
-    final user = _firebaseAuth.currentUser;
-    // creationTime can also be null. The ?. operator handles this case.
-    return user?.metadata.creationTime?.add(Duration(days: daysFreeTrial));
-  }
-
-  Future<int> getLeftDaysFreeTrial() async {
-    final now = DateTime.now();
-    final endDate = await _getDaysEndFreetrial();
-    if (endDate == null) {
-      return 0;
-    }
-    final difference = endDate.difference(now).inDays;
-    return difference < 0 ? 0 : difference;
-  }
 }
 
 /// A global instance for easy access, following the service locator pattern.

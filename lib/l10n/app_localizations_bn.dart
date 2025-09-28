@@ -670,4 +670,40 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '৪,৪০০টি প্রয়োজনীয় শব্দ';
+
+  @override
+  String get share_loading_list_share => 'আপনার শেয়ার করা কাস্টম তালিকা লোড করা হচ্ছে।';
+
+  @override
+  String get share_list_not_found => 'তালিকা পাওয়া যায়নি অথবা অননুমোদিতভাবে অ্যাক্সেস করা হয়েছে।';
+
+  @override
+  String get share_dialogue_builder_title => 'আপনার ব্যক্তিগতকৃত তালিকা শেয়ার করুন';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'আপনি যার সাথে এই তালিকাটি শেয়ার করতে চান তার সাথে নিচের QR কোডটি স্ক্যান করুন।';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'নিচের ঠিকানাটি কপি করুন এবং যার সাথে আপনি এই তালিকাটি শেয়ার করতে চান তাকে এটি দিন।';
+
+  @override
+  String get drawer_my_lists => 'আমার তালিকা';
+
+  @override
+  String get drawer_account => 'হিসাব';
+
+  @override
+  String get drawer_trial_period => 'আমার ট্রায়াল পিরিয়ড';
+
+  @override
+  String get drawer_my_personnal_list => 'আমার ব্যক্তিগত তালিকা';
+
+  @override
+  String get drawer_defined_list => 'আমাদের পূর্বনির্ধারিত তালিকা';
+
+  @override
+  String get drawer_themes_list => 'আমাদের থিমের তালিকা';
+
+  @override
+  String get subscription_benefit_no_pub => 'অ্যাপ্লিকেশনটিতে কোনও বিজ্ঞাপন দৃশ্যমান নয়';
 }

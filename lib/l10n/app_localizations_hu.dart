@@ -670,4 +670,40 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 alapvető szó';
+
+  @override
+  String get share_loading_list_share => 'A megosztott egyéni lista betöltése folyamatban van.';
+
+  @override
+  String get share_list_not_found => 'A lista nem található, vagy jogosulatlan hozzáférés történt.';
+
+  @override
+  String get share_dialogue_builder_title => 'Oszd meg a személyre szabott listádat';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Azzal, hogy meg szeretné osztani ezt a listát azzal a személlyel, akivel meg szeretné osztani, beolvassa az alábbi QR-kódot.';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Másold ki a következő címet, és add meg annak a személynek, akivel meg szeretnéd osztani ezt a listát.';
+
+  @override
+  String get drawer_my_lists => 'Saját listák';
+
+  @override
+  String get drawer_account => 'Fiók';
+
+  @override
+  String get drawer_trial_period => 'A próbaidőszakom';
+
+  @override
+  String get drawer_my_personnal_list => 'Személyes listáim';
+
+  @override
+  String get drawer_defined_list => 'Előre meghatározott listáink';
+
+  @override
+  String get drawer_themes_list => 'Témalistáink';
+
+  @override
+  String get subscription_benefit_no_pub => 'Nincsenek hirdetések az alkalmazáson';
 }

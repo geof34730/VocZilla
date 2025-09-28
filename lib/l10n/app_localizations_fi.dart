@@ -670,4 +670,40 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4 400 olennaista sanaa';
+
+  @override
+  String get share_loading_list_share => 'Ladataan jaettua mukautettua listaasi.';
+
+  @override
+  String get share_list_not_found => 'Listaa ei löytynyt tai siihen on käytetty luvattomasti.';
+
+  @override
+  String get share_dialogue_builder_title => 'Jaa oma henkilökohtainen listasi';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Pyytämällä henkilöä, jonka kanssa haluat jakaa tämän listan, skannaamaan alla olevan QR-koodin';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopioi seuraava osoite ja anna se henkilölle, jonka kanssa haluat jakaa tämän listan';
+
+  @override
+  String get drawer_my_lists => 'Omat listani';
+
+  @override
+  String get drawer_account => 'Tili';
+
+  @override
+  String get drawer_trial_period => 'Koeaikani';
+
+  @override
+  String get drawer_my_personnal_list => 'Omat henkilökohtaiset listani';
+
+  @override
+  String get drawer_defined_list => 'Valmiiksi määritetyt listamme';
+
+  @override
+  String get drawer_themes_list => 'Teemaluettelomme';
+
+  @override
+  String get subscription_benefit_no_pub => 'Sovelluksessa ei näy mainoksia';
 }

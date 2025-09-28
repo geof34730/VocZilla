@@ -220,10 +220,16 @@
     "app_promotion_ios": "Obohaťte si svou anglickou slovní zásobu o 4 400 základních slov pro snadnou mluvu a porozumění.",
     "app_feature_graphic_FeatureItem1": "4 400 slov",
     "home_notlogged_accroche4": "4 400 základních slov",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Načítání vašeho sdíleného vlastního seznamu.",
+    "share_list_not_found": "Seznam nenalezen nebo přístup neoprávněný.",
+    "share_dialogue_builder_title": "Sdílejte svůj personalizovaný seznam",
+    "share_dialogue_builder_description_qrcode": "Tím, že požádáte osobu, se kterou chcete tento seznam sdílet, aby naskenovala níže uvedený QR kód",
+    "share_dialogue_builder_description_copy_url": "Zkopírujte následující adresu a poskytněte ji osobě, se kterou chcete tento seznam sdílet",
+    "drawer_my_lists": "Moje seznamy",
+    "drawer_account": "Účet",
+    "drawer_trial_period": "Moje zkušební doba",
+    "drawer_my_personnal_list": "Moje osobní seznamy",
+    "drawer_defined_list": "Naše předdefinované seznamy",
+    "drawer_themes_list": "Naše seznamy témat",
+    "subscription_benefit_no_pub": "V aplikaci se nezobrazuje žádná reklama"
 }

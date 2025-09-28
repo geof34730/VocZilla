@@ -670,4 +670,40 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 маанилүү сөздөр';
+
+  @override
+  String get share_loading_list_share => 'Бөлүшүлгөн жеке тизмеңиз жүктөлүүдө.';
+
+  @override
+  String get share_list_not_found => 'Тизме табылган жок же уруксатсыз кирүү.';
+
+  @override
+  String get share_dialogue_builder_title => 'Жекелештирилген тизмеңизди бөлүшүңүз';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Төмөнкү QR кодун сканерлөө менен бул тизмени бөлүшкүңүз келген адам менен бөлүшүңүз';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Төмөнкү даректи көчүрүп, бул тизмени бөлүшкүңүз келген адамга бериңиз';
+
+  @override
+  String get drawer_my_lists => 'Менин тизмелерим';
+
+  @override
+  String get drawer_account => 'Каттоо эсеби';
+
+  @override
+  String get drawer_trial_period => 'Менин сыноо мөөнөтүм';
+
+  @override
+  String get drawer_my_personnal_list => 'Менин жеке тизмелерим';
+
+  @override
+  String get drawer_defined_list => 'Биздин алдын ала тизмелер';
+
+  @override
+  String get drawer_themes_list => 'Биздин темалардын тизмеси';
+
+  @override
+  String get subscription_benefit_no_pub => 'Колдонмодо эч кандай жарнама көрүнбөйт';
 }

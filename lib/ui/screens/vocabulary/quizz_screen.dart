@@ -14,11 +14,12 @@ import '../../../global.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 
+import '../../widget/ads/banner_ad_widget.dart';
 import '../../widget/form/CongratulationOrErrorData.dart';
 import '../../widget/form/CustomTextZillaField.dart';
 import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/statistical/global_statisctical_widget.dart'; // Importez ici
-
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 class QuizzScreen extends StatefulWidget {
   final String listName;
   const QuizzScreen({super.key, required this.listName});
@@ -202,7 +203,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                         : Container();
                                   },
                                 ),
+                                AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
                               ],
+
                             ),
                           )
                     ]
@@ -230,10 +233,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
     setState(() {
       refreshCount++;
       refrechRandom = true;
-      customeTextZillaControllerLearnLocalLanguage.dispose();
-      customeTextZillaControllerLearnEnglishLanguage.dispose();
-      customeTextZillaControllerLearnLocalLanguage = TextEditingController();
-      customeTextZillaControllerLearnEnglishLanguage = TextEditingController();
+      customeTextZillaControllerLearnLocalLanguage.clear();
+      customeTextZillaControllerLearnEnglishLanguage.clear();
     });
   }
 

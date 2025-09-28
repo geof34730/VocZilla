@@ -5,7 +5,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'logger.dart';
 
 
-HorizontalScrollView HorizontalScrollViewCardHome({required List<Widget> children,  double itemWidth = 340}) {
+Widget HorizontalScrollViewCardHome({required List<Widget> children,  double itemWidth = 340}) {
   return HorizontalScrollView(
       itemWidth: itemWidth,
       crossAxisSpacing: 8.0,

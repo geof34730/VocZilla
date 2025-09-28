@@ -670,4 +670,40 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 maneno muhimu';
+
+  @override
+  String get share_loading_list_share => 'Inapakia orodha yako maalum iliyoshirikiwa.';
+
+  @override
+  String get share_list_not_found => 'Orodha haijapatikana au ufikiaji ambao haujaidhinishwa.';
+
+  @override
+  String get share_dialogue_builder_title => 'Shiriki orodha yako iliyobinafsishwa';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Kwa kuwa na mtu unayetaka kushiriki orodha hii na kuchanganua msimbo wa QR hapa chini';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Nakili anwani ifuatayo na umpe mtu ambaye ungependa kushiriki naye orodha hii';
+
+  @override
+  String get drawer_my_lists => 'Orodha zangu';
+
+  @override
+  String get drawer_account => 'Akaunti';
+
+  @override
+  String get drawer_trial_period => 'Kipindi changu cha majaribio';
+
+  @override
+  String get drawer_my_personnal_list => 'Orodha zangu za kibinafsi';
+
+  @override
+  String get drawer_defined_list => 'Orodha zetu zilizofafanuliwa awali';
+
+  @override
+  String get drawer_themes_list => 'Orodha zetu za mada';
+
+  @override
+  String get subscription_benefit_no_pub => 'Hakuna tangazo linaloonekana kwenye programu';
 }

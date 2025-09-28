@@ -670,4 +670,40 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400개의 필수 단어';
+
+  @override
+  String get share_loading_list_share => '공유된 사용자 정의 목록을 로드하는 중입니다.';
+
+  @override
+  String get share_list_not_found => '목록을 찾을 수 없거나 접근 권한이 없습니다.';
+
+  @override
+  String get share_dialogue_builder_title => '개인화된 목록을 공유하세요';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => '이 목록을 공유하고 싶은 사람이 아래 QR 코드를 스캔하도록 하세요.';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => '다음 주소를 복사하여 이 목록을 공유하려는 사람에게 제공하세요.';
+
+  @override
+  String get drawer_my_lists => '내 목록';
+
+  @override
+  String get drawer_account => '계정';
+
+  @override
+  String get drawer_trial_period => '내 체험 기간';
+
+  @override
+  String get drawer_my_personnal_list => '내 개인 목록';
+
+  @override
+  String get drawer_defined_list => '미리 정의된 목록';
+
+  @override
+  String get drawer_themes_list => '우리의 테마 목록';
+
+  @override
+  String get subscription_benefit_no_pub => '애플리케이션에 광고가 표시되지 않습니다.';
 }

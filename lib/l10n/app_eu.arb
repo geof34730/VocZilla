@@ -220,10 +220,16 @@
     "app_promotion_ios": "Aberastu zure ingeles hiztegia 4.400 hitz ezinbestekorekin, erraz hitz egiteko eta ulertzeko.",
     "app_feature_graphic_FeatureItem1": "4.400 hitz",
     "home_notlogged_accroche4": "4.400 hitz garrantzitsu",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Zure zerrenda pertsonalizatu partekatua kargatzen.",
+    "share_list_not_found": "Zerrenda ez da aurkitu edo baimenik gabeko sarbidea.",
+    "share_dialogue_builder_title": "Partekatu zure zerrenda pertsonalizatua",
+    "share_dialogue_builder_description_qrcode": "Zerrenda hau partekatu nahi duzun pertsonak beheko QR kodea eskaneatzea eskatuz",
+    "share_dialogue_builder_description_copy_url": "Kopiatu helbide hau eta eman zerrenda hau partekatu nahi diozun pertsonari",
+    "drawer_my_lists": "Nire zerrendak",
+    "drawer_account": "Kontua",
+    "drawer_trial_period": "Nire proba-aldia",
+    "drawer_my_personnal_list": "Nire zerrenda pertsonalak",
+    "drawer_defined_list": "Gure aurrez definitutako zerrendak",
+    "drawer_themes_list": "Gure gai zerrendak",
+    "subscription_benefit_no_pub": "Ez da iragarkirik ikusten aplikazioan"
 }

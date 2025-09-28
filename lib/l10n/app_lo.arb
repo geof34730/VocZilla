@@ -220,10 +220,16 @@
     "app_promotion_ios": "ເພີ່ມຄໍາສັບພາສາອັງກິດຂອງທ່ານດ້ວຍ 4,400 ຄໍາສໍາຄັນສໍາລັບການເວົ້າແລະຄວາມເຂົ້າໃຈງ່າຍ.",
     "app_feature_graphic_FeatureItem1": "4,400 ຄໍາ",
     "home_notlogged_accroche4": "4,400 ຄໍາ​ສັບ​ຕ່າງໆ​ທີ່​ສໍາ​ຄັນ​",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "ກຳລັງໂຫຼດລາຍຊື່ກຳນົດເອງທີ່ແບ່ງປັນຂອງທ່ານ.",
+    "share_list_not_found": "ບໍ່ພົບລາຍຊື່ ຫຼືເຂົ້າເຖິງໂດຍບໍ່ໄດ້ຮັບອະນຸຍາດ.",
+    "share_dialogue_builder_title": "ແບ່ງປັນລາຍຊື່ສ່ວນຕົວຂອງທ່ານ",
+    "share_dialogue_builder_description_qrcode": "ໂດຍໃຫ້ບຸກຄົນທີ່ທ່ານຕ້ອງການແບ່ງປັນລາຍຊື່ນີ້ດ້ວຍການສະແກນລະຫັດ QR ຂ້າງລຸ່ມນີ້",
+    "share_dialogue_builder_description_copy_url": "ສຳເນົາທີ່ຢູ່ຕໍ່ໄປນີ້ ແລະສະໜອງໃຫ້ບຸກຄົນທີ່ທ່ານຕ້ອງການແບ່ງປັນລາຍຊື່ນີ້ນຳ",
+    "drawer_my_lists": "ລາຍການຂອງຂ້ອຍ",
+    "drawer_account": "ບັນຊີ",
+    "drawer_trial_period": "ໄລຍະເວລາທົດລອງຂອງຂ້ອຍ",
+    "drawer_my_personnal_list": "ລາຍຊື່ສ່ວນຕົວຂອງຂ້ອຍ",
+    "drawer_defined_list": "ບັນຊີລາຍຊື່ທີ່ກໍານົດໄວ້ລ່ວງຫນ້າຂອງພວກເຮົາ",
+    "drawer_themes_list": "ລາຍຊື່ຫົວຂໍ້ຂອງພວກເຮົາ",
+    "subscription_benefit_no_pub": "ບໍ່ມີການໂຄສະນາທີ່ເຫັນໄດ້ໃນແອັບພລິເຄຊັນ"
 }

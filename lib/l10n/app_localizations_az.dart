@@ -670,4 +670,40 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 əsas söz';
+
+  @override
+  String get share_loading_list_share => 'Paylaşılan fərdi siyahınız yüklənir.';
+
+  @override
+  String get share_list_not_found => 'Siyahı tapılmadı və ya icazəsiz giriş.';
+
+  @override
+  String get share_dialogue_builder_title => 'Şəxsi siyahınızı paylaşın';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Aşağıdakı QR kodunu skan edərək bu siyahını paylaşmaq istədiyiniz şəxsə sahib olmaqla';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Aşağıdakı ünvanı kopyalayın və bu siyahını paylaşmaq istədiyiniz şəxsə təqdim edin';
+
+  @override
+  String get drawer_my_lists => 'Mənim siyahılarım';
+
+  @override
+  String get drawer_account => 'Hesab';
+
+  @override
+  String get drawer_trial_period => 'Sınaq müddətim';
+
+  @override
+  String get drawer_my_personnal_list => 'Şəxsi siyahılarım';
+
+  @override
+  String get drawer_defined_list => 'Əvvəlcədən təyin edilmiş siyahılarımız';
+
+  @override
+  String get drawer_themes_list => 'Mövzu siyahılarımız';
+
+  @override
+  String get subscription_benefit_no_pub => 'Tətbiqdə heç bir reklam görünmür';
 }

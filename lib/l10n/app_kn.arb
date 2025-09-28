@@ -220,10 +220,16 @@
     "app_promotion_ios": "ಸುಲಭವಾಗಿ ಮಾತನಾಡಲು ಮತ್ತು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು 4,400 ಅಗತ್ಯ ಪದಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಇಂಗ್ಲಿಷ್ ಶಬ್ದಕೋಶವನ್ನು ಉತ್ಕೃಷ್ಟಗೊಳಿಸಿ.",
     "app_feature_graphic_FeatureItem1": "4,400 ಪದಗಳು",
     "home_notlogged_accroche4": "4,400 ಅಗತ್ಯ ಪದಗಳು",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "ನಿಮ್ಮ ಹಂಚಿಕೊಂಡ ಕಸ್ಟಮ್ ಪಟ್ಟಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ.",
+    "share_list_not_found": "ಪಟ್ಟಿ ಕಂಡುಬಂದಿಲ್ಲ ಅಥವಾ ಪ್ರವೇಶ ಅನಧಿಕೃತವಾಗಿದೆ.",
+    "share_dialogue_builder_title": "ನಿಮ್ಮ ವೈಯಕ್ತಿಕಗೊಳಿಸಿದ ಪಟ್ಟಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ",
+    "share_dialogue_builder_description_qrcode": "ನೀವು ಈ ಪಟ್ಟಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ಬಯಸುವ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಕೆಳಗಿನ QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡುವ ಮೂಲಕ",
+    "share_dialogue_builder_description_copy_url": "ಕೆಳಗಿನ ವಿಳಾಸವನ್ನು ನಕಲಿಸಿ ಮತ್ತು ನೀವು ಈ ಪಟ್ಟಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ಬಯಸುವ ವ್ಯಕ್ತಿಗೆ ಒದಗಿಸಿ.",
+    "drawer_my_lists": "ನನ್ನ ಪಟ್ಟಿಗಳು",
+    "drawer_account": "ಖಾತೆ",
+    "drawer_trial_period": "ನನ್ನ ಪ್ರಾಯೋಗಿಕ ಅವಧಿ",
+    "drawer_my_personnal_list": "ನನ್ನ ವೈಯಕ್ತಿಕ ಪಟ್ಟಿಗಳು",
+    "drawer_defined_list": "ನಮ್ಮ ಪೂರ್ವನಿರ್ಧರಿತ ಪಟ್ಟಿಗಳು",
+    "drawer_themes_list": "ನಮ್ಮ ಥೀಮ್‌ಗಳ ಪಟ್ಟಿಗಳು",
+    "subscription_benefit_no_pub": "ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಯಾವುದೇ ಜಾಹೀರಾತು ಗೋಚರಿಸುವುದಿಲ್ಲ."
 }

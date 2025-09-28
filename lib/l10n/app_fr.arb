@@ -212,6 +212,7 @@
   "subscription_benefit_full_access": "Accès complet à l’app",
   "subscription_benefit_unlimited": "Utilisation illimitée",
   "subscription_benefit_updates": "Mises à jour et support inclus",
+  "subscription_benefit_no_pub" : "Aucune publicité n’est visible sur l’application",
   "subscription_plan_badge_best_offer": "2 mois offerts",
   "subscription_legal_note": "Paiement débité de votre compte iTunes à la confirmation de l’achat. Abonnement à renouvellement automatique sauf désactivation au moins 24 h avant la fin de la période en cours. Vous pouvez gérer votre abonnement et désactiver le renouvellement automatique dans les réglages de votre compte. Les 7 jours gratuits sont gérés par l’application (nouveaux comptes).",
   "card_home_finished": "terminé",
@@ -219,5 +220,18 @@
   "title_all_list_perso" : "Toute vos listes personnalisées",
   "title_all_list_theme" : "Toute nos listes de thèmes",
   "view_all_list" : "Voir toutes les listes",
-  "hide_lists_finiched" : "Cacher les listes terminées"
+  "hide_lists_finiched" : "Cacher les listes terminées",
+  "share_loading_list_share" : "Chargement de votre liste personnalisée partagée.",
+  "share_list_not_found" : "Liste introuvable ou accès non autorisé.",
+  "share_dialogue_builder_title" : "Partager votre liste personnalisée",
+  "share_dialogue_builder_description_qrcode" : "En faisant scanner le QR code ci-dessous à la personne avec qui vous souhaitez partager cette liste",
+  "share_dialogue_builder_description_copy_url" : "Copiez l'adresse suivante et fournissez-la à la personne avec qui vous souhaitez partager cette liste",
+  "drawer_my_lists" : "Mes listes",
+  "drawer_account" : "Compte",
+  "drawer_trial_period" : "Ma période d'essai",
+  "drawer_my_personnal_list" : "Mes listes personnelles",
+  "drawer_defined_list" : "Nos listes prédéfinies",
+  "drawer_themes_list" : "Nos listes des thèmes"
+
+
 }

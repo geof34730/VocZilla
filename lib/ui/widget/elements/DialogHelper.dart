@@ -14,7 +14,7 @@ import '../../../global.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class DialogHelper {
-   Future<void> showFreeTrialDialog({required BuildContext context, int daysLeft = 0}) async {
+   /*Future<void> showFreeTrialDialog({required BuildContext context, int daysLeft = 0}) async {
      Logger.Magenta.log("Show Trial Dialogue ");
       if (context.mounted ) {
         showDialog(
@@ -136,7 +136,7 @@ class DialogHelper {
             }
         );
       }
-  }
+  }*/
 
 
    Future<void> dialogBuilderShare({required BuildContext context,required String guidListPerso }) {
@@ -159,16 +159,16 @@ class DialogHelper {
                      ))
                ]),
                title:  Text(
-                 'Partager votre liste personnalisée',
+                 context.loc.share_dialogue_builder_title,
                  textAlign: TextAlign.center,
                  style: TextStyle(fontSize: 18.00),
                ),
                content: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
                   SizedBox(
                      width: 360,
-                     height: 40,
+
                      child: Text(
-                       'En faisant scanner le QR code ci-dessous à la personne avec qui vous souhaitez partager cette liste',
+                       context.loc.share_dialogue_builder_description_qrcode,
                        textAlign: TextAlign.center,
                        style: TextStyle(fontSize: 14.00),
                      )),
@@ -196,34 +196,48 @@ class DialogHelper {
                 SizedBox(
                      width: 360,
                      child:Text(
-                       "En copiant l'adresse suivante et la fournir à la personne avec qui vous souhaitez partager cette liste",
+                       context.loc.share_dialogue_builder_description_copy_url,
                        textAlign: TextAlign.center,
                        style: TextStyle(fontSize: 14.00),
                      ),
                  ),
                SizedBox(
                    width: 360,
-                   child:Row(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center, children: [
-                       Padding(
-                           padding: const EdgeInsets.only(top: 10.0),
-                           child:Text(
-                               "https://links.voczilla.com/share/${guidListPerso.substring(0,5)}...",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 14.00,
-                                    color:Colors.blue
-                                ),
-                           )
-                       ),
-                       IconButton(
-                         icon: const Icon(Icons.copy),
-                         onPressed: () {
-                           Clipboard.setData(ClipboardData(text: "https://links.voczilla.com/share/$guidListPerso"));
-                         },
+                   child:Padding(
+                       padding: const EdgeInsets.only(top: 0.0),
+                       child:Row(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center, children: [
+                         GestureDetector(
+                           onTap: () {
+                             Clipboard.setData(
+                               ClipboardData(text: "https://links.voczilla.com/share/$guidListPerso"),
+                             );
+
+                           },
+                           child: Text(
+                             "https://links.voczilla.com/share/${guidListPerso.substring(0,5)}...",
+                             textAlign: TextAlign.center,
+                             style: TextStyle(
+                               fontSize: 12.00,
+                               color: Colors.blue,
+                               decoration: TextDecoration.underline, // Optionnel : pour montrer que c'est cliquable
+                             ),
+                           ),
+                         ),
+                         IconButton(
+                           icon: const Icon(Icons.copy),
+                           onPressed: () {
+                             Clipboard.setData(
+                               ClipboardData(text: "https://links.voczilla.com/share/$guidListPerso"),
+                             );
+
+                           },
+                         ),
+                         ]
                        )
-                     ])
-               )
-               ]),
+                   )
+                )
+               ]
+               ),
              ));
        },
      );

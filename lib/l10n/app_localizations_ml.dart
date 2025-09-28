@@ -670,4 +670,40 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 അവശ്യ വാക്കുകൾ';
+
+  @override
+  String get share_loading_list_share => 'നിങ്ങളുടെ പങ്കിട്ട ഇഷ്ടാനുസൃത ലിസ്റ്റ് ലോഡ് ചെയ്യുന്നു.';
+
+  @override
+  String get share_list_not_found => 'ലിസ്റ്റ് കണ്ടെത്തിയില്ല അല്ലെങ്കിൽ അനധികൃതമായി ആക്‌സസ് ചെയ്‌തു.';
+
+  @override
+  String get share_dialogue_builder_title => 'നിങ്ങളുടെ വ്യക്തിഗതമാക്കിയ ലിസ്റ്റ് പങ്കിടുക';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ഈ ലിസ്റ്റ് പങ്കിടാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്ന വ്യക്തിയോട് താഴെയുള്ള QR കോഡ് സ്കാൻ ചെയ്യിപ്പിക്കുന്നതിലൂടെ';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'ഇനിപ്പറയുന്ന വിലാസം പകർത്തി ഈ ലിസ്റ്റ് പങ്കിടാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്ന വ്യക്തിക്ക് നൽകുക.';
+
+  @override
+  String get drawer_my_lists => 'എന്റെ ലിസ്റ്റുകൾ';
+
+  @override
+  String get drawer_account => 'അക്കൗണ്ട്';
+
+  @override
+  String get drawer_trial_period => 'എന്റെ പരീക്ഷണ കാലയളവ്';
+
+  @override
+  String get drawer_my_personnal_list => 'എന്റെ സ്വകാര്യ ലിസ്റ്റുകൾ';
+
+  @override
+  String get drawer_defined_list => 'ഞങ്ങളുടെ മുൻനിശ്ചയിച്ച ലിസ്റ്റുകൾ';
+
+  @override
+  String get drawer_themes_list => 'ഞങ്ങളുടെ തീമുകളുടെ പട്ടികകൾ';
+
+  @override
+  String get subscription_benefit_no_pub => 'ആപ്ലിക്കേഷനിൽ പരസ്യങ്ങളൊന്നും ദൃശ്യമല്ല.';
 }

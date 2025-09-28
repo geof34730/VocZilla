@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/core/utils/localization.dart';
 import 'package:voczilla/ui/theme/appColors.dart';
 import '../../../core/utils/detailTypeVocabulaire.dart';
+import '../../widget/ads/banner_ad_widget.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/enum.dart';
 import '../../../core/utils/languageUtils.dart';
@@ -75,6 +76,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
           return SingleChildScrollView(
             child: Center(
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
+
                   key: ValueKey('screenLearn'),
                     children: [
                       RadioChoiceVocabularyLearnedOrNot(
@@ -209,7 +212,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                           children: [
                             Container(
                               width: sizeCardLearn,
-                              height: sizeCardLearn,
+
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -274,7 +277,9 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                             )
                           ],
                         ),
-                      ]
+                      ],
+                      AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
+//
                 ],
               ),
             ),

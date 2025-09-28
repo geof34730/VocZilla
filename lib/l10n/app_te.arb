@@ -220,10 +220,16 @@
     "app_promotion_ios": "సులభంగా మాట్లాడటానికి మరియు అర్థం చేసుకోవడానికి 4,400 ముఖ్యమైన పదాలతో మీ ఆంగ్ల పదజాలాన్ని మెరుగుపరచుకోండి.",
     "app_feature_graphic_FeatureItem1": "4,400 పదాలు",
     "home_notlogged_accroche4": "4,400 ముఖ్యమైన పదాలు",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "మీ షేర్డ్ కస్టమ్ లిస్ట్ లోడ్ అవుతోంది.",
+    "share_list_not_found": "జాబితా కనుగొనబడలేదు లేదా అనుమతి లేకుండా యాక్సెస్ చేయబడింది.",
+    "share_dialogue_builder_title": "మీ వ్యక్తిగతీకరించిన జాబితాను పంచుకోండి",
+    "share_dialogue_builder_description_qrcode": "మీరు ఈ జాబితాను షేర్ చేయాలనుకుంటున్న వ్యక్తితో కింద ఉన్న QR కోడ్‌ను స్కాన్ చేయించుకోవడం ద్వారా",
+    "share_dialogue_builder_description_copy_url": "కింది చిరునామాను కాపీ చేసి, మీరు ఈ జాబితాను ఎవరితో పంచుకోవాలనుకుంటున్నారో వారికి అందించండి.",
+    "drawer_my_lists": "నా జాబితాలు",
+    "drawer_account": "ఖాతా",
+    "drawer_trial_period": "నా ట్రయల్ పీరియడ్",
+    "drawer_my_personnal_list": "నా వ్యక్తిగత జాబితాలు",
+    "drawer_defined_list": "మా ముందే నిర్వచించిన జాబితాలు",
+    "drawer_themes_list": "మా థీమ్‌ల జాబితాలు",
+    "subscription_benefit_no_pub": "అప్లికేషన్‌లో ఎటువంటి ప్రకటనలు కనిపించవు."
 }

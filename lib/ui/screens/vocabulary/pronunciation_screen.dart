@@ -11,13 +11,14 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:record/record.dart'; // v6.x -> AudioRecorder
 import 'package:path_provider/path_provider.dart';
 import 'package:sherpa_onnx/sherpa_onnx.dart'; // v1.12.9
-
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 // 🔥 Firebase
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../global.dart';
+import '../../widget/ads/banner_ad_widget.dart';
 import '../../widget/elements/PlaySoond.dart';
 import '../../../core/utils/languageUtils.dart';
 import '../../../core/utils/localization.dart';
@@ -591,6 +592,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                       ),
                     ),
                   ),
+
                 ],
               ),
 
@@ -722,6 +724,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
               Column(
                 children: [
                   const SizedBox(height: 0),
+                  AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
                   if (isRecording || viewResulte  || testScreenShot) ...[
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -789,6 +792,9 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                     style: const TextStyle(color: Colors.grey),
                   ),
                 ),
+
+
+
             ],
           );
         } else if (state is VocabulairesError) {

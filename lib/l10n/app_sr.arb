@@ -220,10 +220,16 @@
     "app_promotion_ios": "Обогатите свој енглески речник са 4.400 основних речи за лак говор и разумевање.",
     "app_feature_graphic_FeatureItem1": "4.400 речи",
     "home_notlogged_accroche4": "4.400 основних речи",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Учитавање ваше дељене прилагођене листе.",
+    "share_list_not_found": "Листа није пронађена или је приступ неовлашћен.",
+    "share_dialogue_builder_title": "Поделите своју персонализовану листу",
+    "share_dialogue_builder_description_qrcode": "Тако што особа са којом желите да поделите ову листу скенира QR код испод",
+    "share_dialogue_builder_description_copy_url": "Копирајте следећу адресу и доставите је особи са којом желите да поделите ову листу",
+    "drawer_my_lists": "Моје листе",
+    "drawer_account": "Налог",
+    "drawer_trial_period": "Мој пробни период",
+    "drawer_my_personnal_list": "Моје личне листе",
+    "drawer_defined_list": "Наше унапред дефинисане листе",
+    "drawer_themes_list": "Наше листе тема",
+    "subscription_benefit_no_pub": "У апликацији се не приказују огласи"
 }

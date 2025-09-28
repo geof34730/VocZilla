@@ -670,4 +670,40 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 esminių žodžių';
+
+  @override
+  String get share_loading_list_share => 'Įkeliamas jūsų bendrinamas pasirinktinis sąrašas.';
+
+  @override
+  String get share_list_not_found => 'Sąrašas nerastas arba prieiga neteisėta.';
+
+  @override
+  String get share_dialogue_builder_title => 'Bendrinkite savo suasmenintą sąrašą';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Paprašę asmens, su kuriuo norite bendrinti šį sąrašą, nuskaityti toliau pateiktą QR kodą';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Nukopijuokite šį adresą ir pateikite jį asmeniui, su kuriuo norite bendrinti šį sąrašą';
+
+  @override
+  String get drawer_my_lists => 'Mano sąrašai';
+
+  @override
+  String get drawer_account => 'Paskyra';
+
+  @override
+  String get drawer_trial_period => 'Mano bandomasis laikotarpis';
+
+  @override
+  String get drawer_my_personnal_list => 'Mano asmeniniai sąrašai';
+
+  @override
+  String get drawer_defined_list => 'Mūsų iš anksto nustatyti sąrašai';
+
+  @override
+  String get drawer_themes_list => 'Mūsų temų sąrašai';
+
+  @override
+  String get subscription_benefit_no_pub => 'Programėlėje nematyti jokios reklamos';
 }

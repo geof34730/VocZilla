@@ -220,10 +220,16 @@
     "app_promotion_ios": "Thuthukisa isilulumagama sakho sesiNgisi ngamagama angu-4,400 abalulekile ukuze ukhulume kalula nokuqonda.",
     "app_feature_graphic_FeatureItem1": "4,400 amagama",
     "home_notlogged_accroche4": "4,400 amagama abalulekile",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Ilayisha uhlu lwakho lwangokwezifiso olwabiwe.",
+    "share_list_not_found": "Uhlu alutholakali noma ukufinyelela okungagunyaziwe.",
+    "share_dialogue_builder_title": "Yabelana ngohlu lwakho lomuntu siqu",
+    "share_dialogue_builder_description_qrcode": "Ngokuba nomuntu ofisa ukwabelana naye ngalolu hlu scan ikhodi ye-QR engezansi",
+    "share_dialogue_builder_description_copy_url": "Kopisha ikheli elilandelayo bese ulinikeza umuntu ofisa ukwabelana naye ngalolu hlu",
+    "drawer_my_lists": "Uhlu lwami",
+    "drawer_account": "I-akhawunti",
+    "drawer_trial_period": "Isikhathi sami sesivivinyo",
+    "drawer_my_personnal_list": "Uhlu lwami lomuntu siqu",
+    "drawer_defined_list": "Uhlu lwethu oluchazwe ngaphambilini",
+    "drawer_themes_list": "Uhlu lwethu lwetimu",
+    "subscription_benefit_no_pub": "Akukho ukukhangisa okubonakalayo kuhlelo lokusebenza"
 }

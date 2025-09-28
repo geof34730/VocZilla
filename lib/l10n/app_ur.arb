@@ -220,10 +220,16 @@
     "app_promotion_ios": "آسانی سے بولنے اور سمجھنے کے لیے 4,400 ضروری الفاظ کے ساتھ اپنی انگریزی الفاظ کو مزید تقویت دیں۔",
     "app_feature_graphic_FeatureItem1": "4,400 الفاظ",
     "home_notlogged_accroche4": "4,400 ضروری الفاظ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "آپ کی مشترکہ حسب ضرورت فہرست لوڈ ہو رہی ہے۔",
+    "share_list_not_found": "فہرست نہیں ملی یا غیر مجاز رسائی۔",
+    "share_dialogue_builder_title": "اپنی ذاتی فہرست کا اشتراک کریں۔",
+    "share_dialogue_builder_description_qrcode": "جس شخص کے ساتھ آپ اس فہرست کا اشتراک کرنا چاہتے ہیں اس کے ساتھ نیچے دیئے گئے QR کوڈ کو اسکین کریں۔",
+    "share_dialogue_builder_description_copy_url": "درج ذیل ایڈریس کو کاپی کریں اور اسے اس شخص کو فراہم کریں جس کے ساتھ آپ اس فہرست کا اشتراک کرنا چاہتے ہیں۔",
+    "drawer_my_lists": "میری فہرستیں۔",
+    "drawer_account": "اکاؤنٹ",
+    "drawer_trial_period": "میری آزمائش کی مدت",
+    "drawer_my_personnal_list": "میری ذاتی فہرستیں۔",
+    "drawer_defined_list": "ہماری پہلے سے طے شدہ فہرستیں۔",
+    "drawer_themes_list": "ہماری تھیمز کی فہرستیں۔",
+    "subscription_benefit_no_pub": "درخواست پر کوئی اشتہار نظر نہیں آتا"
 }

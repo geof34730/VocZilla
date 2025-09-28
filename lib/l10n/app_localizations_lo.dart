@@ -670,4 +670,40 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 ຄໍາ​ສັບ​ຕ່າງໆ​ທີ່​ສໍາ​ຄັນ​';
+
+  @override
+  String get share_loading_list_share => 'ກຳລັງໂຫຼດລາຍຊື່ກຳນົດເອງທີ່ແບ່ງປັນຂອງທ່ານ.';
+
+  @override
+  String get share_list_not_found => 'ບໍ່ພົບລາຍຊື່ ຫຼືເຂົ້າເຖິງໂດຍບໍ່ໄດ້ຮັບອະນຸຍາດ.';
+
+  @override
+  String get share_dialogue_builder_title => 'ແບ່ງປັນລາຍຊື່ສ່ວນຕົວຂອງທ່ານ';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ໂດຍໃຫ້ບຸກຄົນທີ່ທ່ານຕ້ອງການແບ່ງປັນລາຍຊື່ນີ້ດ້ວຍການສະແກນລະຫັດ QR ຂ້າງລຸ່ມນີ້';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'ສຳເນົາທີ່ຢູ່ຕໍ່ໄປນີ້ ແລະສະໜອງໃຫ້ບຸກຄົນທີ່ທ່ານຕ້ອງການແບ່ງປັນລາຍຊື່ນີ້ນຳ';
+
+  @override
+  String get drawer_my_lists => 'ລາຍການຂອງຂ້ອຍ';
+
+  @override
+  String get drawer_account => 'ບັນຊີ';
+
+  @override
+  String get drawer_trial_period => 'ໄລຍະເວລາທົດລອງຂອງຂ້ອຍ';
+
+  @override
+  String get drawer_my_personnal_list => 'ລາຍຊື່ສ່ວນຕົວຂອງຂ້ອຍ';
+
+  @override
+  String get drawer_defined_list => 'ບັນຊີລາຍຊື່ທີ່ກໍານົດໄວ້ລ່ວງຫນ້າຂອງພວກເຮົາ';
+
+  @override
+  String get drawer_themes_list => 'ລາຍຊື່ຫົວຂໍ້ຂອງພວກເຮົາ';
+
+  @override
+  String get subscription_benefit_no_pub => 'ບໍ່ມີການໂຄສະນາທີ່ເຫັນໄດ້ໃນແອັບພລິເຄຊັນ';
 }

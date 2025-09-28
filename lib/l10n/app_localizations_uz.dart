@@ -670,4 +670,40 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 ta muhim so\'z';
+
+  @override
+  String get share_loading_list_share => 'Umumiy shaxsiy roʻyxatingiz yuklanmoqda.';
+
+  @override
+  String get share_list_not_found => 'Ro\'yxat topilmadi yoki ruxsatsiz kirish.';
+
+  @override
+  String get share_dialogue_builder_title => 'Shaxsiylashtirilgan roʻyxatingizni baham koʻring';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Quyidagi QR kodni skanerlash orqali ushbu roʻyxatni baham koʻrmoqchi boʻlgan odamga ega boʻlsangiz';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Quyidagi manzildan nusxa ko\'chiring va uni ushbu ro\'yxatni baham ko\'rmoqchi bo\'lgan odamga taqdim eting';
+
+  @override
+  String get drawer_my_lists => 'Mening ro\'yxatlarim';
+
+  @override
+  String get drawer_account => 'Hisob';
+
+  @override
+  String get drawer_trial_period => 'Mening sinov muddatim';
+
+  @override
+  String get drawer_my_personnal_list => 'Mening shaxsiy ro\'yxatlarim';
+
+  @override
+  String get drawer_defined_list => 'Bizning oldindan belgilangan ro\'yxatlarimiz';
+
+  @override
+  String get drawer_themes_list => 'Bizning mavzular ro\'yxati';
+
+  @override
+  String get subscription_benefit_no_pub => 'Ilovada hech qanday reklama ko\'rinmaydi';
 }

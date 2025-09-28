@@ -670,4 +670,40 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 essentielle ord';
+
+  @override
+  String get share_loading_list_share => 'Indlæser din delte brugerdefinerede liste.';
+
+  @override
+  String get share_list_not_found => 'Listen blev ikke fundet, eller adgangen var uautoriseret.';
+
+  @override
+  String get share_dialogue_builder_title => 'Del din personlige liste';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Ved at få den person, du ønsker at dele denne liste med, til at scanne QR-koden nedenfor';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopiér følgende adresse og giv den til den person, du ønsker at dele denne liste med';
+
+  @override
+  String get drawer_my_lists => 'Mine lister';
+
+  @override
+  String get drawer_account => 'Konto';
+
+  @override
+  String get drawer_trial_period => 'Min prøveperiode';
+
+  @override
+  String get drawer_my_personnal_list => 'Mine personlige lister';
+
+  @override
+  String get drawer_defined_list => 'Vores foruddefinerede lister';
+
+  @override
+  String get drawer_themes_list => 'Vores lister over temaer';
+
+  @override
+  String get subscription_benefit_no_pub => 'Der er ingen synlig reklame i applikationen';
 }

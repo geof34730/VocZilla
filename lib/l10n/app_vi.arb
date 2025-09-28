@@ -220,10 +220,16 @@
     "app_promotion_ios": "Làm giàu vốn từ vựng tiếng Anh của bạn với 4.400 từ vựng thiết yếu để nói và hiểu dễ dàng.",
     "app_feature_graphic_FeatureItem1": "4.400 từ",
     "home_notlogged_accroche4": "4.400 từ vựng thiết yếu",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Đang tải danh sách tùy chỉnh được chia sẻ của bạn.",
+    "share_list_not_found": "Không tìm thấy danh sách hoặc truy cập trái phép.",
+    "share_dialogue_builder_title": "Chia sẻ danh sách cá nhân của bạn",
+    "share_dialogue_builder_description_qrcode": "Bằng cách yêu cầu người mà bạn muốn chia sẻ danh sách này quét mã QR bên dưới",
+    "share_dialogue_builder_description_copy_url": "Sao chép địa chỉ sau và cung cấp cho người mà bạn muốn chia sẻ danh sách này",
+    "drawer_my_lists": "Danh sách của tôi",
+    "drawer_account": "Tài khoản",
+    "drawer_trial_period": "Thời gian dùng thử của tôi",
+    "drawer_my_personnal_list": "Danh sách cá nhân của tôi",
+    "drawer_defined_list": "Danh sách được xác định trước của chúng tôi",
+    "drawer_themes_list": "Danh sách chủ đề của chúng tôi",
+    "subscription_benefit_no_pub": "Không có quảng cáo nào hiển thị trên ứng dụng"
 }

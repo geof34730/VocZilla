@@ -670,4 +670,40 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 hitz garrantzitsu';
+
+  @override
+  String get share_loading_list_share => 'Zure zerrenda pertsonalizatu partekatua kargatzen.';
+
+  @override
+  String get share_list_not_found => 'Zerrenda ez da aurkitu edo baimenik gabeko sarbidea.';
+
+  @override
+  String get share_dialogue_builder_title => 'Partekatu zure zerrenda pertsonalizatua';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Zerrenda hau partekatu nahi duzun pertsonak beheko QR kodea eskaneatzea eskatuz';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopiatu helbide hau eta eman zerrenda hau partekatu nahi diozun pertsonari';
+
+  @override
+  String get drawer_my_lists => 'Nire zerrendak';
+
+  @override
+  String get drawer_account => 'Kontua';
+
+  @override
+  String get drawer_trial_period => 'Nire proba-aldia';
+
+  @override
+  String get drawer_my_personnal_list => 'Nire zerrenda pertsonalak';
+
+  @override
+  String get drawer_defined_list => 'Gure aurrez definitutako zerrendak';
+
+  @override
+  String get drawer_themes_list => 'Gure gai zerrendak';
+
+  @override
+  String get subscription_benefit_no_pub => 'Ez da iragarkirik ikusten aplikazioan';
 }

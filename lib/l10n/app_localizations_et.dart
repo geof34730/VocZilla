@@ -670,4 +670,40 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 olulist sõna';
+
+  @override
+  String get share_loading_list_share => 'Teie jagatud kohandatud loendi laadimine.';
+
+  @override
+  String get share_list_not_found => 'Nimekirja ei leitud või juurdepääs on volitamata.';
+
+  @override
+  String get share_dialogue_builder_title => 'Jaga oma isikupärastatud nimekirja';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Kui inimene, kellega soovite seda nimekirja jagada, skannib allolevat QR-koodi.';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopeeri järgmine aadress ja anna see inimesele, kellega soovid seda nimekirja jagada.';
+
+  @override
+  String get drawer_my_lists => 'Minu nimekirjad';
+
+  @override
+  String get drawer_account => 'Konto';
+
+  @override
+  String get drawer_trial_period => 'Minu prooviperiood';
+
+  @override
+  String get drawer_my_personnal_list => 'Minu isiklikud nimekirjad';
+
+  @override
+  String get drawer_defined_list => 'Meie eelnevalt määratud loendid';
+
+  @override
+  String get drawer_themes_list => 'Meie teemade loendid';
+
+  @override
+  String get subscription_benefit_no_pub => 'Rakenduses pole reklaami näha';
 }

@@ -220,10 +220,16 @@
     "app_promotion_ios": "Enrich your English vocabulary with 4,400 essential words for easy speaking and understanding.",
     "app_feature_graphic_FeatureItem1": "4,400 words",
     "home_notlogged_accroche4": "4,400 essential words",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Loading your shared custom list.",
+    "share_list_not_found": "List not found or access unauthorized.",
+    "share_dialogue_builder_title": "Share your personalized list",
+    "share_dialogue_builder_description_qrcode": "By having the person you wish to share this list with scan the QR code below",
+    "share_dialogue_builder_description_copy_url": "Copy the following address and provide it to the person you wish to share this list with",
+    "drawer_my_lists": "My lists",
+    "drawer_account": "Account",
+    "drawer_trial_period": "My trial period",
+    "drawer_my_personnal_list": "My personal lists",
+    "drawer_defined_list": "Our predefined lists",
+    "drawer_themes_list": "Our lists of themes",
+    "subscription_benefit_no_pub": "No advertising is visible on the application"
 }

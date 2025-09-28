@@ -670,4 +670,40 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '૪,૪૦૦ આવશ્યક શબ્દો';
+
+  @override
+  String get share_loading_list_share => 'તમારી શેર કરેલી કસ્ટમ સૂચિ લોડ કરી રહ્યું છે.';
+
+  @override
+  String get share_list_not_found => 'યાદી મળી નથી અથવા અનધિકૃત ઍક્સેસ.';
+
+  @override
+  String get share_dialogue_builder_title => 'તમારી વ્યક્તિગત સૂચિ શેર કરો';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'તમે જે વ્યક્તિ સાથે આ યાદી શેર કરવા માંગો છો તેને નીચેનો QR કોડ સ્કેન કરવા માટે કહીને';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'નીચે આપેલ સરનામું કોપી કરો અને તે વ્યક્તિને આપો જેની સાથે તમે આ સૂચિ શેર કરવા માંગો છો.';
+
+  @override
+  String get drawer_my_lists => 'મારી યાદીઓ';
+
+  @override
+  String get drawer_account => 'ખાતું';
+
+  @override
+  String get drawer_trial_period => 'મારો અજમાયશ સમયગાળો';
+
+  @override
+  String get drawer_my_personnal_list => 'મારી વ્યક્તિગત યાદીઓ';
+
+  @override
+  String get drawer_defined_list => 'અમારી પૂર્વવ્યાખ્યાયિત યાદીઓ';
+
+  @override
+  String get drawer_themes_list => 'અમારી થીમ્સની યાદીઓ';
+
+  @override
+  String get subscription_benefit_no_pub => 'એપ્લિકેશન પર કોઈ જાહેરાત દેખાતી નથી';
 }

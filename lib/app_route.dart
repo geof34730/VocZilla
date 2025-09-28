@@ -1,6 +1,7 @@
 // lib/app_route.dart
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/ui/featureGraphic.dart';
@@ -14,6 +15,7 @@ import 'package:voczilla/ui/screens/vocabulary/all_lists_themes.dart';
 
 import 'data/repository/vocabulaire_user_repository.dart';
 import 'global.dart';
+import 'logic/blocs/user/user_event.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_bloc.dart';
 import 'logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import 'logic/check_connectivity.dart';
@@ -79,7 +81,7 @@ class AppRoute {
               listener: (context, authState) {
                 if (authState is AuthAuthenticated && authState is! AuthProfileUpdated) {
                   // On vérifie le statut de l'utilisateur UNE SEULE FOIS, ici.
-                  UserRepository().checkUserStatusOncePerDay(context);
+
                   //final userProfile = authState.userProfile;
                   final firebaseUser = FirebaseAuth.instance.currentUser;
                   if (firebaseUser == null) {
@@ -89,30 +91,7 @@ class AppRoute {
                 }
               },
             ),
-            BlocListener<UserBloc, UserState>(
-              listener: (context, userState) {
-                final userBlocInstance = context.read<UserBloc>();
-                if (settings.name != subscription) {
-                  if (userState is UserSessionLoaded) {
-                    // User is in trial and not subscribed, show the dialog
-                    if (userState.isTrialActive && !userState.isSubscribed) {
-                      if(!testScreenShot) {
-                        userRepository.showDialogueFreeTrialOnceByDay(context: context);
-                      }
-                    }
-                    // User's trial has ended and they are not subscribed, force to subscription page
-                    else if (!userState.isTrialActive && !userState.isSubscribed) {
-                      Logger.Red.log('ROUTE: Trial ended and not subscribed. Redirecting to subscription page.');
-                      Navigator.pushReplacementNamed(
-                          context,
-                          subscription,
-                          arguments: {'endTrial': true}
-                      );
-                    }
-                  }
-                }
-              },
-            ),
+
             BlocListener<UpdateBloc, UpdateState>(
               listener: (context, updateState) {
                 if (updateState is UpdateAvailable) {
@@ -123,7 +102,8 @@ class AppRoute {
             BlocListener<PurchaseBloc, PurchaseState>(
               listener: (context, purchaseState) {
                 if (purchaseState is PurchaseCompleted) {
-                  userRepository.checkUserStatusForce();
+                  // Force the UserBloc to re-initialize its session to get the new subscription status.
+                  context.read<UserBloc>().add(InitializeUserSession());
                   Navigator.pushReplacementNamed(context, home);
                 }
               },
@@ -155,11 +135,13 @@ class AppRoute {
   static Widget _getUnauthenticatedPage(RouteSettings settings, BuildContext context) {
     Logger.Blue.log("_getUnauthenticatedPage settings.name: ${settings.name}");
 
-    final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
-    analytics.logEvent(
-      name: 'screen',
-      parameters: {'screen': settings.name ?? ''},
-    );
+    if (kReleaseMode) {
+      final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+      analytics.logEvent(
+        name: 'screen',
+        parameters: {'screen': settings.name ?? ''},
+      );
+    }
 
     final uri = Uri.parse(settings.name ?? '');
     final rootPath = uri.pathSegments.isNotEmpty ? '/${uri.pathSegments[0]}' : '/';
@@ -184,6 +166,14 @@ class AppRoute {
   static Widget _getAuthenticatedPage(RouteSettings settings, BuildContext context) {
     final uri = Uri.parse(settings.name ?? '');
     Logger.Blue.log("_getAuthenticatedPage settings.name: ${settings.name}");
+
+    if (kReleaseMode) {
+      final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+      analytics.logEvent(
+        name: 'screen',
+        parameters: {'screen': settings.name ?? ''},
+      );
+    }
 
     if (uri.pathSegments.isNotEmpty) {
       final rootPath = '/${uri.pathSegments[0]}';

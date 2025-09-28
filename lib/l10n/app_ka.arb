@@ -220,10 +220,16 @@
     "app_promotion_ios": "გაამდიდრეთ თქვენი ინგლისური ლექსიკა 4,400 აუცილებელი სიტყვით, რათა მარტივად ისაუბროთ და გაიგოთ.",
     "app_feature_graphic_FeatureItem1": "4,400 სიტყვა",
     "home_notlogged_accroche4": "4,400 აუცილებელი სიტყვა",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "თქვენი გაზიარებული მორგებული სიის ჩატვირთვა.",
+    "share_list_not_found": "სია ვერ მოიძებნა ან წვდომა არაავტორიზებულია.",
+    "share_dialogue_builder_title": "გააზიარეთ თქვენი პერსონალიზებული სია",
+    "share_dialogue_builder_description_qrcode": "ქვემოთ მოცემული QR კოდის სკანირებით, იმ პირს, ვისთანაც გსურთ ამ სიის გაზიარება, სთხოვეთ",
+    "share_dialogue_builder_description_copy_url": "დააკოპირეთ შემდეგი მისამართი და მიაწოდეთ ის იმ პირს, ვისთანაც გსურთ ამ სიის გაზიარება",
+    "drawer_my_lists": "ჩემი სიები",
+    "drawer_account": "ანგარიში",
+    "drawer_trial_period": "ჩემი საცდელი პერიოდი",
+    "drawer_my_personnal_list": "ჩემი პირადი სიები",
+    "drawer_defined_list": "ჩვენი წინასწარ განსაზღვრული სიები",
+    "drawer_themes_list": "ჩვენი თემების სიები",
+    "subscription_benefit_no_pub": "აპლიკაციაში რეკლამა არ ჩანს"
 }

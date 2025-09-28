@@ -220,10 +220,16 @@
     "app_promotion_ios": "دایره لغات انگلیسی خود را با ۴۴۰۰ کلمه ضروری برای صحبت کردن و فهمیدن آسان، غنی کنید.",
     "app_feature_graphic_FeatureItem1": "۴۴۰۰ کلمه",
     "home_notlogged_accroche4": "۴۴۰۰ کلمه ضروری",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "در حال بارگیری لیست سفارشی مشترک شما.",
+    "share_list_not_found": "فهرستی یافت نشد یا دسترسی غیرمجاز است.",
+    "share_dialogue_builder_title": "فهرست شخصی‌سازی‌شده خود را به اشتراک بگذارید",
+    "share_dialogue_builder_description_qrcode": "با درخواست از شخصی که می‌خواهید این لیست را با او به اشتراک بگذارید، کد QR زیر را اسکن کنید",
+    "share_dialogue_builder_description_copy_url": "آدرس زیر را کپی کنید و آن را به شخصی که می‌خواهید این لیست را با او به اشتراک بگذارید، بدهید.",
+    "drawer_my_lists": "لیست‌های من",
+    "drawer_account": "حساب کاربری",
+    "drawer_trial_period": "دوره آزمایشی من",
+    "drawer_my_personnal_list": "فهرست‌های شخصی من",
+    "drawer_defined_list": "لیست‌های از پیش تعریف‌شده‌ی ما",
+    "drawer_themes_list": "لیست‌های تم‌های ما",
+    "subscription_benefit_no_pub": "هیچ تبلیغی در برنامه قابل مشاهده نیست"
 }

@@ -264,40 +264,10 @@ class _HeaderSection extends StatelessWidget {
               color: Colors.white.withOpacity(0.95),
             ),
           ),
-          const SizedBox(height: 12),
-          // Bloc cadeau + texte : icône alignée sur la 1ère ligne
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start, // aligne en haut
-              children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 2),
-                  child: Text('🎁', style: TextStyle(fontSize: 18, height: 1.0)),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    endTrial
-                        ? context.loc.subscription_free_trial_end
-                        .replaceAll("\$daysFreeTrial", "$daysFreeTrial")
-                        : context.loc.subscription_free_trial,
-                    style: t.textTheme.bodyMedium?.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 12),
           _BenefitRow(text: context.loc.subscription_benefit_full_access),
           _BenefitRow(text: context.loc.subscription_benefit_unlimited),
           _BenefitRow(text: context.loc.subscription_benefit_updates),
+          _BenefitRow(text: context.loc.subscription_benefit_no_pub),
         ],
       ),
     );

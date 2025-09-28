@@ -220,10 +220,16 @@
     "app_promotion_ios": "सहज बोलण्यासाठी आणि समजण्यासाठी ४,४०० आवश्यक शब्दांनी तुमचा इंग्रजी शब्दसंग्रह समृद्ध करा.",
     "app_feature_graphic_FeatureItem1": "४,४०० शब्द",
     "home_notlogged_accroche4": "४,४०० आवश्यक शब्द",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "तुमची शेअर केलेली कस्टम सूची लोड करत आहे.",
+    "share_list_not_found": "यादी सापडली नाही किंवा अनधिकृत प्रवेश.",
+    "share_dialogue_builder_title": "तुमची वैयक्तिकृत यादी शेअर करा",
+    "share_dialogue_builder_description_qrcode": "ज्या व्यक्तीसोबत तुम्हाला ही यादी शेअर करायची आहे त्याला खालील QR कोड स्कॅन करण्यास सांगून",
+    "share_dialogue_builder_description_copy_url": "खालील पत्ता कॉपी करा आणि ज्या व्यक्तीसोबत तुम्ही ही यादी शेअर करू इच्छिता त्याला तो द्या.",
+    "drawer_my_lists": "माझ्या याद्या",
+    "drawer_account": "खाते",
+    "drawer_trial_period": "माझा चाचणी कालावधी",
+    "drawer_my_personnal_list": "माझ्या वैयक्तिक याद्या",
+    "drawer_defined_list": "आमच्या पूर्वनिर्धारित याद्या",
+    "drawer_themes_list": "आमच्या थीम्सच्या याद्या",
+    "subscription_benefit_no_pub": "अनुप्रयोगावर कोणतीही जाहिरात दिसत नाही."
 }

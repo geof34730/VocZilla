@@ -670,4 +670,40 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 fjalë thelbësore';
+
+  @override
+  String get share_loading_list_share => 'Duke ngarkuar listën tuaj të personalizuar të ndarë.';
+
+  @override
+  String get share_list_not_found => 'Lista nuk u gjet ose qasja është e paautorizuar.';
+
+  @override
+  String get share_dialogue_builder_title => 'Ndani listën tuaj të personalizuar';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Duke i kërkuar personit me të cilin dëshironi ta ndani këtë listë të skanojë kodin QR më poshtë';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopjoni adresën e mëposhtme dhe jepjani personit me të cilin dëshironi ta ndani këtë listë';
+
+  @override
+  String get drawer_my_lists => 'Listat e mia';
+
+  @override
+  String get drawer_account => 'Llogari';
+
+  @override
+  String get drawer_trial_period => 'Periudha ime e provës';
+
+  @override
+  String get drawer_my_personnal_list => 'Listat e mia personale';
+
+  @override
+  String get drawer_defined_list => 'Listat tona të paracaktuara';
+
+  @override
+  String get drawer_themes_list => 'Listat tona të temave';
+
+  @override
+  String get subscription_benefit_no_pub => 'Asnjë reklamë nuk është e dukshme në aplikacion';
 }

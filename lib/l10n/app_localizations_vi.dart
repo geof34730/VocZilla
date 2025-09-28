@@ -670,4 +670,40 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 từ vựng thiết yếu';
+
+  @override
+  String get share_loading_list_share => 'Đang tải danh sách tùy chỉnh được chia sẻ của bạn.';
+
+  @override
+  String get share_list_not_found => 'Không tìm thấy danh sách hoặc truy cập trái phép.';
+
+  @override
+  String get share_dialogue_builder_title => 'Chia sẻ danh sách cá nhân của bạn';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Bằng cách yêu cầu người mà bạn muốn chia sẻ danh sách này quét mã QR bên dưới';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Sao chép địa chỉ sau và cung cấp cho người mà bạn muốn chia sẻ danh sách này';
+
+  @override
+  String get drawer_my_lists => 'Danh sách của tôi';
+
+  @override
+  String get drawer_account => 'Tài khoản';
+
+  @override
+  String get drawer_trial_period => 'Thời gian dùng thử của tôi';
+
+  @override
+  String get drawer_my_personnal_list => 'Danh sách cá nhân của tôi';
+
+  @override
+  String get drawer_defined_list => 'Danh sách được xác định trước của chúng tôi';
+
+  @override
+  String get drawer_themes_list => 'Danh sách chủ đề của chúng tôi';
+
+  @override
+  String get subscription_benefit_no_pub => 'Không có quảng cáo nào hiển thị trên ứng dụng';
 }

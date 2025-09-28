@@ -60,6 +60,8 @@
     <false/>
     <key>GIDClientID</key>
     <string>275313479574-kprstmafer4av3da9lsu3dh7insd2v7m.apps.googleusercontent.com</string>
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-1439580806237607~4108233255</string>
     <key>LSApplicationQueriesSchemes</key>
     <array>
       <string>fbapi</string>

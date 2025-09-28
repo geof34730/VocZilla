@@ -670,4 +670,40 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 አስፈላጊ ቃላት';
+
+  @override
+  String get share_loading_list_share => 'የጋራ ብጁ ዝርዝርዎን በመጫን ላይ።';
+
+  @override
+  String get share_list_not_found => 'ዝርዝር አልተገኘም ወይም ያልተፈቀደ መዳረሻ።';
+
+  @override
+  String get share_dialogue_builder_title => 'ግላዊ ዝርዝርዎን ያጋሩ';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'ይህን ዝርዝር ለማጋራት የሚፈልጉትን ሰው በመያዝ ከታች ያለውን የQR ኮድ ይቃኙ';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'የሚከተለውን አድራሻ ይቅዱ እና ይህንን ዝርዝር ሊያካፍሉት ለሚፈልጉት ሰው ያቅርቡ';
+
+  @override
+  String get drawer_my_lists => 'የእኔ ዝርዝሮች';
+
+  @override
+  String get drawer_account => 'መለያ';
+
+  @override
+  String get drawer_trial_period => 'የእኔ የሙከራ ጊዜ';
+
+  @override
+  String get drawer_my_personnal_list => 'የእኔ የግል ዝርዝሮች';
+
+  @override
+  String get drawer_defined_list => 'የእኛ አስቀድሞ የተገለጹ ዝርዝሮች';
+
+  @override
+  String get drawer_themes_list => 'የእኛ የገጽታ ዝርዝሮች';
+
+  @override
+  String get subscription_benefit_no_pub => 'በመተግበሪያው ላይ ምንም ማስታወቂያ አይታይም።';
 }

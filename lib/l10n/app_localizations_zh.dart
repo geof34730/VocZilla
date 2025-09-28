@@ -670,4 +670,40 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 个必备词汇';
+
+  @override
+  String get share_loading_list_share => '正在加载您的共享自定义列表。';
+
+  @override
+  String get share_list_not_found => '未找到列表或访问未经授权。';
+
+  @override
+  String get share_dialogue_builder_title => '分享您的个性化列表';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => '让您希望与之分享此列表的人扫描下面的二维码';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => '复制以下地址并将其提供给您希望与之共享此列表的人';
+
+  @override
+  String get drawer_my_lists => '我的清单';
+
+  @override
+  String get drawer_account => '帐户';
+
+  @override
+  String get drawer_trial_period => '我的试用期';
+
+  @override
+  String get drawer_my_personnal_list => '我的个人清单';
+
+  @override
+  String get drawer_defined_list => '我们的预定义列表';
+
+  @override
+  String get drawer_themes_list => '我们的主题列表';
+
+  @override
+  String get subscription_benefit_no_pub => '应用程序上没有可见的广告';
 }

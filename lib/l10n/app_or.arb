@@ -220,10 +220,16 @@
     "app_promotion_ios": "ସହଜରେ କହିବା ଏବଂ ବୁଝିବା ପାଇଁ 4,400ଟି ଜରୁରୀ ଶବ୍ଦ ସହିତ ଆପଣଙ୍କର ଇଂରାଜୀ ଶବ୍ଦକୋଷକୁ ସମୃଦ୍ଧ କରନ୍ତୁ।",
     "app_feature_graphic_FeatureItem1": "୪,୪୦୦ ଶବ୍ଦ",
     "home_notlogged_accroche4": "୪,୪୦୦ଟି ଜରୁରୀ ଶବ୍ଦ",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "ଆପଣଙ୍କର ସେୟାର୍ କରାଯାଇଥିବା କଷ୍ଟମ୍ ତାଲିକା ଲୋଡ୍ ହେଉଛି।",
+    "share_list_not_found": "ତାଲିକା ମିଳିଲା ନାହିଁ କିମ୍ବା ଅନଧିକୃତ ପ୍ରବେଶ କରାଯାଇଛି।",
+    "share_dialogue_builder_title": "ଆପଣଙ୍କର ବ୍ୟକ୍ତିଗତ ତାଲିକା ସେୟାର୍‌ କରନ୍ତୁ",
+    "share_dialogue_builder_description_qrcode": "ଆପଣ ଯାହାଙ୍କ ସହ ଏହି ତାଲିକା ସେୟାର କରିବାକୁ ଚାହୁଁଛନ୍ତି, ତାଙ୍କୁ ନିମ୍ନରେ ଥିବା QR କୋଡ୍ ସ୍କାନ୍ କରିବାକୁ କହି",
+    "share_dialogue_builder_description_copy_url": "ନିମ୍ନଲିଖିତ ଠିକଣାକୁ କପି କରନ୍ତୁ ଏବଂ ଆପଣ ଯାହାଙ୍କ ସହିତ ଏହି ତାଲିକା ସେୟାର କରିବାକୁ ଚାହୁଁଛନ୍ତି ତାଙ୍କୁ ପ୍ରଦାନ କରନ୍ତୁ।",
+    "drawer_my_lists": "ମୋ ତାଲିକାଗୁଡ଼ିକ",
+    "drawer_account": "ଖାତା",
+    "drawer_trial_period": "ମୋର ପରୀକ୍ଷଣ ଅବଧି",
+    "drawer_my_personnal_list": "ମୋର ବ୍ୟକ୍ତିଗତ ତାଲିକାଗୁଡ଼ିକ",
+    "drawer_defined_list": "ଆମର ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ ତାଲିକାଗୁଡ଼ିକ",
+    "drawer_themes_list": "ଆମର ଥିମଗୁଡ଼ିକର ତାଲିକା",
+    "subscription_benefit_no_pub": "ଆପ୍ଲିକେସନରେ କୌଣସି ବିଜ୍ଞାପନ ଦେଖାଯାଉ ନାହିଁ।"
 }

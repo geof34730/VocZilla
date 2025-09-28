@@ -670,4 +670,40 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 de cuvinte esențiale';
+
+  @override
+  String get share_loading_list_share => 'Se încarcă lista personalizată partajată.';
+
+  @override
+  String get share_list_not_found => 'Lista nu a fost găsită sau accesul a fost neautorizat.';
+
+  @override
+  String get share_dialogue_builder_title => 'Distribuie lista ta personalizată';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Rugând persoana cu care doriți să partajați această listă să scaneze codul QR de mai jos';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Copiați următoarea adresă și furnizați-o persoanei cu care doriți să partajați această listă';
+
+  @override
+  String get drawer_my_lists => 'Listele mele';
+
+  @override
+  String get drawer_account => 'Cont';
+
+  @override
+  String get drawer_trial_period => 'Perioada mea de probă';
+
+  @override
+  String get drawer_my_personnal_list => 'Listele mele personale';
+
+  @override
+  String get drawer_defined_list => 'Listele noastre predefinite';
+
+  @override
+  String get drawer_themes_list => 'Listele noastre de teme';
+
+  @override
+  String get subscription_benefit_no_pub => 'Nu este vizibilă nicio reclamă în aplicație';
 }

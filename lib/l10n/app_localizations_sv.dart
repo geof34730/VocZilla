@@ -670,4 +670,40 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4 400 viktiga ord';
+
+  @override
+  String get share_loading_list_share => 'Läser in din delade anpassade lista.';
+
+  @override
+  String get share_list_not_found => 'Listan hittades inte eller så är åtkomsten obehörig.';
+
+  @override
+  String get share_dialogue_builder_title => 'Dela din personliga lista';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Genom att be personen du vill dela den här listan med att skanna QR-koden nedan';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Kopiera följande adress och ge den till personen du vill dela listan med';
+
+  @override
+  String get drawer_my_lists => 'Mina listor';
+
+  @override
+  String get drawer_account => 'Konto';
+
+  @override
+  String get drawer_trial_period => 'Min provperiod';
+
+  @override
+  String get drawer_my_personnal_list => 'Mina personliga listor';
+
+  @override
+  String get drawer_defined_list => 'Våra fördefinierade listor';
+
+  @override
+  String get drawer_themes_list => 'Våra listor över teman';
+
+  @override
+  String get subscription_benefit_no_pub => 'Ingen reklam syns i appen';
 }

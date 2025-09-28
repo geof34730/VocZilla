@@ -220,10 +220,16 @@
     "app_promotion_ios": "Verryk jou Engelse woordeskat met 4 400 noodsaaklike woorde vir maklike praat en begrip.",
     "app_feature_graphic_FeatureItem1": "4 400 woorde",
     "home_notlogged_accroche4": "4 400 noodsaaklike woorde",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Laai tans jou gedeelde persoonlike lys.",
+    "share_list_not_found": "Lys nie gevind nie of toegang ongemagtig.",
+    "share_dialogue_builder_title": "Deel jou gepersonaliseerde lys",
+    "share_dialogue_builder_description_qrcode": "Deur die persoon met wie jy hierdie lys wil deel, die QR-kode hieronder te laat skandeer",
+    "share_dialogue_builder_description_copy_url": "Kopieer die volgende adres en verskaf dit aan die persoon met wie jy hierdie lys wil deel",
+    "drawer_my_lists": "My lyste",
+    "drawer_account": "Rekening",
+    "drawer_trial_period": "My proeftydperk",
+    "drawer_my_personnal_list": "My persoonlike lyste",
+    "drawer_defined_list": "Ons voorafbepaalde lyste",
+    "drawer_themes_list": "Ons lyste van temas",
+    "subscription_benefit_no_pub": "Geen advertensies is op die toepassing sigbaar nie"
 }

@@ -670,4 +670,40 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4.400 βασικές λέξεις';
+
+  @override
+  String get share_loading_list_share => 'Φόρτωση της κοινόχρηστης προσαρμοσμένης λίστας σας.';
+
+  @override
+  String get share_list_not_found => 'Η λίστα δεν βρέθηκε ή η πρόσβαση δεν είναι εξουσιοδοτημένη.';
+
+  @override
+  String get share_dialogue_builder_title => 'Μοιραστείτε την εξατομικευμένη λίστα σας';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Ζητώντας από το άτομο με το οποίο θέλετε να μοιραστείτε αυτήν τη λίστα να σαρώσει τον παρακάτω κωδικό QR';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Αντιγράψτε την ακόλουθη διεύθυνση και δώστε την στο άτομο με το οποίο θέλετε να μοιραστείτε αυτήν τη λίστα';
+
+  @override
+  String get drawer_my_lists => 'Οι λίστες μου';
+
+  @override
+  String get drawer_account => 'Λογαριασμός';
+
+  @override
+  String get drawer_trial_period => 'Η δοκιμαστική μου περίοδος';
+
+  @override
+  String get drawer_my_personnal_list => 'Οι προσωπικές μου λίστες';
+
+  @override
+  String get drawer_defined_list => 'Οι προκαθορισμένες λίστες μας';
+
+  @override
+  String get drawer_themes_list => 'Οι λίστες μας με τα θέματα';
+
+  @override
+  String get subscription_benefit_no_pub => 'Δεν εμφανίζονται διαφημίσεις στην εφαρμογή';
 }

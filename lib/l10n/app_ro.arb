@@ -220,10 +220,16 @@
     "app_promotion_ios": "Îmbogățiți-vă vocabularul englez cu 4.400 de cuvinte esențiale pentru o vorbire și o înțelegere ușoară.",
     "app_feature_graphic_FeatureItem1": "4.400 de cuvinte",
     "home_notlogged_accroche4": "4.400 de cuvinte esențiale",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Se încarcă lista personalizată partajată.",
+    "share_list_not_found": "Lista nu a fost găsită sau accesul a fost neautorizat.",
+    "share_dialogue_builder_title": "Distribuie lista ta personalizată",
+    "share_dialogue_builder_description_qrcode": "Rugând persoana cu care doriți să partajați această listă să scaneze codul QR de mai jos",
+    "share_dialogue_builder_description_copy_url": "Copiați următoarea adresă și furnizați-o persoanei cu care doriți să partajați această listă",
+    "drawer_my_lists": "Listele mele",
+    "drawer_account": "Cont",
+    "drawer_trial_period": "Perioada mea de probă",
+    "drawer_my_personnal_list": "Listele mele personale",
+    "drawer_defined_list": "Listele noastre predefinite",
+    "drawer_themes_list": "Listele noastre de teme",
+    "subscription_benefit_no_pub": "Nu este vizibilă nicio reclamă în aplicație"
 }

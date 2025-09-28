@@ -220,10 +220,16 @@
     "app_promotion_ios": "Perkaya perbendaharaan kata bahasa Inggeris anda dengan 4,400 perkataan penting untuk pertuturan dan pemahaman yang mudah.",
     "app_feature_graphic_FeatureItem1": "4,400 patah perkataan",
     "home_notlogged_accroche4": "4,400 perkataan penting",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-09-17T15:32:13+00:00"
-    }
+    "share_loading_list_share": "Memuatkan senarai tersuai kongsi anda.",
+    "share_list_not_found": "Senarai tidak ditemui atau akses tanpa kebenaran.",
+    "share_dialogue_builder_title": "Kongsi senarai peribadi anda",
+    "share_dialogue_builder_description_qrcode": "Dengan meminta orang yang anda ingin kongsi senarai ini mengimbas kod QR di bawah",
+    "share_dialogue_builder_description_copy_url": "Salin alamat berikut dan berikan kepada orang yang anda ingin kongsi senarai ini",
+    "drawer_my_lists": "senarai saya",
+    "drawer_account": "Akaun",
+    "drawer_trial_period": "Tempoh percubaan saya",
+    "drawer_my_personnal_list": "Senarai peribadi saya",
+    "drawer_defined_list": "Senarai pratakrif kami",
+    "drawer_themes_list": "Senarai tema kami",
+    "subscription_benefit_no_pub": "Tiada pengiklanan kelihatan pada aplikasi"
 }

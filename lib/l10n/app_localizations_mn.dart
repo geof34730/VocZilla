@@ -670,4 +670,40 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 чухал үг';
+
+  @override
+  String get share_loading_list_share => 'Таны хуваалцсан захиалгат жагсаалтыг ачаалж байна.';
+
+  @override
+  String get share_list_not_found => 'Жагсаалт олдсонгүй эсвэл зөвшөөрөлгүй хандсан.';
+
+  @override
+  String get share_dialogue_builder_title => 'Хувийн жагсаалтаа хуваалцаарай';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Энэ жагсаалтыг хуваалцахыг хүссэн хүнээ доорх QR кодыг уншина уу';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Дараах хаягийг хуулж аваад энэ жагсаалтыг хуваалцахыг хүссэн хүндээ өгнө үү';
+
+  @override
+  String get drawer_my_lists => 'Миний жагсаалтууд';
+
+  @override
+  String get drawer_account => 'Данс';
+
+  @override
+  String get drawer_trial_period => 'Миний туршилтын хугацаа';
+
+  @override
+  String get drawer_my_personnal_list => 'Миний хувийн жагсаалтууд';
+
+  @override
+  String get drawer_defined_list => 'Бидний урьдчилан тодорхойлсон жагсаалтууд';
+
+  @override
+  String get drawer_themes_list => 'Манай сэдвүүдийн жагсаалт';
+
+  @override
+  String get subscription_benefit_no_pub => 'Аппликешн дээр зар сурталчилгаа харагдахгүй байна';
 }

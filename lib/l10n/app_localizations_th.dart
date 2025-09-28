@@ -670,4 +670,40 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => 'คำศัพท์สำคัญ 4,400 คำ';
+
+  @override
+  String get share_loading_list_share => 'กำลังโหลดรายการที่คุณกำหนดเองที่แชร์';
+
+  @override
+  String get share_list_not_found => 'ไม่พบรายการหรือเข้าถึงโดยไม่ได้รับอนุญาต';
+
+  @override
+  String get share_dialogue_builder_title => 'แบ่งปันรายการส่วนตัวของคุณ';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'โดยให้ผู้ที่คุณต้องการแบ่งปันรายการนี้สแกน QR Code ด้านล่าง';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'คัดลอกที่อยู่ต่อไปนี้และส่งให้บุคคลที่คุณต้องการแบ่งปันรายการนี้ด้วย';
+
+  @override
+  String get drawer_my_lists => 'รายการของฉัน';
+
+  @override
+  String get drawer_account => 'บัญชี';
+
+  @override
+  String get drawer_trial_period => 'ช่วงทดลองใช้งานของฉัน';
+
+  @override
+  String get drawer_my_personnal_list => 'รายการส่วนตัวของฉัน';
+
+  @override
+  String get drawer_defined_list => 'รายการที่เรากำหนดไว้ล่วงหน้า';
+
+  @override
+  String get drawer_themes_list => 'รายการหัวข้อของเรา';
+
+  @override
+  String get subscription_benefit_no_pub => 'ไม่มีโฆษณาปรากฏบนแอปพลิเคชัน';
 }

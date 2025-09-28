@@ -670,4 +670,40 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4,400 அத்தியாவசிய வார்த்தைகள்';
+
+  @override
+  String get share_loading_list_share => 'உங்கள் பகிரப்பட்ட தனிப்பயன் பட்டியலை ஏற்றுகிறது.';
+
+  @override
+  String get share_list_not_found => 'பட்டியல் கிடைக்கவில்லை அல்லது அணுகல் அங்கீகரிக்கப்படவில்லை.';
+
+  @override
+  String get share_dialogue_builder_title => 'உங்கள் தனிப்பயனாக்கப்பட்ட பட்டியலைப் பகிரவும்';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'இந்தப் பட்டியலைப் பகிர விரும்பும் நபரிடம் கீழே உள்ள QR குறியீட்டை ஸ்கேன் செய்யச் சொல்வதன் மூலம்';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'பின்வரும் முகவரியை நகலெடுத்து, இந்தப் பட்டியலைப் பகிர விரும்பும் நபருக்கு வழங்கவும்.';
+
+  @override
+  String get drawer_my_lists => 'எனது பட்டியல்கள்';
+
+  @override
+  String get drawer_account => 'கணக்கு';
+
+  @override
+  String get drawer_trial_period => 'எனது சோதனை காலம்';
+
+  @override
+  String get drawer_my_personnal_list => 'எனது தனிப்பட்ட பட்டியல்கள்';
+
+  @override
+  String get drawer_defined_list => 'எங்கள் முன் வரையறுக்கப்பட்ட பட்டியல்கள்';
+
+  @override
+  String get drawer_themes_list => 'எங்கள் கருப்பொருள் பட்டியல்கள்';
+
+  @override
+  String get subscription_benefit_no_pub => 'பயன்பாட்டில் எந்த விளம்பரமும் தெரியவில்லை.';
 }

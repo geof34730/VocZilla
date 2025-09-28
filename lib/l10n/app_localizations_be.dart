@@ -670,4 +670,40 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get home_notlogged_accroche4 => '4400 важных слоў';
+
+  @override
+  String get share_loading_list_share => 'Загрузка вашага агульнага карыстальніцкага спісу.';
+
+  @override
+  String get share_list_not_found => 'Спіс не знойдзены або доступ несанкцыянаваны.';
+
+  @override
+  String get share_dialogue_builder_title => 'Падзяліцеся сваім персаналізаваным спісам';
+
+  @override
+  String get share_dialogue_builder_description_qrcode => 'Папрасіце чалавека, з якім вы хочаце падзяліцца гэтым спісам, адсканаваць QR-код ніжэй';
+
+  @override
+  String get share_dialogue_builder_description_copy_url => 'Скапіруйце наступны адрас і паведаміце яго чалавеку, з якім вы хочаце падзяліцца гэтым спісам';
+
+  @override
+  String get drawer_my_lists => 'Мае спісы';
+
+  @override
+  String get drawer_account => 'Рахунак';
+
+  @override
+  String get drawer_trial_period => 'Мой выпрабавальны тэрмін';
+
+  @override
+  String get drawer_my_personnal_list => 'Мае асабістыя спісы';
+
+  @override
+  String get drawer_defined_list => 'Нашы загадзя падрыхтаваныя спісы';
+
+  @override
+  String get drawer_themes_list => 'Нашы спісы тэм';
+
+  @override
+  String get subscription_benefit_no_pub => 'У дадатку не бачная рэклама';
 }
