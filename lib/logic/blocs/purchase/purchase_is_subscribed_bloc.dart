@@ -13,12 +13,12 @@ class PurchaseIsSubscribedBloc extends Bloc<PurchaseIsSubscribedEvent, PurchaseI
   }
 
   Future<void> _onCheckStatus(CheckPurchaseSubscriptionStatus event, Emitter<PurchaseIsSubscribedState> emit) async {
-    emit(PurchaseIsSubscribedLoading());
+    emit(PurchaseIsSubscribedLoading(isSubscribed: state.isSubscribed));
     try {
       final isSubscribed = await _userRepository.checkSubscriptionStatus();
-      emit(PurchaseIsSubscribedLoaded(isSubscribed));
+      emit(PurchaseIsSubscribedLoaded(isSubscribed: isSubscribed));
     } catch (e) {
-      emit(PurchaseIsSubscribedError(e.toString()));
+      emit(PurchaseIsSubscribedError(e.toString(), isSubscribed: state.isSubscribed));
     }
   }
 }

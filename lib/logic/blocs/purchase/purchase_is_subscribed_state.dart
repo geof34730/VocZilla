@@ -1,31 +1,31 @@
-
 part of 'purchase_is_subscribed_bloc.dart';
 
 abstract class PurchaseIsSubscribedState extends Equatable {
-  const PurchaseIsSubscribedState();
+  final bool? isSubscribed;
+
+  const PurchaseIsSubscribedState({this.isSubscribed});
 
   @override
-  List<Object> get props => [];
+  List<Object?> get props => [isSubscribed];
 }
 
-class PurchaseIsSubscribedInitial extends PurchaseIsSubscribedState {}
+class PurchaseIsSubscribedInitial extends PurchaseIsSubscribedState {
+  PurchaseIsSubscribedInitial() : super(isSubscribed: null);
+}
 
-class PurchaseIsSubscribedLoading extends PurchaseIsSubscribedState {}
+class PurchaseIsSubscribedLoading extends PurchaseIsSubscribedState {
+  const PurchaseIsSubscribedLoading({bool? isSubscribed}) : super(isSubscribed: isSubscribed);
+}
 
 class PurchaseIsSubscribedLoaded extends PurchaseIsSubscribedState {
-  final bool isSubscribed;
-
-  const PurchaseIsSubscribedLoaded(this.isSubscribed);
-
-  @override
-  List<Object> get props => [isSubscribed];
+  const PurchaseIsSubscribedLoaded({required bool isSubscribed}) : super(isSubscribed: isSubscribed);
 }
 
 class PurchaseIsSubscribedError extends PurchaseIsSubscribedState {
   final String message;
 
-  const PurchaseIsSubscribedError(this.message);
+  const PurchaseIsSubscribedError(this.message, {bool? isSubscribed}) : super(isSubscribed: isSubscribed);
 
   @override
-  List<Object> get props => [message];
+  List<Object?> get props => [message, isSubscribed];
 }

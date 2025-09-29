@@ -8,6 +8,8 @@ import '../../global.dart';
 import '../../logic/blocs/purchase/purchase_bloc.dart';
 import '../../logic/blocs/purchase/purchase_event.dart';
 import '../../logic/blocs/purchase/purchase_state.dart';
+import '../../logic/blocs/purchase/purchase_is_subscribed_bloc.dart';
+
 
 class SubscriptionScreen extends StatefulWidget {
   const SubscriptionScreen({super.key});
@@ -41,6 +43,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen>
               break;
             case PurchaseStatus.purchased:
             case PurchaseStatus.restored:
+              // Ici, nous devons notifier le PurchaseIsSubscribedBloc
+              context.read<PurchaseIsSubscribedBloc>().add(CheckPurchaseSubscriptionStatus());
               break;
             case PurchaseStatus.pending:
               break;
@@ -86,6 +90,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen>
       listener: (context, state) {
         if (state is PurchaseCompleted) {
           setState(() => _purchasingProductId = null);
+          // Assurez-vous que le PurchaseIsSubscribedBloc est mis à jour ici aussi
+          context.read<PurchaseIsSubscribedBloc>().add(CheckPurchaseSubscriptionStatus());
           Navigator.of(context).pop(true);
         } else if (state is PurchaseFailure) {
           setState(() => _purchasingProductId = null);
@@ -205,6 +211,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen>
                     setState(() => _isRestoring = true);
                     try {
                       await InAppPurchase.instance.restorePurchases();
+                      // Ici aussi, après une restauration réussie, on met à jour le bloc d'abonnement
+                      context.read<PurchaseIsSubscribedBloc>().add(CheckPurchaseSubscriptionStatus());
                       if (mounted) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text(context.loc.restauration_terminee)),

@@ -67,7 +67,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
               if (state is VocabulairesLoading) {
                 return Center(child: CircularProgressIndicator());
               } else if (state is VocabulairesLoaded) {
-                print("change data");
+
                 final List<dynamic> data = state.data.vocabulaireList;
                 bool isNotLearned = state.data.isVocabularyNotLearned ?? true;
                 int _vocabulaireConnu = isNotLearned ? 0 : 1;
@@ -115,6 +115,10 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         title: context.loc.tester_title,
                         showTrophy:false
                       ),
+                    AdaptiveBannerAdWidget(
+                        key: ValueKey('quizz_top_banner'),
+                        padding:EdgeInsets.only(top:8)
+                    ),
                     Text(context.loc.quizz_progression_title,
                         style: TextStyle(
                             fontSize: 12,
@@ -203,7 +207,10 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                         : Container();
                                   },
                                 ),
-                                AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
+                                AdaptiveBannerAdWidget(
+                                    key: ValueKey('quizz_bottom_banner'),
+                                    padding:EdgeInsets.only(top:8)
+                                ),
                               ],
 
                             ),

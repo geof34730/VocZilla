@@ -8,7 +8,8 @@ String versionApp="1.0.0";
 final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
 
 int globalCountVocabulaireAll=4399;
-bool debugMode=false;
+bool debugMode=true;
+bool statistiqueGoogleAnalytics=false;
 //bool byPasSubscription = true;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';

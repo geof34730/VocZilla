@@ -527,6 +527,10 @@ class _PronunciationScreenState extends State<PronunciationScreen>
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              AdaptiveBannerAdWidget(
+                  key: ValueKey('prononcitation_banner'),
+                  padding:EdgeInsets.only(top:8)
+              ),
               const SizedBox(height: 20, width: double.infinity),
 
               Text(
@@ -724,7 +728,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
               Column(
                 children: [
                   const SizedBox(height: 0),
-                  AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
+
                   if (isRecording || viewResulte  || testScreenShot) ...[
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

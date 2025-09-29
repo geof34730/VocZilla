@@ -120,27 +120,30 @@ class UserRepository {
   }
 
   Future<bool> checkSubscriptionStatus() async {
-    // Reset the completer for this new check operation.
-
     Logger.Green.log("**********************************checkSubscriptionStatus");
 
-    if (_purchaseCompleter.isCompleted) {
-      _purchaseCompleter = Completer<void>();
-    }
+    // Reset the completer for this new check operation.
+    _purchaseCompleter = Completer<void>();
 
     Logger.Magenta.log("Beginning checkSubscriptionStatus...");
     try {
       await restorePurchases();
-      await _purchaseCompleter.future;
+      // Wait for the completer to complete, with a timeout.
+      await _purchaseCompleter.future.timeout(const Duration(seconds: 1), onTimeout: () {
+        Logger.Red.log("restorePurchases timed out. Assuming no active purchases.");
+        return false;
+        // If it times out, we assume no purchases were restored.
+        // The _purchaseToken and _subscriptionId will remain null.
+      });
     } catch (e) {
       Logger.Red.log("Error during restorePurchases: $e");
+      return false;
     } finally {
       // It's crucial to cancel the stream listener once the operation is complete
       // to prevent memory leaks and unexpected behavior from old listeners.
       await _purchaseSubscription?.cancel();
       _purchaseSubscription = null;
     }
-
 
     if (_purchaseToken == null || _subscriptionId == null) {
       Logger.Red.log("No valid purchase details available after restore.");
@@ -167,8 +170,7 @@ class UserRepository {
         Logger.Blue.log("Subscription status from backend: ${response.data}");
         return response.data;
       } else {
-        Logger.Red.log("Failed to verify subscription. Status: ${response
-            .statusCode}, Body: ${response.data}");
+        Logger.Red.log("Failed to verify subscription. Status: ${response.statusCode}, Body: ${response.data}");
         return false;
       }
     } catch (e) {

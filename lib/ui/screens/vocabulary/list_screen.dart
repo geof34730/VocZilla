@@ -6,6 +6,7 @@ import 'package:voczilla/logic/cubit/localization_cubit.dart';
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../core/utils/logger.dart';
 import '../../../data/repository/vocabulaire_repository.dart';
+import '../../widget/ads/banner_ad_widget.dart';
 import '../../widget/elements/PlaySoond.dart';
 
 import '../../../core/utils/languageUtils.dart';
@@ -56,6 +57,10 @@ class _ListScreenState extends State<ListScreen> {
           return Column(
             key: ValueKey('screenList'),
             children: [
+              AdaptiveBannerAdWidget(
+                  key: ValueKey('home_bottom_banner'),
+                  padding:EdgeInsets.only(top:8)
+              ),
               RadioChoiceVocabularyLearnedOrNot(
                   state: state,
                   vocabulaireConnu: _vocabulaireConnu,

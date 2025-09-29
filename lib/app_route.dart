@@ -100,11 +100,17 @@ class AppRoute {
               },
             ),
             BlocListener<PurchaseBloc, PurchaseState>(
+              listenWhen: (previous, current) => current is PurchaseCompleted && previous is! PurchaseCompleted,
               listener: (context, purchaseState) {
                 if (purchaseState is PurchaseCompleted) {
                   // Force the UserBloc to re-initialize its session to get the new subscription status.
-                  context.read<UserBloc>().add(InitializeUserSession());
-                  Navigator.pushReplacementNamed(context, home);
+                  Logger.Red.log("Force the UserBloc to re-initialize its session to get the new subscription status.");
+                 if(settings.name==subscription) {
+                   Logger.Red.log("GO");
+                   context.read<UserBloc>().add(InitializeUserSession());
+                   Navigator.pushReplacementNamed(context, home);
+                 }
+
                 }
               },
             ),

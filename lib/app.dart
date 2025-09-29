@@ -66,190 +66,190 @@ class MyApp extends StatelessWidget {
       globalCountVocabulaireAll=value;
     });
     return Material(
-      child: MultiBlocProvider(
+      child: MultiRepositoryProvider(
         providers: [
-          // Ces providers n'ont PAS besoin de la locale
           RepositoryProvider(create: (context) => AuthRepository()),
           RepositoryProvider(create: (context) => DataUserRepository()),
           RepositoryProvider(create: (context) => LocalStorageService()),
           RepositoryProvider(create: (context) => VocabulaireServerService()),
           RepositoryProvider(create: (context) => VocabulaireUserRepository()),
-          BlocProvider(create: (context) => AuthBloc(
-              authRepository: context.read<AuthRepository>(),
-              dataUserRepository: context.read<DataUserRepository>())
-            ..add(AppStarted())),
-          BlocProvider(create: (context) => DrawerBloc()),
-          BlocProvider(create: (context) => LocalizationCubit()),
-          BlocProvider(create: (context) => PurchaseBloc()..add(LoadProducts())),
-          BlocProvider(create: (context) => UserBloc(UserRepository())),
-          BlocProvider(create: (context) => VocabulairesBloc()),
-          BlocProvider(create: (context) => UpdateBloc()..add(CheckForUpdate())),
-          BlocProvider(create: (context) => NotificationBloc()),
-          // Dans votre MultiBlocProvider
-          BlocProvider<PurchaseIsSubscribedBloc>(
-            create: (context) => PurchaseIsSubscribedBloc(
-              userRepository: RepositoryProvider.of<UserRepository>(context), // ou userRepository
-            )..add(CheckPurchaseSubscriptionStatus()), // Déclenche la vérification au démarrage
-          ),
-          // NE PAS mettre VocabulaireUserBloc et LeaderboardBloc ici !
+          RepositoryProvider(create: (context) => UserRepository()), // Instance unique
         ],
-        child: BlocBuilder<LocalizationCubit, Locale>(
-          builder: (context, locale) {
-            final Locale effectiveLocale = localForce != null
-                ? Locale(localForce!)
-                : locale;
-            FirebaseAuth.instance.setLanguageCode(locale.languageCode);
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(create: (context) => AuthBloc(
+                authRepository: context.read<AuthRepository>(),
+                dataUserRepository: context.read<DataUserRepository>())
+              ..add(AppStarted())),
+            BlocProvider(create: (context) => DrawerBloc()),
+            BlocProvider(create: (context) => LocalizationCubit()),
+            BlocProvider(create: (context) => PurchaseBloc()..add(LoadProducts())),
+            BlocProvider(create: (context) => UserBloc(context.read<UserRepository>())),
+            BlocProvider(create: (context) => VocabulairesBloc()),
+            BlocProvider(create: (context) => UpdateBloc()..add(CheckForUpdate())),
+            BlocProvider(create: (context) => NotificationBloc()),
+            BlocProvider<PurchaseIsSubscribedBloc>(
+              create: (context) => PurchaseIsSubscribedBloc(
+                userRepository: context.read<UserRepository>(),
+              )..add(CheckPurchaseSubscriptionStatus()),
+            ),
+          ],
+          child: BlocBuilder<LocalizationCubit, Locale>(
+            builder: (context, locale) {
+              final Locale effectiveLocale = localForce != null
+                  ? Locale(localForce!)
+                  : locale;
+              FirebaseAuth.instance.setLanguageCode(locale.languageCode);
 
-            return GlobalAdManager(
-              child: MaterialApp(
-              navigatorObservers: [routeObserver],
-              navigatorKey: navigatorKey,
-              theme: VobdzillaTheme.lightTheme,
-              debugShowCheckedModeBanner: false,
-              locale: effectiveLocale,
-              supportedLocales: AppLocalizations.supportedLocales,
-              localizationsDelegates: const [
-                AppLocalizations.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              onGenerateRoute: generateRoute,
-              builder: (context, child) {
-                // Ici, le contexte a accès à la locale !
-                final smallCode = localForce ?? LanguageUtils.getSmallCodeLanguage(context: context);
+              return GlobalAdManager(
+                child: MaterialApp(
+                navigatorObservers: [routeObserver],
+                navigatorKey: navigatorKey,
+                theme: VobdzillaTheme.lightTheme,
+                debugShowCheckedModeBanner: false,
+                locale: effectiveLocale,
+                supportedLocales: AppLocalizations.supportedLocales,
+                localizationsDelegates: const [
+                  AppLocalizations.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                ],
+                onGenerateRoute: generateRoute,
+                builder: (context, child) {
+                  final smallCode = localForce ?? LanguageUtils.getSmallCodeLanguage(context: context);
 
-                return MultiBlocProvider(
-                  providers: [
-                    // Ces blocs ONT besoin de la locale, donc on les crée ici !
-                    BlocProvider<VocabulaireUserBloc>(
-                      create: (context) => VocabulaireUserBloc()
-                        ..add(CheckVocabulaireUserStatus(local: smallCode)),
-                    ),
-                    BlocProvider<LeaderboardBloc>(
-                      create: (context) => LeaderboardBloc(
-                        leaderboardRepository: LeaderboardRepository(
-                          leaderboardService: LeaderboardService(),
-                          vocabulaireUserRepository: VocabulaireUserRepository(),
-                        ),
-                      )..add(FetchLeaderboard(local: smallCode)),
-                    ),
-                  ],
-                    child: BlocConsumer<LocalizationCubit, Locale>(
-                      listenWhen: (previous, current) => previous != current,
-                      listener: (context, locale) {
-                        final localCode = locale.languageCode.toLowerCase();
-                        context.read<VocabulairesBloc>().add(LocaleChangedVocabulaires(local: localCode));
-                      },
-                      builder: (context, locale) {
-                        return MultiBlocListener(
-                          listeners: [
-                            BlocListener<AuthBloc, AuthState>(
-                              listener: (context, state) {
-                                if (state is AuthAuthenticated) {
-                                  Logger.Green.log(
-                                      "User is authenticated, loading user data for UID: ${state
-                                          .userProfile.uid}");
-                                  context.read<UserBloc>().add(
-                                      InitializeUserSession());
-                                } else if (state is AuthUnauthenticated) {
-                                  context.read<UserBloc>().add(
-                                      InitializeUserSession());
-                                }
-                              },
-                            ),
-                            BlocListener<UserBloc, UserState>(
-                              listener: (context, state) {
-                                BlocStateTracker().updateState(
-                                    'UserBloc', state);
-                                if (state is UserSessionLoaded) {
-                                  context.read<VocabulaireUserBloc>().add(
-                                      VocabulaireUserUpdate(userData: state.userData));
+                  return MultiBlocProvider(
+                    providers: [
+                      BlocProvider<VocabulaireUserBloc>(
+                        create: (context) => VocabulaireUserBloc()
+                          ..add(CheckVocabulaireUserStatus(local: smallCode)),
+                      ),
+                      BlocProvider<LeaderboardBloc>(
+                        create: (context) => LeaderboardBloc(
+                          leaderboardRepository: LeaderboardRepository(
+                            leaderboardService: LeaderboardService(),
+                            vocabulaireUserRepository: VocabulaireUserRepository(),
+                          ),
+                        )..add(FetchLeaderboard(local: smallCode)),
+                      ),
+                    ],
+                      child: BlocConsumer<LocalizationCubit, Locale>(
+                        listenWhen: (previous, current) => previous != current,
+                        listener: (context, locale) {
+                          final localCode = locale.languageCode.toLowerCase();
+                          context.read<VocabulairesBloc>().add(LocaleChangedVocabulaires(local: localCode));
+                        },
+                        builder: (context, locale) {
+                          return MultiBlocListener(
+                            listeners: [
+                              BlocListener<AuthBloc, AuthState>(
+                                listener: (context, state) {
+                                  if (state is AuthAuthenticated) {
+                                    Logger.Green.log(
+                                        "User is authenticated, loading user data for UID: ${state
+                                            .userProfile.uid}");
+                                    context.read<UserBloc>().add(
+                                        InitializeUserSession());
+                                  } else if (state is AuthUnauthenticated) {
+                                    context.read<UserBloc>().add(
+                                        InitializeUserSession());
                                   }
+                                },
+                              ),
+                              BlocListener<UserBloc, UserState>(
+                                listener: (context, state) {
+                                  BlocStateTracker().updateState(
+                                      'UserBloc', state);
+                                  if (state is UserSessionLoaded) {
+                                    context.read<VocabulaireUserBloc>().add(
+                                        VocabulaireUserUpdate(userData: state.userData));
+                                    }
 
-                              },
-                            ),
-                            BlocListener<
-                                VocabulaireUserBloc,
-                                VocabulaireUserState>(
-                              listener: (context, state) {
-                                if (state is ListPersoDeletionSuccess) {
-                                  context.read<LeaderboardBloc>().add(
-                                      FetchLeaderboard(local: LanguageUtils
-                                          .getSmallCodeLanguage(
-                                          context: context)));
-                                  if (!testScreenShot) {
+                                },
+                              ),
+                              BlocListener<
+                                  VocabulaireUserBloc,
+                                  VocabulaireUserState>(
+                                listener: (context, state) {
+                                  if (state is ListPersoDeletionSuccess) {
+                                    context.read<LeaderboardBloc>().add(
+                                        FetchLeaderboard(local: LanguageUtils
+                                            .getSmallCodeLanguage(
+                                            context: context)));
+                                    if (!testScreenShot) {
+                                      context.read<NotificationBloc>().add(
+                                          ShowNotification(
+                                            message: getLocalizedSuccessMessage(
+                                                context,
+                                                "[SuccessBloc/vocabulaire_success_delete_list]"),
+                                            backgroundColor: Colors.green,
+                                          ));
+                                    }
+                                  }
+                                  if (state is VocabulaireUserError) {
                                     context.read<NotificationBloc>().add(
                                         ShowNotification(
-                                          message: getLocalizedSuccessMessage(
-                                              context,
-                                              "[SuccessBloc/vocabulaire_success_delete_list]"),
-                                          backgroundColor: Colors.green,
+                                          message: getLocalizedErrorMessage(
+                                              context, state.error),
+                                          backgroundColor: Colors.red,
                                         ));
+                                    context.read<VocabulaireUserBloc>().add(
+                                        VocabulaireUserBlocErrorCleared());
                                   }
-                                }
-                                if (state is VocabulaireUserError) {
-                                  context.read<NotificationBloc>().add(
-                                      ShowNotification(
-                                        message: getLocalizedErrorMessage(
-                                            context, state.error),
-                                        backgroundColor: Colors.red,
-                                      ));
-                                  context.read<VocabulaireUserBloc>().add(
-                                      VocabulaireUserBlocErrorCleared());
-                                }
-                              },
-                            ),
-                            BlocListener<NotificationBloc, NotificationState>(
-                              listener: (context, state) {
-                                if (state is NotificationVisible) {
-                                  WidgetsBinding.instance.addPostFrameCallback((
-                                      _) {
-                                    Future.delayed(
-                                        const Duration(milliseconds: 50), () {
-                                      final navigatorContext = navigatorKey
-                                          .currentContext;
-                                      if (navigatorContext != null &&
-                                          context.mounted) {
-                                        ScaffoldMessenger.of(navigatorContext)
-                                          ..removeCurrentSnackBar()
-                                          ..showSnackBar(
-                                            SnackBar(
-                                              content: Text(
-                                                state.message,
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 18,
+                                },
+                              ),
+                              BlocListener<NotificationBloc, NotificationState>(
+                                listener: (context, state) {
+                                  if (state is NotificationVisible) {
+                                    WidgetsBinding.instance.addPostFrameCallback((
+                                        _) {
+                                      Future.delayed(
+                                          const Duration(milliseconds: 50), () {
+                                        final navigatorContext = navigatorKey
+                                            .currentContext;
+                                        if (navigatorContext != null &&
+                                            context.mounted) {
+                                          ScaffoldMessenger.of(navigatorContext)
+                                            ..removeCurrentSnackBar()
+                                            ..showSnackBar(
+                                              SnackBar(
+                                                content: Text(
+                                                  state.message,
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 18,
+                                                  ),
                                                 ),
+                                                backgroundColor: state
+                                                    .backgroundColor,
+                                                behavior: SnackBarBehavior
+                                                    .floating,
+                                                showCloseIcon: true,
+                                                duration: const Duration(
+                                                    seconds: 4),
                                               ),
-                                              backgroundColor: state
-                                                  .backgroundColor,
-                                              behavior: SnackBarBehavior
-                                                  .floating,
-                                              showCloseIcon: true,
-                                              duration: const Duration(
-                                                  seconds: 4),
-                                            ),
-                                          );
-                                        context.read<NotificationBloc>().add(
-                                            NotificationDismissed());
-                                      }
+                                            );
+                                          context.read<NotificationBloc>().add(
+                                              NotificationDismissed());
+                                        }
+                                      });
                                     });
-                                  });
-                                }
-                              },
-                            ),
-                          ],
-                          child: child ?? const SizedBox.shrink(),
-                        );
-                      }
-                    )
-                );
-              },
-            )
-            );
-          },
+                                  }
+                                },
+                              ),
+                            ],
+                            child: child ?? const SizedBox.shrink(),
+                          );
+                        }
+                      )
+                  );
+                },
+              )
+              );
+            },
+          ),
         ),
       ),
     );

@@ -80,6 +80,10 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
 
                   key: ValueKey('screenLearn'),
                     children: [
+                      const AdaptiveBannerAdWidget(
+                        key: ValueKey('learn_banner'),
+                        padding: EdgeInsets.only(top: 8),
+                      ),
                       RadioChoiceVocabularyLearnedOrNot(
                           state: state,
                           vocabulaireConnu: _vocabulaireConnu,
@@ -278,7 +282,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                           ],
                         ),
                       ],
-                      AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
+
 //
                 ],
               ),

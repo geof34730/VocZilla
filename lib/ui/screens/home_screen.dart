@@ -77,7 +77,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: context.loc.home_title_progresse,
               ),
               const SizedBox(height: 8),
-              AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
+              AdaptiveBannerAdWidget(
+                  key: ValueKey('home_top_banner'),
+                  padding:EdgeInsets.only(top:8)
+              ),
               BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
                 builder: (context, state) {
                   if (state is VocabulaireUserLoaded) {
@@ -92,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   return const Center(child: CircularProgressIndicator());
                 },
               ),
-              const SizedBox(height: 8),
+
               const SizedBox(height: 8),
               titleWidget(text: context.loc.home_title_list_defined, codelang: codelang),
               BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
@@ -132,7 +135,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   return const Center(child: CircularProgressIndicator());
                 },
               ),
-              AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
+              AdaptiveBannerAdWidget(
+                  key: ValueKey('home_bottom_banner'),
+                  padding:EdgeInsets.only(top:8)
+              ),
               titleWidget(
                   text: context.loc.home_title_classement, codelang: codelang),
               const HomeClassement(),

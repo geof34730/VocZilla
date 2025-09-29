@@ -67,6 +67,10 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
             child: Column(
               key: ValueKey('screenVoicedictation'),
               children: [
+                AdaptiveBannerAdWidget(
+                    key: ValueKey('dictation_banner'),
+                    padding:EdgeInsets.only(top:8)
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: PlaySoond(
@@ -125,7 +129,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                         : Container();
                   },
                 ),
-                AdaptiveBannerAdWidget(padding:EdgeInsets.only(top:8)),
+
 
               ],
             )),

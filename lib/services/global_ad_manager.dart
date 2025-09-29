@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:voczilla/logic/blocs/user/user_bloc.dart';
-import 'package:voczilla/logic/blocs/user/user_state.dart';
+import 'package:voczilla/logic/blocs/purchase/purchase_is_subscribed_bloc.dart';
 import 'package:voczilla/services/admob_service.dart';
 
 class GlobalAdManager extends StatefulWidget {
@@ -15,23 +14,15 @@ class GlobalAdManager extends StatefulWidget {
 
 class _GlobalAdManagerState extends State<GlobalAdManager> with WidgetsBindingObserver {
   Timer? _interstitialAdTimer;
-  bool _isSubscribed = false;
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    // Initial check of subscription status
-    final userState = context.read<UserBloc>().state;
-    if (userState is UserSessionLoaded) {
-      _isSubscribed = userState.isSubscribed;
-    }
-    _startTimerIfNeeded();
+    // Vérification initiale après le premier rendu
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _updateTimerBasedOnState(context.read<PurchaseIsSubscribedBloc>().state);
+    });
   }
 
   @override
@@ -44,44 +35,34 @@ class _GlobalAdManagerState extends State<GlobalAdManager> with WidgetsBindingOb
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    if (state == AppLifecycleState.resumed) {
-      _startTimerIfNeeded();
-    } else {
-      _stopInterstitialAdTimer();
-    }
+    // Réévalue le minuteur à chaque changement de cycle de vie de l'application
+    _updateTimerBasedOnState(context.read<PurchaseIsSubscribedBloc>().state);
   }
 
-  void _onSubscriptionChange(UserState state) {
-    bool newIsSubscribed = false;
-    if (state is UserSessionLoaded) {
-      newIsSubscribed = state.isSubscribed;
-    }
+  void _updateTimerBasedOnState(PurchaseIsSubscribedState state) {
+    final isSubscribed = state.isSubscribed;
+    final appIsResumed = WidgetsBinding.instance.lifecycleState == AppLifecycleState.resumed;
 
-    if (_isSubscribed != newIsSubscribed) {
-      _isSubscribed = newIsSubscribed;
-      _startTimerIfNeeded();
-    }
-  }
-
-  void _startTimerIfNeeded() {
-    // Only start if not subscribed and app is resumed
-    if (!_isSubscribed && WidgetsBinding.instance.lifecycleState == AppLifecycleState.resumed) {
+    // Le minuteur ne doit tourner que si l'on sait que l'utilisateur n'est PAS abonné
+    // et que l'application est au premier plan.
+    if (isSubscribed == false && appIsResumed) {
       _startInterstitialAdTimer();
     } else {
+      // Dans tous les autres cas (abonné, statut inconnu, ou app en arrière-plan),
+      // on arrête le minuteur.
       _stopInterstitialAdTimer();
     }
   }
 
-  /// Démarre le minuteur pour les publicités.
+  /// Démarre le minuteur pour les publicités interstitielles.
   void _startInterstitialAdTimer() {
-    // S'assure qu'un seul minuteur tourne à la fois.
-    _interstitialAdTimer?.cancel();
+    // Si un minuteur est déjà actif, on ne fait rien.
+    if (_interstitialAdTimer?.isActive ?? false) return;
 
     _interstitialAdTimer = Timer.periodic(const Duration(minutes: 2), (timer) {
-      // On ne montre la pub que si l'app est au premier plan.
-      if (!_isSubscribed && WidgetsBinding.instance.lifecycleState == AppLifecycleState.resumed) {
-        AdMobService.instance.showInterstitialAd();
-      }
+      // La décision de démarrer le minuteur a déjà confirmé que l'utilisateur n'est pas abonné
+      // et que l'app est au premier plan. On peut donc montrer la pub directement.
+      AdMobService.instance.showInterstitialAd();
     });
   }
 
@@ -92,9 +73,10 @@ class _GlobalAdManagerState extends State<GlobalAdManager> with WidgetsBindingOb
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<UserBloc, UserState>(
+    return BlocListener<PurchaseIsSubscribedBloc, PurchaseIsSubscribedState>(
+      // Le listener met à jour le minuteur à chaque changement de statut d'abonnement.
       listener: (context, state) {
-        _onSubscriptionChange(state);
+        _updateTimerBasedOnState(state);
       },
       child: widget.child,
     );
