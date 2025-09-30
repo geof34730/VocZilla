@@ -9,7 +9,7 @@ class AppLocalizationsCa extends AppLocalizations {
   AppLocalizationsCa([String locale = 'ca']) : super(locale);
 
   @override
-  String get app_release_note => 'S\'han afegit trofeus per a llistes completades, s\'ha nou filtre per ocultar les llistes completades i s\'ha corregit un error amb el filtre \"Vocabulari per aprendre\". S\'ha millorat la visualització de la taula de classificació de TeamZilla.';
+  String get app_release_note => 'S\'ha afegit la compartició de llistes personals';
 
   @override
   String get share_list_perso_alert_disponible => 'La funció de compartir llistes estarà disponible molt aviat!';

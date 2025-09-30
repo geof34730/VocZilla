@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Tugallangan roʻyxatlar uchun sovrinlar qoʻshildi, tugallangan roʻyxatlarni yashirish uchun yangi filtr, “Oʻrganiladigan lugʻat” filtridagi xatolik tuzatildi. Yaxshilangan TeamZilla peshqadamlar jadvali displeyi.",
+    "app_release_note": "Shaxsiy roʻyxat almashish qoʻshildi",
     "share_list_perso_alert_disponible": "Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!",
     "information": "Ma'lumot",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Reklamadan charchadingizmi?",
     "subscription_title_6": "Vaqtni tejang, reklamadan qoching",
     "subscription_title_7": "Boshqa reklama yo'q!",
-    "subscription_title_8": "Tarkibga reklamasiz to'g'ridan-to'g'ri kiring!"
+    "subscription_title_8": "Tarkibga reklamasiz to'g'ridan-to'g'ri kiring!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

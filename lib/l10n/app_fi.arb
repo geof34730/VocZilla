@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Lisätty palkinnot valmiille listoille, uusi suodatin valmiiden listojen piilottamiseen, korjattu \"Opittava sanasto\" -suodattimen virhe. Parannettu TeamZillan tulostaulukon näyttöä.",
+    "app_release_note": "Lisätty henkilökohtaisen listan jakaminen",
     "share_list_perso_alert_disponible": "Listan jakamisominaisuus on saatavilla pian!",
     "information": "Tiedot",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Kyllästynyt mainontaan?",
     "subscription_title_6": "Säästä aikaa, vältä mainontaa",
     "subscription_title_7": "Ei enää mainoksia!",
-    "subscription_title_8": "Käytä sisältöä suoraan, ilman mainoksia!"
+    "subscription_title_8": "Käytä sisältöä suoraan, ilman mainoksia!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

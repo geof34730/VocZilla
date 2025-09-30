@@ -9,7 +9,7 @@ class AppLocalizationsMr extends AppLocalizations {
   AppLocalizationsMr([String locale = 'mr']) : super(locale);
 
   @override
-  String get app_release_note => 'पूर्ण झालेल्या यादींसाठी ट्रॉफी जोडल्या, पूर्ण झालेल्या यादी लपविण्यासाठी नवीन फिल्टर, \"शिकण्यासाठी शब्दसंग्रह\" फिल्टरसह एक बग दुरुस्त केला. सुधारित टीमझिला लीडरबोर्ड डिस्प्ले.';
+  String get app_release_note => 'वैयक्तिक यादी शेअरिंग जोडले';
 
   @override
   String get share_list_perso_alert_disponible => 'यादी शेअरिंग वैशिष्ट्य लवकरच उपलब्ध होईल!';

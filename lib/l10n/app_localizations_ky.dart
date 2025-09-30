@@ -9,7 +9,7 @@ class AppLocalizationsKy extends AppLocalizations {
   AppLocalizationsKy([String locale = 'ky']) : super(locale);
 
   @override
-  String get app_release_note => 'Аякталган тизмелер үчүн кубоктор кошулду, аяктаган тизмелерди жашыруу үчүн жаңы чыпка, \"Үйрөнө турган лексика\" чыпкасы менен ката оңдолду. Жакшыртылган TeamZilla лидер тактасынын дисплейи.';
+  String get app_release_note => 'Жеке тизме бөлүшүү кошулду';
 
   @override
   String get share_list_perso_alert_disponible => 'Тизме менен бөлүшүү функциясы жакында жеткиликтүү болот!';

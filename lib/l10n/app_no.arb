@@ -1,5 +1,5 @@
 {
-    "app_release_note": "La til trofeer for fullførte lister, nytt filter for å skjule fullførte lister, fikset en feil med filteret «Vokabular å lære». Forbedret visning av TeamZilla-ledertavlen.",
+    "app_release_note": "La til deling av personlige lister",
     "share_list_perso_alert_disponible": "Funksjonen for deling av lister vil være tilgjengelig veldig snart!",
     "information": "Informasjon",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Lei av reklame?",
     "subscription_title_6": "Spar tid, unngå reklame",
     "subscription_title_7": "Ingen flere annonser!",
-    "subscription_title_8": "Få direkte tilgang til innholdet, uten reklame!"
+    "subscription_title_8": "Få direkte tilgang til innholdet, uten reklame!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

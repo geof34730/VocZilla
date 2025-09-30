@@ -1,5 +1,5 @@
 {
-    "app_release_note": "완료 목록에 트로피 추가, 완료 목록 숨기기 필터 추가, \"학습 어휘\" 필터 버그 수정, TeamZilla 리더보드 표시 개선.",
+    "app_release_note": "개인 목록 공유 추가",
     "share_list_perso_alert_disponible": "목록 공유 기능이 곧 출시됩니다!",
     "information": "정보",
     "app_title": "보크질라",
@@ -245,5 +245,11 @@
     "subscription_title_5": "광고에 지치셨나요?",
     "subscription_title_6": "시간을 절약하고 광고를 피하세요",
     "subscription_title_7": "더 이상 광고가 없습니다!",
-    "subscription_title_8": "광고 없이 콘텐츠에 직접 접근하세요!"
+    "subscription_title_8": "광고 없이 콘텐츠에 직접 접근하세요!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

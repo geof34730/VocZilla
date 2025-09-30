@@ -9,7 +9,7 @@ class AppLocalizationsSi extends AppLocalizations {
   AppLocalizationsSi([String locale = 'si']) : super(locale);
 
   @override
-  String get app_release_note => 'සම්පූර්ණ කරන ලද ලැයිස්තු සඳහා කුසලාන එකතු කරන ලදී, සම්පූර්ණ කරන ලද ලැයිස්තු සැඟවීමට නව පෙරහනක්, \"ඉගෙන ගැනීමට වචන මාලාව\" පෙරහන සමඟ දෝෂයක් නිවැරදි කරන ලදී. වැඩිදියුණු කළ TeamZilla ප්‍රමුඛ පුවරු සංදර්ශකය.';
+  String get app_release_note => 'පුද්ගලික ලැයිස්තු බෙදාගැනීම එක් කරන ලදී';
 
   @override
   String get share_list_perso_alert_disponible => 'ලැයිස්තු බෙදාගැනීමේ විශේෂාංගය ඉතා ඉක්මනින් ලබා ගත හැකි වනු ඇත!';

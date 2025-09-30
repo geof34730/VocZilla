@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Trophäen für abgeschlossene Listen hinzugefügt, neuer Filter zum Ausblenden abgeschlossener Listen, Fehler im Filter „Zu lernender Wortschatz“ behoben. Anzeige der TeamZilla-Bestenliste verbessert.",
+    "app_release_note": "Persönliche Listenfreigabe hinzugefügt",
     "share_list_perso_alert_disponible": "Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Keine Lust mehr auf Werbung?",
     "subscription_title_6": "Sparen Sie Zeit, vermeiden Sie Werbung",
     "subscription_title_7": "Keine Werbung mehr!",
-    "subscription_title_8": "Greifen Sie direkt und ohne Werbung auf die Inhalte zu!"
+    "subscription_title_8": "Greifen Sie direkt und ohne Werbung auf die Inhalte zu!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

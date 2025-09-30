@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Lisatud trofeed lõpetatud nimekirjade eest, uus filter lõpetatud nimekirjade peitmiseks, parandatud viga filtriga \"Õpitav sõnavara\". Täiustatud TeamZilla edetabeli kuvamine.",
+    "app_release_note": "Lisatud isikliku nimekirja jagamine",
     "share_list_perso_alert_disponible": "Loendi jagamise funktsioon on saadaval peagi!",
     "information": "Teave",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Reklaamist tüdinud?",
     "subscription_title_6": "Säästa aega, väldi reklaami",
     "subscription_title_7": "Reklaame enam pole!",
-    "subscription_title_8": "Ligipääs sisule otse, ilma reklaamita!"
+    "subscription_title_8": "Ligipääs sisule otse, ilma reklaamita!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

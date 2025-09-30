@@ -122,6 +122,11 @@ class UserRepository {
   Future<bool> checkSubscriptionStatus() async {
     Logger.Green.log("**********************************checkSubscriptionStatus");
 
+      if(showGoogleAdMob){
+        return false;
+      }
+
+
     // Reset the completer for this new check operation.
     _purchaseCompleter = Completer<void>();
 

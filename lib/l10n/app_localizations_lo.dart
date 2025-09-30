@@ -9,7 +9,7 @@ class AppLocalizationsLo extends AppLocalizations {
   AppLocalizationsLo([String locale = 'lo']) : super(locale);
 
   @override
-  String get app_release_note => 'ເພີ່ມ trophies ສໍາລັບລາຍຊື່ສໍາເລັດ, ການກັ່ນຕອງໃຫມ່ເພື່ອຊ່ອນບັນຊີລາຍຊື່ສໍາເລັດ, ແກ້ໄຂຂໍ້ບົກພ່ອງທີ່ມີການກັ່ນຕອງ \"Vocabulary to learn\". ປັບປຸງການສະແດງກະດານຈັດອັນດັບ TeamZilla.';
+  String get app_release_note => 'ເພີ່ມການແບ່ງປັນລາຍຊື່ສ່ວນຕົວແລ້ວ';
 
   @override
   String get share_list_perso_alert_disponible => 'ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!';

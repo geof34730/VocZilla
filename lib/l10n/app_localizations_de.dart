@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get app_release_note => 'Trophäen für abgeschlossene Listen hinzugefügt, neuer Filter zum Ausblenden abgeschlossener Listen, Fehler im Filter „Zu lernender Wortschatz“ behoben. Anzeige der TeamZilla-Bestenliste verbessert.';
+  String get app_release_note => 'Persönliche Listenfreigabe hinzugefügt';
 
   @override
   String get share_list_perso_alert_disponible => 'Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!';

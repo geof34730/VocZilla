@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Přidány trofeje za splněné seznamy, nový filtr pro skrytí splněných seznamů, opravena chyba s filtrem „Slovní zásoba k učení“. Vylepšeno zobrazení žebříčku TeamZilla.",
+    "app_release_note": "Přidáno sdílení osobních seznamů",
     "share_list_perso_alert_disponible": "Funkce sdílení seznamů bude k dispozici velmi brzy!",
     "information": "Informace",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Už vás nebaví reklama?",
     "subscription_title_6": "Ušetřete čas, vyhněte se reklamě",
     "subscription_title_7": "Už žádné reklamy!",
-    "subscription_title_8": "Přímý přístup k obsahu, bez reklamy!"
+    "subscription_title_8": "Přímý přístup k obsahu, bez reklamy!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

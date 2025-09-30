@@ -9,7 +9,7 @@ class AppLocalizationsEu extends AppLocalizations {
   AppLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get app_release_note => 'Osatutako zerrendetarako garaikurrak gehitu dira, osatutako zerrendak ezkutatzeko iragazki berria, \"Ikasi beharreko hiztegia\" iragazkiaren akatsa konpondu da. TeamZilla sailkapenaren bistaratzea hobetu da.';
+  String get app_release_note => 'Gehitu da zerrenda pertsonalak partekatzea';
 
   @override
   String get share_list_perso_alert_disponible => 'Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!';

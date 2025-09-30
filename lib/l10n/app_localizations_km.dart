@@ -9,7 +9,7 @@ class AppLocalizationsKm extends AppLocalizations {
   AppLocalizationsKm([String locale = 'km']) : super(locale);
 
   @override
-  String get app_release_note => 'បានបន្ថែមពានរង្វាន់សម្រាប់បញ្ជីដែលបានបញ្ចប់ តម្រងថ្មីដើម្បីលាក់បញ្ជីដែលបានបញ្ចប់ ជួសជុលកំហុសជាមួយនឹងតម្រង \"វាក្យសព្ទដើម្បីរៀន\" ។ ការបង្ហាញតារាងពិន្ទុ TeamZilla ប្រសើរឡើង។';
+  String get app_release_note => 'បានបន្ថែមការចែករំលែកបញ្ជីផ្ទាល់ខ្លួន';
 
   @override
   String get share_list_perso_alert_disponible => 'មុខងារចែករំលែកបញ្ជីនឹងមានក្នុងពេលឆាប់ៗនេះ!';

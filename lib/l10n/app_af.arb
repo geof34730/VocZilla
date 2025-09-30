@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Trofeë vir voltooide lyste bygevoeg, nuwe filter om voltooide lyste weg te steek, 'n fout met die \"Woordeskat om te Leer\"-filter reggestel. TeamZilla-leierbordvertoning verbeter.",
+    "app_release_note": "Persoonlike lysdeling bygevoeg",
     "share_list_perso_alert_disponible": "Die lysdelingsfunksie sal binnekort beskikbaar wees!",
     "information": "Inligting",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Moeg vir advertensies?",
     "subscription_title_6": "Bespaar tyd, vermy advertensies",
     "subscription_title_7": "Geen meer advertensies nie!",
-    "subscription_title_8": "Kry direk toegang tot die inhoud, sonder advertensies!"
+    "subscription_title_8": "Kry direk toegang tot die inhoud, sonder advertensies!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

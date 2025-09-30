@@ -9,7 +9,7 @@ class AppLocalizationsEt extends AppLocalizations {
   AppLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get app_release_note => 'Lisatud trofeed lõpetatud nimekirjade eest, uus filter lõpetatud nimekirjade peitmiseks, parandatud viga filtriga \"Õpitav sõnavara\". Täiustatud TeamZilla edetabeli kuvamine.';
+  String get app_release_note => 'Lisatud isikliku nimekirja jagamine';
 
   @override
   String get share_list_perso_alert_disponible => 'Loendi jagamise funktsioon on saadaval peagi!';

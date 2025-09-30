@@ -9,7 +9,7 @@ class AppLocalizationsSl extends AppLocalizations {
   AppLocalizationsSl([String locale = 'sl']) : super(locale);
 
   @override
-  String get app_release_note => 'Dodani pokali za dokončane sezname, nov filter za skrivanje dokončanih seznamov, odpravljena napaka s filtrom »Besedišče za učenje«. Izboljšan prikaz lestvice najboljših v TeamZilli.';
+  String get app_release_note => 'Dodana skupna raba osebnega seznama';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija deljenja seznamov bo kmalu na voljo!';

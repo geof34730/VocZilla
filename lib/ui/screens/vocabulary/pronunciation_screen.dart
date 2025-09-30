@@ -103,35 +103,58 @@ class _PronunciationScreenState extends State<PronunciationScreen>
     );
 
     // Bootstrap: permission + assets + init sherpa
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      AdMobService.instance.loadBanner(placementId: 'pronunciation', context: context);
-      await _bootstrapAsr();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _initializePage();
     });
+  }
+
+
+
+
+  void _initializePage() async {
+    // Affiche les bannières et attend un court instant pour que l'UI soit fluide
+    AdMobService.instance.loadPrononciationnScreenBanners(context);
+    await Future.delayed(const Duration(milliseconds: 100));
+
+    // Démarre l'initialisation de l'ASR
+    if (mounted) {
+      await _bootstrapAsr();
+    }
   }
 
   Future<void> _bootstrapAsr() async {
     // 🚫 Mode screenshot : on ne touche pas au micro ni à l'ASR
     if (testScreenShot) {
       Logger.Yellow.log("Screenshot mode: ASR/micro désactivés");
-      setState(() {
-        _initInProgress = false; // pas de loader
-        _asrReady = false;
-        _micReady = false;
-      });
+      if (mounted) {
+        setState(() {
+          _initInProgress = false; // pas de loader
+          _asrReady = false;
+          _micReady = false;
+        });
+      }
       return;
     }
 
-    setState(() {
-      _initInProgress = true;
-      _asrReady = false;
-      _downloadError = null;
-    });
+    if (mounted) {
+      setState(() {
+        _initInProgress = true;
+        _asrReady = false;
+        _downloadError = null;
+      });
+      _animationController.repeat(reverse: true); // Démarrer l'animation de chargement
+    }
+
+    // Laisse à l'UI le temps de se mettre à jour
+    await Future.delayed(const Duration(milliseconds: 50));
 
     if (!(await _ensureMic())) {
       Logger.Red.log("Microphone permission denied");
-      setState(() {
-        _initInProgress = false; // on arrête l’init (bouton restera grisé hors screenshot)
-      });
+      if (mounted) {
+        setState(() {
+          _initInProgress = false; // on arrête l’init (bouton restera grisé hors screenshot)
+        });
+      }
       return;
     }
 
@@ -146,15 +169,19 @@ class _PronunciationScreenState extends State<PronunciationScreen>
     // Étape 2: S'assurer que les modèles sont prêts (téléchargement si besoin)
     final modelsReady = await _ensureModelsAreReady();
     if (!modelsReady) {
-      setState(() => _initInProgress = false);
+      if (mounted) setState(() => _initInProgress = false);
       return;
     }
     await _initSherpaOnnx();
 
-    setState(() {
-      _asrReady = _recognizer != null;
-      _initInProgress = false;
-    });
+    if (mounted) {
+      setState(() {
+        _asrReady = _recognizer != null;
+        _initInProgress = false;
+      });
+      _animationController.stop(); // Arrêter l'animation
+      _animationController.reset();
+    }
   }
 
   @override
@@ -170,9 +197,13 @@ class _PronunciationScreenState extends State<PronunciationScreen>
     _animationController.dispose();
     _barUpdateTimer?.cancel();
     _errorDelayTimer?.cancel();
-
+    AdMobService.instance.disposePronunciationScreenBanners();
     super.dispose();
   }
+
+
+
+
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
@@ -530,7 +561,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const AdaptiveBannerAdWidget(
-                  placementId: 'pronunciation',
+                  placementId: 'prononciation_top',
                   padding:EdgeInsets.only(top:8)
               ),
               const SizedBox(height: 20, width: double.infinity),
@@ -642,13 +673,13 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                     child: Stack(
                       alignment: Alignment.center,
                       children: [
-                        if (isRecording) ...[
+                        if (isRecording || (_initInProgress && !testScreenShot)) ...[
                           Positioned.fill(
                             child: Center(
                               child: RippleCircle(
                                 size: 150 + (_animationController.value * 60),
                                 opacity: 1.0 - _animationController.value,
-                                color: Colors.redAccent,
+                                color: isRecording ? Colors.redAccent : Colors.blueAccent,
                               ),
                             ),
                           ),
@@ -657,7 +688,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                               child: RippleCircle(
                                 size: 130 + (_animationController.value * 50),
                                 opacity: 0.7 - (_animationController.value * 0.7),
-                                color: Colors.redAccent,
+                                color: isRecording ? Colors.redAccent : Colors.blueAccent,
                               ),
                             ),
                           ),
@@ -666,7 +697,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                               child: RippleCircle(
                                 size: 110 + (_animationController.value * 40),
                                 opacity: 0.5 - (_animationController.value * 0.5),
-                                color: Colors.redAccent,
+                                color: isRecording ? Colors.redAccent : Colors.blueAccent,
                               ),
                             ),
                           ),
@@ -680,7 +711,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                                 ? Colors.red
                                 : (testScreenShot
                                 ? Colors.green // 🟢 En screenshot: vert
-                                : (canTapRecord ? Colors.green : Colors.grey)),
+                                : (_initInProgress ? Colors.grey : (canTapRecord ? Colors.green : Colors.grey))),
                             boxShadow: const [
                               BoxShadow(
                                 color: Colors.black26,
@@ -784,6 +815,10 @@ class _PronunciationScreenState extends State<PronunciationScreen>
                       ),
                     ),
                   ],
+                  const AdaptiveBannerAdWidget(
+                      placementId: 'prononciation_bottom',
+                      padding:EdgeInsets.only(top:8)
+                  ),
                 ],
               ),
 

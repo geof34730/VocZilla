@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Đã thêm danh hiệu cho các danh sách đã hoàn thành, bộ lọc mới để ẩn các danh sách đã hoàn thành, sửa lỗi với bộ lọc \"Từ vựng cần học\". Cải thiện hiển thị bảng xếp hạng TeamZilla.",
+    "app_release_note": "Đã thêm chia sẻ danh sách cá nhân",
     "share_list_perso_alert_disponible": "Tính năng chia sẻ danh sách sẽ sớm có mặt!",
     "information": "Thông tin",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Bạn có thấy chán quảng cáo không?",
     "subscription_title_6": "Tiết kiệm thời gian, tránh quảng cáo",
     "subscription_title_7": "Không còn quảng cáo nữa!",
-    "subscription_title_8": "Truy cập nội dung trực tiếp, không có quảng cáo!"
+    "subscription_title_8": "Truy cập nội dung trực tiếp, không có quảng cáo!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

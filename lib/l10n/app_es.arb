@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Se añadieron trofeos por listas completadas, se agregó un nuevo filtro para ocultarlas y se corrigió un error con el filtro \"Vocabulario para aprender\". Se mejoró la visualización de la tabla de clasificación de TeamZilla.",
+    "app_release_note": "Se agregó la función de compartir listas personales",
     "share_list_perso_alert_disponible": "¡La función para compartir listas estará disponible muy pronto!",
     "information": "Información",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "¿Cansado de la publicidad?",
     "subscription_title_6": "Ahorra tiempo, evita publicidad",
     "subscription_title_7": "¡No más anuncios!",
-    "subscription_title_8": "¡Accede al contenido directamente, sin publicidad!"
+    "subscription_title_8": "¡Accede al contenido directamente, sin publicidad!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

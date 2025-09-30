@@ -9,8 +9,8 @@ final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
 
 int globalCountVocabulaireAll=4399;
 bool debugMode=false;
-bool statistiqueGoogleAnalytics=false;
-//bool byPasSubscription = true;
+bool statistiqueGoogleAnalytics=true;
+bool showGoogleAdMob=false;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
@@ -29,4 +29,3 @@ final String serverRankCurrentUser = '$serveurUrl/api/leaderboard/ranking';
 
 const String ANDROID_APP_STORE_URL="https://play.google.com/store/apps/details?id=com.geoffreypetain.voczilla.voczilla";
 const String IOS_APP_STORE_URL="https://apps.apple.com/us/app/com.geoffreypetain.voczilla.voczilla/6742488058";
-

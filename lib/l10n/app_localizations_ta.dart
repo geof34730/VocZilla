@@ -9,7 +9,7 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get app_release_note => 'முடிக்கப்பட்ட பட்டியல்களுக்கான கோப்பைகள் சேர்க்கப்பட்டன, முடிக்கப்பட்ட பட்டியல்களை மறைக்க புதிய வடிகட்டி, \"கற்றுக்கொள்ள சொல்லகராதி\" வடிப்பானுடன் ஒரு பிழை சரி செய்யப்பட்டது. மேம்படுத்தப்பட்ட TeamZilla லீடர்போர்டு காட்சி.';
+  String get app_release_note => 'தனிப்பட்ட பட்டியல் பகிர்வு சேர்க்கப்பட்டது';
 
   @override
   String get share_list_perso_alert_disponible => 'பட்டியல் பகிர்வு அம்சம் மிக விரைவில் கிடைக்கும்!';

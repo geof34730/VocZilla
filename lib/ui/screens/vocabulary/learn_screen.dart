@@ -15,8 +15,10 @@ import '../../../data/repository/vocabulaire_repository.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import 'package:flip_card/flip_card.dart';
+
 import '../../widget/form/CongratulationOrErrorData.dart';
 import '../../widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
+
 
 
 class LearnScreen extends StatefulWidget {
@@ -45,7 +47,8 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      AdMobService.instance.loadBanner(placementId: 'learn', context: context);
+      // On déclenche le chargement des bannières pour cet écran
+      AdMobService.instance.loadLearnScreenBanners(context);
     });
     _controller = AnimationController(
       duration: Duration(milliseconds: durationAnimationFlipCardStock),
@@ -60,6 +63,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
   @override
   void dispose() {
     _controller.dispose();
+    AdMobService.instance.disposeLearnScreenBanners();
     super.dispose();
   }
 
@@ -85,7 +89,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                   key: ValueKey('screenLearn'),
                     children: [
                       const AdaptiveBannerAdWidget(
-                        placementId: 'learn',
+                        placementId: 'learn_top',
                         padding: EdgeInsets.only(top: 8),
                       ),
                       RadioChoiceVocabularyLearnedOrNot(
@@ -287,7 +291,10 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                         ),
                       ],
 
-//
+                      const AdaptiveBannerAdWidget(
+                        placementId: 'learn_bottom',
+                        padding: EdgeInsets.only(top: 8),
+                      ),
                 ],
               ),
             ),

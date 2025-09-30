@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Bætt við verðlaunum fyrir lokið lista, nýtt síu til að fela lokið lista, lagað villu í síunni „Orðaforði til að læra“. Bætt birting á stigatöflu TeamZilla.",
+    "app_release_note": "Bætt við deilingu persónulegra lista",
     "share_list_perso_alert_disponible": "Aðgerðin til að deila listanum verður tiltæk mjög fljótlega!",
     "information": "Upplýsingar",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Þreytt\/ur á auglýsingum?",
     "subscription_title_6": "Sparaðu tíma, forðastu auglýsingar",
     "subscription_title_7": "Engar fleiri auglýsingar!",
-    "subscription_title_8": "Fáðu aðgang að efninu beint, án auglýsinga!"
+    "subscription_title_8": "Fáðu aðgang að efninu beint, án auglýsinga!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

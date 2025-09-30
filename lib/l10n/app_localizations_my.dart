@@ -9,7 +9,7 @@ class AppLocalizationsMy extends AppLocalizations {
   AppLocalizationsMy([String locale = 'my']) : super(locale);
 
   @override
-  String get app_release_note => 'ပြီးသွားသောစာရင်းများအတွက် ဆုတံဆိပ်များ ပေါင်းထည့်ထားသော၊ ပြီးသွားသောစာရင်းများကို ဖျောက်ရန် စစ်ထုတ်မှုအသစ်၊ \"လေ့လာရန် ဝေါဟာရ\" စစ်ထုတ်မှုဖြင့် ချွတ်ယွင်းချက်တစ်ခုကို ပြင်ဆင်ခဲ့သည်။ TeamZilla ဦးဆောင်သူစာရင်းကို မြှင့်တင်ထားသည်။';
+  String get app_release_note => 'ကိုယ်ရေးကိုယ်တာစာရင်း မျှဝေခြင်းကို ထည့်သွင်းထားသည်။';
 
   @override
   String get share_list_perso_alert_disponible => 'စာရင်းမျှဝေခြင်းအင်္ဂါရပ်ကို မကြာမီ ရနိုင်ပါမည်။';

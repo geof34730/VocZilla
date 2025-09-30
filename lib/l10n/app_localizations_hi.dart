@@ -9,7 +9,7 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get app_release_note => 'पूरी हुई सूचियों के लिए ट्रॉफ़ी जोड़ी गईं, पूरी हुई सूचियों को छिपाने के लिए नया फ़िल्टर जोड़ा गया, \"सीखने के लिए शब्दावली\" फ़िल्टर में एक बग ठीक किया गया। टीमज़िला लीडरबोर्ड डिस्प्ले में सुधार किया गया।';
+  String get app_release_note => 'व्यक्तिगत सूची साझाकरण जोड़ा गया';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझा करने की सुविधा बहुत जल्द उपलब्ध होगी!';

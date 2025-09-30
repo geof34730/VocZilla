@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get app_release_note => 'أُضيفت جوائز للقوائم المكتملة، وفلتر جديد لإخفاء القوائم المكتملة، وأُصلح خلل في فلتر \"المفردات التي يجب تعلمها\". كما تم تحسين عرض قائمة المتصدرين في TeamZilla.';
+  String get app_release_note => 'تمت إضافة مشاركة القائمة الشخصية';
 
   @override
   String get share_list_perso_alert_disponible => 'ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!';

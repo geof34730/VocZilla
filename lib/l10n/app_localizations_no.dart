@@ -9,7 +9,7 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
-  String get app_release_note => 'La til trofeer for fullførte lister, nytt filter for å skjule fullførte lister, fikset en feil med filteret «Vokabular å lære». Forbedret visning av TeamZilla-ledertavlen.';
+  String get app_release_note => 'La til deling av personlige lister';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksjonen for deling av lister vil være tilgjengelig veldig snart!';

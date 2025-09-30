@@ -9,7 +9,7 @@ class AppLocalizationsSv extends AppLocalizations {
   AppLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get app_release_note => 'Lade till troféer för färdiga listor, nytt filter för att dölja färdiga listor, fixade ett fel med filtret \"Vokabulär att lära sig\". Förbättrad visning av TeamZilla-topplistan.';
+  String get app_release_note => 'Lade till delning av personliga listor';
 
   @override
   String get share_list_perso_alert_disponible => 'Funktionen för att dela listor kommer att finnas tillgänglig mycket snart!';

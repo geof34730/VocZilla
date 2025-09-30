@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Trofeeën toegevoegd voor voltooide lijsten, nieuw filter om voltooide lijsten te verbergen, bug opgelost met het filter 'Te leren woordenschat'. Verbeterde weergave van het TeamZilla-klassement.",
+    "app_release_note": "Persoonlijke lijstdeling toegevoegd",
     "share_list_perso_alert_disponible": "De functie om lijsten te delen zal binnenkort beschikbaar zijn!",
     "information": "Informatie",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Genoeg van reclame?",
     "subscription_title_6": "Bespaar tijd, vermijd reclame",
     "subscription_title_7": "Geen advertenties meer!",
-    "subscription_title_8": "Krijg direct toegang tot de inhoud, zonder advertenties!"
+    "subscription_title_8": "Krijg direct toegang tot de inhoud, zonder advertenties!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

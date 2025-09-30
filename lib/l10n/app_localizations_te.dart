@@ -9,7 +9,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get app_release_note => 'పూర్తయిన జాబితాలకు ట్రోఫీలు జోడించబడ్డాయి, పూర్తయిన జాబితాలను దాచడానికి కొత్త ఫిల్టర్, \"నేర్చుకోవడానికి పదజాలం\" ఫిల్టర్‌తో బగ్ పరిష్కరించబడింది. TeamZilla లీడర్‌బోర్డ్ ప్రదర్శన మెరుగుపరచబడింది.';
+  String get app_release_note => 'వ్యక్తిగత జాబితా భాగస్వామ్యం జోడించబడింది';
 
   @override
   String get share_list_perso_alert_disponible => 'జాబితా భాగస్వామ్య ఫీచర్ అతి త్వరలో అందుబాటులోకి వస్తుంది!';

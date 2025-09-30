@@ -9,7 +9,7 @@ class AppLocalizationsCs extends AppLocalizations {
   AppLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get app_release_note => 'Přidány trofeje za splněné seznamy, nový filtr pro skrytí splněných seznamů, opravena chyba s filtrem „Slovní zásoba k učení“. Vylepšeno zobrazení žebříčku TeamZilla.';
+  String get app_release_note => 'Přidáno sdílení osobních seznamů';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkce sdílení seznamů bude k dispozici velmi brzy!';

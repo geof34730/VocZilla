@@ -9,7 +9,7 @@ class AppLocalizationsRo extends AppLocalizations {
   AppLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
-  String get app_release_note => 'Adăugate trofee pentru listele completate, filtru nou pentru ascunderea listelor completate, remediată o eroare cu filtrul „Vocabular de învățat”. Afișaj îmbunătățit în clasamentul TeamZilla.';
+  String get app_release_note => 'Adăugată partajarea listei personale';
 
   @override
   String get share_list_perso_alert_disponible => 'Funcția de partajare a listei va fi disponibilă foarte curând!';

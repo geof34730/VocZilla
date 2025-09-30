@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Tamamlanan listeler için kupalar eklendi, tamamlanan listeleri gizlemek için yeni bir filtre eklendi, \"Öğrenilmesi Gereken Kelime Bilgisi\" filtresindeki bir hata düzeltildi. TeamZilla liderlik tablosunun gösterimi iyileştirildi.",
+    "app_release_note": "Kişisel liste paylaşımı eklendi",
     "share_list_perso_alert_disponible": "Liste paylaşım özelliği çok yakında kullanıma sunulacak!",
     "information": "Bilgi",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Reklamlardan bıktınız mı?",
     "subscription_title_6": "Zamandan tasarruf edin, reklamlardan kaçının",
     "subscription_title_7": "Artık reklam yok!",
-    "subscription_title_8": "İçeriğe doğrudan, reklamsız erişin!"
+    "subscription_title_8": "İçeriğe doğrudan, reklamsız erişin!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

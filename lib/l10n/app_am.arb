@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ለተጠናቀቁ ዝርዝሮች የታከሉ ዋንጫዎች፣ የተጠናቀቁ ዝርዝሮችን ለመደበቅ አዲስ ማጣሪያ፣ ስህተት በ\"ለመማር የቃላት ዝርዝር\" አስተካክሏል። የተሻሻለ የTeamZilla መሪ ሰሌዳ ማሳያ።",
+    "app_release_note": "የግል ዝርዝር ማጋራት ታክሏል።",
     "share_list_perso_alert_disponible": "የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!",
     "information": "መረጃ",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "ማስታወቂያ ሰልችቶታል?",
     "subscription_title_6": "ጊዜ ይቆጥቡ፣ ማስታወቂያን ያስወግዱ",
     "subscription_title_7": "ከእንግዲህ ማስታወቂያዎች የሉም!",
-    "subscription_title_8": "ያለማስታወቂያ ይዘቱን በቀጥታ ይድረሱበት!"
+    "subscription_title_8": "ያለማስታወቂያ ይዘቱን በቀጥታ ይድረሱበት!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

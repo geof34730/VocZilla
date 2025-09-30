@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get app_release_note => 'Added trophies for completed lists, new filter to hide completed lists, fixed a bug with the \"Vocabulary to Learn\" filter. Improved TeamZilla leaderboard display.';
+  String get app_release_note => 'Added personal list sharing';
 
   @override
   String get share_list_perso_alert_disponible => 'The list sharing feature will be available very soon!';

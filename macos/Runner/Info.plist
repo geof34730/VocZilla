@@ -51,6 +51,8 @@
 	<string>VocZilla</string>
 	<key>GIDClientID</key>
 	<string>275313479574-lsdoe1bc971qptt77hdgtudperq53m8i.apps.googleusercontent.com</string>
+	<key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-1439580806237607~4108233255</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

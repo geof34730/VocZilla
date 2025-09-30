@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Menambah trofi untuk senarai lengkap, penapis baharu untuk menyembunyikan senarai lengkap, membetulkan pepijat dengan penapis \"Perbendaharaan Kata untuk Belajar\". Paparan papan pendahulu TeamZilla yang dipertingkatkan.",
+    "app_release_note": "Menambahkan perkongsian senarai peribadi",
     "share_list_perso_alert_disponible": "Ciri perkongsian senarai akan tersedia tidak lama lagi!",
     "information": "Maklumat",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Bosan dengan pengiklanan?",
     "subscription_title_6": "Jimat masa, elakkan pengiklanan",
     "subscription_title_7": "Tiada lagi iklan!",
-    "subscription_title_8": "Akses kandungan secara langsung, tanpa pengiklanan!"
+    "subscription_title_8": "Akses kandungan secara langsung, tanpa pengiklanan!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

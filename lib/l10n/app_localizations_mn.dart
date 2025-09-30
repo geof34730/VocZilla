@@ -9,7 +9,7 @@ class AppLocalizationsMn extends AppLocalizations {
   AppLocalizationsMn([String locale = 'mn']) : super(locale);
 
   @override
-  String get app_release_note => 'Дууссан жагсаалтын цом, дууссан жагсаалтыг нуух шинэ шүүлтүүр, \"Сурах үгсийн сан\" шүүлтүүрийн алдааг зассан. Сайжруулсан TeamZilla тэргүүлэгчдийн самбар.';
+  String get app_release_note => 'Хувийн жагсаалтыг хуваалцахыг нэмсэн';
 
   @override
   String get share_list_perso_alert_disponible => 'Жагсаалт хуваалцах онцлог тун удахгүй бэлэн болно!';

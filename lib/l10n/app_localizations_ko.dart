@@ -9,7 +9,7 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get app_release_note => '완료 목록에 트로피 추가, 완료 목록 숨기기 필터 추가, \"학습 어휘\" 필터 버그 수정, TeamZilla 리더보드 표시 개선.';
+  String get app_release_note => '개인 목록 공유 추가';
 
   @override
   String get share_list_perso_alert_disponible => '목록 공유 기능이 곧 출시됩니다!';

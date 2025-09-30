@@ -238,7 +238,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_release_note.
   ///
   /// In en, this message translates to:
-  /// **'Added trophies for completed lists, new filter to hide completed lists, fixed a bug with the \"Vocabulary to Learn\" filter. Improved TeamZilla leaderboard display.'**
+  /// **'Added personal list sharing'**
   String get app_release_note;
 
   /// No description provided for @share_list_perso_alert_disponible.

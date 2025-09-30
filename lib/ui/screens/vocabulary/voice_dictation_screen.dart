@@ -1,80 +1,100 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/core/utils/localization.dart';
-import 'package:voczilla/logic/cubit/localization_cubit.dart';
 import 'package:voczilla/services/admob_service.dart';
 
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../global.dart';
 import '../../widget/ads/banner_ad_widget.dart';
 import '../../widget/elements/PlaySoond.dart';
-import '../../../core/utils/languageUtils.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_bloc.dart';
 import '../../../logic/blocs/vocabulaires/vocabulaires_state.dart';
 import '../../../logic/notifiers/button_notifier.dart';
 import '../../widget/form/CustomTextZillaField.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+
 class VoiceDictationScreen extends StatefulWidget {
-  VoiceDictationScreen({required String listName});
+  const VoiceDictationScreen({super.key, required String listName});
 
   @override
-  _VoiceDictationScreenState createState() => _VoiceDictationScreenState();
+  State<VoiceDictationScreen> createState() => _VoiceDictationScreenState();
 }
 
 class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
-  late TextEditingController customeTextZillaControllerDictation = TextEditingController();
-  late ButtonNotifier buttonNotifier = ButtonNotifier();
+  late final TextEditingController customeTextZillaControllerDictation =
+      TextEditingController();
+  late final ButtonNotifier buttonNotifier = ButtonNotifier();
 
   late double screenWidth;
   int numItemVocabulary = 0;
   late bool refrechRandom = true;
-  int randomItemData =0;
+  int randomItemData = 0;
   bool buttonNext = false;
+  bool _pageIsLoading = true;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      AdMobService.instance.loadBanner(placementId: 'dictation', context: context);
-    });
+    _initializePage();
+  }
+
+  Future<void> _initializePage() async {
+    // We need to wait for the first frame to have a valid context for ad loading.
+    await WidgetsBinding.instance.endOfFrame;
+
+    if (mounted) {
+      // Load ads asynchronously to prevent UI freeze.
+      await AdMobService.instance.loadDictationScreenBanners(context);
+    }
+
+    if (mounted) {
+      setState(() {
+        _pageIsLoading = false;
+      });
+    }
   }
 
   @override
   void dispose() {
     customeTextZillaControllerDictation.dispose();
     buttonNotifier.dispose();
+    // Dispose banner ads to free up resources and prevent memory leaks.
+    AdMobService.instance.disposeDictationScreenBanners();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_pageIsLoading) {
+      return const Center(child: CircularProgressIndicator());
+    }
+
     screenWidth = MediaQuery.of(context).size.width;
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
       builder: (context, state) {
         if (state is VocabulairesLoading) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else if (state is VocabulairesLoaded) {
           final List<dynamic> data = state.data.vocabulaireList;
           if (data.isEmpty) {
             return Center(child: Text(context.loc.no_vocabulary_items_found));
           }
-          if(refrechRandom || randomItemData >= data.length){
-            refrechRandom=false;
-            Random random = new Random();
+          if (refrechRandom || randomItemData >= data.length) {
+            refrechRandom = false;
+            Random random = Random();
             randomItemData = random.nextInt(data.length);
           }
 
-      return SingleChildScrollView(
-        child: Center(
-            child: Column(
-              key: ValueKey('screenVoicedictation'),
+          return SingleChildScrollView(
+            child: Center(
+                child: Column(
+              key: const ValueKey('screenVoicedictation'),
               children: [
                 const AdaptiveBannerAdWidget(
-                    placementId: 'dictation',
-                    padding:EdgeInsets.only(top:8)
-                ),
+                    placementId: 'dictation_top',
+                    padding: EdgeInsets.only(top: 8)),
                 Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: PlaySoond(
@@ -86,7 +106,7 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                 ),
                 CustomTextZillaField(
                   ButtonNextNotifier: true,
-                  buttonNotifier:buttonNotifier,
+                  buttonNotifier: buttonNotifier,
                   ControlerField: customeTextZillaControllerDictation,
                   labelText: context.loc.dictation_label_text_field,
                   resulteField: data[randomItemData]['EN'],
@@ -97,60 +117,58 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
                   animation: buttonNotifier,
                   builder: (context, child) {
                     return (buttonNotifier.showButton || testScreenShot)
-                        ?
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 20),
-                              child: Text(
-                                "${data[randomItemData]['EN']} = ${data[randomItemData]['TRAD']} ",
-                                style: TextStyle(
-                                  fontSize: 40.0,
-                                  fontWeight: FontWeight.bold,
-                                  height:1
+                        ? Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 20),
+                                child: Text(
+                                  "${data[randomItemData]['EN']} = ${data[randomItemData]['TRAD']} ",
+                                  style: const TextStyle(
+                                      fontSize: 40.0,
+                                      fontWeight: FontWeight.bold,
+                                      height: 1),
+                                  textAlign: TextAlign.center,
                                 ),
+                              ),
+                              Text(
+                                "(${getTypeDetaiVocabulaire(typeDetail: data[randomItemData]['TYPE_DETAIL'], context: context)})",
                                 textAlign: TextAlign.center,
+                                style: const TextStyle(fontSize: 16),
                               ),
-                            ),
-                            Text(
-                              "(${getTypeDetaiVocabulaire(typeDetail:data[randomItemData]['TYPE_DETAIL'],context: context)})",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 16
+                              Padding(
+                                padding: const EdgeInsets.only(top: 20),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    next();
+                                  },
+                                  child: Text(context.loc.button_next),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 20),
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  next();
-                                },
-                                child: Text(context.loc.button_next),
-                              ),
-                            ),
-                          ],
-                        )
+                            ],
+                          )
                         : Container();
                   },
                 ),
-
-
+                const AdaptiveBannerAdWidget(
+                    placementId: 'dictation_bottom',
+                    padding: EdgeInsets.only(top: 8)),
               ],
             )),
           );
         } else if (state is VocabulairesError) {
           return Center(child: Text(context.loc.error_loading));
         } else {
-          return Center(child: Text(context.loc.unknown_error)); // fallback
+          return Center(
+              child: Text(context.loc.unknown_error)); // fallback
         }
       },
     );
   }
 
-  next() {
+  void next() {
     buttonNotifier.updateButtonState(false);
     setState(() {
-      refrechRandom=true;
+      refrechRandom = true;
       buttonNext = false;
       customeTextZillaControllerDictation.clear();
     });

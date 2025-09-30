@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Osatutako zerrendetarako garaikurrak gehitu dira, osatutako zerrendak ezkutatzeko iragazki berria, \"Ikasi beharreko hiztegia\" iragazkiaren akatsa konpondu da. TeamZilla sailkapenaren bistaratzea hobetu da.",
+    "app_release_note": "Gehitu da zerrenda pertsonalak partekatzea",
     "share_list_perso_alert_disponible": "Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!",
     "information": "Informazioa",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Publizitateaz nekatuta?",
     "subscription_title_6": "Aurreztu denbora, saihestu publizitatea",
     "subscription_title_7": "Iragarki gehiago ez!",
-    "subscription_title_8": "Sartu edukira zuzenean, iragarkirik gabe!"
+    "subscription_title_8": "Sartu edukira zuzenean, iragarkirik gabe!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

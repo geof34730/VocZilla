@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Dodani pokali za dokončane sezname, nov filter za skrivanje dokončanih seznamov, odpravljena napaka s filtrom »Besedišče za učenje«. Izboljšan prikaz lestvice najboljših v TeamZilli.",
+    "app_release_note": "Dodana skupna raba osebnega seznama",
     "share_list_perso_alert_disponible": "Funkcija deljenja seznamov bo kmalu na voljo!",
     "information": "Informacije",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Ste naveličani oglaševanja?",
     "subscription_title_6": "Prihranite čas, se izognite oglaševanju",
     "subscription_title_7": "Nič več oglasov!",
-    "subscription_title_8": "Dostopajte do vsebine neposredno, brez oglaševanja!"
+    "subscription_title_8": "Dostopajte do vsebine neposredno, brez oglaševanja!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Pridėti trofėjai už užbaigtus sąrašus, naujas filtras užbaigtiems sąrašams slėpti, ištaisyta klaida su filtru „Žodynas, kurį reikia išmokti“. Patobulintas „TeamZilla“ lyderių lentelės rodymas.",
+    "app_release_note": "Pridėtas asmeninių sąrašų bendrinimas",
     "share_list_perso_alert_disponible": "Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!",
     "information": "Informacija",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Pavargote nuo reklamos?",
     "subscription_title_6": "Sutaupykite laiko, venkite reklamos",
     "subscription_title_7": "Daugiau jokių reklamų!",
-    "subscription_title_8": "Pasiekite turinį tiesiogiai, be reklamos!"
+    "subscription_title_8": "Pasiekite turinį tiesiogiai, be reklamos!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

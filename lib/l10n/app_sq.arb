@@ -1,5 +1,5 @@
 {
-    "app_release_note": "U shtuan trofe për listat e përfunduara, u rregullua një gabim me filtrin \"Fjalor për të mësuar\". Shfaqja e tabelës së renditjes në TeamZilla u përmirësua.",
+    "app_release_note": "Shtoi ndarjen e listës personale",
     "share_list_perso_alert_disponible": "Funksioni i ndarjes së listës do të jetë i disponueshëm shumë shpejt!",
     "information": "Informacion",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Të lodhur nga reklamat?",
     "subscription_title_6": "Kurseni kohë, shmangni reklamat",
     "subscription_title_7": "Mjaft me reklama! Nuk ka më reklama!",
-    "subscription_title_8": "Qasuni përmbajtjes direkt, pa reklama!"
+    "subscription_title_8": "Qasuni përmbajtjes direkt, pa reklama!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

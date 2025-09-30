@@ -9,7 +9,7 @@ class AppLocalizationsUk extends AppLocalizations {
   AppLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get app_release_note => 'Додано трофеї за складені списки, новий фільтр для приховування складених списків, виправлено помилку з фільтром «Словник для вивчення». Покращено відображення таблиці лідерів TeamZilla.';
+  String get app_release_note => 'Додано спільний доступ до особистого списку';
 
   @override
   String get share_list_perso_alert_disponible => 'Функція спільного доступу до списку буде доступна дуже скоро!';

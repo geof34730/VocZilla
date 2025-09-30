@@ -54,6 +54,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
     customeTextZillaControllerLearnLocalLanguage.dispose();
     customeTextZillaControllerLearnEnglishLanguage.dispose();
     buttonNotifier.dispose();
+    AdMobService.instance.disposeQuizzScreenBanners();
     super.dispose();
   }
 

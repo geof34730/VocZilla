@@ -34,10 +34,16 @@ class _ListScreenState extends State<ListScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      AdMobService.instance.loadBanner(placementId: 'list', context: context);
+      // On déclenche le chargement des bannières pour cet écran
+      AdMobService.instance.loadListScreenBanners(context);
     });
   }
-
+  @override
+  void dispose() {
+    // Dispose banner ads to free up resources and prevent memory leaks.
+    AdMobService.instance.disposeListScreenBanners();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
@@ -68,7 +74,7 @@ class _ListScreenState extends State<ListScreen> {
             key: ValueKey('screenList'),
             children: [
               const AdaptiveBannerAdWidget(
-                placementId: 'list',
+                placementId: 'list_top',
                 padding: EdgeInsets.only(top: 8),
               ),
               RadioChoiceVocabularyLearnedOrNot(
@@ -176,7 +182,11 @@ class _ListScreenState extends State<ListScreen> {
                     // headingRowColor: WidgetStateProperty.all(AppColors.cardBackground),
                   ),
                 ),
-              ]
+              ],
+              const AdaptiveBannerAdWidget(
+                placementId: 'list_bottom',
+                padding: EdgeInsets.only(top: 8),
+              ),
             ],
           );
         } else if (state is VocabulairesError) {

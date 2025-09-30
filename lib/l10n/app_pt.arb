@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Adicionados troféus para listas concluídas, novo filtro para ocultar listas concluídas, corrigido um bug com o filtro \"Vocabulário para Aprender\". Melhoria na exibição do placar de líderes do TeamZilla.",
+    "app_release_note": "Adicionado compartilhamento de lista pessoal",
     "share_list_perso_alert_disponible": "O recurso de compartilhamento de listas estará disponível em breve!",
     "information": "Informação",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Cansado de publicidade?",
     "subscription_title_6": "Economize tempo, evite publicidade",
     "subscription_title_7": "Chega de anúncios!",
-    "subscription_title_8": "Acesse o conteúdo diretamente, sem publicidade!"
+    "subscription_title_8": "Acesse o conteúdo diretamente, sem publicidade!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

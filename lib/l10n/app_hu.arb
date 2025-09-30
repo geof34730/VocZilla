@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Trófeák kerültek hozzáadásra a teljesített listákhoz, új szűrő a teljesített listák elrejtéséhez, kijavítottunk egy hibát a „Tanulandó szókincs” szűrővel. Továbbfejlesztettük a TeamZilla ranglista megjelenítését.",
+    "app_release_note": "Hozzáadott személyes listamegosztás",
     "share_list_perso_alert_disponible": "A listamegosztási funkció hamarosan elérhető lesz!",
     "information": "Információ",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Elege van a reklámokból?",
     "subscription_title_6": "Időt takaríthat meg, elkerülheti a reklámokat",
     "subscription_title_7": "Nincs több hirdetés!",
-    "subscription_title_8": "Hozzáférés a tartalomhoz közvetlenül, reklámok nélkül!"
+    "subscription_title_8": "Hozzáférés a tartalomhoz közvetlenül, reklámok nélkül!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

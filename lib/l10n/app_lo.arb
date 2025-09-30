@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ເພີ່ມ trophies ສໍາລັບລາຍຊື່ສໍາເລັດ, ການກັ່ນຕອງໃຫມ່ເພື່ອຊ່ອນບັນຊີລາຍຊື່ສໍາເລັດ, ແກ້ໄຂຂໍ້ບົກພ່ອງທີ່ມີການກັ່ນຕອງ \"Vocabulary to learn\". ປັບປຸງການສະແດງກະດານຈັດອັນດັບ TeamZilla.",
+    "app_release_note": "ເພີ່ມການແບ່ງປັນລາຍຊື່ສ່ວນຕົວແລ້ວ",
     "share_list_perso_alert_disponible": "ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!",
     "information": "ຂໍ້ມູນ",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "ເບື່ອການໂຄສະນາບໍ?",
     "subscription_title_6": "ປະຫຍັດເວລາ, ຫຼີກເວັ້ນການໂຄສະນາ",
     "subscription_title_7": "ບໍ່ມີໂຄສະນາອີກຕໍ່ໄປ!",
-    "subscription_title_8": "ເຂົ້າເຖິງເນື້ອຫາໂດຍກົງ, ໂດຍບໍ່ມີການໂຄສະນາ!"
+    "subscription_title_8": "ເຂົ້າເຖິງເນື້ອຫາໂດຍກົງ, ໂດຍບໍ່ມີການໂຄສະນາ!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

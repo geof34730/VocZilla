@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Added trophies for completed lists, new filter to hide completed lists, fixed a bug with the \"Vocabulary to Learn\" filter. Improved TeamZilla leaderboard display.",
+    "app_release_note": "Added personal list sharing",
     "share_list_perso_alert_disponible": "The list sharing feature will be available very soon!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Tired of advertising?",
     "subscription_title_6": "Save time, avoid advertising",
     "subscription_title_7": "No more ads!",
-    "subscription_title_8": "Access the content directly, without advertising!"
+    "subscription_title_8": "Access the content directly, without advertising!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

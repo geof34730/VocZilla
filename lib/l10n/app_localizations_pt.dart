@@ -9,7 +9,7 @@ class AppLocalizationsPt extends AppLocalizations {
   AppLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
-  String get app_release_note => 'Adicionados troféus para listas concluídas, novo filtro para ocultar listas concluídas, corrigido um bug com o filtro \"Vocabulário para Aprender\". Melhoria na exibição do placar de líderes do TeamZilla.';
+  String get app_release_note => 'Adicionado compartilhamento de lista pessoal';
 
   @override
   String get share_list_perso_alert_disponible => 'O recurso de compartilhamento de listas estará disponível em breve!';

@@ -64,8 +64,6 @@ class _CardHomeState extends State<CardHome> {
   @override
   Widget build(BuildContext context) {
     String local = Localizations.localeOf(context).languageCode;
-
-
         return LayoutBuilder(builder: (context, constraints) {
           double widthWidget = constraints.maxWidth;
 

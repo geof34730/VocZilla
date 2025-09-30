@@ -9,7 +9,7 @@ class AppLocalizationsKa extends AppLocalizations {
   AppLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get app_release_note => 'დაემატა ტროფეები დასრულებული სიებისთვის, ახალი ფილტრი დასრულებული სიების დასამალად, გამოსწორდა შეცდომა „სასწავლო ლექსიკის“ ფილტრში. გაუმჯობესდა TeamZilla-ს ლიდერბორდის ჩვენება.';
+  String get app_release_note => 'დაემატა პირადი სიის გაზიარება';
 
   @override
   String get share_list_perso_alert_disponible => 'სიის გაზიარების ფუნქცია ძალიან მალე იქნება ხელმისაწვდომი!';

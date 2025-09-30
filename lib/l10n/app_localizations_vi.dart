@@ -9,7 +9,7 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get app_release_note => 'Đã thêm danh hiệu cho các danh sách đã hoàn thành, bộ lọc mới để ẩn các danh sách đã hoàn thành, sửa lỗi với bộ lọc \"Từ vựng cần học\". Cải thiện hiển thị bảng xếp hạng TeamZilla.';
+  String get app_release_note => 'Đã thêm chia sẻ danh sách cá nhân';
 
   @override
   String get share_list_perso_alert_disponible => 'Tính năng chia sẻ danh sách sẽ sớm có mặt!';

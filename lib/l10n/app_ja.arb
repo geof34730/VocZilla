@@ -1,5 +1,5 @@
 {
-    "app_release_note": "完了リストにトロフィーを追加し、完了リストを非表示にする新しいフィルターを追加し、「学習すべき語彙」フィルターのバグを修正しました。TeamZillaのリーダーボード表示を改善しました。",
+    "app_release_note": "個人リストの共有を追加しました",
     "share_list_perso_alert_disponible": "リスト共有機能はまもなく利用可能になります。",
     "information": "情報",
     "app_title": "ヴォックジラ",
@@ -245,5 +245,11 @@
     "subscription_title_5": "広告に飽きていませんか?",
     "subscription_title_6": "時間を節約し、広告を避ける",
     "subscription_title_7": "もう広告はありません!",
-    "subscription_title_8": "広告なしでコンテンツに直接アクセスしましょう！"
+    "subscription_title_8": "広告なしでコンテンツに直接アクセスしましょう！",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

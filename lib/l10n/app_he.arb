@@ -1,5 +1,5 @@
 {
-    "app_release_note": "נוספו גביעים לרשימות שהושלמו, מסנן חדש להסתרת רשימות שהושלמו, תוקן באג במסנן \"אוצר מילים ללמידה\". שיפור תצוגת טבלת המובילים של TeamZilla.",
+    "app_release_note": "נוסף שיתוף רשימות אישיות",
     "share_list_perso_alert_disponible": "תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!",
     "information": "מֵידָע",
     "app_title": "ווקסילה",
@@ -245,5 +245,11 @@
     "subscription_title_5": "נמאס לכם מפרסום?",
     "subscription_title_6": "חסכו זמן, הימנעו מפרסום",
     "subscription_title_7": "אין יותר פרסומות!",
-    "subscription_title_8": "גישה ישירה לתוכן, ללא פרסומות!"
+    "subscription_title_8": "גישה ישירה לתוכן, ללא פרסומות!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

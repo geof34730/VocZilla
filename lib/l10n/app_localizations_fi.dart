@@ -9,7 +9,7 @@ class AppLocalizationsFi extends AppLocalizations {
   AppLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get app_release_note => 'Lisätty palkinnot valmiille listoille, uusi suodatin valmiiden listojen piilottamiseen, korjattu \"Opittava sanasto\" -suodattimen virhe. Parannettu TeamZillan tulostaulukon näyttöä.';
+  String get app_release_note => 'Lisätty henkilökohtaisen listan jakaminen';
 
   @override
   String get share_list_perso_alert_disponible => 'Listan jakamisominaisuus on saatavilla pian!';

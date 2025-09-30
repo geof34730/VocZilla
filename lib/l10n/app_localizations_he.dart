@@ -9,7 +9,7 @@ class AppLocalizationsHe extends AppLocalizations {
   AppLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get app_release_note => 'נוספו גביעים לרשימות שהושלמו, מסנן חדש להסתרת רשימות שהושלמו, תוקן באג במסנן \"אוצר מילים ללמידה\". שיפור תצוגת טבלת המובילים של TeamZilla.';
+  String get app_release_note => 'נוסף שיתוף רשימות אישיות';
 
   @override
   String get share_list_perso_alert_disponible => 'תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!';

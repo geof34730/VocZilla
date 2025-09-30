@@ -15,8 +15,7 @@ import '../../core/utils/logger.dart';
 import '../../core/utils/ui.dart';
 import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
-import '../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart'
-    hide VocabulaireUserUpdate;
+import '../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart' hide VocabulaireUserUpdate;
 import '../widget/elements/DialogHelper.dart';
 import '../widget/form/swichListFinished.dart';
 import '../widget/home/CarHomeListDefinied.dart';
@@ -53,7 +52,10 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
   }
-
+  void dispose() {
+    AdMobService.instance.disposeHomeScreenBanners();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     final codelang = Localizations.localeOf(context).languageCode;
@@ -138,23 +140,6 @@ class _HomeScreenState extends State<HomeScreen> {
               titleWidget(
                   text: context.loc.home_title_classement, codelang: codelang),
               const HomeClassement(),
-              const SizedBox(height: 20),
-              /*Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    AdMobService.instance.showInterstitialAd();
-                  },
-                  child: const Text('Show Interstitial Ad'),
-                ),
-              ),*/
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    DialogHelper().showSubscriptionBanner(context: context);
-                  },
-                  child: const Text('Show dialogue no Ad'),
-                ),
-              ),
               const SizedBox(height: 20),
             ],
           ),

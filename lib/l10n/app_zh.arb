@@ -1,5 +1,5 @@
 {
-    "app_release_note": "新增已完成列表的奖杯，新增隐藏已完成列表的过滤器，并修复“待学习词汇”过滤器的错误。改进了 TeamZilla 排行榜的显示。",
+    "app_release_note": "新增个人列表分享",
     "share_list_perso_alert_disponible": "列表共享功能即将推出！",
     "information": "信息",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "厌倦了广告？",
     "subscription_title_6": "节省时间，避免广告",
     "subscription_title_7": "沒有廣告！",
-    "subscription_title_8": "直接访问内容，无广告！"
+    "subscription_title_8": "直接访问内容，无广告！",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Dodani su trofeji za dovršene popise, novi filter za skrivanje dovršenih popisa, ispravljena je greška s filterom \"Vokabular za učenje\". Poboljšan prikaz TeamZilla ljestvice najboljih igrača.",
+    "app_release_note": "Dodano dijeljenje osobnih popisa",
     "share_list_perso_alert_disponible": "Funkcija dijeljenja popisa bit će dostupna vrlo brzo!",
     "information": "Informacija",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Umorni ste od oglašavanja?",
     "subscription_title_6": "Uštedite vrijeme, izbjegnite oglašavanje",
     "subscription_title_7": "Nema više reklama!",
-    "subscription_title_8": "Pristupite sadržaju izravno, bez reklama!"
+    "subscription_title_8": "Pristupite sadržaju izravno, bez reklama!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

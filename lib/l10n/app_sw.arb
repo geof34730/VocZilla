@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Vikombe vilivyoongezwa kwa orodha zilizokamilika, kichujio kipya cha kuficha orodha zilizokamilishwa, kimerekebisha hitilafu kwa kichujio cha \"Msamiati wa Kujifunza\". Onyesho lililoboreshwa la ubao wa wanaoongoza wa TeamZilla.",
+    "app_release_note": "Aliongeza kushiriki orodha ya kibinafsi",
     "share_list_perso_alert_disponible": "Kipengele cha kushiriki orodha kitapatikana hivi karibuni!",
     "information": "Habari",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Uchovu wa matangazo?",
     "subscription_title_6": "Okoa wakati, epuka matangazo",
     "subscription_title_7": "Hakuna matangazo zaidi!",
-    "subscription_title_8": "Fikia yaliyomo moja kwa moja, bila matangazo!"
+    "subscription_title_8": "Fikia yaliyomo moja kwa moja, bila matangazo!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

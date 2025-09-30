@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Tamamlanmış siyahılar üçün kuboklar əlavə edildi, tamamlanmış siyahıları gizlətmək üçün yeni filtr, \"Öyrənmək üçün lüğət\" filtri ilə səhvi düzəltdi. Təkmilləşdirilmiş TeamZilla liderlər lövhəsi ekranı.",
+    "app_release_note": "Şəxsi siyahı paylaşımı əlavə edildi",
     "share_list_perso_alert_disponible": "Siyahı paylaşma xüsusiyyəti çox tezliklə mövcud olacaq!",
     "information": "Məlumat",
     "app_title": "VocZilla",
@@ -245,5 +245,11 @@
     "subscription_title_5": "Reklamdan bezdiniz?",
     "subscription_title_6": "Vaxtınıza qənaət edin, reklamdan qaçın",
     "subscription_title_7": "Daha reklam yoxdur!",
-    "subscription_title_8": "Reklam olmadan birbaşa məzmuna daxil olun!"
+    "subscription_title_8": "Reklam olmadan birbaşa məzmuna daxil olun!",
+    "@app_release_note": {
+        "autoTranslated": true,
+        "forced": true,
+        "from": "fr",
+        "at": "2025-09-30T14:03:07+00:00"
+    }
 }

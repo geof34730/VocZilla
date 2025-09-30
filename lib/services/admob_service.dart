@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:voczilla/config/ad_units.dart';
 import 'package:voczilla/core/utils/logger.dart';
 
 class AdMobService {
@@ -23,15 +23,6 @@ class AdMobService {
   // --- Interstitial ---
   InterstitialAd? _interstitialAd;
   int _interstitialRetry = 0;
-
-  // --- Ad Unit IDs ---
-  static const String _androidBannerAdUnitId = 'ca-app-pub-1439580806237607/5504789998';
-  static const String _androidInterstitialAdUnitId = 'ca-app-pub-1439580806237607/8818167281';
-  static const String _iosBannerAdUnitId = 'ca-app-pub-1439580806237607/1482069910';
-  static const String _iosInterstitialAdUnitId = 'ca-app-pub-1439580806237607/7570526612';
-
-  static String get bannerAdUnitId => Platform.isAndroid ? _androidBannerAdUnitId : _iosBannerAdUnitId;
-  static String get interstitialAdUnitId => Platform.isAndroid ? _androidInterstitialAdUnitId : _iosInterstitialAdUnitId;
 
   // ------------------------
   // Public API
@@ -82,7 +73,13 @@ class AdMobService {
     if (!_adsEnabled) return;
     await initialize(); // Ensure initialized
     if (!_initialized) return;
-    
+
+    final adUnitId = bannerAdUnitIds[placementId];
+    if (adUnitId == null) {
+      Logger.Red.log('No ad unit ID for placement: $placementId');
+      return;
+    }
+
     if (_bannerLoadingState[placementId] == true) return;
 
     final widthPx = MediaQuery.of(context).size.width;
@@ -110,7 +107,7 @@ class AdMobService {
     getBannerNotifier(placementId).value = false;
 
     final ad = BannerAd(
-      adUnitId: bannerAdUnitId,
+      adUnitId: adUnitId,
       request: const AdRequest(),
       size: size,
       listener: BannerAdListener(
@@ -130,25 +127,101 @@ class AdMobService {
     );
     await ad.load();
   }
-
+  int _timerSecondesBannier = 1;
   /// Loads the two banners for the home screen sequentially to avoid duplicates.
   Future<void> loadHomeScreenBanners(BuildContext context) async {
     await initialize();
     loadBanner(placementId: 'home_top', context: context);
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed( Duration(seconds: _timerSecondesBannier), () {
       if (!_adsEnabled) return;
       loadBanner(placementId: 'home_bottom', context: context);
     });
   }
 
-  /// Loads the two banners for the quizz screen sequentially.
+  Future<void> loadDictationScreenBanners(BuildContext context) async {
+    await initialize();
+    loadBanner(placementId: 'dictation_top', context: context);
+    Future.delayed( Duration(seconds: _timerSecondesBannier), () {
+      if (!_adsEnabled) return;
+      loadBanner(placementId: 'dictation_bottom', context: context);
+    });
+  }
+
+  Future<void> loadListScreenBanners(BuildContext context) async {
+    await initialize();
+    loadBanner(placementId: 'list_top', context: context);
+    Future.delayed( Duration(seconds: _timerSecondesBannier), () {
+      if (!_adsEnabled) return;
+      loadBanner(placementId: 'list_bottom', context: context);
+    });
+  }
+  Future<void> loadPrononciationnScreenBanners(BuildContext context) async {
+    await initialize();
+    loadBanner(placementId: 'prononciation_top', context: context);
+    Future.delayed( Duration(seconds: _timerSecondesBannier), () {
+      if (!_adsEnabled) return;
+      loadBanner(placementId: 'prononciation_bottom', context: context);
+    });
+  }
+
+  Future<void> loadLearnScreenBanners(BuildContext context) async {
+    await initialize();
+    loadBanner(placementId: 'learn_top', context: context);
+    Future.delayed( Duration(seconds: _timerSecondesBannier), () {
+      if (!_adsEnabled) return;
+      loadBanner(placementId: 'learn_bottom', context: context);
+    });
+  }
+
+
   Future<void> loadQuizzScreenBanners(BuildContext context) async {
     await initialize();
     loadBanner(placementId: 'quizz_top', context: context);
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed( Duration(seconds: _timerSecondesBannier), () {
       if (!_adsEnabled) return;
       loadBanner(placementId: 'quizz_bottom', context: context);
     });
+  }
+
+  void disposeBanner(String placementId) {
+    _banners[placementId]?.dispose();
+    _banners.remove(placementId);
+    if (_bannerLoadNotifiers.containsKey(placementId)) {
+      _bannerLoadNotifiers[placementId]!.dispose();
+      _bannerLoadNotifiers.remove(placementId);
+    }
+    _bannerLoadingState.remove(placementId);
+    Logger.Green.log('[Ads] Disposed banner for "$placementId"');
+  }
+
+  void disposeDictationScreenBanners() {
+    disposeBanner('dictation_top');
+    disposeBanner('dictation_bottom');
+  }
+
+  void disposePronunciationScreenBanners() {
+    disposeBanner('prononciation_top');
+    disposeBanner('prononciation_bottom');
+  }
+
+  void disposeHomeScreenBanners() {
+    disposeBanner('home_top');
+    disposeBanner('home_bottom');
+  }
+
+  void disposeListScreenBanners() {
+    disposeBanner('list_top');
+    disposeBanner('list_bottom');
+  }
+
+  void disposeLearnScreenBanners() {
+    disposeBanner('learn_top');
+    disposeBanner('learn_bottom');
+  }
+
+  void disposeQuizzScreenBanners() {
+    disposeBanner('quizz_top');
+    disposeBanner('quizz_bottom');
   }
 
   // ------------------------

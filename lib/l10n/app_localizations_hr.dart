@@ -9,7 +9,7 @@ class AppLocalizationsHr extends AppLocalizations {
   AppLocalizationsHr([String locale = 'hr']) : super(locale);
 
   @override
-  String get app_release_note => 'Dodani su trofeji za dovršene popise, novi filter za skrivanje dovršenih popisa, ispravljena je greška s filterom \"Vokabular za učenje\". Poboljšan prikaz TeamZilla ljestvice najboljih igrača.';
+  String get app_release_note => 'Dodano dijeljenje osobnih popisa';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija dijeljenja popisa bit će dostupna vrlo brzo!';
