@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "मेरा व्यक्तिगत सूचीहरू",
     "drawer_defined_list": "हाम्रा पूर्वनिर्धारित सूचीहरू",
     "drawer_themes_list": "हाम्रा विषयवस्तुहरूको सूची",
-    "subscription_benefit_no_pub": "अनुप्रयोगमा कुनै विज्ञापन देखिँदैन"
+    "subscription_benefit_zero_pub": "शून्य विज्ञापन",
+    "subscription_navigation_more_speed": "छिटो नेभिगेसन",
+    "subscription_max_concentration": "अधिकतम एकाग्रता",
+    "subscription_description1": "विज्ञापनहरूले हामीलाई एप निःशुल्क राख्न मद्दत गर्छन्।",
+    "subscription_description2": "तर यदि तपाईं सहज, अवरोध-रहित अनुभव चाहनुहुन्छ भने, प्रिमियममा स्तरवृद्धि गर्नुहोस्।",
+    "subscription_go_premium": "पासर प्रिमियम",
+    "subscription_go_with_pub": "विज्ञापन जारी राख्नुहोस्",
+    "subscription_title_1": "विज्ञापनहरू? बिर्सनुहोस्!",
+    "subscription_title_2": "ध्यान केन्द्रित राख्नुहोस्, विज्ञापनहरू बिर्सनुहोस्",
+    "subscription_title_3": "के तपाईंलाई पनि विज्ञापनको झन्झट छ?",
+    "subscription_title_4": "विज्ञापनहरू बन्द गर्नुहोस्!",
+    "subscription_title_5": "विज्ञापनबाट थकित हुनुहुन्छ?",
+    "subscription_title_6": "समय बचत गर्नुहोस्, विज्ञापनबाट बच्नुहोस्",
+    "subscription_title_7": "अब कुनै विज्ञापन छैन!",
+    "subscription_title_8": "विज्ञापन बिना नै सामग्री सिधै पहुँच गर्नुहोस्!"
 }

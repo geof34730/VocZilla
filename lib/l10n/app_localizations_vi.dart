@@ -705,5 +705,47 @@ class AppLocalizationsVi extends AppLocalizations {
   String get drawer_themes_list => 'Danh sách chủ đề của chúng tôi';
 
   @override
-  String get subscription_benefit_no_pub => 'Không có quảng cáo nào hiển thị trên ứng dụng';
+  String get subscription_benefit_zero_pub => 'Không có quảng cáo';
+
+  @override
+  String get subscription_navigation_more_speed => 'Điều hướng nhanh hơn';
+
+  @override
+  String get subscription_max_concentration => 'Nồng độ tối đa';
+
+  @override
+  String get subscription_description1 => 'Quảng cáo giúp chúng tôi duy trì ứng dụng miễn phí.';
+
+  @override
+  String get subscription_description2 => 'Nhưng nếu bạn muốn có trải nghiệm mượt mà, không bị phân tâm, hãy nâng cấp lên gói Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Tiếp tục với quảng cáo';
+
+  @override
+  String get subscription_title_1 => 'Quảng cáo ư? Quên chúng đi!';
+
+  @override
+  String get subscription_title_2 => 'Hãy tập trung, quên quảng cáo đi';
+
+  @override
+  String get subscription_title_3 => 'Bạn có thấy phiền vì quảng cáo không?';
+
+  @override
+  String get subscription_title_4 => 'Dừng quảng cáo lại!';
+
+  @override
+  String get subscription_title_5 => 'Bạn có thấy chán quảng cáo không?';
+
+  @override
+  String get subscription_title_6 => 'Tiết kiệm thời gian, tránh quảng cáo';
+
+  @override
+  String get subscription_title_7 => 'Không còn quảng cáo nữa!';
+
+  @override
+  String get subscription_title_8 => 'Truy cập nội dung trực tiếp, không có quảng cáo!';
 }

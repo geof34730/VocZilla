@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Omat henkilökohtaiset listani",
     "drawer_defined_list": "Valmiiksi määritetyt listamme",
     "drawer_themes_list": "Teemaluettelomme",
-    "subscription_benefit_no_pub": "Sovelluksessa ei näy mainoksia"
+    "subscription_benefit_zero_pub": "Ei mainontaa",
+    "subscription_navigation_more_speed": "Nopeampi navigointi",
+    "subscription_max_concentration": "Maksimaalinen pitoisuus",
+    "subscription_description1": "Mainokset auttavat meitä pitämään sovelluksen ilmaisena.",
+    "subscription_description2": "Mutta jos haluat sujuvan ja häiriöttömän käyttökokemuksen, päivitä Premium-tilaukseen.",
+    "subscription_go_premium": "Passer-palkkio",
+    "subscription_go_with_pub": "Jatka mainoksen kanssa",
+    "subscription_title_1": "Mainokset? Unohda ne!",
+    "subscription_title_2": "Pysy keskittyneenä, unohda mainokset",
+    "subscription_title_3": "Häiritseekö sinuakin mainonta?",
+    "subscription_title_4": "Lopettakaa mainokset!",
+    "subscription_title_5": "Kyllästynyt mainontaan?",
+    "subscription_title_6": "Säästä aikaa, vältä mainontaa",
+    "subscription_title_7": "Ei enää mainoksia!",
+    "subscription_title_8": "Käytä sisältöä suoraan, ilman mainoksia!"
 }

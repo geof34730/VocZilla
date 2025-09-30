@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Моите лични листи",
     "drawer_defined_list": "Нашите предефинирани листи",
     "drawer_themes_list": "Нашите листи на теми",
-    "subscription_benefit_no_pub": "Не се гледа рекламирање на апликацијата"
+    "subscription_benefit_zero_pub": "Нула рекламирање",
+    "subscription_navigation_more_speed": "Побрза навигација",
+    "subscription_max_concentration": "Максимална концентрација",
+    "subscription_description1": "Рекламите ни помагаат да ја одржиме апликацијата бесплатна.",
+    "subscription_description2": "Но, ако сакате непречено искуство без одвлекување на вниманието, надградете на Premium.",
+    "subscription_go_premium": "Премиум за пасење",
+    "subscription_go_with_pub": "Продолжи со рекламата",
+    "subscription_title_1": "Реклами? Заборавете ги!",
+    "subscription_title_2": "Останете фокусирани, заборавете на рекламите",
+    "subscription_title_3": "Дали и тебе те загрижува рекламирањето?",
+    "subscription_title_4": "Престанете со рекламите!",
+    "subscription_title_5": "Уморни сте од рекламирање?",
+    "subscription_title_6": "Заштедете време, избегнувајте рекламирање",
+    "subscription_title_7": "Нема повеќе реклами!",
+    "subscription_title_8": "Пристапете до содржината директно, без рекламирање!"
 }

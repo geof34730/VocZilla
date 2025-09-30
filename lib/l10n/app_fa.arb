@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "فهرست‌های شخصی من",
     "drawer_defined_list": "لیست‌های از پیش تعریف‌شده‌ی ما",
     "drawer_themes_list": "لیست‌های تم‌های ما",
-    "subscription_benefit_no_pub": "هیچ تبلیغی در برنامه قابل مشاهده نیست"
+    "subscription_benefit_zero_pub": "تبلیغات صفر",
+    "subscription_navigation_more_speed": "ناوبری سریع‌تر",
+    "subscription_max_concentration": "حداکثر غلظت",
+    "subscription_description1": "تبلیغات به ما کمک می‌کنند تا برنامه را رایگان نگه داریم.",
+    "subscription_description2": "اما اگر می‌خواهید یک تجربه روان و بدون حواس‌پرتی داشته باشید، به نسخه پریمیوم ارتقا دهید.",
+    "subscription_go_premium": "پاسور پریمیوم",
+    "subscription_go_with_pub": "ادامه تبلیغ",
+    "subscription_title_1": "تبلیغات؟ آنها را فراموش کنید!",
+    "subscription_title_2": "متمرکز بمانید، تبلیغات را فراموش کنید",
+    "subscription_title_3": "آیا شما هم از تبلیغات کلافه شده‌اید؟",
+    "subscription_title_4": "تبلیغات را متوقف کنید!",
+    "subscription_title_5": "از تبلیغات خسته شدی؟",
+    "subscription_title_6": "صرفه‌جویی در زمان، جلوگیری از تبلیغات",
+    "subscription_title_7": "دیگر تبلیغات ممنوع!",
+    "subscription_title_8": "مستقیماً و بدون تبلیغات به محتوا دسترسی پیدا کنید!"
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/services/admob_service.dart';
 import 'package:voczilla/ui/theme/appColors.dart';
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../widget/ads/banner_ad_widget.dart';
@@ -43,6 +44,9 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      AdMobService.instance.loadBanner(placementId: 'learn', context: context);
+    });
     _controller = AnimationController(
       duration: Duration(milliseconds: durationAnimationFlipCardStock),
       vsync: this,
@@ -81,7 +85,7 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
                   key: ValueKey('screenLearn'),
                     children: [
                       const AdaptiveBannerAdWidget(
-                        key: ValueKey('learn_banner'),
+                        placementId: 'learn',
                         padding: EdgeInsets.only(top: 8),
                       ),
                       RadioChoiceVocabularyLearnedOrNot(

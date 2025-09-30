@@ -15,6 +15,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 // 🔥 Firebase
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:voczilla/services/admob_service.dart';
 
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../global.dart';
@@ -103,6 +104,7 @@ class _PronunciationScreenState extends State<PronunciationScreen>
 
     // Bootstrap: permission + assets + init sherpa
     WidgetsBinding.instance.addPostFrameCallback((_) async {
+      AdMobService.instance.loadBanner(placementId: 'pronunciation', context: context);
       await _bootstrapAsr();
     });
   }
@@ -527,8 +529,8 @@ class _PronunciationScreenState extends State<PronunciationScreen>
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              AdaptiveBannerAdWidget(
-                  key: ValueKey('prononcitation_banner'),
+              const AdaptiveBannerAdWidget(
+                  placementId: 'pronunciation',
                   padding:EdgeInsets.only(top:8)
               ),
               const SizedBox(height: 20, width: double.infinity),

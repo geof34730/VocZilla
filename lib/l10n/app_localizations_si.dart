@@ -705,5 +705,47 @@ class AppLocalizationsSi extends AppLocalizations {
   String get drawer_themes_list => 'අපගේ තේමා ලැයිස්තු';
 
   @override
-  String get subscription_benefit_no_pub => 'යෙදුමේ කිසිදු වෙළඳ දැන්වීමක් නොපෙනේ.';
+  String get subscription_benefit_zero_pub => 'ශුන්‍ය වෙළඳ දැන්වීම්';
+
+  @override
+  String get subscription_navigation_more_speed => 'වේගවත් සංචාලනය';
+
+  @override
+  String get subscription_max_concentration => 'උපරිම සාන්ද්‍රණය';
+
+  @override
+  String get subscription_description1 => 'යෙදුම නොමිලේ තබා ගැනීමට දැන්වීම් අපට උපකාරී වේ.';
+
+  @override
+  String get subscription_description2 => 'නමුත් ඔබට සුමට, අවධානය වෙනතකට යොමු නොවන අත්දැකීමක් අවශ්‍ය නම්, Premium වෙත උත්ශ්‍රේණි කරන්න.';
+
+  @override
+  String get subscription_go_premium => 'සමත් වාරිකය';
+
+  @override
+  String get subscription_go_with_pub => 'දැන්වීම සමඟ ඉදිරියට යන්න';
+
+  @override
+  String get subscription_title_1 => 'දැන්වීම්? ඒවා අමතක කරන්න!';
+
+  @override
+  String get subscription_title_2 => 'අවධානයෙන් සිටින්න, දැන්වීම් අමතක කරන්න';
+
+  @override
+  String get subscription_title_3 => 'ඔබත් වෙළඳ දැන්වීම් ගැන කරදර වෙනවාද?';
+
+  @override
+  String get subscription_title_4 => 'දැන්වීම් නවත්වන්න!';
+
+  @override
+  String get subscription_title_5 => 'වෙළඳ දැන්වීම් එපා වෙලාද?';
+
+  @override
+  String get subscription_title_6 => 'කාලය ඉතිරි කර ගන්න, වෙළඳ දැන්වීම් වලින් වළකින්න';
+
+  @override
+  String get subscription_title_7 => 'තවත් දැන්වීම් නැත!';
+
+  @override
+  String get subscription_title_8 => 'වෙළඳ දැන්වීම් නොමැතිව අන්තර්ගතයට කෙලින්ම ප්‍රවේශ වන්න!';
 }

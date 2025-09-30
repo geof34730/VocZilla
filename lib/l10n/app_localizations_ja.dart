@@ -705,5 +705,47 @@ class AppLocalizationsJa extends AppLocalizations {
   String get drawer_themes_list => 'テーマリスト';
 
   @override
-  String get subscription_benefit_no_pub => 'アプリケーションには広告は表示されません';
+  String get subscription_benefit_zero_pub => '広告ゼロ';
+
+  @override
+  String get subscription_navigation_more_speed => 'より高速なナビゲーション';
+
+  @override
+  String get subscription_max_concentration => '濃度最大値';
+
+  @override
+  String get subscription_description1 => '広告のおかげでアプリは無料で提供されています。';
+
+  @override
+  String get subscription_description2 => 'ただし、スムーズで邪魔されない体験をお望みの場合は、Premium にアップグレードしてください。';
+
+  @override
+  String get subscription_go_premium => 'パッサープレミアム';
+
+  @override
+  String get subscription_go_with_pub => '広告を続ける';
+
+  @override
+  String get subscription_title_1 => '広告？忘れてください！';
+
+  @override
+  String get subscription_title_2 => '集中して広告を忘れよう';
+
+  @override
+  String get subscription_title_3 => 'あなたも広告に悩まされていませんか？';
+
+  @override
+  String get subscription_title_4 => '広告を止めてください!';
+
+  @override
+  String get subscription_title_5 => '広告に飽きていませんか?';
+
+  @override
+  String get subscription_title_6 => '時間を節約し、広告を避ける';
+
+  @override
+  String get subscription_title_7 => 'もう広告はありません!';
+
+  @override
+  String get subscription_title_8 => '広告なしでコンテンツに直接アクセスしましょう！';
 }

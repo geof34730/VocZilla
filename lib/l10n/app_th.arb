@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "รายการส่วนตัวของฉัน",
     "drawer_defined_list": "รายการที่เรากำหนดไว้ล่วงหน้า",
     "drawer_themes_list": "รายการหัวข้อของเรา",
-    "subscription_benefit_no_pub": "ไม่มีโฆษณาปรากฏบนแอปพลิเคชัน"
+    "subscription_benefit_zero_pub": "การโฆษณาเป็นศูนย์",
+    "subscription_navigation_more_speed": "การนำทางที่รวดเร็วยิ่งขึ้น",
+    "subscription_max_concentration": "ความเข้มข้นสูงสุด",
+    "subscription_description1": "โฆษณาช่วยให้เราสามารถรักษาแอปให้ฟรีได้",
+    "subscription_description2": "แต่ถ้าคุณต้องการประสบการณ์ที่ราบรื่นและไม่มีสิ่งรบกวน โปรดอัปเกรดเป็นพรีเมียม",
+    "subscription_go_premium": "พาสเซอร์ พรีเมียม",
+    "subscription_go_with_pub": "ดำเนินการต่อด้วยโฆษณา",
+    "subscription_title_1": "โฆษณาเหรอ? ลืมมันไปได้เลย!",
+    "subscription_title_2": "จดจ่ออยู่กับสิ่งที่ทำ ลืมโฆษณาไปได้เลย",
+    "subscription_title_3": "คุณก็กังวลเรื่องโฆษณาเหมือนกันหรือเปล่า?",
+    "subscription_title_4": "หยุดโฆษณา!",
+    "subscription_title_5": "เบื่อกับการโฆษณาแล้วหรือยัง?",
+    "subscription_title_6": "ประหยัดเวลา หลีกเลี่ยงการโฆษณา",
+    "subscription_title_7": "ไม่มีโฆษณาอีกต่อไป!",
+    "subscription_title_8": "เข้าถึงเนื้อหาได้โดยตรงโดยไม่ต้องโฆษณา!"
 }

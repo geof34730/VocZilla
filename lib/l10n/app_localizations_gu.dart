@@ -705,5 +705,47 @@ class AppLocalizationsGu extends AppLocalizations {
   String get drawer_themes_list => 'અમારી થીમ્સની યાદીઓ';
 
   @override
-  String get subscription_benefit_no_pub => 'એપ્લિકેશન પર કોઈ જાહેરાત દેખાતી નથી';
+  String get subscription_benefit_zero_pub => 'શૂન્ય જાહેરાત';
+
+  @override
+  String get subscription_navigation_more_speed => 'ઝડપી નેવિગેશન';
+
+  @override
+  String get subscription_max_concentration => 'મહત્તમ સાંદ્રતા';
+
+  @override
+  String get subscription_description1 => 'જાહેરાતો અમને એપ્લિકેશનને મફત રાખવામાં મદદ કરે છે.';
+
+  @override
+  String get subscription_description2 => 'પરંતુ જો તમને સરળ, વિક્ષેપ-મુક્ત અનુભવ જોઈતો હોય, તો પ્રીમિયમ પર અપગ્રેડ કરો.';
+
+  @override
+  String get subscription_go_premium => 'પાસર પ્રીમિયમ';
+
+  @override
+  String get subscription_go_with_pub => 'જાહેરાત સાથે ચાલુ રાખો';
+
+  @override
+  String get subscription_title_1 => 'જાહેરાતો? ભૂલી જાઓ!';
+
+  @override
+  String get subscription_title_2 => 'ધ્યાન કેન્દ્રિત રાખો, જાહેરાતો ભૂલી જાઓ';
+
+  @override
+  String get subscription_title_3 => 'શું તમને પણ જાહેરાતોથી પરેશાની થાય છે?';
+
+  @override
+  String get subscription_title_4 => 'જાહેરાતો બંધ કરો!';
+
+  @override
+  String get subscription_title_5 => 'જાહેરાતોથી કંટાળી ગયા છો?';
+
+  @override
+  String get subscription_title_6 => 'સમય બચાવો, જાહેરાત ટાળો';
+
+  @override
+  String get subscription_title_7 => 'હવે કોઈ જાહેરાતો નહીં!';
+
+  @override
+  String get subscription_title_8 => 'જાહેરાત વિના, સીધી સામગ્રીને ઍક્સેસ કરો!';
 }

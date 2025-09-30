@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_confetti/flutter_confetti.dart';
 import 'package:voczilla/core/utils/localization.dart';
+import 'package:voczilla/services/admob_service.dart';
 import 'package:voczilla/ui/widget/form/RadioChoiceVocabularyLearnedOrNot.dart';
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../core/utils/languageUtils.dart';
@@ -40,6 +41,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      AdMobService.instance.loadQuizzScreenBanners(context);
+    });
     customeTextZillaControllerLearnLocalLanguage = TextEditingController();
     customeTextZillaControllerLearnEnglishLanguage = TextEditingController();
     buttonNotifier = ButtonNotifier();
@@ -115,8 +119,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         title: context.loc.tester_title,
                         showTrophy:false
                       ),
-                    AdaptiveBannerAdWidget(
-                        key: ValueKey('quizz_top_banner'),
+                    const AdaptiveBannerAdWidget(
+                        placementId: 'quizz_top',
                         padding:EdgeInsets.only(top:8)
                     ),
                     Text(context.loc.quizz_progression_title,
@@ -207,8 +211,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                         : Container();
                                   },
                                 ),
-                                AdaptiveBannerAdWidget(
-                                    key: ValueKey('quizz_bottom_banner'),
+                                const AdaptiveBannerAdWidget(
+                                    placementId: 'quizz_bottom',
                                     padding:EdgeInsets.only(top:8)
                                 ),
                               ],

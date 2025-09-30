@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Οι προσωπικές μου λίστες",
     "drawer_defined_list": "Οι προκαθορισμένες λίστες μας",
     "drawer_themes_list": "Οι λίστες μας με τα θέματα",
-    "subscription_benefit_no_pub": "Δεν εμφανίζονται διαφημίσεις στην εφαρμογή"
+    "subscription_benefit_zero_pub": "Μηδενική διαφήμιση",
+    "subscription_navigation_more_speed": "Ταχύτερη πλοήγηση",
+    "subscription_max_concentration": "Μέγιστη συγκέντρωση",
+    "subscription_description1": "Οι διαφημίσεις μας βοηθούν να διατηρούμε την εφαρμογή δωρεάν.",
+    "subscription_description2": "Αλλά αν θέλετε μια ομαλή εμπειρία χωρίς περισπασμούς, αναβαθμίστε σε Premium.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Συνέχεια με τη διαφήμιση",
+    "subscription_title_1": "Διαφημίσεις; Ξεχάστε τες!",
+    "subscription_title_2": "Μείνετε συγκεντρωμένοι, ξεχάστε τις διαφημίσεις",
+    "subscription_title_3": "Σας ενοχλούν και οι διαφημίσεις;",
+    "subscription_title_4": "Σταματήστε τις διαφημίσεις!",
+    "subscription_title_5": "Κουραστήκατε από τη διαφήμιση;",
+    "subscription_title_6": "Εξοικονομήστε χρόνο, αποφύγετε τις διαφημίσεις",
+    "subscription_title_7": "Τέλος οι διαφημίσεις!",
+    "subscription_title_8": "Αποκτήστε άμεση πρόσβαση στο περιεχόμενο, χωρίς διαφημίσεις!"
 }

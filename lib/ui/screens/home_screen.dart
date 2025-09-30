@@ -17,6 +17,7 @@ import '../../data/repository/vocabulaire_user_repository.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_event.dart';
 import '../../logic/blocs/vocabulaire_user/vocabulaire_user_state.dart'
     hide VocabulaireUserUpdate;
+import '../widget/elements/DialogHelper.dart';
 import '../widget/form/swichListFinished.dart';
 import '../widget/home/CarHomeListDefinied.dart';
 import '../widget/home/TitleWidget.dart';
@@ -34,25 +35,20 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      Logger.Green.log(
-          "***********************addPostFrameCallback** importListPersoFromSharePref ********************************************");
-      final bool wasImported =          await VocabulaireUserRepository().importListPersoFromSharePref();
-
+      // On déclenche le chargement des bannières pour cet écran
+      AdMobService.instance.loadHomeScreenBanners(context);
+      final bool wasImported = await VocabulaireUserRepository().importListPersoFromSharePref();
       if (mounted) {
         final codelang = Localizations.localeOf(context).languageCode;
         if (wasImported) {
           Logger.Green.log("Nouvelle liste importée, déclenchement de la mise à jour de l'UI.");
-          context
-              .read<VocabulaireUserBloc>()
-              .add(VocabulaireUserRefresh(local: codelang));
+          context.read<VocabulaireUserBloc>().add(VocabulaireUserRefresh(local: codelang));
 
           Logger.Green.log("Déclenchement de la mise à jour globale en arrière-plan.");
           context.read<UserBloc>().add(InitializeUserSession());
         } else {
           Logger.Green.log("Aucune nouvelle liste, chargement des données locales.");
-          context
-              .read<VocabulaireUserBloc>()
-              .add(CheckVocabulaireUserStatus(local: codelang));
+          context.read<VocabulaireUserBloc>().add(CheckVocabulaireUserStatus(local: codelang));
         }
       }
     });
@@ -77,9 +73,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: context.loc.home_title_progresse,
               ),
               const SizedBox(height: 8),
-              AdaptiveBannerAdWidget(
-                  key: ValueKey('home_top_banner'),
-                  padding:EdgeInsets.only(top:8)
+              const AdaptiveBannerAdWidget(
+                placementId: 'home_top',
+                padding: EdgeInsets.only(top: 8),
               ),
               BlocBuilder<VocabulaireUserBloc, VocabulaireUserState>(
                 builder: (context, state) {
@@ -135,9 +131,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   return const Center(child: CircularProgressIndicator());
                 },
               ),
-              AdaptiveBannerAdWidget(
-                  key: ValueKey('home_bottom_banner'),
-                  padding:EdgeInsets.only(top:8)
+              const AdaptiveBannerAdWidget(
+                placementId: 'home_bottom',
+                padding: EdgeInsets.only(top: 8),
               ),
               titleWidget(
                   text: context.loc.home_title_classement, codelang: codelang),
@@ -151,6 +147,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text('Show Interstitial Ad'),
                 ),
               ),*/
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    DialogHelper().showSubscriptionBanner(context: context);
+                  },
+                  child: const Text('Show dialogue no Ad'),
+                ),
+              ),
               const SizedBox(height: 20),
             ],
           ),

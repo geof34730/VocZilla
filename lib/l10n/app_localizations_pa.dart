@@ -705,5 +705,47 @@ class AppLocalizationsPa extends AppLocalizations {
   String get drawer_themes_list => 'ਸਾਡੇ ਥੀਮਾਂ ਦੀਆਂ ਸੂਚੀਆਂ';
 
   @override
-  String get subscription_benefit_no_pub => 'ਐਪਲੀਕੇਸ਼ਨ \'ਤੇ ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਦਿਖਾਈ ਨਹੀਂ ਦੇ ਰਿਹਾ ਹੈ।';
+  String get subscription_benefit_zero_pub => 'ਜ਼ੀਰੋ ਇਸ਼ਤਿਹਾਰਬਾਜ਼ੀ';
+
+  @override
+  String get subscription_navigation_more_speed => 'ਤੇਜ਼ ਨੈਵੀਗੇਸ਼ਨ';
+
+  @override
+  String get subscription_max_concentration => 'ਵੱਧ ਤੋਂ ਵੱਧ ਇਕਾਗਰਤਾ';
+
+  @override
+  String get subscription_description1 => 'ਇਸ਼ਤਿਹਾਰ ਐਪ ਨੂੰ ਮੁਫ਼ਤ ਰੱਖਣ ਵਿੱਚ ਸਾਡੀ ਮਦਦ ਕਰਦੇ ਹਨ।';
+
+  @override
+  String get subscription_description2 => 'ਪਰ ਜੇਕਰ ਤੁਸੀਂ ਇੱਕ ਨਿਰਵਿਘਨ, ਭਟਕਣਾ-ਮੁਕਤ ਅਨੁਭਵ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਪ੍ਰੀਮੀਅਮ ਵਿੱਚ ਅੱਪਗ੍ਰੇਡ ਕਰੋ।';
+
+  @override
+  String get subscription_go_premium => 'ਪਾਸਰ ਪ੍ਰੀਮੀਅਮ';
+
+  @override
+  String get subscription_go_with_pub => 'ਵਿਗਿਆਪਨ ਨਾਲ ਜਾਰੀ ਰੱਖੋ';
+
+  @override
+  String get subscription_title_1 => 'ਇਸ਼ਤਿਹਾਰ? ਉਹਨਾਂ ਨੂੰ ਭੁੱਲ ਜਾਓ!';
+
+  @override
+  String get subscription_title_2 => 'ਧਿਆਨ ਕੇਂਦਰਿਤ ਰੱਖੋ, ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਭੁੱਲ ਜਾਓ';
+
+  @override
+  String get subscription_title_3 => 'ਕੀ ਤੁਸੀਂ ਵੀ ਇਸ਼ਤਿਹਾਰਬਾਜ਼ੀ ਤੋਂ ਪਰੇਸ਼ਾਨ ਹੋ?';
+
+  @override
+  String get subscription_title_4 => 'ਇਸ਼ਤਿਹਾਰ ਬੰਦ ਕਰੋ!';
+
+  @override
+  String get subscription_title_5 => 'ਇਸ਼ਤਿਹਾਰਬਾਜ਼ੀ ਤੋਂ ਥੱਕ ਗਏ ਹੋ?';
+
+  @override
+  String get subscription_title_6 => 'ਸਮਾਂ ਬਚਾਓ, ਇਸ਼ਤਿਹਾਰਬਾਜ਼ੀ ਤੋਂ ਬਚੋ';
+
+  @override
+  String get subscription_title_7 => 'ਕੋਈ ਹੋਰ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ!';
+
+  @override
+  String get subscription_title_8 => 'ਬਿਨਾਂ ਇਸ਼ਤਿਹਾਰ ਦੇ, ਸਮੱਗਰੀ ਨੂੰ ਸਿੱਧਾ ਐਕਸੈਸ ਕਰੋ!';
 }

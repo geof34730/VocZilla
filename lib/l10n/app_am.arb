@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "የእኔ የግል ዝርዝሮች",
     "drawer_defined_list": "የእኛ አስቀድሞ የተገለጹ ዝርዝሮች",
     "drawer_themes_list": "የእኛ የገጽታ ዝርዝሮች",
-    "subscription_benefit_no_pub": "በመተግበሪያው ላይ ምንም ማስታወቂያ አይታይም።"
+    "subscription_benefit_zero_pub": "ዜሮ ማስታወቂያ",
+    "subscription_navigation_more_speed": "ፈጣን አሰሳ",
+    "subscription_max_concentration": "ከፍተኛ የማጎሪያ",
+    "subscription_description1": "ማስታወቂያዎች መተግበሪያውን ነጻ እንድናደርገው ይረዱናል።",
+    "subscription_description2": "ነገር ግን ለስላሳ፣ ከማዘናጋት የጸዳ ልምድ ከፈለጉ ወደ ፕሪሚየም ያሻሽሉ።",
+    "subscription_go_premium": "ማለፊያ ፕሪሚየም",
+    "subscription_go_with_pub": "በማስታወቂያ ይቀጥሉ",
+    "subscription_title_1": "ማስታወቂያዎች? እርሳቸው!",
+    "subscription_title_2": "ትኩረት ይስጡ ፣ ማስታወቂያዎችን ይረሱ",
+    "subscription_title_3": "እርስዎም በማስታወቂያ ይረብሹዎታል?",
+    "subscription_title_4": "ማስታወቂያዎችን አቁም!",
+    "subscription_title_5": "ማስታወቂያ ሰልችቶታል?",
+    "subscription_title_6": "ጊዜ ይቆጥቡ፣ ማስታወቂያን ያስወግዱ",
+    "subscription_title_7": "ከእንግዲህ ማስታወቂያዎች የሉም!",
+    "subscription_title_8": "ያለማስታወቂያ ይዘቱን በቀጥታ ይድረሱበት!"
 }

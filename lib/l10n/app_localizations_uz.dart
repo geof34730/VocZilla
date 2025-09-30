@@ -705,5 +705,47 @@ class AppLocalizationsUz extends AppLocalizations {
   String get drawer_themes_list => 'Bizning mavzular ro\'yxati';
 
   @override
-  String get subscription_benefit_no_pub => 'Ilovada hech qanday reklama ko\'rinmaydi';
+  String get subscription_benefit_zero_pub => 'Nol reklama';
+
+  @override
+  String get subscription_navigation_more_speed => 'Tezroq navigatsiya';
+
+  @override
+  String get subscription_max_concentration => 'Maksimal konsentratsiya';
+
+  @override
+  String get subscription_description1 => 'Reklamalar ilovani bepul saqlashga yordam beradi.';
+
+  @override
+  String get subscription_description2 => 'Agar siz chalg‘itmaydigan, silliq tajribaga ega bo‘lishni istasangiz, Premiumga yangilang.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Reklama bilan davom eting';
+
+  @override
+  String get subscription_title_1 => 'Reklamalar? Ularni unut!';
+
+  @override
+  String get subscription_title_2 => 'Diqqatni jamlang, reklamalarni unuting';
+
+  @override
+  String get subscription_title_3 => 'Reklama sizni ham bezovta qilyaptimi?';
+
+  @override
+  String get subscription_title_4 => 'Reklamani to\'xtating!';
+
+  @override
+  String get subscription_title_5 => 'Reklamadan charchadingizmi?';
+
+  @override
+  String get subscription_title_6 => 'Vaqtni tejang, reklamadan qoching';
+
+  @override
+  String get subscription_title_7 => 'Boshqa reklama yo\'q!';
+
+  @override
+  String get subscription_title_8 => 'Tarkibga reklamasiz to\'g\'ridan-to\'g\'ri kiring!';
 }

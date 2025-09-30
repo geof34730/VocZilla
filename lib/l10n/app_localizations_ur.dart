@@ -705,5 +705,47 @@ class AppLocalizationsUr extends AppLocalizations {
   String get drawer_themes_list => 'ہماری تھیمز کی فہرستیں۔';
 
   @override
-  String get subscription_benefit_no_pub => 'درخواست پر کوئی اشتہار نظر نہیں آتا';
+  String get subscription_benefit_zero_pub => 'صفر اشتہار';
+
+  @override
+  String get subscription_navigation_more_speed => 'تیز ترین نیویگیشن';
+
+  @override
+  String get subscription_max_concentration => 'زیادہ سے زیادہ ارتکاز';
+
+  @override
+  String get subscription_description1 => 'اشتہارات ایپ کو مفت رکھنے میں ہماری مدد کرتے ہیں۔';
+
+  @override
+  String get subscription_description2 => 'لیکن اگر آپ ایک ہموار، خلفشار سے پاک تجربہ چاہتے ہیں، تو پریمیم میں اپ گریڈ کریں۔';
+
+  @override
+  String get subscription_go_premium => 'پاسر پریمیم';
+
+  @override
+  String get subscription_go_with_pub => 'اشتہار کے ساتھ جاری رکھیں';
+
+  @override
+  String get subscription_title_1 => 'اشتہارات؟ انہیں بھول جاؤ!';
+
+  @override
+  String get subscription_title_2 => 'توجہ مرکوز رکھیں، اشتہارات کو بھول جائیں۔';
+
+  @override
+  String get subscription_title_3 => 'کیا آپ بھی اشتہارات سے پریشان ہیں؟';
+
+  @override
+  String get subscription_title_4 => 'اشتہارات بند کرو!';
+
+  @override
+  String get subscription_title_5 => 'اشتہارات سے تھک گئے ہیں؟';
+
+  @override
+  String get subscription_title_6 => 'وقت بچائیں، اشتہارات سے بچیں۔';
+
+  @override
+  String get subscription_title_7 => 'مزید اشتہارات نہیں!';
+
+  @override
+  String get subscription_title_8 => 'اشتہارات کے بغیر براہ راست مواد تک رسائی حاصل کریں!';
 }

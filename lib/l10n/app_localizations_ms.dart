@@ -705,5 +705,47 @@ class AppLocalizationsMs extends AppLocalizations {
   String get drawer_themes_list => 'Senarai tema kami';
 
   @override
-  String get subscription_benefit_no_pub => 'Tiada pengiklanan kelihatan pada aplikasi';
+  String get subscription_benefit_zero_pub => 'Sifar pengiklanan';
+
+  @override
+  String get subscription_navigation_more_speed => 'Navigasi lebih pantas';
+
+  @override
+  String get subscription_max_concentration => 'Kepekatan maksimum';
+
+  @override
+  String get subscription_description1 => 'Iklan membantu kami memastikan apl itu percuma.';
+
+  @override
+  String get subscription_description2 => 'Tetapi jika anda mahukan pengalaman yang lancar dan bebas gangguan, tingkatkan kepada Premium.';
+
+  @override
+  String get subscription_go_premium => 'Premium Penumpang';
+
+  @override
+  String get subscription_go_with_pub => 'Teruskan dengan iklan';
+
+  @override
+  String get subscription_title_1 => 'Iklan? Lupakan mereka!';
+
+  @override
+  String get subscription_title_2 => 'Tetap fokus, lupakan iklan';
+
+  @override
+  String get subscription_title_3 => 'Adakah anda juga terganggu dengan pengiklanan?';
+
+  @override
+  String get subscription_title_4 => 'Hentikan iklan!';
+
+  @override
+  String get subscription_title_5 => 'Bosan dengan pengiklanan?';
+
+  @override
+  String get subscription_title_6 => 'Jimat masa, elakkan pengiklanan';
+
+  @override
+  String get subscription_title_7 => 'Tiada lagi iklan!';
+
+  @override
+  String get subscription_title_8 => 'Akses kandungan secara langsung, tanpa pengiklanan!';
 }

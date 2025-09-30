@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "মোৰ ব্যক্তিগত তালিকাবোৰ",
     "drawer_defined_list": "আমাৰ পূৰ্বনিৰ্ধাৰিত তালিকাসমূহ",
     "drawer_themes_list": "আমাৰ থিমৰ তালিকা",
-    "subscription_benefit_no_pub": "এপ্লিকেচনত কোনো বিজ্ঞাপন দেখা নাযায়"
+    "subscription_benefit_zero_pub": "শূন্য বিজ্ঞাপন",
+    "subscription_navigation_more_speed": "দ্ৰুত নেভিগেচন",
+    "subscription_max_concentration": "ঘনত্ব সৰ্বোচ্চ",
+    "subscription_description1": "বিজ্ঞাপনে আমাক এপটো বিনামূলীয়া কৰি ৰখাত সহায় কৰে।",
+    "subscription_description2": "কিন্তু যদি আপুনি এটা মসৃণ, বিক্ষিপ্ততামুক্ত অভিজ্ঞতা বিচাৰে, তেন্তে প্ৰিমিয়ামলৈ উন্নীত কৰক।",
+    "subscription_go_premium": "পাছৰ প্ৰিমিয়াম",
+    "subscription_go_with_pub": "বিজ্ঞাপনৰ সৈতে আগবাঢ়ি যাওক",
+    "subscription_title_1": "বিজ্ঞাপন? সেইবোৰ পাহৰি যাওক!",
+    "subscription_title_2": "মনোনিৱেশ কৰি থাকক, বিজ্ঞাপনবোৰ পাহৰি যাওক",
+    "subscription_title_3": "আপুনিও বিজ্ঞাপনৰ দ্বাৰা আমনি পায় নেকি?",
+    "subscription_title_4": "বিজ্ঞাপন বন্ধ কৰক!",
+    "subscription_title_5": "বিজ্ঞাপন দি ভাগৰি পৰিছেনে?",
+    "subscription_title_6": "সময় ৰাহি কৰক, বিজ্ঞাপন পৰিহাৰ কৰক",
+    "subscription_title_7": "আৰু বিজ্ঞাপন নাথাকিব!",
+    "subscription_title_8": "বিজ্ঞাপন অবিহনে পোনপটীয়াকৈ বিষয়বস্তুত প্ৰৱেশ কৰক!"
 }

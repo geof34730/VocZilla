@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "ମୋର ବ୍ୟକ୍ତିଗତ ତାଲିକାଗୁଡ଼ିକ",
     "drawer_defined_list": "ଆମର ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ ତାଲିକାଗୁଡ଼ିକ",
     "drawer_themes_list": "ଆମର ଥିମଗୁଡ଼ିକର ତାଲିକା",
-    "subscription_benefit_no_pub": "ଆପ୍ଲିକେସନରେ କୌଣସି ବିଜ୍ଞାପନ ଦେଖାଯାଉ ନାହିଁ।"
+    "subscription_benefit_zero_pub": "କୌଣସି ବିଜ୍ଞାପନ ନାହିଁ",
+    "subscription_navigation_more_speed": "ଦ୍ରୁତ ନାଭିଗେସନ୍",
+    "subscription_max_concentration": "ସର୍ବାଧିକ ସାନ୍ଦ୍ରତା",
+    "subscription_description1": "ବିଜ୍ଞାପନଗୁଡ଼ିକ ଆମକୁ ଆପ୍‌କୁ ମାଗଣା ରଖିବାରେ ସାହାଯ୍ୟ କରେ।",
+    "subscription_description2": "କିନ୍ତୁ ଯଦି ଆପଣ ଏକ ସୁଗମ, ବାଧାମୁକ୍ତ ଅଭିଜ୍ଞତା ଚାହୁଁଛନ୍ତି, ତେବେ ପ୍ରିମିୟମକୁ ଅପଗ୍ରେଡ୍ କରନ୍ତୁ।",
+    "subscription_go_premium": "ପାସର୍ ପ୍ରିମିୟମ୍",
+    "subscription_go_with_pub": "ବିଜ୍ଞାପନ ସହିତ ଜାରି ରଖନ୍ତୁ",
+    "subscription_title_1": "ବିଜ୍ଞାପନ? ସେଗୁଡ଼ିକୁ ଭୁଲିଯାଅ!",
+    "subscription_title_2": "ବିଜ୍ଞାପନ ଭୁଲିଯାଆନ୍ତୁ, ଧ୍ୟାନ ଦିଅନ୍ତୁ",
+    "subscription_title_3": "ଆପଣ ମଧ୍ୟ ବିଜ୍ଞାପନ ଦ୍ୱାରା ବିରକ୍ତ କି?",
+    "subscription_title_4": "ବିଜ୍ଞାପନ ବନ୍ଦ କର!",
+    "subscription_title_5": "ବିଜ୍ଞାପନ ଦେଖି ବିରକ୍ତ କି?",
+    "subscription_title_6": "ସମୟ ବଞ୍ଚାନ୍ତୁ, ବିଜ୍ଞାପନ ଏଡାନ୍ତୁ",
+    "subscription_title_7": "ଆଉ କୌଣସି ବିଜ୍ଞାପନ ନାହିଁ!",
+    "subscription_title_8": "ବିଜ୍ଞାପନ ବିନା ସିଧାସଳଖ ବିଷୟବସ୍ତୁ ପ୍ରବେଶ କରନ୍ତୁ!"
 }

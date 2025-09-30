@@ -705,5 +705,47 @@ class AppLocalizationsDa extends AppLocalizations {
   String get drawer_themes_list => 'Vores lister over temaer';
 
   @override
-  String get subscription_benefit_no_pub => 'Der er ingen synlig reklame i applikationen';
+  String get subscription_benefit_zero_pub => 'Nul reklame';
+
+  @override
+  String get subscription_navigation_more_speed => 'Hurtigere navigation';
+
+  @override
+  String get subscription_max_concentration => 'Maksimal koncentration';
+
+  @override
+  String get subscription_description1 => 'Reklamer hjælper os med at holde appen gratis.';
+
+  @override
+  String get subscription_description2 => 'Men hvis du ønsker en problemfri og uforstyrret oplevelse, så opgrader til Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Fortsæt med annoncen';
+
+  @override
+  String get subscription_title_1 => 'Reklamer? Glem dem!';
+
+  @override
+  String get subscription_title_2 => 'Bevar fokus, glem reklamerne';
+
+  @override
+  String get subscription_title_3 => 'Er du også generet af reklamer?';
+
+  @override
+  String get subscription_title_4 => 'Stop reklamerne!';
+
+  @override
+  String get subscription_title_5 => 'Træt af reklamer?';
+
+  @override
+  String get subscription_title_6 => 'Spar tid, undgå reklamer';
+
+  @override
+  String get subscription_title_7 => 'Ingen flere annoncer!';
+
+  @override
+  String get subscription_title_8 => 'Få direkte adgang til indholdet, uden reklamer!';
 }

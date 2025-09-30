@@ -705,5 +705,47 @@ class AppLocalizationsTa extends AppLocalizations {
   String get drawer_themes_list => 'எங்கள் கருப்பொருள் பட்டியல்கள்';
 
   @override
-  String get subscription_benefit_no_pub => 'பயன்பாட்டில் எந்த விளம்பரமும் தெரியவில்லை.';
+  String get subscription_benefit_zero_pub => 'விளம்பரம் இல்லை';
+
+  @override
+  String get subscription_navigation_more_speed => 'வேகமான வழிசெலுத்தல்';
+
+  @override
+  String get subscription_max_concentration => 'அதிகபட்ச செறிவு';
+
+  @override
+  String get subscription_description1 => 'பயன்பாட்டை இலவசமாக வைத்திருக்க விளம்பரங்கள் எங்களுக்கு உதவுகின்றன.';
+
+  @override
+  String get subscription_description2 => 'ஆனால் நீங்கள் ஒரு மென்மையான, கவனச்சிதறல் இல்லாத அனுபவத்தை விரும்பினால், பிரீமியத்திற்கு மேம்படுத்தவும்.';
+
+  @override
+  String get subscription_go_premium => 'பாஸ்ஸர் பிரீமியம்';
+
+  @override
+  String get subscription_go_with_pub => 'விளம்பரத்துடன் தொடரவும்';
+
+  @override
+  String get subscription_title_1 => 'விளம்பரங்களா? அவற்றை மறந்துடுங்க!';
+
+  @override
+  String get subscription_title_2 => 'விளம்பரங்களை மறந்துவிட்டு, கவனம் செலுத்துங்கள்.';
+
+  @override
+  String get subscription_title_3 => 'விளம்பரங்களால் நீங்களும் தொந்தரவு செய்யப்படுகிறீர்களா?';
+
+  @override
+  String get subscription_title_4 => 'விளம்பரங்களை நிறுத்து!';
+
+  @override
+  String get subscription_title_5 => 'விளம்பரம் பார்த்து சோர்வடைந்துவிட்டதா?';
+
+  @override
+  String get subscription_title_6 => 'நேரத்தை மிச்சப்படுத்துங்கள், விளம்பரங்களைத் தவிர்க்கவும்.';
+
+  @override
+  String get subscription_title_7 => 'இனி விளம்பரங்கள் இல்லை!';
+
+  @override
+  String get subscription_title_8 => 'விளம்பரம் இல்லாமல் நேரடியாக உள்ளடக்கத்தை அணுகவும்!';
 }

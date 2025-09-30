@@ -8,7 +8,7 @@ String versionApp="1.0.0";
 final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
 
 int globalCountVocabulaireAll=4399;
-bool debugMode=true;
+bool debugMode=false;
 bool statistiqueGoogleAnalytics=false;
 //bool byPasSubscription = true;
 bool testScreenShot = false;

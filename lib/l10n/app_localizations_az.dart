@@ -705,5 +705,47 @@ class AppLocalizationsAz extends AppLocalizations {
   String get drawer_themes_list => 'Mövzu siyahılarımız';
 
   @override
-  String get subscription_benefit_no_pub => 'Tətbiqdə heç bir reklam görünmür';
+  String get subscription_benefit_zero_pub => 'Sıfır reklam';
+
+  @override
+  String get subscription_navigation_more_speed => 'Daha sürətli naviqasiya';
+
+  @override
+  String get subscription_max_concentration => 'Maksimum konsentrasiya';
+
+  @override
+  String get subscription_description1 => 'Reklamlar bizə proqramı pulsuz saxlamağa kömək edir.';
+
+  @override
+  String get subscription_description2 => 'Ancaq hamar, diqqətinizi yayındırmayan təcrübə istəyirsinizsə, Premiuma təkmilləşdirin.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Reklamla davam edin';
+
+  @override
+  String get subscription_title_1 => 'Reklamlar? Onları unut!';
+
+  @override
+  String get subscription_title_2 => 'Diqqətlə qalın, reklamları unudun';
+
+  @override
+  String get subscription_title_3 => 'Sizi də reklam narahat edir?';
+
+  @override
+  String get subscription_title_4 => 'Reklamları dayandırın!';
+
+  @override
+  String get subscription_title_5 => 'Reklamdan bezdiniz?';
+
+  @override
+  String get subscription_title_6 => 'Vaxtınıza qənaət edin, reklamdan qaçın';
+
+  @override
+  String get subscription_title_7 => 'Daha reklam yoxdur!';
+
+  @override
+  String get subscription_title_8 => 'Reklam olmadan birbaşa məzmuna daxil olun!';
 }

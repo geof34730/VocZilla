@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Minu isiklikud nimekirjad",
     "drawer_defined_list": "Meie eelnevalt määratud loendid",
     "drawer_themes_list": "Meie teemade loendid",
-    "subscription_benefit_no_pub": "Rakenduses pole reklaami näha"
+    "subscription_benefit_zero_pub": "Null reklaami",
+    "subscription_navigation_more_speed": "Kiirem navigeerimine",
+    "subscription_max_concentration": "Maksimaalne kontsentratsioon",
+    "subscription_description1": "Reklaamid aitavad meil rakendust tasuta hoida.",
+    "subscription_description2": "Aga kui soovid sujuvat ja segajatevaba kogemust, uuenda Premiumile.",
+    "subscription_go_premium": "Passeri preemia",
+    "subscription_go_with_pub": "Jätka reklaamiga",
+    "subscription_title_1": "Reklaamid? Unustage need!",
+    "subscription_title_2": "Jää keskendunuks, unusta reklaamid",
+    "subscription_title_3": "Kas sind häirib ka reklaam?",
+    "subscription_title_4": "Lõpetage reklaamid!",
+    "subscription_title_5": "Reklaamist tüdinud?",
+    "subscription_title_6": "Säästa aega, väldi reklaami",
+    "subscription_title_7": "Reklaame enam pole!",
+    "subscription_title_8": "Ligipääs sisule otse, ilma reklaamita!"
 }

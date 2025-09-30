@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Mina personliga listor",
     "drawer_defined_list": "Våra fördefinierade listor",
     "drawer_themes_list": "Våra listor över teman",
-    "subscription_benefit_no_pub": "Ingen reklam syns i appen"
+    "subscription_benefit_zero_pub": "Noll reklam",
+    "subscription_navigation_more_speed": "Snabbare navigering",
+    "subscription_max_concentration": "Maximal koncentration",
+    "subscription_description1": "Annonser hjälper oss att hålla appen gratis.",
+    "subscription_description2": "Men om du vill ha en smidig och störningsfri upplevelse, uppgradera till Premium.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Fortsätt med annonsen",
+    "subscription_title_1": "Reklam? Glöm dem!",
+    "subscription_title_2": "Håll fokus, glöm reklamen",
+    "subscription_title_3": "Störs du också av reklam?",
+    "subscription_title_4": "Stoppa annonserna!",
+    "subscription_title_5": "Trött på reklam?",
+    "subscription_title_6": "Spara tid, undvik reklam",
+    "subscription_title_7": "Inga fler annonser!",
+    "subscription_title_8": "Få tillgång till innehållet direkt, utan reklam!"
 }

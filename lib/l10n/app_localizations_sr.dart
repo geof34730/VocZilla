@@ -705,5 +705,47 @@ class AppLocalizationsSr extends AppLocalizations {
   String get drawer_themes_list => 'Наше листе тема';
 
   @override
-  String get subscription_benefit_no_pub => 'У апликацији се не приказују огласи';
+  String get subscription_benefit_zero_pub => 'Нула рекламирања';
+
+  @override
+  String get subscription_navigation_more_speed => 'Бржа навигација';
+
+  @override
+  String get subscription_max_concentration => 'Максимална концентрација';
+
+  @override
+  String get subscription_description1 => 'Огласи нам помажу да апликација остане бесплатна.';
+
+  @override
+  String get subscription_description2 => 'Али ако желите глатко искуство без ометања, надоградите на Премиум.';
+
+  @override
+  String get subscription_go_premium => 'Премијум додавача';
+
+  @override
+  String get subscription_go_with_pub => 'Настави са огласом';
+
+  @override
+  String get subscription_title_1 => 'Огласи? Заборавите их!';
+
+  @override
+  String get subscription_title_2 => 'Останите фокусирани, заборавите рекламе';
+
+  @override
+  String get subscription_title_3 => 'Да ли и тебе мучи рекламирање?';
+
+  @override
+  String get subscription_title_4 => 'Зауставите рекламе!';
+
+  @override
+  String get subscription_title_5 => 'Уморни сте од рекламирања?';
+
+  @override
+  String get subscription_title_6 => 'Уштедите време, избегавајте рекламе';
+
+  @override
+  String get subscription_title_7 => 'Нема више реклама!';
+
+  @override
+  String get subscription_title_8 => 'Приступите садржају директно, без реклама!';
 }

@@ -705,5 +705,47 @@ class AppLocalizationsTe extends AppLocalizations {
   String get drawer_themes_list => 'మా థీమ్‌ల జాబితాలు';
 
   @override
-  String get subscription_benefit_no_pub => 'అప్లికేషన్‌లో ఎటువంటి ప్రకటనలు కనిపించవు.';
+  String get subscription_benefit_zero_pub => 'ప్రకటనలు వద్దు';
+
+  @override
+  String get subscription_navigation_more_speed => 'వేగవంతమైన నావిగేషన్';
+
+  @override
+  String get subscription_max_concentration => 'గరిష్ట ఏకాగ్రత';
+
+  @override
+  String get subscription_description1 => 'యాప్‌ను ఉచితంగా ఉంచడంలో ప్రకటనలు మాకు సహాయపడతాయి.';
+
+  @override
+  String get subscription_description2 => 'కానీ మీరు సున్నితమైన, అంతరాయం లేని అనుభవాన్ని కోరుకుంటే, ప్రీమియంకు అప్‌గ్రేడ్ చేసుకోండి.';
+
+  @override
+  String get subscription_go_premium => 'పాసర్ ప్రీమియం';
+
+  @override
+  String get subscription_go_with_pub => 'ప్రకటనతో కొనసాగించండి';
+
+  @override
+  String get subscription_title_1 => 'ప్రకటనలా? వాటిని మర్చిపో!';
+
+  @override
+  String get subscription_title_2 => 'ప్రకటనలను మర్చిపోయి, దృష్టి కేంద్రీకరించండి';
+
+  @override
+  String get subscription_title_3 => 'మీరు ప్రకటనల వల్ల కూడా ఇబ్బంది పడుతున్నారా?';
+
+  @override
+  String get subscription_title_4 => 'ప్రకటనలు ఆపు!';
+
+  @override
+  String get subscription_title_5 => 'ప్రకటనలతో విసిగిపోయారా?';
+
+  @override
+  String get subscription_title_6 => 'సమయం ఆదా చేసుకోండి, ప్రకటనలను నివారించండి';
+
+  @override
+  String get subscription_title_7 => 'ఇక ప్రకటనలు లేవు!';
+
+  @override
+  String get subscription_title_8 => 'ప్రకటనలు లేకుండా నేరుగా కంటెంట్‌ను యాక్సెస్ చేయండి!';
 }

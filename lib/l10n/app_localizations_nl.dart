@@ -705,5 +705,47 @@ class AppLocalizationsNl extends AppLocalizations {
   String get drawer_themes_list => 'Onze themalijsten';
 
   @override
-  String get subscription_benefit_no_pub => 'Er is geen reclame zichtbaar op de applicatie';
+  String get subscription_benefit_zero_pub => 'Geen reclame';
+
+  @override
+  String get subscription_navigation_more_speed => 'Snellere navigatie';
+
+  @override
+  String get subscription_max_concentration => 'Concentration maximale';
+
+  @override
+  String get subscription_description1 => 'Dankzij advertenties kunnen we de app gratis houden.';
+
+  @override
+  String get subscription_description2 => 'Maar als u een soepele, afleidingsvrije ervaring wilt, upgrade dan naar Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Doorgaan met advertentie';
+
+  @override
+  String get subscription_title_1 => 'Advertenties? Vergeet ze!';
+
+  @override
+  String get subscription_title_2 => 'Blijf gefocust, vergeet de advertenties';
+
+  @override
+  String get subscription_title_3 => 'Heb jij ook last van reclame?';
+
+  @override
+  String get subscription_title_4 => 'Stop de advertenties!';
+
+  @override
+  String get subscription_title_5 => 'Genoeg van reclame?';
+
+  @override
+  String get subscription_title_6 => 'Bespaar tijd, vermijd reclame';
+
+  @override
+  String get subscription_title_7 => 'Geen advertenties meer!';
+
+  @override
+  String get subscription_title_8 => 'Krijg direct toegang tot de inhoud, zonder advertenties!';
 }

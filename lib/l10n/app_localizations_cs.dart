@@ -705,5 +705,47 @@ class AppLocalizationsCs extends AppLocalizations {
   String get drawer_themes_list => 'Naše seznamy témat';
 
   @override
-  String get subscription_benefit_no_pub => 'V aplikaci se nezobrazuje žádná reklama';
+  String get subscription_benefit_zero_pub => 'Nulová reklama';
+
+  @override
+  String get subscription_navigation_more_speed => 'Rychlejší navigace';
+
+  @override
+  String get subscription_max_concentration => 'Maximální koncentrace';
+
+  @override
+  String get subscription_description1 => 'Reklamy nám pomáhají udržovat aplikaci zdarma.';
+
+  @override
+  String get subscription_description2 => 'Pokud ale chcete plynulý zážitek bez rušivých vlivů, upgradujte na Premium.';
+
+  @override
+  String get subscription_go_premium => 'Prémiový hráč pro přihrávajícího';
+
+  @override
+  String get subscription_go_with_pub => 'Pokračovat s reklamou';
+
+  @override
+  String get subscription_title_1 => 'Reklamy? Zapomeňte na ně!';
+
+  @override
+  String get subscription_title_2 => 'Soustřeďte se, zapomeňte na reklamy';
+
+  @override
+  String get subscription_title_3 => 'Taky vám vadí reklama?';
+
+  @override
+  String get subscription_title_4 => 'Zastavte reklamy!';
+
+  @override
+  String get subscription_title_5 => 'Už vás nebaví reklama?';
+
+  @override
+  String get subscription_title_6 => 'Ušetřete čas, vyhněte se reklamě';
+
+  @override
+  String get subscription_title_7 => 'Už žádné reklamy!';
+
+  @override
+  String get subscription_title_8 => 'Přímý přístup k obsahu, bez reklamy!';
 }

@@ -705,5 +705,47 @@ class AppLocalizationsZu extends AppLocalizations {
   String get drawer_themes_list => 'Uhlu lwethu lwetimu';
 
   @override
-  String get subscription_benefit_no_pub => 'Akukho ukukhangisa okubonakalayo kuhlelo lokusebenza';
+  String get subscription_benefit_zero_pub => 'Azikho ukukhangisa';
+
+  @override
+  String get subscription_navigation_more_speed => 'Ukuzulazula okusheshayo';
+
+  @override
+  String get subscription_max_concentration => 'Ubuningi bokugxila';
+
+  @override
+  String get subscription_description1 => 'Izikhangiso zisisiza ukuthi sigcine uhlelo lokusebenza lumahhala.';
+
+  @override
+  String get subscription_description2 => 'Kodwa uma ufuna ukuzizwisa okubushelelezi, okungenaziphazamiso, thuthukela ku-Premium.';
+
+  @override
+  String get subscription_go_premium => 'I-Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Qhubeka nesikhangiso';
+
+  @override
+  String get subscription_title_1 => 'Izikhangiso? Bakhohlwe!';
+
+  @override
+  String get subscription_title_2 => 'Hlala ugxilile, ukhohlwe izikhangiso';
+
+  @override
+  String get subscription_title_3 => 'Ingabe nawe uhlushwa ukukhangisa?';
+
+  @override
+  String get subscription_title_4 => 'Misa izikhangiso!';
+
+  @override
+  String get subscription_title_5 => 'Ukhathele ukukhangisa?';
+
+  @override
+  String get subscription_title_6 => 'Yonga isikhathi, gwema ukukhangisa';
+
+  @override
+  String get subscription_title_7 => 'Azisekho izikhangiso!';
+
+  @override
+  String get subscription_title_8 => 'Finyelela okuqukethwe ngokuqondile, ngaphandle kokukhangisa!';
 }

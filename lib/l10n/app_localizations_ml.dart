@@ -705,5 +705,47 @@ class AppLocalizationsMl extends AppLocalizations {
   String get drawer_themes_list => 'ഞങ്ങളുടെ തീമുകളുടെ പട്ടികകൾ';
 
   @override
-  String get subscription_benefit_no_pub => 'ആപ്ലിക്കേഷനിൽ പരസ്യങ്ങളൊന്നും ദൃശ്യമല്ല.';
+  String get subscription_benefit_zero_pub => 'പരസ്യം വേണ്ട';
+
+  @override
+  String get subscription_navigation_more_speed => 'വേഗതയേറിയ നാവിഗേഷൻ';
+
+  @override
+  String get subscription_max_concentration => 'പരമാവധി ഏകാഗ്രത';
+
+  @override
+  String get subscription_description1 => 'ആപ്പ് സൗജന്യമായി നിലനിർത്താൻ പരസ്യങ്ങൾ ഞങ്ങളെ സഹായിക്കുന്നു.';
+
+  @override
+  String get subscription_description2 => 'എന്നാൽ നിങ്ങൾക്ക് സുഗമവും ശ്രദ്ധ തിരിക്കുന്നതുമില്ലാത്തതുമായ അനുഭവം വേണമെങ്കിൽ, പ്രീമിയത്തിലേക്ക് അപ്‌ഗ്രേഡ് ചെയ്യുക.';
+
+  @override
+  String get subscription_go_premium => 'പാസർ പ്രീമിയം';
+
+  @override
+  String get subscription_go_with_pub => 'പരസ്യത്തിൽ തുടരുക';
+
+  @override
+  String get subscription_title_1 => 'പരസ്യങ്ങളോ? അവ മറന്നേക്കൂ!';
+
+  @override
+  String get subscription_title_2 => 'പരസ്യങ്ങൾ മറന്ന് ശ്രദ്ധ കേന്ദ്രീകരിക്കൂ';
+
+  @override
+  String get subscription_title_3 => 'പരസ്യങ്ങൾ കാണുന്നതിൽ നിങ്ങൾക്കും വിഷമമുണ്ടോ?';
+
+  @override
+  String get subscription_title_4 => 'പരസ്യങ്ങൾ നിർത്തൂ!';
+
+  @override
+  String get subscription_title_5 => 'പരസ്യം മടുത്തോ?';
+
+  @override
+  String get subscription_title_6 => 'സമയം ലാഭിക്കൂ, പരസ്യം ഒഴിവാക്കൂ';
+
+  @override
+  String get subscription_title_7 => 'ഇനി പരസ്യങ്ങളില്ല!';
+
+  @override
+  String get subscription_title_8 => 'പരസ്യമില്ലാതെ നേരിട്ട് ഉള്ളടക്കം ആക്‌സസ് ചെയ്യുക!';
 }

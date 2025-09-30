@@ -705,5 +705,47 @@ class AppLocalizationsKo extends AppLocalizations {
   String get drawer_themes_list => '우리의 테마 목록';
 
   @override
-  String get subscription_benefit_no_pub => '애플리케이션에 광고가 표시되지 않습니다.';
+  String get subscription_benefit_zero_pub => '광고 없음';
+
+  @override
+  String get subscription_navigation_more_speed => '더 빠른 탐색';
+
+  @override
+  String get subscription_max_concentration => '농도 최대치';
+
+  @override
+  String get subscription_description1 => '광고는 앱을 무료로 유지하는 데 도움이 됩니다.';
+
+  @override
+  String get subscription_description2 => '하지만 원활하고 방해 없는 환경을 원하신다면 프리미엄으로 업그레이드하세요.';
+
+  @override
+  String get subscription_go_premium => '패서 프리미엄';
+
+  @override
+  String get subscription_go_with_pub => '광고 계속하기';
+
+  @override
+  String get subscription_title_1 => '광고요? 잊어버리세요!';
+
+  @override
+  String get subscription_title_2 => '집중하세요, 광고는 잊어버리세요';
+
+  @override
+  String get subscription_title_3 => '당신도 광고 때문에 괴로워하시나요?';
+
+  @override
+  String get subscription_title_4 => '광고를 멈춰주세요!';
+
+  @override
+  String get subscription_title_5 => '광고에 지치셨나요?';
+
+  @override
+  String get subscription_title_6 => '시간을 절약하고 광고를 피하세요';
+
+  @override
+  String get subscription_title_7 => '더 이상 광고가 없습니다!';
+
+  @override
+  String get subscription_title_8 => '광고 없이 콘텐츠에 직접 접근하세요!';
 }

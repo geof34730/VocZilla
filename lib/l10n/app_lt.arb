@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Mano asmeniniai sąrašai",
     "drawer_defined_list": "Mūsų iš anksto nustatyti sąrašai",
     "drawer_themes_list": "Mūsų temų sąrašai",
-    "subscription_benefit_no_pub": "Programėlėje nematyti jokios reklamos"
+    "subscription_benefit_zero_pub": "Nulinė reklama",
+    "subscription_navigation_more_speed": "Greitesnė navigacija",
+    "subscription_max_concentration": "Didžiausia koncentracija",
+    "subscription_description1": "Skelbimai padeda mums išlaikyti programėlę nemokamą.",
+    "subscription_description2": "Bet jei norite sklandaus, be jokių trukdžių patyrimo, atnaujinkite į „Premium“.",
+    "subscription_go_premium": "Praleistuvo priemoka",
+    "subscription_go_with_pub": "Tęsti su skelbimu",
+    "subscription_title_1": "Reklamos? Pamirškite jas!",
+    "subscription_title_2": "Susitelkite, pamirškite reklamas",
+    "subscription_title_3": "Ar jus taip pat vargina reklama?",
+    "subscription_title_4": "Sustabdykite reklamas!",
+    "subscription_title_5": "Pavargote nuo reklamos?",
+    "subscription_title_6": "Sutaupykite laiko, venkite reklamos",
+    "subscription_title_7": "Daugiau jokių reklamų!",
+    "subscription_title_8": "Pasiekite turinį tiesiogiai, be reklamos!"
 }

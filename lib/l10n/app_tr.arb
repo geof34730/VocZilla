@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Kişisel listelerim",
     "drawer_defined_list": "Önceden tanımlanmış listelerimiz",
     "drawer_themes_list": "Tema listelerimiz",
-    "subscription_benefit_no_pub": "Uygulamada hiçbir reklam görünmüyor"
+    "subscription_benefit_zero_pub": "Sıfır reklam",
+    "subscription_navigation_more_speed": "Daha hızlı gezinme",
+    "subscription_max_concentration": "Konsantrasyon maksimum",
+    "subscription_description1": "Reklamlar uygulamanın ücretsiz kalmasına yardımcı oluyor.",
+    "subscription_description2": "Ancak sorunsuz, dikkat dağıtıcı unsurlardan uzak bir deneyim istiyorsanız Premium'a yükseltin.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Reklamla devam et",
+    "subscription_title_1": "Reklam mı? Unutun gitsin!",
+    "subscription_title_2": "Odaklanın, reklamları unutun",
+    "subscription_title_3": "Siz de reklamlardan rahatsız oluyor musunuz?",
+    "subscription_title_4": "Reklamları durdurun!",
+    "subscription_title_5": "Reklamlardan bıktınız mı?",
+    "subscription_title_6": "Zamandan tasarruf edin, reklamlardan kaçının",
+    "subscription_title_7": "Artık reklam yok!",
+    "subscription_title_8": "İçeriğe doğrudan, reklamsız erişin!"
 }

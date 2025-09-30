@@ -705,5 +705,47 @@ class AppLocalizationsKy extends AppLocalizations {
   String get drawer_themes_list => 'Биздин темалардын тизмеси';
 
   @override
-  String get subscription_benefit_no_pub => 'Колдонмодо эч кандай жарнама көрүнбөйт';
+  String get subscription_benefit_zero_pub => 'Нөл жарнама';
+
+  @override
+  String get subscription_navigation_more_speed => 'Тезирээк навигация';
+
+  @override
+  String get subscription_max_concentration => 'Максималдуу концентрация';
+
+  @override
+  String get subscription_description1 => 'Жарнамалар колдонмону акысыз сактоого жардам берет.';
+
+  @override
+  String get subscription_description2 => 'Бирок, эгер сиз жылмакай, алаксыбай тажрыйба алгыңыз келсе, Premium\'га жаңыртыңыз.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Жарнама менен улантуу';
+
+  @override
+  String get subscription_title_1 => 'Жарнамалар? Аларды унут!';
+
+  @override
+  String get subscription_title_2 => 'Фокуста болуңуз, жарнамаларды унутуңуз';
+
+  @override
+  String get subscription_title_3 => 'Сизди да жарнамалар кыйнап жатабы?';
+
+  @override
+  String get subscription_title_4 => 'Жарнамаларды токтот!';
+
+  @override
+  String get subscription_title_5 => 'Жарнамадан чарчадыңызбы?';
+
+  @override
+  String get subscription_title_6 => 'Убакытты үнөмдөңүз, жарнамадан алыс болуңуз';
+
+  @override
+  String get subscription_title_7 => 'Мындан ары жарнамалар жок!';
+
+  @override
+  String get subscription_title_8 => 'Жарнамасыз мазмунга түз кириңиз!';
 }

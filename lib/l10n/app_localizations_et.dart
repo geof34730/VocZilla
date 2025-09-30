@@ -705,5 +705,47 @@ class AppLocalizationsEt extends AppLocalizations {
   String get drawer_themes_list => 'Meie teemade loendid';
 
   @override
-  String get subscription_benefit_no_pub => 'Rakenduses pole reklaami näha';
+  String get subscription_benefit_zero_pub => 'Null reklaami';
+
+  @override
+  String get subscription_navigation_more_speed => 'Kiirem navigeerimine';
+
+  @override
+  String get subscription_max_concentration => 'Maksimaalne kontsentratsioon';
+
+  @override
+  String get subscription_description1 => 'Reklaamid aitavad meil rakendust tasuta hoida.';
+
+  @override
+  String get subscription_description2 => 'Aga kui soovid sujuvat ja segajatevaba kogemust, uuenda Premiumile.';
+
+  @override
+  String get subscription_go_premium => 'Passeri preemia';
+
+  @override
+  String get subscription_go_with_pub => 'Jätka reklaamiga';
+
+  @override
+  String get subscription_title_1 => 'Reklaamid? Unustage need!';
+
+  @override
+  String get subscription_title_2 => 'Jää keskendunuks, unusta reklaamid';
+
+  @override
+  String get subscription_title_3 => 'Kas sind häirib ka reklaam?';
+
+  @override
+  String get subscription_title_4 => 'Lõpetage reklaamid!';
+
+  @override
+  String get subscription_title_5 => 'Reklaamist tüdinud?';
+
+  @override
+  String get subscription_title_6 => 'Säästa aega, väldi reklaami';
+
+  @override
+  String get subscription_title_7 => 'Reklaame enam pole!';
+
+  @override
+  String get subscription_title_8 => 'Ligipääs sisule otse, ilma reklaamita!';
 }

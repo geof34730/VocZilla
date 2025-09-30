@@ -705,5 +705,47 @@ class AppLocalizationsHe extends AppLocalizations {
   String get drawer_themes_list => 'רשימות הנושאים שלנו';
 
   @override
-  String get subscription_benefit_no_pub => 'לא נראה פרסום באפליקציה';
+  String get subscription_benefit_zero_pub => 'אפס פרסום';
+
+  @override
+  String get subscription_navigation_more_speed => 'ניווט מהיר יותר';
+
+  @override
+  String get subscription_max_concentration => 'ריכוז מקסימלי';
+
+  @override
+  String get subscription_description1 => 'פרסומות עוזרות לנו לשמור על האפליקציה בחינם.';
+
+  @override
+  String get subscription_description2 => 'אבל אם אתם רוצים חוויה חלקה וללא הסחות דעת, שדרגו ל-Premium.';
+
+  @override
+  String get subscription_go_premium => 'פרימיום עובר';
+
+  @override
+  String get subscription_go_with_pub => 'המשך עם המודעה';
+
+  @override
+  String get subscription_title_1 => 'פרסומות? שכחו מהן!';
+
+  @override
+  String get subscription_title_2 => 'הישארו ממוקדים, תשכחו מהפרסומות';
+
+  @override
+  String get subscription_title_3 => 'האם גם לך הפרסום מפריע?';
+
+  @override
+  String get subscription_title_4 => 'תפסיקו את הפרסומות!';
+
+  @override
+  String get subscription_title_5 => 'נמאס לכם מפרסום?';
+
+  @override
+  String get subscription_title_6 => 'חסכו זמן, הימנעו מפרסום';
+
+  @override
+  String get subscription_title_7 => 'אין יותר פרסומות!';
+
+  @override
+  String get subscription_title_8 => 'גישה ישירה לתוכן, ללא פרסומות!';
 }

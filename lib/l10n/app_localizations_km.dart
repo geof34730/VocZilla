@@ -705,5 +705,47 @@ class AppLocalizationsKm extends AppLocalizations {
   String get drawer_themes_list => 'បញ្ជីប្រធានបទរបស់យើង។';
 
   @override
-  String get subscription_benefit_no_pub => 'គ្មានការផ្សាយពាណិជ្ជកម្មអាចមើលឃើញនៅលើកម្មវិធីនោះទេ។';
+  String get subscription_benefit_zero_pub => 'ការផ្សាយពាណិជ្ជកម្មសូន្យ';
+
+  @override
+  String get subscription_navigation_more_speed => 'ការរុករកលឿនជាងមុន';
+
+  @override
+  String get subscription_max_concentration => 'ការផ្តោតអារម្មណ៍អតិបរមា';
+
+  @override
+  String get subscription_description1 => 'ការផ្សាយពាណិជ្ជកម្មជួយយើងរក្សាកម្មវិធីដោយឥតគិតថ្លៃ។';
+
+  @override
+  String get subscription_description2 => 'ប៉ុន្តែប្រសិនបើអ្នកចង់បានបទពិសោធន៍រលូន គ្មានការរំខាន សូមដំឡើងកំណែទៅ Premium។';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'បន្តជាមួយការផ្សាយពាណិជ្ជកម្ម';
+
+  @override
+  String get subscription_title_1 => 'ការផ្សាយពាណិជ្ជកម្ម? បំភ្លេចគេទៅ!';
+
+  @override
+  String get subscription_title_2 => 'រក្សាការផ្តោតអារម្មណ៍ បំភ្លេចការផ្សាយពាណិជ្ជកម្ម';
+
+  @override
+  String get subscription_title_3 => 'តើអ្នកក៏រំខានដោយការផ្សាយពាណិជ្ជកម្មដែរទេ?';
+
+  @override
+  String get subscription_title_4 => 'បញ្ឈប់ការផ្សាយពាណិជ្ជកម្ម!';
+
+  @override
+  String get subscription_title_5 => 'ធុញទ្រាន់នឹងការផ្សាយពាណិជ្ជកម្ម?';
+
+  @override
+  String get subscription_title_6 => 'ចំណេញពេលវេលា ជៀសវាងការផ្សាយពាណិជ្ជកម្ម';
+
+  @override
+  String get subscription_title_7 => 'គ្មានការផ្សាយពាណិជ្ជកម្មទៀតទេ!';
+
+  @override
+  String get subscription_title_8 => 'ចូលប្រើមាតិកាដោយផ្ទាល់ដោយគ្មានការផ្សាយពាណិជ្ជកម្ម!';
 }

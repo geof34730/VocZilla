@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "ລາຍຊື່ສ່ວນຕົວຂອງຂ້ອຍ",
     "drawer_defined_list": "ບັນຊີລາຍຊື່ທີ່ກໍານົດໄວ້ລ່ວງຫນ້າຂອງພວກເຮົາ",
     "drawer_themes_list": "ລາຍຊື່ຫົວຂໍ້ຂອງພວກເຮົາ",
-    "subscription_benefit_no_pub": "ບໍ່ມີການໂຄສະນາທີ່ເຫັນໄດ້ໃນແອັບພລິເຄຊັນ"
+    "subscription_benefit_zero_pub": "ສູນການໂຄສະນາ",
+    "subscription_navigation_more_speed": "ການນໍາທາງໄວຂຶ້ນ",
+    "subscription_max_concentration": "ຄວາມເຂັ້ມຂຸ້ນສູງສຸດ",
+    "subscription_description1": "ການ​ໂຄ​ສະ​ນາ​ຊ່ວຍ​ໃຫ້​ພວກ​ເຮົາ​ຮັກ​ສາ app ຟຣີ​.",
+    "subscription_description2": "ແຕ່ຖ້າທ່ານຕ້ອງການປະສົບການທີ່ລຽບງ່າຍ, ບໍ່ມີສິ່ງລົບກວນ, ໃຫ້ອັບເກຣດເປັນ Premium.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "ສືບຕໍ່ດ້ວຍການໂຄສະນາ",
+    "subscription_title_1": "ໂຄສະນາ? ລືມເຂົາເຈົ້າ!",
+    "subscription_title_2": "ຢູ່ສຸມໃສ່, ລືມການໂຄສະນາ",
+    "subscription_title_3": "ເຈົ້າຍັງເບື່ອກັບການໂຄສະນາບໍ?",
+    "subscription_title_4": "ຢຸດການໂຄສະນາ!",
+    "subscription_title_5": "ເບື່ອການໂຄສະນາບໍ?",
+    "subscription_title_6": "ປະຫຍັດເວລາ, ຫຼີກເວັ້ນການໂຄສະນາ",
+    "subscription_title_7": "ບໍ່ມີໂຄສະນາອີກຕໍ່ໄປ!",
+    "subscription_title_8": "ເຂົ້າເຖິງເນື້ອຫາໂດຍກົງ, ໂດຍບໍ່ມີການໂຄສະນາ!"
 }

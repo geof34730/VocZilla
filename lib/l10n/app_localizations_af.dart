@@ -705,5 +705,47 @@ class AppLocalizationsAf extends AppLocalizations {
   String get drawer_themes_list => 'Ons lyste van temas';
 
   @override
-  String get subscription_benefit_no_pub => 'Geen advertensies is op die toepassing sigbaar nie';
+  String get subscription_benefit_zero_pub => 'Geen advertensies';
+
+  @override
+  String get subscription_navigation_more_speed => 'Vinniger navigasie';
+
+  @override
+  String get subscription_max_concentration => 'Konsentrasie maksimum';
+
+  @override
+  String get subscription_description1 => 'Advertensies help ons om die toepassing gratis te hou.';
+
+  @override
+  String get subscription_description2 => 'Maar as jy \'n gladde, afleidingsvrye ervaring wil hê, gradeer op na Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer-premie';
+
+  @override
+  String get subscription_go_with_pub => 'Gaan voort met advertensie';
+
+  @override
+  String get subscription_title_1 => 'Advertensies? Vergeet hulle!';
+
+  @override
+  String get subscription_title_2 => 'Bly gefokus, vergeet die advertensies';
+
+  @override
+  String get subscription_title_3 => 'Word jy ook deur advertensies gepla?';
+
+  @override
+  String get subscription_title_4 => 'Stop die advertensies!';
+
+  @override
+  String get subscription_title_5 => 'Moeg vir advertensies?';
+
+  @override
+  String get subscription_title_6 => 'Bespaar tyd, vermy advertensies';
+
+  @override
+  String get subscription_title_7 => 'Geen meer advertensies nie!';
+
+  @override
+  String get subscription_title_8 => 'Kry direk toegang tot die inhoud, sonder advertensies!';
 }

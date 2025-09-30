@@ -705,5 +705,47 @@ class AppLocalizationsZh extends AppLocalizations {
   String get drawer_themes_list => '我们的主题列表';
 
   @override
-  String get subscription_benefit_no_pub => '应用程序上没有可见的广告';
+  String get subscription_benefit_zero_pub => '零广告';
+
+  @override
+  String get subscription_navigation_more_speed => '更快的导航';
+
+  @override
+  String get subscription_max_concentration => '最大浓度';
+
+  @override
+  String get subscription_description1 => '广告帮助我们保持应用程序免费。';
+
+  @override
+  String get subscription_description2 => '但如果您想要流畅、无干扰的体验，请升级到 Premium。';
+
+  @override
+  String get subscription_go_premium => '过路者高级版';
+
+  @override
+  String get subscription_go_with_pub => '继续广告';
+
+  @override
+  String get subscription_title_1 => '广告？忘掉它们吧！';
+
+  @override
+  String get subscription_title_2 => '保持专注，忘记广告';
+
+  @override
+  String get subscription_title_3 => '您是否也对广告感到困扰？';
+
+  @override
+  String get subscription_title_4 => '停止广告！';
+
+  @override
+  String get subscription_title_5 => '厌倦了广告？';
+
+  @override
+  String get subscription_title_6 => '节省时间，避免广告';
+
+  @override
+  String get subscription_title_7 => '沒有廣告！';
+
+  @override
+  String get subscription_title_8 => '直接访问内容，无广告！';
 }

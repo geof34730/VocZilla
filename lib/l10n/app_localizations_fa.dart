@@ -705,5 +705,47 @@ class AppLocalizationsFa extends AppLocalizations {
   String get drawer_themes_list => 'لیست‌های تم‌های ما';
 
   @override
-  String get subscription_benefit_no_pub => 'هیچ تبلیغی در برنامه قابل مشاهده نیست';
+  String get subscription_benefit_zero_pub => 'تبلیغات صفر';
+
+  @override
+  String get subscription_navigation_more_speed => 'ناوبری سریع‌تر';
+
+  @override
+  String get subscription_max_concentration => 'حداکثر غلظت';
+
+  @override
+  String get subscription_description1 => 'تبلیغات به ما کمک می‌کنند تا برنامه را رایگان نگه داریم.';
+
+  @override
+  String get subscription_description2 => 'اما اگر می‌خواهید یک تجربه روان و بدون حواس‌پرتی داشته باشید، به نسخه پریمیوم ارتقا دهید.';
+
+  @override
+  String get subscription_go_premium => 'پاسور پریمیوم';
+
+  @override
+  String get subscription_go_with_pub => 'ادامه تبلیغ';
+
+  @override
+  String get subscription_title_1 => 'تبلیغات؟ آنها را فراموش کنید!';
+
+  @override
+  String get subscription_title_2 => 'متمرکز بمانید، تبلیغات را فراموش کنید';
+
+  @override
+  String get subscription_title_3 => 'آیا شما هم از تبلیغات کلافه شده‌اید؟';
+
+  @override
+  String get subscription_title_4 => 'تبلیغات را متوقف کنید!';
+
+  @override
+  String get subscription_title_5 => 'از تبلیغات خسته شدی؟';
+
+  @override
+  String get subscription_title_6 => 'صرفه‌جویی در زمان، جلوگیری از تبلیغات';
+
+  @override
+  String get subscription_title_7 => 'دیگر تبلیغات ممنوع!';
+
+  @override
+  String get subscription_title_8 => 'مستقیماً و بدون تبلیغات به محتوا دسترسی پیدا کنید!';
 }

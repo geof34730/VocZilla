@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Nire zerrenda pertsonalak",
     "drawer_defined_list": "Gure aurrez definitutako zerrendak",
     "drawer_themes_list": "Gure gai zerrendak",
-    "subscription_benefit_no_pub": "Ez da iragarkirik ikusten aplikazioan"
+    "subscription_benefit_zero_pub": "Zero publizitatea",
+    "subscription_navigation_more_speed": "Nabigazio azkarragoa",
+    "subscription_max_concentration": "Kontzentrazio maximoa",
+    "subscription_description1": "Iragarkiek aplikazioa doakoa izaten laguntzen digute.",
+    "subscription_description2": "Baina esperientzia leun eta distrakziorik gabekoa nahi baduzu, berritu Premium-era.",
+    "subscription_go_premium": "Pasabide Premium",
+    "subscription_go_with_pub": "Jarraitu iragarkiarekin",
+    "subscription_title_1": "Iragarkiak? Ahaztu itzazu!",
+    "subscription_title_2": "Egon arreta, ahaztu iragarkiak",
+    "subscription_title_3": "Publizitateak ere kezkatzen zaitu?",
+    "subscription_title_4": "Gelditu iragarkiak!",
+    "subscription_title_5": "Publizitateaz nekatuta?",
+    "subscription_title_6": "Aurreztu denbora, saihestu publizitatea",
+    "subscription_title_7": "Iragarki gehiago ez!",
+    "subscription_title_8": "Sartu edukira zuzenean, iragarkirik gabe!"
 }

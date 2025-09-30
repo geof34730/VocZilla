@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Les meves llistes personals",
     "drawer_defined_list": "Les nostres llistes predefinides",
     "drawer_themes_list": "Les nostres llistes de temes",
-    "subscription_benefit_no_pub": "No hi ha publicitat visible a l'aplicació"
+    "subscription_benefit_zero_pub": "Zero publicitat",
+    "subscription_navigation_more_speed": "Navegació més ràpida",
+    "subscription_max_concentration": "Concentració màxima",
+    "subscription_description1": "Els anuncis ens ajuden a mantenir l'aplicació gratuïta.",
+    "subscription_description2": "Però si voleu una experiència fluida i sense distraccions, actualitzeu a Premium.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Continua amb l'anunci",
+    "subscription_title_1": "Anuncis? Oblida't d'ells!",
+    "subscription_title_2": "Mantingueu la concentració, oblideu-vos dels anuncis",
+    "subscription_title_3": "També et molesta la publicitat?",
+    "subscription_title_4": "Atureu els anuncis!",
+    "subscription_title_5": "Cansat de la publicitat?",
+    "subscription_title_6": "Estalvieu temps, eviteu publicitat",
+    "subscription_title_7": "No més anuncis!",
+    "subscription_title_8": "Accedeix al contingut directament, sense publicitat!"
 }

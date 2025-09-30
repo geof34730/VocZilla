@@ -705,5 +705,47 @@ class AppLocalizationsBe extends AppLocalizations {
   String get drawer_themes_list => 'Нашы спісы тэм';
 
   @override
-  String get subscription_benefit_no_pub => 'У дадатку не бачная рэклама';
+  String get subscription_benefit_zero_pub => 'Нулявая рэклама';
+
+  @override
+  String get subscription_navigation_more_speed => 'Хутчэйшая навігацыя';
+
+  @override
+  String get subscription_max_concentration => 'Максімальная канцэнтрацыя';
+
+  @override
+  String get subscription_description1 => 'Рэклама дапамагае нам заставацца бясплатным дадаткам.';
+
+  @override
+  String get subscription_description2 => 'Але калі вы хочаце атрымліваць асалоду ад гульні без адцягненняў, перайдзіце на Premium.';
+
+  @override
+  String get subscription_go_premium => 'Прэміум-пасараў';
+
+  @override
+  String get subscription_go_with_pub => 'Працягнуць з рэкламай';
+
+  @override
+  String get subscription_title_1 => 'Рэклама? Забудзьцеся пра яе!';
+
+  @override
+  String get subscription_title_2 => 'Засяродзьцеся, забудзьцеся пра рэкламу';
+
+  @override
+  String get subscription_title_3 => 'Вас таксама турбуе рэклама?';
+
+  @override
+  String get subscription_title_4 => 'Спыніце рэкламу!';
+
+  @override
+  String get subscription_title_5 => 'Стаміліся ад рэкламы?';
+
+  @override
+  String get subscription_title_6 => 'Эканомце час, пазбягайце рэкламы';
+
+  @override
+  String get subscription_title_7 => 'Больш ніякай рэкламы!';
+
+  @override
+  String get subscription_title_8 => 'Атрымлівайце доступ да кантэнту непасрэдна, без рэкламы!';
 }

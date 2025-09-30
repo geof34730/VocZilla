@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Իմ անձնական ցուցակները",
     "drawer_defined_list": "Մեր նախապես սահմանված ցուցակները",
     "drawer_themes_list": "Մեր թեմաների ցանկերը",
-    "subscription_benefit_no_pub": "Դիմումում գովազդը տեսանելի չէ"
+    "subscription_benefit_zero_pub": "Զրոյական գովազդ",
+    "subscription_navigation_more_speed": "Ավելի արագ նավիգացիա",
+    "subscription_max_concentration": "Առավելագույն կոնցենտրացիա",
+    "subscription_description1": "Գովազդները մեզ օգնում են հավելվածը անվճար պահել։",
+    "subscription_description2": "Բայց եթե ուզում եք սահուն, առանց շեղումների փորձառություն, անցեք Premium-ի։",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Շարունակել գովազդը",
+    "subscription_title_1": "Գովազդնե՞ր։ Մոռացե՛ք դրանց մասին։",
+    "subscription_title_2": "Մնացեք կենտրոնացած, մոռացեք գովազդների մասին",
+    "subscription_title_3": "Ձեզ նույնպես անհանգստացնո՞ւմ է գովազդը։",
+    "subscription_title_4": "Դադարեցրեք գովազդները!",
+    "subscription_title_5": "Հոգնե՞լ եք գովազդից։",
+    "subscription_title_6": "Խնայեք ժամանակ, խուսափեք գովազդից",
+    "subscription_title_7": "Այլևս գովազդներ չկան!",
+    "subscription_title_8": "Մուտք գործեք բովանդակությանը անմիջապես, առանց գովազդի։"
 }

@@ -275,7 +275,7 @@ class _HeaderSection extends StatelessWidget {
           _BenefitRow(text: context.loc.subscription_benefit_full_access),
           _BenefitRow(text: context.loc.subscription_benefit_unlimited),
           _BenefitRow(text: context.loc.subscription_benefit_updates),
-          _BenefitRow(text: context.loc.subscription_benefit_no_pub),
+          _BenefitRow(text: context.loc.subscription_benefit_zero_pub),
         ],
       ),
     );

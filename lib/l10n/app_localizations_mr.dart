@@ -705,5 +705,47 @@ class AppLocalizationsMr extends AppLocalizations {
   String get drawer_themes_list => 'आमच्या थीम्सच्या याद्या';
 
   @override
-  String get subscription_benefit_no_pub => 'अनुप्रयोगावर कोणतीही जाहिरात दिसत नाही.';
+  String get subscription_benefit_zero_pub => 'शून्य जाहिरात';
+
+  @override
+  String get subscription_navigation_more_speed => 'जलद नेव्हिगेशन';
+
+  @override
+  String get subscription_max_concentration => 'जास्तीत जास्त एकाग्रता';
+
+  @override
+  String get subscription_description1 => 'जाहिराती आम्हाला अॅप मोफत ठेवण्यास मदत करतात.';
+
+  @override
+  String get subscription_description2 => 'पण जर तुम्हाला एक गुळगुळीत, लक्ष विचलित न करता अनुभव हवा असेल तर प्रीमियम वर अपग्रेड करा.';
+
+  @override
+  String get subscription_go_premium => 'पासर प्रीमियम';
+
+  @override
+  String get subscription_go_with_pub => 'जाहिरातीसह सुरू ठेवा';
+
+  @override
+  String get subscription_title_1 => 'जाहिराती? त्या विसरा!';
+
+  @override
+  String get subscription_title_2 => 'लक्ष केंद्रित करा, जाहिराती विसरून जा';
+
+  @override
+  String get subscription_title_3 => 'तुम्हालाही जाहिरातींचा त्रास होतो का?';
+
+  @override
+  String get subscription_title_4 => 'जाहिराती थांबवा!';
+
+  @override
+  String get subscription_title_5 => 'जाहिरातींचा कंटाळा आला आहे का?';
+
+  @override
+  String get subscription_title_6 => 'वेळ वाचवा, जाहिराती टाळा';
+
+  @override
+  String get subscription_title_7 => 'आणखी जाहिराती नाहीत!';
+
+  @override
+  String get subscription_title_8 => 'जाहिरातीशिवाय थेट सामग्रीमध्ये प्रवेश करा!';
 }

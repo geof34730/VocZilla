@@ -705,5 +705,47 @@ class AppLocalizationsBn extends AppLocalizations {
   String get drawer_themes_list => 'আমাদের থিমের তালিকা';
 
   @override
-  String get subscription_benefit_no_pub => 'অ্যাপ্লিকেশনটিতে কোনও বিজ্ঞাপন দৃশ্যমান নয়';
+  String get subscription_benefit_zero_pub => 'কোন বিজ্ঞাপন নেই';
+
+  @override
+  String get subscription_navigation_more_speed => 'দ্রুততর নেভিগেশন';
+
+  @override
+  String get subscription_max_concentration => 'সর্বাধিক ঘনত্ব';
+
+  @override
+  String get subscription_description1 => 'বিজ্ঞাপন আমাদের অ্যাপটি বিনামূল্যে রাখতে সাহায্য করে।';
+
+  @override
+  String get subscription_description2 => 'কিন্তু যদি আপনি একটি মসৃণ, বিভ্রান্তিমুক্ত অভিজ্ঞতা চান, তাহলে প্রিমিয়ামে আপগ্রেড করুন।';
+
+  @override
+  String get subscription_go_premium => 'পাসার প্রিমিয়াম';
+
+  @override
+  String get subscription_go_with_pub => 'বিজ্ঞাপন দিয়ে চালিয়ে যান';
+
+  @override
+  String get subscription_title_1 => 'বিজ্ঞাপন? ভুলে যাও!';
+
+  @override
+  String get subscription_title_2 => 'মনোযোগী থাকুন, বিজ্ঞাপন ভুলে যান';
+
+  @override
+  String get subscription_title_3 => 'তুমি কি বিজ্ঞাপন দেখে বিরক্ত?';
+
+  @override
+  String get subscription_title_4 => 'বিজ্ঞাপন বন্ধ করো!';
+
+  @override
+  String get subscription_title_5 => 'বিজ্ঞাপন দেখে ক্লান্ত?';
+
+  @override
+  String get subscription_title_6 => 'সময় বাঁচান, বিজ্ঞাপন এড়িয়ে চলুন';
+
+  @override
+  String get subscription_title_7 => 'আর কোন বিজ্ঞাপন নেই!';
+
+  @override
+  String get subscription_title_8 => 'বিজ্ঞাপন ছাড়াই সরাসরি কন্টেন্ট অ্যাক্সেস করুন!';
 }

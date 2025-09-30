@@ -705,5 +705,47 @@ class AppLocalizationsKn extends AppLocalizations {
   String get drawer_themes_list => 'ನಮ್ಮ ಥೀಮ್‌ಗಳ ಪಟ್ಟಿಗಳು';
 
   @override
-  String get subscription_benefit_no_pub => 'ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಯಾವುದೇ ಜಾಹೀರಾತು ಗೋಚರಿಸುವುದಿಲ್ಲ.';
+  String get subscription_benefit_zero_pub => 'ಜಾಹೀರಾತು ಇಲ್ಲ';
+
+  @override
+  String get subscription_navigation_more_speed => 'ವೇಗವಾದ ನ್ಯಾವಿಗೇಷನ್';
+
+  @override
+  String get subscription_max_concentration => 'ಗರಿಷ್ಠ ಸಾಂದ್ರತೆ';
+
+  @override
+  String get subscription_description1 => 'ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಮುಕ್ತವಾಗಿಡಲು ಜಾಹೀರಾತುಗಳು ನಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತವೆ.';
+
+  @override
+  String get subscription_description2 => 'ಆದರೆ ನೀವು ಸುಗಮ, ಅಡ್ಡಿ-ಮುಕ್ತ ಅನುಭವವನ್ನು ಬಯಸಿದರೆ, ಪ್ರೀಮಿಯಂಗೆ ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ.';
+
+  @override
+  String get subscription_go_premium => 'ಪಾಸರ್ ಪ್ರೀಮಿಯಂ';
+
+  @override
+  String get subscription_go_with_pub => 'ಜಾಹೀರಾತಿನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ';
+
+  @override
+  String get subscription_title_1 => 'ಜಾಹೀರಾತುಗಳೇ? ಅವುಗಳನ್ನು ಮರೆತುಬಿಡಿ!';
+
+  @override
+  String get subscription_title_2 => 'ಜಾಹೀರಾತುಗಳನ್ನು ಮರೆತುಬಿಡಿ, ಗಮನಹರಿಸಿ';
+
+  @override
+  String get subscription_title_3 => 'ನೀವು ಜಾಹೀರಾತಿನಿಂದಲೂ ತೊಂದರೆ ಅನುಭವಿಸುತ್ತಿದ್ದೀರಾ?';
+
+  @override
+  String get subscription_title_4 => 'ಜಾಹೀರಾತುಗಳನ್ನು ನಿಲ್ಲಿಸಿ!';
+
+  @override
+  String get subscription_title_5 => 'ಜಾಹೀರಾತಿನಿಂದ ಬೇಸತ್ತಿದ್ದೀರಾ?';
+
+  @override
+  String get subscription_title_6 => 'ಜಾಹೀರಾತು ತಪ್ಪಿಸಿ, ಸಮಯ ಉಳಿಸಿ';
+
+  @override
+  String get subscription_title_7 => 'ಇನ್ನು ಜಾಹೀರಾತುಗಳಿಲ್ಲ!';
+
+  @override
+  String get subscription_title_8 => 'ಜಾಹೀರಾತು ಇಲ್ಲದೆ ನೇರವಾಗಿ ವಿಷಯವನ್ನು ಪ್ರವೇಶಿಸಿ!';
 }

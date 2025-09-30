@@ -705,5 +705,47 @@ class AppLocalizationsTh extends AppLocalizations {
   String get drawer_themes_list => 'รายการหัวข้อของเรา';
 
   @override
-  String get subscription_benefit_no_pub => 'ไม่มีโฆษณาปรากฏบนแอปพลิเคชัน';
+  String get subscription_benefit_zero_pub => 'การโฆษณาเป็นศูนย์';
+
+  @override
+  String get subscription_navigation_more_speed => 'การนำทางที่รวดเร็วยิ่งขึ้น';
+
+  @override
+  String get subscription_max_concentration => 'ความเข้มข้นสูงสุด';
+
+  @override
+  String get subscription_description1 => 'โฆษณาช่วยให้เราสามารถรักษาแอปให้ฟรีได้';
+
+  @override
+  String get subscription_description2 => 'แต่ถ้าคุณต้องการประสบการณ์ที่ราบรื่นและไม่มีสิ่งรบกวน โปรดอัปเกรดเป็นพรีเมียม';
+
+  @override
+  String get subscription_go_premium => 'พาสเซอร์ พรีเมียม';
+
+  @override
+  String get subscription_go_with_pub => 'ดำเนินการต่อด้วยโฆษณา';
+
+  @override
+  String get subscription_title_1 => 'โฆษณาเหรอ? ลืมมันไปได้เลย!';
+
+  @override
+  String get subscription_title_2 => 'จดจ่ออยู่กับสิ่งที่ทำ ลืมโฆษณาไปได้เลย';
+
+  @override
+  String get subscription_title_3 => 'คุณก็กังวลเรื่องโฆษณาเหมือนกันหรือเปล่า?';
+
+  @override
+  String get subscription_title_4 => 'หยุดโฆษณา!';
+
+  @override
+  String get subscription_title_5 => 'เบื่อกับการโฆษณาแล้วหรือยัง?';
+
+  @override
+  String get subscription_title_6 => 'ประหยัดเวลา หลีกเลี่ยงการโฆษณา';
+
+  @override
+  String get subscription_title_7 => 'ไม่มีโฆษณาอีกต่อไป!';
+
+  @override
+  String get subscription_title_8 => 'เข้าถึงเนื้อหาได้โดยตรงโดยไม่ต้องโฆษณา!';
 }

@@ -705,5 +705,47 @@ class AppLocalizationsHi extends AppLocalizations {
   String get drawer_themes_list => 'हमारे विषयों की सूची';
 
   @override
-  String get subscription_benefit_no_pub => 'एप्लिकेशन पर कोई विज्ञापन दिखाई नहीं दे रहा है';
+  String get subscription_benefit_zero_pub => 'शून्य विज्ञापन';
+
+  @override
+  String get subscription_navigation_more_speed => 'तेज़ नेविगेशन';
+
+  @override
+  String get subscription_max_concentration => 'सांद्रता अधिकतम';
+
+  @override
+  String get subscription_description1 => 'विज्ञापन हमें ऐप को निःशुल्क बनाए रखने में मदद करते हैं।';
+
+  @override
+  String get subscription_description2 => 'लेकिन यदि आप सहज, व्यवधान-मुक्त अनुभव चाहते हैं, तो प्रीमियम में अपग्रेड करें।';
+
+  @override
+  String get subscription_go_premium => 'पासर प्रीमियम';
+
+  @override
+  String get subscription_go_with_pub => 'विज्ञापन के साथ जारी रखें';
+
+  @override
+  String get subscription_title_1 => 'विज्ञापन? भूल जाइए!';
+
+  @override
+  String get subscription_title_2 => 'अपना ध्यान केंद्रित रखें, विज्ञापनों को भूल जाएं';
+
+  @override
+  String get subscription_title_3 => 'क्या आप भी विज्ञापन से परेशान हैं?';
+
+  @override
+  String get subscription_title_4 => 'विज्ञापन बंद करो!';
+
+  @override
+  String get subscription_title_5 => 'विज्ञापन से थक गये हैं?';
+
+  @override
+  String get subscription_title_6 => 'समय बचाएँ, विज्ञापन से बचें';
+
+  @override
+  String get subscription_title_7 => 'अब कोई विज्ञापन नहीं!';
+
+  @override
+  String get subscription_title_8 => 'विज्ञापन के बिना सीधे सामग्री तक पहुंचें!';
 }

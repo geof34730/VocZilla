@@ -705,5 +705,47 @@ class AppLocalizationsSv extends AppLocalizations {
   String get drawer_themes_list => 'Våra listor över teman';
 
   @override
-  String get subscription_benefit_no_pub => 'Ingen reklam syns i appen';
+  String get subscription_benefit_zero_pub => 'Noll reklam';
+
+  @override
+  String get subscription_navigation_more_speed => 'Snabbare navigering';
+
+  @override
+  String get subscription_max_concentration => 'Maximal koncentration';
+
+  @override
+  String get subscription_description1 => 'Annonser hjälper oss att hålla appen gratis.';
+
+  @override
+  String get subscription_description2 => 'Men om du vill ha en smidig och störningsfri upplevelse, uppgradera till Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Fortsätt med annonsen';
+
+  @override
+  String get subscription_title_1 => 'Reklam? Glöm dem!';
+
+  @override
+  String get subscription_title_2 => 'Håll fokus, glöm reklamen';
+
+  @override
+  String get subscription_title_3 => 'Störs du också av reklam?';
+
+  @override
+  String get subscription_title_4 => 'Stoppa annonserna!';
+
+  @override
+  String get subscription_title_5 => 'Trött på reklam?';
+
+  @override
+  String get subscription_title_6 => 'Spara tid, undvik reklam';
+
+  @override
+  String get subscription_title_7 => 'Inga fler annonser!';
+
+  @override
+  String get subscription_title_8 => 'Få tillgång till innehållet direkt, utan reklam!';
 }

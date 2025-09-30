@@ -705,5 +705,47 @@ class AppLocalizationsRo extends AppLocalizations {
   String get drawer_themes_list => 'Listele noastre de teme';
 
   @override
-  String get subscription_benefit_no_pub => 'Nu este vizibilă nicio reclamă în aplicație';
+  String get subscription_benefit_zero_pub => 'Zero publicitate';
+
+  @override
+  String get subscription_navigation_more_speed => 'Navigare mai rapidă';
+
+  @override
+  String get subscription_max_concentration => 'Concentrație maximă';
+
+  @override
+  String get subscription_description1 => 'Reclamele ne ajută să menținem aplicația gratuită.';
+
+  @override
+  String get subscription_description2 => 'Dar dacă vrei o experiență fluidă, fără distrageri, fă upgrade la Premium.';
+
+  @override
+  String get subscription_go_premium => 'Premium Trecător';
+
+  @override
+  String get subscription_go_with_pub => 'Continuă cu anunțul';
+
+  @override
+  String get subscription_title_1 => 'Reclame? Uitați de ele!';
+
+  @override
+  String get subscription_title_2 => 'Rămâi concentrat, uită de reclame';
+
+  @override
+  String get subscription_title_3 => 'Și pe tine te deranjează publicitatea?';
+
+  @override
+  String get subscription_title_4 => 'Opriți reclamele!';
+
+  @override
+  String get subscription_title_5 => 'Te-ai săturat de publicitate?';
+
+  @override
+  String get subscription_title_6 => 'Economisiți timp, evitați publicitatea';
+
+  @override
+  String get subscription_title_7 => 'Gata cu reclamele!';
+
+  @override
+  String get subscription_title_8 => 'Accesează conținutul direct, fără reclame!';
 }

@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "我的个人清单",
     "drawer_defined_list": "我们的预定义列表",
     "drawer_themes_list": "我们的主题列表",
-    "subscription_benefit_no_pub": "应用程序上没有可见的广告"
+    "subscription_benefit_zero_pub": "零广告",
+    "subscription_navigation_more_speed": "更快的导航",
+    "subscription_max_concentration": "最大浓度",
+    "subscription_description1": "广告帮助我们保持应用程序免费。",
+    "subscription_description2": "但如果您想要流畅、无干扰的体验，请升级到 Premium。",
+    "subscription_go_premium": "过路者高级版",
+    "subscription_go_with_pub": "继续广告",
+    "subscription_title_1": "广告？忘掉它们吧！",
+    "subscription_title_2": "保持专注，忘记广告",
+    "subscription_title_3": "您是否也对广告感到困扰？",
+    "subscription_title_4": "停止广告！",
+    "subscription_title_5": "厌倦了广告？",
+    "subscription_title_6": "节省时间，避免广告",
+    "subscription_title_7": "沒有廣告！",
+    "subscription_title_8": "直接访问内容，无广告！"
 }

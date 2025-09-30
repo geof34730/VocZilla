@@ -705,5 +705,47 @@ class AppLocalizationsSq extends AppLocalizations {
   String get drawer_themes_list => 'Listat tona të temave';
 
   @override
-  String get subscription_benefit_no_pub => 'Asnjë reklamë nuk është e dukshme në aplikacion';
+  String get subscription_benefit_zero_pub => 'Zero reklama';
+
+  @override
+  String get subscription_navigation_more_speed => 'Navigim më i shpejtë';
+
+  @override
+  String get subscription_max_concentration => 'Maksimumi i përqendrimit';
+
+  @override
+  String get subscription_description1 => 'Reklamat na ndihmojnë ta mbajmë aplikacionin falas.';
+
+  @override
+  String get subscription_description2 => 'Por nëse dëshironi një përvojë të qetë dhe pa shpërqendrime, përmirësojeni në Premium.';
+
+  @override
+  String get subscription_go_premium => 'Premium Kalimtar';
+
+  @override
+  String get subscription_go_with_pub => 'Vazhdo me reklamën';
+
+  @override
+  String get subscription_title_1 => 'Reklama? Harrojini!';
+
+  @override
+  String get subscription_title_2 => 'Qëndro i përqendruar, harro reklamat';
+
+  @override
+  String get subscription_title_3 => 'A të shqetësojnë edhe reklamat?';
+
+  @override
+  String get subscription_title_4 => 'Ndalo reklamat!';
+
+  @override
+  String get subscription_title_5 => 'Të lodhur nga reklamat?';
+
+  @override
+  String get subscription_title_6 => 'Kurseni kohë, shmangni reklamat';
+
+  @override
+  String get subscription_title_7 => 'Mjaft me reklama! Nuk ka më reklama!';
+
+  @override
+  String get subscription_title_8 => 'Qasuni përmbajtjes direkt, pa reklama!';
 }

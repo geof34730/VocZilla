@@ -12,237 +12,274 @@ import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';
 import '../../../global.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-
+import 'dart:math';
 class DialogHelper {
-   /*Future<void> showFreeTrialDialog({required BuildContext context, int daysLeft = 0}) async {
-     Logger.Magenta.log("Show Trial Dialogue ");
-      if (context.mounted ) {
-        showDialog(
-            context: context,
-            builder: (BuildContext dialogContext) {
-              return AlertDialog(
-                elevation: 5,
-                actionsOverflowAlignment: OverflowBarAlignment.center,
-                actionsAlignment: MainAxisAlignment.center,
-                shape: RoundedRectangleBorder( borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                contentPadding: EdgeInsets.only(top: 10.0),
-                title: Text(
-                  context.loc.widget_dialogHelper_showfreetrialdialog_description1,
-                  textAlign: TextAlign.center,
-                  style: getFontForLanguage(
-                    codelang: Localizations.localeOf(context).languageCode,
-                    fontSize: 18,
-                  ),
-                ),
-                content: SingleChildScrollView(
-                  child: ListBody(
+  Future<void> showSubscriptionBanner({required BuildContext context}) async {
+    Logger.Magenta.log("Show Subscription Dialogue");
+
+    if (!context.mounted) return;
+
+    // Titres en rotation aléatoire
+    final titles = [
+      "🙈 ${context.loc.subscription_title_1}",
+      "🎯 ${context.loc.subscription_title_2}",
+      "😅 ${context.loc.subscription_title_3}",
+      "🚫 ${context.loc.subscription_title_4}",
+      "🤔 ${context.loc.subscription_title_5}",
+      "⏰ ${context.loc.subscription_title_6}",
+      "🎥 ${context.loc.subscription_title_7}",
+      "⏭️ ${context.loc.subscription_title_8}",
+    ];
+    final randomTitle = titles[Random().nextInt(titles.length)];
+
+    final scheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+
+    showDialog(
+      context: context,
+      builder: (dialogContext) {
+        return Dialog(
+          insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+          backgroundColor: scheme.surface,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 380),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // En-tête
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
-                        child: RichText(
-                          textAlign: TextAlign.center,
-                          text: TextSpan(
-                            text: '${context.loc.widget_dialogHelper_showfreetrialdialog_description2} ',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontFamily: GoogleFonts
-                                  .roboto()
-                                  .fontFamily,
-                              color: Colors.black,
-                              height: 1.2,
-                            ),
-                            children: <TextSpan>[
-                              TextSpan(
-                                text: '$daysFreeTrial ${context.loc.widget_dialogHelper_showfreetrialdialog_days}',
-                                style: getFontForLanguage(
-                                  codelang: Localizations.localeOf(context).languageCode,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                ).copyWith(
-                                  color: Colors.black,
-                                ),
-                              ),
-                              TextSpan(
-                                text: " ${context.loc.widget_dialogHelper_showfreetrialdialog_description3}",
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: 0, bottom: 0, left: 20, right: 20),
+                      Expanded(
                         child: Text(
-                          '${context.loc.widget_dialogHelper_showfreetrialdialog_description4} ${daysLeft} ${context.loc.widget_dialogHelper_showfreetrialdialog_days}',
+                          randomTitle,
                           textAlign: TextAlign.center,
-                          style: getFontForLanguage(
-                            codelang: Localizations.localeOf(context).languageCode,
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          ).copyWith(
+                          style: textTheme.titleLarge?.copyWith(
+                            fontWeight: FontWeight.w800,
                             height: 1.2,
-                            color: Colors.red,
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 0, bottom: 0, left: 20, right: 20),
-                        child: Text(
-                          context.loc.widget_dialogHelper_showfreetrialdialog_description5,
-                          textAlign: TextAlign.center,
-                          style: getFontForLanguage(
-                            codelang: Localizations.localeOf(context).languageCode,
-                            fontSize: 18,
-                          ).copyWith(
-                            height: 1.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only( top: 20, bottom: 20, left: 20, right: 20),
-                            child: Text(
-                              textAlign: TextAlign.center,
-                              "${context.loc.widget_dialogHelper_showfreetrialdialog_description6} :",
-                              style: TextStyle(
-                                height: 1.2,
-                                fontSize: 15,
-                                fontFamily: GoogleFonts
-                                    .roboto()
-                                    .fontFamily,
-                                color: Colors.black,
-                              ),
-                            ),
                       ),
                     ],
                   ),
-                ),
-                actions: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(dialogContext).pop();
-                      Navigator.pushNamed(dialogContext, AppRoute.subscription);
-                    },
-                    child: Text(context.loc.button_sabonner),
+                  const SizedBox(height: 16),
+
+                  // Sous-titre
+                  Text(
+                    "${context.loc.subscription_description1}\n"
+                    "${context.loc.subscription_description2}",
+                    textAlign: TextAlign.center,
+                    style: textTheme.bodyMedium?.copyWith(
+                      color: scheme.onSurface.withOpacity(.85),
+                      height: 1.35,
+                    ),
                   ),
+                  const SizedBox(height: 16),
+
+                  // Avantages
+                  Container(
+                    decoration: BoxDecoration(
+                      color: scheme.surfaceContainerHighest.withOpacity(.5),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                    child: Column(
+                      children:  [
+                        _BenefitRow(text: context.loc.subscription_benefit_zero_pub),
+                        SizedBox(height: 8),
+                        _BenefitRow(text: context.loc.subscription_navigation_more_speed),
+                        SizedBox(height: 8),
+                        _BenefitRow(text: context.loc.subscription_max_concentration),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+
+                  // CTA principal
+                  SizedBox(
+                    width: double.infinity,
+                    child: FilledButton.icon(
+                      style: FilledButton.styleFrom(
+                        minimumSize: const Size.fromHeight(48),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                        elevation: 1.5,
+                      ),
+                      onPressed: () {
+                        Navigator.of(dialogContext).pop();
+                        Navigator.pushNamed(dialogContext, AppRoute.subscription);
+                      },
+                      icon: const Icon(Icons.star_rounded),
+                      label:  Text(context.loc.subscription_go_premium),
+                    ),
+                  ),
+
+                  // Lien secondaire
                   TextButton(
-                    onPressed: () {
-                      Navigator.of(dialogContext).pop();
-                    },
-                    child: Text(context.loc.widget_dialogHelper_showfreetrialdialog_later),
+                    onPressed: () => Navigator.of(dialogContext).pop(),
+                    child: Text(
+                      context.loc.subscription_go_with_pub,
+                      style: textTheme.labelLarge?.copyWith(
+                        color: scheme.primary,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                 ],
-              );
-            }
+              ),
+            ),
+          ),
         );
-      }
-  }*/
+      },
+    );
+  }
+
+  Future<void> dialogBuilderShare({required BuildContext context, required String guidListPerso }){
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return SingleChildScrollView(
+          //  scrollDirection: Axis.vertical,
+            child: AlertDialog(
+              insetPadding: const EdgeInsets.symmetric(
+                  vertical: 10, horizontal: 10),
+              contentPadding: const EdgeInsets.symmetric(
+                  vertical: 20, horizontal: 10),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              icon: Column(mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    InkWell(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: const Icon(
+                          Icons.close,
+                        ))
+                  ]),
+              title: Text(
+                context.loc.share_dialogue_builder_title,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18.00),
+              ),
+              content: Column(mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                        width: 360,
+
+                        child: Text(
+                          context.loc.share_dialogue_builder_description_qrcode,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 14.00),
+                        )),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10.00, bottom: 10.0),
+                      child: Container(
+                          width: 280,
+                          height: 280,
+                          color: Colors.blue,
+                          child: QrImageView(
+                            data: "https://links.voczilla.com/share/$guidListPerso",
+                            version: 10,
+                            size: 280,
+                            gapless: true,
+                            backgroundColor: Colors.white,
+                          )),
+                    ),
+                    const Padding(
+                        padding: EdgeInsets.only(bottom: 10.0),
+                        child: Text(
+                          'OU',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 18.00, fontWeight: FontWeight.bold),
+                        )),
+                    SizedBox(
+                      width: 360,
+                      child: Text(
+                        context.loc.share_dialogue_builder_description_copy_url,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 14.00),
+                      ),
+                    ),
+                    SizedBox(
+                        width: 360,
+                        child: Padding(
+                            padding: const EdgeInsets.only(top: 0.0),
+                            child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      Clipboard.setData(
+                                        ClipboardData(
+                                            text: "https://links.voczilla.com/share/$guidListPerso"),
+                                      );
+                                    },
+                                    child: Text(
+                                      "https://links.voczilla.com/share/${guidListPerso
+                                          .substring(0, 5)}...",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 12.00,
+                                        color: Colors.blue,
+                                        decoration: TextDecoration
+                                            .underline, // Optionnel : pour montrer que c'est cliquable
+                                      ),
+                                    ),
+                                  ),
+                                  IconButton(
+                                    icon: const Icon(Icons.copy),
+                                    onPressed: () {
+                                      Clipboard.setData(
+                                        ClipboardData(
+                                            text: "https://links.voczilla.com/share/$guidListPerso"),
+                                      );
+                                    },
+                                  ),
+                                ]
+                            )
+                        )
+                    )
+                  ]
+              ),
+            ));
+      },
+    );
+  }
 
 
-   Future<void> dialogBuilderShare({required BuildContext context,required String guidListPerso }) {
-     return showDialog<void>(
-       context: context,
-       builder: (BuildContext context) {
-         return SingleChildScrollView(
-           //  scrollDirection: Axis.vertical,
-             child: AlertDialog(
-               insetPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-               contentPadding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-               clipBehavior: Clip.antiAliasWithSaveLayer,
-               icon: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.end, crossAxisAlignment: CrossAxisAlignment.end, children: [
-                 InkWell(
-                     onTap: () {
-                       Navigator.of(context).pop();
-                     },
-                     child: const Icon(
-                       Icons.close,
-                     ))
-               ]),
-               title:  Text(
-                 context.loc.share_dialogue_builder_title,
-                 textAlign: TextAlign.center,
-                 style: TextStyle(fontSize: 18.00),
-               ),
-               content: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-                  SizedBox(
-                     width: 360,
+}
+class _BenefitRow extends StatelessWidget {
+  const _BenefitRow({required this.text});
+  final String text;
 
-                     child: Text(
-                       context.loc.share_dialogue_builder_description_qrcode,
-                       textAlign: TextAlign.center,
-                       style: TextStyle(fontSize: 14.00),
-                     )),
-                 Padding(
-                   padding: const EdgeInsets.only(top: 10.00, bottom: 10.0),
-                   child: Container(
-                       width: 280,
-                       height: 280,
-                       color: Colors.blue,
-                       child: QrImageView(
-                         data: "https://links.voczilla.com/share/$guidListPerso",
-                         version: 10,
-                         size: 280,
-                         gapless: true,
-                         backgroundColor: Colors.white,
-                       )),
-                 ),
-                 const Padding(
-                     padding: EdgeInsets.only(bottom: 10.0),
-                     child: Text(
-                       'OU',
-                       textAlign: TextAlign.center,
-                       style: TextStyle(fontSize: 18.00, fontWeight: FontWeight.bold),
-                     )),
-                SizedBox(
-                     width: 360,
-                     child:Text(
-                       context.loc.share_dialogue_builder_description_copy_url,
-                       textAlign: TextAlign.center,
-                       style: TextStyle(fontSize: 14.00),
-                     ),
-                 ),
-               SizedBox(
-                   width: 360,
-                   child:Padding(
-                       padding: const EdgeInsets.only(top: 0.0),
-                       child:Row(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center, children: [
-                         GestureDetector(
-                           onTap: () {
-                             Clipboard.setData(
-                               ClipboardData(text: "https://links.voczilla.com/share/$guidListPerso"),
-                             );
-
-                           },
-                           child: Text(
-                             "https://links.voczilla.com/share/${guidListPerso.substring(0,5)}...",
-                             textAlign: TextAlign.center,
-                             style: TextStyle(
-                               fontSize: 12.00,
-                               color: Colors.blue,
-                               decoration: TextDecoration.underline, // Optionnel : pour montrer que c'est cliquable
-                             ),
-                           ),
-                         ),
-                         IconButton(
-                           icon: const Icon(Icons.copy),
-                           onPressed: () {
-                             Clipboard.setData(
-                               ClipboardData(text: "https://links.voczilla.com/share/$guidListPerso"),
-                             );
-
-                           },
-                         ),
-                         ]
-                       )
-                   )
-                )
-               ]
-               ),
-             ));
-       },
-     );
-   }
-
-
-
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Icon(Icons.check_circle_rounded, size: 22, color: Colors.green.shade600),
+        const SizedBox(width: 10),
+        Expanded(
+          child: Text(
+            text,
+            style: textTheme.bodyLarge?.copyWith(
+              fontWeight: FontWeight.w600,
+              color: scheme.onSurface,
+              height: 1.2,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }

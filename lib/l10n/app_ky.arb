@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Менин жеке тизмелерим",
     "drawer_defined_list": "Биздин алдын ала тизмелер",
     "drawer_themes_list": "Биздин темалардын тизмеси",
-    "subscription_benefit_no_pub": "Колдонмодо эч кандай жарнама көрүнбөйт"
+    "subscription_benefit_zero_pub": "Нөл жарнама",
+    "subscription_navigation_more_speed": "Тезирээк навигация",
+    "subscription_max_concentration": "Максималдуу концентрация",
+    "subscription_description1": "Жарнамалар колдонмону акысыз сактоого жардам берет.",
+    "subscription_description2": "Бирок, эгер сиз жылмакай, алаксыбай тажрыйба алгыңыз келсе, Premium'га жаңыртыңыз.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Жарнама менен улантуу",
+    "subscription_title_1": "Жарнамалар? Аларды унут!",
+    "subscription_title_2": "Фокуста болуңуз, жарнамаларды унутуңуз",
+    "subscription_title_3": "Сизди да жарнамалар кыйнап жатабы?",
+    "subscription_title_4": "Жарнамаларды токтот!",
+    "subscription_title_5": "Жарнамадан чарчадыңызбы?",
+    "subscription_title_6": "Убакытты үнөмдөңүз, жарнамадан алыс болуңуз",
+    "subscription_title_7": "Мындан ары жарнамалар жок!",
+    "subscription_title_8": "Жарнамасыз мазмунга түз кириңиз!"
 }

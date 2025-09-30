@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "បញ្ជីផ្ទាល់ខ្លួនរបស់ខ្ញុំ",
     "drawer_defined_list": "បញ្ជីដែលបានកំណត់ជាមុនរបស់យើង។",
     "drawer_themes_list": "បញ្ជីប្រធានបទរបស់យើង។",
-    "subscription_benefit_no_pub": "គ្មានការផ្សាយពាណិជ្ជកម្មអាចមើលឃើញនៅលើកម្មវិធីនោះទេ។"
+    "subscription_benefit_zero_pub": "ការផ្សាយពាណិជ្ជកម្មសូន្យ",
+    "subscription_navigation_more_speed": "ការរុករកលឿនជាងមុន",
+    "subscription_max_concentration": "ការផ្តោតអារម្មណ៍អតិបរមា",
+    "subscription_description1": "ការផ្សាយពាណិជ្ជកម្មជួយយើងរក្សាកម្មវិធីដោយឥតគិតថ្លៃ។",
+    "subscription_description2": "ប៉ុន្តែប្រសិនបើអ្នកចង់បានបទពិសោធន៍រលូន គ្មានការរំខាន សូមដំឡើងកំណែទៅ Premium។",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "បន្តជាមួយការផ្សាយពាណិជ្ជកម្ម",
+    "subscription_title_1": "ការផ្សាយពាណិជ្ជកម្ម? បំភ្លេចគេទៅ!",
+    "subscription_title_2": "រក្សាការផ្តោតអារម្មណ៍ បំភ្លេចការផ្សាយពាណិជ្ជកម្ម",
+    "subscription_title_3": "តើអ្នកក៏រំខានដោយការផ្សាយពាណិជ្ជកម្មដែរទេ?",
+    "subscription_title_4": "បញ្ឈប់ការផ្សាយពាណិជ្ជកម្ម!",
+    "subscription_title_5": "ធុញទ្រាន់នឹងការផ្សាយពាណិជ្ជកម្ម?",
+    "subscription_title_6": "ចំណេញពេលវេលា ជៀសវាងការផ្សាយពាណិជ្ជកម្ម",
+    "subscription_title_7": "គ្មានការផ្សាយពាណិជ្ជកម្មទៀតទេ!",
+    "subscription_title_8": "ចូលប្រើមាតិកាដោយផ្ទាល់ដោយគ្មានការផ្សាយពាណិជ្ជកម្ម!"
 }

@@ -705,5 +705,47 @@ class AppLocalizationsUk extends AppLocalizations {
   String get drawer_themes_list => 'Наші списки тем';
 
   @override
-  String get subscription_benefit_no_pub => 'У додатку не відображається реклама';
+  String get subscription_benefit_zero_pub => 'Нульова реклама';
+
+  @override
+  String get subscription_navigation_more_speed => 'Швидша навігація';
+
+  @override
+  String get subscription_max_concentration => 'Максимальна концентрація';
+
+  @override
+  String get subscription_description1 => 'Реклама допомагає нам залишатися безкоштовним застосунком.';
+
+  @override
+  String get subscription_description2 => 'Але якщо ви хочете плавного та безвідволікаючого досвіду, перейдіть на Premium.';
+
+  @override
+  String get subscription_go_premium => 'Преміум-пассер';
+
+  @override
+  String get subscription_go_with_pub => 'Продовжити з рекламою';
+
+  @override
+  String get subscription_title_1 => 'Реклама? Забудьте про неї!';
+
+  @override
+  String get subscription_title_2 => 'Зосередьтеся, забудьте про рекламу';
+
+  @override
+  String get subscription_title_3 => 'Вас також турбує реклама?';
+
+  @override
+  String get subscription_title_4 => 'Зупиніть рекламу!';
+
+  @override
+  String get subscription_title_5 => 'Втомилися від реклами?';
+
+  @override
+  String get subscription_title_6 => 'Заощадьте час, уникайте реклами';
+
+  @override
+  String get subscription_title_7 => 'Більше жодної реклами!';
+
+  @override
+  String get subscription_title_8 => 'Отримуйте доступ до контенту безпосередньо, без реклами!';
 }

@@ -705,5 +705,47 @@ class AppLocalizationsAm extends AppLocalizations {
   String get drawer_themes_list => 'የእኛ የገጽታ ዝርዝሮች';
 
   @override
-  String get subscription_benefit_no_pub => 'በመተግበሪያው ላይ ምንም ማስታወቂያ አይታይም።';
+  String get subscription_benefit_zero_pub => 'ዜሮ ማስታወቂያ';
+
+  @override
+  String get subscription_navigation_more_speed => 'ፈጣን አሰሳ';
+
+  @override
+  String get subscription_max_concentration => 'ከፍተኛ የማጎሪያ';
+
+  @override
+  String get subscription_description1 => 'ማስታወቂያዎች መተግበሪያውን ነጻ እንድናደርገው ይረዱናል።';
+
+  @override
+  String get subscription_description2 => 'ነገር ግን ለስላሳ፣ ከማዘናጋት የጸዳ ልምድ ከፈለጉ ወደ ፕሪሚየም ያሻሽሉ።';
+
+  @override
+  String get subscription_go_premium => 'ማለፊያ ፕሪሚየም';
+
+  @override
+  String get subscription_go_with_pub => 'በማስታወቂያ ይቀጥሉ';
+
+  @override
+  String get subscription_title_1 => 'ማስታወቂያዎች? እርሳቸው!';
+
+  @override
+  String get subscription_title_2 => 'ትኩረት ይስጡ ፣ ማስታወቂያዎችን ይረሱ';
+
+  @override
+  String get subscription_title_3 => 'እርስዎም በማስታወቂያ ይረብሹዎታል?';
+
+  @override
+  String get subscription_title_4 => 'ማስታወቂያዎችን አቁም!';
+
+  @override
+  String get subscription_title_5 => 'ማስታወቂያ ሰልችቶታል?';
+
+  @override
+  String get subscription_title_6 => 'ጊዜ ይቆጥቡ፣ ማስታወቂያን ያስወግዱ';
+
+  @override
+  String get subscription_title_7 => 'ከእንግዲህ ማስታወቂያዎች የሉም!';
+
+  @override
+  String get subscription_title_8 => 'ያለማስታወቂያ ይዘቱን በቀጥታ ይድረሱበት!';
 }

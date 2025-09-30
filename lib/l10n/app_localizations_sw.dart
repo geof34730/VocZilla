@@ -705,5 +705,47 @@ class AppLocalizationsSw extends AppLocalizations {
   String get drawer_themes_list => 'Orodha zetu za mada';
 
   @override
-  String get subscription_benefit_no_pub => 'Hakuna tangazo linaloonekana kwenye programu';
+  String get subscription_benefit_zero_pub => 'Bila matangazo';
+
+  @override
+  String get subscription_navigation_more_speed => 'Urambazaji wa haraka zaidi';
+
+  @override
+  String get subscription_max_concentration => 'Kiwango cha juu cha mkusanyiko';
+
+  @override
+  String get subscription_description1 => 'Matangazo hutusaidia kuweka programu bila malipo.';
+
+  @override
+  String get subscription_description2 => 'Lakini ikiwa unataka matumizi laini na yasiyo na usumbufu, pata toleo jipya la Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Endelea na tangazo';
+
+  @override
+  String get subscription_title_1 => 'Matangazo? Wasahau!';
+
+  @override
+  String get subscription_title_2 => 'Endelea kuzingatia, sahau matangazo';
+
+  @override
+  String get subscription_title_3 => 'Je, wewe pia unasumbuliwa na matangazo?';
+
+  @override
+  String get subscription_title_4 => 'Acha matangazo!';
+
+  @override
+  String get subscription_title_5 => 'Uchovu wa matangazo?';
+
+  @override
+  String get subscription_title_6 => 'Okoa wakati, epuka matangazo';
+
+  @override
+  String get subscription_title_7 => 'Hakuna matangazo zaidi!';
+
+  @override
+  String get subscription_title_8 => 'Fikia yaliyomo moja kwa moja, bila matangazo!';
 }

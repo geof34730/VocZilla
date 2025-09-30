@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Мої особисті списки",
     "drawer_defined_list": "Наші попередньо визначені списки",
     "drawer_themes_list": "Наші списки тем",
-    "subscription_benefit_no_pub": "У додатку не відображається реклама"
+    "subscription_benefit_zero_pub": "Нульова реклама",
+    "subscription_navigation_more_speed": "Швидша навігація",
+    "subscription_max_concentration": "Максимальна концентрація",
+    "subscription_description1": "Реклама допомагає нам залишатися безкоштовним застосунком.",
+    "subscription_description2": "Але якщо ви хочете плавного та безвідволікаючого досвіду, перейдіть на Premium.",
+    "subscription_go_premium": "Преміум-пассер",
+    "subscription_go_with_pub": "Продовжити з рекламою",
+    "subscription_title_1": "Реклама? Забудьте про неї!",
+    "subscription_title_2": "Зосередьтеся, забудьте про рекламу",
+    "subscription_title_3": "Вас також турбує реклама?",
+    "subscription_title_4": "Зупиніть рекламу!",
+    "subscription_title_5": "Втомилися від реклами?",
+    "subscription_title_6": "Заощадьте час, уникайте реклами",
+    "subscription_title_7": "Більше жодної реклами!",
+    "subscription_title_8": "Отримуйте доступ до контенту безпосередньо, без реклами!"
 }

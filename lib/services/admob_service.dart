@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:math' as math;
 
@@ -9,22 +10,19 @@ class AdMobService {
   static final AdMobService instance = AdMobService._();
   AdMobService._();
 
-  // --- Gate global pubs ---
-  bool _adsEnabled = true; // mets à false pour les abonnés
-  bool get adsEnabled => _adsEnabled;
-
-  // --- Init SDK ---
+  // --- State ---
+  bool _adsEnabled = true;
   bool _initialized = false;
+  double? _lastKnownWidthPx;
 
-  // --- Home Screen Banner Ads (2 emplacements) ---
-  BannerAd? bannerAd1;
-  final ValueNotifier<bool> isBannerAd1Loaded = ValueNotifier(false);
+  // --- Ad Storage ---
+  final Map<String, BannerAd?> _banners = {};
+  final Map<String, ValueNotifier<bool>> _bannerLoadNotifiers = {};
+  final Map<String, bool> _bannerLoadingState = {};
 
-  BannerAd? bannerAd2;
-  final ValueNotifier<bool> isBannerAd2Loaded = ValueNotifier(false);
-
-  bool _homeScreenAdsLoading = false;
-  double? _lastHomeWidthPx; // pour éviter de recharger si la largeur n’a pas changé
+  // --- Interstitial ---
+  InterstitialAd? _interstitialAd;
+  int _interstitialRetry = 0;
 
   // --- Ad Unit IDs ---
   static const String _androidBannerAdUnitId = 'ca-app-pub-1439580806237607/5504789998';
@@ -32,163 +30,133 @@ class AdMobService {
   static const String _iosBannerAdUnitId = 'ca-app-pub-1439580806237607/1482069910';
   static const String _iosInterstitialAdUnitId = 'ca-app-pub-1439580806237607/7570526612';
 
-  static String get bannerAdUnitId =>
-      Platform.isAndroid ? _androidBannerAdUnitId : _iosBannerAdUnitId;
+  static String get bannerAdUnitId => Platform.isAndroid ? _androidBannerAdUnitId : _iosBannerAdUnitId;
+  static String get interstitialAdUnitId => Platform.isAndroid ? _androidInterstitialAdUnitId : _iosInterstitialAdUnitId;
 
-  static String get interstitialAdUnitId =>
-      Platform.isAndroid ? _androidInterstitialAdUnitId : _iosInterstitialAdUnitId;
-
-  // --- Interstitial ---
-  InterstitialAd? _interstitialAd;
-  int _interstitialRetry = 0;
-
-  // -------------------------
+  // ------------------------
   // Public API
-  // -------------------------
+  // ------------------------
 
-  /// Initialise le SDK si pubs activées (à appeler tôt, ex: au boot).
   Future<void> initialize() async {
     if (!_adsEnabled) {
-      Logger.Yellow.log('[Ads] initialize() ignoré: adsEnabled=false');
+      Logger.Yellow.log('[Ads] initialize() ignored: adsEnabled=false');
       return;
     }
     if (_initialized) return;
 
     await MobileAds.instance.initialize();
     _initialized = true;
-    Logger.Green.log('[Ads] SDK initialisé');
+    Logger.Green.log('[Ads] SDK initialized');
     _loadInterstitialAd();
   }
 
-  /// Active/Désactive *toute* la pub (appelle ceci quand l’état d’abonnement change)
   Future<void> setAdsEnabled(bool enabled) async {
     if (_adsEnabled == enabled) return;
     _adsEnabled = enabled;
 
-    if (!enabled) {
-      Logger.Yellow.log('[Ads] Désactivation complète des publicités');
-      // Stop interstitial
-      _interstitialAd?.dispose();
-      _interstitialAd = null;
-      _interstitialRetry = 0;
-
-      // Stop bannières
-      bannerAd1?.dispose(); bannerAd1 = null;
-      bannerAd2?.dispose(); bannerAd2 = null;
-      isBannerAd1Loaded.value = false;
-      isBannerAd2Loaded.value = false;
-      _homeScreenAdsLoading = false;
-      _lastHomeWidthPx = null;
-      return;
+    if (enabled) {
+      Logger.Green.log('[Ads] Enabling ads');
+      await initialize();
+      _loadInterstitialAd();
+    } else {
+      Logger.Yellow.log('[Ads] Disabling all ads');
+      disposeAllAds();
     }
-
-    Logger.Green.log('[Ads] Activation des publicités');
-    // Réactive: initialise si besoin et recharge l’interstitiel
-    await initialize();
-    _loadInterstitialAd();
   }
 
-  // -------------------------
-  // Home banners (2 placements)
-  // -------------------------
+  // ------------------------
+  // Banner Management
+  // ------------------------
 
-  /// Charge (ou recharge) les deux bannières du Home pour la largeur *effective* de l’écran.
-  /// Ne fait rien si adsEnabled=false.
-  Future<void> loadHomeScreenBannerAds(BuildContext context) async {
-    if (!_adsEnabled) {
-      Logger.Yellow.log('[Ads] loadHomeScreenBannerAds ignoré: adsEnabled=false');
-      return;
-    }
-    await initialize();
+  BannerAd? getBanner(String placementId) => _banners[placementId];
+
+  ValueNotifier<bool> getBannerNotifier(String placementId) {
+    return _bannerLoadNotifiers.putIfAbsent(placementId, () => ValueNotifier(false));
+  }
+
+  Future<void> loadBanner({
+    required String placementId,
+    required BuildContext context,
+    bool forceReload = false,
+  }) async {
+    if (!_adsEnabled) return;
+    await initialize(); // Ensure initialized
     if (!_initialized) return;
+    
+    if (_bannerLoadingState[placementId] == true) return;
 
     final widthPx = MediaQuery.of(context).size.width;
     if (widthPx <= 0) return;
 
-    // Évite les reloads si la largeur n’a pas réellement changé (à 1 px près)
-    final widthChanged =
-        _lastHomeWidthPx == null || widthPx.round() != _lastHomeWidthPx!.round();
+    final widthChanged = _lastKnownWidthPx == null || widthPx.round() != _lastKnownWidthPx!.round();
+    _lastKnownWidthPx = widthPx;
 
-    if (_homeScreenAdsLoading) {
-      Logger.Yellow.log('[Ads] Home banners déjà en chargement…');
-      return;
+    if (_banners[placementId] != null && !forceReload && !widthChanged) {
+      return; // Ad is already loaded and size hasn't changed
     }
 
-    // Si on a déjà deux bannières et que la largeur n’a pas changé, ne rien faire
-    if (!widthChanged && bannerAd1 != null && bannerAd2 != null) {
-      return;
-    }
+    _bannerLoadingState[placementId] = true;
 
-    _homeScreenAdsLoading = true;
-    _lastHomeWidthPx = widthPx;
-
-    final AnchoredAdaptiveBannerAdSize? size =
-    await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(widthPx.truncate());
-
+    final size = await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(widthPx.truncate());
     if (size == null) {
-      Logger.Red.log('Unable to get anchored adaptive banner ad size.');
-      _homeScreenAdsLoading = false;
+      Logger.Red.log('Unable to get anchored adaptive banner ad size for $placementId.');
+      _bannerLoadingState[placementId] = false;
       return;
     }
 
-    // (Re)charge banner 1
-    if (bannerAd1 != null) {
-      bannerAd1!.dispose();
-      bannerAd1 = null;
-      isBannerAd1Loaded.value = false;
-    }
-    bannerAd1 = BannerAd(
-      adUnitId: bannerAdUnitId,
-      request: const AdRequest(),
-      size: size,
-      listener: BannerAdListener(
-        onAdLoaded: (Ad ad) {
-          Logger.Green.log('Service: Banner ad 1 loaded.');
-          bannerAd1 = ad as BannerAd;
-          isBannerAd1Loaded.value = true;
-        },
-        onAdFailedToLoad: (ad, err) {
-          Logger.Red.log('Service: Banner ad 1 failed to load: ${err.code} ${err.message}');
-          ad.dispose();
-          isBannerAd1Loaded.value = false;
-        },
-      ),
-    )..load();
+    // Dispose previous ad before loading a new one
+    _banners[placementId]?.dispose();
+    _banners[placementId] = null;
+    getBannerNotifier(placementId).value = false;
 
-    // (Re)charge banner 2
-    if (bannerAd2 != null) {
-      bannerAd2!.dispose();
-      bannerAd2 = null;
-      isBannerAd2Loaded.value = false;
-    }
-    bannerAd2 = BannerAd(
+    final ad = BannerAd(
       adUnitId: bannerAdUnitId,
       request: const AdRequest(),
       size: size,
       listener: BannerAdListener(
         onAdLoaded: (Ad ad) {
-          Logger.Green.log('Service: Banner ad 2 loaded.');
-          bannerAd2 = ad as BannerAd;
-          isBannerAd2Loaded.value = true;
-          _homeScreenAdsLoading = false;
+          Logger.Green.log('Service: Banner ad for "$placementId" loaded.');
+          _banners[placementId] = ad as BannerAd;
+          getBannerNotifier(placementId).value = true;
+          _bannerLoadingState[placementId] = false;
         },
         onAdFailedToLoad: (ad, err) {
-          Logger.Red.log('Service: Banner ad 2 failed to load: ${err.code} ${err.message}');
+          Logger.Red.log('Service: Banner ad for "$placementId" failed: ${err.code} ${err.message}');
           ad.dispose();
-          isBannerAd2Loaded.value = false;
-          _homeScreenAdsLoading = false;
+          getBannerNotifier(placementId).value = false;
+          _bannerLoadingState[placementId] = false;
         },
       ),
-    )..load();
+    );
+    await ad.load();
   }
 
-  // -------------------------
-  // Interstitial
-  // -------------------------
+  /// Loads the two banners for the home screen sequentially to avoid duplicates.
+  Future<void> loadHomeScreenBanners(BuildContext context) async {
+    await initialize();
+    loadBanner(placementId: 'home_top', context: context);
+    Future.delayed(const Duration(seconds: 2), () {
+      if (!_adsEnabled) return;
+      loadBanner(placementId: 'home_bottom', context: context);
+    });
+  }
+
+  /// Loads the two banners for the quizz screen sequentially.
+  Future<void> loadQuizzScreenBanners(BuildContext context) async {
+    await initialize();
+    loadBanner(placementId: 'quizz_top', context: context);
+    Future.delayed(const Duration(seconds: 2), () {
+      if (!_adsEnabled) return;
+      loadBanner(placementId: 'quizz_bottom', context: context);
+    });
+  }
+
+  // ------------------------
+  // Interstitial Management
+  // ------------------------
 
   void _loadInterstitialAd() {
-    if (!_adsEnabled) return;
-    if (!_initialized) return;
+    if (!_adsEnabled || !_initialized) return;
 
     InterstitialAd.load(
       adUnitId: interstitialAdUnitId,
@@ -196,30 +164,26 @@ class AdMobService {
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
           _interstitialRetry = 0;
-          _interstitialAd = ad
-            ..fullScreenContentCallback = FullScreenContentCallback(
-              onAdDismissedFullScreenContent: (InterstitialAd ad) {
-                ad.dispose();
-                _interstitialAd = null;
-                if (_adsEnabled) _loadInterstitialAd();
-              },
-              onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
-                Logger.Red.log('Interstitial show failed: $error');
-                ad.dispose();
-                _interstitialAd = null;
-                if (_adsEnabled) _loadInterstitialAd();
-              },
-            );
+          _interstitialAd = ad..fullScreenContentCallback = FullScreenContentCallback(
+            onAdDismissedFullScreenContent: (ad) {
+              ad.dispose();
+              _interstitialAd = null;
+              if (_adsEnabled) _loadInterstitialAd();
+            },
+            onAdFailedToShowFullScreenContent: (ad, error) {
+              Logger.Red.log('Interstitial show failed: $error');
+              ad.dispose();
+              _interstitialAd = null;
+              if (_adsEnabled) _loadInterstitialAd();
+            },
+          );
           Logger.Green.log('Interstitial ad loaded.');
         },
         onAdFailedToLoad: (LoadAdError error) {
           Logger.Red.log('Interstitial ad failed to load: $error');
           _interstitialAd = null;
           if (!_adsEnabled) return;
-          // Backoff exponentiel + jitter (max ~5 min)
-          final delay = Duration(
-            seconds: math.min(300, (1 << _interstitialRetry)) + math.Random().nextInt(5),
-          );
+          final delay = Duration(seconds: math.min(300, (1 << _interstitialRetry)) + math.Random().nextInt(5));
           _interstitialRetry = math.min(_interstitialRetry + 1, 9);
           Future.delayed(delay, () {
             if (_adsEnabled) _loadInterstitialAd();
@@ -235,30 +199,30 @@ class AdMobService {
     if (ad != null) {
       ad.show();
     } else {
-      Logger.Yellow.log('Interstitial ad not ready yet. Preloading…');
+      Logger.Yellow.log('Interstitial ad not ready yet. Preloading...');
       _loadInterstitialAd();
     }
   }
 
-  // -------------------------
-  // Dispose
-  // -------------------------
+  // ------------------------
+  // Cleanup
+  // ------------------------
 
-  void dispose() {
+  void disposeAllAds() {
     _interstitialAd?.dispose();
     _interstitialAd = null;
-
-    bannerAd1?.dispose(); bannerAd1 = null;
-    bannerAd2?.dispose(); bannerAd2 = null;
-
-    // Ne pas dispose() les ValueNotifier si d'autres widgets les écoutent encore à chaud.
-    // Laisse le GC les récupérer à la fermeture de l’app, ou gère leur cycle au besoin.
-    // isBannerAd1Loaded.dispose();
-    // isBannerAd2Loaded.dispose();
-
-    _initialized = false;
-    _homeScreenAdsLoading = false;
-    _lastHomeWidthPx = null;
     _interstitialRetry = 0;
+
+    for (var ad in _banners.values) {
+      ad?.dispose();
+    }
+    _banners.clear();
+    _bannerLoadNotifiers.clear();
+    _bannerLoadingState.clear();
+  }
+
+  void dispose() {
+    disposeAllAds();
+    _initialized = false;
   }
 }

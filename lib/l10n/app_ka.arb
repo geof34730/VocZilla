@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "ჩემი პირადი სიები",
     "drawer_defined_list": "ჩვენი წინასწარ განსაზღვრული სიები",
     "drawer_themes_list": "ჩვენი თემების სიები",
-    "subscription_benefit_no_pub": "აპლიკაციაში რეკლამა არ ჩანს"
+    "subscription_benefit_zero_pub": "ნულოვანი რეკლამა",
+    "subscription_navigation_more_speed": "უფრო სწრაფი ნავიგაცია",
+    "subscription_max_concentration": "მაქსიმალური კონცენტრაცია",
+    "subscription_description1": "რეკლამები გვეხმარება აპლიკაციის უფასო შენარჩუნებაში.",
+    "subscription_description2": "თუმცა, თუ გსურთ გლუვი, ყურადღების გაფანტვის გარეშე გამოცდილება, გადადით Premium-ზე.",
+    "subscription_go_premium": "გამვლელი პრემიუმი",
+    "subscription_go_with_pub": "განაგრძეთ რეკლამა",
+    "subscription_title_1": "რეკლამები? დაივიწყეთ ისინი!",
+    "subscription_title_2": "იყავით კონცენტრირებული, დაივიწყეთ რეკლამები",
+    "subscription_title_3": "რეკლამაც გაწუხებს?",
+    "subscription_title_4": "შეწყვიტეთ რეკლამები!",
+    "subscription_title_5": "დაიღალეთ რეკლამით?",
+    "subscription_title_6": "დაზოგეთ დრო, მოერიდეთ რეკლამას",
+    "subscription_title_7": "აღარ იქნება რეკლამები!",
+    "subscription_title_8": "წვდომა კონტენტზე პირდაპირ, რეკლამის გარეშე!"
 }

@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Моите лични списъци",
     "drawer_defined_list": "Нашите предварително зададени списъци",
     "drawer_themes_list": "Нашите списъци с теми",
-    "subscription_benefit_no_pub": "В приложението не се вижда реклама"
+    "subscription_benefit_zero_pub": "Нулева реклама",
+    "subscription_navigation_more_speed": "По-бърза навигация",
+    "subscription_max_concentration": "Максимална концентрация",
+    "subscription_description1": "Рекламите ни помагат да поддържаме приложението безплатно.",
+    "subscription_description2": "Но ако искате плавно изживяване без разсейване, надстройте до Premium.",
+    "subscription_go_premium": "Премиум пасьор",
+    "subscription_go_with_pub": "Продължете с рекламата",
+    "subscription_title_1": "Реклами? Забравете ги!",
+    "subscription_title_2": "Останете фокусирани, забравете рекламите",
+    "subscription_title_3": "И теб притеснява ли те рекламата?",
+    "subscription_title_4": "Спрете рекламите!",
+    "subscription_title_5": "Уморени ли сте от реклама?",
+    "subscription_title_6": "Спестете време, избягвайте реклами",
+    "subscription_title_7": "Край на рекламите!",
+    "subscription_title_8": "Достъпвайте съдържанието директно, без реклама!"
 }

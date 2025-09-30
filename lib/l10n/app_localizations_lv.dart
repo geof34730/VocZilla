@@ -705,5 +705,47 @@ class AppLocalizationsLv extends AppLocalizations {
   String get drawer_themes_list => 'Mūsu tēmu saraksti';
 
   @override
-  String get subscription_benefit_no_pub => 'Lietotnē nav redzama reklāma';
+  String get subscription_benefit_zero_pub => 'Nulle reklāmas';
+
+  @override
+  String get subscription_navigation_more_speed => 'Ātrāka navigācija';
+
+  @override
+  String get subscription_max_concentration => 'Maksimālā koncentrācija';
+
+  @override
+  String get subscription_description1 => 'Reklāmas palīdz mums saglabāt lietotni bez maksas.';
+
+  @override
+  String get subscription_description2 => 'Bet, ja vēlaties vienmērīgu un uzmanību novērsošu pieredzi, jauniniet uz Premium.';
+
+  @override
+  String get subscription_go_premium => 'Piespēles prēmija';
+
+  @override
+  String get subscription_go_with_pub => 'Turpināt ar reklāmu';
+
+  @override
+  String get subscription_title_1 => 'Reklāmas? Aizmirstiet par tām!';
+
+  @override
+  String get subscription_title_2 => 'Saglabājiet koncentrēšanos, aizmirstiet par reklāmām';
+
+  @override
+  String get subscription_title_3 => 'Vai tevi arī traucē reklāma?';
+
+  @override
+  String get subscription_title_4 => 'Beidziet reklāmas!';
+
+  @override
+  String get subscription_title_5 => 'Apnicis reklamēties?';
+
+  @override
+  String get subscription_title_6 => 'Ietaupiet laiku, izvairieties no reklāmas';
+
+  @override
+  String get subscription_title_7 => 'Vairs nekādu reklāmu!';
+
+  @override
+  String get subscription_title_8 => 'Piekļūstiet saturam tieši, bez reklāmas!';
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/core/utils/localization.dart';
 import 'package:voczilla/logic/cubit/localization_cubit.dart';
+import 'package:voczilla/services/admob_service.dart';
 
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../core/utils/logger.dart';
@@ -28,6 +29,15 @@ class _ListScreenState extends State<ListScreen> {
   GlobalKey<PaginatedDataTableState> tableKey = GlobalKey();
   TextEditingController searchController = TextEditingController();
   final _vocabulaireRepository=VocabulaireRepository();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      AdMobService.instance.loadBanner(placementId: 'list', context: context);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<VocabulairesBloc, VocabulairesState>(
@@ -57,9 +67,9 @@ class _ListScreenState extends State<ListScreen> {
           return Column(
             key: ValueKey('screenList'),
             children: [
-              AdaptiveBannerAdWidget(
-                  key: ValueKey('home_bottom_banner'),
-                  padding:EdgeInsets.only(top:8)
+              const AdaptiveBannerAdWidget(
+                placementId: 'list',
+                padding: EdgeInsets.only(top: 8),
               ),
               RadioChoiceVocabularyLearnedOrNot(
                   state: state,

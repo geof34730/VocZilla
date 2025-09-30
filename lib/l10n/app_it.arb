@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Le mie liste personali",
     "drawer_defined_list": "Le nostre liste predefinite",
     "drawer_themes_list": "Le nostre liste di temi",
-    "subscription_benefit_no_pub": "Nessuna pubblicità è visibile sull'applicazione"
+    "subscription_benefit_zero_pub": "Nessuna pubblicità",
+    "subscription_navigation_more_speed": "Navigazione più veloce",
+    "subscription_max_concentration": "Concentrazione massima",
+    "subscription_description1": "Gli annunci pubblicitari ci aiutano a mantenere l'app gratuita.",
+    "subscription_description2": "Ma se desideri un'esperienza fluida e senza distrazioni, passa alla versione Premium.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Continua con l'annuncio",
+    "subscription_title_1": "Pubblicità? Scordatevele!",
+    "subscription_title_2": "Rimani concentrato, dimentica le pubblicità",
+    "subscription_title_3": "Anche a te dà fastidio la pubblicità?",
+    "subscription_title_4": "Basta con le pubblicità!",
+    "subscription_title_5": "Stanco della pubblicità?",
+    "subscription_title_6": "Risparmia tempo, evita la pubblicità",
+    "subscription_title_7": "Niente più pubblicità!",
+    "subscription_title_8": "Accedi direttamente ai contenuti, senza pubblicità!"
 }

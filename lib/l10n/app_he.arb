@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "הרשימות האישיות שלי",
     "drawer_defined_list": "הרשימות המוגדרות מראש שלנו",
     "drawer_themes_list": "רשימות הנושאים שלנו",
-    "subscription_benefit_no_pub": "לא נראה פרסום באפליקציה"
+    "subscription_benefit_zero_pub": "אפס פרסום",
+    "subscription_navigation_more_speed": "ניווט מהיר יותר",
+    "subscription_max_concentration": "ריכוז מקסימלי",
+    "subscription_description1": "פרסומות עוזרות לנו לשמור על האפליקציה בחינם.",
+    "subscription_description2": "אבל אם אתם רוצים חוויה חלקה וללא הסחות דעת, שדרגו ל-Premium.",
+    "subscription_go_premium": "פרימיום עובר",
+    "subscription_go_with_pub": "המשך עם המודעה",
+    "subscription_title_1": "פרסומות? שכחו מהן!",
+    "subscription_title_2": "הישארו ממוקדים, תשכחו מהפרסומות",
+    "subscription_title_3": "האם גם לך הפרסום מפריע?",
+    "subscription_title_4": "תפסיקו את הפרסומות!",
+    "subscription_title_5": "נמאס לכם מפרסום?",
+    "subscription_title_6": "חסכו זמן, הימנעו מפרסום",
+    "subscription_title_7": "אין יותר פרסומות!",
+    "subscription_title_8": "גישה ישירה לתוכן, ללא פרסומות!"
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/core/utils/localization.dart';
 import 'package:voczilla/logic/cubit/localization_cubit.dart';
+import 'package:voczilla/services/admob_service.dart';
 
 import '../../../core/utils/detailTypeVocabulaire.dart';
 import '../../../global.dart';
@@ -35,6 +36,9 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      AdMobService.instance.loadBanner(placementId: 'dictation', context: context);
+    });
   }
 
   @override
@@ -67,8 +71,8 @@ class _VoiceDictationScreenState extends State<VoiceDictationScreen> {
             child: Column(
               key: ValueKey('screenVoicedictation'),
               children: [
-                AdaptiveBannerAdWidget(
-                    key: ValueKey('dictation_banner'),
+                const AdaptiveBannerAdWidget(
+                    placementId: 'dictation',
                     padding:EdgeInsets.only(top:8)
                 ),
                 Padding(

@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Mening shaxsiy ro'yxatlarim",
     "drawer_defined_list": "Bizning oldindan belgilangan ro'yxatlarimiz",
     "drawer_themes_list": "Bizning mavzular ro'yxati",
-    "subscription_benefit_no_pub": "Ilovada hech qanday reklama ko'rinmaydi"
+    "subscription_benefit_zero_pub": "Nol reklama",
+    "subscription_navigation_more_speed": "Tezroq navigatsiya",
+    "subscription_max_concentration": "Maksimal konsentratsiya",
+    "subscription_description1": "Reklamalar ilovani bepul saqlashga yordam beradi.",
+    "subscription_description2": "Agar siz chalg‘itmaydigan, silliq tajribaga ega bo‘lishni istasangiz, Premiumga yangilang.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Reklama bilan davom eting",
+    "subscription_title_1": "Reklamalar? Ularni unut!",
+    "subscription_title_2": "Diqqatni jamlang, reklamalarni unuting",
+    "subscription_title_3": "Reklama sizni ham bezovta qilyaptimi?",
+    "subscription_title_4": "Reklamani to'xtating!",
+    "subscription_title_5": "Reklamadan charchadingizmi?",
+    "subscription_title_6": "Vaqtni tejang, reklamadan qoching",
+    "subscription_title_7": "Boshqa reklama yo'q!",
+    "subscription_title_8": "Tarkibga reklamasiz to'g'ridan-to'g'ri kiring!"
 }

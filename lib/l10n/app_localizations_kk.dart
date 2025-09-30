@@ -705,5 +705,47 @@ class AppLocalizationsKk extends AppLocalizations {
   String get drawer_themes_list => 'Біздің тақырыптар тізімі';
 
   @override
-  String get subscription_benefit_no_pub => 'Қолданбада ешқандай жарнама көрінбейді';
+  String get subscription_benefit_zero_pub => 'Нөлдік жарнама';
+
+  @override
+  String get subscription_navigation_more_speed => 'Жылдам навигация';
+
+  @override
+  String get subscription_max_concentration => 'Максималды концентрация';
+
+  @override
+  String get subscription_description1 => 'Жарнамалар қолданбаны бос ұстауға көмектеседі.';
+
+  @override
+  String get subscription_description2 => 'Бірақ біркелкі, алаңдатпайтын тәжірибені алғыңыз келсе, Premium нұсқасына жаңартыңыз.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Жарнамамен жалғастырыңыз';
+
+  @override
+  String get subscription_title_1 => 'Жарнамалар? Оларды ұмыт!';
+
+  @override
+  String get subscription_title_2 => 'Назарыңызды шоғырландырыңыз, жарнамаларды ұмытыңыз';
+
+  @override
+  String get subscription_title_3 => 'Сізді де жарнама мазалайды ма?';
+
+  @override
+  String get subscription_title_4 => 'Жарнаманы тоқтатыңыз!';
+
+  @override
+  String get subscription_title_5 => 'Жарнамадан шаршадыңыз ба?';
+
+  @override
+  String get subscription_title_6 => 'Уақытты үнемдеңіз, жарнамадан аулақ болыңыз';
+
+  @override
+  String get subscription_title_7 => 'Басқа жарнамалар жоқ!';
+
+  @override
+  String get subscription_title_8 => 'Мазмұнға жарнамасыз тікелей қол жеткізіңіз!';
 }

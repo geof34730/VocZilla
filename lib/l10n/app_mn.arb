@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Миний хувийн жагсаалтууд",
     "drawer_defined_list": "Бидний урьдчилан тодорхойлсон жагсаалтууд",
     "drawer_themes_list": "Манай сэдвүүдийн жагсаалт",
-    "subscription_benefit_no_pub": "Аппликешн дээр зар сурталчилгаа харагдахгүй байна"
+    "subscription_benefit_zero_pub": "Зар сурталчилгаа тэг",
+    "subscription_navigation_more_speed": "Илүү хурдан навигаци",
+    "subscription_max_concentration": "Хамгийн их концентраци",
+    "subscription_description1": "Зар нь аппыг үнэгүй байлгахад тусалдаг.",
+    "subscription_description2": "Гэхдээ хэрэв та анхаарал сарниулахгүй, гөлгөр туршлагыг хүсч байвал Premium руу шинэчилнэ үү.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Зар сурталчилгааг үргэлжлүүлнэ үү",
+    "subscription_title_1": "Зар? Тэднийг март!",
+    "subscription_title_2": "Анхаарал төвлөрүүлж, зар сурталчилгаагаа март",
+    "subscription_title_3": "Та бас сурталчилгаанд төвөгшөөж байна уу?",
+    "subscription_title_4": "Зар сурталчилгаагаа зогсоо!",
+    "subscription_title_5": "Зар сурталчилгаанаас залхаж байна уу?",
+    "subscription_title_6": "Цаг хэмнээрэй, зар сурталчилгаанаас зайлсхий",
+    "subscription_title_7": "Өөр зар байхгүй!",
+    "subscription_title_8": "Зар сурталчилгаагүйгээр контент руу шууд хандаарай!"
 }

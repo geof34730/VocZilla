@@ -705,5 +705,47 @@ class AppLocalizationsFi extends AppLocalizations {
   String get drawer_themes_list => 'Teemaluettelomme';
 
   @override
-  String get subscription_benefit_no_pub => 'Sovelluksessa ei näy mainoksia';
+  String get subscription_benefit_zero_pub => 'Ei mainontaa';
+
+  @override
+  String get subscription_navigation_more_speed => 'Nopeampi navigointi';
+
+  @override
+  String get subscription_max_concentration => 'Maksimaalinen pitoisuus';
+
+  @override
+  String get subscription_description1 => 'Mainokset auttavat meitä pitämään sovelluksen ilmaisena.';
+
+  @override
+  String get subscription_description2 => 'Mutta jos haluat sujuvan ja häiriöttömän käyttökokemuksen, päivitä Premium-tilaukseen.';
+
+  @override
+  String get subscription_go_premium => 'Passer-palkkio';
+
+  @override
+  String get subscription_go_with_pub => 'Jatka mainoksen kanssa';
+
+  @override
+  String get subscription_title_1 => 'Mainokset? Unohda ne!';
+
+  @override
+  String get subscription_title_2 => 'Pysy keskittyneenä, unohda mainokset';
+
+  @override
+  String get subscription_title_3 => 'Häiritseekö sinuakin mainonta?';
+
+  @override
+  String get subscription_title_4 => 'Lopettakaa mainokset!';
+
+  @override
+  String get subscription_title_5 => 'Kyllästynyt mainontaan?';
+
+  @override
+  String get subscription_title_6 => 'Säästä aikaa, vältä mainontaa';
+
+  @override
+  String get subscription_title_7 => 'Ei enää mainoksia!';
+
+  @override
+  String get subscription_title_8 => 'Käytä sisältöä suoraan, ilman mainoksia!';
 }

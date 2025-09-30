@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Orodha zangu za kibinafsi",
     "drawer_defined_list": "Orodha zetu zilizofafanuliwa awali",
     "drawer_themes_list": "Orodha zetu za mada",
-    "subscription_benefit_no_pub": "Hakuna tangazo linaloonekana kwenye programu"
+    "subscription_benefit_zero_pub": "Bila matangazo",
+    "subscription_navigation_more_speed": "Urambazaji wa haraka zaidi",
+    "subscription_max_concentration": "Kiwango cha juu cha mkusanyiko",
+    "subscription_description1": "Matangazo hutusaidia kuweka programu bila malipo.",
+    "subscription_description2": "Lakini ikiwa unataka matumizi laini na yasiyo na usumbufu, pata toleo jipya la Premium.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Endelea na tangazo",
+    "subscription_title_1": "Matangazo? Wasahau!",
+    "subscription_title_2": "Endelea kuzingatia, sahau matangazo",
+    "subscription_title_3": "Je, wewe pia unasumbuliwa na matangazo?",
+    "subscription_title_4": "Acha matangazo!",
+    "subscription_title_5": "Uchovu wa matangazo?",
+    "subscription_title_6": "Okoa wakati, epuka matangazo",
+    "subscription_title_7": "Hakuna matangazo zaidi!",
+    "subscription_title_8": "Fikia yaliyomo moja kwa moja, bila matangazo!"
 }

@@ -705,5 +705,47 @@ class AppLocalizationsNo extends AppLocalizations {
   String get drawer_themes_list => 'Våre temalister';
 
   @override
-  String get subscription_benefit_no_pub => 'Ingen reklame er synlig i applikasjonen';
+  String get subscription_benefit_zero_pub => 'Null reklame';
+
+  @override
+  String get subscription_navigation_more_speed => 'Raskere navigasjon';
+
+  @override
+  String get subscription_max_concentration => 'Maksimal konsentrasjon';
+
+  @override
+  String get subscription_description1 => 'Annonser hjelper oss med å holde appen gratis.';
+
+  @override
+  String get subscription_description2 => 'Men hvis du ønsker en smidig og distraksjonsfri opplevelse, oppgrader til Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Fortsett med annonsen';
+
+  @override
+  String get subscription_title_1 => 'Annonser? Glem dem!';
+
+  @override
+  String get subscription_title_2 => 'Hold fokus, glem reklamene';
+
+  @override
+  String get subscription_title_3 => 'Er du også plaget av reklame?';
+
+  @override
+  String get subscription_title_4 => 'Stopp annonsene!';
+
+  @override
+  String get subscription_title_5 => 'Lei av reklame?';
+
+  @override
+  String get subscription_title_6 => 'Spar tid, unngå reklame';
+
+  @override
+  String get subscription_title_7 => 'Ingen flere annonser!';
+
+  @override
+  String get subscription_title_8 => 'Få direkte tilgang til innholdet, uten reklame!';
 }

@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Személyes listáim",
     "drawer_defined_list": "Előre meghatározott listáink",
     "drawer_themes_list": "Témalistáink",
-    "subscription_benefit_no_pub": "Nincsenek hirdetések az alkalmazáson"
+    "subscription_benefit_zero_pub": "Nulla reklám",
+    "subscription_navigation_more_speed": "Gyorsabb navigáció",
+    "subscription_max_concentration": "Maximális koncentráció",
+    "subscription_description1": "A hirdetések segítenek abban, hogy az alkalmazás ingyenes maradjon.",
+    "subscription_description2": "De ha zökkenőmentes, zavartalan élményre vágysz, válts Prémiumra.",
+    "subscription_go_premium": "Passer prémium",
+    "subscription_go_with_pub": "Folytatás a hirdetéssel",
+    "subscription_title_1": "Reklámok? Felejtsd el őket!",
+    "subscription_title_2": "Maradj fókuszált, felejtsd el a reklámokat",
+    "subscription_title_3": "Téged is zavarnak a reklámok?",
+    "subscription_title_4": "Állítsd meg a reklámokat!",
+    "subscription_title_5": "Elege van a reklámokból?",
+    "subscription_title_6": "Időt takaríthat meg, elkerülheti a reklámokat",
+    "subscription_title_7": "Nincs több hirdetés!",
+    "subscription_title_8": "Hozzáférés a tartalomhoz közvetlenül, reklámok nélkül!"
 }

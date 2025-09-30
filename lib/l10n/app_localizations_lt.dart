@@ -705,5 +705,47 @@ class AppLocalizationsLt extends AppLocalizations {
   String get drawer_themes_list => 'Mūsų temų sąrašai';
 
   @override
-  String get subscription_benefit_no_pub => 'Programėlėje nematyti jokios reklamos';
+  String get subscription_benefit_zero_pub => 'Nulinė reklama';
+
+  @override
+  String get subscription_navigation_more_speed => 'Greitesnė navigacija';
+
+  @override
+  String get subscription_max_concentration => 'Didžiausia koncentracija';
+
+  @override
+  String get subscription_description1 => 'Skelbimai padeda mums išlaikyti programėlę nemokamą.';
+
+  @override
+  String get subscription_description2 => 'Bet jei norite sklandaus, be jokių trukdžių patyrimo, atnaujinkite į „Premium“.';
+
+  @override
+  String get subscription_go_premium => 'Praleistuvo priemoka';
+
+  @override
+  String get subscription_go_with_pub => 'Tęsti su skelbimu';
+
+  @override
+  String get subscription_title_1 => 'Reklamos? Pamirškite jas!';
+
+  @override
+  String get subscription_title_2 => 'Susitelkite, pamirškite reklamas';
+
+  @override
+  String get subscription_title_3 => 'Ar jus taip pat vargina reklama?';
+
+  @override
+  String get subscription_title_4 => 'Sustabdykite reklamas!';
+
+  @override
+  String get subscription_title_5 => 'Pavargote nuo reklamos?';
+
+  @override
+  String get subscription_title_6 => 'Sutaupykite laiko, venkite reklamos';
+
+  @override
+  String get subscription_title_7 => 'Daugiau jokių reklamų!';
+
+  @override
+  String get subscription_title_8 => 'Pasiekite turinį tiesiogiai, be reklamos!';
 }

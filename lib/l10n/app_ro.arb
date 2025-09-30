@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Listele mele personale",
     "drawer_defined_list": "Listele noastre predefinite",
     "drawer_themes_list": "Listele noastre de teme",
-    "subscription_benefit_no_pub": "Nu este vizibilă nicio reclamă în aplicație"
+    "subscription_benefit_zero_pub": "Zero publicitate",
+    "subscription_navigation_more_speed": "Navigare mai rapidă",
+    "subscription_max_concentration": "Concentrație maximă",
+    "subscription_description1": "Reclamele ne ajută să menținem aplicația gratuită.",
+    "subscription_description2": "Dar dacă vrei o experiență fluidă, fără distrageri, fă upgrade la Premium.",
+    "subscription_go_premium": "Premium Trecător",
+    "subscription_go_with_pub": "Continuă cu anunțul",
+    "subscription_title_1": "Reclame? Uitați de ele!",
+    "subscription_title_2": "Rămâi concentrat, uită de reclame",
+    "subscription_title_3": "Și pe tine te deranjează publicitatea?",
+    "subscription_title_4": "Opriți reclamele!",
+    "subscription_title_5": "Te-ai săturat de publicitate?",
+    "subscription_title_6": "Economisiți timp, evitați publicitatea",
+    "subscription_title_7": "Gata cu reclamele!",
+    "subscription_title_8": "Accesează conținutul direct, fără reclame!"
 }

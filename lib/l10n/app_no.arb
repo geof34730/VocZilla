@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Mine personlige lister",
     "drawer_defined_list": "Våre forhåndsdefinerte lister",
     "drawer_themes_list": "Våre temalister",
-    "subscription_benefit_no_pub": "Ingen reklame er synlig i applikasjonen"
+    "subscription_benefit_zero_pub": "Null reklame",
+    "subscription_navigation_more_speed": "Raskere navigasjon",
+    "subscription_max_concentration": "Maksimal konsentrasjon",
+    "subscription_description1": "Annonser hjelper oss med å holde appen gratis.",
+    "subscription_description2": "Men hvis du ønsker en smidig og distraksjonsfri opplevelse, oppgrader til Premium.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Fortsett med annonsen",
+    "subscription_title_1": "Annonser? Glem dem!",
+    "subscription_title_2": "Hold fokus, glem reklamene",
+    "subscription_title_3": "Er du også plaget av reklame?",
+    "subscription_title_4": "Stopp annonsene!",
+    "subscription_title_5": "Lei av reklame?",
+    "subscription_title_6": "Spar tid, unngå reklame",
+    "subscription_title_7": "Ingen flere annonser!",
+    "subscription_title_8": "Få direkte tilgang til innholdet, uten reklame!"
 }

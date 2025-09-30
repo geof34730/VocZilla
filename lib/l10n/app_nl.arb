@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Mijn persoonlijke lijsten",
     "drawer_defined_list": "Onze vooraf gedefinieerde lijsten",
     "drawer_themes_list": "Onze themalijsten",
-    "subscription_benefit_no_pub": "Er is geen reclame zichtbaar op de applicatie"
+    "subscription_benefit_zero_pub": "Geen reclame",
+    "subscription_navigation_more_speed": "Snellere navigatie",
+    "subscription_max_concentration": "Concentration maximale",
+    "subscription_description1": "Dankzij advertenties kunnen we de app gratis houden.",
+    "subscription_description2": "Maar als u een soepele, afleidingsvrije ervaring wilt, upgrade dan naar Premium.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Doorgaan met advertentie",
+    "subscription_title_1": "Advertenties? Vergeet ze!",
+    "subscription_title_2": "Blijf gefocust, vergeet de advertenties",
+    "subscription_title_3": "Heb jij ook last van reclame?",
+    "subscription_title_4": "Stop de advertenties!",
+    "subscription_title_5": "Genoeg van reclame?",
+    "subscription_title_6": "Bespaar tijd, vermijd reclame",
+    "subscription_title_7": "Geen advertenties meer!",
+    "subscription_title_8": "Krijg direct toegang tot de inhoud, zonder advertenties!"
 }

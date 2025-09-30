@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Uhlu lwami lomuntu siqu",
     "drawer_defined_list": "Uhlu lwethu oluchazwe ngaphambilini",
     "drawer_themes_list": "Uhlu lwethu lwetimu",
-    "subscription_benefit_no_pub": "Akukho ukukhangisa okubonakalayo kuhlelo lokusebenza"
+    "subscription_benefit_zero_pub": "Azikho ukukhangisa",
+    "subscription_navigation_more_speed": "Ukuzulazula okusheshayo",
+    "subscription_max_concentration": "Ubuningi bokugxila",
+    "subscription_description1": "Izikhangiso zisisiza ukuthi sigcine uhlelo lokusebenza lumahhala.",
+    "subscription_description2": "Kodwa uma ufuna ukuzizwisa okubushelelezi, okungenaziphazamiso, thuthukela ku-Premium.",
+    "subscription_go_premium": "I-Passer Premium",
+    "subscription_go_with_pub": "Qhubeka nesikhangiso",
+    "subscription_title_1": "Izikhangiso? Bakhohlwe!",
+    "subscription_title_2": "Hlala ugxilile, ukhohlwe izikhangiso",
+    "subscription_title_3": "Ingabe nawe uhlushwa ukukhangisa?",
+    "subscription_title_4": "Misa izikhangiso!",
+    "subscription_title_5": "Ukhathele ukukhangisa?",
+    "subscription_title_6": "Yonga isikhathi, gwema ukukhangisa",
+    "subscription_title_7": "Azisekho izikhangiso!",
+    "subscription_title_8": "Finyelela okuqukethwe ngokuqondile, ngaphandle kokukhangisa!"
 }

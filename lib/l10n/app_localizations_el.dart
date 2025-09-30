@@ -705,5 +705,47 @@ class AppLocalizationsEl extends AppLocalizations {
   String get drawer_themes_list => 'Οι λίστες μας με τα θέματα';
 
   @override
-  String get subscription_benefit_no_pub => 'Δεν εμφανίζονται διαφημίσεις στην εφαρμογή';
+  String get subscription_benefit_zero_pub => 'Μηδενική διαφήμιση';
+
+  @override
+  String get subscription_navigation_more_speed => 'Ταχύτερη πλοήγηση';
+
+  @override
+  String get subscription_max_concentration => 'Μέγιστη συγκέντρωση';
+
+  @override
+  String get subscription_description1 => 'Οι διαφημίσεις μας βοηθούν να διατηρούμε την εφαρμογή δωρεάν.';
+
+  @override
+  String get subscription_description2 => 'Αλλά αν θέλετε μια ομαλή εμπειρία χωρίς περισπασμούς, αναβαθμίστε σε Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Συνέχεια με τη διαφήμιση';
+
+  @override
+  String get subscription_title_1 => 'Διαφημίσεις; Ξεχάστε τες!';
+
+  @override
+  String get subscription_title_2 => 'Μείνετε συγκεντρωμένοι, ξεχάστε τις διαφημίσεις';
+
+  @override
+  String get subscription_title_3 => 'Σας ενοχλούν και οι διαφημίσεις;';
+
+  @override
+  String get subscription_title_4 => 'Σταματήστε τις διαφημίσεις!';
+
+  @override
+  String get subscription_title_5 => 'Κουραστήκατε από τη διαφήμιση;';
+
+  @override
+  String get subscription_title_6 => 'Εξοικονομήστε χρόνο, αποφύγετε τις διαφημίσεις';
+
+  @override
+  String get subscription_title_7 => 'Τέλος οι διαφημίσεις!';
+
+  @override
+  String get subscription_title_8 => 'Αποκτήστε άμεση πρόσβαση στο περιεχόμενο, χωρίς διαφημίσεις!';
 }

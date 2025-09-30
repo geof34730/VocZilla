@@ -705,5 +705,47 @@ class AppLocalizationsCa extends AppLocalizations {
   String get drawer_themes_list => 'Les nostres llistes de temes';
 
   @override
-  String get subscription_benefit_no_pub => 'No hi ha publicitat visible a l\'aplicació';
+  String get subscription_benefit_zero_pub => 'Zero publicitat';
+
+  @override
+  String get subscription_navigation_more_speed => 'Navegació més ràpida';
+
+  @override
+  String get subscription_max_concentration => 'Concentració màxima';
+
+  @override
+  String get subscription_description1 => 'Els anuncis ens ajuden a mantenir l\'aplicació gratuïta.';
+
+  @override
+  String get subscription_description2 => 'Però si voleu una experiència fluida i sense distraccions, actualitzeu a Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Continua amb l\'anunci';
+
+  @override
+  String get subscription_title_1 => 'Anuncis? Oblida\'t d\'ells!';
+
+  @override
+  String get subscription_title_2 => 'Mantingueu la concentració, oblideu-vos dels anuncis';
+
+  @override
+  String get subscription_title_3 => 'També et molesta la publicitat?';
+
+  @override
+  String get subscription_title_4 => 'Atureu els anuncis!';
+
+  @override
+  String get subscription_title_5 => 'Cansat de la publicitat?';
+
+  @override
+  String get subscription_title_6 => 'Estalvieu temps, eviteu publicitat';
+
+  @override
+  String get subscription_title_7 => 'No més anuncis!';
+
+  @override
+  String get subscription_title_8 => 'Accedeix al contingut directament, sense publicitat!';
 }

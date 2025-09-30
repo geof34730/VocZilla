@@ -705,5 +705,47 @@ class AppLocalizationsMn extends AppLocalizations {
   String get drawer_themes_list => 'Манай сэдвүүдийн жагсаалт';
 
   @override
-  String get subscription_benefit_no_pub => 'Аппликешн дээр зар сурталчилгаа харагдахгүй байна';
+  String get subscription_benefit_zero_pub => 'Зар сурталчилгаа тэг';
+
+  @override
+  String get subscription_navigation_more_speed => 'Илүү хурдан навигаци';
+
+  @override
+  String get subscription_max_concentration => 'Хамгийн их концентраци';
+
+  @override
+  String get subscription_description1 => 'Зар нь аппыг үнэгүй байлгахад тусалдаг.';
+
+  @override
+  String get subscription_description2 => 'Гэхдээ хэрэв та анхаарал сарниулахгүй, гөлгөр туршлагыг хүсч байвал Premium руу шинэчилнэ үү.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Зар сурталчилгааг үргэлжлүүлнэ үү';
+
+  @override
+  String get subscription_title_1 => 'Зар? Тэднийг март!';
+
+  @override
+  String get subscription_title_2 => 'Анхаарал төвлөрүүлж, зар сурталчилгаагаа март';
+
+  @override
+  String get subscription_title_3 => 'Та бас сурталчилгаанд төвөгшөөж байна уу?';
+
+  @override
+  String get subscription_title_4 => 'Зар сурталчилгаагаа зогсоо!';
+
+  @override
+  String get subscription_title_5 => 'Зар сурталчилгаанаас залхаж байна уу?';
+
+  @override
+  String get subscription_title_6 => 'Цаг хэмнээрэй, зар сурталчилгаанаас зайлсхий';
+
+  @override
+  String get subscription_title_7 => 'Өөр зар байхгүй!';
+
+  @override
+  String get subscription_title_8 => 'Зар сурталчилгаагүйгээр контент руу шууд хандаарай!';
 }

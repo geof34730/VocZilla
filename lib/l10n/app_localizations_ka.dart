@@ -705,5 +705,47 @@ class AppLocalizationsKa extends AppLocalizations {
   String get drawer_themes_list => 'ჩვენი თემების სიები';
 
   @override
-  String get subscription_benefit_no_pub => 'აპლიკაციაში რეკლამა არ ჩანს';
+  String get subscription_benefit_zero_pub => 'ნულოვანი რეკლამა';
+
+  @override
+  String get subscription_navigation_more_speed => 'უფრო სწრაფი ნავიგაცია';
+
+  @override
+  String get subscription_max_concentration => 'მაქსიმალური კონცენტრაცია';
+
+  @override
+  String get subscription_description1 => 'რეკლამები გვეხმარება აპლიკაციის უფასო შენარჩუნებაში.';
+
+  @override
+  String get subscription_description2 => 'თუმცა, თუ გსურთ გლუვი, ყურადღების გაფანტვის გარეშე გამოცდილება, გადადით Premium-ზე.';
+
+  @override
+  String get subscription_go_premium => 'გამვლელი პრემიუმი';
+
+  @override
+  String get subscription_go_with_pub => 'განაგრძეთ რეკლამა';
+
+  @override
+  String get subscription_title_1 => 'რეკლამები? დაივიწყეთ ისინი!';
+
+  @override
+  String get subscription_title_2 => 'იყავით კონცენტრირებული, დაივიწყეთ რეკლამები';
+
+  @override
+  String get subscription_title_3 => 'რეკლამაც გაწუხებს?';
+
+  @override
+  String get subscription_title_4 => 'შეწყვიტეთ რეკლამები!';
+
+  @override
+  String get subscription_title_5 => 'დაიღალეთ რეკლამით?';
+
+  @override
+  String get subscription_title_6 => 'დაზოგეთ დრო, მოერიდეთ რეკლამას';
+
+  @override
+  String get subscription_title_7 => 'აღარ იქნება რეკლამები!';
+
+  @override
+  String get subscription_title_8 => 'წვდომა კონტენტზე პირდაპირ, რეკლამის გარეშე!';
 }

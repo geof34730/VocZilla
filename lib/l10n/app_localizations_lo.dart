@@ -705,5 +705,47 @@ class AppLocalizationsLo extends AppLocalizations {
   String get drawer_themes_list => 'ລາຍຊື່ຫົວຂໍ້ຂອງພວກເຮົາ';
 
   @override
-  String get subscription_benefit_no_pub => 'ບໍ່ມີການໂຄສະນາທີ່ເຫັນໄດ້ໃນແອັບພລິເຄຊັນ';
+  String get subscription_benefit_zero_pub => 'ສູນການໂຄສະນາ';
+
+  @override
+  String get subscription_navigation_more_speed => 'ການນໍາທາງໄວຂຶ້ນ';
+
+  @override
+  String get subscription_max_concentration => 'ຄວາມເຂັ້ມຂຸ້ນສູງສຸດ';
+
+  @override
+  String get subscription_description1 => 'ການ​ໂຄ​ສະ​ນາ​ຊ່ວຍ​ໃຫ້​ພວກ​ເຮົາ​ຮັກ​ສາ app ຟຣີ​.';
+
+  @override
+  String get subscription_description2 => 'ແຕ່ຖ້າທ່ານຕ້ອງການປະສົບການທີ່ລຽບງ່າຍ, ບໍ່ມີສິ່ງລົບກວນ, ໃຫ້ອັບເກຣດເປັນ Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'ສືບຕໍ່ດ້ວຍການໂຄສະນາ';
+
+  @override
+  String get subscription_title_1 => 'ໂຄສະນາ? ລືມເຂົາເຈົ້າ!';
+
+  @override
+  String get subscription_title_2 => 'ຢູ່ສຸມໃສ່, ລືມການໂຄສະນາ';
+
+  @override
+  String get subscription_title_3 => 'ເຈົ້າຍັງເບື່ອກັບການໂຄສະນາບໍ?';
+
+  @override
+  String get subscription_title_4 => 'ຢຸດການໂຄສະນາ!';
+
+  @override
+  String get subscription_title_5 => 'ເບື່ອການໂຄສະນາບໍ?';
+
+  @override
+  String get subscription_title_6 => 'ປະຫຍັດເວລາ, ຫຼີກເວັ້ນການໂຄສະນາ';
+
+  @override
+  String get subscription_title_7 => 'ບໍ່ມີໂຄສະນາອີກຕໍ່ໄປ!';
+
+  @override
+  String get subscription_title_8 => 'ເຂົ້າເຖິງເນື້ອຫາໂດຍກົງ, ໂດຍບໍ່ມີການໂຄສະນາ!';
 }

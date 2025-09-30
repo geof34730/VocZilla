@@ -705,5 +705,47 @@ class AppLocalizationsAr extends AppLocalizations {
   String get drawer_themes_list => 'قوائم المواضيع لدينا';
 
   @override
-  String get subscription_benefit_no_pub => 'لا يوجد إعلانات مرئية على التطبيق';
+  String get subscription_benefit_zero_pub => 'لا يوجد إعلانات';
+
+  @override
+  String get subscription_navigation_more_speed => 'التنقل بشكل أسرع';
+
+  @override
+  String get subscription_max_concentration => 'الحد الأقصى للتركيز';
+
+  @override
+  String get subscription_description1 => 'تساعدنا الإعلانات على إبقاء التطبيق مجانيًا.';
+
+  @override
+  String get subscription_description2 => 'ولكن إذا كنت تريد تجربة سلسة وخالية من التشتيت، فقم بالترقية إلى الإصدار المميز.';
+
+  @override
+  String get subscription_go_premium => 'قسط المرور';
+
+  @override
+  String get subscription_go_with_pub => 'متابعة مع الإعلان';
+
+  @override
+  String get subscription_title_1 => 'الإعلانات؟ انساها!';
+
+  @override
+  String get subscription_title_2 => 'ابقى مركزًا، وانسى الإعلانات';
+
+  @override
+  String get subscription_title_3 => 'هل يزعجك الإعلان أيضًا؟';
+
+  @override
+  String get subscription_title_4 => 'أوقفوا الإعلانات!';
+
+  @override
+  String get subscription_title_5 => 'هل سئمت من الإعلانات؟';
+
+  @override
+  String get subscription_title_6 => 'وفر الوقت وتجنب الإعلانات';
+
+  @override
+  String get subscription_title_7 => 'لا مزيد من الإعلانات!';
+
+  @override
+  String get subscription_title_8 => 'قم بالوصول إلى المحتوى مباشرة، دون إعلانات!';
 }

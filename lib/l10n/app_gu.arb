@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "મારી વ્યક્તિગત યાદીઓ",
     "drawer_defined_list": "અમારી પૂર્વવ્યાખ્યાયિત યાદીઓ",
     "drawer_themes_list": "અમારી થીમ્સની યાદીઓ",
-    "subscription_benefit_no_pub": "એપ્લિકેશન પર કોઈ જાહેરાત દેખાતી નથી"
+    "subscription_benefit_zero_pub": "શૂન્ય જાહેરાત",
+    "subscription_navigation_more_speed": "ઝડપી નેવિગેશન",
+    "subscription_max_concentration": "મહત્તમ સાંદ્રતા",
+    "subscription_description1": "જાહેરાતો અમને એપ્લિકેશનને મફત રાખવામાં મદદ કરે છે.",
+    "subscription_description2": "પરંતુ જો તમને સરળ, વિક્ષેપ-મુક્ત અનુભવ જોઈતો હોય, તો પ્રીમિયમ પર અપગ્રેડ કરો.",
+    "subscription_go_premium": "પાસર પ્રીમિયમ",
+    "subscription_go_with_pub": "જાહેરાત સાથે ચાલુ રાખો",
+    "subscription_title_1": "જાહેરાતો? ભૂલી જાઓ!",
+    "subscription_title_2": "ધ્યાન કેન્દ્રિત રાખો, જાહેરાતો ભૂલી જાઓ",
+    "subscription_title_3": "શું તમને પણ જાહેરાતોથી પરેશાની થાય છે?",
+    "subscription_title_4": "જાહેરાતો બંધ કરો!",
+    "subscription_title_5": "જાહેરાતોથી કંટાળી ગયા છો?",
+    "subscription_title_6": "સમય બચાવો, જાહેરાત ટાળો",
+    "subscription_title_7": "હવે કોઈ જાહેરાતો નહીં!",
+    "subscription_title_8": "જાહેરાત વિના, સીધી સામગ્રીને ઍક્સેસ કરો!"
 }

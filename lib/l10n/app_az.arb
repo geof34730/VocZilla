@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Şəxsi siyahılarım",
     "drawer_defined_list": "Əvvəlcədən təyin edilmiş siyahılarımız",
     "drawer_themes_list": "Mövzu siyahılarımız",
-    "subscription_benefit_no_pub": "Tətbiqdə heç bir reklam görünmür"
+    "subscription_benefit_zero_pub": "Sıfır reklam",
+    "subscription_navigation_more_speed": "Daha sürətli naviqasiya",
+    "subscription_max_concentration": "Maksimum konsentrasiya",
+    "subscription_description1": "Reklamlar bizə proqramı pulsuz saxlamağa kömək edir.",
+    "subscription_description2": "Ancaq hamar, diqqətinizi yayındırmayan təcrübə istəyirsinizsə, Premiuma təkmilləşdirin.",
+    "subscription_go_premium": "Passer Premium",
+    "subscription_go_with_pub": "Reklamla davam edin",
+    "subscription_title_1": "Reklamlar? Onları unut!",
+    "subscription_title_2": "Diqqətlə qalın, reklamları unudun",
+    "subscription_title_3": "Sizi də reklam narahat edir?",
+    "subscription_title_4": "Reklamları dayandırın!",
+    "subscription_title_5": "Reklamdan bezdiniz?",
+    "subscription_title_6": "Vaxtınıza qənaət edin, reklamdan qaçın",
+    "subscription_title_7": "Daha reklam yoxdur!",
+    "subscription_title_8": "Reklam olmadan birbaşa məzmuna daxil olun!"
 }

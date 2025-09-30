@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "قوائمي الشخصية",
     "drawer_defined_list": "قوائمنا المحددة مسبقًا",
     "drawer_themes_list": "قوائم المواضيع لدينا",
-    "subscription_benefit_no_pub": "لا يوجد إعلانات مرئية على التطبيق"
+    "subscription_benefit_zero_pub": "لا يوجد إعلانات",
+    "subscription_navigation_more_speed": "التنقل بشكل أسرع",
+    "subscription_max_concentration": "الحد الأقصى للتركيز",
+    "subscription_description1": "تساعدنا الإعلانات على إبقاء التطبيق مجانيًا.",
+    "subscription_description2": "ولكن إذا كنت تريد تجربة سلسة وخالية من التشتيت، فقم بالترقية إلى الإصدار المميز.",
+    "subscription_go_premium": "قسط المرور",
+    "subscription_go_with_pub": "متابعة مع الإعلان",
+    "subscription_title_1": "الإعلانات؟ انساها!",
+    "subscription_title_2": "ابقى مركزًا، وانسى الإعلانات",
+    "subscription_title_3": "هل يزعجك الإعلان أيضًا؟",
+    "subscription_title_4": "أوقفوا الإعلانات!",
+    "subscription_title_5": "هل سئمت من الإعلانات؟",
+    "subscription_title_6": "وفر الوقت وتجنب الإعلانات",
+    "subscription_title_7": "لا مزيد من الإعلانات!",
+    "subscription_title_8": "قم بالوصول إلى المحتوى مباشرة، دون إعلانات!"
 }

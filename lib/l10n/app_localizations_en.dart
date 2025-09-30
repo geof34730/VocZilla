@@ -705,5 +705,47 @@ class AppLocalizationsEn extends AppLocalizations {
   String get drawer_themes_list => 'Our lists of themes';
 
   @override
-  String get subscription_benefit_no_pub => 'No advertising is visible on the application';
+  String get subscription_benefit_zero_pub => 'Zero advertising';
+
+  @override
+  String get subscription_navigation_more_speed => 'Faster navigation';
+
+  @override
+  String get subscription_max_concentration => 'Concentration maximum';
+
+  @override
+  String get subscription_description1 => 'Ads help us keep the app free.';
+
+  @override
+  String get subscription_description2 => 'But if you want a smooth, distraction-free experience, upgrade to Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Continue with ad';
+
+  @override
+  String get subscription_title_1 => 'Ads? Forget them!';
+
+  @override
+  String get subscription_title_2 => 'Stay focused, forget the ads';
+
+  @override
+  String get subscription_title_3 => 'Are you also bothered by advertising?';
+
+  @override
+  String get subscription_title_4 => 'Stop the ads!';
+
+  @override
+  String get subscription_title_5 => 'Tired of advertising?';
+
+  @override
+  String get subscription_title_6 => 'Save time, avoid advertising';
+
+  @override
+  String get subscription_title_7 => 'No more ads!';
+
+  @override
+  String get subscription_title_8 => 'Access the content directly, without advertising!';
 }

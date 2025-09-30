@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "ನನ್ನ ವೈಯಕ್ತಿಕ ಪಟ್ಟಿಗಳು",
     "drawer_defined_list": "ನಮ್ಮ ಪೂರ್ವನಿರ್ಧರಿತ ಪಟ್ಟಿಗಳು",
     "drawer_themes_list": "ನಮ್ಮ ಥೀಮ್‌ಗಳ ಪಟ್ಟಿಗಳು",
-    "subscription_benefit_no_pub": "ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಯಾವುದೇ ಜಾಹೀರಾತು ಗೋಚರಿಸುವುದಿಲ್ಲ."
+    "subscription_benefit_zero_pub": "ಜಾಹೀರಾತು ಇಲ್ಲ",
+    "subscription_navigation_more_speed": "ವೇಗವಾದ ನ್ಯಾವಿಗೇಷನ್",
+    "subscription_max_concentration": "ಗರಿಷ್ಠ ಸಾಂದ್ರತೆ",
+    "subscription_description1": "ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಮುಕ್ತವಾಗಿಡಲು ಜಾಹೀರಾತುಗಳು ನಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತವೆ.",
+    "subscription_description2": "ಆದರೆ ನೀವು ಸುಗಮ, ಅಡ್ಡಿ-ಮುಕ್ತ ಅನುಭವವನ್ನು ಬಯಸಿದರೆ, ಪ್ರೀಮಿಯಂಗೆ ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ.",
+    "subscription_go_premium": "ಪಾಸರ್ ಪ್ರೀಮಿಯಂ",
+    "subscription_go_with_pub": "ಜಾಹೀರಾತಿನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ",
+    "subscription_title_1": "ಜಾಹೀರಾತುಗಳೇ? ಅವುಗಳನ್ನು ಮರೆತುಬಿಡಿ!",
+    "subscription_title_2": "ಜಾಹೀರಾತುಗಳನ್ನು ಮರೆತುಬಿಡಿ, ಗಮನಹರಿಸಿ",
+    "subscription_title_3": "ನೀವು ಜಾಹೀರಾತಿನಿಂದಲೂ ತೊಂದರೆ ಅನುಭವಿಸುತ್ತಿದ್ದೀರಾ?",
+    "subscription_title_4": "ಜಾಹೀರಾತುಗಳನ್ನು ನಿಲ್ಲಿಸಿ!",
+    "subscription_title_5": "ಜಾಹೀರಾತಿನಿಂದ ಬೇಸತ್ತಿದ್ದೀರಾ?",
+    "subscription_title_6": "ಜಾಹೀರಾತು ತಪ್ಪಿಸಿ, ಸಮಯ ಉಳಿಸಿ",
+    "subscription_title_7": "ಇನ್ನು ಜಾಹೀರಾತುಗಳಿಲ್ಲ!",
+    "subscription_title_8": "ಜಾಹೀರಾತು ಇಲ್ಲದೆ ನೇರವಾಗಿ ವಿಷಯವನ್ನು ಪ್ರವೇಶಿಸಿ!"
 }

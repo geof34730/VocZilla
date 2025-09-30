@@ -705,5 +705,47 @@ class AppLocalizationsMy extends AppLocalizations {
   String get drawer_themes_list => 'ကျွန်ုပ်တို့၏အကြောင်းအရာများစာရင်းများ';
 
   @override
-  String get subscription_benefit_no_pub => 'အပလီကေးရှင်းတွင် ကြော်ငြာများကို မတွေ့ရ။';
+  String get subscription_benefit_zero_pub => 'သုညကြော်ငြာ';
+
+  @override
+  String get subscription_navigation_more_speed => 'ပိုမိုမြန်ဆန်သောလမ်းကြောင်း';
+
+  @override
+  String get subscription_max_concentration => 'အာရုံစူးစိုက်မှုအများဆုံး';
+
+  @override
+  String get subscription_description1 => 'ကြော်ငြာများက ကျွန်ုပ်တို့အား အက်ပ်ကို အခမဲ့ထားရန် ကူညီပေးသည်။';
+
+  @override
+  String get subscription_description2 => 'သို့သော် သင်သည် ချောမွေ့သော၊ အနှောင့်အယှက်ကင်းသော အတွေ့အကြုံကို ရယူလိုပါက Premium သို့ အဆင့်မြှင့်ပါ။';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'ကြော်ငြာဖြင့် ဆက်လုပ်ပါ။';
+
+  @override
+  String get subscription_title_1 => 'ကြော်ငြာများ? သူတို့ကို မေ့လိုက်ပါ။';
+
+  @override
+  String get subscription_title_2 => 'အာရုံစိုက်ထားပါ၊ ကြော်ငြာတွေကိုမေ့လိုက်ပါ။';
+
+  @override
+  String get subscription_title_3 => 'ကြော်ငြာတွေကြောင့်လည်း စိတ်ရှုပ်နေပါသလား။';
+
+  @override
+  String get subscription_title_4 => 'ကြော်ငြာများကို ရပ်ပါ။';
+
+  @override
+  String get subscription_title_5 => 'ကြော်ငြာရတာ ပျင်းနေပြီလား?';
+
+  @override
+  String get subscription_title_6 => 'အချိန်ကုန်သက်သာ၊ ကြော်ငြာကိုရှောင်ပါ။';
+
+  @override
+  String get subscription_title_7 => 'ကြော်ငြာများမရှိတော့ပါ။';
+
+  @override
+  String get subscription_title_8 => 'ကြော်ငြာမပါဘဲ အကြောင်းအရာကို တိုက်ရိုက်ဝင်ရောက်ကြည့်ရှုပါ။';
 }

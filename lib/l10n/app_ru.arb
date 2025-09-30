@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Мои личные списки",
     "drawer_defined_list": "Наши предопределенные списки",
     "drawer_themes_list": "Наши списки тем",
-    "subscription_benefit_no_pub": "В приложении не отображается реклама."
+    "subscription_benefit_zero_pub": "Никакой рекламы",
+    "subscription_navigation_more_speed": "Более быстрая навигация",
+    "subscription_max_concentration": "Максимальная концентрация",
+    "subscription_description1": "Реклама помогает нам сохранять приложение бесплатным.",
+    "subscription_description2": "Но если вам нужен комфортный опыт без отвлекающих факторов, перейдите на Premium-версию.",
+    "subscription_go_premium": "Пассер Премиум",
+    "subscription_go_with_pub": "Продолжить с объявлением",
+    "subscription_title_1": "Реклама? Забудьте о ней!",
+    "subscription_title_2": "Будьте сосредоточены, забудьте о рекламе",
+    "subscription_title_3": "Вас тоже раздражает реклама?",
+    "subscription_title_4": "Остановите рекламу!",
+    "subscription_title_5": "Устали от рекламы?",
+    "subscription_title_6": "Экономьте время, избегайте рекламы",
+    "subscription_title_7": "Больше никакой рекламы!",
+    "subscription_title_8": "Получите прямой доступ к контенту, без рекламы!"
 }

@@ -705,5 +705,47 @@ class AppLocalizationsIs extends AppLocalizations {
   String get drawer_themes_list => 'Þemalistar okkar';
 
   @override
-  String get subscription_benefit_no_pub => 'Engar auglýsingar eru sýnilegar í forritinu';
+  String get subscription_benefit_zero_pub => 'Engin auglýsing';
+
+  @override
+  String get subscription_navigation_more_speed => 'Hraðari leiðsögn';
+
+  @override
+  String get subscription_max_concentration => 'Hámarksþéttni';
+
+  @override
+  String get subscription_description1 => 'Auglýsingar hjálpa okkur að halda appinu ókeypis.';
+
+  @override
+  String get subscription_description2 => 'En ef þú vilt þægilega og truflunarlausa upplifun, uppfærðu þá í Premium.';
+
+  @override
+  String get subscription_go_premium => 'Passenger Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Halda áfram með auglýsingu';
+
+  @override
+  String get subscription_title_1 => 'Auglýsingar? Gleymdu þeim!';
+
+  @override
+  String get subscription_title_2 => 'Vertu einbeittur, gleymdu auglýsingunum';
+
+  @override
+  String get subscription_title_3 => 'Ertu líka að pirra þig yfir auglýsingum?';
+
+  @override
+  String get subscription_title_4 => 'Hættið auglýsingunum!';
+
+  @override
+  String get subscription_title_5 => 'Þreytt/ur á auglýsingum?';
+
+  @override
+  String get subscription_title_6 => 'Sparaðu tíma, forðastu auglýsingar';
+
+  @override
+  String get subscription_title_7 => 'Engar fleiri auglýsingar!';
+
+  @override
+  String get subscription_title_8 => 'Fáðu aðgang að efninu beint, án auglýsinga!';
 }

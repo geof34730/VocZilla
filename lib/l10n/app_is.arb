@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Mínir persónulegu listar",
     "drawer_defined_list": "Fyrirfram skilgreinda lista okkar",
     "drawer_themes_list": "Þemalistar okkar",
-    "subscription_benefit_no_pub": "Engar auglýsingar eru sýnilegar í forritinu"
+    "subscription_benefit_zero_pub": "Engin auglýsing",
+    "subscription_navigation_more_speed": "Hraðari leiðsögn",
+    "subscription_max_concentration": "Hámarksþéttni",
+    "subscription_description1": "Auglýsingar hjálpa okkur að halda appinu ókeypis.",
+    "subscription_description2": "En ef þú vilt þægilega og truflunarlausa upplifun, uppfærðu þá í Premium.",
+    "subscription_go_premium": "Passenger Premium",
+    "subscription_go_with_pub": "Halda áfram með auglýsingu",
+    "subscription_title_1": "Auglýsingar? Gleymdu þeim!",
+    "subscription_title_2": "Vertu einbeittur, gleymdu auglýsingunum",
+    "subscription_title_3": "Ertu líka að pirra þig yfir auglýsingum?",
+    "subscription_title_4": "Hættið auglýsingunum!",
+    "subscription_title_5": "Þreytt\/ur á auglýsingum?",
+    "subscription_title_6": "Sparaðu tíma, forðastu auglýsingar",
+    "subscription_title_7": "Engar fleiri auglýsingar!",
+    "subscription_title_8": "Fáðu aðgang að efninu beint, án auglýsinga!"
 }

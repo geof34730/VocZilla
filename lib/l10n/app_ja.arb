@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "私の個人リスト",
     "drawer_defined_list": "定義済みリスト",
     "drawer_themes_list": "テーマリスト",
-    "subscription_benefit_no_pub": "アプリケーションには広告は表示されません"
+    "subscription_benefit_zero_pub": "広告ゼロ",
+    "subscription_navigation_more_speed": "より高速なナビゲーション",
+    "subscription_max_concentration": "濃度最大値",
+    "subscription_description1": "広告のおかげでアプリは無料で提供されています。",
+    "subscription_description2": "ただし、スムーズで邪魔されない体験をお望みの場合は、Premium にアップグレードしてください。",
+    "subscription_go_premium": "パッサープレミアム",
+    "subscription_go_with_pub": "広告を続ける",
+    "subscription_title_1": "広告？忘れてください！",
+    "subscription_title_2": "集中して広告を忘れよう",
+    "subscription_title_3": "あなたも広告に悩まされていませんか？",
+    "subscription_title_4": "広告を止めてください!",
+    "subscription_title_5": "広告に飽きていませんか?",
+    "subscription_title_6": "時間を節約し、広告を避ける",
+    "subscription_title_7": "もう広告はありません!",
+    "subscription_title_8": "広告なしでコンテンツに直接アクセスしましょう！"
 }

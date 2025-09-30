@@ -705,5 +705,47 @@ class AppLocalizationsHu extends AppLocalizations {
   String get drawer_themes_list => 'Témalistáink';
 
   @override
-  String get subscription_benefit_no_pub => 'Nincsenek hirdetések az alkalmazáson';
+  String get subscription_benefit_zero_pub => 'Nulla reklám';
+
+  @override
+  String get subscription_navigation_more_speed => 'Gyorsabb navigáció';
+
+  @override
+  String get subscription_max_concentration => 'Maximális koncentráció';
+
+  @override
+  String get subscription_description1 => 'A hirdetések segítenek abban, hogy az alkalmazás ingyenes maradjon.';
+
+  @override
+  String get subscription_description2 => 'De ha zökkenőmentes, zavartalan élményre vágysz, válts Prémiumra.';
+
+  @override
+  String get subscription_go_premium => 'Passer prémium';
+
+  @override
+  String get subscription_go_with_pub => 'Folytatás a hirdetéssel';
+
+  @override
+  String get subscription_title_1 => 'Reklámok? Felejtsd el őket!';
+
+  @override
+  String get subscription_title_2 => 'Maradj fókuszált, felejtsd el a reklámokat';
+
+  @override
+  String get subscription_title_3 => 'Téged is zavarnak a reklámok?';
+
+  @override
+  String get subscription_title_4 => 'Állítsd meg a reklámokat!';
+
+  @override
+  String get subscription_title_5 => 'Elege van a reklámokból?';
+
+  @override
+  String get subscription_title_6 => 'Időt takaríthat meg, elkerülheti a reklámokat';
+
+  @override
+  String get subscription_title_7 => 'Nincs több hirdetés!';
+
+  @override
+  String get subscription_title_8 => 'Hozzáférés a tartalomhoz közvetlenül, reklámok nélkül!';
 }

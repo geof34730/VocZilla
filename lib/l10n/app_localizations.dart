@@ -1627,11 +1627,95 @@ abstract class AppLocalizations {
   /// **'Our lists of themes'**
   String get drawer_themes_list;
 
-  /// No description provided for @subscription_benefit_no_pub.
+  /// No description provided for @subscription_benefit_zero_pub.
   ///
   /// In en, this message translates to:
-  /// **'No advertising is visible on the application'**
-  String get subscription_benefit_no_pub;
+  /// **'Zero advertising'**
+  String get subscription_benefit_zero_pub;
+
+  /// No description provided for @subscription_navigation_more_speed.
+  ///
+  /// In en, this message translates to:
+  /// **'Faster navigation'**
+  String get subscription_navigation_more_speed;
+
+  /// No description provided for @subscription_max_concentration.
+  ///
+  /// In en, this message translates to:
+  /// **'Concentration maximum'**
+  String get subscription_max_concentration;
+
+  /// No description provided for @subscription_description1.
+  ///
+  /// In en, this message translates to:
+  /// **'Ads help us keep the app free.'**
+  String get subscription_description1;
+
+  /// No description provided for @subscription_description2.
+  ///
+  /// In en, this message translates to:
+  /// **'But if you want a smooth, distraction-free experience, upgrade to Premium.'**
+  String get subscription_description2;
+
+  /// No description provided for @subscription_go_premium.
+  ///
+  /// In en, this message translates to:
+  /// **'Passer Premium'**
+  String get subscription_go_premium;
+
+  /// No description provided for @subscription_go_with_pub.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with ad'**
+  String get subscription_go_with_pub;
+
+  /// No description provided for @subscription_title_1.
+  ///
+  /// In en, this message translates to:
+  /// **'Ads? Forget them!'**
+  String get subscription_title_1;
+
+  /// No description provided for @subscription_title_2.
+  ///
+  /// In en, this message translates to:
+  /// **'Stay focused, forget the ads'**
+  String get subscription_title_2;
+
+  /// No description provided for @subscription_title_3.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you also bothered by advertising?'**
+  String get subscription_title_3;
+
+  /// No description provided for @subscription_title_4.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop the ads!'**
+  String get subscription_title_4;
+
+  /// No description provided for @subscription_title_5.
+  ///
+  /// In en, this message translates to:
+  /// **'Tired of advertising?'**
+  String get subscription_title_5;
+
+  /// No description provided for @subscription_title_6.
+  ///
+  /// In en, this message translates to:
+  /// **'Save time, avoid advertising'**
+  String get subscription_title_6;
+
+  /// No description provided for @subscription_title_7.
+  ///
+  /// In en, this message translates to:
+  /// **'No more ads!'**
+  String get subscription_title_7;
+
+  /// No description provided for @subscription_title_8.
+  ///
+  /// In en, this message translates to:
+  /// **'Access the content directly, without advertising!'**
+  String get subscription_title_8;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -231,5 +231,19 @@
     "drawer_my_personnal_list": "Mani personīgie saraksti",
     "drawer_defined_list": "Mūsu iepriekš definētie saraksti",
     "drawer_themes_list": "Mūsu tēmu saraksti",
-    "subscription_benefit_no_pub": "Lietotnē nav redzama reklāma"
+    "subscription_benefit_zero_pub": "Nulle reklāmas",
+    "subscription_navigation_more_speed": "Ātrāka navigācija",
+    "subscription_max_concentration": "Maksimālā koncentrācija",
+    "subscription_description1": "Reklāmas palīdz mums saglabāt lietotni bez maksas.",
+    "subscription_description2": "Bet, ja vēlaties vienmērīgu un uzmanību novērsošu pieredzi, jauniniet uz Premium.",
+    "subscription_go_premium": "Piespēles prēmija",
+    "subscription_go_with_pub": "Turpināt ar reklāmu",
+    "subscription_title_1": "Reklāmas? Aizmirstiet par tām!",
+    "subscription_title_2": "Saglabājiet koncentrēšanos, aizmirstiet par reklāmām",
+    "subscription_title_3": "Vai tevi arī traucē reklāma?",
+    "subscription_title_4": "Beidziet reklāmas!",
+    "subscription_title_5": "Apnicis reklamēties?",
+    "subscription_title_6": "Ietaupiet laiku, izvairieties no reklāmas",
+    "subscription_title_7": "Vairs nekādu reklāmu!",
+    "subscription_title_8": "Piekļūstiet saturam tieši, bez reklāmas!"
 }

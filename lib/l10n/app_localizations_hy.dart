@@ -705,5 +705,47 @@ class AppLocalizationsHy extends AppLocalizations {
   String get drawer_themes_list => 'Մեր թեմաների ցանկերը';
 
   @override
-  String get subscription_benefit_no_pub => 'Դիմումում գովազդը տեսանելի չէ';
+  String get subscription_benefit_zero_pub => 'Զրոյական գովազդ';
+
+  @override
+  String get subscription_navigation_more_speed => 'Ավելի արագ նավիգացիա';
+
+  @override
+  String get subscription_max_concentration => 'Առավելագույն կոնցենտրացիա';
+
+  @override
+  String get subscription_description1 => 'Գովազդները մեզ օգնում են հավելվածը անվճար պահել։';
+
+  @override
+  String get subscription_description2 => 'Բայց եթե ուզում եք սահուն, առանց շեղումների փորձառություն, անցեք Premium-ի։';
+
+  @override
+  String get subscription_go_premium => 'Passer Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Շարունակել գովազդը';
+
+  @override
+  String get subscription_title_1 => 'Գովազդնե՞ր։ Մոռացե՛ք դրանց մասին։';
+
+  @override
+  String get subscription_title_2 => 'Մնացեք կենտրոնացած, մոռացեք գովազդների մասին';
+
+  @override
+  String get subscription_title_3 => 'Ձեզ նույնպես անհանգստացնո՞ւմ է գովազդը։';
+
+  @override
+  String get subscription_title_4 => 'Դադարեցրեք գովազդները!';
+
+  @override
+  String get subscription_title_5 => 'Հոգնե՞լ եք գովազդից։';
+
+  @override
+  String get subscription_title_6 => 'Խնայեք ժամանակ, խուսափեք գովազդից';
+
+  @override
+  String get subscription_title_7 => 'Այլևս գովազդներ չկան!';
+
+  @override
+  String get subscription_title_8 => 'Մուտք գործեք բովանդակությանը անմիջապես, առանց գովազդի։';
 }

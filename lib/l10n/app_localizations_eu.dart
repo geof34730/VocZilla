@@ -705,5 +705,47 @@ class AppLocalizationsEu extends AppLocalizations {
   String get drawer_themes_list => 'Gure gai zerrendak';
 
   @override
-  String get subscription_benefit_no_pub => 'Ez da iragarkirik ikusten aplikazioan';
+  String get subscription_benefit_zero_pub => 'Zero publizitatea';
+
+  @override
+  String get subscription_navigation_more_speed => 'Nabigazio azkarragoa';
+
+  @override
+  String get subscription_max_concentration => 'Kontzentrazio maximoa';
+
+  @override
+  String get subscription_description1 => 'Iragarkiek aplikazioa doakoa izaten laguntzen digute.';
+
+  @override
+  String get subscription_description2 => 'Baina esperientzia leun eta distrakziorik gabekoa nahi baduzu, berritu Premium-era.';
+
+  @override
+  String get subscription_go_premium => 'Pasabide Premium';
+
+  @override
+  String get subscription_go_with_pub => 'Jarraitu iragarkiarekin';
+
+  @override
+  String get subscription_title_1 => 'Iragarkiak? Ahaztu itzazu!';
+
+  @override
+  String get subscription_title_2 => 'Egon arreta, ahaztu iragarkiak';
+
+  @override
+  String get subscription_title_3 => 'Publizitateak ere kezkatzen zaitu?';
+
+  @override
+  String get subscription_title_4 => 'Gelditu iragarkiak!';
+
+  @override
+  String get subscription_title_5 => 'Publizitateaz nekatuta?';
+
+  @override
+  String get subscription_title_6 => 'Aurreztu denbora, saihestu publizitatea';
+
+  @override
+  String get subscription_title_7 => 'Iragarki gehiago ez!';
+
+  @override
+  String get subscription_title_8 => 'Sartu edukira zuzenean, iragarkirik gabe!';
 }
