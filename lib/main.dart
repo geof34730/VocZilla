@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:app_links/app_links.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -24,8 +23,6 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterL
 final RouteObserver<ModalRoute<void>> routeObserver = RouteObserver<ModalRoute<void>>();
 
 FirebaseMessaging messaging = FirebaseMessaging.instance;
-StreamSubscription<Uri>? _linkSubscription;
-final _appLinks = AppLinks();
 
 void main({
   bool shootScreenShot = false,
@@ -41,6 +38,7 @@ void main({
   WidgetsFlutterBinding.ensureInitialized();
   if(!testScreenShot) {
     AdMobService.instance.initialize();
+    initBranch();
   }
   forFeatureGraphic=forFeatureGraphicParam;
   if(!testScreenShot) {
@@ -81,26 +79,9 @@ void main({
     }
   }
 
-  await _initAppLinks();
-
   final vocabulaireUserRepository = VocabulaireUserRepository();
   await vocabulaireUserRepository.updateListTheme();
 
 
   runApp(MyApp(localForce:localForce));
-}
-
-Future<void> _initAppLinks() async {
-  // Listen to incoming links
-  _linkSubscription = _appLinks.uriLinkStream.listen((uri) {
-    print('Got link while app is running: $uri');
-    // TODO: Implement navigation based on the link.
-  });
-
-  // Get the initial link that the app was opened with
-  final initialUri = await _appLinks.getInitialAppLink();
-  if (initialUri != null) {
-    print('Initial link: $initialUri');
-    // TODO: Implement navigation based on the link.
-  }
 }

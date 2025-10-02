@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter_branch_sdk/flutter_branch_sdk.dart';
+import 'package:voczilla/core/utils/navigatorKey.dart';
 
 const String titleApp="VocZilla";
 const int titleAppCute1=3;
@@ -9,7 +13,7 @@ final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
 
 int globalCountVocabulaireAll=4399;
 bool debugMode=false;
-bool statistiqueGoogleAnalytics=true;
+bool statistiqueGoogleAnalytics=false;
 bool showGoogleAdMob=false;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
@@ -29,3 +33,21 @@ final String serverRankCurrentUser = '$serveurUrl/api/leaderboard/ranking';
 
 const String ANDROID_APP_STORE_URL="https://play.google.com/store/apps/details?id=com.geoffreypetain.voczilla.voczilla";
 const String IOS_APP_STORE_URL="https://apps.apple.com/us/app/com.geoffreypetain.voczilla.voczilla/6742488058";
+
+StreamSubscription<Map>? streamSubscription;
+
+Future<void> initBranch() async {
+  // FlutterBranchSdk.init() must be called before listSession()
+  await FlutterBranchSdk.init();
+
+  streamSubscription = FlutterBranchSdk.listSession().listen((data) {
+    if (data.containsKey('+clicked_branch_link') &&
+        data['+clicked_branch_link'] == true) {
+      if (data.containsKey('guid')) {
+        navigatorKey.currentState?.pushNamed('/share/${data['guid']}');
+      }
+    }
+  }, onError: (error) {
+    print('Branch Error: $error');
+  });
+}

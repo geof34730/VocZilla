@@ -8,6 +8,7 @@ import 'package:voczilla/core/utils/localization.dart';
 import 'package:voczilla/logic/blocs/user/user_bloc.dart';
 import 'package:voczilla/logic/blocs/user/user_state.dart';
 import '../../../app_route.dart';
+import '../../../core/utils/generateUrlShare.dart';
 import '../../../core/utils/getFontForLanguage.dart';
 import '../../../core/utils/logger.dart';
 import '../../../global.dart';
@@ -38,7 +39,7 @@ class DialogHelper {
     showDialog(
       context: context,
       builder: (dialogContext) {
-        return Dialog(
+        return  testScreenShot ? SizedBox() :Dialog(
           insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
           backgroundColor: scheme.surface,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -136,7 +137,11 @@ class DialogHelper {
     );
   }
 
-  Future<void> dialogBuilderShare({required BuildContext context, required String guidListPerso }){
+  Future<void> dialogBuilderShare({required BuildContext context, required String guidListPerso }) async {
+
+
+    String urlShareGenerate= await generateShareLink(guidListPerso);
+
     return showDialog<void>(
       context: context,
       builder: (BuildContext context) {
@@ -184,7 +189,7 @@ class DialogHelper {
                           height: 280,
                           color: Colors.blue,
                           child: QrImageView(
-                            data: "https://links.voczilla.com/share/$guidListPerso",
+                            data: urlShareGenerate,
                             version: 10,
                             size: 280,
                             gapless: true,
@@ -219,12 +224,12 @@ class DialogHelper {
                                     onTap: () {
                                       Clipboard.setData(
                                         ClipboardData(
-                                            text: "https://links.voczilla.com/share/$guidListPerso"),
+                                            text: urlShareGenerate
+                                        ),
                                       );
                                     },
                                     child: Text(
-                                      "https://links.voczilla.com/share/${guidListPerso
-                                          .substring(0, 5)}...",
+                                        urlShareGenerate,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         fontSize: 12.00,

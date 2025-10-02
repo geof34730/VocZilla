@@ -16,6 +16,12 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-1439580806237607~9445579592"/>
 
+        <!-- Branch keys -->
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_erznZrLrj173MZo9hLyDZfaiyDlKCDW1" />
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_dFDjYEUuh378V7aZkOyBYgncvDpKCBWM" />
+        <!-- Set to true to use test key in debug builds -->
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="false" />
+
         <activity
                 android:name=".MainActivity"
                 android:exported="true"
@@ -36,23 +42,21 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
-            <!-- Schéma personnalisé (existant) -->
+            <!-- Branch URI Scheme -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="voczilla" />
+                <data android:scheme="voczilla" android:host="open" />
             </intent-filter>
 
-            <!-- App Links HTTPS vers links.voczilla.com/share/... -->
+            <!-- Branch App Links -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                        android:scheme="https"
-                        android:host="links.voczilla.com"
-                        android:pathPrefix="/share" />
+                <data android:scheme="https" android:host="voczilla.app.link" />
+                <data android:scheme="https" android:host="voczilla-alternate.app.link" />
             </intent-filter>
         </activity>
 

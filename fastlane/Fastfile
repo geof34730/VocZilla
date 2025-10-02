@@ -80,8 +80,8 @@ platform :all do
     ensure_ios_simulator_built_once!
 
     ios_folders = [
-      #"iphone6_7_inch",
-      #"iPad Pro (12.9-inch) (3rd generation)",
+      "iphone6_7_inch",
+      "iPad Pro (12.9-inch) (3rd generation)",
       "ipad_12_9_inch"
     ]
 
@@ -149,10 +149,11 @@ platform :all do
     ensure_android_built_once!(:debug)
 
     android_folders = [
-      "phoneScreenshots",
-      "sevenInchScreenshots",
+	"FeatureGraphic",
+      	"phoneScreenshots",
+      	"sevenInchScreenshots",
       "tenInchScreenshots",
-      "FeatureGraphic"
+      
     ]
 
     locales = extract_locales
