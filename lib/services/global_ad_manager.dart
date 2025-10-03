@@ -96,7 +96,7 @@ class _GlobalAdManagerState extends State<GlobalAdManager> with WidgetsBindingOb
         // Une fois la boîte de dialogue fermée, on planifie la prochaine dans 5 minutes.
         if (_isSubscribed == false && WidgetsBinding.instance.lifecycleState ==
             AppLifecycleState.resumed) {
-          _subscriptionDialogTimer = Timer(const Duration(minutes: 5), () {
+          _subscriptionDialogTimer = Timer(const Duration(minutes: 2), () {
             _showSubscriptionBannerAndScheduleNext(); // Appel récursif pour la boucle
           });
         }

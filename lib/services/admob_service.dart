@@ -134,7 +134,7 @@ class AdMobService {
     loadBanner(placementId: 'home_top', context: context);
     Future.delayed( Duration(seconds: _timerSecondesBannier), () {
       if (!_adsEnabled) return;
-      loadBanner(placementId: 'home_bottom', context: context);
+      //loadBanner(placementId: 'home_bottom', context: context);
     });
   }
 
@@ -143,7 +143,7 @@ class AdMobService {
     loadBanner(placementId: 'dictation_top', context: context);
     Future.delayed( Duration(seconds: _timerSecondesBannier), () {
       if (!_adsEnabled) return;
-      loadBanner(placementId: 'dictation_bottom', context: context);
+    //  loadBanner(placementId: 'dictation_bottom', context: context);
     });
   }
 
@@ -152,7 +152,7 @@ class AdMobService {
     loadBanner(placementId: 'list_top', context: context);
     Future.delayed( Duration(seconds: _timerSecondesBannier), () {
       if (!_adsEnabled) return;
-      loadBanner(placementId: 'list_bottom', context: context);
+     // loadBanner(placementId: 'list_bottom', context: context);
     });
   }
   Future<void> loadPrononciationnScreenBanners(BuildContext context) async {
@@ -160,7 +160,7 @@ class AdMobService {
     loadBanner(placementId: 'prononciation_top', context: context);
     Future.delayed( Duration(seconds: _timerSecondesBannier), () {
       if (!_adsEnabled) return;
-      loadBanner(placementId: 'prononciation_bottom', context: context);
+    //  loadBanner(placementId: 'prononciation_bottom', context: context);
     });
   }
 
@@ -169,7 +169,7 @@ class AdMobService {
     loadBanner(placementId: 'learn_top', context: context);
     Future.delayed( Duration(seconds: _timerSecondesBannier), () {
       if (!_adsEnabled) return;
-      loadBanner(placementId: 'learn_bottom', context: context);
+    //  loadBanner(placementId: 'learn_bottom', context: context);
     });
   }
 
@@ -179,7 +179,7 @@ class AdMobService {
     loadBanner(placementId: 'quizz_top', context: context);
     Future.delayed( Duration(seconds: _timerSecondesBannier), () {
       if (!_adsEnabled) return;
-      loadBanner(placementId: 'quizz_bottom', context: context);
+     // loadBanner(placementId: 'quizz_bottom', context: context);
     });
   }
 
@@ -196,32 +196,32 @@ class AdMobService {
 
   void disposeDictationScreenBanners() {
     disposeBanner('dictation_top');
-    disposeBanner('dictation_bottom');
+  //  disposeBanner('dictation_bottom');
   }
 
   void disposePronunciationScreenBanners() {
     disposeBanner('prononciation_top');
-    disposeBanner('prononciation_bottom');
+  //  disposeBanner('prononciation_bottom');
   }
 
   void disposeHomeScreenBanners() {
     disposeBanner('home_top');
-    disposeBanner('home_bottom');
+ //   disposeBanner('home_bottom');
   }
 
   void disposeListScreenBanners() {
     disposeBanner('list_top');
-    disposeBanner('list_bottom');
+   // disposeBanner('list_bottom');
   }
 
   void disposeLearnScreenBanners() {
     disposeBanner('learn_top');
-    disposeBanner('learn_bottom');
+  //  disposeBanner('learn_bottom');
   }
 
   void disposeQuizzScreenBanners() {
     disposeBanner('quizz_top');
-    disposeBanner('quizz_bottom');
+  //  disposeBanner('quizz_bottom');
   }
 
   // ------------------------
