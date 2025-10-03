@@ -9,7 +9,7 @@ class AppLocalizationsKm extends AppLocalizations {
   AppLocalizationsKm([String locale = 'km']) : super(locale);
 
   @override
-  String get app_release_note => 'បានបន្ថែមការចែករំលែកបញ្ជីផ្ទាល់ខ្លួន';
+  String get app_release_note => 'ការចេញផ្សាយនេះរួមបញ្ចូលការគ្រប់គ្រងតំណជ្រៅតាមរយៈ Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'មុខងារចែករំលែកបញ្ជីនឹងមានក្នុងពេលឆាប់ៗនេះ!';

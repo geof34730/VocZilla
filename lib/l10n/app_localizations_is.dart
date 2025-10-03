@@ -9,7 +9,7 @@ class AppLocalizationsIs extends AppLocalizations {
   AppLocalizationsIs([String locale = 'is']) : super(locale);
 
   @override
-  String get app_release_note => 'Bætt við deilingu persónulegra lista';
+  String get app_release_note => 'Þessi útgáfa samþættir stjórnun djúptenginga í gegnum Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Aðgerðin til að deila listanum verður tiltæk mjög fljótlega!';

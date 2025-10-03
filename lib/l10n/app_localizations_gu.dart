@@ -9,7 +9,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get app_release_note => 'વ્યક્તિગત સૂચિ શેરિંગ ઉમેર્યું';
+  String get app_release_note => 'આ પ્રકાશન Branch.io દ્વારા ડીપ લિંક મેનેજમેન્ટને એકીકૃત કરે છે.';
 
   @override
   String get share_list_perso_alert_disponible => 'યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!';

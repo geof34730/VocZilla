@@ -9,7 +9,7 @@ class AppLocalizationsSk extends AppLocalizations {
   AppLocalizationsSk([String locale = 'sk']) : super(locale);
 
   @override
-  String get app_release_note => 'Pridané zdieľanie osobných zoznamov';
+  String get app_release_note => 'Táto verzia integruje správu deep linkov prostredníctvom Branch.io.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcia zdieľania zoznamov bude dostupná už čoskoro!';

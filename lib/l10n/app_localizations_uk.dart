@@ -9,7 +9,7 @@ class AppLocalizationsUk extends AppLocalizations {
   AppLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get app_release_note => 'Додано спільний доступ до особистого списку';
+  String get app_release_note => 'Цей реліз інтегрує керування глибокими посиланнями через Branch.io.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функція спільного доступу до списку буде доступна дуже скоро!';

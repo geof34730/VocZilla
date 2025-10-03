@@ -9,7 +9,7 @@ class AppLocalizationsUz extends AppLocalizations {
   AppLocalizationsUz([String locale = 'uz']) : super(locale);
 
   @override
-  String get app_release_note => 'Shaxsiy roʻyxat almashish qoʻshildi';
+  String get app_release_note => 'Ushbu nashr Branch.io orqali chuqur havolalarni boshqarishni birlashtiradi';
 
   @override
   String get share_list_perso_alert_disponible => 'Roʻyxatni almashish funksiyasi tez orada mavjud boʻladi!';

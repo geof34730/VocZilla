@@ -9,7 +9,7 @@ class AppLocalizationsAz extends AppLocalizations {
   AppLocalizationsAz([String locale = 'az']) : super(locale);
 
   @override
-  String get app_release_note => 'Şəxsi siyahı paylaşımı əlavə edildi';
+  String get app_release_note => 'Bu buraxılış Branch.io vasitəsilə dərin keçid idarəetməsini birləşdirir';
 
   @override
   String get share_list_perso_alert_disponible => 'Siyahı paylaşma xüsusiyyəti çox tezliklə mövcud olacaq!';

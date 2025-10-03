@@ -9,7 +9,7 @@ class AppLocalizationsKk extends AppLocalizations {
   AppLocalizationsKk([String locale = 'kk']) : super(locale);
 
   @override
-  String get app_release_note => 'Жеке тізімді бөлісу қосылды';
+  String get app_release_note => 'Бұл шығарылым Branch.io арқылы терең сілтемелерді басқаруды біріктіреді';
 
   @override
   String get share_list_perso_alert_disponible => 'Тізіммен бөлісу мүмкіндігі жақын арада қолжетімді болады!';

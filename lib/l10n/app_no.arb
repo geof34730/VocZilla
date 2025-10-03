@@ -1,5 +1,5 @@
 {
-    "app_release_note": "La til deling av personlige lister",
+    "app_release_note": "Denne utgivelsen integrerer dyplenkehåndtering via Branch.io",
     "share_list_perso_alert_disponible": "Funksjonen for deling av lister vil være tilgjengelig veldig snart!",
     "information": "Informasjon",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

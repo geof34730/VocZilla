@@ -1,5 +1,5 @@
 {
-    "app_release_note": "تمت إضافة مشاركة القائمة الشخصية",
+    "app_release_note": "يتكامل هذا الإصدار مع إدارة الروابط العميقة عبر Branch.io",
     "share_list_perso_alert_disponible": "ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!",
     "information": "معلومة",
     "app_title": "فوكزيلا",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

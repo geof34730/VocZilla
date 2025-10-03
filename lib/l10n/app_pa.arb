@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ਨਿੱਜੀ ਸੂਚੀ ਸਾਂਝਾਕਰਨ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ",
+    "app_release_note": "ਇਹ ਰੀਲੀਜ਼ Branch.io ਰਾਹੀਂ ਡੂੰਘੇ ਲਿੰਕ ਪ੍ਰਬੰਧਨ ਨੂੰ ਏਕੀਕ੍ਰਿਤ ਕਰਦੀ ਹੈ।",
     "share_list_perso_alert_disponible": "ਸੂਚੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਹੁਤ ਜਲਦੀ ਉਪਲਬਧ ਹੋਵੇਗੀ!",
     "information": "ਜਾਣਕਾਰੀ",
     "app_title": "ਵੋਜ਼ਿਲਾ",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

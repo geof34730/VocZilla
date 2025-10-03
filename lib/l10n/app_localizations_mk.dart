@@ -9,7 +9,7 @@ class AppLocalizationsMk extends AppLocalizations {
   AppLocalizationsMk([String locale = 'mk']) : super(locale);
 
   @override
-  String get app_release_note => 'Додадено е споделување на личен список';
+  String get app_release_note => 'Ова издание интегрира управување со длабоки врски преку Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцијата за споделување на листа ќе биде достапна многу наскоро!';

@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Хувийн жагсаалтыг хуваалцахыг нэмсэн",
+    "app_release_note": "Энэхүү хувилбар нь Branch.io-ээр дамжуулан гүнзгий холбоосын менежментийг нэгтгэдэг",
     "share_list_perso_alert_disponible": "Жагсаалт хуваалцах онцлог тун удахгүй бэлэн болно!",
     "information": "Мэдээлэл",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

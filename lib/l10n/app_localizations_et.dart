@@ -9,7 +9,7 @@ class AppLocalizationsEt extends AppLocalizations {
   AppLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get app_release_note => 'Lisatud isikliku nimekirja jagamine';
+  String get app_release_note => 'See versioon integreerib süvalinkide halduse Branch.io kaudu';
 
   @override
   String get share_list_perso_alert_disponible => 'Loendi jagamise funktsioon on saadaval peagi!';

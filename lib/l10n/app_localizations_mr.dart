@@ -9,7 +9,7 @@ class AppLocalizationsMr extends AppLocalizations {
   AppLocalizationsMr([String locale = 'mr']) : super(locale);
 
   @override
-  String get app_release_note => 'वैयक्तिक यादी शेअरिंग जोडले';
+  String get app_release_note => 'हे प्रकाशन Branch.io द्वारे डीप लिंक व्यवस्थापन एकत्रित करते.';
 
   @override
   String get share_list_perso_alert_disponible => 'यादी शेअरिंग वैशिष्ट्य लवकरच उपलब्ध होईल!';

@@ -9,7 +9,7 @@ class AppLocalizationsUr extends AppLocalizations {
   AppLocalizationsUr([String locale = 'ur']) : super(locale);
 
   @override
-  String get app_release_note => 'ذاتی فہرست کا اشتراک شامل کیا گیا۔';
+  String get app_release_note => 'یہ ریلیز Branch.io کے ذریعے گہرے لنک کے انتظام کو مربوط کرتی ہے۔';
 
   @override
   String get share_list_perso_alert_disponible => 'لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!';

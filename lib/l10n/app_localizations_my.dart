@@ -9,7 +9,7 @@ class AppLocalizationsMy extends AppLocalizations {
   AppLocalizationsMy([String locale = 'my']) : super(locale);
 
   @override
-  String get app_release_note => 'ကိုယ်ရေးကိုယ်တာစာရင်း မျှဝေခြင်းကို ထည့်သွင်းထားသည်။';
+  String get app_release_note => 'ဤထုတ်ဝေမှုသည် Branch.io မှတစ်ဆင့် နက်နဲသောလင့်ခ်စီမံခန့်ခွဲမှုကို ပေါင်းစပ်ထားသည်။';
 
   @override
   String get share_list_perso_alert_disponible => 'စာရင်းမျှဝေခြင်းအင်္ဂါရပ်ကို မကြာမီ ရနိုင်ပါမည်။';

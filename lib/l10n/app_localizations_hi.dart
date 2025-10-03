@@ -9,7 +9,7 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get app_release_note => 'व्यक्तिगत सूची साझाकरण जोड़ा गया';
+  String get app_release_note => 'यह रिलीज़ Branch.io के माध्यम से डीप लिंक प्रबंधन को एकीकृत करता है';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझा करने की सुविधा बहुत जल्द उपलब्ध होगी!';

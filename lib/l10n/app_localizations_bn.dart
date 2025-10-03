@@ -9,7 +9,7 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get app_release_note => 'ব্যক্তিগত তালিকা ভাগ করে নেওয়া যোগ করা হয়েছে';
+  String get app_release_note => 'এই রিলিজটি Branch.io এর মাধ্যমে ডিপ লিঙ্ক ম্যানেজমেন্টকে একীভূত করে।';
 
   @override
   String get share_list_perso_alert_disponible => 'তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!';

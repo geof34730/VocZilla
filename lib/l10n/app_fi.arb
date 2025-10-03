@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Lisätty henkilökohtaisen listan jakaminen",
+    "app_release_note": "Tämä julkaisu integroi syvälinkkien hallinnan Branch.io:n kautta",
     "share_list_perso_alert_disponible": "Listan jakamisominaisuus on saatavilla pian!",
     "information": "Tiedot",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

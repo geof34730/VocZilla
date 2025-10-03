@@ -9,7 +9,7 @@ class AppLocalizationsMs extends AppLocalizations {
   AppLocalizationsMs([String locale = 'ms']) : super(locale);
 
   @override
-  String get app_release_note => 'Menambahkan perkongsian senarai peribadi';
+  String get app_release_note => 'Keluaran ini menyepadukan pengurusan pautan dalam melalui Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Ciri perkongsian senarai akan tersedia tidak lama lagi!';

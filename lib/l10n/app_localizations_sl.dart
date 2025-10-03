@@ -9,7 +9,7 @@ class AppLocalizationsSl extends AppLocalizations {
   AppLocalizationsSl([String locale = 'sl']) : super(locale);
 
   @override
-  String get app_release_note => 'Dodana skupna raba osebnega seznama';
+  String get app_release_note => 'Ta izdaja vključuje upravljanje globokih povezav prek Branch.io.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija deljenja seznamov bo kmalu na voljo!';

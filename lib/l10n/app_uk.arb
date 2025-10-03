@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Додано спільний доступ до особистого списку",
+    "app_release_note": "Цей реліз інтегрує керування глибокими посиланнями через Branch.io.",
     "share_list_perso_alert_disponible": "Функція спільного доступу до списку буде доступна дуже скоро!",
     "information": "Інформація",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

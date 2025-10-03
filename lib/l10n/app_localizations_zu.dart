@@ -9,7 +9,7 @@ class AppLocalizationsZu extends AppLocalizations {
   AppLocalizationsZu([String locale = 'zu']) : super(locale);
 
   @override
-  String get app_release_note => 'Kwengezwe uhlu lomuntu siqu';
+  String get app_release_note => 'Lokhu kukhishwa kuhlanganisa ukuphathwa kwesixhumanisi esijulile nge-Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Isici sokwabelana ngohlu sizotholakala maduze!';

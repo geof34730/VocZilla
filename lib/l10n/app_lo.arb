@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ເພີ່ມການແບ່ງປັນລາຍຊື່ສ່ວນຕົວແລ້ວ",
+    "app_release_note": "ການປ່ອຍນີ້ປະສົມປະສານການຄຸ້ມຄອງການເຊື່ອມໂຍງເລິກຜ່ານ Branch.io",
     "share_list_perso_alert_disponible": "ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!",
     "information": "ຂໍ້ມູນ",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

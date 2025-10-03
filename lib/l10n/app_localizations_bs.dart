@@ -9,7 +9,7 @@ class AppLocalizationsBs extends AppLocalizations {
   AppLocalizationsBs([String locale = 'bs']) : super(locale);
 
   @override
-  String get app_release_note => 'Dodano dijeljenje ličnih lista';
+  String get app_release_note => 'Ovo izdanje integriše upravljanje dubokim linkovima putem Branch.io platforme.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija dijeljenja liste bit će dostupna vrlo brzo!';

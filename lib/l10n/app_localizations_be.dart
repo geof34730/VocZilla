@@ -9,7 +9,7 @@ class AppLocalizationsBe extends AppLocalizations {
   AppLocalizationsBe([String locale = 'be']) : super(locale);
 
   @override
-  String get app_release_note => 'Дададзены агульны доступ да асабістага спісу';
+  String get app_release_note => 'Гэты рэліз інтэгруе кіраванне глыбокімі спасылкамі праз Branch.io.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцыя сумеснага выкарыстання спісу будзе даступная вельмі хутка!';

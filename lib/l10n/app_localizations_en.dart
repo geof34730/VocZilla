@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get app_release_note => 'Added personal list sharing';
+  String get app_release_note => 'This release integrates deep link management via Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'The list sharing feature will be available very soon!';

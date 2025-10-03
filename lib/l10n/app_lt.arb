@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Pridėtas asmeninių sąrašų bendrinimas",
+    "app_release_note": "Šiame leidime integruotas giliųjų nuorodų valdymas per „Branch.io“",
     "share_list_perso_alert_disponible": "Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!",
     "information": "Informacija",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

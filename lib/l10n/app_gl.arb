@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Engadiuse o uso compartido de listas persoais",
+    "app_release_note": "Esta versión integra a xestión de ligazóns profundas a través de Branch.io",
     "share_list_perso_alert_disponible": "A función para compartir listas estará dispoñible moi pronto!",
     "information": "Información",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

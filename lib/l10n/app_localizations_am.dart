@@ -9,7 +9,7 @@ class AppLocalizationsAm extends AppLocalizations {
   AppLocalizationsAm([String locale = 'am']) : super(locale);
 
   @override
-  String get app_release_note => 'የግል ዝርዝር ማጋራት ታክሏል።';
+  String get app_release_note => 'ይህ ልቀት በ Branch.io በኩል ጥልቅ አገናኝ አስተዳደርን ያዋህዳል';
 
   @override
   String get share_list_perso_alert_disponible => 'የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!';

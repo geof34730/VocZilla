@@ -9,7 +9,7 @@ class AppLocalizationsRo extends AppLocalizations {
   AppLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
-  String get app_release_note => 'Adăugată partajarea listei personale';
+  String get app_release_note => 'Această versiune integrează gestionarea linkurilor profunde prin Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Funcția de partajare a listei va fi disponibilă foarte curând!';

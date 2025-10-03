@@ -1,5 +1,5 @@
 {
-    "app_release_note": "S'ha afegit la compartició de llistes personals",
+    "app_release_note": "Aquesta versió integra la gestió d'enllaços profunds a través de Branch.io",
     "share_list_perso_alert_disponible": "La funció de compartir llistes estarà disponible molt aviat!",
     "information": "Informació",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

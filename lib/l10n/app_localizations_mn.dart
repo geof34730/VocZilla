@@ -9,7 +9,7 @@ class AppLocalizationsMn extends AppLocalizations {
   AppLocalizationsMn([String locale = 'mn']) : super(locale);
 
   @override
-  String get app_release_note => 'Хувийн жагсаалтыг хуваалцахыг нэмсэн';
+  String get app_release_note => 'Энэхүү хувилбар нь Branch.io-ээр дамжуулан гүнзгий холбоосын менежментийг нэгтгэдэг';
 
   @override
   String get share_list_perso_alert_disponible => 'Жагсаалт хуваалцах онцлог тун удахгүй бэлэн болно!';

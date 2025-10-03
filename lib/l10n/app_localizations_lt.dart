@@ -9,7 +9,7 @@ class AppLocalizationsLt extends AppLocalizations {
   AppLocalizationsLt([String locale = 'lt']) : super(locale);
 
   @override
-  String get app_release_note => 'Pridėtas asmeninių sąrašų bendrinimas';
+  String get app_release_note => 'Šiame leidime integruotas giliųjų nuorodų valdymas per „Branch.io“';
 
   @override
   String get share_list_perso_alert_disponible => 'Sąrašo bendrinimo funkcija bus pasiekiama jau labai greitai!';

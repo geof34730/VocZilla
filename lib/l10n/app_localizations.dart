@@ -238,7 +238,7 @@ abstract class AppLocalizations {
   /// No description provided for @app_release_note.
   ///
   /// In en, this message translates to:
-  /// **'Added personal list sharing'**
+  /// **'This release integrates deep link management via Branch.io'**
   String get app_release_note;
 
   /// No description provided for @share_list_perso_alert_disponible.

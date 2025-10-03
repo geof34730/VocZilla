@@ -9,7 +9,7 @@ class AppLocalizationsTh extends AppLocalizations {
   AppLocalizationsTh([String locale = 'th']) : super(locale);
 
   @override
-  String get app_release_note => 'เพิ่มการแชร์รายการส่วนตัว';
+  String get app_release_note => 'การเปิดตัวครั้งนี้จะรวมการจัดการลิงก์ลึกผ่าน Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'ฟีเจอร์การแชร์รายการจะพร้อมใช้งานเร็วๆ นี้!';

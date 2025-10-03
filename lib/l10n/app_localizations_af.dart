@@ -9,7 +9,7 @@ class AppLocalizationsAf extends AppLocalizations {
   AppLocalizationsAf([String locale = 'af']) : super(locale);
 
   @override
-  String get app_release_note => 'Persoonlike lysdeling bygevoeg';
+  String get app_release_note => 'Hierdie vrystelling integreer diep skakelbestuur via Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Die lysdelingsfunksie sal binnekort beskikbaar wees!';

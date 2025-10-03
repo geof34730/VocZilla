@@ -9,7 +9,7 @@ class AppLocalizationsMl extends AppLocalizations {
   AppLocalizationsMl([String locale = 'ml']) : super(locale);
 
   @override
-  String get app_release_note => 'വ്യക്തിഗത ലിസ്റ്റ് പങ്കിടൽ ചേർത്തു';
+  String get app_release_note => 'ഈ പതിപ്പ് Branch.io വഴി ഡീപ് ലിങ്ക് മാനേജ്‌മെന്റിനെ സംയോജിപ്പിക്കുന്നു.';
 
   @override
   String get share_list_perso_alert_disponible => 'ലിസ്റ്റ് പങ്കിടൽ സവിശേഷത വളരെ വേഗം ലഭ്യമാകും!';

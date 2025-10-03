@@ -9,7 +9,7 @@ class AppLocalizationsOr extends AppLocalizations {
   AppLocalizationsOr([String locale = 'or']) : super(locale);
 
   @override
-  String get app_release_note => 'ବ୍ୟକ୍ତିଗତ ତାଲିକା ସେୟାରିଂ ଯୋଗ କରାଯାଇଛି';
+  String get app_release_note => 'ଏହି ରିଲିଜ୍ Branch.io ମାଧ୍ୟମରେ ଡିପ୍ ଲିଙ୍କ୍ ପରିଚାଳନାକୁ ସମନ୍ୱିତ କରେ।';
 
   @override
   String get share_list_perso_alert_disponible => 'ତାଲିକା ସେୟାରିଂ ବୈଶିଷ୍ଟ୍ୟ ଖୁବ୍ ଶୀଘ୍ର ଉପଲବ୍ଧ ହେବ!';

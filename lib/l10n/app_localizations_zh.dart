@@ -9,7 +9,7 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get app_release_note => '新增个人列表分享';
+  String get app_release_note => '此版本通过 Branch.io 集成了深度链接管理';
 
   @override
   String get share_list_perso_alert_disponible => '列表共享功能即将推出！';

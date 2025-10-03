@@ -9,7 +9,7 @@ class AppLocalizationsSw extends AppLocalizations {
   AppLocalizationsSw([String locale = 'sw']) : super(locale);
 
   @override
-  String get app_release_note => 'Aliongeza kushiriki orodha ya kibinafsi';
+  String get app_release_note => 'Toleo hili linajumuisha usimamizi wa viungo vya kina kupitia Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Kipengele cha kushiriki orodha kitapatikana hivi karibuni!';

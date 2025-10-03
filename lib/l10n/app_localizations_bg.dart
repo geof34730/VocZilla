@@ -9,7 +9,7 @@ class AppLocalizationsBg extends AppLocalizations {
   AppLocalizationsBg([String locale = 'bg']) : super(locale);
 
   @override
-  String get app_release_note => 'Добавено е споделяне на личен списък';
+  String get app_release_note => 'Тази версия интегрира управление на дълбоки връзки чрез Branch.io.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функцията за споделяне на списъци ще бъде достъпна съвсем скоро!';

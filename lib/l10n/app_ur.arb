@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ذاتی فہرست کا اشتراک شامل کیا گیا۔",
+    "app_release_note": "یہ ریلیز Branch.io کے ذریعے گہرے لنک کے انتظام کو مربوط کرتی ہے۔",
     "share_list_perso_alert_disponible": "لسٹ شیئرنگ فیچر بہت جلد دستیاب ہو جائے گا!",
     "information": "معلومات",
     "app_title": "ووک زیلا",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

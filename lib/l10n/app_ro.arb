@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Adăugată partajarea listei personale",
+    "app_release_note": "Această versiune integrează gestionarea linkurilor profunde prin Branch.io",
     "share_list_perso_alert_disponible": "Funcția de partajare a listei va fi disponibilă foarte curând!",
     "information": "Informaţii",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

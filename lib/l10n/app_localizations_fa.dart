@@ -9,7 +9,7 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get app_release_note => 'اشتراک‌گذاری فهرست شخصی اضافه شد';
+  String get app_release_note => 'این نسخه، مدیریت لینک‌های عمیق را از طریق Branch.io ادغام می‌کند.';
 
   @override
   String get share_list_perso_alert_disponible => 'قابلیت اشتراک‌گذاری لیست خیلی زود در دسترس قرار خواهد گرفت!';

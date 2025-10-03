@@ -9,7 +9,7 @@ class AppLocalizationsLo extends AppLocalizations {
   AppLocalizationsLo([String locale = 'lo']) : super(locale);
 
   @override
-  String get app_release_note => 'ເພີ່ມການແບ່ງປັນລາຍຊື່ສ່ວນຕົວແລ້ວ';
+  String get app_release_note => 'ການປ່ອຍນີ້ປະສົມປະສານການຄຸ້ມຄອງການເຊື່ອມໂຍງເລິກຜ່ານ Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'ຄຸນສົມບັດການແບ່ງປັນລາຍຊື່ຈະສາມາດໃຊ້ໄດ້ໃນໄວໆນີ້!';

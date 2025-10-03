@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Hozzáadott személyes listamegosztás",
+    "app_release_note": "Ez a kiadás integrálja a mélyhivatkozás-kezelést a Branch.io-n keresztül",
     "share_list_perso_alert_disponible": "A listamegosztási funkció hamarosan elérhető lesz!",
     "information": "Információ",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

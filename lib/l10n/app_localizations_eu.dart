@@ -9,7 +9,7 @@ class AppLocalizationsEu extends AppLocalizations {
   AppLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get app_release_note => 'Gehitu da zerrenda pertsonalak partekatzea';
+  String get app_release_note => 'Bertsio honek Branch.io bidezko esteka sakonen kudeaketa integratzen du';
 
   @override
   String get share_list_perso_alert_disponible => 'Zerrenda partekatzeko funtzioa laster egongo da eskuragarri!';

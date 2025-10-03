@@ -9,7 +9,7 @@ class AppLocalizationsHu extends AppLocalizations {
   AppLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get app_release_note => 'Hozzáadott személyes listamegosztás';
+  String get app_release_note => 'Ez a kiadás integrálja a mélyhivatkozás-kezelést a Branch.io-n keresztül';
 
   @override
   String get share_list_perso_alert_disponible => 'A listamegosztási funkció hamarosan elérhető lesz!';

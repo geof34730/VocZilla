@@ -9,7 +9,7 @@ class AppLocalizationsLv extends AppLocalizations {
   AppLocalizationsLv([String locale = 'lv']) : super(locale);
 
   @override
-  String get app_release_note => 'Pievienota personīgā saraksta koplietošana';
+  String get app_release_note => 'Šajā laidienā ir integrēta dziļo saišu pārvaldība, izmantojot Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Saraksta koplietošanas funkcija būs pieejama jau pavisam drīz!';

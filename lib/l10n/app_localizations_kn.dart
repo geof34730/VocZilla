@@ -9,7 +9,7 @@ class AppLocalizationsKn extends AppLocalizations {
   AppLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get app_release_note => 'ವೈಯಕ್ತಿಕ ಪಟ್ಟಿ ಹಂಚಿಕೆಯನ್ನು ಸೇರಿಸಲಾಗಿದೆ';
+  String get app_release_note => 'ಈ ಬಿಡುಗಡೆಯು Branch.io ಮೂಲಕ ಆಳವಾದ ಲಿಂಕ್ ನಿರ್ವಹಣೆಯನ್ನು ಸಂಯೋಜಿಸುತ್ತದೆ.';
 
   @override
   String get share_list_perso_alert_disponible => 'ಪಟ್ಟಿ ಹಂಚಿಕೆ ವೈಶಿಷ್ಟ್ಯವು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಿರುತ್ತದೆ!';

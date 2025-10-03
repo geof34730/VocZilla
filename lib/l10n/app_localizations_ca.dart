@@ -9,7 +9,7 @@ class AppLocalizationsCa extends AppLocalizations {
   AppLocalizationsCa([String locale = 'ca']) : super(locale);
 
   @override
-  String get app_release_note => 'S\'ha afegit la compartició de llistes personals';
+  String get app_release_note => 'Aquesta versió integra la gestió d\'enllaços profunds a través de Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'La funció de compartir llistes estarà disponible molt aviat!';

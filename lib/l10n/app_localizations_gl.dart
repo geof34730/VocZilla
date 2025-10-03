@@ -9,7 +9,7 @@ class AppLocalizationsGl extends AppLocalizations {
   AppLocalizationsGl([String locale = 'gl']) : super(locale);
 
   @override
-  String get app_release_note => 'Engadiuse o uso compartido de listas persoais';
+  String get app_release_note => 'Esta versión integra a xestión de ligazóns profundas a través de Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'A función para compartir listas estará dispoñible moi pronto!';

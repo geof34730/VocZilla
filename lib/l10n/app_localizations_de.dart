@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get app_release_note => 'Persönliche Listenfreigabe hinzugefügt';
+  String get app_release_note => 'Diese Version integriert Deep Link Management über Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!';

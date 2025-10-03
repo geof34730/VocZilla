@@ -9,7 +9,7 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
-  String get app_release_note => 'La til deling av personlige lister';
+  String get app_release_note => 'Denne utgivelsen integrerer dyplenkehåndtering via Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksjonen for deling av lister vil være tilgjengelig veldig snart!';

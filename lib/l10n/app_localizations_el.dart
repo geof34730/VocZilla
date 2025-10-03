@@ -9,7 +9,7 @@ class AppLocalizationsEl extends AppLocalizations {
   AppLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get app_release_note => 'Προστέθηκε η κοινή χρήση προσωπικής λίστας';
+  String get app_release_note => 'Αυτή η έκδοση ενσωματώνει τη διαχείριση συνδέσμων σε βάθος μέσω του Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Η λειτουργία κοινής χρήσης λίστας θα είναι διαθέσιμη πολύ σύντομα!';

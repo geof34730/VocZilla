@@ -9,7 +9,7 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get app_release_note => 'Đã thêm chia sẻ danh sách cá nhân';
+  String get app_release_note => 'Phiên bản này tích hợp quản lý liên kết sâu thông qua Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Tính năng chia sẻ danh sách sẽ sớm có mặt!';

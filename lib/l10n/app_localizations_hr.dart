@@ -9,7 +9,7 @@ class AppLocalizationsHr extends AppLocalizations {
   AppLocalizationsHr([String locale = 'hr']) : super(locale);
 
   @override
-  String get app_release_note => 'Dodano dijeljenje osobnih popisa';
+  String get app_release_note => 'Ovo izdanje integrira upravljanje dubokim poveznicama putem Branch.io-a.';
 
   @override
   String get share_list_perso_alert_disponible => 'Funkcija dijeljenja popisa bit će dostupna vrlo brzo!';

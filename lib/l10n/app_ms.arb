@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Menambahkan perkongsian senarai peribadi",
+    "app_release_note": "Keluaran ini menyepadukan pengurusan pautan dalam melalui Branch.io",
     "share_list_perso_alert_disponible": "Ciri perkongsian senarai akan tersedia tidak lama lagi!",
     "information": "Maklumat",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

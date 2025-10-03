@@ -9,7 +9,7 @@ class AppLocalizationsAs extends AppLocalizations {
   AppLocalizationsAs([String locale = 'as']) : super(locale);
 
   @override
-  String get app_release_note => 'ব্যক্তিগত তালিকা শ্বেয়াৰিং যোগ কৰা হৈছে';
+  String get app_release_note => 'এই উন্মোচনে Branch.io ৰ যোগেদি গভীৰ সংযোগ ব্যৱস্থাপনা সংহতি কৰে';
 
   @override
   String get share_list_perso_alert_disponible => 'অতি সোনকালে উপলব্ধ হ’ব তালিকা শ্বেয়াৰিং বৈশিষ্ট্য!';

@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get app_release_note => 'تمت إضافة مشاركة القائمة الشخصية';
+  String get app_release_note => 'يتكامل هذا الإصدار مع إدارة الروابط العميقة عبر Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'ستكون ميزة مشاركة القائمة متاحة قريبًا جدًا!';

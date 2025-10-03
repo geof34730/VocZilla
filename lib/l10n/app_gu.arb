@@ -1,5 +1,5 @@
 {
-    "app_release_note": "વ્યક્તિગત સૂચિ શેરિંગ ઉમેર્યું",
+    "app_release_note": "આ પ્રકાશન Branch.io દ્વારા ડીપ લિંક મેનેજમેન્ટને એકીકૃત કરે છે.",
     "share_list_perso_alert_disponible": "યાદી શેરિંગ સુવિધા ખૂબ જ ટૂંક સમયમાં ઉપલબ્ધ થશે!",
     "information": "માહિતી",
     "app_title": "વોકઝિલા",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

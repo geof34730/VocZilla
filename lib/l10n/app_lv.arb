@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Pievienota personīgā saraksta koplietošana",
+    "app_release_note": "Šajā laidienā ir integrēta dziļo saišu pārvaldība, izmantojot Branch.io",
     "share_list_perso_alert_disponible": "Saraksta koplietošanas funkcija būs pieejama jau pavisam drīz!",
     "information": "Informācija",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

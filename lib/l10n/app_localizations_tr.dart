@@ -9,7 +9,7 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get app_release_note => 'Kişisel liste paylaşımı eklendi';
+  String get app_release_note => 'Bu sürüm, Branch.io aracılığıyla derin bağlantı yönetimini entegre ediyor';
 
   @override
   String get share_list_perso_alert_disponible => 'Liste paylaşım özelliği çok yakında kullanıma sunulacak!';

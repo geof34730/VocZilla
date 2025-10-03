@@ -9,7 +9,7 @@ class AppLocalizationsNe extends AppLocalizations {
   AppLocalizationsNe([String locale = 'ne']) : super(locale);
 
   @override
-  String get app_release_note => 'व्यक्तिगत सूची साझेदारी थपियो';
+  String get app_release_note => 'यो रिलीजले Branch.io मार्फत गहिरो लिङ्क व्यवस्थापनलाई एकीकृत गर्दछ।';
 
   @override
   String get share_list_perso_alert_disponible => 'सूची साझेदारी सुविधा चाँडै उपलब्ध हुनेछ!';

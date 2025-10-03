@@ -9,7 +9,7 @@ class AppLocalizationsIt extends AppLocalizations {
   AppLocalizationsIt([String locale = 'it']) : super(locale);
 
   @override
-  String get app_release_note => 'Aggiunta la condivisione dell\'elenco personale';
+  String get app_release_note => 'Questa versione integra la gestione dei deep link tramite Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'La funzionalità di condivisione degli elenchi sarà disponibile molto presto!';

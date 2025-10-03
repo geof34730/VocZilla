@@ -1,5 +1,5 @@
 {
-    "app_release_note": "נוסף שיתוף רשימות אישיות",
+    "app_release_note": "מהדורה זו משלבת ניהול קישורים עמוקים דרך Branch.io",
     "share_list_perso_alert_disponible": "תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!",
     "information": "מֵידָע",
     "app_title": "ווקסילה",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

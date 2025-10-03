@@ -1,5 +1,5 @@
 {
-    "app_release_note": "개인 목록 공유 추가",
+    "app_release_note": "이 릴리스에서는 Branch.io를 통한 딥 링크 관리가 통합되었습니다.",
     "share_list_perso_alert_disponible": "목록 공유 기능이 곧 출시됩니다!",
     "information": "정보",
     "app_title": "보크질라",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

@@ -9,7 +9,7 @@ class AppLocalizationsPa extends AppLocalizations {
   AppLocalizationsPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get app_release_note => 'ਨਿੱਜੀ ਸੂਚੀ ਸਾਂਝਾਕਰਨ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ';
+  String get app_release_note => 'ਇਹ ਰੀਲੀਜ਼ Branch.io ਰਾਹੀਂ ਡੂੰਘੇ ਲਿੰਕ ਪ੍ਰਬੰਧਨ ਨੂੰ ਏਕੀਕ੍ਰਿਤ ਕਰਦੀ ਹੈ।';
 
   @override
   String get share_list_perso_alert_disponible => 'ਸੂਚੀ ਸਾਂਝਾ ਕਰਨ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਹੁਤ ਜਲਦੀ ਉਪਲਬਧ ਹੋਵੇਗੀ!';

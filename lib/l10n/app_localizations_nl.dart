@@ -9,7 +9,7 @@ class AppLocalizationsNl extends AppLocalizations {
   AppLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get app_release_note => 'Persoonlijke lijstdeling toegevoegd';
+  String get app_release_note => 'Deze release integreert deep link-beheer via Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'De functie om lijsten te delen zal binnenkort beschikbaar zijn!';

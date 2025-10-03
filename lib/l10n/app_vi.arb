@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Đã thêm chia sẻ danh sách cá nhân",
+    "app_release_note": "Phiên bản này tích hợp quản lý liên kết sâu thông qua Branch.io",
     "share_list_perso_alert_disponible": "Tính năng chia sẻ danh sách sẽ sớm có mặt!",
     "information": "Thông tin",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

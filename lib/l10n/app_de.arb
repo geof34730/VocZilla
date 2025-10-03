@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Persönliche Listenfreigabe hinzugefügt",
+    "app_release_note": "Diese Version integriert Deep Link Management über Branch.io",
     "share_list_perso_alert_disponible": "Die Funktion zum Teilen von Listen wird in Kürze verfügbar sein!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

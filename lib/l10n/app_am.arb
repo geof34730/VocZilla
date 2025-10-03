@@ -1,5 +1,5 @@
 {
-    "app_release_note": "የግል ዝርዝር ማጋራት ታክሏል።",
+    "app_release_note": "ይህ ልቀት በ Branch.io በኩል ጥልቅ አገናኝ አስተዳደርን ያዋህዳል",
     "share_list_perso_alert_disponible": "የዝርዝር ማጋሪያ ባህሪው በጣም በቅርቡ ይገኛል!",
     "information": "መረጃ",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

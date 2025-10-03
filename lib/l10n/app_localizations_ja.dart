@@ -9,7 +9,7 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get app_release_note => '個人リストの共有を追加しました';
+  String get app_release_note => 'このリリースでは、Branch.io 経由のディープリンク管理が統合されています。';
 
   @override
   String get share_list_perso_alert_disponible => 'リスト共有機能はまもなく利用可能になります。';

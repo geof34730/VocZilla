@@ -9,7 +9,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get app_release_note => 'వ్యక్తిగత జాబితా భాగస్వామ్యం జోడించబడింది';
+  String get app_release_note => 'ఈ విడుదల Branch.io ద్వారా డీప్ లింక్ నిర్వహణను అనుసంధానిస్తుంది.';
 
   @override
   String get share_list_perso_alert_disponible => 'జాబితా భాగస్వామ్య ఫీచర్ అతి త్వరలో అందుబాటులోకి వస్తుంది!';

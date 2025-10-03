@@ -1,5 +1,5 @@
 {
-    "app_release_note": "個人リストの共有を追加しました",
+    "app_release_note": "このリリースでは、Branch.io 経由のディープリンク管理が統合されています。",
     "share_list_perso_alert_disponible": "リスト共有機能はまもなく利用可能になります。",
     "information": "情報",
     "app_title": "ヴォックジラ",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

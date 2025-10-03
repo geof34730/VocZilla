@@ -9,7 +9,7 @@ class AppLocalizationsKa extends AppLocalizations {
   AppLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get app_release_note => 'დაემატა პირადი სიის გაზიარება';
+  String get app_release_note => 'ეს ვერსია აერთიანებს ღრმა ბმულების მართვას Branch.io-ს მეშვეობით';
 
   @override
   String get share_list_perso_alert_disponible => 'სიის გაზიარების ფუნქცია ძალიან მალე იქნება ხელმისაწვდომი!';

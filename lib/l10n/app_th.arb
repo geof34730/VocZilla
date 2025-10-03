@@ -1,5 +1,5 @@
 {
-    "app_release_note": "เพิ่มการแชร์รายการส่วนตัว",
+    "app_release_note": "การเปิดตัวครั้งนี้จะรวมการจัดการลิงก์ลึกผ่าน Branch.io",
     "share_list_perso_alert_disponible": "ฟีเจอร์การแชร์รายการจะพร้อมใช้งานเร็วๆ นี้!",
     "information": "ข้อมูล",
     "app_title": "วอคซิลล่า",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

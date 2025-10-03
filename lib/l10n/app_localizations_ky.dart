@@ -9,7 +9,7 @@ class AppLocalizationsKy extends AppLocalizations {
   AppLocalizationsKy([String locale = 'ky']) : super(locale);
 
   @override
-  String get app_release_note => 'Жеке тизме бөлүшүү кошулду';
+  String get app_release_note => 'Бул чыгарылыш Branch.io аркылуу терең шилтеме башкарууну бириктирет';
 
   @override
   String get share_list_perso_alert_disponible => 'Тизме менен бөлүшүү функциясы жакында жеткиликтүү болот!';

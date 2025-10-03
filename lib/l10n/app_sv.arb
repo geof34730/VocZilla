@@ -1,5 +1,5 @@
 {
-    "app_release_note": "Lade till delning av personliga listor",
+    "app_release_note": "Den här versionen integrerar hantering av djuplänkar via Branch.io",
     "share_list_perso_alert_disponible": "Funktionen för att dela listor kommer att finnas tillgänglig mycket snart!",
     "information": "Information",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

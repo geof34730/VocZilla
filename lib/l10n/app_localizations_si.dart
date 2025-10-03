@@ -9,7 +9,7 @@ class AppLocalizationsSi extends AppLocalizations {
   AppLocalizationsSi([String locale = 'si']) : super(locale);
 
   @override
-  String get app_release_note => 'පුද්ගලික ලැයිස්තු බෙදාගැනීම එක් කරන ලදී';
+  String get app_release_note => 'මෙම නිකුතුව Branch.io හරහා ගැඹුරු සබැඳි කළමනාකරණය ඒකාබද්ධ කරයි.';
 
   @override
   String get share_list_perso_alert_disponible => 'ලැයිස්තු බෙදාගැනීමේ විශේෂාංගය ඉතා ඉක්මනින් ලබා ගත හැකි වනු ඇත!';

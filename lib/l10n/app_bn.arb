@@ -1,5 +1,5 @@
 {
-    "app_release_note": "ব্যক্তিগত তালিকা ভাগ করে নেওয়া যোগ করা হয়েছে",
+    "app_release_note": "এই রিলিজটি Branch.io এর মাধ্যমে ডিপ লিঙ্ক ম্যানেজমেন্টকে একীভূত করে।",
     "share_list_perso_alert_disponible": "তালিকা ভাগ করে নেওয়ার বৈশিষ্ট্যটি খুব শীঘ্রই উপলব্ধ হবে!",
     "information": "তথ্য",
     "app_title": "VocZilla সম্পর্কে",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }

@@ -9,7 +9,7 @@ class AppLocalizationsHe extends AppLocalizations {
   AppLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get app_release_note => 'נוסף שיתוף רשימות אישיות';
+  String get app_release_note => 'מהדורה זו משלבת ניהול קישורים עמוקים דרך Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'תכונת שיתוף הרשימות תהיה זמינה בקרוב מאוד!';

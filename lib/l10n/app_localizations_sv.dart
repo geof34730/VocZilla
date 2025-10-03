@@ -9,7 +9,7 @@ class AppLocalizationsSv extends AppLocalizations {
   AppLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get app_release_note => 'Lade till delning av personliga listor';
+  String get app_release_note => 'Den här versionen integrerar hantering av djuplänkar via Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Funktionen för att dela listor kommer att finnas tillgänglig mycket snart!';

@@ -9,7 +9,7 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get app_release_note => '개인 목록 공유 추가';
+  String get app_release_note => '이 릴리스에서는 Branch.io를 통한 딥 링크 관리가 통합되었습니다.';
 
   @override
   String get share_list_perso_alert_disponible => '목록 공유 기능이 곧 출시됩니다!';

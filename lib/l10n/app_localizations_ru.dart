@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get app_release_note => 'Добавлена возможность делиться личным списком';
+  String get app_release_note => 'В этом выпуске интегрировано управление глубокими ссылками через Branch.io.';
 
   @override
   String get share_list_perso_alert_disponible => 'Функция обмена списками станет доступна совсем скоро!';

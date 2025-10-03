@@ -9,7 +9,7 @@ class AppLocalizationsSq extends AppLocalizations {
   AppLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
-  String get app_release_note => 'Shtoi ndarjen e listës personale';
+  String get app_release_note => 'Ky version integron menaxhimin e lidhjeve të thella nëpërmjet Branch.io';
 
   @override
   String get share_list_perso_alert_disponible => 'Funksioni i ndarjes së listës do të jetë i disponueshëm shumë shpejt!';

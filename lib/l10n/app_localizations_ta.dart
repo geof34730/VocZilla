@@ -9,7 +9,7 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get app_release_note => 'தனிப்பட்ட பட்டியல் பகிர்வு சேர்க்கப்பட்டது';
+  String get app_release_note => 'இந்த வெளியீடு Branch.io வழியாக ஆழமான இணைப்பு நிர்வாகத்தை ஒருங்கிணைக்கிறது.';
 
   @override
   String get share_list_perso_alert_disponible => 'பட்டியல் பகிர்வு அம்சம் மிக விரைவில் கிடைக்கும்!';

@@ -9,7 +9,7 @@ class AppLocalizationsFi extends AppLocalizations {
   AppLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get app_release_note => 'Lisätty henkilökohtaisen listan jakaminen';
+  String get app_release_note => 'Tämä julkaisu integroi syvälinkkien hallinnan Branch.io:n kautta';
 
   @override
   String get share_list_perso_alert_disponible => 'Listan jakamisominaisuus on saatavilla pian!';

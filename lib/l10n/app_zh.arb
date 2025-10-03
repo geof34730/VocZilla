@@ -1,5 +1,5 @@
 {
-    "app_release_note": "新增个人列表分享",
+    "app_release_note": "此版本通过 Branch.io 集成了深度链接管理",
     "share_list_perso_alert_disponible": "列表共享功能即将推出！",
     "information": "信息",
     "app_title": "VocZilla",
@@ -250,6 +250,6 @@
         "autoTranslated": true,
         "forced": true,
         "from": "fr",
-        "at": "2025-09-30T14:03:07+00:00"
+        "at": "2025-10-03T06:35:42+00:00"
     }
 }
