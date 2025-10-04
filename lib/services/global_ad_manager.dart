@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/logic/blocs/purchase/purchase_is_subscribed_bloc.dart';
@@ -64,12 +65,13 @@ class _GlobalAdManagerState extends State<GlobalAdManager> with WidgetsBindingOb
     }
   }
 
+
   /// Démarre le minuteur pour les publicités INTERSTITIELLES.
   void _startInterstitialAdTimer() {
     if(!testScreenShot) {
       _interstitialAdTimer?.cancel();
       _interstitialAdTimer =
-          Timer.periodic(const Duration(minutes: 2), (timer) {
+          Timer.periodic( Duration(minutes: Platform.isIOS ? 2 : 6), (timer) {
             if (_isSubscribed == false &&
                 WidgetsBinding.instance.lifecycleState ==
                     AppLifecycleState.resumed) {
@@ -96,7 +98,7 @@ class _GlobalAdManagerState extends State<GlobalAdManager> with WidgetsBindingOb
         // Une fois la boîte de dialogue fermée, on planifie la prochaine dans 5 minutes.
         if (_isSubscribed == false && WidgetsBinding.instance.lifecycleState ==
             AppLifecycleState.resumed) {
-          _subscriptionDialogTimer = Timer(const Duration(minutes: 2), () {
+          _subscriptionDialogTimer = Timer( Duration(minutes: Platform.isIOS ? 2 : 5), () {
             _showSubscriptionBannerAndScheduleNext(); // Appel récursif pour la boucle
           });
         }
