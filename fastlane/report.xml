@@ -5,22 +5,177 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000212">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000171">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="6.830036">
+      <testcase classname="fastlane.lanes" name="01: git clean -xfd         -e build         -e ios/Pods         -e android/.gradle         -e macos/Pods         -e .env         -e voczilla-play.json         -e firebase.json         -e android/app/key.jks        -e android/app/google-services.json         -e ios/Runner/GoogleService-Info.plist         -e macos/Runner/GoogleService-Info.plist || true" time="0.020611">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="1.281346">
+      <testcase classname="fastlane.lanes" name="02: Switch to all generate_metadata lane" time="0.000112">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_macos.dart&apos;" time="0.64357">
+      <testcase classname="fastlane.lanes" name="03: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="0.749018">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="0.310572">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_macos.dart&apos;" time="0.465245">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: shell command" time="0.01304">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: shell command" time="0.011128">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: adb start-server || true" time="0.015704">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: shell command" time="0.012921">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: shell command" time="0.017866">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: adb -s emulator-5554 wait-for-device || true" time="0.016921">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: shell command" time="0.029014">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="13: shell command" time="0.028077">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="14: shell command" time="0.033313">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="15: shell command" time="0.041355">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="16: shell command" time="0.023044">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="17: shell command" time="0.027701">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="18: shell command" time="0.032022">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="19: shell command" time="0.034443">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="20: shell command" time="0.028031">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="21: shell command" time="0.053917">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="22: shell command" time="0.052827">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="23: shell command" time="0.049987">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="24: shell command" time="0.021556">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="25: shell command" time="0.053785">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="26: shell command" time="0.048464">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="27: shell command" time="0.131526">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="28: shell command" time="0.046388">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="29: shell command" time="0.039791">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="30: shell command" time="0.059562">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="31: shell command" time="0.037484">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="32: adb -s emulator-5554 uninstall com.geoffreypetain.voczilla.voczilla || true" time="0.122734">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="33: adb -s emulator-5554 shell wm size 1200x630 &amp;&amp; adb -s emulator-5554 shell wm density 160" time="0.156729">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="34: PLATFORM=android LOCALE=af DESTFOLDER=&apos;FeatureGraphicVoczillaCom&apos; FOR_FEATURE_GRAPHIC=false FOR_FEATURE_GRAPHIC_VOCZILLA_COM=true caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="15.674567">
         
       </testcase>
     

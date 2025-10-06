@@ -244,7 +244,7 @@ class DialogHelper {
                                     onPressed: () {
                                       Clipboard.setData(
                                         ClipboardData(
-                                            text: "https://links.voczilla.com/share/$guidListPerso"),
+                                            text: urlShareGenerate),
                                       );
                                     },
                                   ),

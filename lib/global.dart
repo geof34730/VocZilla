@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_branch_sdk/flutter_branch_sdk.dart';
 import 'package:voczilla/core/utils/navigatorKey.dart';
 
@@ -13,13 +14,14 @@ final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
 
 int globalCountVocabulaireAll=4399;
 bool debugMode=false;
-bool statistiqueGoogleAnalytics=true;
+bool statistiqueGoogleAnalytics=false;
 bool showGoogleAdMob=false;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
 const String idSubscriptionAnnuel = 'annuel_voczilla_076d28df';
 const resetTo=true;
 bool forFeatureGraphic = false;
+bool forFeatureGraphicVoczillaCom=false;
 bool changeVocabulaireSinceVisiteHome = false;
 
 //const  String serveurUrl="http://192.168.0.34:8080";
@@ -40,13 +42,19 @@ Future<void> initBranch() async {
   await FlutterBranchSdk.init();
 
   streamSubscription = FlutterBranchSdk.listSession().listen((data) {
+    debugPrint('[Branch] Session data received: $data');
     if (data.containsKey('+clicked_branch_link') &&
         data['+clicked_branch_link'] == true) {
+      debugPrint('[Branch] Link click detected.');
       if (data.containsKey('guid')) {
+        debugPrint('[Branch] GUID found: ${data['guid']}');
+        debugPrint('[Branch] Navigator state before push: ${navigatorKey.currentState}');
         navigatorKey.currentState?.pushNamed('/share/${data['guid']}');
+      } else {
+        debugPrint('[Branch] GUID not found in data.');
       }
     }
   }, onError: (error) {
-    print('Branch Error: $error');
+    debugPrint('[Branch] Error: $error');
   });
 }

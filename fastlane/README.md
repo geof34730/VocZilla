@@ -39,6 +39,16 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 📷 Screenshots Android — build unique + config runtime + réglage résolution (+ reboot par bucket)
 
+### all brand
+
+```sh
+[bundle exec] fastlane all brand
+```
+
+📷 Brand — build unique + config runtime + réglage résolution (+ reboot par bucket)
+
+📷 Brand — build unique + config runtime + réglage résolution (+ reboot par bucket)
+
 ### all screenshots_macos
 
 ```sh

@@ -11,6 +11,7 @@ void main() {
     late String platform;
     late String destFolder;
     late bool forFeatureGraphic;
+    late bool forFeatureGraphicVoczillaCom;
 
     // ------- Utils -------
     Future<void> takeScreenshot(FlutterDriver driver, String name) async {
@@ -77,23 +78,19 @@ void main() {
       await driver.tap(back);
     }
 
-    /// [NOUVEAU] Helper pour créer une liste personnalisée avec une couleur spécifique.
+    /// Helper pour créer une liste personnalisée avec une couleur spécifique.
     /// Cette fonction suppose que le driver est sur l'écran `perso_list_step1`.
     Future<void> createListWithColor(
         FlutterDriver driver,
         String title,
         int colorSwatchIndex,
-        bool shootStep1
+        bool shootStep1,
         ) async {
       print("  - Saisie du titre : $title");
       await driver.tap(find.byValueKey('title_perso_field'));
       await driver.enterText(title);
 
-
-
       print("  - Sélection de la pastille de couleur (index: $colorSwatchIndex)");
-      // On utilise la clé unique que nous avons ajoutée. L'index commence à 0 dans l'appel,
-      // mais nos clés commencent à 'color_1', donc on ajoute 1.
       final colorKey = 'color_${colorSwatchIndex + 1}';
       final colorFinder = find.byValueKey(colorKey);
       await driver.waitFor(colorFinder);
@@ -103,9 +100,7 @@ void main() {
       }
       print("  - Clic sur 'Suivant' pour passer à l'étape 2");
       await driver.tap(find.byValueKey('button_valide_step_perso'));
-
     }
-
 
     // ------- Lifecycle -------
     setUpAll(() async {
@@ -114,10 +109,18 @@ void main() {
       // 1) Lire les variables d'environnement côté test (injectées par la commande shell)
       final env = Platform.environment;
       final envPlatform = env['PLATFORM']; // "ios" | "android"
-      final envLocale = env['LOCALE']; // ex: "cs"
+      final envLocale = env['LOCALE']; // ex: "cs" (si ton app l'utilise)
       final envDestFolder = env['DESTFOLDER']; // ex: "iphone6_7_inch"
+
+      // Feature (générale)
       final envFeatureStr = env['FOR_FEATURE_GRAPHIC']; // "true" | "false" | "1" | "0"
       final envFeature = (envFeatureStr == 'true' || envFeatureStr == '1');
+
+      // Feature (voczilla.com)
+      final envFeatureVoczillaStr =
+      env['FOR_FEATURE_GRAPHIC_VOCZILLA_COM']; // "true" | "false" | "1" | "0"
+      final envFeatureVoczilla =
+      (envFeatureVoczillaStr == 'true' || envFeatureVoczillaStr == '1');
 
       // 2) Envoyer la config runtime à l'app (Option 3) — pas de rebuild nécessaire
       final payload = <String, dynamic>{
@@ -127,13 +130,17 @@ void main() {
         if (envDestFolder != null) 'destFolder': envDestFolder,
         // on n’envoie 'feature' que si présent (sinon on laisse la valeur par défaut app)
         if (envFeatureStr != null) 'feature': envFeature,
+        // idem pour la variante voczilla.com
+        if (envFeatureVoczillaStr != null)
+          'featureVoczillaCom': envFeatureVoczilla,
       };
 
-      if (payload.length > 1) { // il y a au moins cmd + 1 champ
+      if (payload.length > 1) {
         final res = await driver.requestData(json.encode(payload));
         print('🚀 setConfig response: $res');
       } else {
-        print('ℹ️ Aucune variable d’environnement fournie — on utilisera les valeurs par défaut de l’app.');
+        print(
+            'ℹ️ Aucune variable d’environnement fournie — on utilisera les valeurs par défaut de l’app.');
       }
 
       // 3) Récupérer/valider les valeurs finales (fallback si pas d’ENV fourni)
@@ -143,13 +150,31 @@ void main() {
       destFolder = envDestFolder ?? await driver.requestData('getDestFolder');
       print('📦 DESTFOLDER = $destFolder');
 
+      // forFeatureGraphic (générale)
       if (envFeatureStr != null) {
         forFeatureGraphic = envFeature;
       } else {
-        final forFeatureGraphicStr = await driver.requestData('getForFeatureGraphic');
+        final forFeatureGraphicStr =
+        await driver.requestData('getForFeatureGraphic');
         forFeatureGraphic = forFeatureGraphicStr == 'true';
       }
       print('📦 FOR_FEATURE_GRAPHIC: $forFeatureGraphic');
+
+      // forFeatureGraphicVoczillaCom (⚠️ Nouveau : initialisation manquante corrigée)
+      if (envFeatureVoczillaStr != null) {
+        forFeatureGraphicVoczillaCom = envFeatureVoczilla;
+      } else {
+        try {
+          final v =
+          await driver.requestData('getForFeatureGraphicVoczillaCom');
+          forFeatureGraphicVoczillaCom = (v == 'true');
+        } catch (_) {
+          // Si l'app ne gère pas encore cette commande, on retombe à false
+          forFeatureGraphicVoczillaCom = false;
+        }
+      }
+      print(
+          '📦 FOR_FEATURE_GRAPHIC_VOCZILLA_COM: $forFeatureGraphicVoczillaCom');
     });
 
     tearDownAll(() async {
@@ -165,6 +190,11 @@ void main() {
           return;
         }
 
+        if (forFeatureGraphicVoczillaCom) {
+          await takeScreenshot(driver, 'featureGraphicVocZillaCom');
+          return;
+        }
+
         await takeScreenshot(driver, getNameFile('home'));
 
         await driver.tap(find.byValueKey('link_home_login'));
@@ -172,13 +202,13 @@ void main() {
         await driver.waitFor(find.byValueKey('home_logged'));
         await takeScreenshot(driver, getNameFile('homeperso'));
 
-        // --- [MODIFIÉ] Création de 3 listes avec des couleurs différentes ---
+        // --- Création de 4 listes avec des couleurs différentes ---
 
         // Liste 1
         print('➡️ Création de "My personal list 1" avec la première couleur...');
         await driver.tap(find.byValueKey('buttonAddList'));
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await createListWithColor(driver, 'My personal list 1', 8, true); // 1ère couleur (index 0)
+        await createListWithColor(driver, 'My personal list 1', 8, true);
         await driver.waitFor(find.byValueKey('perso_list_step2'));
         print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
@@ -189,13 +219,11 @@ void main() {
         await tapBackButton(driver);
         await driver.waitFor(find.byValueKey('home_logged'));
 
-
-
         // Liste 2
         print('➡️ Création de "My personal list 2" avec une couleur différente...');
         await driver.tap(find.byValueKey('button_create_list'));
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await createListWithColor(driver, 'My personal list 2', 6,false);
+        await createListWithColor(driver, 'My personal list 2', 6, false);
         print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));
@@ -208,7 +236,7 @@ void main() {
         print('➡️ Création de "My personal list 3" avec une autre couleur...');
         await driver.tap(find.byValueKey('button_create_list'));
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await createListWithColor(driver, 'My personal list 3', 3,false); // 11ème couleur (index 10)
+        await createListWithColor(driver, 'My personal list 3', 3, false);
         print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));
@@ -216,34 +244,29 @@ void main() {
         print("  - Retour à l'écran d'accueil des listes");
         await tapBackButton(driver);
 
-
+        // Liste 4
         print('➡️ Création de "My personal list 4" avec une autre couleur...');
         await driver.tap(find.byValueKey('button_create_list'));
         await driver.waitFor(find.byValueKey('perso_list_step1'));
-        await createListWithColor(driver, 'My personal list 4', 9,false); // 11ème couleur (index 10)
+        await createListWithColor(driver, 'My personal list 4', 9, false);
         print("  - Ajout de quelques mots de vocabulaire");
         await driver.tap(find.byValueKey('button_add_voc_1'));
         await driver.tap(find.byValueKey('button_add_voc_2'));
         await driver.tap(find.byValueKey('button_add_voc_4'));
         print("  - Retour à l'écran d'accueil des listes");
         await tapBackButton(driver);
-
-
 
         await driver.waitFor(find.byValueKey('home_logged'));
         await takeScreenshot(driver, getNameFile('homepersolist'));
 
-        // --- [MODIFIÉ] Suppression des 3 listes créées ---
-        print('➡️ Suppression des 3 listes créées...');
+        // --- Suppression des 4 listes créées ---
+        print('➡️ Suppression des 4 listes créées...');
         final deleteButtonFinder = find.byValueKey('buttonDeletePerso1');
 
         for (int i = 1; i <= 4; i++) {
-          print('  - Suppression de la liste $i/3...');
-          // Cette logique suppose que le bouton de suppression de la première liste
-          // visible a toujours la clé 'buttonDeletePerso1'.
+          print('  - Suppression de la liste $i/4...');
           await driver.waitFor(deleteButtonFinder);
           await driver.tap(deleteButtonFinder);
-          // Délai pour laisser l'UI se mettre à jour.
           await Future.delayed(const Duration(seconds: 2));
         }
 
@@ -267,7 +290,6 @@ void main() {
         await takeScreenshot(driver, getNameFile('quizz'));
         await tapBackButton(driver);
 
-
         if (platform == 'ios') {
           // pronunciation
           await driver.tap(find.byValueKey('buttonPrononciationtop20'));
@@ -275,12 +297,11 @@ void main() {
           await takeScreenshot(driver, getNameFile('Prononciation'));
           await tapBackButton(driver);
 
-          //List
+          // List
           await driver.tap(find.byValueKey('buttonListtop20'));
           await driver.waitFor(find.byValueKey('screenList'));
           await takeScreenshot(driver, getNameFile('Liste'));
           await tapBackButton(driver);
-
         }
 
         print('find open_drawer_voczilla');
@@ -293,7 +314,7 @@ void main() {
 
         print('✅ Fin des screenshots');
       },
-      timeout: const Timeout(Duration(minutes: 5)), // Augmentation du timeout pour les tests plus longs
+      timeout: const Timeout(Duration(minutes: 5)),
     );
   });
 }

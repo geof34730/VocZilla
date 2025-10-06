@@ -13,6 +13,8 @@
 		<string>applinks:links.voczilla.com</string>
 		<string>applinks:voczilla.app.link</string>
 		<string>applinks:voczilla-alternate.app.link</string>
+		<string>applinks:voczilla.test-app.link</string>
+		<string>applinks:voczilla-alternate.test-app.link</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array/>

@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:voczilla/ui/featureGraphic.dart';
+import 'package:voczilla/ui/featureGraphicVoczillaCom.dart';
 import 'package:voczilla/ui/screens/auth/profile_update_screen.dart';
 import 'package:voczilla/ui/screens/personalisation/step2.dart';
 import 'package:voczilla/ui/screens/share_screen.dart';
@@ -61,13 +62,18 @@ class AppRoute {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
     print("*************************** ${settings.name} **************************");
-   if (forFeatureGraphic) {
+    if (forFeatureGraphic) {
       return MaterialPageRoute(
         settings: settings,
         builder: (context) => FeatureGraphic(),
       );
     }
-
+    if (forFeatureGraphicVoczillaCom) {
+      return MaterialPageRoute(
+        settings: settings,
+        builder: (context) => FeatureGraphicVoczillaCom(),
+      );
+    }
     return MaterialPageRoute(
       settings: settings,
       builder: (context) {

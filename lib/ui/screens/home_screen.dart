@@ -67,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
               GlobalStatisticalWidget(
                 isListPerso: false,
                 isListTheme: false,

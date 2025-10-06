@@ -100,7 +100,7 @@ platform :all do
         purge_screenshots_dir!(shots_dir)
         UI.message("📸 iOS — device=#{udid}, locale=#{locale}, dest=#{dest_folder}")
 
-        env = "PLATFORM=ios LOCALE=#{locale} DESTFOLDER='#{dest_folder}' FOR_FEATURE_GRAPHIC=false"
+        env = "PLATFORM=ios LOCALE=#{locale} DESTFOLDER='#{dest_folder}' FOR_FEATURE_GRAPHIC=false FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false"
         cmd = %Q{
           #{env} caffeinate -s flutter drive \
             --no-dds \
@@ -149,11 +149,10 @@ platform :all do
     ensure_android_built_once!(:debug)
 
     android_folders = [
-	"FeatureGraphic",
-      	"phoneScreenshots",
-      	"sevenInchScreenshots",
+      "FeatureGraphic",
+      "phoneScreenshots",
+      "sevenInchScreenshots",
       "tenInchScreenshots",
-      
     ]
 
     locales = extract_locales
@@ -175,7 +174,7 @@ platform :all do
         is_feature = (dest_folder == "FeatureGraphic")
         UI.message("📸 Android — deviceId=#{emulator_id}, locale=#{locale}, dest=#{dest_folder}")
 
-        env = "PLATFORM=android LOCALE=#{locale} DESTFOLDER='#{dest_folder}' FOR_FEATURE_GRAPHIC=#{is_feature}"
+        env = "PLATFORM=android LOCALE=#{locale} DESTFOLDER='#{dest_folder}' FOR_FEATURE_GRAPHIC=#{is_feature} FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false"
         cmd = %Q{
           #{env} caffeinate -s flutter drive \
             --no-dds \
@@ -208,6 +207,77 @@ platform :all do
 
     stop_emulator
     UI.success("✅ Screenshots Android terminés")
+  end
+
+  desc "📷 Brand — build unique + config runtime + réglage résolution (+ reboot par bucket)"
+  desc "📷 Brand — build unique + config runtime + réglage résolution (+ reboot par bucket)"
+  lane :brand do |options|
+    project_root    = File.expand_path("..", __dir__)
+    shots_dir       = File.join(project_root, screenshots_dir)
+    FileUtils.mkdir_p(shots_dir)
+
+    avd_name = options[:avd] || "emulator_tablet_10pouces_screenshots_voczilla"
+
+    clean_build!
+    ensure_firebase_files_present!
+    generate_metadata
+
+    # Build Android (target driver) si absent/incorrect (avec marqueur)
+    ensure_android_built_once!(:debug)
+
+    android_folders = [
+      "FeatureGraphicVoczillaCom",
+    ]
+
+    locales = extract_locales
+    UI.user_error!("❌ Aucune locale trouvée") if locales.empty?
+
+    android_folders.each do |dest_folder|
+      stop_emulator
+      start_emulator_once(avd_name)
+      emulator_id = get_running_emulator_id
+      tune_android_emulator_for_tests(emulator_id) if emulator_id
+      uninstall_android_app(android_package_name, emulator_id) if emulator_id
+      set_emulator_resolution(emulator_id, dest_folder)
+
+      locales.each do |locale|
+        # Pour brand, on utilise le nom de locale simple (sans normalisation)
+        purge_screenshots_dir!(shots_dir)
+        UI.message("📸 Brand — deviceId=#{emulator_id}, locale=#{locale}, dest=#{dest_folder}")
+
+        env = "PLATFORM=android LOCALE=#{locale} DESTFOLDER='#{dest_folder}' FOR_FEATURE_GRAPHIC=false FOR_FEATURE_GRAPHIC_VOCZILLA_COM=true"
+        cmd = %Q{
+          #{env} caffeinate -s flutter drive \
+            --no-dds \
+            --driver=test_driver/integration_test.dart \
+            --target=test_driver/app.dart \
+            --no-build \
+            --use-application-binary="#{android_apk_debug_path}" \
+            -d #{emulator_id} \
+            --screenshot="#{shots_dir}"
+        }.strip
+
+        ok = run_drive_with_retries!(cmd: cmd, retries: 2, locale: locale, dest_folder: dest_folder, shots_dir: shots_dir, emulator_id: emulator_id)
+        unless ok
+          UI.important("⏭️ Skip Brand #{locale}/#{dest_folder} après échecs.")
+          next
+        end
+
+        clean_driver_artifacts!(shots_dir)
+        copy_screenshots_to_metadata(
+          platform_store: "brand",
+          normalized_locale: locale,  # Utilise la locale brute pour brand
+          dest_folder: dest_folder,
+          screenshots_dir: shots_dir,
+          project_root: project_root
+        )
+      end
+
+      reset_emulator_resolution(emulator_id)
+    end
+
+    stop_emulator
+    UI.success("✅ Screenshots Brand terminés")
   end
 
   # --------- LANE MACOS (mise à jour) ----------
@@ -252,6 +322,7 @@ platform :all do
           "LOCALE=#{locale}",
           "DESTFOLDER='#{dest_folder}'",
           "FOR_FEATURE_GRAPHIC=false",
+          "FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false",
           "SCREENSHOTS_DIR='#{shots_dir}'",
           "MACOS_WINDOW_WIDTH=#{mac_w}",
           "MACOS_WINDOW_HEIGHT=#{mac_h}",
@@ -394,7 +465,8 @@ end
 
 def write_marker(path)
   FileUtils.mkdir_p(File.dirname(path))
-  File.write(path, "driver_target=test_driver/app.dart\n")
+  File.write(path, "driver_target=test_driver/app.dart
+")
 end
 
 def marker_ok?(path)
@@ -525,8 +597,8 @@ end
 # ----- Android emulator -----
 def get_running_emulator_id
   out = sh("adb devices", log: false) rescue ""
-  line = out.lines.find { |l| l.start_with?("emulator-") && l.include?("\tdevice") }
-  line&.split("\t")&.first
+  line = out.lines.find { |l| l.start_with?("emulator-") && l.include?("	device") }
+  line&.split("	")&.first
 end
 
 def start_emulator_once(avd_name)
@@ -592,6 +664,7 @@ end
 
 def set_emulator_resolution(emulator_id, dest_folder)
   resolution_map = {
+    "FeatureGraphicVoczillaCom" => ["1200x630",  "160"],
     "phoneScreenshots"      => ["1080x1920", "420"],
     "sevenInchScreenshots"  => ["800x1280",  "213"],
     "tenInchScreenshots"    => ["1600x2560", "320"],
@@ -674,19 +747,24 @@ def copy_screenshots_to_metadata(platform_store:, normalized_locale:, dest_folde
   clean_driver_artifacts!(screenshots_dir)
   screenshots = Dir[File.join(screenshots_dir, "*.png")]
 
-  relative_metadata =
-    if platform_store == "android" && dest_folder == "FeatureGraphic"
-      File.join(platform_store, normalized_locale, "images")
-    elsif platform_store == "ios"
-      File.join(platform_store, normalized_locale)
-    elsif platform_store == "macos"
-      File.join(platform_store, normalized_locale)
-    else
-      File.join(platform_store, normalized_locale, "images", dest_folder)
-    end
+  if platform_store == "brand"
+    dest_dir = File.join("/Volumes/data/voczilla/metadata/brand", normalized_locale)
 
-  dest_dir_project = File.join(project_root, "fastlane/metadata", relative_metadata)
-  dest_dir_symlink = File.join("/Volumes/data/voczilla/metadata", relative_metadata)
+  else
+    relative_metadata =
+      if platform_store == "android" && dest_folder == "FeatureGraphic"
+        File.join(platform_store, normalized_locale, "images")
+      elsif platform_store == "ios"
+        File.join(platform_store, normalized_locale)
+      elsif platform_store == "macos"
+        File.join(platform_store, normalized_locale)
+      else
+        File.join(platform_store, normalized_locale, "images", dest_folder)
+      end
+
+    dest_dir_project = File.join(project_root, "fastlane/metadata", relative_metadata)
+    dest_dir_symlink = File.join("/Volumes/data/voczilla/metadata", relative_metadata)
+  end
 
   [dest_dir_project, dest_dir_symlink].each do |dest_dir|
     UI.message("📁 Copie des captures vers : #{dest_dir}")

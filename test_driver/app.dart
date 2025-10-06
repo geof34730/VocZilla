@@ -1,44 +1,54 @@
 // test_driver/app.dart
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io'; // <-- pour Platform.environment
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_driver/driver_extension.dart';
 import 'package:voczilla/app_route.dart';
 import 'package:voczilla/main.dart' as app;
-// import '../lib/core/utils/navigatorKey.dart' show navigatorKey; // si besoin
 
 /// Configuration transmise par le test au runtime
 class _DriverRuntimeConfig {
   String platform;        // 'ios' | 'android' | 'macos'
   String destFolder;      // ex: 'iphone6_7_inch' | 'desktop'
   String locale;          // ex: 'fr'
-  bool forFeatureGraphic; // ex: false
+  bool forFeatureGraphic;
+  bool forFeatureGraphicVoczillaCom; // ex: false
 
   _DriverRuntimeConfig({
     required this.platform,
     required this.destFolder,
     required this.locale,
     required this.forFeatureGraphic,
+    required this.forFeatureGraphicVoczillaCom,
   });
 
-  /// Lecture robuste : d'abord variables d'environnement (Fastlane),
-  /// sinon fallback vers --dart-define (fromEnvironment), sinon valeurs par défaut.
+  /// Lecture robuste : d'abord variables d'environnement (CI/Fastlane),
+  /// sinon fallback vers --dart-define, sinon valeurs par défaut.
   factory _DriverRuntimeConfig.defaults() {
     final env = Platform.environment;
+
     String platform = env['PLATFORM'] ??
         const String.fromEnvironment('PLATFORM', defaultValue: 'android');
+
     String destFolder = env['DESTFOLDER'] ??
         const String.fromEnvironment('DESTFOLDER', defaultValue: '');
+
     String locale = env['LOCALE'] ??
         const String.fromEnvironment('LOCALE', defaultValue: 'en');
 
+    // Feature (globale)
     bool forFeatureGraphic =
         _parseBoolEnv(env['FOR_FEATURE_GRAPHIC']) ??
             const bool.fromEnvironment('FOR_FEATURE_GRAPHIC', defaultValue: false);
 
-    // normalisation ultra simple (au cas où)
+    // Feature (voczilla.com) — harmonisé avec le test
+    bool forFeatureGraphicVoczillaCom =
+        _parseBoolEnv(env['FOR_FEATURE_GRAPHIC_VOCZILLA_COM']) ??
+            const bool.fromEnvironment('FOR_FEATURE_GRAPHIC_VOCZILLA_COM', defaultValue: false);
+
+    // Normalisation simple
     platform = platform.trim().toLowerCase();
     if (platform.isEmpty) platform = 'android';
 
@@ -47,7 +57,19 @@ class _DriverRuntimeConfig {
       destFolder: destFolder,
       locale: locale,
       forFeatureGraphic: forFeatureGraphic,
+      forFeatureGraphicVoczillaCom: forFeatureGraphicVoczillaCom,
     );
+  }
+
+  // Petit helper bool
+  bool _toBool(dynamic v, {bool fallback = false}) {
+    if (v is bool) return v;
+    if (v is String) {
+      final s = v.trim().toLowerCase();
+      if (s == 'true' || s == '1' || s == 'yes' || s == 'y') return true;
+      if (s == 'false' || s == '0' || s == 'no' || s == 'n') return false;
+    }
+    return fallback;
   }
 
   void applyFromJson(Map<String, dynamic> json) {
@@ -60,10 +82,16 @@ class _DriverRuntimeConfig {
     if (json.containsKey('locale')) {
       locale = (json['locale'] ?? locale).toString();
     }
+    // Feature (globale) — accepte 'feature' ou 'forFeatureGraphic'
     if (json.containsKey('feature') || json.containsKey('forFeatureGraphic')) {
       final v = (json['feature'] ?? json['forFeatureGraphic']);
-      forFeatureGraphic = (v == true) ||
-          (v is String && (v.toLowerCase() == 'true' || v == '1'));
+      forFeatureGraphic = _toBool(v, fallback: forFeatureGraphic);
+    }
+    // Feature (voczilla.com) — accepte 'featureVoczillaCom' ou 'forFeatureGraphicVoczillaCom'
+    if (json.containsKey('featureVoczillaCom') ||
+        json.containsKey('forFeatureGraphicVoczillaCom')) {
+      final v = (json['featureVoczillaCom'] ?? json['forFeatureGraphicVoczillaCom']);
+      forFeatureGraphicVoczillaCom = _toBool(v, fallback: forFeatureGraphicVoczillaCom);
     }
   }
 
@@ -72,6 +100,7 @@ class _DriverRuntimeConfig {
     'destFolder': destFolder,
     'locale': locale,
     'forFeatureGraphic': forFeatureGraphic,
+    'forFeatureGraphicVoczillaCom': forFeatureGraphicVoczillaCom,
   };
 }
 
@@ -91,15 +120,7 @@ void main() async {
   enableFlutterDriverExtension(handler: (String? message) async {
     final msg = message ?? '';
 
-    // Nouveau protocole: "setConfig:{json}"
-    // Exemple côté test:
-    // await driver.requestData(json.encode({
-    //   "cmd":"setConfig",
-    //   "platform":"macos",
-    //   "locale":"cs",
-    //   "destFolder":"desktop",
-    //   "feature": false
-    // }));
+    // Supporte JSON brut ou "setConfig:{json}"
     try {
       if (msg.isNotEmpty) {
         Map<String, dynamic>? parsed;
@@ -129,8 +150,13 @@ void main() async {
       // ne pas crasher si JSON mal formé
     }
 
-    // Backwards compatibility
-    if (msg == 'getForFeatureGraphic') return _config.forFeatureGraphic.toString();
+    // Compatibilité ascendante avec l'ancien protocole
+    if (msg == 'getForFeatureGraphic') {
+      return _config.forFeatureGraphic.toString();
+    }
+    if (msg == 'getForFeatureGraphicVoczillaCom') {
+      return _config.forFeatureGraphicVoczillaCom.toString();
+    }
     if (msg == 'getPlatform') return _config.platform;
     if (msg == 'getDestFolder') return _config.destFolder;
 
@@ -148,7 +174,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Log utile en CI
-  // (tu peux retirer si verbeux)
   // ignore: avoid_print
   print('[driver] runtime config: ${_config.toJson()}');
 
@@ -156,7 +181,6 @@ void main() async {
     shootScreenShot: true,
     localForce: _config.locale,
     forFeatureGraphicParam: _config.forFeatureGraphic,
-    // si besoin: passe _config.platform / _config.destFolder à main()
-    // pour gérer des comportements spécifiques (taille fenêtre macOS, etc.)
+    forFeatureGraphicVoczillaComParam: _config.forFeatureGraphicVoczillaCom,
   );
 }

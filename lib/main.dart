@@ -27,7 +27,8 @@ FirebaseMessaging messaging = FirebaseMessaging.instance;
 void main({
   bool shootScreenShot = false,
   String? localForce=null,
-  bool forFeatureGraphicParam=false
+  bool forFeatureGraphicParam=false,
+  bool forFeatureGraphicVoczillaComParam=false
 }) async {
 
   if(localForce!=null){
@@ -40,7 +41,8 @@ void main({
     AdMobService.instance.initialize();
     initBranch();
   }
-  forFeatureGraphic=forFeatureGraphicParam;
+   forFeatureGraphic=forFeatureGraphicParam;
+   forFeatureGraphicVoczillaCom=forFeatureGraphicVoczillaComParam;
   if(!testScreenShot) {
     await SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
