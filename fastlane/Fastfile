@@ -749,7 +749,6 @@ def copy_screenshots_to_metadata(platform_store:, normalized_locale:, dest_folde
 
   if platform_store == "brand"
     dest_dir = File.join("/Volumes/data/voczilla/metadata/brand", normalized_locale)
-
   else
     relative_metadata =
       if platform_store == "android" && dest_folder == "FeatureGraphic"
@@ -762,16 +761,14 @@ def copy_screenshots_to_metadata(platform_store:, normalized_locale:, dest_folde
         File.join(platform_store, normalized_locale, "images", dest_folder)
       end
 
-    dest_dir_project = File.join(project_root, "fastlane/metadata", relative_metadata)
-    dest_dir_symlink = File.join("/Volumes/data/voczilla/metadata", relative_metadata)
+    dest_dir = File.join("/Volumes/data/voczilla/metadata", relative_metadata)
   end
 
-  [dest_dir_project, dest_dir_symlink].each do |dest_dir|
-    UI.message("📁 Copie des captures vers : #{dest_dir}")
-    FileUtils.mkdir_p(dest_dir)
-    screenshots.empty? ? UI.important("Aucune capture à copier pour #{normalized_locale}") : FileUtils.cp(screenshots, dest_dir)
-  end
+  UI.message("📁 Copie des captures vers : #{dest_dir}")
+  FileUtils.mkdir_p(dest_dir)
+  screenshots.empty? ? UI.important("Aucune capture à copier pour #{normalized_locale}") : FileUtils.cp(screenshots, dest_dir)
 end
+
 
 # ----- Normalisation PNG macOS à 1280x800 (coupe EN BAS, on préserve le haut) -----
 def normalize_macos_screenshots!(dir, width:, height:)

@@ -61,7 +61,7 @@ class AppRoute {
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Logger.Blue.log("APP ROUTE setting name: ${settings.name}");
-    print("*************************** ${settings.name} **************************");
+    Logger.Blue.log("*************************** ${settings.name} **************************");
     if (forFeatureGraphic) {
       return MaterialPageRoute(
         settings: settings,

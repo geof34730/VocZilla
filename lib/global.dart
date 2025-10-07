@@ -14,7 +14,7 @@ final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
 
 int globalCountVocabulaireAll=4399;
 bool debugMode=false;
-bool statistiqueGoogleAnalytics=false;
+bool statistiqueGoogleAnalytics=true;
 bool showGoogleAdMob=false;
 bool testScreenShot = false;
 const String idSubscriptionMensuel = 'mensuel_voczilla_076d28df';
