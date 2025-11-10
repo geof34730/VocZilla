@@ -748,4 +748,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'ចូលប្រើមាតិកាដោយផ្ទាល់ដោយគ្មានការផ្សាយពាណិជ្ជកម្ម!';
+
+  @override
+  String get gratuit => 'ឥតគិតថ្លៃ';
 }

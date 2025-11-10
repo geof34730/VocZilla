@@ -748,4 +748,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'বিজ্ঞাপন অবিহনে পোনপটীয়াকৈ বিষয়বস্তুত প্ৰৱেশ কৰক!';
+
+  @override
+  String get gratuit => 'বিনামূলীয়া';
 }

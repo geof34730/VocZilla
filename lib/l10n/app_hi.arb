@@ -246,10 +246,5 @@
     "subscription_title_6": "समय बचाएँ, विज्ञापन से बचें",
     "subscription_title_7": "अब कोई विज्ञापन नहीं!",
     "subscription_title_8": "विज्ञापन के बिना सीधे सामग्री तक पहुंचें!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "मुक्त"
 }

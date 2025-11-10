@@ -246,10 +246,5 @@
     "subscription_title_6": "Időt takaríthat meg, elkerülheti a reklámokat",
     "subscription_title_7": "Nincs több hirdetés!",
     "subscription_title_8": "Hozzáférés a tartalomhoz közvetlenül, reklámok nélkül!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Ingyenes"
 }

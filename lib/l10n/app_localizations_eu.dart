@@ -748,4 +748,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Sartu edukira zuzenean, iragarkirik gabe!';
+
+  @override
+  String get gratuit => 'Doan';
 }

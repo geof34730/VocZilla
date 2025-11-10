@@ -29,27 +29,47 @@ class FeatureGraphicVoczillaCom extends StatelessWidget {
             children: [
               // Logo and title
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
                     'assets/brand/logo_featureGraphic.png',
-                    width: 250,
+                    width: 200,
                   ),
                   const SizedBox(width: 12),
                   Flexible(
-                    child: AutoSizeText(
-                      context.loc.app_feature_graphic_title,
-                      style: getFontForLanguage(
-                        codelang: Localizations.localeOf(context).languageCode,
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
-                      ).copyWith(
-                        color: Colors.black,
-                        decoration: TextDecoration.none,
-                      ),
-                      maxLines: 2,
-                      minFontSize: 16,
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        AutoSizeText(
+                          context.loc.app_feature_graphic_title,
+                          style: getFontForLanguage(
+                            codelang:Localizations.localeOf(context).languageCode,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                          ).copyWith(
+                            color: Colors.black,
+                            decoration: TextDecoration.none,
+                          ),
+                          maxLines: 1,
+                          minFontSize: 10,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        Text(
+                          "-- ${context.loc.gratuit} --",
+                          style:getFontForLanguage(
+                            codelang:
+                            Localizations.localeOf(context).languageCode,
+                            fontSize: 60,
+                            fontWeight: FontWeight.bold,
+                          ).copyWith(
+                            color: Colors.red,
+                            decoration: TextDecoration.none,
+                          ),
+                          textAlign: TextAlign.center,
+
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -69,14 +89,18 @@ class FeatureGraphicVoczillaCom extends StatelessWidget {
                       child: SingleChildScrollView(
                         physics: const ClampingScrollPhysics(), // Empêche le rebond visuel
                         child: Column(
-                          mainAxisSize: MainAxisSize.min, // S'adapte à la taille du contenu
+                          mainAxisSize: MainAxisSize.max, // S'adapte à la taille du contenu
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            FeatureItem(
-                              icon: Icons.check_circle,
-                              text: context.loc.app_feature_graphic_FeatureItem1,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child:FeatureItem(
+                                icon: Icons.check_circle,
+                                text: context.loc.app_feature_graphic_FeatureItem1,
+                              ),
                             ),
+
                             const SizedBox(height: 20),
                             FeatureItem(
                               icon: Icons.quiz,
@@ -99,14 +123,14 @@ class FeatureGraphicVoczillaCom extends StatelessWidget {
                                 Padding(padding: EdgeInsets.only(top:20),
                                   child:Image.asset(
                                     'assets/png/button_android.png',
-                                    height: 80,
+                                    height: 60,
                                   ),
                                 ),
                                 const SizedBox(width: 16),
                                 Padding(padding: EdgeInsets.only(top:20),
                                   child:Image.asset(
                                     'assets/png/button_ios.png',
-                                    height: 80,
+                                    height: 60,
                                   ),
                                 )
                               ],
@@ -121,7 +145,7 @@ class FeatureGraphicVoczillaCom extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.topCenter,
                         child: Image.asset(
-                          'assets/brand/featureGraphic_mobile.png',
+                          'assets/brand/featureGraphique_mobile.png',
                           height: 400,
                           fit: BoxFit.contain,
                         ),
@@ -170,10 +194,10 @@ class FeatureItem extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 decoration: TextDecoration.none,
               ),
-              maxLines: 2,
+              maxLines: 1,
               // ✅ AMÉLIORATION : Permettre au texte de devenir plus petit
               // si nécessaire pour éviter les coupures.
-              minFontSize: 14, // Auparavant 30, ce qui était trop restrictif.
+              minFontSize: 12, // Auparavant 30, ce qui était trop restrictif.
               overflow: TextOverflow.ellipsis,
             ),
           ),

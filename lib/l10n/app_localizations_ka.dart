@@ -748,4 +748,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'წვდომა კონტენტზე პირდაპირ, რეკლამის გარეშე!';
+
+  @override
+  String get gratuit => 'უფასო';
 }

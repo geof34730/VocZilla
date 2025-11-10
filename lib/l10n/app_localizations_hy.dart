@@ -748,4 +748,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Մուտք գործեք բովանդակությանը անմիջապես, առանց գովազդի։';
+
+  @override
+  String get gratuit => 'Անվճար';
 }

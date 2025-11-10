@@ -748,4 +748,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'विज्ञापन बिना नै सामग्री सिधै पहुँच गर्नुहोस्!';
+
+  @override
+  String get gratuit => 'नि:शुल्क';
 }

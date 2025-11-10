@@ -246,10 +246,5 @@
     "subscription_title_6": "Spara tid, undvik reklam",
     "subscription_title_7": "Inga fler annonser!",
     "subscription_title_8": "Få tillgång till innehållet direkt, utan reklam!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Gratis"
 }

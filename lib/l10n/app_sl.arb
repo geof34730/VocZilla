@@ -246,10 +246,5 @@
     "subscription_title_6": "Prihranite čas, se izognite oglaševanju",
     "subscription_title_7": "Nič več oglasov!",
     "subscription_title_8": "Dostopajte do vsebine neposredno, brez oglaševanja!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Brezplačno"
 }

@@ -748,4 +748,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Finyelela okuqukethwe ngokuqondile, ngaphandle kokukhangisa!';
+
+  @override
+  String get gratuit => 'Mahhala';
 }

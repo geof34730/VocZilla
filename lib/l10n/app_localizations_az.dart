@@ -748,4 +748,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Reklam olmadan birbaşa məzmuna daxil olun!';
+
+  @override
+  String get gratuit => 'Pulsuz';
 }

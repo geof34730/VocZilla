@@ -246,10 +246,5 @@
     "subscription_title_6": "කාලය ඉතිරි කර ගන්න, වෙළඳ දැන්වීම් වලින් වළකින්න",
     "subscription_title_7": "තවත් දැන්වීම් නැත!",
     "subscription_title_8": "වෙළඳ දැන්වීම් නොමැතිව අන්තර්ගතයට කෙලින්ම ප්‍රවේශ වන්න!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "නොමිලේ"
 }

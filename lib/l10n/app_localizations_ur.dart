@@ -748,4 +748,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'اشتہارات کے بغیر براہ راست مواد تک رسائی حاصل کریں!';
+
+  @override
+  String get gratuit => 'مفت';
 }

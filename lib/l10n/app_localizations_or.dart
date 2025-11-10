@@ -748,4 +748,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'ବିଜ୍ଞାପନ ବିନା ସିଧାସଳଖ ବିଷୟବସ୍ତୁ ପ୍ରବେଶ କରନ୍ତୁ!';
+
+  @override
+  String get gratuit => 'ମାଗଣା';
 }

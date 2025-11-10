@@ -748,4 +748,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Αποκτήστε άμεση πρόσβαση στο περιεχόμενο, χωρίς διαφημίσεις!';
+
+  @override
+  String get gratuit => 'Δωρεάν';
 }

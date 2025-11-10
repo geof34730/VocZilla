@@ -5,22 +5,887 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000198">
+      <testcase classname="fastlane.lanes" name="000: default_platform" time="0.000169">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="7.256217">
+      <testcase classname="fastlane.lanes" name="001: git clean -xfd         -e build         -e ios/Pods         -e android/.gradle         -e macos/Pods         -e .env         -e voczilla-play.json         -e firebase.json         -e android/app/key.jks        -e android/app/google-services.json         -e ios/Runner/GoogleService-Info.plist         -e macos/Runner/GoogleService-Info.plist || true" time="0.023265">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="0.964769">
+      <testcase classname="fastlane.lanes" name="002: Switch to all generate_metadata lane" time="0.000201">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_macos.dart&apos;" time="0.54415">
+      <testcase classname="fastlane.lanes" name="003: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_android.dart&apos;" time="2.050913">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="004: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_ios.dart&apos;" time="0.715">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="005: dart &apos;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/fastlane/generate_metadata_macos.dart&apos;" time="0.374304">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="006: shell command" time="0.014263">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="007: shell command" time="0.012799">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="008: adb start-server || true" time="0.017273">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="009: shell command" time="0.01463">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="010: shell command" time="0.014627">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="011: adb -s emulator-5554 wait-for-device || true" time="0.01871">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="012: shell command" time="0.033182">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="013: shell command" time="0.030182">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="014: shell command" time="0.031491">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="015: shell command" time="0.024843">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="016: shell command" time="0.022797">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="017: shell command" time="0.031817">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="018: shell command" time="0.031814">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="019: shell command" time="0.028232">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="020: shell command" time="0.027291">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="021: shell command" time="0.034881">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="022: shell command" time="0.029671">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="023: shell command" time="0.026527">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="024: shell command" time="0.014265">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="025: shell command" time="0.088129">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="026: shell command" time="0.047618">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="027: shell command" time="0.160564">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="028: shell command" time="0.04581">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="029: shell command" time="0.04879">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="030: shell command" time="0.061254">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="031: shell command" time="0.046128">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="032: adb -s emulator-5554 uninstall com.geoffreypetain.voczilla.voczilla || true" time="0.11411">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="033: adb -s emulator-5554 shell wm size 1024x500 &amp;&amp; adb -s emulator-5554 shell wm density 160" time="0.294692">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="034: shell command" time="0.317373">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="035: PLATFORM=android LOCALE=af DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="12.44346">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="036: shell command" time="0.24635">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="037: PLATFORM=android LOCALE=am DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.054107">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="038: shell command" time="0.232035">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="039: PLATFORM=android LOCALE=ar DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.508631">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="040: shell command" time="0.215743">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="041: shell command" time="0.215574">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="042: PLATFORM=android LOCALE=az DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.857581">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="043: shell command" time="0.235152">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="044: PLATFORM=android LOCALE=be DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.811651">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="045: shell command" time="0.241954">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="046: PLATFORM=android LOCALE=bg DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.768983">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="047: shell command" time="0.218564">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="048: PLATFORM=android LOCALE=bn DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.018139">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="049: shell command" time="0.211837">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="050: shell command" time="0.218115">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="051: PLATFORM=android LOCALE=ca DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.540962">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="052: shell command" time="0.219778">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="053: PLATFORM=android LOCALE=cs DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.610306">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="054: shell command" time="0.230761">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="055: PLATFORM=android LOCALE=da DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.633049">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="056: shell command" time="0.223606">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="057: PLATFORM=android LOCALE=de DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.491641">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="058: shell command" time="0.232057">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="059: PLATFORM=android LOCALE=el DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.594376">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="060: shell command" time="0.230673">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="061: PLATFORM=android LOCALE=en DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.410082">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="062: shell command" time="0.225818">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="063: PLATFORM=android LOCALE=es DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.297729">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="064: shell command" time="0.21993">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="065: PLATFORM=android LOCALE=et DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.571528">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="066: shell command" time="0.223242">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="067: PLATFORM=android LOCALE=eu DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.353377">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="068: shell command" time="0.227609">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="069: PLATFORM=android LOCALE=fa DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.592832">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="070: shell command" time="0.239391">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="071: PLATFORM=android LOCALE=fi DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.929396">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="072: shell command" time="0.226906">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="073: PLATFORM=android LOCALE=fr DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.399905">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="074: shell command" time="0.222016">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="075: PLATFORM=android LOCALE=gl DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.594539">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="076: shell command" time="0.23817">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="077: PLATFORM=android LOCALE=gu DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.757579">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="078: shell command" time="0.225634">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="079: PLATFORM=android LOCALE=he DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.189341">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="080: shell command" time="0.229504">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="081: PLATFORM=android LOCALE=hi DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.689013">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="082: shell command" time="0.246427">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="083: PLATFORM=android LOCALE=hr DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.888342">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="084: shell command" time="0.2268">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="085: PLATFORM=android LOCALE=hu DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.885744">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="086: shell command" time="0.227667">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="087: PLATFORM=android LOCALE=hy DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.030824">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="088: shell command" time="0.222138">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="089: PLATFORM=android LOCALE=is DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.039013">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="090: shell command" time="0.229939">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="091: PLATFORM=android LOCALE=it DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.231932">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="092: shell command" time="0.217812">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="093: PLATFORM=android LOCALE=ja DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.818934">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="094: shell command" time="0.225847">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="095: PLATFORM=android LOCALE=ka DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.033254">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="096: shell command" time="0.227079">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="097: PLATFORM=android LOCALE=kk DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.820927">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="098: shell command" time="0.235397">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="099: PLATFORM=android LOCALE=km DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.542802">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="100: shell command" time="0.226171">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="101: PLATFORM=android LOCALE=kn DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.739296">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="102: shell command" time="0.228229">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="103: PLATFORM=android LOCALE=ko DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.620095">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="104: shell command" time="0.24173">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="105: PLATFORM=android LOCALE=ky DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.082497">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="106: shell command" time="0.240395">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="107: PLATFORM=android LOCALE=lo DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.793116">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="108: shell command" time="0.230922">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="109: PLATFORM=android LOCALE=lt DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.683864">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="110: shell command" time="0.241825">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="111: PLATFORM=android LOCALE=lv DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.963354">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="112: shell command" time="0.249205">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="113: PLATFORM=android LOCALE=mk DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.940394">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="114: shell command" time="0.239425">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="115: PLATFORM=android LOCALE=ml DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.981359">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="116: shell command" time="0.230749">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="117: PLATFORM=android LOCALE=mn DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.122348">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="118: shell command" time="0.226015">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="119: PLATFORM=android LOCALE=mr DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.699017">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="120: shell command" time="0.227908">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="121: PLATFORM=android LOCALE=ms DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.168259">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="122: shell command" time="0.230667">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="123: PLATFORM=android LOCALE=my DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.605111">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="124: shell command" time="0.227528">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="125: PLATFORM=android LOCALE=ne DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.709879">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="126: shell command" time="0.225971">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="127: PLATFORM=android LOCALE=nl DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.069157">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="128: shell command" time="0.228271">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="129: PLATFORM=android LOCALE=no DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.502802">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="130: shell command" time="0.219994">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="131: shell command" time="0.223671">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="132: PLATFORM=android LOCALE=pa DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.134236">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="133: shell command" time="0.2212">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="134: PLATFORM=android LOCALE=pl DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.735386">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="135: shell command" time="0.227496">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="136: PLATFORM=android LOCALE=pt DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.801769">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="137: shell command" time="0.227489">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="138: PLATFORM=android LOCALE=ro DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.883387">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="139: shell command" time="0.234638">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="140: PLATFORM=android LOCALE=ru DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.984998">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="141: shell command" time="0.228693">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="142: PLATFORM=android LOCALE=si DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.08844">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="143: shell command" time="0.239906">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="144: PLATFORM=android LOCALE=sk DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.877659">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="145: shell command" time="0.232095">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="146: PLATFORM=android LOCALE=sl DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.638929">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="147: shell command" time="0.227861">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="148: PLATFORM=android LOCALE=sq DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.98481">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="149: shell command" time="0.226348">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="150: PLATFORM=android LOCALE=sr DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.02348">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="151: shell command" time="0.248938">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="152: PLATFORM=android LOCALE=sv DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.979468">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="153: shell command" time="0.21707">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="154: PLATFORM=android LOCALE=sw DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.781729">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="155: shell command" time="0.231807">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="156: PLATFORM=android LOCALE=ta DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.823357">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="157: shell command" time="0.219055">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="158: PLATFORM=android LOCALE=te DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.984208">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="159: shell command" time="0.233591">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="160: PLATFORM=android LOCALE=th DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.535458">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="161: shell command" time="0.235953">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="162: PLATFORM=android LOCALE=tr DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.087032">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="163: shell command" time="0.249104">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="164: PLATFORM=android LOCALE=uk DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="9.11187">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="165: shell command" time="0.229778">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="166: PLATFORM=android LOCALE=ur DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.961274">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="167: shell command" time="0.223241">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="168: shell command" time="0.227353">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="169: PLATFORM=android LOCALE=vi DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.480995">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="170: shell command" time="0.227838">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="171: PLATFORM=android LOCALE=zh DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.47565">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="172: shell command" time="0.232484">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="173: PLATFORM=android LOCALE=zu DESTFOLDER=&apos;FeatureGraphic&apos; FOR_FEATURE_GRAPHIC=true FOR_FEATURE_GRAPHIC_VOCZILLA_COM=false caffeinate -s flutter drive             --no-dds             --driver=test_driver/integration_test.dart             --target=test_driver/app.dart             --no-build             --use-application-binary=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/build/app/outputs/flutter-apk/app-debug.apk&quot;             -d emulator-5554             --screenshot=&quot;/Users/geoffreypetain/IdeaProjects/VocZilla-all/voczilla/test_driver/screenshots&quot;" time="8.862299">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="174: adb -s emulator-5554 shell wm size reset &amp;&amp; adb -s emulator-5554 shell wm density reset" time="0.119892">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="175: shell command" time="0.014083">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="176: adb -s emulator-5554 emu kill" time="0.013526">
         
       </testcase>
     

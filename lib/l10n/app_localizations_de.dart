@@ -748,4 +748,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Greifen Sie direkt und ohne Werbung auf die Inhalte zu!';
+
+  @override
+  String get gratuit => 'Frei';
 }

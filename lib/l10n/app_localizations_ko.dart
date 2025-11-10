@@ -748,4 +748,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get subscription_title_8 => '광고 없이 콘텐츠에 직접 접근하세요!';
+
+  @override
+  String get gratuit => '무료';
 }

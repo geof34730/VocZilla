@@ -748,4 +748,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Akses kandungan secara langsung, tanpa pengiklanan!';
+
+  @override
+  String get gratuit => 'Percuma';
 }

@@ -246,10 +246,5 @@
     "subscription_title_6": "Yonga isikhathi, gwema ukukhangisa",
     "subscription_title_7": "Azisekho izikhangiso!",
     "subscription_title_8": "Finyelela okuqukethwe ngokuqondile, ngaphandle kokukhangisa!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Mahhala"
 }

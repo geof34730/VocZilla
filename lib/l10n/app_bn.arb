@@ -246,10 +246,5 @@
     "subscription_title_6": "সময় বাঁচান, বিজ্ঞাপন এড়িয়ে চলুন",
     "subscription_title_7": "আর কোন বিজ্ঞাপন নেই!",
     "subscription_title_8": "বিজ্ঞাপন ছাড়াই সরাসরি কন্টেন্ট অ্যাক্সেস করুন!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "বিনামূল্যে"
 }

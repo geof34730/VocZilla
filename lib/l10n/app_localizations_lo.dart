@@ -748,4 +748,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'ເຂົ້າເຖິງເນື້ອຫາໂດຍກົງ, ໂດຍບໍ່ມີການໂຄສະນາ!';
+
+  @override
+  String get gratuit => 'ຟຣີ';
 }

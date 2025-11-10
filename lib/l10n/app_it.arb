@@ -246,10 +246,5 @@
     "subscription_title_6": "Risparmia tempo, evita la pubblicità",
     "subscription_title_7": "Niente più pubblicità!",
     "subscription_title_8": "Accedi direttamente ai contenuti, senza pubblicità!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Gratuito"
 }

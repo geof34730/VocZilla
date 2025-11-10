@@ -246,10 +246,5 @@
     "subscription_title_6": "時間を節約し、広告を避ける",
     "subscription_title_7": "もう広告はありません!",
     "subscription_title_8": "広告なしでコンテンツに直接アクセスしましょう！",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "無料"
 }

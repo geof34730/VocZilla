@@ -748,4 +748,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get subscription_title_8 => '広告なしでコンテンツに直接アクセスしましょう！';
+
+  @override
+  String get gratuit => '無料';
 }

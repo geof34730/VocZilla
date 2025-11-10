@@ -246,10 +246,5 @@
     "subscription_title_6": "Aurreztu denbora, saihestu publizitatea",
     "subscription_title_7": "Iragarki gehiago ez!",
     "subscription_title_8": "Sartu edukira zuzenean, iragarkirik gabe!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Doan"
 }

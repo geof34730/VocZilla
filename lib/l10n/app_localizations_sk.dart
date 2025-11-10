@@ -748,4 +748,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Priamy prístup k obsahu bez reklamy!';
+
+  @override
+  String get gratuit => 'Zadarmo';
 }

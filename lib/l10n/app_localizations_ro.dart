@@ -748,4 +748,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Accesează conținutul direct, fără reclame!';
+
+  @override
+  String get gratuit => 'Gratuit';
 }

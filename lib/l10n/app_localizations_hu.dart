@@ -748,4 +748,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Hozzáférés a tartalomhoz közvetlenül, reklámok nélkül!';
+
+  @override
+  String get gratuit => 'Ingyenes';
 }

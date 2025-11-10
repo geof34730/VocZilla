@@ -748,4 +748,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'ကြော်ငြာမပါဘဲ အကြောင်းအရာကို တိုက်ရိုက်ဝင်ရောက်ကြည့်ရှုပါ။';
+
+  @override
+  String get gratuit => 'အခမဲ့';
 }

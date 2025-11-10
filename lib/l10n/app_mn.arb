@@ -246,10 +246,5 @@
     "subscription_title_6": "Цаг хэмнээрэй, зар сурталчилгаанаас зайлсхий",
     "subscription_title_7": "Өөр зар байхгүй!",
     "subscription_title_8": "Зар сурталчилгаагүйгээр контент руу шууд хандаарай!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Үнэгүй"
 }

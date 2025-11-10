@@ -748,4 +748,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'বিজ্ঞাপন ছাড়াই সরাসরি কন্টেন্ট অ্যাক্সেস করুন!';
+
+  @override
+  String get gratuit => 'বিনামূল্যে';
 }

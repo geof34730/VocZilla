@@ -748,4 +748,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Přímý přístup k obsahu, bez reklamy!';
+
+  @override
+  String get gratuit => 'Uvolnit';
 }

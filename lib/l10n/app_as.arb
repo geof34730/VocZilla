@@ -246,10 +246,5 @@
     "subscription_title_6": "সময় ৰাহি কৰক, বিজ্ঞাপন পৰিহাৰ কৰক",
     "subscription_title_7": "আৰু বিজ্ঞাপন নাথাকিব!",
     "subscription_title_8": "বিজ্ঞাপন অবিহনে পোনপটীয়াকৈ বিষয়বস্তুত প্ৰৱেশ কৰক!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "বিনামূলীয়া"
 }

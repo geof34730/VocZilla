@@ -748,4 +748,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Käytä sisältöä suoraan, ilman mainoksia!';
+
+  @override
+  String get gratuit => 'Ilmainen';
 }

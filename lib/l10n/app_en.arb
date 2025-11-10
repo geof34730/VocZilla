@@ -246,10 +246,5 @@
     "subscription_title_6": "Save time, avoid advertising",
     "subscription_title_7": "No more ads!",
     "subscription_title_8": "Access the content directly, without advertising!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Free"
 }

@@ -748,4 +748,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'ಜಾಹೀರಾತು ಇಲ್ಲದೆ ನೇರವಾಗಿ ವಿಷಯವನ್ನು ಪ್ರವೇಶಿಸಿ!';
+
+  @override
+  String get gratuit => 'ಉಚಿತ';
 }

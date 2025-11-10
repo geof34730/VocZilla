@@ -748,4 +748,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Fáðu aðgang að efninu beint, án auglýsinga!';
+
+  @override
+  String get gratuit => 'Ókeypis';
 }

@@ -748,4 +748,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Ligipääs sisule otse, ilma reklaamita!';
+
+  @override
+  String get gratuit => 'Tasuta';
 }

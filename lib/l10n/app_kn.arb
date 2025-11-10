@@ -246,10 +246,5 @@
     "subscription_title_6": "ಜಾಹೀರಾತು ತಪ್ಪಿಸಿ, ಸಮಯ ಉಳಿಸಿ",
     "subscription_title_7": "ಇನ್ನು ಜಾಹೀರಾತುಗಳಿಲ್ಲ!",
     "subscription_title_8": "ಜಾಹೀರಾತು ಇಲ್ಲದೆ ನೇರವಾಗಿ ವಿಷಯವನ್ನು ಪ್ರವೇಶಿಸಿ!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "ಉಚಿತ"
 }

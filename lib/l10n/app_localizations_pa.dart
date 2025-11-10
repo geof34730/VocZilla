@@ -748,4 +748,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'ਬਿਨਾਂ ਇਸ਼ਤਿਹਾਰ ਦੇ, ਸਮੱਗਰੀ ਨੂੰ ਸਿੱਧਾ ਐਕਸੈਸ ਕਰੋ!';
+
+  @override
+  String get gratuit => 'ਮੁਫ਼ਤ';
 }

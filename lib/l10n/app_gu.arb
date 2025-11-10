@@ -246,10 +246,5 @@
     "subscription_title_6": "સમય બચાવો, જાહેરાત ટાળો",
     "subscription_title_7": "હવે કોઈ જાહેરાતો નહીં!",
     "subscription_title_8": "જાહેરાત વિના, સીધી સામગ્રીને ઍક્સેસ કરો!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "મફત"
 }

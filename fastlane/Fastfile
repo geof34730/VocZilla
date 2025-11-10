@@ -149,10 +149,10 @@ platform :all do
     ensure_android_built_once!(:debug)
 
     android_folders = [
-      "FeatureGraphic",
-      "phoneScreenshots",
-      "sevenInchScreenshots",
-      "tenInchScreenshots",
+      "FeatureGraphic"
+      #"phoneScreenshots",
+      #"sevenInchScreenshots",
+      #"tenInchScreenshots",
     ]
 
     locales = extract_locales

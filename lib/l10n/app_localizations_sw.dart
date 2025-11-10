@@ -748,4 +748,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Fikia yaliyomo moja kwa moja, bila matangazo!';
+
+  @override
+  String get gratuit => 'Bure';
 }

@@ -29,6 +29,7 @@ class FeatureGraphic extends StatelessWidget {
             children: [
               // Logo and title
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
                     'assets/brand/logo_featureGraphic.png',
@@ -36,19 +37,39 @@ class FeatureGraphic extends StatelessWidget {
                   ),
                   const SizedBox(width: 12),
                   Flexible(
-                    child: AutoSizeText(
-                      context.loc.app_feature_graphic_title,
-                      style: getFontForLanguage(
-                        codelang: Localizations.localeOf(context).languageCode,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      ).copyWith(
-                        color: Colors.black,
-                        decoration: TextDecoration.none,
-                      ),
-                      maxLines: 2,
-                      minFontSize: 16,
-                      overflow: TextOverflow.ellipsis,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        AutoSizeText(
+                          context.loc.app_feature_graphic_title,
+                          style: getFontForLanguage(
+                            codelang:Localizations.localeOf(context).languageCode,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                          ).copyWith(
+                            color: Colors.black,
+                            decoration: TextDecoration.none,
+                          ),
+                          maxLines: 1,
+                          minFontSize: 10,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        Text(
+                            "-- ${context.loc.gratuit} --",
+                            style:getFontForLanguage(
+                              codelang:
+                              Localizations.localeOf(context).languageCode,
+                              fontSize: 60,
+                              fontWeight: FontWeight.bold,
+                            ).copyWith(
+                              color: Colors.red,
+                              decoration: TextDecoration.none,
+                            ),
+                          textAlign: TextAlign.center,
+
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -59,38 +80,44 @@ class FeatureGraphic extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      width: 550,
+                      width: 600,
                       // ✅ SOLUTION : Envelopper la colonne dans un SingleChildScrollView.
                       // Cela garantit que même si le contenu est très long (par exemple,
                       // dans une autre langue), il n'y aura jamais d'erreur d'overflow.
                       // Le contenu deviendra simplement scrollable, ce qui est parfait
                       // pour la génération d'une capture d'écran statique.
                       child: SingleChildScrollView(
-                        physics: const ClampingScrollPhysics(), // Empêche le rebond visuel
+                        physics:
+                            const ClampingScrollPhysics(), // Empêche le rebond visuel
                         child: Column(
-                          mainAxisSize: MainAxisSize.min, // S'adapte à la taille du contenu
+                          mainAxisSize:
+                              MainAxisSize.min, // S'adapte à la taille du contenu
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FeatureItem(
                               icon: Icons.check_circle,
-                              text: context.loc.app_feature_graphic_FeatureItem1,
+                              text:
+                                  context.loc.app_feature_graphic_FeatureItem1,
                             ),
                             const SizedBox(height: 20),
                             FeatureItem(
                               icon: Icons.quiz,
                               // 💅 AMÉLIORATION : Utilisation de la vraie valeur, sans la répétition de test.
-                              text: context.loc.app_feature_graphic_FeatureItem2,
+                              text:
+                                  context.loc.app_feature_graphic_FeatureItem2,
                             ),
                             const SizedBox(height: 20),
                             FeatureItem(
                               icon: Icons.show_chart,
-                              text: context.loc.app_feature_graphic_FeatureItem3,
+                              text:
+                                  context.loc.app_feature_graphic_FeatureItem3,
                             ),
                             const SizedBox(height: 20),
                             FeatureItem(
                               icon: Icons.list_alt,
-                              text: context.loc.app_feature_graphic_FeatureItem4,
+                              text:
+                                  context.loc.app_feature_graphic_FeatureItem4,
                             ),
                           ],
                         ),
@@ -101,8 +128,8 @@ class FeatureGraphic extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.topCenter,
                         child: Image.asset(
-                          'assets/brand/featureGraphic_mobile.png',
-                          height: 325,
+                          'assets/brand/featureGraphique_mobile.png',
+                          height: 500,
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -145,7 +172,7 @@ class FeatureItem extends StatelessWidget {
             child: AutoSizeText(
               text,
               style: GoogleFonts.roboto(
-                fontSize: 28,
+                fontSize: 30,
                 color: Colors.black87,
                 fontWeight: FontWeight.w600,
                 decoration: TextDecoration.none,
@@ -153,7 +180,7 @@ class FeatureItem extends StatelessWidget {
               maxLines: 2,
               // ✅ AMÉLIORATION : Permettre au texte de devenir plus petit
               // si nécessaire pour éviter les coupures.
-              minFontSize: 18, // Auparavant 30, ce qui était trop restrictif.
+              minFontSize: 12, // Auparavant 30, ce qui était trop restrictif.
               overflow: TextOverflow.ellipsis,
             ),
           ),

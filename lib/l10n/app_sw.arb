@@ -246,10 +246,5 @@
     "subscription_title_6": "Okoa wakati, epuka matangazo",
     "subscription_title_7": "Hakuna matangazo zaidi!",
     "subscription_title_8": "Fikia yaliyomo moja kwa moja, bila matangazo!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Bure"
 }

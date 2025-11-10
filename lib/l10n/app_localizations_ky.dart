@@ -748,4 +748,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Жарнамасыз мазмунга түз кириңиз!';
+
+  @override
+  String get gratuit => 'бекер';
 }

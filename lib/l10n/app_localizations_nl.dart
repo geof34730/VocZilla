@@ -748,4 +748,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Krijg direct toegang tot de inhoud, zonder advertenties!';
+
+  @override
+  String get gratuit => 'Vrij';
 }

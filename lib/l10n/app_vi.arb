@@ -246,10 +246,5 @@
     "subscription_title_6": "Tiết kiệm thời gian, tránh quảng cáo",
     "subscription_title_7": "Không còn quảng cáo nữa!",
     "subscription_title_8": "Truy cập nội dung trực tiếp, không có quảng cáo!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Miễn phí"
 }

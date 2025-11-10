@@ -246,10 +246,5 @@
     "subscription_title_6": "Заощадьте час, уникайте реклами",
     "subscription_title_7": "Більше жодної реклами!",
     "subscription_title_8": "Отримуйте доступ до контенту безпосередньо, без реклами!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Безкоштовно"
 }

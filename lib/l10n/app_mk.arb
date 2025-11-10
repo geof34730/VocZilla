@@ -246,10 +246,5 @@
     "subscription_title_6": "Заштедете време, избегнувајте рекламирање",
     "subscription_title_7": "Нема повеќе реклами!",
     "subscription_title_8": "Пристапете до содржината директно, без рекламирање!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Бесплатно"
 }

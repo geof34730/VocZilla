@@ -748,4 +748,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'مستقیماً و بدون تبلیغات به محتوا دسترسی پیدا کنید!';
+
+  @override
+  String get gratuit => 'رایگان';
 }

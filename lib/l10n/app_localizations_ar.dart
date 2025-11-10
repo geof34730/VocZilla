@@ -748,4 +748,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'قم بالوصول إلى المحتوى مباشرة، دون إعلانات!';
+
+  @override
+  String get gratuit => 'حر';
 }

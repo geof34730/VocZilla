@@ -748,4 +748,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'जाहिरातीशिवाय थेट सामग्रीमध्ये प्रवेश करा!';
+
+  @override
+  String get gratuit => 'मोफत';
 }

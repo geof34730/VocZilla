@@ -748,4 +748,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get subscription_title_8 => '直接访问内容，无广告！';
+
+  @override
+  String get gratuit => '自由的';
 }

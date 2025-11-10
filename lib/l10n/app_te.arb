@@ -246,10 +246,5 @@
     "subscription_title_6": "సమయం ఆదా చేసుకోండి, ప్రకటనలను నివారించండి",
     "subscription_title_7": "ఇక ప్రకటనలు లేవు!",
     "subscription_title_8": "ప్రకటనలు లేకుండా నేరుగా కంటెంట్‌ను యాక్సెస్ చేయండి!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "ఉచితం"
 }

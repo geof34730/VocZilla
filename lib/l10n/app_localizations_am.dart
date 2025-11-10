@@ -748,4 +748,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'ያለማስታወቂያ ይዘቱን በቀጥታ ይድረሱበት!';
+
+  @override
+  String get gratuit => 'ፍርይ';
 }

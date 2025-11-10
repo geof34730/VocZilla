@@ -246,10 +246,5 @@
     "subscription_title_6": "நேரத்தை மிச்சப்படுத்துங்கள், விளம்பரங்களைத் தவிர்க்கவும்.",
     "subscription_title_7": "இனி விளம்பரங்கள் இல்லை!",
     "subscription_title_8": "விளம்பரம் இல்லாமல் நேரடியாக உள்ளடக்கத்தை அணுகவும்!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "இலவசம்"
 }

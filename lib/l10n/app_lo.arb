@@ -246,10 +246,5 @@
     "subscription_title_6": "ປະຫຍັດເວລາ, ຫຼີກເວັ້ນການໂຄສະນາ",
     "subscription_title_7": "ບໍ່ມີໂຄສະນາອີກຕໍ່ໄປ!",
     "subscription_title_8": "ເຂົ້າເຖິງເນື້ອຫາໂດຍກົງ, ໂດຍບໍ່ມີການໂຄສະນາ!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "ຟຣີ"
 }

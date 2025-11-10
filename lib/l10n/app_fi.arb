@@ -246,10 +246,5 @@
     "subscription_title_6": "Säästä aikaa, vältä mainontaa",
     "subscription_title_7": "Ei enää mainoksia!",
     "subscription_title_8": "Käytä sisältöä suoraan, ilman mainoksia!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Ilmainen"
 }

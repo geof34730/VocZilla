@@ -246,10 +246,5 @@
     "subscription_title_6": "समय बचत गर्नुहोस्, विज्ञापनबाट बच्नुहोस्",
     "subscription_title_7": "अब कुनै विज्ञापन छैन!",
     "subscription_title_8": "विज्ञापन बिना नै सामग्री सिधै पहुँच गर्नुहोस्!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "नि:शुल्क"
 }

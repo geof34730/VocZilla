@@ -246,10 +246,5 @@
     "subscription_title_6": "वेळ वाचवा, जाहिराती टाळा",
     "subscription_title_7": "आणखी जाहिराती नाहीत!",
     "subscription_title_8": "जाहिरातीशिवाय थेट सामग्रीमध्ये प्रवेश करा!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "मोफत"
 }

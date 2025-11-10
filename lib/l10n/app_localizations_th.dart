@@ -748,4 +748,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'เข้าถึงเนื้อหาได้โดยตรงโดยไม่ต้องโฆษณา!';
+
+  @override
+  String get gratuit => 'ฟรี';
 }

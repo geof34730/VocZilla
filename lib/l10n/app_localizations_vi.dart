@@ -748,4 +748,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Truy cập nội dung trực tiếp, không có quảng cáo!';
+
+  @override
+  String get gratuit => 'Miễn phí';
 }

@@ -246,10 +246,5 @@
     "subscription_title_6": "အချိန်ကုန်သက်သာ၊ ကြော်ငြာကိုရှောင်ပါ။",
     "subscription_title_7": "ကြော်ငြာများမရှိတော့ပါ။",
     "subscription_title_8": "ကြော်ငြာမပါဘဲ အကြောင်းအရာကို တိုက်ရိုက်ဝင်ရောက်ကြည့်ရှုပါ။",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "အခမဲ့"
 }

@@ -748,4 +748,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'ప్రకటనలు లేకుండా నేరుగా కంటెంట్‌ను యాక్సెస్ చేయండి!';
+
+  @override
+  String get gratuit => 'ఉచితం';
 }

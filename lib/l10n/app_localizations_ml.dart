@@ -748,4 +748,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'പരസ്യമില്ലാതെ നേരിട്ട് ഉള്ളടക്കം ആക്‌സസ് ചെയ്യുക!';
+
+  @override
+  String get gratuit => 'സൗ ജന്യം';
 }

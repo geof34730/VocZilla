@@ -246,10 +246,5 @@
     "subscription_title_6": "시간을 절약하고 광고를 피하세요",
     "subscription_title_7": "더 이상 광고가 없습니다!",
     "subscription_title_8": "광고 없이 콘텐츠에 직접 접근하세요!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "무료"
 }

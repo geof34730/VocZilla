@@ -748,4 +748,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Tarkibga reklamasiz to\'g\'ridan-to\'g\'ri kiring!';
+
+  @override
+  String get gratuit => 'Bepul';
 }

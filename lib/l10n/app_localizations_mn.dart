@@ -748,4 +748,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Зар сурталчилгаагүйгээр контент руу шууд хандаарай!';
+
+  @override
+  String get gratuit => 'Үнэгүй';
 }

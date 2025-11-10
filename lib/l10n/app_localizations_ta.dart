@@ -748,4 +748,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'விளம்பரம் இல்லாமல் நேரடியாக உள்ளடக்கத்தை அணுகவும்!';
+
+  @override
+  String get gratuit => 'இலவசம்';
 }

@@ -748,4 +748,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'වෙළඳ දැන්වීම් නොමැතිව අන්තර්ගතයට කෙලින්ම ප්‍රවේශ වන්න!';
+
+  @override
+  String get gratuit => 'නොමිලේ';
 }

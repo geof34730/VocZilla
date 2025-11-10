@@ -1716,6 +1716,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Access the content directly, without advertising!'**
   String get subscription_title_8;
+
+  /// No description provided for @gratuit.
+  ///
+  /// In en, this message translates to:
+  /// **'Free'**
+  String get gratuit;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

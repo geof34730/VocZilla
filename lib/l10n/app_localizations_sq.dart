@@ -748,4 +748,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'Qasuni përmbajtjes direkt, pa reklama!';
+
+  @override
+  String get gratuit => 'Falas';
 }

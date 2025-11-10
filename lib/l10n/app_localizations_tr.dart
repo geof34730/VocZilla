@@ -748,4 +748,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'İçeriğe doğrudan, reklamsız erişin!';
+
+  @override
+  String get gratuit => 'Özgür';
 }

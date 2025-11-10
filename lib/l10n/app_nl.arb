@@ -246,10 +246,5 @@
     "subscription_title_6": "Bespaar tijd, vermijd reclame",
     "subscription_title_7": "Geen advertenties meer!",
     "subscription_title_8": "Krijg direct toegang tot de inhoud, zonder advertenties!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "Vrij"
 }

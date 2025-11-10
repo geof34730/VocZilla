@@ -748,4 +748,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get subscription_title_8 => 'જાહેરાત વિના, સીધી સામગ્રીને ઍક્સેસ કરો!';
+
+  @override
+  String get gratuit => 'મફત';
 }

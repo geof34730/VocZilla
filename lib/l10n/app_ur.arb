@@ -246,10 +246,5 @@
     "subscription_title_6": "وقت بچائیں، اشتہارات سے بچیں۔",
     "subscription_title_7": "مزید اشتہارات نہیں!",
     "subscription_title_8": "اشتہارات کے بغیر براہ راست مواد تک رسائی حاصل کریں!",
-    "@app_release_note": {
-        "autoTranslated": true,
-        "forced": true,
-        "from": "fr",
-        "at": "2025-10-03T06:35:42+00:00"
-    }
+    "gratuit": "مفت"
 }
